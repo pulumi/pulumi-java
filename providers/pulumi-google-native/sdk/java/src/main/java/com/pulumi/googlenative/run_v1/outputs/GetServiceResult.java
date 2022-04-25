@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
+     * @return The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
      */
     private final String apiVersion;
     /**
-     * The kind of resource, in this case &#34;Service&#34;.
+     * @return The kind of resource, in this case &#34;Service&#34;.
      * 
      */
     private final String kind;
     /**
-     * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * @return Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
      * 
      */
     private final ObjectMetaResponse metadata;
     /**
-     * Spec holds the desired state of the Service (from the client).
+     * @return Spec holds the desired state of the Service (from the client).
      * 
      */
     private final ServiceSpecResponse spec;
     /**
-     * Status communicates the observed state of the Service (from the controller).
+     * @return Status communicates the observed state of the Service (from the controller).
      * 
      */
     private final ServiceStatusResponse status;
@@ -53,37 +53,37 @@ public final class GetServiceResult {
     }
 
     /**
-     * The API version for this call such as &#34;serving.knative.dev/v1&#34;.
+     * @return The API version for this call such as &#34;serving.knative.dev/v1&#34;.
      * 
-    */
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case &#34;Service&#34;.
+     * @return The kind of resource, in this case &#34;Service&#34;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
+     * @return Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
      * 
-    */
+     */
     public ObjectMetaResponse metadata() {
         return this.metadata;
     }
     /**
-     * Spec holds the desired state of the Service (from the client).
+     * @return Spec holds the desired state of the Service (from the client).
      * 
-    */
+     */
     public ServiceSpecResponse spec() {
         return this.spec;
     }
     /**
-     * Status communicates the observed state of the Service (from the controller).
+     * @return Status communicates the observed state of the Service (from the controller).
      * 
-    */
+     */
     public ServiceStatusResponse status() {
         return this.status;
     }

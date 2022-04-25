@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNodeSpecBackendDefaults {
     /**
-     * The default client policy for virtual service backends. See above for details.
+     * @return The default client policy for virtual service backends. See above for details.
      * 
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy;
@@ -23,9 +23,9 @@ public final class VirtualNodeSpecBackendDefaults {
     }
 
     /**
-     * The default client policy for virtual service backends. See above for details.
+     * @return The default client policy for virtual service backends. See above for details.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecBackendDefaultsClientPolicy> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }

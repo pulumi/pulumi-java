@@ -24,6 +24,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -35,6 +39,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the flow.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
     private Output<FlowSourceArgs> source;
 
+    /**
+     * @return The source of the flow.
+     * 
+     */
     public Output<FlowSourceArgs> source() {
         return this.source;
     }
@@ -57,6 +69,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFailoverConfig")
     private @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
+    /**
+     * @return The source failover config of the flow.
+     * 
+     */
     public Optional<Output<FlowFailoverConfigArgs>> sourceFailoverConfig() {
         return Optional.ofNullable(this.sourceFailoverConfig);
     }
@@ -88,38 +104,86 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param name The name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param source The source of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<FlowSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(FlowSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourceFailoverConfig The source failover config of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFailoverConfig(@Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
             $.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
 
+        /**
+         * @param sourceFailoverConfig The source failover config of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFailoverConfig(FlowFailoverConfigArgs sourceFailoverConfig) {
             return sourceFailoverConfig(Output.of(sourceFailoverConfig));
         }

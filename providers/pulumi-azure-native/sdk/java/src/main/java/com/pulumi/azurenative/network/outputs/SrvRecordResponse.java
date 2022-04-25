@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SrvRecordResponse {
     /**
-     * The port value for this SRV record.
+     * @return The port value for this SRV record.
      * 
      */
     private final @Nullable Integer port;
     /**
-     * The priority value for this SRV record.
+     * @return The priority value for this SRV record.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * The target domain name for this SRV record.
+     * @return The target domain name for this SRV record.
      * 
      */
     private final @Nullable String target;
     /**
-     * The weight value for this SRV record.
+     * @return The weight value for this SRV record.
      * 
      */
     private final @Nullable Integer weight;
@@ -46,30 +46,30 @@ public final class SrvRecordResponse {
     }
 
     /**
-     * The port value for this SRV record.
+     * @return The port value for this SRV record.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The priority value for this SRV record.
+     * @return The priority value for this SRV record.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The target domain name for this SRV record.
+     * @return The target domain name for this SRV record.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * The weight value for this SRV record.
+     * @return The weight value for this SRV record.
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

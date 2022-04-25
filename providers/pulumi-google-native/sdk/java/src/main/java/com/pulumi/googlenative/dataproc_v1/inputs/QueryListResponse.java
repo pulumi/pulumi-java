@@ -24,6 +24,10 @@ public final class QueryListResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queries", required=true)
     private List<String> queries;
 
+    /**
+     * @return The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: &#34;hiveJob&#34;: { &#34;queryList&#34;: { &#34;queries&#34;: [ &#34;query1&#34;, &#34;query2&#34;, &#34;query3;query4&#34;, ] } }
+     * 
+     */
     public List<String> queries() {
         return this.queries;
     }
@@ -52,11 +56,23 @@ public final class QueryListResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QueryListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queries The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: &#34;hiveJob&#34;: { &#34;queryList&#34;: { &#34;queries&#34;: [ &#34;query1&#34;, &#34;query2&#34;, &#34;query3;query4&#34;, ] } }
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(List<String> queries) {
             $.queries = queries;
             return this;
         }
 
+        /**
+         * @param queries The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: &#34;hiveJob&#34;: { &#34;queryList&#34;: { &#34;queries&#34;: [ &#34;query1&#34;, &#34;query2&#34;, &#34;query3;query4&#34;, ] } }
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(String... queries) {
             return queries(List.of(queries));
         }

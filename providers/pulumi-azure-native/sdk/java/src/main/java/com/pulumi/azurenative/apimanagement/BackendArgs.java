@@ -28,6 +28,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendId")
     private @Nullable Output<String> backendId;
 
+    /**
+     * @return Identifier of the Backend entity. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> backendId() {
         return Optional.ofNullable(this.backendId);
     }
@@ -39,6 +43,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<BackendCredentialsContractArgs> credentials;
 
+    /**
+     * @return Backend Credentials Contract Properties
+     * 
+     */
     public Optional<Output<BackendCredentialsContractArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -50,6 +58,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Backend Description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<BackendPropertiesArgs> properties;
 
+    /**
+     * @return Backend Properties contract
+     * 
+     */
     public Optional<Output<BackendPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -72,6 +88,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
     private Output<Either<String,BackendProtocol>> protocol;
 
+    /**
+     * @return Backend communication protocol.
+     * 
+     */
     public Output<Either<String,BackendProtocol>> protocol() {
         return this.protocol;
     }
@@ -83,6 +103,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="proxy")
     private @Nullable Output<BackendProxyContractArgs> proxy;
 
+    /**
+     * @return Backend Proxy Contract Properties
+     * 
+     */
     public Optional<Output<BackendProxyContractArgs>> proxy() {
         return Optional.ofNullable(this.proxy);
     }
@@ -94,6 +118,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -105,6 +133,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -116,6 +148,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -127,6 +163,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Backend Title.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -138,6 +178,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tls")
     private @Nullable Output<BackendTlsPropertiesArgs> tls;
 
+    /**
+     * @return Backend TLS Properties
+     * 
+     */
     public Optional<Output<BackendTlsPropertiesArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -149,6 +193,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return Runtime Url of the Backend.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -188,118 +236,274 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendId Identifier of the Backend entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendId(@Nullable Output<String> backendId) {
             $.backendId = backendId;
             return this;
         }
 
+        /**
+         * @param backendId Identifier of the Backend entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendId(String backendId) {
             return backendId(Output.of(backendId));
         }
 
+        /**
+         * @param credentials Backend Credentials Contract Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<BackendCredentialsContractArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Backend Credentials Contract Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(BackendCredentialsContractArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param description Backend Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Backend Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param properties Backend Properties contract
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<BackendPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Backend Properties contract
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(BackendPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param protocol Backend communication protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<Either<String,BackendProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Backend communication protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,BackendProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Backend communication protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Backend communication protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(BackendProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param proxy Backend Proxy Contract Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxy(@Nullable Output<BackendProxyContractArgs> proxy) {
             $.proxy = proxy;
             return this;
         }
 
+        /**
+         * @param proxy Backend Proxy Contract Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxy(BackendProxyContractArgs proxy) {
             return proxy(Output.of(proxy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param title Backend Title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Backend Title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param tls Backend TLS Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<BackendTlsPropertiesArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls Backend TLS Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(BackendTlsPropertiesArgs tls) {
             return tls(Output.of(tls));
         }
 
+        /**
+         * @param url Runtime Url of the Backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Runtime Url of the Backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

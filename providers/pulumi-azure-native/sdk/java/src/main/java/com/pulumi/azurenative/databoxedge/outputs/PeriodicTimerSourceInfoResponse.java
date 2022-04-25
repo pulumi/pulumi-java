@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PeriodicTimerSourceInfoResponse {
     /**
-     * Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+     * @return Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
      * 
      */
     private final String schedule;
     /**
-     * The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+     * @return The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
      * 
      */
     private final String startTime;
     /**
-     * Topic where periodic events are published to IoT device.
+     * @return Topic where periodic events are published to IoT device.
      * 
      */
     private final @Nullable String topic;
@@ -38,23 +38,23 @@ public final class PeriodicTimerSourceInfoResponse {
     }
 
     /**
-     * Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+     * @return Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
      * 
-    */
+     */
     public String schedule() {
         return this.schedule;
     }
     /**
-     * The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+     * @return The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Topic where periodic events are published to IoT device.
+     * @return Topic where periodic events are published to IoT device.
      * 
-    */
+     */
     public Optional<String> topic() {
         return Optional.ofNullable(this.topic);
     }

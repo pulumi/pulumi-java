@@ -28,6 +28,10 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
     @Import(name="armTemplateId")
     private @Nullable Output<String> armTemplateId;
 
+    /**
+     * @return The Azure Resource Manager template&#39;s identifier.
+     * 
+     */
     public Optional<Output<String>> armTemplateId() {
         return Optional.ofNullable(this.armTemplateId);
     }
@@ -39,6 +43,10 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
     @Import(name="parameters")
     private @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
+    /**
+     * @return The parameters of the Azure Resource Manager template.
+     * 
+     */
     public Optional<Output<List<ArmTemplateParameterPropertiesArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -68,24 +76,54 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
             $ = new EnvironmentDeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param armTemplateId The Azure Resource Manager template&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder armTemplateId(@Nullable Output<String> armTemplateId) {
             $.armTemplateId = armTemplateId;
             return this;
         }
 
+        /**
+         * @param armTemplateId The Azure Resource Manager template&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder armTemplateId(String armTemplateId) {
             return armTemplateId(Output.of(armTemplateId));
         }
 
+        /**
+         * @param parameters The parameters of the Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ArmTemplateParameterPropertiesArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters of the Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ArmTemplateParameterPropertiesArgs... parameters) {
             return parameters(List.of(parameters));
         }

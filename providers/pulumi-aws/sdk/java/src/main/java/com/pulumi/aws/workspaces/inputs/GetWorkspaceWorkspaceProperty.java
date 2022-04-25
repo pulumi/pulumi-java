@@ -20,6 +20,10 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
     @Import(name="computeTypeName", required=true)
     private String computeTypeName;
 
+    /**
+     * @return The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
+     * 
+     */
     public String computeTypeName() {
         return this.computeTypeName;
     }
@@ -31,6 +35,10 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
     @Import(name="rootVolumeSizeGib", required=true)
     private Integer rootVolumeSizeGib;
 
+    /**
+     * @return The size of the root volume.
+     * 
+     */
     public Integer rootVolumeSizeGib() {
         return this.rootVolumeSizeGib;
     }
@@ -42,6 +50,10 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
     @Import(name="runningMode", required=true)
     private String runningMode;
 
+    /**
+     * @return The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
+     * 
+     */
     public String runningMode() {
         return this.runningMode;
     }
@@ -53,6 +65,10 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
     @Import(name="runningModeAutoStopTimeoutInMinutes", required=true)
     private Integer runningModeAutoStopTimeoutInMinutes;
 
+    /**
+     * @return The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
+     * 
+     */
     public Integer runningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes;
     }
@@ -64,6 +80,10 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
     @Import(name="userVolumeSizeGib", required=true)
     private Integer userVolumeSizeGib;
 
+    /**
+     * @return The size of the user storage.
+     * 
+     */
     public Integer userVolumeSizeGib() {
         return this.userVolumeSizeGib;
     }
@@ -96,26 +116,56 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
             $ = new GetWorkspaceWorkspaceProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeTypeName The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeTypeName(String computeTypeName) {
             $.computeTypeName = computeTypeName;
             return this;
         }
 
+        /**
+         * @param rootVolumeSizeGib The size of the root volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootVolumeSizeGib(Integer rootVolumeSizeGib) {
             $.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
 
+        /**
+         * @param runningMode The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runningMode(String runningMode) {
             $.runningMode = runningMode;
             return this;
         }
 
+        /**
+         * @param runningModeAutoStopTimeoutInMinutes The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
             $.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param userVolumeSizeGib The size of the user storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userVolumeSizeGib(Integer userVolumeSizeGib) {
             $.userVolumeSizeGib = userVolumeSizeGib;
             return this;

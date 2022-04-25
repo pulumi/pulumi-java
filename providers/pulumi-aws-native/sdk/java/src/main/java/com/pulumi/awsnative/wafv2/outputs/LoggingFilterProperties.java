@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class LoggingFilterProperties {
     /**
-     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
+     * @return Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
      */
     private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
     /**
-     * The filters that you want to apply to the logs.
+     * @return The filters that you want to apply to the logs.
      * 
      */
     private final List<LoggingConfigurationFilter> filters;
@@ -31,16 +31,16 @@ public final class LoggingFilterProperties {
     }
 
     /**
-     * Default handling for logs that don&#39;t match any of the specified filtering conditions.
+     * @return Default handling for logs that don&#39;t match any of the specified filtering conditions.
      * 
-    */
+     */
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior() {
         return this.defaultBehavior;
     }
     /**
-     * The filters that you want to apply to the logs.
+     * @return The filters that you want to apply to the logs.
      * 
-    */
+     */
     public List<LoggingConfigurationFilter> filters() {
         return this.filters;
     }

@@ -28,6 +28,10 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
     @Import(name="cloudSqlInstance")
     private @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
 
+    /**
+     * @return For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2CloudSqlInstanceArgs>> cloudSqlInstance() {
         return Optional.ofNullable(this.cloudSqlInstance);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
     @Import(name="secret")
     private @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
 
+    /**
+     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * 
+     */
     public Optional<Output<GoogleCloudRunOpV2SecretVolumeSourceArgs>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
             $ = new GoogleCloudRunOpV2VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudSqlInstance For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(@Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance) {
             $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
 
+        /**
+         * @param cloudSqlInstance For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceArgs cloudSqlInstance) {
             return cloudSqlInstance(Output.of(cloudSqlInstance));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secret Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceArgs secret) {
             return secret(Output.of(secret));
         }

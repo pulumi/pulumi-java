@@ -23,6 +23,10 @@ public final class DeviceStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="binaryData", required=true)
     private String binaryData;
 
+    /**
+     * @return The device state data.
+     * 
+     */
     public String binaryData() {
         return this.binaryData;
     }
@@ -34,6 +38,10 @@ public final class DeviceStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return [Output only] The time at which this state version was updated in Cloud IoT Core.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -63,11 +71,23 @@ public final class DeviceStateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeviceStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binaryData The device state data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryData(String binaryData) {
             $.binaryData = binaryData;
             return this;
         }
 
+        /**
+         * @param updateTime [Output only] The time at which this state version was updated in Cloud IoT Core.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

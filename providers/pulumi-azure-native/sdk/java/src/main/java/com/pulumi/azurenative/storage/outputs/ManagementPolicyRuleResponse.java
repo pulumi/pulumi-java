@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementPolicyRuleResponse {
     /**
-     * An object that defines the Lifecycle rule.
+     * @return An object that defines the Lifecycle rule.
      * 
      */
     private final ManagementPolicyDefinitionResponse definition;
     /**
-     * Rule is enabled if set to true.
+     * @return Rule is enabled if set to true.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
      */
     private final String name;
     /**
-     * The valid value is Lifecycle
+     * @return The valid value is Lifecycle
      * 
      */
     private final String type;
@@ -47,30 +47,30 @@ public final class ManagementPolicyRuleResponse {
     }
 
     /**
-     * An object that defines the Lifecycle rule.
+     * @return An object that defines the Lifecycle rule.
      * 
-    */
+     */
     public ManagementPolicyDefinitionResponse definition() {
         return this.definition;
     }
     /**
-     * Rule is enabled if set to true.
+     * @return Rule is enabled if set to true.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The valid value is Lifecycle
+     * @return The valid value is Lifecycle
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

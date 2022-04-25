@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrailEventSelector {
     /**
-     * Configuration block for data events. See details below.
+     * @return Configuration block for data events. See details below.
      * 
      */
     private final @Nullable List<TrailEventSelectorDataResource> dataResources;
     /**
-     * A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
+     * @return A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
      * 
      */
     private final @Nullable List<String> excludeManagementEventSources;
     /**
-     * Whether to include management events for your trail. Defaults to `true`.
+     * @return Whether to include management events for your trail. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean includeManagementEvents;
     /**
-     * Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
+     * @return Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
      * 
      */
     private final @Nullable String readWriteType;
@@ -48,30 +48,30 @@ public final class TrailEventSelector {
     }
 
     /**
-     * Configuration block for data events. See details below.
+     * @return Configuration block for data events. See details below.
      * 
-    */
+     */
     public List<TrailEventSelectorDataResource> dataResources() {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
     /**
-     * A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
+     * @return A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
      * 
-    */
+     */
     public List<String> excludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
     /**
-     * Whether to include management events for your trail. Defaults to `true`.
+     * @return Whether to include management events for your trail. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> includeManagementEvents() {
         return Optional.ofNullable(this.includeManagementEvents);
     }
     /**
-     * Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
+     * @return Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
      * 
-    */
+     */
     public Optional<String> readWriteType() {
         return Optional.ofNullable(this.readWriteType);
     }

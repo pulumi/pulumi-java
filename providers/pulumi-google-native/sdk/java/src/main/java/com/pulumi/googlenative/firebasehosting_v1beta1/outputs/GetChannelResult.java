@@ -13,47 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GetChannelResult {
     /**
-     * The time at which the channel was created.
+     * @return The time at which the channel was created.
      * 
      */
     private final String createTime;
     /**
-     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
+     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
      * 
      */
     private final String expireTime;
     /**
-     * Text labels used for extra metadata and/or filtering.
+     * @return Text labels used for extra metadata and/or filtering.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
      * 
      */
     private final String name;
     /**
-     * The current release for the channel, if any.
+     * @return The current release for the channel, if any.
      * 
      */
     private final ReleaseResponse release;
     /**
-     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
      * 
      */
     private final Integer retainedReleaseCount;
     /**
-     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
      * 
      */
     private final String ttl;
     /**
-     * The time at which the channel was last updated.
+     * @return The time at which the channel was last updated.
      * 
      */
     private final String updateTime;
     /**
-     * The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
+     * @return The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
      * 
      */
     private final String url;
@@ -81,65 +81,65 @@ public final class GetChannelResult {
     }
 
     /**
-     * The time at which the channel was created.
+     * @return The time at which the channel was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
+     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it&#39;s set directly or via the `ttl` field.
      * 
-    */
+     */
     public String expireTime() {
         return this.expireTime;
     }
     /**
-     * Text labels used for extra metadata and/or filtering.
+     * @return Text labels used for extra metadata and/or filtering.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current release for the channel, if any.
+     * @return The current release for the channel, if any.
      * 
-    */
+     */
     public ReleaseResponse release() {
         return this.release;
     }
     /**
-     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
      * 
-    */
+     */
     public Integer retainedReleaseCount() {
         return this.retainedReleaseCount;
     }
     /**
-     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
      * 
-    */
+     */
     public String ttl() {
         return this.ttl;
     }
     /**
-     * The time at which the channel was last updated.
+     * @return The time at which the channel was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
+     * @return The URL at which the content of this channel&#39;s current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel&#39;s current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel&#39;s current release can also be viewed at any connected custom domains.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

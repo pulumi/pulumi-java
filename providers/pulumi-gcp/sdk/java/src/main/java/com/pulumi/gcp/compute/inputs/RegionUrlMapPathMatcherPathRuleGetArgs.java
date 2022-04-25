@@ -28,6 +28,13 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends com.pulumi.res
     @Import(name="paths", required=true)
     private Output<List<String>> paths;
 
+    /**
+     * @return The list of path patterns to match. Each must start with / and the only place a
+     * \* is allowed is at the end following a /. The string fed to the path matcher
+     * does not include any text after the first ? or #, and those chars are not
+     * allowed here.
+     * 
+     */
     public Output<List<String>> paths() {
         return this.paths;
     }
@@ -45,6 +52,16 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends com.pulumi.res
     @Import(name="routeAction")
     private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionGetArgs> routeAction;
 
+    /**
+     * @return In response to a matching path, the load balancer performs advanced routing
+     * actions like URL rewrites, header transformations, etc. prior to forwarding the
+     * request to the selected backend. If routeAction specifies any
+     * weightedBackendServices, service must not be set. Conversely if service is set,
+     * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+     * or urlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionGetArgs>> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
@@ -56,6 +73,10 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends com.pulumi.res
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return A reference to expected RegionBackendService resource the given URL should be mapped to.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -70,6 +91,13 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends com.pulumi.res
     @Import(name="urlRedirect")
     private @Nullable Output<RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs> urlRedirect;
 
+    /**
+     * @return When a path pattern is matched, the request is redirected to a URL specified
+     * by urlRedirect. If urlRedirect is specified, service or routeAction must not
+     * be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs>> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
@@ -101,42 +129,123 @@ public final class RegionUrlMapPathMatcherPathRuleGetArgs extends com.pulumi.res
             $ = new RegionUrlMapPathMatcherPathRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a
+         * \* is allowed is at the end following a /. The string fed to the path matcher
+         * does not include any text after the first ? or #, and those chars are not
+         * allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(Output<List<String>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a
+         * \* is allowed is at the end following a /. The string fed to the path matcher
+         * does not include any text after the first ? or #, and those chars are not
+         * allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths The list of path patterns to match. Each must start with / and the only place a
+         * \* is allowed is at the end following a /. The string fed to the path matcher
+         * does not include any text after the first ? or #, and those chars are not
+         * allowed here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param routeAction In response to a matching path, the load balancer performs advanced routing
+         * actions like URL rewrites, header transformations, etc. prior to forwarding the
+         * request to the selected backend. If routeAction specifies any
+         * weightedBackendServices, service must not be set. Conversely if service is set,
+         * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+         * or urlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionGetArgs> routeAction) {
             $.routeAction = routeAction;
             return this;
         }
 
+        /**
+         * @param routeAction In response to a matching path, the load balancer performs advanced routing
+         * actions like URL rewrites, header transformations, etc. prior to forwarding the
+         * request to the selected backend. If routeAction specifies any
+         * weightedBackendServices, service must not be set. Conversely if service is set,
+         * routeAction cannot contain any  weightedBackendServices. Only one of routeAction
+         * or urlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeAction(RegionUrlMapPathMatcherPathRuleRouteActionGetArgs routeAction) {
             return routeAction(Output.of(routeAction));
         }
 
+        /**
+         * @param service A reference to expected RegionBackendService resource the given URL should be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service A reference to expected RegionBackendService resource the given URL should be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param urlRedirect When a path pattern is matched, the request is redirected to a URL specified
+         * by urlRedirect. If urlRedirect is specified, service or routeAction must not
+         * be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(@Nullable Output<RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs> urlRedirect) {
             $.urlRedirect = urlRedirect;
             return this;
         }
 
+        /**
+         * @param urlRedirect When a path pattern is matched, the request is redirected to a URL specified
+         * by urlRedirect. If urlRedirect is specified, service or routeAction must not
+         * be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlRedirect(RegionUrlMapPathMatcherPathRuleUrlRedirectGetArgs urlRedirect) {
             return urlRedirect(Output.of(urlRedirect));
         }

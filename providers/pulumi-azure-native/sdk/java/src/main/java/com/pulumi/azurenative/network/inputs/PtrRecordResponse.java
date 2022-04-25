@@ -25,6 +25,10 @@ public final class PtrRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ptrdname")
     private @Nullable String ptrdname;
 
+    /**
+     * @return The PTR target domain name for this PTR record.
+     * 
+     */
     public Optional<String> ptrdname() {
         return Optional.ofNullable(this.ptrdname);
     }
@@ -53,6 +57,12 @@ public final class PtrRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PtrRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ptrdname The PTR target domain name for this PTR record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ptrdname(@Nullable String ptrdname) {
             $.ptrdname = ptrdname;
             return this;

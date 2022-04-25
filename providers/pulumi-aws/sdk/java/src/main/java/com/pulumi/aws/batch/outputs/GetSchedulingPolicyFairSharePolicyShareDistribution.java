@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
     /**
-     * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
     private final String shareIdentifier;
     /**
-     * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
     private final Double weightFactor;
@@ -30,16 +30,16 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
     }
 
     /**
-     * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-    */
+     */
     public String shareIdentifier() {
         return this.shareIdentifier;
     }
     /**
-     * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * @return The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-    */
+     */
     public Double weightFactor() {
         return this.weightFactor;
     }

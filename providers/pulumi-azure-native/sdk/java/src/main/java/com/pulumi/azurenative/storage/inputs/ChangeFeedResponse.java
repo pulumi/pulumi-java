@@ -26,6 +26,10 @@ public final class ChangeFeedResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Indicates whether change feed event logging is enabled for the Blob service.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class ChangeFeedResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionInDays")
     private @Nullable Integer retentionInDays;
 
+    /**
+     * @return Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+     * 
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -66,11 +74,23 @@ public final class ChangeFeedResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ChangeFeedResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether change feed event logging is enabled for the Blob service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param retentionInDays Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;

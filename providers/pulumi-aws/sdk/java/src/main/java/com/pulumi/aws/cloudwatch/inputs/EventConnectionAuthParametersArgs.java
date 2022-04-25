@@ -25,6 +25,10 @@ public final class EventConnectionAuthParametersArgs extends com.pulumi.resource
     @Import(name="apiKey")
     private @Nullable Output<EventConnectionAuthParametersApiKeyArgs> apiKey;
 
+    /**
+     * @return Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
+     * 
+     */
     public Optional<Output<EventConnectionAuthParametersApiKeyArgs>> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
@@ -36,6 +40,10 @@ public final class EventConnectionAuthParametersArgs extends com.pulumi.resource
     @Import(name="basic")
     private @Nullable Output<EventConnectionAuthParametersBasicArgs> basic;
 
+    /**
+     * @return Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
+     * 
+     */
     public Optional<Output<EventConnectionAuthParametersBasicArgs>> basic() {
         return Optional.ofNullable(this.basic);
     }
@@ -47,6 +55,10 @@ public final class EventConnectionAuthParametersArgs extends com.pulumi.resource
     @Import(name="invocationHttpParameters")
     private @Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters;
 
+    /**
+     * @return Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+     * 
+     */
     public Optional<Output<EventConnectionAuthParametersInvocationHttpParametersArgs>> invocationHttpParameters() {
         return Optional.ofNullable(this.invocationHttpParameters);
     }
@@ -58,6 +70,10 @@ public final class EventConnectionAuthParametersArgs extends com.pulumi.resource
     @Import(name="oauth")
     private @Nullable Output<EventConnectionAuthParametersOauthArgs> oauth;
 
+    /**
+     * @return Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
+     * 
+     */
     public Optional<Output<EventConnectionAuthParametersOauthArgs>> oauth() {
         return Optional.ofNullable(this.oauth);
     }
@@ -89,38 +105,86 @@ public final class EventConnectionAuthParametersArgs extends com.pulumi.resource
             $ = new EventConnectionAuthParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKey Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(@Nullable Output<EventConnectionAuthParametersApiKeyArgs> apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param apiKey Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(EventConnectionAuthParametersApiKeyArgs apiKey) {
             return apiKey(Output.of(apiKey));
         }
 
+        /**
+         * @param basic Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(@Nullable Output<EventConnectionAuthParametersBasicArgs> basic) {
             $.basic = basic;
             return this;
         }
 
+        /**
+         * @param basic Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(EventConnectionAuthParametersBasicArgs basic) {
             return basic(Output.of(basic));
         }
 
+        /**
+         * @param invocationHttpParameters Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invocationHttpParameters(@Nullable Output<EventConnectionAuthParametersInvocationHttpParametersArgs> invocationHttpParameters) {
             $.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
+        /**
+         * @param invocationHttpParameters Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invocationHttpParameters(EventConnectionAuthParametersInvocationHttpParametersArgs invocationHttpParameters) {
             return invocationHttpParameters(Output.of(invocationHttpParameters));
         }
 
+        /**
+         * @param oauth Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth(@Nullable Output<EventConnectionAuthParametersOauthArgs> oauth) {
             $.oauth = oauth;
             return this;
         }
 
+        /**
+         * @param oauth Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth(EventConnectionAuthParametersOauthArgs oauth) {
             return oauth(Output.of(oauth));
         }

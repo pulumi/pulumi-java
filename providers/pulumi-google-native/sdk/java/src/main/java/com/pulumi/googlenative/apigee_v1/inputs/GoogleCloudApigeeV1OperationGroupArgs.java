@@ -28,6 +28,10 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends com.pulumi.reso
     @Import(name="operationConfigType")
     private @Nullable Output<String> operationConfigType;
 
+    /**
+     * @return Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+     * 
+     */
     public Optional<Output<String>> operationConfigType() {
         return Optional.ofNullable(this.operationConfigType);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends com.pulumi.reso
     @Import(name="operationConfigs", required=true)
     private Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
 
+    /**
+     * @return List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+     * 
+     */
     public Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs() {
         return this.operationConfigs;
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends com.pulumi.reso
             $ = new GoogleCloudApigeeV1OperationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationConfigType Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigType(@Nullable Output<String> operationConfigType) {
             $.operationConfigType = operationConfigType;
             return this;
         }
 
+        /**
+         * @param operationConfigType Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigType(String operationConfigType) {
             return operationConfigType(Output.of(operationConfigType));
         }
 
+        /**
+         * @param operationConfigs List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigs(Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs) {
             $.operationConfigs = operationConfigs;
             return this;
         }
 
+        /**
+         * @param operationConfigs List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigArgs> operationConfigs) {
             return operationConfigs(Output.of(operationConfigs));
         }
 
+        /**
+         * @param operationConfigs List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationConfigs(GoogleCloudApigeeV1OperationConfigArgs... operationConfigs) {
             return operationConfigs(List.of(operationConfigs));
         }

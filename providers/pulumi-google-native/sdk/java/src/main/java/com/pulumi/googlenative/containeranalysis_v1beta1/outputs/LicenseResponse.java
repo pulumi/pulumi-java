@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LicenseResponse {
     /**
-     * Comments
+     * @return Comments
      * 
      */
     private final String comments;
     /**
-     * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+     * @return Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
      * 
      */
     private final String expression;
@@ -29,16 +29,16 @@ public final class LicenseResponse {
     }
 
     /**
-     * Comments
+     * @return Comments
      * 
-    */
+     */
     public String comments() {
         return this.comments;
     }
     /**
-     * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+     * @return Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }

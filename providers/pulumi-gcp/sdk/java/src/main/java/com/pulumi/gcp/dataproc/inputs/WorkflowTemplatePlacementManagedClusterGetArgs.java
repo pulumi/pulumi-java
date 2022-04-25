@@ -24,6 +24,10 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -35,6 +39,10 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
     @Import(name="config", required=true)
     private Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
 
+    /**
+     * @return Required. The cluster configuration.
+     * 
+     */
     public Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config() {
         return this.config;
     }
@@ -46,6 +54,10 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -76,29 +88,65 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
             $ = new WorkflowTemplatePlacementManagedClusterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param config Required. The cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Required. The cluster configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(WorkflowTemplatePlacementManagedClusterConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

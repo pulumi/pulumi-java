@@ -26,112 +26,112 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterGetPropertiesResponse {
     /**
-     * The cluster definition.
+     * @return The cluster definition.
      * 
      */
     private final ClusterDefinitionResponse clusterDefinition;
     /**
-     * The hdp version of the cluster.
+     * @return The hdp version of the cluster.
      * 
      */
     private final @Nullable String clusterHdpVersion;
     /**
-     * The cluster id.
+     * @return The cluster id.
      * 
      */
     private final @Nullable String clusterId;
     /**
-     * The state of the cluster.
+     * @return The state of the cluster.
      * 
      */
     private final @Nullable String clusterState;
     /**
-     * The version of the cluster.
+     * @return The version of the cluster.
      * 
      */
     private final @Nullable String clusterVersion;
     /**
-     * The compute isolation properties.
+     * @return The compute isolation properties.
      * 
      */
     private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
     /**
-     * The compute profile.
+     * @return The compute profile.
      * 
      */
     private final @Nullable ComputeProfileResponse computeProfile;
     /**
-     * The list of connectivity endpoints.
+     * @return The list of connectivity endpoints.
      * 
      */
     private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
     /**
-     * The date on which the cluster was created.
+     * @return The date on which the cluster was created.
      * 
      */
     private final @Nullable String createdDate;
     /**
-     * The disk encryption properties.
+     * @return The disk encryption properties.
      * 
      */
     private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
     /**
-     * The encryption-in-transit properties.
+     * @return The encryption-in-transit properties.
      * 
      */
     private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
     /**
-     * The list of errors.
+     * @return The list of errors.
      * 
      */
     private final @Nullable List<ErrorsResponse> errors;
     /**
-     * The excluded services config.
+     * @return The excluded services config.
      * 
      */
     private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
     /**
-     * The cluster kafka rest proxy configuration.
+     * @return The cluster kafka rest proxy configuration.
      * 
      */
     private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
     /**
-     * The minimal supported tls version.
+     * @return The minimal supported tls version.
      * 
      */
     private final @Nullable String minSupportedTlsVersion;
     /**
-     * The network properties.
+     * @return The network properties.
      * 
      */
     private final @Nullable NetworkPropertiesResponse networkProperties;
     /**
-     * The type of operating system.
+     * @return The type of operating system.
      * 
      */
     private final @Nullable String osType;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * The quota information.
+     * @return The quota information.
      * 
      */
     private final @Nullable QuotaInfoResponse quotaInfo;
     /**
-     * The security profile.
+     * @return The security profile.
      * 
      */
     private final @Nullable SecurityProfileResponse securityProfile;
     /**
-     * The storage profile.
+     * @return The storage profile.
      * 
      */
     private final @Nullable StorageProfileResponse storageProfile;
     /**
-     * The cluster tier.
+     * @return The cluster tier.
      * 
      */
     private final @Nullable String tier;
@@ -185,156 +185,156 @@ public final class ClusterGetPropertiesResponse {
     }
 
     /**
-     * The cluster definition.
+     * @return The cluster definition.
      * 
-    */
+     */
     public ClusterDefinitionResponse clusterDefinition() {
         return this.clusterDefinition;
     }
     /**
-     * The hdp version of the cluster.
+     * @return The hdp version of the cluster.
      * 
-    */
+     */
     public Optional<String> clusterHdpVersion() {
         return Optional.ofNullable(this.clusterHdpVersion);
     }
     /**
-     * The cluster id.
+     * @return The cluster id.
      * 
-    */
+     */
     public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
-     * The state of the cluster.
+     * @return The state of the cluster.
      * 
-    */
+     */
     public Optional<String> clusterState() {
         return Optional.ofNullable(this.clusterState);
     }
     /**
-     * The version of the cluster.
+     * @return The version of the cluster.
      * 
-    */
+     */
     public Optional<String> clusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
     /**
-     * The compute isolation properties.
+     * @return The compute isolation properties.
      * 
-    */
+     */
     public Optional<ComputeIsolationPropertiesResponse> computeIsolationProperties() {
         return Optional.ofNullable(this.computeIsolationProperties);
     }
     /**
-     * The compute profile.
+     * @return The compute profile.
      * 
-    */
+     */
     public Optional<ComputeProfileResponse> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
-     * The list of connectivity endpoints.
+     * @return The list of connectivity endpoints.
      * 
-    */
+     */
     public List<ConnectivityEndpointResponse> connectivityEndpoints() {
         return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
     }
     /**
-     * The date on which the cluster was created.
+     * @return The date on which the cluster was created.
      * 
-    */
+     */
     public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
-     * The disk encryption properties.
+     * @return The disk encryption properties.
      * 
-    */
+     */
     public Optional<DiskEncryptionPropertiesResponse> diskEncryptionProperties() {
         return Optional.ofNullable(this.diskEncryptionProperties);
     }
     /**
-     * The encryption-in-transit properties.
+     * @return The encryption-in-transit properties.
      * 
-    */
+     */
     public Optional<EncryptionInTransitPropertiesResponse> encryptionInTransitProperties() {
         return Optional.ofNullable(this.encryptionInTransitProperties);
     }
     /**
-     * The list of errors.
+     * @return The list of errors.
      * 
-    */
+     */
     public List<ErrorsResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * The excluded services config.
+     * @return The excluded services config.
      * 
-    */
+     */
     public Optional<ExcludedServicesConfigResponse> excludedServicesConfig() {
         return Optional.ofNullable(this.excludedServicesConfig);
     }
     /**
-     * The cluster kafka rest proxy configuration.
+     * @return The cluster kafka rest proxy configuration.
      * 
-    */
+     */
     public Optional<KafkaRestPropertiesResponse> kafkaRestProperties() {
         return Optional.ofNullable(this.kafkaRestProperties);
     }
     /**
-     * The minimal supported tls version.
+     * @return The minimal supported tls version.
      * 
-    */
+     */
     public Optional<String> minSupportedTlsVersion() {
         return Optional.ofNullable(this.minSupportedTlsVersion);
     }
     /**
-     * The network properties.
+     * @return The network properties.
      * 
-    */
+     */
     public Optional<NetworkPropertiesResponse> networkProperties() {
         return Optional.ofNullable(this.networkProperties);
     }
     /**
-     * The type of operating system.
+     * @return The type of operating system.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The quota information.
+     * @return The quota information.
      * 
-    */
+     */
     public Optional<QuotaInfoResponse> quotaInfo() {
         return Optional.ofNullable(this.quotaInfo);
     }
     /**
-     * The security profile.
+     * @return The security profile.
      * 
-    */
+     */
     public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
-     * The storage profile.
+     * @return The storage profile.
      * 
-    */
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * The cluster tier.
+     * @return The cluster tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

@@ -25,6 +25,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableModifications")
     private @Nullable Output<Boolean> disableModifications;
 
+    /**
+     * @return If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * 
+     */
     public Optional<Output<Boolean>> disableModifications() {
         return Optional.ofNullable(this.disableModifications);
     }
@@ -36,6 +40,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableServing")
     private @Nullable Output<Boolean> disableServing;
 
+    /**
+     * @return Disable serving any search or assist results.
+     * 
+     */
     public Optional<Output<Boolean>> disableServing() {
         return Optional.ofNullable(this.disableServing);
     }
@@ -47,6 +55,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Display name of the datasource The maximum length is 300 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -58,6 +70,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexingServiceAccounts")
     private @Nullable Output<List<String>> indexingServiceAccounts;
 
+    /**
+     * @return List of service accounts that have indexing access.
+     * 
+     */
     public Optional<Output<List<String>>> indexingServiceAccounts() {
         return Optional.ofNullable(this.indexingServiceAccounts);
     }
@@ -69,6 +85,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="itemsVisibility")
     private @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
 
+    /**
+     * @return This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * 
+     */
     public Optional<Output<List<GSuitePrincipalArgs>>> itemsVisibility() {
         return Optional.ofNullable(this.itemsVisibility);
     }
@@ -80,6 +100,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationIds")
     private @Nullable Output<List<String>> operationIds;
 
+    /**
+     * @return IDs of the Long Running Operations (LROs) currently running for this schema.
+     * 
+     */
     public Optional<Output<List<String>>> operationIds() {
         return Optional.ofNullable(this.operationIds);
     }
@@ -102,6 +130,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="returnThumbnailUrls")
     private @Nullable Output<Boolean> returnThumbnailUrls;
 
+    /**
+     * @return Can a user request to get thumbnail URI for Items indexed in this data source.
+     * 
+     */
     public Optional<Output<Boolean>> returnThumbnailUrls() {
         return Optional.ofNullable(this.returnThumbnailUrls);
     }
@@ -113,6 +145,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
     private @Nullable Output<String> shortName;
 
+    /**
+     * @return A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * 
+     */
     public Optional<Output<String>> shortName() {
         return Optional.ofNullable(this.shortName);
     }
@@ -149,95 +185,221 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableModifications If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableModifications(@Nullable Output<Boolean> disableModifications) {
             $.disableModifications = disableModifications;
             return this;
         }
 
+        /**
+         * @param disableModifications If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableModifications(Boolean disableModifications) {
             return disableModifications(Output.of(disableModifications));
         }
 
+        /**
+         * @param disableServing Disable serving any search or assist results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableServing(@Nullable Output<Boolean> disableServing) {
             $.disableServing = disableServing;
             return this;
         }
 
+        /**
+         * @param disableServing Disable serving any search or assist results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableServing(Boolean disableServing) {
             return disableServing(Output.of(disableServing));
         }
 
+        /**
+         * @param displayName Display name of the datasource The maximum length is 300 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the datasource The maximum length is 300 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param indexingServiceAccounts List of service accounts that have indexing access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingServiceAccounts(@Nullable Output<List<String>> indexingServiceAccounts) {
             $.indexingServiceAccounts = indexingServiceAccounts;
             return this;
         }
 
+        /**
+         * @param indexingServiceAccounts List of service accounts that have indexing access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingServiceAccounts(List<String> indexingServiceAccounts) {
             return indexingServiceAccounts(Output.of(indexingServiceAccounts));
         }
 
+        /**
+         * @param indexingServiceAccounts List of service accounts that have indexing access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexingServiceAccounts(String... indexingServiceAccounts) {
             return indexingServiceAccounts(List.of(indexingServiceAccounts));
         }
 
+        /**
+         * @param itemsVisibility This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsVisibility(@Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility) {
             $.itemsVisibility = itemsVisibility;
             return this;
         }
 
+        /**
+         * @param itemsVisibility This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsVisibility(List<GSuitePrincipalArgs> itemsVisibility) {
             return itemsVisibility(Output.of(itemsVisibility));
         }
 
+        /**
+         * @param itemsVisibility This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsVisibility(GSuitePrincipalArgs... itemsVisibility) {
             return itemsVisibility(List.of(itemsVisibility));
         }
 
+        /**
+         * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operationIds IDs of the Long Running Operations (LROs) currently running for this schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationIds(@Nullable Output<List<String>> operationIds) {
             $.operationIds = operationIds;
             return this;
         }
 
+        /**
+         * @param operationIds IDs of the Long Running Operations (LROs) currently running for this schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationIds(List<String> operationIds) {
             return operationIds(Output.of(operationIds));
         }
 
+        /**
+         * @param operationIds IDs of the Long Running Operations (LROs) currently running for this schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationIds(String... operationIds) {
             return operationIds(List.of(operationIds));
         }
 
+        /**
+         * @param returnThumbnailUrls Can a user request to get thumbnail URI for Items indexed in this data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnThumbnailUrls(@Nullable Output<Boolean> returnThumbnailUrls) {
             $.returnThumbnailUrls = returnThumbnailUrls;
             return this;
         }
 
+        /**
+         * @param returnThumbnailUrls Can a user request to get thumbnail URI for Items indexed in this data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnThumbnailUrls(Boolean returnThumbnailUrls) {
             return returnThumbnailUrls(Output.of(returnThumbnailUrls));
         }
 
+        /**
+         * @param shortName A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(@Nullable Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }

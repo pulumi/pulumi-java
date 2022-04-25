@@ -23,6 +23,10 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the script action.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="parameters", required=true)
     private String parameters;
 
+    /**
+     * @return The parameters for the script provided.
+     * 
+     */
     public String parameters() {
         return this.parameters;
     }
@@ -45,6 +53,10 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI to the script.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -75,16 +87,34 @@ public final class ScriptActionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ScriptActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the script provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param uri The URI to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

@@ -29,6 +29,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rejectSampleValue")
     private @Nullable Output<Object> rejectSampleValue;
 
+    /**
+     * @return Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Output<Object>> rejectSampleValue() {
         return Optional.ofNullable(this.rejectSampleValue);
     }
@@ -40,6 +44,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rejectType")
     private @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
 
+    /**
+     * @return Reject type.
+     * 
+     */
     public Optional<Output<Either<String,PolybaseSettingsRejectType>>> rejectType() {
         return Optional.ofNullable(this.rejectType);
     }
@@ -51,6 +59,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rejectValue")
     private @Nullable Output<Object> rejectValue;
 
+    /**
+     * @return Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+     * 
+     */
     public Optional<Output<Object>> rejectValue() {
         return Optional.ofNullable(this.rejectValue);
     }
@@ -62,6 +74,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useTypeDefault")
     private @Nullable Output<Object> useTypeDefault;
 
+    /**
+     * @return Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> useTypeDefault() {
         return Optional.ofNullable(this.useTypeDefault);
     }
@@ -93,46 +109,106 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new PolybaseSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rejectSampleValue Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectSampleValue(@Nullable Output<Object> rejectSampleValue) {
             $.rejectSampleValue = rejectSampleValue;
             return this;
         }
 
+        /**
+         * @param rejectSampleValue Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectSampleValue(Object rejectSampleValue) {
             return rejectSampleValue(Output.of(rejectSampleValue));
         }
 
+        /**
+         * @param rejectType Reject type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectType(@Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType) {
             $.rejectType = rejectType;
             return this;
         }
 
+        /**
+         * @param rejectType Reject type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectType(Either<String,PolybaseSettingsRejectType> rejectType) {
             return rejectType(Output.of(rejectType));
         }
 
+        /**
+         * @param rejectType Reject type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectType(String rejectType) {
             return rejectType(Either.ofLeft(rejectType));
         }
 
+        /**
+         * @param rejectType Reject type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectType(PolybaseSettingsRejectType rejectType) {
             return rejectType(Either.ofRight(rejectType));
         }
 
+        /**
+         * @param rejectValue Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectValue(@Nullable Output<Object> rejectValue) {
             $.rejectValue = rejectValue;
             return this;
         }
 
+        /**
+         * @param rejectValue Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectValue(Object rejectValue) {
             return rejectValue(Output.of(rejectValue));
         }
 
+        /**
+         * @param useTypeDefault Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTypeDefault(@Nullable Output<Object> useTypeDefault) {
             $.useTypeDefault = useTypeDefault;
             return this;
         }
 
+        /**
+         * @param useTypeDefault Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTypeDefault(Object useTypeDefault) {
             return useTypeDefault(Output.of(useTypeDefault));
         }

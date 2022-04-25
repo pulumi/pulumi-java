@@ -27,6 +27,10 @@ public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowPublicOverrides")
     private @Nullable Output<Boolean> allowPublicOverrides;
 
+    /**
+     * @return A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+     * 
+     */
     public Optional<Output<Boolean>> allowPublicOverrides() {
         return Optional.ofNullable(this.allowPublicOverrides);
     }
@@ -38,6 +42,10 @@ public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="getObject")
     private @Nullable Output<String> getObject;
 
+    /**
+     * @return Specifies the anonymous access to all objects in a bucket.
+     * 
+     */
     public Optional<Output<String>> getObject() {
         return Optional.ofNullable(this.getObject);
     }
@@ -67,20 +75,44 @@ public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceAr
             $ = new BucketAccessRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPublicOverrides A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicOverrides(@Nullable Output<Boolean> allowPublicOverrides) {
             $.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
 
+        /**
+         * @param allowPublicOverrides A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicOverrides(Boolean allowPublicOverrides) {
             return allowPublicOverrides(Output.of(allowPublicOverrides));
         }
 
+        /**
+         * @param getObject Specifies the anonymous access to all objects in a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getObject(@Nullable Output<String> getObject) {
             $.getObject = getObject;
             return this;
         }
 
+        /**
+         * @param getObject Specifies the anonymous access to all objects in a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getObject(String getObject) {
             return getObject(Output.of(getObject));
         }

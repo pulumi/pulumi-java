@@ -24,6 +24,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="durationMs", required=true)
     private Integer durationMs;
 
+    /**
+     * @return Synchronization duration
+     * 
+     */
     public Integer durationMs() {
         return this.durationMs;
     }
@@ -35,6 +39,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time of synchronization
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -46,6 +54,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return message of Synchronization
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -57,6 +69,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return start time of synchronization
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -68,6 +84,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Raw Status
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -79,6 +99,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="synchronizationId", required=true)
     private String synchronizationId;
 
+    /**
+     * @return Synchronization id
+     * 
+     */
     public String synchronizationId() {
         return this.synchronizationId;
     }
@@ -90,6 +114,10 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
     @Import(name="synchronizationMode", required=true)
     private String synchronizationMode;
 
+    /**
+     * @return Synchronization Mode
+     * 
+     */
     public String synchronizationMode() {
         return this.synchronizationMode;
     }
@@ -124,36 +152,78 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
             $ = new ShareSubscriptionSynchronizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationMs Synchronization duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(Integer durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param endTime End time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param message message of Synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param startTime start time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status Raw Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param synchronizationId Synchronization id
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationId(String synchronizationId) {
             $.synchronizationId = synchronizationId;
             return this;
         }
 
+        /**
+         * @param synchronizationMode Synchronization Mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(String synchronizationMode) {
             $.synchronizationMode = synchronizationMode;
             return this;

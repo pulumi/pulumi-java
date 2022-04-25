@@ -24,6 +24,10 @@ public final class ManagerIntrinsicSettingsArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<ManagerType> type;
 
+    /**
+     * @return The type of StorSimple Manager.
+     * 
+     */
     public Output<ManagerType> type() {
         return this.type;
     }
@@ -52,11 +56,23 @@ public final class ManagerIntrinsicSettingsArgs extends com.pulumi.resources.Res
             $ = new ManagerIntrinsicSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of StorSimple Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ManagerType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of StorSimple Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagerType type) {
             return type(Output.of(type));
         }

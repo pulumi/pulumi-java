@@ -28,6 +28,10 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
     @Import(name="columnNames")
     private @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
+    /**
+     * @return A list of input columns for the Azure Machine Learning web service endpoint.
+     * 
+     */
     public Optional<Output<List<AzureMachineLearningWebServiceInputColumnArgs>>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
@@ -39,6 +43,10 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the input. This is the name provided while authoring the endpoint.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,24 +76,54 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
             $ = new AzureMachineLearningWebServiceInputsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnNames A list of input columns for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(@Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
 
+        /**
+         * @param columnNames A list of input columns for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
             return columnNames(Output.of(columnNames));
         }
 
+        /**
+         * @param columnNames A list of input columns for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(AzureMachineLearningWebServiceInputColumnArgs... columnNames) {
             return columnNames(List.of(columnNames));
         }
 
+        /**
+         * @param name The name of the input. This is the name provided while authoring the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the input. This is the name provided while authoring the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

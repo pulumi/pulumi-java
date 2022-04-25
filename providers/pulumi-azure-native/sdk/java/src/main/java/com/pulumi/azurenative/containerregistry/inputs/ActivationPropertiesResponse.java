@@ -23,6 +23,10 @@ public final class ActivationPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The activation status of the connected registry.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -51,6 +55,12 @@ public final class ActivationPropertiesResponse extends com.pulumi.resources.Inv
             $ = new ActivationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The activation status of the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

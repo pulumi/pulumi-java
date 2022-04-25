@@ -25,6 +25,11 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
     @Import(name="appEngineRouting")
     private @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
 
+    /**
+     * @return App Engine Routing setting for the job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobAppEngineHttpTargetAppEngineRoutingArgs>> appEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
@@ -39,6 +44,13 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return HTTP request body.
+     * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+     * It is an error to set body on a job with an incompatible HttpMethod.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -51,6 +63,11 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
     @Import(name="headers")
     private @Nullable Output<Map<String,String>> headers;
 
+    /**
+     * @return This map contains the header field names and values.
+     * Repeated headers are not supported, but a header value can contain commas.
+     * 
+     */
     public Optional<Output<Map<String,String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -62,6 +79,10 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
     @Import(name="httpMethod")
     private @Nullable Output<String> httpMethod;
 
+    /**
+     * @return Which HTTP method to use for the request.
+     * 
+     */
     public Optional<Output<String>> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -77,6 +98,14 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
     @Import(name="relativeUri", required=true)
     private Output<String> relativeUri;
 
+    /**
+     * @return The relative URI.
+     * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
+     * It can contain a path, query string arguments, and \# fragments.
+     * If the relative URL is empty, then the root path &#34;/&#34; will be used.
+     * No spaces are allowed, and the maximum length allowed is 2083 characters
+     * 
+     */
     public Output<String> relativeUri() {
         return this.relativeUri;
     }
@@ -109,47 +138,125 @@ public final class JobAppEngineHttpTargetArgs extends com.pulumi.resources.Resou
             $ = new JobAppEngineHttpTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appEngineRouting App Engine Routing setting for the job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRouting(@Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting) {
             $.appEngineRouting = appEngineRouting;
             return this;
         }
 
+        /**
+         * @param appEngineRouting App Engine Routing setting for the job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appEngineRouting(JobAppEngineHttpTargetAppEngineRoutingArgs appEngineRouting) {
             return appEngineRouting(Output.of(appEngineRouting));
         }
 
+        /**
+         * @param body HTTP request body.
+         * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+         * It is an error to set body on a job with an incompatible HttpMethod.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body HTTP request body.
+         * A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
+         * It is an error to set body on a job with an incompatible HttpMethod.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param headers This map contains the header field names and values.
+         * Repeated headers are not supported, but a header value can contain commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers This map contains the header field names and values.
+         * Repeated headers are not supported, but a header value can contain commas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param httpMethod Which HTTP method to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod Which HTTP method to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param relativeUri The relative URI.
+         * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
+         * It can contain a path, query string arguments, and \# fragments.
+         * If the relative URL is empty, then the root path &#34;/&#34; will be used.
+         * No spaces are allowed, and the maximum length allowed is 2083 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUri(Output<String> relativeUri) {
             $.relativeUri = relativeUri;
             return this;
         }
 
+        /**
+         * @param relativeUri The relative URI.
+         * The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
+         * It can contain a path, query string arguments, and \# fragments.
+         * If the relative URL is empty, then the root path &#34;/&#34; will be used.
+         * No spaces are allowed, and the maximum length allowed is 2083 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUri(String relativeUri) {
             return relativeUri(Output.of(relativeUri));
         }

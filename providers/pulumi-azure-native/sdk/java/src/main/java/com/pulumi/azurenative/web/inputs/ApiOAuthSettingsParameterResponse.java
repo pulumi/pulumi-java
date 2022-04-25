@@ -26,6 +26,10 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
     @Import(name="options")
     private @Nullable Object options;
 
+    /**
+     * @return Options available to this parameter
+     * 
+     */
     public Optional<Object> options() {
         return Optional.ofNullable(this.options);
     }
@@ -37,6 +41,10 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
     @Import(name="uiDefinition")
     private @Nullable Object uiDefinition;
 
+    /**
+     * @return UI definitions per culture as caller can specify the culture
+     * 
+     */
     public Optional<Object> uiDefinition() {
         return Optional.ofNullable(this.uiDefinition);
     }
@@ -48,6 +56,10 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the setting
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -78,16 +90,34 @@ public final class ApiOAuthSettingsParameterResponse extends com.pulumi.resource
             $ = new ApiOAuthSettingsParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param options Options available to this parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Object options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param uiDefinition UI definitions per culture as caller can specify the culture
+         * 
+         * @return builder
+         * 
+         */
         public Builder uiDefinition(@Nullable Object uiDefinition) {
             $.uiDefinition = uiDefinition;
             return this;
         }
 
+        /**
+         * @param value Value of the setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

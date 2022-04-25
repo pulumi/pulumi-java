@@ -17,14 +17,14 @@ import javax.annotation.Nullable;
 public final class GetResourcesResult {
     private final @Nullable Boolean excludeCompliantResources;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable Boolean includeComplianceDetails;
     private final @Nullable List<String> resourceArnLists;
     /**
-     * List of objects matching the search criteria.
+     * @return List of objects matching the search criteria.
      * 
      */
     private final List<GetResourcesResourceTagMappingList> resourceTagMappingLists;
@@ -53,9 +53,9 @@ public final class GetResourcesResult {
         return Optional.ofNullable(this.excludeCompliantResources);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -66,9 +66,9 @@ public final class GetResourcesResult {
         return this.resourceArnLists == null ? List.of() : this.resourceArnLists;
     }
     /**
-     * List of objects matching the search criteria.
+     * @return List of objects matching the search criteria.
      * 
-    */
+     */
     public List<GetResourcesResourceTagMappingList> resourceTagMappingLists() {
         return this.resourceTagMappingLists;
     }

@@ -36,6 +36,10 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="metric")
     private @Nullable Output<String> metric;
 
+    /**
+     * @return What is measured by the behavior.
+     * 
+     */
     public Optional<Output<String>> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -54,6 +58,10 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name for the behavior.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -65,6 +73,10 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     @Import(name="suppressAlerts")
     private @Nullable Output<Boolean> suppressAlerts;
 
+    /**
+     * @return Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+     * 
+     */
     public Optional<Output<Boolean>> suppressAlerts() {
         return Optional.ofNullable(this.suppressAlerts);
     }
@@ -106,11 +118,23 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
             return criteria(Output.of(criteria));
         }
 
+        /**
+         * @param metric What is measured by the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(@Nullable Output<String> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric What is measured by the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(String metric) {
             return metric(Output.of(metric));
         }
@@ -124,20 +148,44 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
             return metricDimension(Output.of(metricDimension));
         }
 
+        /**
+         * @param name The name for the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param suppressAlerts Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressAlerts(@Nullable Output<Boolean> suppressAlerts) {
             $.suppressAlerts = suppressAlerts;
             return this;
         }
 
+        /**
+         * @param suppressAlerts Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressAlerts(Boolean suppressAlerts) {
             return suppressAlerts(Output.of(suppressAlerts));
         }

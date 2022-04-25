@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoScaleSettingsResponse {
     /**
-     * If omitted, the default value is 15 minutes (PT15M).
+     * @return If omitted, the default value is 15 minutes (PT15M).
      * 
      */
     private final @Nullable String evaluationInterval;
@@ -27,9 +27,9 @@ public final class AutoScaleSettingsResponse {
     }
 
     /**
-     * If omitted, the default value is 15 minutes (PT15M).
+     * @return If omitted, the default value is 15 minutes (PT15M).
      * 
-    */
+     */
     public Optional<String> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }

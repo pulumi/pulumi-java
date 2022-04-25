@@ -28,6 +28,10 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="datasetParameters")
     private @Nullable Output<Object> datasetParameters;
 
+    /**
+     * @return Reference data flow parameters from dataset.
+     * 
+     */
     public Optional<Output<Object>> datasetParameters() {
         return Optional.ofNullable(this.datasetParameters);
     }
@@ -39,6 +43,10 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters")
     private @Nullable Output<Map<String,Object>> parameters;
 
+    /**
+     * @return Data flow parameters
+     * 
+     */
     public Optional<Output<Map<String,Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -50,6 +58,10 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="referenceName", required=true)
     private Output<String> referenceName;
 
+    /**
+     * @return Reference data flow name.
+     * 
+     */
     public Output<String> referenceName() {
         return this.referenceName;
     }
@@ -61,6 +73,10 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Data flow reference type.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -92,38 +108,86 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
             $ = new DataFlowReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetParameters Reference data flow parameters from dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetParameters(@Nullable Output<Object> datasetParameters) {
             $.datasetParameters = datasetParameters;
             return this;
         }
 
+        /**
+         * @param datasetParameters Reference data flow parameters from dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetParameters(Object datasetParameters) {
             return datasetParameters(Output.of(datasetParameters));
         }
 
+        /**
+         * @param parameters Data flow parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Data flow parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param referenceName Reference data flow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(Output<String> referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param referenceName Reference data flow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             return referenceName(Output.of(referenceName));
         }
 
+        /**
+         * @param type Data flow reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Data flow reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

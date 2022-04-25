@@ -30,6 +30,10 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataAccountType", required=true)
     private Output<Either<String,DataAccountType>> dataAccountType;
 
+    /**
+     * @return Type of the account of data
+     * 
+     */
     public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
     }
@@ -41,6 +45,10 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="transferAllBlobs")
     private @Nullable Output<Boolean> transferAllBlobs;
 
+    /**
+     * @return To indicate if all Azure blobs have to be transferred
+     * 
+     */
     public Optional<Output<Boolean>> transferAllBlobs() {
         return Optional.ofNullable(this.transferAllBlobs);
     }
@@ -52,6 +60,10 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="transferAllFiles")
     private @Nullable Output<Boolean> transferAllFiles;
 
+    /**
+     * @return To indicate if all Azure Files have to be transferred
+     * 
+     */
     public Optional<Output<Boolean>> transferAllFiles() {
         return Optional.ofNullable(this.transferAllFiles);
     }
@@ -82,37 +94,85 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
             $ = new TransferAllDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param dataAccountType Type of the account of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             return dataAccountType(Either.ofLeft(dataAccountType));
         }
 
+        /**
+         * @param dataAccountType Type of the account of data
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(DataAccountType dataAccountType) {
             return dataAccountType(Either.ofRight(dataAccountType));
         }
 
+        /**
+         * @param transferAllBlobs To indicate if all Azure blobs have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllBlobs(@Nullable Output<Boolean> transferAllBlobs) {
             $.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
+        /**
+         * @param transferAllBlobs To indicate if all Azure blobs have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllBlobs(Boolean transferAllBlobs) {
             return transferAllBlobs(Output.of(transferAllBlobs));
         }
 
+        /**
+         * @param transferAllFiles To indicate if all Azure Files have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllFiles(@Nullable Output<Boolean> transferAllFiles) {
             $.transferAllFiles = transferAllFiles;
             return this;
         }
 
+        /**
+         * @param transferAllFiles To indicate if all Azure Files have to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferAllFiles(Boolean transferAllFiles) {
             return transferAllFiles(Output.of(transferAllFiles));
         }

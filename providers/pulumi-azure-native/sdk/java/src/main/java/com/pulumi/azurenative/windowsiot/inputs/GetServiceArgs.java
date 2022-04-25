@@ -19,6 +19,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The name of the Windows IoT Device Service.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Windows IoT Device Service.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The name of the Windows IoT Device Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Windows IoT Device Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

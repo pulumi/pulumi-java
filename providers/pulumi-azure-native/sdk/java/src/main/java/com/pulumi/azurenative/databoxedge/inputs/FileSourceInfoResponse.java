@@ -23,6 +23,10 @@ public final class FileSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="shareId", required=true)
     private String shareId;
 
+    /**
+     * @return File share ID.
+     * 
+     */
     public String shareId() {
         return this.shareId;
     }
@@ -51,6 +55,12 @@ public final class FileSourceInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new FileSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shareId File share ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(String shareId) {
             $.shareId = shareId;
             return this;

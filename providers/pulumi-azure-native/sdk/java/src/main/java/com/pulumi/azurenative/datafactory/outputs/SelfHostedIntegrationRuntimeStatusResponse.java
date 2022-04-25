@@ -15,98 +15,98 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SelfHostedIntegrationRuntimeStatusResponse {
     /**
-     * Whether Self-hosted integration runtime auto update has been turned on.
+     * @return Whether Self-hosted integration runtime auto update has been turned on.
      * 
      */
     private final String autoUpdate;
     /**
-     * The estimated time when the self-hosted integration runtime will be updated.
+     * @return The estimated time when the self-hosted integration runtime will be updated.
      * 
      */
     private final String autoUpdateETA;
     /**
-     * Object with additional information about integration runtime capabilities.
+     * @return Object with additional information about integration runtime capabilities.
      * 
      */
     private final Map<String,String> capabilities;
     /**
-     * The time at which the integration runtime was created, in ISO8601 format.
+     * @return The time at which the integration runtime was created, in ISO8601 format.
      * 
      */
     private final String createTime;
     /**
-     * The data factory name which the integration runtime belong to.
+     * @return The data factory name which the integration runtime belong to.
      * 
      */
     private final String dataFactoryName;
     /**
-     * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+     * @return It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
      * 
      */
     private final String internalChannelEncryption;
     /**
-     * The latest version on download center.
+     * @return The latest version on download center.
      * 
      */
     private final String latestVersion;
     /**
-     * The list of linked integration runtimes that are created to share with this integration runtime.
+     * @return The list of linked integration runtimes that are created to share with this integration runtime.
      * 
      */
     private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
     /**
-     * The local time zone offset in hours.
+     * @return The local time zone offset in hours.
      * 
      */
     private final String localTimeZoneOffset;
     /**
-     * The list of nodes for this integration runtime.
+     * @return The list of nodes for this integration runtime.
      * 
      */
     private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
     /**
-     * The version that the integration runtime is going to update to.
+     * @return The version that the integration runtime is going to update to.
      * 
      */
     private final String pushedVersion;
     /**
-     * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+     * @return The date at which the integration runtime will be scheduled to update, in ISO8601 format.
      * 
      */
     private final String scheduledUpdateDate;
     /**
-     * The URLs for the services used in integration runtime backend service.
+     * @return The URLs for the services used in integration runtime backend service.
      * 
      */
     private final List<String> serviceUrls;
     /**
-     * The state of integration runtime.
+     * @return The state of integration runtime.
      * 
      */
     private final String state;
     /**
-     * The task queue id of the integration runtime.
+     * @return The task queue id of the integration runtime.
      * 
      */
     private final String taskQueueId;
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;SelfHosted&#39;.
      * 
      */
     private final String type;
     /**
-     * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+     * @return The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
      * 
      */
     private final String updateDelayOffset;
     /**
-     * Version of the integration runtime.
+     * @return Version of the integration runtime.
      * 
      */
     private final String version;
     /**
-     * Status of the integration runtime version.
+     * @return Status of the integration runtime version.
      * 
      */
     private final String versionStatus;
@@ -154,136 +154,136 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
     }
 
     /**
-     * Whether Self-hosted integration runtime auto update has been turned on.
+     * @return Whether Self-hosted integration runtime auto update has been turned on.
      * 
-    */
+     */
     public String autoUpdate() {
         return this.autoUpdate;
     }
     /**
-     * The estimated time when the self-hosted integration runtime will be updated.
+     * @return The estimated time when the self-hosted integration runtime will be updated.
      * 
-    */
+     */
     public String autoUpdateETA() {
         return this.autoUpdateETA;
     }
     /**
-     * Object with additional information about integration runtime capabilities.
+     * @return Object with additional information about integration runtime capabilities.
      * 
-    */
+     */
     public Map<String,String> capabilities() {
         return this.capabilities;
     }
     /**
-     * The time at which the integration runtime was created, in ISO8601 format.
+     * @return The time at which the integration runtime was created, in ISO8601 format.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The data factory name which the integration runtime belong to.
+     * @return The data factory name which the integration runtime belong to.
      * 
-    */
+     */
     public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
-     * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+     * @return It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
      * 
-    */
+     */
     public String internalChannelEncryption() {
         return this.internalChannelEncryption;
     }
     /**
-     * The latest version on download center.
+     * @return The latest version on download center.
      * 
-    */
+     */
     public String latestVersion() {
         return this.latestVersion;
     }
     /**
-     * The list of linked integration runtimes that are created to share with this integration runtime.
+     * @return The list of linked integration runtimes that are created to share with this integration runtime.
      * 
-    */
+     */
     public List<LinkedIntegrationRuntimeResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
-     * The local time zone offset in hours.
+     * @return The local time zone offset in hours.
      * 
-    */
+     */
     public String localTimeZoneOffset() {
         return this.localTimeZoneOffset;
     }
     /**
-     * The list of nodes for this integration runtime.
+     * @return The list of nodes for this integration runtime.
      * 
-    */
+     */
     public List<SelfHostedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
     /**
-     * The version that the integration runtime is going to update to.
+     * @return The version that the integration runtime is going to update to.
      * 
-    */
+     */
     public String pushedVersion() {
         return this.pushedVersion;
     }
     /**
-     * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+     * @return The date at which the integration runtime will be scheduled to update, in ISO8601 format.
      * 
-    */
+     */
     public String scheduledUpdateDate() {
         return this.scheduledUpdateDate;
     }
     /**
-     * The URLs for the services used in integration runtime backend service.
+     * @return The URLs for the services used in integration runtime backend service.
      * 
-    */
+     */
     public List<String> serviceUrls() {
         return this.serviceUrls;
     }
     /**
-     * The state of integration runtime.
+     * @return The state of integration runtime.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The task queue id of the integration runtime.
+     * @return The task queue id of the integration runtime.
      * 
-    */
+     */
     public String taskQueueId() {
         return this.taskQueueId;
     }
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;SelfHosted&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+     * @return The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
      * 
-    */
+     */
     public String updateDelayOffset() {
         return this.updateDelayOffset;
     }
     /**
-     * Version of the integration runtime.
+     * @return Version of the integration runtime.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * Status of the integration runtime version.
+     * @return Status of the integration runtime version.
      * 
-    */
+     */
     public String versionStatus() {
         return this.versionStatus;
     }

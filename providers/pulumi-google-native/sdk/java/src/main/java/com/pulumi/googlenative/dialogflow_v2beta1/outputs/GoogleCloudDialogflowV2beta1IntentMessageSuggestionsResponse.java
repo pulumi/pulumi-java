@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse {
     /**
-     * The list of suggested replies.
+     * @return The list of suggested replies.
      * 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
     }
 
     /**
-     * The list of suggested replies.
+     * @return The list of suggested replies.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions() {
         return this.suggestions;
     }

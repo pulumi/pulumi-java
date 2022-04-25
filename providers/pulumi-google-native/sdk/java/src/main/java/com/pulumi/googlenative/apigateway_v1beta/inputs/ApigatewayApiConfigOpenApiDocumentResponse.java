@@ -23,6 +23,10 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends com.pulumi
     @Import(name="document", required=true)
     private ApigatewayApiConfigFileResponse document;
 
+    /**
+     * @return The OpenAPI Specification document file.
+     * 
+     */
     public ApigatewayApiConfigFileResponse document() {
         return this.document;
     }
@@ -51,6 +55,12 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends com.pulumi
             $ = new ApigatewayApiConfigOpenApiDocumentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param document The OpenAPI Specification document file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder document(ApigatewayApiConfigFileResponse document) {
             $.document = document;
             return this;

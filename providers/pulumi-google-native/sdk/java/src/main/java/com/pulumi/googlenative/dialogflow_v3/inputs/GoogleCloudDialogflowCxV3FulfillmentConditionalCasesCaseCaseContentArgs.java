@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
     @Import(name="additionalCases")
     private @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
 
+    /**
+     * @return Additional cases to be evaluated.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> additionalCases() {
         return Optional.ofNullable(this.additionalCases);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
     @Import(name="message")
     private @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
 
+    /**
+     * @return Returned message.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3ResponseMessageArgs>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
             $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalCases Additional cases to be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCases(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases) {
             $.additionalCases = additionalCases;
             return this;
         }
 
+        /**
+         * @param additionalCases Additional cases to be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs additionalCases) {
             return additionalCases(Output.of(additionalCases));
         }
 
+        /**
+         * @param message Returned message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageArgs> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Returned message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(GoogleCloudDialogflowCxV3ResponseMessageArgs message) {
             return message(Output.of(message));
         }

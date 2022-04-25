@@ -23,6 +23,10 @@ public final class GkeClusterReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="cluster", required=true)
     private String cluster;
 
+    /**
+     * @return The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.
+     * 
+     */
     public String cluster() {
         return this.cluster;
     }
@@ -51,6 +55,12 @@ public final class GkeClusterReferenceResponse extends com.pulumi.resources.Invo
             $ = new GkeClusterReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             $.cluster = cluster;
             return this;

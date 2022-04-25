@@ -16,82 +16,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FrontendIPConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * An array of references to inbound pools that use this frontend IP.
+     * @return An array of references to inbound pools that use this frontend IP.
      * 
      */
     private final List<SubResourceResponse> inboundNatPools;
     /**
-     * An array of references to inbound rules that use this frontend IP.
+     * @return An array of references to inbound rules that use this frontend IP.
      * 
      */
     private final List<SubResourceResponse> inboundNatRules;
     /**
-     * An array of references to load balancing rules that use this frontend IP.
+     * @return An array of references to load balancing rules that use this frontend IP.
      * 
      */
     private final List<SubResourceResponse> loadBalancingRules;
     /**
-     * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * An array of references to outbound rules that use this frontend IP.
+     * @return An array of references to outbound rules that use this frontend IP.
      * 
      */
     private final List<SubResourceResponse> outboundRules;
     /**
-     * The private IP address of the IP configuration.
+     * @return The private IP address of the IP configuration.
      * 
      */
     private final @Nullable String privateIPAddress;
     /**
-     * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * @return Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
      * 
      */
     private final @Nullable String privateIPAddressVersion;
     /**
-     * The Private IP allocation method.
+     * @return The Private IP allocation method.
      * 
      */
     private final @Nullable String privateIPAllocationMethod;
     /**
-     * The provisioning state of the frontend IP configuration resource.
+     * @return The provisioning state of the frontend IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The reference to the Public IP resource.
+     * @return The reference to the Public IP resource.
      * 
      */
     private final @Nullable PublicIPAddressResponse publicIPAddress;
     /**
-     * The reference to the Public IP Prefix resource.
+     * @return The reference to the Public IP Prefix resource.
      * 
      */
     private final @Nullable SubResourceResponse publicIPPrefix;
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
      */
     private final @Nullable SubnetResponse subnet;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
     /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
     private final @Nullable List<String> zones;
@@ -133,114 +133,114 @@ public final class FrontendIPConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * An array of references to inbound pools that use this frontend IP.
+     * @return An array of references to inbound pools that use this frontend IP.
      * 
-    */
+     */
     public List<SubResourceResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
     /**
-     * An array of references to inbound rules that use this frontend IP.
+     * @return An array of references to inbound rules that use this frontend IP.
      * 
-    */
+     */
     public List<SubResourceResponse> inboundNatRules() {
         return this.inboundNatRules;
     }
     /**
-     * An array of references to load balancing rules that use this frontend IP.
+     * @return An array of references to load balancing rules that use this frontend IP.
      * 
-    */
+     */
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
-     * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * An array of references to outbound rules that use this frontend IP.
+     * @return An array of references to outbound rules that use this frontend IP.
      * 
-    */
+     */
     public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
     }
     /**
-     * The private IP address of the IP configuration.
+     * @return The private IP address of the IP configuration.
      * 
-    */
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
-     * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * @return Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
      * 
-    */
+     */
     public Optional<String> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
     /**
-     * The Private IP allocation method.
+     * @return The Private IP allocation method.
      * 
-    */
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
-     * The provisioning state of the frontend IP configuration resource.
+     * @return The provisioning state of the frontend IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the Public IP resource.
+     * @return The reference to the Public IP resource.
      * 
-    */
+     */
     public Optional<PublicIPAddressResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * The reference to the Public IP Prefix resource.
+     * @return The reference to the Public IP Prefix resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
-    */
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

@@ -23,6 +23,10 @@ public final class DockerExecutorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cmd", required=true)
     private String cmd;
 
+    /**
+     * @return The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
+     * 
+     */
     public String cmd() {
         return this.cmd;
     }
@@ -34,6 +38,10 @@ public final class DockerExecutorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -63,11 +71,23 @@ public final class DockerExecutorResponse extends com.pulumi.resources.InvokeArg
             $ = new DockerExecutorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmd The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation&#39;s `error` field will be populated. Maximum command string length is 16384.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmd(String cmd) {
             $.cmd = cmd;
             return this;
         }
 
+        /**
+         * @param imageName Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;

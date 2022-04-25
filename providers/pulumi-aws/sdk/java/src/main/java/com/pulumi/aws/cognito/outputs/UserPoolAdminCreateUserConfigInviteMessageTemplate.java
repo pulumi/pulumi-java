@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
     /**
-     * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+     * @return Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
      */
     private final @Nullable String emailMessage;
     /**
-     * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+     * @return Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
      */
     private final @Nullable String emailSubject;
     /**
-     * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+     * @return SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
      */
     private final @Nullable String smsMessage;
@@ -38,23 +38,23 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
     }
 
     /**
-     * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
+     * @return Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
-    */
+     */
     public Optional<String> emailMessage() {
         return Optional.ofNullable(this.emailMessage);
     }
     /**
-     * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
+     * @return Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
-    */
+     */
     public Optional<String> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
     /**
-     * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
+     * @return SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
-    */
+     */
     public Optional<String> smsMessage() {
         return Optional.ofNullable(this.smsMessage);
     }

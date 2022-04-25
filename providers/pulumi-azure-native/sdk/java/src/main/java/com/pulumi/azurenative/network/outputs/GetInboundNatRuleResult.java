@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInboundNatRuleResult {
     /**
-     * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
+     * @return A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
      * 
      */
     private final NetworkInterfaceIPConfigurationResponse backendIPConfiguration;
     /**
-     * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
+     * @return The port used for the internal endpoint. Acceptable values range from 1 to 65535.
      * 
      */
     private final @Nullable Integer backendPort;
     /**
-     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+     * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
      */
     private final @Nullable Boolean enableFloatingIP;
     /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
     private final @Nullable Boolean enableTcpReset;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * A reference to frontend IP addresses.
+     * @return A reference to frontend IP addresses.
      * 
      */
     private final @Nullable SubResourceResponse frontendIPConfiguration;
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
      * 
      */
     private final @Nullable Integer frontendPort;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
      */
     private final @Nullable Integer idleTimeoutInMinutes;
     /**
-     * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The reference to the transport protocol used by the load balancing rule.
+     * @return The reference to the transport protocol used by the load balancing rule.
      * 
      */
     private final @Nullable String protocol;
     /**
-     * The provisioning state of the inbound NAT rule resource.
+     * @return The provisioning state of the inbound NAT rule resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -112,93 +112,93 @@ public final class GetInboundNatRuleResult {
     }
 
     /**
-     * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
+     * @return A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
      * 
-    */
+     */
     public NetworkInterfaceIPConfigurationResponse backendIPConfiguration() {
         return this.backendIPConfiguration;
     }
     /**
-     * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
+     * @return The port used for the internal endpoint. Acceptable values range from 1 to 65535.
      * 
-    */
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
-     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+     * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
-    */
+     */
     public Optional<Boolean> enableFloatingIP() {
         return Optional.ofNullable(this.enableFloatingIP);
     }
     /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
-    */
+     */
     public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A reference to frontend IP addresses.
+     * @return A reference to frontend IP addresses.
      * 
-    */
+     */
     public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
      * 
-    */
+     */
     public Optional<Integer> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The reference to the transport protocol used by the load balancing rule.
+     * @return The reference to the transport protocol used by the load balancing rule.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The provisioning state of the inbound NAT rule resource.
+     * @return The provisioning state of the inbound NAT rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

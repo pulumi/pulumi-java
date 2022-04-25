@@ -27,6 +27,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeSize")
     private @Nullable String computeSize;
 
+    /**
+     * @return Represents the actual compute size, e.g. Standard_A2_v2.
+     * 
+     */
     public Optional<String> computeSize() {
         return Optional.ofNullable(this.computeSize);
     }
@@ -38,6 +42,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="memory")
     private @Nullable Double memory;
 
+    /**
+     * @return The amount of memory available (in GB).
+     * 
+     */
     public Optional<Double> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -49,6 +57,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfCores")
     private @Nullable Integer numberOfCores;
 
+    /**
+     * @return The number of cores a VM of this size has.
+     * 
+     */
     public Optional<Integer> numberOfCores() {
         return Optional.ofNullable(this.numberOfCores);
     }
@@ -60,6 +72,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="price")
     private @Nullable Double price;
 
+    /**
+     * @return The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
+     * 
+     */
     public Optional<Double> price() {
         return Optional.ofNullable(this.price);
     }
@@ -91,21 +107,45 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SizeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeSize Represents the actual compute size, e.g. Standard_A2_v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeSize(@Nullable String computeSize) {
             $.computeSize = computeSize;
             return this;
         }
 
+        /**
+         * @param memory The amount of memory available (in GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Double memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param numberOfCores The number of cores a VM of this size has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfCores(@Nullable Integer numberOfCores) {
             $.numberOfCores = numberOfCores;
             return this;
         }
 
+        /**
+         * @param price The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder price(@Nullable Double price) {
             $.price = price;
             return this;

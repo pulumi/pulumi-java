@@ -27,6 +27,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="contentSecurityPolicy")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
 
+    /**
+     * @return The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs>> contentSecurityPolicy() {
         return Optional.ofNullable(this.contentSecurityPolicy);
     }
@@ -38,6 +42,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="contentTypeOptions")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
 
+    /**
+     * @return Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs>> contentTypeOptions() {
         return Optional.ofNullable(this.contentTypeOptions);
     }
@@ -49,6 +57,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="frameOptions")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
 
+    /**
+     * @return Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs>> frameOptions() {
         return Optional.ofNullable(this.frameOptions);
     }
@@ -60,6 +72,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="referrerPolicy")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
 
+    /**
+     * @return The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs>> referrerPolicy() {
         return Optional.ofNullable(this.referrerPolicy);
     }
@@ -71,6 +87,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="strictTransportSecurity")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
 
+    /**
+     * @return Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs>> strictTransportSecurity() {
         return Optional.ofNullable(this.strictTransportSecurity);
     }
@@ -82,6 +102,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
     @Import(name="xssProtection")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
+    /**
+     * @return Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs>> xssProtection() {
         return Optional.ofNullable(this.xssProtection);
     }
@@ -115,56 +139,128 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends com
             $ = new ResponseHeadersPolicySecurityHeadersConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentSecurityPolicy(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy) {
             $.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
+        /**
+         * @param contentSecurityPolicy The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentSecurityPolicy(ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs contentSecurityPolicy) {
             return contentSecurityPolicy(Output.of(contentSecurityPolicy));
         }
 
+        /**
+         * @param contentTypeOptions Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypeOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
             $.contentTypeOptions = contentTypeOptions;
             return this;
         }
 
+        /**
+         * @param contentTypeOptions Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentTypeOptions(ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs contentTypeOptions) {
             return contentTypeOptions(Output.of(contentTypeOptions));
         }
 
+        /**
+         * @param frameOptions Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameOptions(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
             $.frameOptions = frameOptions;
             return this;
         }
 
+        /**
+         * @param frameOptions Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameOptions(ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs frameOptions) {
             return frameOptions(Output.of(frameOptions));
         }
 
+        /**
+         * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+         * 
+         * @return builder
+         * 
+         */
         public Builder referrerPolicy(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
             $.referrerPolicy = referrerPolicy;
             return this;
         }
 
+        /**
+         * @param referrerPolicy The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+         * 
+         * @return builder
+         * 
+         */
         public Builder referrerPolicy(ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs referrerPolicy) {
             return referrerPolicy(Output.of(referrerPolicy));
         }
 
+        /**
+         * @param strictTransportSecurity Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strictTransportSecurity(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
             $.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
 
+        /**
+         * @param strictTransportSecurity Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strictTransportSecurity(ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs strictTransportSecurity) {
             return strictTransportSecurity(Output.of(strictTransportSecurity));
         }
 
+        /**
+         * @param xssProtection Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssProtection(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
             $.xssProtection = xssProtection;
             return this;
         }
 
+        /**
+         * @param xssProtection Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssProtection(ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs xssProtection) {
             return xssProtection(Output.of(xssProtection));
         }

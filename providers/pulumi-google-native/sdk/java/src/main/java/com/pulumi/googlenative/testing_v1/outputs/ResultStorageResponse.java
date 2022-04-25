@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class ResultStorageResponse {
     /**
-     * Required.
+     * @return Required.
      * 
      */
     private final GoogleCloudStorageResponse googleCloudStorage;
     /**
-     * URL to the results in the Firebase Web Console.
+     * @return URL to the results in the Firebase Web Console.
      * 
      */
     private final String resultsUrl;
     /**
-     * The tool results execution that results are written to.
+     * @return The tool results execution that results are written to.
      * 
      */
     private final ToolResultsExecutionResponse toolResultsExecution;
     /**
-     * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+     * @return The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
      */
     private final ToolResultsHistoryResponse toolResultsHistory;
@@ -46,30 +46,30 @@ public final class ResultStorageResponse {
     }
 
     /**
-     * Required.
+     * @return Required.
      * 
-    */
+     */
     public GoogleCloudStorageResponse googleCloudStorage() {
         return this.googleCloudStorage;
     }
     /**
-     * URL to the results in the Firebase Web Console.
+     * @return URL to the results in the Firebase Web Console.
      * 
-    */
+     */
     public String resultsUrl() {
         return this.resultsUrl;
     }
     /**
-     * The tool results execution that results are written to.
+     * @return The tool results execution that results are written to.
      * 
-    */
+     */
     public ToolResultsExecutionResponse toolResultsExecution() {
         return this.toolResultsExecution;
     }
     /**
-     * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
+     * @return The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
-    */
+     */
     public ToolResultsHistoryResponse toolResultsHistory() {
         return this.toolResultsHistory;
     }

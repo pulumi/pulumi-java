@@ -26,6 +26,10 @@ public final class PubsubDestinationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -54,11 +58,23 @@ public final class PubsubDestinationArgs extends com.pulumi.resources.ResourceAr
             $ = new PubsubDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

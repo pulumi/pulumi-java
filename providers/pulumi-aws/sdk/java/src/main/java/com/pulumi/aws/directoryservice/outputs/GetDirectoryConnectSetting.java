@@ -12,27 +12,27 @@ import java.util.Objects;
 public final class GetDirectoryConnectSetting {
     private final List<String> availabilityZones;
     /**
-     * The IP addresses of the AD Connector servers.
+     * @return The IP addresses of the AD Connector servers.
      * 
      */
     private final List<String> connectIps;
     /**
-     * The DNS IP addresses of the domain to connect to.
+     * @return The DNS IP addresses of the domain to connect to.
      * 
      */
     private final List<String> customerDnsIps;
     /**
-     * The username corresponding to the password provided.
+     * @return The username corresponding to the password provided.
      * 
      */
     private final String customerUsername;
     /**
-     * The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+     * @return The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
      * 
      */
     private final List<String> subnetIds;
     /**
-     * The ID of the VPC that the connector is in.
+     * @return The ID of the VPC that the connector is in.
      * 
      */
     private final String vpcId;
@@ -57,37 +57,37 @@ public final class GetDirectoryConnectSetting {
         return this.availabilityZones;
     }
     /**
-     * The IP addresses of the AD Connector servers.
+     * @return The IP addresses of the AD Connector servers.
      * 
-    */
+     */
     public List<String> connectIps() {
         return this.connectIps;
     }
     /**
-     * The DNS IP addresses of the domain to connect to.
+     * @return The DNS IP addresses of the domain to connect to.
      * 
-    */
+     */
     public List<String> customerDnsIps() {
         return this.customerDnsIps;
     }
     /**
-     * The username corresponding to the password provided.
+     * @return The username corresponding to the password provided.
      * 
-    */
+     */
     public String customerUsername() {
         return this.customerUsername;
     }
     /**
-     * The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
+     * @return The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * The ID of the VPC that the connector is in.
+     * @return The ID of the VPC that the connector is in.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

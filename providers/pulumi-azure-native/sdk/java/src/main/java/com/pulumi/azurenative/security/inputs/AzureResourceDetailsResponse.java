@@ -24,6 +24,10 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Azure resource Id of the assessed resource
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,11 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The platform where the assessed resource resides
+     * Expected value is &#39;Azure&#39;.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -65,11 +74,24 @@ public final class AzureResourceDetailsResponse extends com.pulumi.resources.Inv
             $ = new AzureResourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Azure resource Id of the assessed resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param source The platform where the assessed resource resides
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

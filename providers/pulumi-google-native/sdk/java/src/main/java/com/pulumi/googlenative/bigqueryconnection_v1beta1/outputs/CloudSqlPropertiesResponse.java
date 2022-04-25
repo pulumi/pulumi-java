@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class CloudSqlPropertiesResponse {
     /**
-     * Input only. Cloud SQL credential.
+     * @return Input only. Cloud SQL credential.
      * 
      */
     private final CloudSqlCredentialResponse credential;
     /**
-     * Database name.
+     * @return Database name.
      * 
      */
     private final String database;
     /**
-     * Cloud SQL instance ID in the form `project:location:instance`.
+     * @return Cloud SQL instance ID in the form `project:location:instance`.
      * 
      */
     private final String instanceId;
     /**
-     * Type of the Cloud SQL database.
+     * @return Type of the Cloud SQL database.
      * 
      */
     private final String type;
@@ -44,30 +44,30 @@ public final class CloudSqlPropertiesResponse {
     }
 
     /**
-     * Input only. Cloud SQL credential.
+     * @return Input only. Cloud SQL credential.
      * 
-    */
+     */
     public CloudSqlCredentialResponse credential() {
         return this.credential;
     }
     /**
-     * Database name.
+     * @return Database name.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * Cloud SQL instance ID in the form `project:location:instance`.
+     * @return Cloud SQL instance ID in the form `project:location:instance`.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * Type of the Cloud SQL database.
+     * @return Type of the Cloud SQL database.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

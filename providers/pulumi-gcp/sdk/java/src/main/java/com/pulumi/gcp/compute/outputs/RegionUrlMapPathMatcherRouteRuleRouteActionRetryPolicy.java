@@ -15,18 +15,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
     /**
-     * Specifies the allowed number retries. This number must be &gt; 0.
+     * @return Specifies the allowed number retries. This number must be &gt; 0.
      * 
      */
     private final Integer numRetries;
     /**
-     * Specifies a non-zero timeout per retry attempt.
+     * @return Specifies a non-zero timeout per retry attempt.
      * Structure is documented below.
      * 
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout;
     /**
-     * Specifies one or more conditions when this retry rule applies. Valid values are:
+     * @return Specifies one or more conditions when this retry rule applies. Valid values are:
      * - 5xx: Loadbalancer will attempt a retry if the backend service responds with
      *   any 5xx response code, or if the backend service does not respond at all,
      *   example: disconnects, reset, read timeout, connection failure, and refused
@@ -62,22 +62,22 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
     }
 
     /**
-     * Specifies the allowed number retries. This number must be &gt; 0.
+     * @return Specifies the allowed number retries. This number must be &gt; 0.
      * 
-    */
+     */
     public Integer numRetries() {
         return this.numRetries;
     }
     /**
-     * Specifies a non-zero timeout per retry attempt.
+     * @return Specifies a non-zero timeout per retry attempt.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout> perTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
     /**
-     * Specifies one or more conditions when this retry rule applies. Valid values are:
+     * @return Specifies one or more conditions when this retry rule applies. Valid values are:
      * - 5xx: Loadbalancer will attempt a retry if the backend service responds with
      *   any 5xx response code, or if the backend service does not respond at all,
      *   example: disconnects, reset, read timeout, connection failure, and refused
@@ -99,7 +99,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
      * - unavailable: Loadbalancer will retry if
      *   the gRPC status code in the response header is set to unavailable
      * 
-    */
+     */
     public List<String> retryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }

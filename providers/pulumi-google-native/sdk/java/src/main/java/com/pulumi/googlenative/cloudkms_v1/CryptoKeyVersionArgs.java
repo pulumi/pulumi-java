@@ -31,6 +31,10 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="externalProtectionLevelOptions")
     private @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
+    /**
+     * @return ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+     * 
+     */
     public Optional<Output<ExternalProtectionLevelOptionsArgs>> externalProtectionLevelOptions() {
         return Optional.ofNullable(this.externalProtectionLevelOptions);
     }
@@ -63,6 +67,10 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="state")
     private @Nullable Output<CryptoKeyVersionState> state;
 
+    /**
+     * @return The current state of the CryptoKeyVersion.
+     * 
+     */
     public Optional<Output<CryptoKeyVersionState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -105,11 +113,23 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
             return cryptoKeyId(Output.of(cryptoKeyId));
         }
 
+        /**
+         * @param externalProtectionLevelOptions ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalProtectionLevelOptions(@Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions) {
             $.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
 
+        /**
+         * @param externalProtectionLevelOptions ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
             return externalProtectionLevelOptions(Output.of(externalProtectionLevelOptions));
         }
@@ -141,11 +161,23 @@ public final class CryptoKeyVersionArgs extends com.pulumi.resources.ResourceArg
             return project(Output.of(project));
         }
 
+        /**
+         * @param state The current state of the CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<CryptoKeyVersionState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the CryptoKeyVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(CryptoKeyVersionState state) {
             return state(Output.of(state));
         }

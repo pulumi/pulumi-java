@@ -27,6 +27,10 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -38,6 +42,10 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -49,6 +57,10 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
+    /**
+     * @return VolumeID uniquely identifies a Portworx volume
+     * 
+     */
     public Output<String> volumeID() {
         return this.volumeID;
     }
@@ -79,29 +91,65 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
             $ = new PortworxVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param volumeID VolumeID uniquely identifies a Portworx volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(Output<String> volumeID) {
             $.volumeID = volumeID;
             return this;
         }
 
+        /**
+         * @param volumeID VolumeID uniquely identifies a Portworx volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeID(String volumeID) {
             return volumeID(Output.of(volumeID));
         }

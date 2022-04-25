@@ -26,6 +26,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="analyticalStorageTtl")
     private @Nullable Integer analyticalStorageTtl;
 
+    /**
+     * @return Analytical TTL.
+     * 
+     */
     public Optional<Integer> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
@@ -37,6 +41,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -48,6 +56,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB MongoDB collection
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -59,6 +71,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="indexes")
     private @Nullable List<MongoIndexResponse> indexes;
 
+    /**
+     * @return List of index keys
+     * 
+     */
     public Optional<List<MongoIndexResponse>> indexes() {
         return Optional.ofNullable(this.indexes);
     }
@@ -70,6 +86,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="rid", required=true)
     private String rid;
 
+    /**
+     * @return A system generated property. A unique identifier.
+     * 
+     */
     public String rid() {
         return this.rid;
     }
@@ -81,6 +101,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="shardKey")
     private @Nullable Map<String,String> shardKey;
 
+    /**
+     * @return A key-value pair of shard keys to be applied for the request.
+     * 
+     */
     public Optional<Map<String,String>> shardKey() {
         return Optional.ofNullable(this.shardKey);
     }
@@ -92,6 +116,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
     @Import(name="ts", required=true)
     private Double ts;
 
+    /**
+     * @return A system generated property that denotes the last updated timestamp of the resource.
+     * 
+     */
     public Double ts() {
         return this.ts;
     }
@@ -126,40 +154,88 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
             $ = new MongoDBCollectionGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
             $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
+        /**
+         * @param etag A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB MongoDB collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param indexes List of index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(@Nullable List<MongoIndexResponse> indexes) {
             $.indexes = indexes;
             return this;
         }
 
+        /**
+         * @param indexes List of index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(MongoIndexResponse... indexes) {
             return indexes(List.of(indexes));
         }
 
+        /**
+         * @param rid A system generated property. A unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rid(String rid) {
             $.rid = rid;
             return this;
         }
 
+        /**
+         * @param shardKey A key-value pair of shard keys to be applied for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardKey(@Nullable Map<String,String> shardKey) {
             $.shardKey = shardKey;
             return this;
         }
 
+        /**
+         * @param ts A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ts(Double ts) {
             $.ts = ts;
             return this;

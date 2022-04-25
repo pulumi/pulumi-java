@@ -15,23 +15,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TokenStoreResponse {
     /**
-     * The configuration settings of the storage of the tokens if blob storage is used.
+     * @return The configuration settings of the storage of the tokens if blob storage is used.
      * 
      */
     private final @Nullable BlobStorageTokenStoreResponse azureBlobStorage;
     /**
-     * &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
      *  The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The configuration settings of the storage of the tokens if a file system is used.
+     * @return The configuration settings of the storage of the tokens if a file system is used.
      * 
      */
     private final @Nullable FileSystemTokenStoreResponse fileSystem;
     /**
-     * The number of hours after session token expiration that a session token can be used to
+     * @return The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
      * 
      */
@@ -50,32 +50,32 @@ public final class TokenStoreResponse {
     }
 
     /**
-     * The configuration settings of the storage of the tokens if blob storage is used.
+     * @return The configuration settings of the storage of the tokens if blob storage is used.
      * 
-    */
+     */
     public Optional<BlobStorageTokenStoreResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
      *  The default is &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The configuration settings of the storage of the tokens if a file system is used.
+     * @return The configuration settings of the storage of the tokens if a file system is used.
      * 
-    */
+     */
     public Optional<FileSystemTokenStoreResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
-     * The number of hours after session token expiration that a session token can be used to
+     * @return The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
      * 
-    */
+     */
     public Optional<Double> tokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }

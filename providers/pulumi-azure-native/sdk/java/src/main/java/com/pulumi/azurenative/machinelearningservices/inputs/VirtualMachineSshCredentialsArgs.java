@@ -26,6 +26,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password of admin account
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
     @Import(name="privateKeyData")
     private @Nullable Output<String> privateKeyData;
 
+    /**
+     * @return Private key data
+     * 
+     */
     public Optional<Output<String>> privateKeyData() {
         return Optional.ofNullable(this.privateKeyData);
     }
@@ -48,6 +56,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
     @Import(name="publicKeyData")
     private @Nullable Output<String> publicKeyData;
 
+    /**
+     * @return Public key data
+     * 
+     */
     public Optional<Output<String>> publicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
@@ -59,6 +71,10 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username of admin account
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -90,38 +106,86 @@ public final class VirtualMachineSshCredentialsArgs extends com.pulumi.resources
             $ = new VirtualMachineSshCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param privateKeyData Private key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyData(@Nullable Output<String> privateKeyData) {
             $.privateKeyData = privateKeyData;
             return this;
         }
 
+        /**
+         * @param privateKeyData Private key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyData(String privateKeyData) {
             return privateKeyData(Output.of(privateKeyData));
         }
 
+        /**
+         * @param publicKeyData Public key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
             $.publicKeyData = publicKeyData;
             return this;
         }
 
+        /**
+         * @param publicKeyData Public key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyData(String publicKeyData) {
             return publicKeyData(Output.of(publicKeyData));
         }
 
+        /**
+         * @param username Username of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

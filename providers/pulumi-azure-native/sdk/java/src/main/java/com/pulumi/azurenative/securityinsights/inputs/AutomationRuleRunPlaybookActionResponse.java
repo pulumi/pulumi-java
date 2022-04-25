@@ -26,6 +26,10 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="actionConfiguration", required=true)
     private AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
 
+    /**
+     * @return The configuration of the run playbook automation rule action
+     * 
+     */
     public AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration() {
         return this.actionConfiguration;
     }
@@ -38,6 +42,11 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="actionType", required=true)
     private String actionType;
 
+    /**
+     * @return The type of the automation rule action
+     * Expected value is &#39;RunPlaybook&#39;.
+     * 
+     */
     public String actionType() {
         return this.actionType;
     }
@@ -49,6 +58,10 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="order", required=true)
     private Integer order;
 
+    /**
+     * @return The order of execution of the automation rule action
+     * 
+     */
     public Integer order() {
         return this.order;
     }
@@ -79,16 +92,35 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
             $ = new AutomationRuleRunPlaybookActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionConfiguration The configuration of the run playbook automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionConfiguration(AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration) {
             $.actionConfiguration = actionConfiguration;
             return this;
         }
 
+        /**
+         * @param actionType The type of the automation rule action
+         * Expected value is &#39;RunPlaybook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param order The order of execution of the automation rule action
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(Integer order) {
             $.order = order;
             return this;

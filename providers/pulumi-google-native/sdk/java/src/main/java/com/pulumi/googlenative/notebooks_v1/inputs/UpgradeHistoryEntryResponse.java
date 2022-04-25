@@ -23,6 +23,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Action. Rolloback or Upgrade.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -34,6 +38,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="containerImage", required=true)
     private String containerImage;
 
+    /**
+     * @return The container image before this instance upgrade.
+     * 
+     */
     public String containerImage() {
         return this.containerImage;
     }
@@ -45,6 +53,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time that this instance upgrade history entry is created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -56,6 +68,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="framework", required=true)
     private String framework;
 
+    /**
+     * @return The framework of this notebook instance.
+     * 
+     */
     public String framework() {
         return this.framework;
     }
@@ -67,6 +83,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="snapshot", required=true)
     private String snapshot;
 
+    /**
+     * @return The snapshot of the boot disk of this notebook instance before upgrade.
+     * 
+     */
     public String snapshot() {
         return this.snapshot;
     }
@@ -78,6 +98,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of this instance upgrade history entry.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -89,6 +113,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="targetImage", required=true)
     private String targetImage;
 
+    /**
+     * @return Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+     * 
+     */
     public String targetImage() {
         return this.targetImage;
     }
@@ -100,6 +128,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="targetVersion", required=true)
     private String targetVersion;
 
+    /**
+     * @return Target VM Version, like m63.
+     * 
+     */
     public String targetVersion() {
         return this.targetVersion;
     }
@@ -111,6 +143,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the notebook instance before this upgrade.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -122,6 +158,10 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
     @Import(name="vmImage", required=true)
     private String vmImage;
 
+    /**
+     * @return The VM image before this instance upgrade.
+     * 
+     */
     public String vmImage() {
         return this.vmImage;
     }
@@ -159,51 +199,111 @@ public final class UpgradeHistoryEntryResponse extends com.pulumi.resources.Invo
             $ = new UpgradeHistoryEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action. Rolloback or Upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param containerImage The container image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param createTime The time that this instance upgrade history entry is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param framework The framework of this notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(String framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param snapshot The snapshot of the boot disk of this notebook instance before upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(String snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param state The state of this instance upgrade history entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param targetImage Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetImage(String targetImage) {
             $.targetImage = targetImage;
             return this;
         }
 
+        /**
+         * @param targetVersion Target VM Version, like m63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVersion(String targetVersion) {
             $.targetVersion = targetVersion;
             return this;
         }
 
+        /**
+         * @param version The version of the notebook instance before this upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param vmImage The VM image before this instance upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(String vmImage) {
             $.vmImage = vmImage;
             return this;

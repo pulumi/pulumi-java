@@ -19,6 +19,10 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
     @Import(name="siteExtensionId", required=true)
     private String siteExtensionId;
 
+    /**
+     * @return Site extension name.
+     * 
+     */
     public String siteExtensionId() {
         return this.siteExtensionId;
     }
@@ -71,16 +83,34 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
             $ = new GetWebAppSiteExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param siteExtensionId Site extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteExtensionId(String siteExtensionId) {
             $.siteExtensionId = siteExtensionId;
             return this;

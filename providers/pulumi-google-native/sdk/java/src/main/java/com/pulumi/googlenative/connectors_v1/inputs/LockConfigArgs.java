@@ -27,6 +27,10 @@ public final class LockConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locked")
     private @Nullable Output<Boolean> locked;
 
+    /**
+     * @return Indicates whether or not the connection is locked.
+     * 
+     */
     public Optional<Output<Boolean>> locked() {
         return Optional.ofNullable(this.locked);
     }
@@ -38,6 +42,10 @@ public final class LockConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return Describes why a connection is locked.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -67,20 +75,44 @@ public final class LockConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LockConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locked Indicates whether or not the connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locked(@Nullable Output<Boolean> locked) {
             $.locked = locked;
             return this;
         }
 
+        /**
+         * @param locked Indicates whether or not the connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locked(Boolean locked) {
             return locked(Output.of(locked));
         }
 
+        /**
+         * @param reason Describes why a connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason Describes why a connection is locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }

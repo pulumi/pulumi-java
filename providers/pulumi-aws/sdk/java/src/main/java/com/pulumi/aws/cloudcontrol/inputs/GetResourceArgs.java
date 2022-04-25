@@ -21,6 +21,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="identifier", required=true)
     private String identifier;
 
+    /**
+     * @return Identifier of the CloudFormation resource type. For example, `vpc-12345678`.
+     * 
+     */
     public String identifier() {
         return this.identifier;
     }
@@ -32,6 +36,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleArn")
     private @Nullable String roleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+     * 
+     */
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -43,6 +51,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="typeName", required=true)
     private String typeName;
 
+    /**
+     * @return CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+     * 
+     */
     public String typeName() {
         return this.typeName;
     }
@@ -54,6 +66,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="typeVersionId")
     private @Nullable String typeVersionId;
 
+    /**
+     * @return Identifier of the CloudFormation resource type version.
+     * 
+     */
     public Optional<String> typeVersionId() {
         return Optional.ofNullable(this.typeVersionId);
     }
@@ -85,21 +101,45 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identifier Identifier of the CloudFormation resource type. For example, `vpc-12345678`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(String identifier) {
             $.identifier = identifier;
             return this;
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param typeName CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeVersionId Identifier of the CloudFormation resource type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeVersionId(@Nullable String typeVersionId) {
             $.typeVersionId = typeVersionId;
             return this;

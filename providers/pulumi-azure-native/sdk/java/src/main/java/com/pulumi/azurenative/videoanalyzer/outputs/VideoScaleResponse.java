@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VideoScaleResponse {
     /**
-     * The desired output video height.
+     * @return The desired output video height.
      * 
      */
     private final @Nullable String height;
     /**
-     * Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+     * @return Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
      * 
      */
     private final @Nullable String mode;
     /**
-     * The desired output video width.
+     * @return The desired output video width.
      * 
      */
     private final @Nullable String width;
@@ -38,23 +38,23 @@ public final class VideoScaleResponse {
     }
 
     /**
-     * The desired output video height.
+     * @return The desired output video height.
      * 
-    */
+     */
     public Optional<String> height() {
         return Optional.ofNullable(this.height);
     }
     /**
-     * Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
+     * @return Describes the video scaling mode to be applied. Default mode is &#39;Pad&#39;. If the mode is &#39;Pad&#39; or &#39;Stretch&#39; then both width and height must be specified. Else if the mode is &#39;PreserveAspectRatio&#39; then only one of width or height need be provided.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The desired output video width.
+     * @return The desired output video width.
      * 
-    */
+     */
     public Optional<String> width() {
         return Optional.ofNullable(this.width);
     }

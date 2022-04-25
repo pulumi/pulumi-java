@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
     @Import(name="max")
     private @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
 
+    /**
+     * @return Upper bound of the range, exclusive; type must match min.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ValueArgs>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -37,6 +41,10 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
     @Import(name="min")
     private @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
 
+    /**
+     * @return Lower bound of the range, inclusive. Type should be the same as max if used.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ValueArgs>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -48,6 +56,10 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
     @Import(name="replacementValue", required=true)
     private Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
 
+    /**
+     * @return Replacement value for this bucket.
+     * 
+     */
     public Output<GooglePrivacyDlpV2ValueArgs> replacementValue() {
         return this.replacementValue;
     }
@@ -78,29 +90,65 @@ public final class GooglePrivacyDlpV2BucketArgs extends com.pulumi.resources.Res
             $ = new GooglePrivacyDlpV2BucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Upper bound of the range, exclusive; type must match min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<GooglePrivacyDlpV2ValueArgs> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max Upper bound of the range, exclusive; type must match min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(GooglePrivacyDlpV2ValueArgs max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min Lower bound of the range, inclusive. Type should be the same as max if used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<GooglePrivacyDlpV2ValueArgs> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min Lower bound of the range, inclusive. Type should be the same as max if used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(GooglePrivacyDlpV2ValueArgs min) {
             return min(Output.of(min));
         }
 
+        /**
+         * @param replacementValue Replacement value for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementValue(Output<GooglePrivacyDlpV2ValueArgs> replacementValue) {
             $.replacementValue = replacementValue;
             return this;
         }
 
+        /**
+         * @param replacementValue Replacement value for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementValue(GooglePrivacyDlpV2ValueArgs replacementValue) {
             return replacementValue(Output.of(replacementValue));
         }

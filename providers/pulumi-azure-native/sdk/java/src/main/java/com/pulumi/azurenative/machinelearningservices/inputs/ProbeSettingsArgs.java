@@ -27,6 +27,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
     private @Nullable Output<Integer> failureThreshold;
 
+    /**
+     * @return The number of failures to allow before returning an unhealthy status.
+     * 
+     */
     public Optional<Output<Integer>> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -38,6 +42,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialDelay")
     private @Nullable Output<String> initialDelay;
 
+    /**
+     * @return The delay before the first probe in ISO 8601 format.
+     * 
+     */
     public Optional<Output<String>> initialDelay() {
         return Optional.ofNullable(this.initialDelay);
     }
@@ -49,6 +57,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="period")
     private @Nullable Output<String> period;
 
+    /**
+     * @return The length of time between probes in ISO 8601 format.
+     * 
+     */
     public Optional<Output<String>> period() {
         return Optional.ofNullable(this.period);
     }
@@ -60,6 +72,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successThreshold")
     private @Nullable Output<Integer> successThreshold;
 
+    /**
+     * @return The number of successful probes before returning a healthy status.
+     * 
+     */
     public Optional<Output<Integer>> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -71,6 +87,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return The probe timeout in ISO 8601 format.
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -103,47 +123,107 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProbeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureThreshold The number of failures to allow before returning an unhealthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param failureThreshold The number of failures to allow before returning an unhealthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Integer failureThreshold) {
             return failureThreshold(Output.of(failureThreshold));
         }
 
+        /**
+         * @param initialDelay The delay before the first probe in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelay(@Nullable Output<String> initialDelay) {
             $.initialDelay = initialDelay;
             return this;
         }
 
+        /**
+         * @param initialDelay The delay before the first probe in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelay(String initialDelay) {
             return initialDelay(Output.of(initialDelay));
         }
 
+        /**
+         * @param period The length of time between probes in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(@Nullable Output<String> period) {
             $.period = period;
             return this;
         }
 
+        /**
+         * @param period The length of time between probes in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             return period(Output.of(period));
         }
 
+        /**
+         * @param successThreshold The number of successful probes before returning a healthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param successThreshold The number of successful probes before returning a healthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Integer successThreshold) {
             return successThreshold(Output.of(successThreshold));
         }
 
+        /**
+         * @param timeout The probe timeout in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The probe timeout in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

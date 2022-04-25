@@ -26,6 +26,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The SKU name. Along with tier, uniquely identifies the SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The SKU tier. Along with name, uniquely identifies the SKU.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The SKU name. Along with tier, uniquely identifies the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The SKU tier. Along with name, uniquely identifies the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

@@ -22,6 +22,10 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends com.pulumi.resource
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The word or phrase to be excluded.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -50,11 +54,23 @@ public final class CxEntityTypeExcludedPhraseGetArgs extends com.pulumi.resource
             $ = new CxEntityTypeExcludedPhraseGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The word or phrase to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

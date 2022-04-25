@@ -30,6 +30,10 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventSource")
     private @Nullable Output<Either<String,EventSource>> eventSource;
 
+    /**
+     * @return A valid event source type.
+     * 
+     */
     public Optional<Output<Either<String,EventSource>>> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
@@ -41,6 +45,10 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleSets")
     private @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
+    /**
+     * @return A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+     * 
+     */
     public Optional<Output<List<AutomationRuleSetArgs>>> ruleSets() {
         return Optional.ofNullable(this.ruleSets);
     }
@@ -70,32 +78,74 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
             $ = new AutomationSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventSource A valid event source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(@Nullable Output<Either<String,EventSource>> eventSource) {
             $.eventSource = eventSource;
             return this;
         }
 
+        /**
+         * @param eventSource A valid event source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(Either<String,EventSource> eventSource) {
             return eventSource(Output.of(eventSource));
         }
 
+        /**
+         * @param eventSource A valid event source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(String eventSource) {
             return eventSource(Either.ofLeft(eventSource));
         }
 
+        /**
+         * @param eventSource A valid event source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSource(EventSource eventSource) {
             return eventSource(Either.ofRight(eventSource));
         }
 
+        /**
+         * @param ruleSets A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
             $.ruleSets = ruleSets;
             return this;
         }
 
+        /**
+         * @param ruleSets A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(List<AutomationRuleSetArgs> ruleSets) {
             return ruleSets(Output.of(ruleSets));
         }
 
+        /**
+         * @param ruleSets A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSets(AutomationRuleSetArgs... ruleSets) {
             return ruleSets(List.of(ruleSets));
         }

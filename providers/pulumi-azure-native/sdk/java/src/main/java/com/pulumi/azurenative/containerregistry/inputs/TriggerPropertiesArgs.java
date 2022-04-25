@@ -29,6 +29,10 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="baseImageTrigger")
     private @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
+    /**
+     * @return The trigger based on base image dependencies.
+     * 
+     */
     public Optional<Output<BaseImageTriggerArgs>> baseImageTrigger() {
         return Optional.ofNullable(this.baseImageTrigger);
     }
@@ -40,6 +44,10 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceTriggers")
     private @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
+    /**
+     * @return The collection of triggers based on source code repository.
+     * 
+     */
     public Optional<Output<List<SourceTriggerArgs>>> sourceTriggers() {
         return Optional.ofNullable(this.sourceTriggers);
     }
@@ -51,6 +59,10 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timerTriggers")
     private @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
+    /**
+     * @return The collection of timer triggers.
+     * 
+     */
     public Optional<Output<List<TimerTriggerArgs>>> timerTriggers() {
         return Optional.ofNullable(this.timerTriggers);
     }
@@ -81,37 +93,85 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new TriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageTrigger The trigger based on base image dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTrigger(@Nullable Output<BaseImageTriggerArgs> baseImageTrigger) {
             $.baseImageTrigger = baseImageTrigger;
             return this;
         }
 
+        /**
+         * @param baseImageTrigger The trigger based on base image dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTrigger(BaseImageTriggerArgs baseImageTrigger) {
             return baseImageTrigger(Output.of(baseImageTrigger));
         }
 
+        /**
+         * @param sourceTriggers The collection of triggers based on source code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggers(@Nullable Output<List<SourceTriggerArgs>> sourceTriggers) {
             $.sourceTriggers = sourceTriggers;
             return this;
         }
 
+        /**
+         * @param sourceTriggers The collection of triggers based on source code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggers(List<SourceTriggerArgs> sourceTriggers) {
             return sourceTriggers(Output.of(sourceTriggers));
         }
 
+        /**
+         * @param sourceTriggers The collection of triggers based on source code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggers(SourceTriggerArgs... sourceTriggers) {
             return sourceTriggers(List.of(sourceTriggers));
         }
 
+        /**
+         * @param timerTriggers The collection of timer triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggers(@Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
             $.timerTriggers = timerTriggers;
             return this;
         }
 
+        /**
+         * @param timerTriggers The collection of timer triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggers(List<TimerTriggerArgs> timerTriggers) {
             return timerTriggers(Output.of(timerTriggers));
         }
 
+        /**
+         * @param timerTriggers The collection of timer triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggers(TimerTriggerArgs... timerTriggers) {
             return timerTriggers(List.of(timerTriggers));
         }

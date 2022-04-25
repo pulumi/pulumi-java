@@ -19,6 +19,10 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
     @Import(name="topicName", required=true)
     private String topicName;
 
+    /**
+     * @return Name of the topic.
+     * 
+     */
     public String topicName() {
         return this.topicName;
     }
@@ -59,11 +67,23 @@ public final class ListTopicSharedAccessKeysArgs extends com.pulumi.resources.In
             $ = new ListTopicSharedAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param topicName Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             $.topicName = topicName;
             return this;

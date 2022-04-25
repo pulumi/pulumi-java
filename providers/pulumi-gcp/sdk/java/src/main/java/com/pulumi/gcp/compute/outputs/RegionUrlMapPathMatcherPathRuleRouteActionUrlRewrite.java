@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
     /**
-     * Prior to forwarding the request to the selected service, the request&#39;s host
+     * @return Prior to forwarding the request to the selected service, the request&#39;s host
      * header is replaced with contents of hostRewrite. The value must be between 1 and
      * 255 characters.
      * 
      */
     private final @Nullable String hostRewrite;
     /**
-     * Prior to forwarding the request to the selected backend service, the matching
+     * @return Prior to forwarding the request to the selected backend service, the matching
      * portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must
      * be between 1 and 1024 characters.
      * 
@@ -35,20 +35,20 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
     }
 
     /**
-     * Prior to forwarding the request to the selected service, the request&#39;s host
+     * @return Prior to forwarding the request to the selected service, the request&#39;s host
      * header is replaced with contents of hostRewrite. The value must be between 1 and
      * 255 characters.
      * 
-    */
+     */
     public Optional<String> hostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
     /**
-     * Prior to forwarding the request to the selected backend service, the matching
+     * @return Prior to forwarding the request to the selected backend service, the matching
      * portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must
      * be between 1 and 1024 characters.
      * 
-    */
+     */
     public Optional<String> pathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }

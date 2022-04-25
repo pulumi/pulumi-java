@@ -24,6 +24,10 @@ public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resou
     @Import(name="bucketDefinitions")
     private @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions;
 
+    /**
+     * @return An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+     * 
+     */
     public Optional<Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>>> bucketDefinitions() {
         return Optional.ofNullable(this.bucketDefinitions);
     }
@@ -35,6 +39,10 @@ public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resou
     @Import(name="scoping")
     private @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping;
 
+    /**
+     * @return The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
+     * 
+     */
     public Optional<Output<ClassificationJobS3JobDefinitionScopingArgs>> scoping() {
         return Optional.ofNullable(this.scoping);
     }
@@ -64,24 +72,54 @@ public final class ClassificationJobS3JobDefinitionArgs extends com.pulumi.resou
             $ = new ClassificationJobS3JobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketDefinitions An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketDefinitions(@Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions) {
             $.bucketDefinitions = bucketDefinitions;
             return this;
         }
 
+        /**
+         * @param bucketDefinitions An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketDefinitions(List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
             return bucketDefinitions(Output.of(bucketDefinitions));
         }
 
+        /**
+         * @param bucketDefinitions An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketDefinitions(ClassificationJobS3JobDefinitionBucketDefinitionArgs... bucketDefinitions) {
             return bucketDefinitions(List.of(bucketDefinitions));
         }
 
+        /**
+         * @param scoping The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoping(@Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping) {
             $.scoping = scoping;
             return this;
         }
 
+        /**
+         * @param scoping The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoping(ClassificationJobS3JobDefinitionScopingArgs scoping) {
             return scoping(Output.of(scoping));
         }

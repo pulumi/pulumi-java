@@ -22,6 +22,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     @Import(name="windowAfter")
     private @Nullable Output<Integer> windowAfter;
 
+    /**
+     * @return Number of characters after the finding to consider. Either this or window_before must be specified
+     * 
+     */
     public Optional<Output<Integer>> windowAfter() {
         return Optional.ofNullable(this.windowAfter);
     }
@@ -33,6 +37,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     @Import(name="windowBefore")
     private @Nullable Output<Integer> windowBefore;
 
+    /**
+     * @return Number of characters before the finding to consider. Either this or window_after must be specified
+     * 
+     */
     public Optional<Output<Integer>> windowBefore() {
         return Optional.ofNullable(this.windowBefore);
     }
@@ -62,20 +70,44 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             $ = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param windowAfter Number of characters after the finding to consider. Either this or window_before must be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowAfter(@Nullable Output<Integer> windowAfter) {
             $.windowAfter = windowAfter;
             return this;
         }
 
+        /**
+         * @param windowAfter Number of characters after the finding to consider. Either this or window_before must be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowAfter(Integer windowAfter) {
             return windowAfter(Output.of(windowAfter));
         }
 
+        /**
+         * @param windowBefore Number of characters before the finding to consider. Either this or window_after must be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
             $.windowBefore = windowBefore;
             return this;
         }
 
+        /**
+         * @param windowBefore Number of characters before the finding to consider. Either this or window_after must be specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowBefore(Integer windowBefore) {
             return windowBefore(Output.of(windowBefore));
         }

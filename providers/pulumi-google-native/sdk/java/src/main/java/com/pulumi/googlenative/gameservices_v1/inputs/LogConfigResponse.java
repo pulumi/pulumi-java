@@ -25,6 +25,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cloudAudit", required=true)
     private CloudAuditOptionsResponse cloudAudit;
 
+    /**
+     * @return Cloud audit options.
+     * 
+     */
     public CloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
     }
@@ -36,6 +40,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="counter", required=true)
     private CounterOptionsResponse counter;
 
+    /**
+     * @return Counter options.
+     * 
+     */
     public CounterOptionsResponse counter() {
         return this.counter;
     }
@@ -47,6 +55,10 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataAccess", required=true)
     private DataAccessOptionsResponse dataAccess;
 
+    /**
+     * @return Data access options.
+     * 
+     */
     public DataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }
@@ -77,16 +89,34 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudAudit Cloud audit options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudAudit(CloudAuditOptionsResponse cloudAudit) {
             $.cloudAudit = cloudAudit;
             return this;
         }
 
+        /**
+         * @param counter Counter options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counter(CounterOptionsResponse counter) {
             $.counter = counter;
             return this;
         }
 
+        /**
+         * @param dataAccess Data access options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccess(DataAccessOptionsResponse dataAccess) {
             $.dataAccess = dataAccess;
             return this;

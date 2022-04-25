@@ -27,6 +27,10 @@ public final class EventSourceMappingEndpointsArgs extends com.pulumi.resources.
     @Import(name="kafkaBootstrapServers")
     private @Nullable Output<List<String>> kafkaBootstrapServers;
 
+    /**
+     * @return A list of Kafka server endpoints.
+     * 
+     */
     public Optional<Output<List<String>>> kafkaBootstrapServers() {
         return Optional.ofNullable(this.kafkaBootstrapServers);
     }
@@ -55,15 +59,33 @@ public final class EventSourceMappingEndpointsArgs extends com.pulumi.resources.
             $ = new EventSourceMappingEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kafkaBootstrapServers A list of Kafka server endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaBootstrapServers(@Nullable Output<List<String>> kafkaBootstrapServers) {
             $.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
 
+        /**
+         * @param kafkaBootstrapServers A list of Kafka server endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaBootstrapServers(List<String> kafkaBootstrapServers) {
             return kafkaBootstrapServers(Output.of(kafkaBootstrapServers));
         }
 
+        /**
+         * @param kafkaBootstrapServers A list of Kafka server endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaBootstrapServers(String... kafkaBootstrapServers) {
             return kafkaBootstrapServers(List.of(kafkaBootstrapServers));
         }

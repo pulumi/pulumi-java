@@ -24,6 +24,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
     @Import(name="httpStatus")
     private @Nullable Output<Integer> httpStatus;
 
+    /**
+     * @return The HTTP status code used to abort the request.
+     * The value must be between 200 and 599 inclusive.
+     * 
+     */
     public Optional<Output<Integer>> httpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
@@ -36,6 +41,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
     @Import(name="percentage")
     private @Nullable Output<Double> percentage;
 
+    /**
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * The value must be between 0.0 and 100.0 inclusive.
+     * 
+     */
     public Optional<Output<Double>> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -65,20 +75,48 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
             $ = new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request.
+         * The value must be between 200 and 599 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(@Nullable Output<Integer> httpStatus) {
             $.httpStatus = httpStatus;
             return this;
         }
 
+        /**
+         * @param httpStatus The HTTP status code used to abort the request.
+         * The value must be between 200 and 599 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpStatus(Integer httpStatus) {
             return httpStatus(Output.of(httpStatus));
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+         * The value must be between 0.0 and 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Output<Double> percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param percentage The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+         * The value must be between 0.0 and 100.0 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(Double percentage) {
             return percentage(Output.of(percentage));
         }

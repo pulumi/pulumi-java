@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AnalyticsApplicationOutputSchema {
     /**
-     * The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+     * @return The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
      * 
      */
     private final String recordFormatType;
@@ -21,9 +21,9 @@ public final class AnalyticsApplicationOutputSchema {
     }
 
     /**
-     * The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+     * @return The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
      * 
-    */
+     */
     public String recordFormatType() {
         return this.recordFormatType;
     }

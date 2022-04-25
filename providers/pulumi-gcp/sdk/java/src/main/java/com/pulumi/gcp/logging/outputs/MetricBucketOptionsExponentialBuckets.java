@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricBucketOptionsExponentialBuckets {
     /**
-     * Must be greater than 1.
+     * @return Must be greater than 1.
      * 
      */
     private final @Nullable Double growthFactor;
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
      */
     private final @Nullable Integer numFiniteBuckets;
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
      */
     private final @Nullable Double scale;
@@ -39,23 +39,23 @@ public final class MetricBucketOptionsExponentialBuckets {
     }
 
     /**
-     * Must be greater than 1.
+     * @return Must be greater than 1.
      * 
-    */
+     */
     public Optional<Double> growthFactor() {
         return Optional.ofNullable(this.growthFactor);
     }
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
-    */
+     */
     public Optional<Integer> numFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
     /**
-     * Must be greater than 0.
+     * @return Must be greater than 0.
      * 
-    */
+     */
     public Optional<Double> scale() {
         return Optional.ofNullable(this.scale);
     }

@@ -23,6 +23,10 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     @Import(name="bucketId", required=true)
     private Output<String> bucketId;
 
+    /**
+     * @return The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+     * 
+     */
     public Output<String> bucketId() {
         return this.bucketId;
     }
@@ -34,6 +38,10 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Describes this bucket.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -45,6 +53,10 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -56,6 +68,10 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     @Import(name="organization", required=true)
     private Output<String> organization;
 
+    /**
+     * @return The parent resource that contains the logging bucket.
+     * 
+     */
     public Output<String> organization() {
         return this.organization;
     }
@@ -67,6 +83,10 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
     @Import(name="retentionDays")
     private @Nullable Output<Integer> retentionDays;
 
+    /**
+     * @return Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+     * 
+     */
     public Optional<Output<Integer>> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -99,47 +119,107 @@ public final class OrganizationBucketConfigArgs extends com.pulumi.resources.Res
             $ = new OrganizationBucketConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(Output<String> bucketId) {
             $.bucketId = bucketId;
             return this;
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(String bucketId) {
             return bucketId(Output.of(bucketId));
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param location The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the bucket. The supported locations are: &#34;global&#34; &#34;us-central1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param organization The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(Output<String> organization) {
             $.organization = organization;
             return this;
         }
 
+        /**
+         * @param organization The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organization(String organization) {
             return organization(Output.of(organization));
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             $.retentionDays = retentionDays;
             return this;
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(Integer retentionDays) {
             return retentionDays(Output.of(retentionDays));
         }

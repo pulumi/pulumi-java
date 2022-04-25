@@ -23,6 +23,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="expiryTime", required=true)
     private String expiryTime;
 
+    /**
+     * @return The time the certificate becomes invalid.
+     * 
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
@@ -34,6 +38,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return The entity that signed the certificate.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -45,6 +53,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="publicKeyType", required=true)
     private String publicKeyType;
 
+    /**
+     * @return The type of public key in the certificate.
+     * 
+     */
     public String publicKeyType() {
         return this.publicKeyType;
     }
@@ -56,6 +68,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="signatureAlgorithm", required=true)
     private String signatureAlgorithm;
 
+    /**
+     * @return The algorithm used to sign the certificate.
+     * 
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -67,6 +83,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The time the certificate becomes valid.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -78,6 +98,10 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return The entity the certificate and public key belong to.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -111,31 +135,67 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
             $ = new X509CertificateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryTime The time the certificate becomes invalid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(String expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param issuer The entity that signed the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param publicKeyType The type of public key in the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyType(String publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm The algorithm used to sign the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param startTime The time the certificate becomes valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param subject The entity the certificate and public key belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;

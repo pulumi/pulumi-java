@@ -28,6 +28,10 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="alarmMetrics")
     private @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
+    /**
+     * @return A list of metrics to monitor for the component.
+     * 
+     */
     public Optional<List<ApplicationAlarmMetric>> alarmMetrics() {
         return Optional.ofNullable(this.alarmMetrics);
     }
@@ -39,6 +43,10 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="logs")
     private @Nullable List<ApplicationLog> logs;
 
+    /**
+     * @return A list of logs to monitor for the component.
+     * 
+     */
     public Optional<List<ApplicationLog>> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -50,6 +58,10 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
     @Import(name="windowsEvents")
     private @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
+    /**
+     * @return A list of Windows Events to log.
+     * 
+     */
     public Optional<List<ApplicationWindowsEvent>> windowsEvents() {
         return Optional.ofNullable(this.windowsEvents);
     }
@@ -80,29 +92,65 @@ public final class ApplicationSubComponentConfigurationDetails extends com.pulum
             $ = new ApplicationSubComponentConfigurationDetails(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
             $.alarmMetrics = alarmMetrics;
             return this;
         }
 
+        /**
+         * @param alarmMetrics A list of metrics to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetrics(ApplicationAlarmMetric... alarmMetrics) {
             return alarmMetrics(List.of(alarmMetrics));
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable List<ApplicationLog> logs) {
             $.logs = logs;
             return this;
         }
 
+        /**
+         * @param logs A list of logs to monitor for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(ApplicationLog... logs) {
             return logs(List.of(logs));
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             $.windowsEvents = windowsEvents;
             return this;
         }
 
+        /**
+         * @param windowsEvents A list of Windows Events to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsEvents(ApplicationWindowsEvent... windowsEvents) {
             return windowsEvents(List.of(windowsEvents));
         }

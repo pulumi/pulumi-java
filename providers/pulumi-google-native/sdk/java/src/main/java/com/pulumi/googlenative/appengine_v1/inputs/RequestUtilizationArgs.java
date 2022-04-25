@@ -26,6 +26,10 @@ public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetConcurrentRequests")
     private @Nullable Output<Integer> targetConcurrentRequests;
 
+    /**
+     * @return Target number of concurrent requests.
+     * 
+     */
     public Optional<Output<Integer>> targetConcurrentRequests() {
         return Optional.ofNullable(this.targetConcurrentRequests);
     }
@@ -37,6 +41,10 @@ public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetRequestCountPerSecond")
     private @Nullable Output<Integer> targetRequestCountPerSecond;
 
+    /**
+     * @return Target requests per second.
+     * 
+     */
     public Optional<Output<Integer>> targetRequestCountPerSecond() {
         return Optional.ofNullable(this.targetRequestCountPerSecond);
     }
@@ -66,20 +74,44 @@ public final class RequestUtilizationArgs extends com.pulumi.resources.ResourceA
             $ = new RequestUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetConcurrentRequests Target number of concurrent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConcurrentRequests(@Nullable Output<Integer> targetConcurrentRequests) {
             $.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
 
+        /**
+         * @param targetConcurrentRequests Target number of concurrent requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConcurrentRequests(Integer targetConcurrentRequests) {
             return targetConcurrentRequests(Output.of(targetConcurrentRequests));
         }
 
+        /**
+         * @param targetRequestCountPerSecond Target requests per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRequestCountPerSecond(@Nullable Output<Integer> targetRequestCountPerSecond) {
             $.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
 
+        /**
+         * @param targetRequestCountPerSecond Target requests per second.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
             return targetRequestCountPerSecond(Output.of(targetRequestCountPerSecond));
         }

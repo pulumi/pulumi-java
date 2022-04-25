@@ -25,6 +25,10 @@ public final class OutputFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels", required=true)
     private Output<List<String>> labels;
 
+    /**
+     * @return The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like &#39;[v1, a1]&#39; tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
+     * 
+     */
     public Output<List<String>> labels() {
         return this.labels;
     }
@@ -53,15 +57,33 @@ public final class OutputFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutputFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like &#39;[v1, a1]&#39; tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Output<List<String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like &#39;[v1, a1]&#39; tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like &#39;[v1, a1]&#39; tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }

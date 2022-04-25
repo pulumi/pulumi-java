@@ -11,12 +11,12 @@ import java.util.Objects;
 public final class GetActivityResult {
     private final String arn;
     /**
-     * The date the activity was created.
+     * @return The date the activity was created.
      * 
      */
     private final String creationDate;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -38,16 +38,16 @@ public final class GetActivityResult {
         return this.arn;
     }
     /**
-     * The date the activity was created.
+     * @return The date the activity was created.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

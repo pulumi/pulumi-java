@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulu
     @Import(name="buttons")
     private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons;
 
+    /**
+     * @return Optional. The collection of card buttons.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>>> buttons() {
         return Optional.ofNullable(this.buttons);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulu
     @Import(name="imageUri")
     private @Nullable Output<String> imageUri;
 
+    /**
+     * @return Optional. The public URI to an image file for the card.
+     * 
+     */
     public Optional<Output<String>> imageUri() {
         return Optional.ofNullable(this.imageUri);
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulu
     @Import(name="subtitle")
     private @Nullable Output<String> subtitle;
 
+    /**
+     * @return Optional. The subtitle of the card.
+     * 
+     */
     public Optional<Output<String>> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulu
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Optional. The title of the card.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -92,42 +108,96 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends com.pulu
             $ = new GoogleCloudDialogflowV2IntentMessageCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons) {
             $.buttons = buttons;
             return this;
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs> buttons) {
             return buttons(Output.of(buttons));
         }
 
+        /**
+         * @param buttons Optional. The collection of card buttons.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageCardButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(@Nullable Output<String> imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file for the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             return imageUri(Output.of(imageUri));
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(@Nullable Output<String> subtitle) {
             $.subtitle = subtitle;
             return this;
         }
 
+        /**
+         * @param subtitle Optional. The subtitle of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subtitle(String subtitle) {
             return subtitle(Output.of(subtitle));
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Optional. The title of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

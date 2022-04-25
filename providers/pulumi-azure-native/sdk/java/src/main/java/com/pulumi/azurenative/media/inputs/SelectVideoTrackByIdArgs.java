@@ -27,6 +27,11 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.SelectVideoTrackById&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -38,6 +43,10 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
     @Import(name="trackId", required=true)
     private Output<Double> trackId;
 
+    /**
+     * @return Track identifier to select
+     * 
+     */
     public Output<Double> trackId() {
         return this.trackId;
     }
@@ -67,20 +76,46 @@ public final class SelectVideoTrackByIdArgs extends com.pulumi.resources.Resourc
             $ = new SelectVideoTrackByIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectVideoTrackById&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectVideoTrackById&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param trackId Track identifier to select
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackId(Output<Double> trackId) {
             $.trackId = trackId;
             return this;
         }
 
+        /**
+         * @param trackId Track identifier to select
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackId(Double trackId) {
             return trackId(Output.of(trackId));
         }

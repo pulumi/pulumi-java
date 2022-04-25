@@ -33,6 +33,10 @@ public final class DataSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Datasource kind
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -75,6 +79,12 @@ public final class DataSourceResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param kind Datasource kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;

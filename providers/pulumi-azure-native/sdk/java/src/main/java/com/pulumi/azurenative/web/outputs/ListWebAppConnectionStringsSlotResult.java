@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListWebAppConnectionStringsSlotResult {
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Connection strings.
+     * @return Connection strings.
      * 
      */
     private final Map<String,ConnStringValueTypePairResponse> properties;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class ListWebAppConnectionStringsSlotResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Connection strings.
+     * @return Connection strings.
      * 
-    */
+     */
     public Map<String,ConnStringValueTypePairResponse> properties() {
         return this.properties;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

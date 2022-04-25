@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebServiceParameterResponse {
     /**
-     * If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+     * @return If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
      * 
      */
     private final @Nullable String certificateThumbprint;
     /**
-     * The parameter value
+     * @return The parameter value
      * 
      */
     private final @Nullable Object value;
@@ -32,16 +32,16 @@ public final class WebServiceParameterResponse {
     }
 
     /**
-     * If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+     * @return If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
      * 
-    */
+     */
     public Optional<String> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
     /**
-     * The parameter value
+     * @return The parameter value
      * 
-    */
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }

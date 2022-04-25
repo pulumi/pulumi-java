@@ -27,6 +27,10 @@ public final class CloudRunConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Whether Cloud Run addon is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -38,6 +42,10 @@ public final class CloudRunConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loadBalancerType")
     private @Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType;
 
+    /**
+     * @return Which load balancer type is installed for Cloud Run.
+     * 
+     */
     public Optional<Output<CloudRunConfigLoadBalancerType>> loadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }
@@ -67,20 +75,44 @@ public final class CloudRunConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CloudRunConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether Cloud Run addon is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Whether Cloud Run addon is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param loadBalancerType Which load balancer type is installed for Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(@Nullable Output<CloudRunConfigLoadBalancerType> loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;
         }
 
+        /**
+         * @param loadBalancerType Which load balancer type is installed for Cloud Run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(CloudRunConfigLoadBalancerType loadBalancerType) {
             return loadBalancerType(Output.of(loadBalancerType));
         }

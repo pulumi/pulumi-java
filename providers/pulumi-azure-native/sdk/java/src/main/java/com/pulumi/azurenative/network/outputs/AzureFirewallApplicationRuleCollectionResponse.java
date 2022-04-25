@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFirewallApplicationRuleCollectionResponse {
     /**
-     * The action type of a rule collection.
+     * @return The action type of a rule collection.
      * 
      */
     private final @Nullable AzureFirewallRCActionResponse action;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Priority of the application rule collection resource.
+     * @return Priority of the application rule collection resource.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * The provisioning state of the application rule collection resource.
+     * @return The provisioning state of the application rule collection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Collection of rules used by a application rule collection.
+     * @return Collection of rules used by a application rule collection.
      * 
      */
     private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
@@ -70,51 +70,51 @@ public final class AzureFirewallApplicationRuleCollectionResponse {
     }
 
     /**
-     * The action type of a rule collection.
+     * @return The action type of a rule collection.
      * 
-    */
+     */
     public Optional<AzureFirewallRCActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Priority of the application rule collection resource.
+     * @return Priority of the application rule collection resource.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The provisioning state of the application rule collection resource.
+     * @return The provisioning state of the application rule collection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Collection of rules used by a application rule collection.
+     * @return Collection of rules used by a application rule collection.
      * 
-    */
+     */
     public List<AzureFirewallApplicationRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

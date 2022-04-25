@@ -23,6 +23,10 @@ public final class ResourceGroupResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -34,6 +38,10 @@ public final class ResourceGroupResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type of the group members.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -63,11 +71,23 @@ public final class ResourceGroupResponse extends com.pulumi.resources.InvokeArgs
             $ = new ResourceGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the group members.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

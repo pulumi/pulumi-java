@@ -26,6 +26,10 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
     @Import(name="bounds")
     private @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
+    /**
+     * @return Minimum and maximum number of scale units to deploy.
+     * 
+     */
     public Optional<Output<ExpressRouteGatewayPropertiesBoundsArgs>> bounds() {
         return Optional.ofNullable(this.bounds);
     }
@@ -54,11 +58,23 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
             $ = new ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bounds Minimum and maximum number of scale units to deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounds(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
             $.bounds = bounds;
             return this;
         }
 
+        /**
+         * @param bounds Minimum and maximum number of scale units to deploy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounds(ExpressRouteGatewayPropertiesBoundsArgs bounds) {
             return bounds(Output.of(bounds));
         }

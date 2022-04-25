@@ -19,6 +19,10 @@ public final class GetManagedHsmArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the managed HSM Pool.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetManagedHsmArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the managed HSM pool.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetManagedHsmArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetManagedHsmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the managed HSM Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

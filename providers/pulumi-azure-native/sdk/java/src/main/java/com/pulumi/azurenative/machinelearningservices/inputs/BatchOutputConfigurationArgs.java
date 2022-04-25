@@ -28,6 +28,10 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="appendRowFileName")
     private @Nullable Output<String> appendRowFileName;
 
+    /**
+     * @return Customized output file name for append_row output action.
+     * 
+     */
     public Optional<Output<String>> appendRowFileName() {
         return Optional.ofNullable(this.appendRowFileName);
     }
@@ -39,6 +43,10 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="outputAction")
     private @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
+    /**
+     * @return Indicates how the output will be organized.
+     * 
+     */
     public Optional<Output<Either<String,BatchOutputAction>>> outputAction() {
         return Optional.ofNullable(this.outputAction);
     }
@@ -68,28 +76,64 @@ public final class BatchOutputConfigurationArgs extends com.pulumi.resources.Res
             $ = new BatchOutputConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appendRowFileName Customized output file name for append_row output action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appendRowFileName(@Nullable Output<String> appendRowFileName) {
             $.appendRowFileName = appendRowFileName;
             return this;
         }
 
+        /**
+         * @param appendRowFileName Customized output file name for append_row output action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appendRowFileName(String appendRowFileName) {
             return appendRowFileName(Output.of(appendRowFileName));
         }
 
+        /**
+         * @param outputAction Indicates how the output will be organized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAction(@Nullable Output<Either<String,BatchOutputAction>> outputAction) {
             $.outputAction = outputAction;
             return this;
         }
 
+        /**
+         * @param outputAction Indicates how the output will be organized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAction(Either<String,BatchOutputAction> outputAction) {
             return outputAction(Output.of(outputAction));
         }
 
+        /**
+         * @param outputAction Indicates how the output will be organized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAction(String outputAction) {
             return outputAction(Either.ofLeft(outputAction));
         }
 
+        /**
+         * @param outputAction Indicates how the output will be organized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputAction(BatchOutputAction outputAction) {
             return outputAction(Either.ofRight(outputAction));
         }

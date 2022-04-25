@@ -30,6 +30,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionIdentity")
     private @Nullable EncryptionIdentityResponse encryptionIdentity;
 
+    /**
+     * @return The identity to be used with service-side encryption at rest.
+     * 
+     */
     public Optional<EncryptionIdentityResponse> encryptionIdentity() {
         return Optional.ofNullable(this.encryptionIdentity);
     }
@@ -41,6 +45,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keySource", required=true)
     private String keySource;
 
+    /**
+     * @return The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+     * 
+     */
     public String keySource() {
         return this.keySource;
     }
@@ -52,6 +60,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultProperties")
     private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return Properties provided by key vault.
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -63,6 +75,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireInfrastructureEncryption")
     private @Nullable Boolean requireInfrastructureEncryption;
 
+    /**
+     * @return A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+     * 
+     */
     public Optional<Boolean> requireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
@@ -74,6 +90,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="services")
     private @Nullable EncryptionServicesResponse services;
 
+    /**
+     * @return List of services which support encryption.
+     * 
+     */
     public Optional<EncryptionServicesResponse> services() {
         return Optional.ofNullable(this.services);
     }
@@ -106,26 +126,56 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionIdentity The identity to be used with service-side encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
             $.encryptionIdentity = encryptionIdentity;
             return this;
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(String keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Properties provided by key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param services List of services which support encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder services(@Nullable EncryptionServicesResponse services) {
             $.services = services;
             return this;

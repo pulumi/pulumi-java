@@ -27,6 +27,10 @@ public final class WebhookNotificationArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return a property bag of settings. This value can be empty.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -38,6 +42,10 @@ public final class WebhookNotificationArgs extends com.pulumi.resources.Resource
     @Import(name="serviceUri")
     private @Nullable Output<String> serviceUri;
 
+    /**
+     * @return the service address to receive the notification.
+     * 
+     */
     public Optional<Output<String>> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -67,20 +75,44 @@ public final class WebhookNotificationArgs extends com.pulumi.resources.Resource
             $ = new WebhookNotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties a property bag of settings. This value can be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties a property bag of settings. This value can be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param serviceUri the service address to receive the notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param serviceUri the service address to receive the notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             return serviceUri(Output.of(serviceUri));
         }

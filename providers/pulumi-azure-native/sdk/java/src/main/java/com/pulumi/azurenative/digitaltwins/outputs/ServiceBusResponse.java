@@ -12,53 +12,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceBusResponse {
     /**
-     * Specifies the authentication type being used for connecting to the endpoint.
+     * @return Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
     private final @Nullable String authenticationType;
     /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
      * 
      */
     private final String createdTime;
     /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
     private final @Nullable String deadLetterSecret;
     /**
-     * Dead letter storage URL for identity-based authentication.
+     * @return Dead letter storage URL for identity-based authentication.
      * 
      */
     private final @Nullable String deadLetterUri;
     /**
-     * The type of Digital Twins endpoint
+     * @return The type of Digital Twins endpoint
      * Expected value is &#39;ServiceBus&#39;.
      * 
      */
     private final String endpointType;
     /**
-     * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+     * @return The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
      * 
      */
     private final @Nullable String endpointUri;
     /**
-     * The ServiceBus Topic name for identity-based authentication
+     * @return The ServiceBus Topic name for identity-based authentication
      * 
      */
     private final @Nullable String entityPath;
     /**
-     * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * @return PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
     private final @Nullable String primaryConnectionString;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * @return SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
     private final @Nullable String secondaryConnectionString;
@@ -88,73 +88,73 @@ public final class ServiceBusResponse {
     }
 
     /**
-     * Specifies the authentication type being used for connecting to the endpoint.
+     * @return Specifies the authentication type being used for connecting to the endpoint.
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
-    */
+     */
     public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
     /**
-     * Dead letter storage URL for identity-based authentication.
+     * @return Dead letter storage URL for identity-based authentication.
      * 
-    */
+     */
     public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
     /**
-     * The type of Digital Twins endpoint
+     * @return The type of Digital Twins endpoint
      * Expected value is &#39;ServiceBus&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+     * @return The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
      * 
-    */
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
-     * The ServiceBus Topic name for identity-based authentication
+     * @return The ServiceBus Topic name for identity-based authentication
      * 
-    */
+     */
     public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
-     * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * @return PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
-    */
+     */
     public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * @return SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
-    */
+     */
     public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }

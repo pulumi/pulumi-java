@@ -22,6 +22,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     @Import(name="allowNonRestoredState")
     private @Nullable Output<Boolean> allowNonRestoredState;
 
+    /**
+     * @return When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+     * 
+     */
     public Optional<Output<Boolean>> allowNonRestoredState() {
         return Optional.ofNullable(this.allowNonRestoredState);
     }
@@ -50,11 +54,23 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
             $ = new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNonRestoredState(@Nullable Output<Boolean> allowNonRestoredState) {
             $.allowNonRestoredState = allowNonRestoredState;
             return this;
         }
 
+        /**
+         * @param allowNonRestoredState When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNonRestoredState(Boolean allowNonRestoredState) {
             return allowNonRestoredState(Output.of(allowNonRestoredState));
         }

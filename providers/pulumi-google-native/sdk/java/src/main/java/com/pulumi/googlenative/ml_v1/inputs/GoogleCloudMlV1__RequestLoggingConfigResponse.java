@@ -24,6 +24,10 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends com.pul
     @Import(name="bigqueryTableName", required=true)
     private String bigqueryTableName;
 
+    /**
+     * @return Fully qualified BigQuery table name in the following format: &#34; project_id.dataset_name.table_name&#34; The specified table must already exist, and the &#34;Cloud ML Service Agent&#34; for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE
+     * 
+     */
     public String bigqueryTableName() {
         return this.bigqueryTableName;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends com.pul
     @Import(name="samplingPercentage", required=true)
     private Double samplingPercentage;
 
+    /**
+     * @return Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.
+     * 
+     */
     public Double samplingPercentage() {
         return this.samplingPercentage;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends com.pul
             $ = new GoogleCloudMlV1__RequestLoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryTableName Fully qualified BigQuery table name in the following format: &#34; project_id.dataset_name.table_name&#34; The specified table must already exist, and the &#34;Cloud ML Service Agent&#34; for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryTableName(String bigqueryTableName) {
             $.bigqueryTableName = bigqueryTableName;
             return this;
         }
 
+        /**
+         * @param samplingPercentage Percentage of requests to be logged, expressed as a fraction from 0 to 1. For example, if you want to log 10% of requests, enter `0.1`. The sampling window is the lifetime of the model version. Defaults to 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingPercentage(Double samplingPercentage) {
             $.samplingPercentage = samplingPercentage;
             return this;

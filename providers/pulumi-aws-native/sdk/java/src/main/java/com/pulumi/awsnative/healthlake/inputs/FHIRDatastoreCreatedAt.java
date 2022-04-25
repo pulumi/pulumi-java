@@ -24,6 +24,10 @@ public final class FHIRDatastoreCreatedAt extends com.pulumi.resources.InvokeArg
     @Import(name="nanos", required=true)
     private Integer nanos;
 
+    /**
+     * @return Nanoseconds.
+     * 
+     */
     public Integer nanos() {
         return this.nanos;
     }
@@ -35,6 +39,10 @@ public final class FHIRDatastoreCreatedAt extends com.pulumi.resources.InvokeArg
     @Import(name="seconds", required=true)
     private String seconds;
 
+    /**
+     * @return Seconds since epoch.
+     * 
+     */
     public String seconds() {
         return this.seconds;
     }
@@ -64,11 +72,23 @@ public final class FHIRDatastoreCreatedAt extends com.pulumi.resources.InvokeArg
             $ = new FHIRDatastoreCreatedAt(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nanos Nanoseconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nanos(Integer nanos) {
             $.nanos = nanos;
             return this;
         }
 
+        /**
+         * @param seconds Seconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(String seconds) {
             $.seconds = seconds;
             return this;

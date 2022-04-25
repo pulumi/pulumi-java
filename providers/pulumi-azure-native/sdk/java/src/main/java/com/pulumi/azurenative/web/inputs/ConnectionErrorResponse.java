@@ -26,6 +26,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Code of the status
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return Resource ETag
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -48,6 +56,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -59,6 +71,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Description of the status
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -81,6 +101,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -92,6 +116,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -138,41 +170,89 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
             $ = new ConnectionErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Code of the status
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param etag Resource ETag
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param message Description of the status
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

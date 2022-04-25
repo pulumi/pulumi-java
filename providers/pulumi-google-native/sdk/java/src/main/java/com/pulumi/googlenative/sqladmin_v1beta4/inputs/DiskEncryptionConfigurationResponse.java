@@ -23,6 +23,10 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return This is always `sql#diskEncryptionConfiguration`.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -34,6 +38,10 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return Resource name of KMS key for disk encryption
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -63,11 +71,23 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
             $ = new DiskEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind This is always `sql#diskEncryptionConfiguration`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Resource name of KMS key for disk encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

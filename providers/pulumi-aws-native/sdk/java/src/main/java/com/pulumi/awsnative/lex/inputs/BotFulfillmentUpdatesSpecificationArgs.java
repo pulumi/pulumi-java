@@ -29,6 +29,10 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
     @Import(name="active", required=true)
     private Output<Boolean> active;
 
+    /**
+     * @return Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+     * 
+     */
     public Output<Boolean> active() {
         return this.active;
     }
@@ -47,6 +51,10 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
     @Import(name="timeoutInSeconds")
     private @Nullable Output<Integer> timeoutInSeconds;
 
+    /**
+     * @return The length of time that the fulfillment Lambda function should run before it times out.
+     * 
+     */
     public Optional<Output<Integer>> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -85,11 +93,23 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
             $ = new BotFulfillmentUpdatesSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
@@ -103,11 +123,23 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends com.pulumi.res
             return startResponse(Output.of(startResponse));
         }
 
+        /**
+         * @param timeoutInSeconds The length of time that the fulfillment Lambda function should run before it times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds The length of time that the fulfillment Lambda function should run before it times out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             return timeoutInSeconds(Output.of(timeoutInSeconds));
         }

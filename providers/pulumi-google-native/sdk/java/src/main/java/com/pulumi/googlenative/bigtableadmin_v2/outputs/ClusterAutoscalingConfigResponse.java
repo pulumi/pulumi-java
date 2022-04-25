@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ClusterAutoscalingConfigResponse {
     /**
-     * Autoscaling limits for this cluster.
+     * @return Autoscaling limits for this cluster.
      * 
      */
     private final AutoscalingLimitsResponse autoscalingLimits;
     /**
-     * Autoscaling targets for this cluster.
+     * @return Autoscaling targets for this cluster.
      * 
      */
     private final AutoscalingTargetsResponse autoscalingTargets;
@@ -30,16 +30,16 @@ public final class ClusterAutoscalingConfigResponse {
     }
 
     /**
-     * Autoscaling limits for this cluster.
+     * @return Autoscaling limits for this cluster.
      * 
-    */
+     */
     public AutoscalingLimitsResponse autoscalingLimits() {
         return this.autoscalingLimits;
     }
     /**
-     * Autoscaling targets for this cluster.
+     * @return Autoscaling targets for this cluster.
      * 
-    */
+     */
     public AutoscalingTargetsResponse autoscalingTargets() {
         return this.autoscalingTargets;
     }

@@ -25,6 +25,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return An email address to send alerts to.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
     private Output<Double> minAcceptableMeanAveragePrecision;
 
+    /**
+     * @return A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version&#39;s predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+     * 
+     */
     public Output<Double> minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
@@ -65,20 +73,44 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
             $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email An email address to send alerts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email An email address to send alerts to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param minAcceptableMeanAveragePrecision A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version&#39;s predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAcceptableMeanAveragePrecision(Output<Double> minAcceptableMeanAveragePrecision) {
             $.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
             return this;
         }
 
+        /**
+         * @param minAcceptableMeanAveragePrecision A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version&#39;s predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
             return minAcceptableMeanAveragePrecision(Output.of(minAcceptableMeanAveragePrecision));
         }

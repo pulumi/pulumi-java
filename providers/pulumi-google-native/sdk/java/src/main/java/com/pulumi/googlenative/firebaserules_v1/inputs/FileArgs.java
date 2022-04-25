@@ -26,6 +26,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return Textual Content.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -37,6 +41,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint (e.g. github sha) associated with the `File`.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -48,6 +56,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return File name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,29 +90,65 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content Textual Content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Textual Content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param fingerprint Fingerprint (e.g. github sha) associated with the `File`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint (e.g. github sha) associated with the `File`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param name File name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name File name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

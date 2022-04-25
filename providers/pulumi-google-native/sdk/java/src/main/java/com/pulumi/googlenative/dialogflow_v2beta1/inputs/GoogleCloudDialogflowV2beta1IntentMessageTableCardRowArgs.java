@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     @Import(name="cells")
     private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
 
+    /**
+     * @return Optional. List of cells that make up this row.
+     * 
+     */
     public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>>> cells() {
         return Optional.ofNullable(this.cells);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     @Import(name="dividerAfter")
     private @Nullable Output<Boolean> dividerAfter;
 
+    /**
+     * @return Optional. Whether to add a visual divider after this row.
+     * 
+     */
     public Optional<Output<Boolean>> dividerAfter() {
         return Optional.ofNullable(this.dividerAfter);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
             $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cells Optional. List of cells that make up this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
             $.cells = cells;
             return this;
         }
 
+        /**
+         * @param cells Optional. List of cells that make up this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
             return cells(Output.of(cells));
         }
 
+        /**
+         * @param cells Optional. List of cells that make up this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs... cells) {
             return cells(List.of(cells));
         }
 
+        /**
+         * @param dividerAfter Optional. Whether to add a visual divider after this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dividerAfter(@Nullable Output<Boolean> dividerAfter) {
             $.dividerAfter = dividerAfter;
             return this;
         }
 
+        /**
+         * @param dividerAfter Optional. Whether to add a visual divider after this row.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dividerAfter(Boolean dividerAfter) {
             return dividerAfter(Output.of(dividerAfter));
         }

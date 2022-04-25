@@ -27,6 +27,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the dimension
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
     private Output<Either<String,Operator>> operator;
 
+    /**
+     * @return Operator for dimension values
+     * 
+     */
     public Output<Either<String,Operator>> operator() {
         return this.operator;
     }
@@ -49,6 +57,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return List of dimension values
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -79,41 +91,95 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DimensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operator Operator for dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,Operator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Operator for dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator Operator for dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator Operator for dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Operator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param values List of dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values List of dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -26,6 +26,10 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branches")
     private @Nullable List<String> branches;
 
+    /**
+     * @return Array of branches.
+     * 
+     */
     public Optional<List<String>> branches() {
         return Optional.ofNullable(this.branches);
     }
@@ -37,6 +41,10 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fullName")
     private @Nullable String fullName;
 
+    /**
+     * @return The name of the repository.
+     * 
+     */
     public Optional<String> fullName() {
         return Optional.ofNullable(this.fullName);
     }
@@ -48,6 +56,10 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The url to access the repository.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -78,20 +90,44 @@ public final class RepoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RepoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branches Array of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(@Nullable List<String> branches) {
             $.branches = branches;
             return this;
         }
 
+        /**
+         * @param branches Array of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(String... branches) {
             return branches(List.of(branches));
         }
 
+        /**
+         * @param fullName The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullName(@Nullable String fullName) {
             $.fullName = fullName;
             return this;
         }
 
+        /**
+         * @param url The url to access the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

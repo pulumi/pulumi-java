@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CxFlowTransitionRouteTriggerFulfillmentMessageText {
     /**
-     * - 
+     * @return -
      * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
      */
     private final @Nullable Boolean allowPlaybackInterruption;
     /**
-     * A collection of text responses.
+     * @return A collection of text responses.
      * 
      */
     private final @Nullable List<String> texts;
@@ -34,17 +34,17 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageText {
     }
 
     /**
-     * - 
+     * @return -
      * Whether the playback of this message can be interrupted by the end user&#39;s speech and the client can then starts the next Dialogflow request.
      * 
-    */
+     */
     public Optional<Boolean> allowPlaybackInterruption() {
         return Optional.ofNullable(this.allowPlaybackInterruption);
     }
     /**
-     * A collection of text responses.
+     * @return A collection of text responses.
      * 
-    */
+     */
     public List<String> texts() {
         return this.texts == null ? List.of() : this.texts;
     }

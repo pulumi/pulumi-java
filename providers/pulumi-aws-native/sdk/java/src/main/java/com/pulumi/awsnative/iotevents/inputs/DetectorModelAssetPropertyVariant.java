@@ -25,6 +25,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
     @Import(name="booleanValue")
     private @Nullable String booleanValue;
 
+    /**
+     * @return The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+     * 
+     */
     public Optional<String> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
@@ -36,6 +40,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
     @Import(name="doubleValue")
     private @Nullable String doubleValue;
 
+    /**
+     * @return The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+     * 
+     */
     public Optional<String> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
@@ -47,6 +55,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
     @Import(name="integerValue")
     private @Nullable String integerValue;
 
+    /**
+     * @return The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+     * 
+     */
     public Optional<String> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
@@ -58,6 +70,10 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
     @Import(name="stringValue")
     private @Nullable String stringValue;
 
+    /**
+     * @return The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+     * 
+     */
     public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
@@ -89,21 +105,45 @@ public final class DetectorModelAssetPropertyVariant extends com.pulumi.resource
             $ = new DetectorModelAssetPropertyVariant(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param booleanValue The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder booleanValue(@Nullable String booleanValue) {
             $.booleanValue = booleanValue;
             return this;
         }
 
+        /**
+         * @param doubleValue The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleValue(@Nullable String doubleValue) {
             $.doubleValue = doubleValue;
             return this;
         }
 
+        /**
+         * @param integerValue The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integerValue(@Nullable String integerValue) {
             $.integerValue = integerValue;
             return this;
         }
 
+        /**
+         * @param stringValue The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stringValue(@Nullable String stringValue) {
             $.stringValue = stringValue;
             return this;

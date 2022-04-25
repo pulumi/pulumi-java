@@ -27,6 +27,10 @@ public final class IPv4FirewallSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="enablePowerBIService")
     private @Nullable Boolean enablePowerBIService;
 
+    /**
+     * @return The indicator of enabling PBI service.
+     * 
+     */
     public Optional<Boolean> enablePowerBIService() {
         return Optional.ofNullable(this.enablePowerBIService);
     }
@@ -38,6 +42,10 @@ public final class IPv4FirewallSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="firewallRules")
     private @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
+    /**
+     * @return An array of firewall rules.
+     * 
+     */
     public Optional<List<IPv4FirewallRuleResponse>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -67,16 +75,34 @@ public final class IPv4FirewallSettingsResponse extends com.pulumi.resources.Inv
             $ = new IPv4FirewallSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enablePowerBIService The indicator of enabling PBI service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
             $.enablePowerBIService = enablePowerBIService;
             return this;
         }
 
+        /**
+         * @param firewallRules An array of firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules An array of firewall rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(IPv4FirewallRuleResponse... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }

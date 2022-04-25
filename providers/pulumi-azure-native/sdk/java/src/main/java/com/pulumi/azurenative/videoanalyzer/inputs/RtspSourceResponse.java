@@ -29,6 +29,10 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoint", required=true)
     private Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
 
+    /**
+     * @return RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+     * 
+     */
     public Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint() {
         return this.endpoint;
     }
@@ -40,6 +44,10 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +59,10 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transport")
     private @Nullable String transport;
 
+    /**
+     * @return Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+     * 
+     */
     public Optional<String> transport() {
         return Optional.ofNullable(this.transport);
     }
@@ -63,6 +75,11 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -94,29 +111,66 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RtspSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(TlsEndpointResponse endpoint) {
             return endpoint(Either.ofLeft(endpoint));
         }
 
+        /**
+         * @param endpoint RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(UnsecuredEndpointResponse endpoint) {
             return endpoint(Either.ofRight(endpoint));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param transport Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(@Nullable String transport) {
             $.transport = transport;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.RtspSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

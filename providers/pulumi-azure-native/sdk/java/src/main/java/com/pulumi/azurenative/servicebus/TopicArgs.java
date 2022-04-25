@@ -25,6 +25,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeleteOnIdle")
     private @Nullable Output<String> autoDeleteOnIdle;
 
+    /**
+     * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * 
+     */
     public Optional<Output<String>> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
@@ -36,6 +40,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMessageTimeToLive")
     private @Nullable Output<String> defaultMessageTimeToLive;
 
+    /**
+     * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * 
+     */
     public Optional<Output<String>> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
@@ -47,6 +55,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="duplicateDetectionHistoryTimeWindow")
     private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
+    /**
+     * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * 
+     */
     public Optional<Output<String>> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
@@ -58,6 +70,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBatchedOperations")
     private @Nullable Output<Boolean> enableBatchedOperations;
 
+    /**
+     * @return Value that indicates whether server-side batched operations are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
@@ -69,6 +85,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableExpress")
     private @Nullable Output<Boolean> enableExpress;
 
+    /**
+     * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+     * 
+     */
     public Optional<Output<Boolean>> enableExpress() {
         return Optional.ofNullable(this.enableExpress);
     }
@@ -80,6 +100,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enablePartitioning")
     private @Nullable Output<Boolean> enablePartitioning;
 
+    /**
+     * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enablePartitioning() {
         return Optional.ofNullable(this.enablePartitioning);
     }
@@ -91,6 +115,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeInMegabytes")
     private @Nullable Output<Integer> maxSizeInMegabytes;
 
+    /**
+     * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+     * 
+     */
     public Optional<Output<Integer>> maxSizeInMegabytes() {
         return Optional.ofNullable(this.maxSizeInMegabytes);
     }
@@ -102,6 +130,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -113,6 +145,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresDuplicateDetection")
     private @Nullable Output<Boolean> requiresDuplicateDetection;
 
+    /**
+     * @return Value indicating if this topic requires duplicate detection.
+     * 
+     */
     public Optional<Output<Boolean>> requiresDuplicateDetection() {
         return Optional.ofNullable(this.requiresDuplicateDetection);
     }
@@ -124,6 +160,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -135,6 +175,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<EntityStatus> status;
 
+    /**
+     * @return Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     public Optional<Output<EntityStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -146,6 +190,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportOrdering")
     private @Nullable Output<Boolean> supportOrdering;
 
+    /**
+     * @return Value that indicates whether the topic supports ordering.
+     * 
+     */
     public Optional<Output<Boolean>> supportOrdering() {
         return Optional.ofNullable(this.supportOrdering);
     }
@@ -157,6 +205,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName")
     private @Nullable Output<String> topicName;
 
+    /**
+     * @return The topic name.
+     * 
+     */
     public Optional<Output<String>> topicName() {
         return Optional.ofNullable(this.topicName);
     }
@@ -197,119 +249,275 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDeleteOnIdle ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteOnIdle(@Nullable Output<String> autoDeleteOnIdle) {
             $.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
+        /**
+         * @param autoDeleteOnIdle ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteOnIdle(String autoDeleteOnIdle) {
             return autoDeleteOnIdle(Output.of(autoDeleteOnIdle));
         }
 
+        /**
+         * @param defaultMessageTimeToLive ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
             $.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
+        /**
+         * @param defaultMessageTimeToLive ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMessageTimeToLive(String defaultMessageTimeToLive) {
             return defaultMessageTimeToLive(Output.of(defaultMessageTimeToLive));
         }
 
+        /**
+         * @param duplicateDetectionHistoryTimeWindow ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
             $.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
+        /**
+         * @param duplicateDetectionHistoryTimeWindow ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duplicateDetectionHistoryTimeWindow(String duplicateDetectionHistoryTimeWindow) {
             return duplicateDetectionHistoryTimeWindow(Output.of(duplicateDetectionHistoryTimeWindow));
         }
 
+        /**
+         * @param enableBatchedOperations Value that indicates whether server-side batched operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
             $.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
+        /**
+         * @param enableBatchedOperations Value that indicates whether server-side batched operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBatchedOperations(Boolean enableBatchedOperations) {
             return enableBatchedOperations(Output.of(enableBatchedOperations));
         }
 
+        /**
+         * @param enableExpress Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExpress(@Nullable Output<Boolean> enableExpress) {
             $.enableExpress = enableExpress;
             return this;
         }
 
+        /**
+         * @param enableExpress Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableExpress(Boolean enableExpress) {
             return enableExpress(Output.of(enableExpress));
         }
 
+        /**
+         * @param enablePartitioning Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitioning(@Nullable Output<Boolean> enablePartitioning) {
             $.enablePartitioning = enablePartitioning;
             return this;
         }
 
+        /**
+         * @param enablePartitioning Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitioning(Boolean enablePartitioning) {
             return enablePartitioning(Output.of(enablePartitioning));
         }
 
+        /**
+         * @param maxSizeInMegabytes Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeInMegabytes(@Nullable Output<Integer> maxSizeInMegabytes) {
             $.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
 
+        /**
+         * @param maxSizeInMegabytes Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeInMegabytes(Integer maxSizeInMegabytes) {
             return maxSizeInMegabytes(Output.of(maxSizeInMegabytes));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param requiresDuplicateDetection Value indicating if this topic requires duplicate detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresDuplicateDetection(@Nullable Output<Boolean> requiresDuplicateDetection) {
             $.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
 
+        /**
+         * @param requiresDuplicateDetection Value indicating if this topic requires duplicate detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresDuplicateDetection(Boolean requiresDuplicateDetection) {
             return requiresDuplicateDetection(Output.of(requiresDuplicateDetection));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of a messaging entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<EntityStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of a messaging entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(EntityStatus status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param supportOrdering Value that indicates whether the topic supports ordering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportOrdering(@Nullable Output<Boolean> supportOrdering) {
             $.supportOrdering = supportOrdering;
             return this;
         }
 
+        /**
+         * @param supportOrdering Value that indicates whether the topic supports ordering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportOrdering(Boolean supportOrdering) {
             return supportOrdering(Output.of(supportOrdering));
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(@Nullable Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

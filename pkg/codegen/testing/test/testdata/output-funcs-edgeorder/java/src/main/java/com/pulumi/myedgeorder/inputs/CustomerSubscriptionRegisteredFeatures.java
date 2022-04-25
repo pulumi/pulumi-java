@@ -25,6 +25,10 @@ public final class CustomerSubscriptionRegisteredFeatures extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of subscription registered feature
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class CustomerSubscriptionRegisteredFeatures extends com.pulumi.res
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return State of subscription registered feature
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -65,11 +73,23 @@ public final class CustomerSubscriptionRegisteredFeatures extends com.pulumi.res
             $ = new CustomerSubscriptionRegisteredFeatures(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of subscription registered feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param state State of subscription registered feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

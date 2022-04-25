@@ -27,6 +27,10 @@ public final class CloudServiceVaultSecretGroupResponse extends com.pulumi.resou
     @Import(name="sourceVault")
     private @Nullable SubResourceResponse sourceVault;
 
+    /**
+     * @return The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+     * 
+     */
     public Optional<SubResourceResponse> sourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
@@ -38,6 +42,10 @@ public final class CloudServiceVaultSecretGroupResponse extends com.pulumi.resou
     @Import(name="vaultCertificates")
     private @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
 
+    /**
+     * @return The list of key vault references in SourceVault which contain certificates.
+     * 
+     */
     public Optional<List<CloudServiceVaultCertificateResponse>> vaultCertificates() {
         return Optional.ofNullable(this.vaultCertificates);
     }
@@ -67,16 +75,34 @@ public final class CloudServiceVaultSecretGroupResponse extends com.pulumi.resou
             $ = new CloudServiceVaultSecretGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceVault The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(@Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
             $.vaultCertificates = vaultCertificates;
             return this;
         }
 
+        /**
+         * @param vaultCertificates The list of key vault references in SourceVault which contain certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCertificates(CloudServiceVaultCertificateResponse... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
         }

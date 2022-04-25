@@ -27,6 +27,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -38,6 +42,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationVirtualNetworks")
     private @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
+    /**
+     * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> registrationVirtualNetworks() {
         return Optional.ofNullable(this.registrationVirtualNetworks);
     }
@@ -49,6 +57,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resolutionVirtualNetworks")
     private @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
+    /**
+     * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> resolutionVirtualNetworks() {
         return Optional.ofNullable(this.resolutionVirtualNetworks);
     }
@@ -60,6 +72,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +87,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -82,6 +102,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneName")
     private @Nullable Output<String> zoneName;
 
+    /**
+     * @return The name of the DNS zone (without a terminating dot).
+     * 
+     */
     public Optional<Output<String>> zoneName() {
         return Optional.ofNullable(this.zoneName);
     }
@@ -93,6 +117,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneType")
     private @Nullable Output<ZoneType> zoneType;
 
+    /**
+     * @return The type of this DNS zone (Public or Private).
+     * 
+     */
     public Optional<Output<ZoneType>> zoneType() {
         return Optional.ofNullable(this.zoneType);
     }
@@ -127,73 +155,169 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param registrationVirtualNetworks A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationVirtualNetworks(@Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks) {
             $.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
 
+        /**
+         * @param registrationVirtualNetworks A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationVirtualNetworks(List<SubResourceArgs> registrationVirtualNetworks) {
             return registrationVirtualNetworks(Output.of(registrationVirtualNetworks));
         }
 
+        /**
+         * @param registrationVirtualNetworks A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationVirtualNetworks(SubResourceArgs... registrationVirtualNetworks) {
             return registrationVirtualNetworks(List.of(registrationVirtualNetworks));
         }
 
+        /**
+         * @param resolutionVirtualNetworks A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionVirtualNetworks(@Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks) {
             $.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
 
+        /**
+         * @param resolutionVirtualNetworks A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionVirtualNetworks(List<SubResourceArgs> resolutionVirtualNetworks) {
             return resolutionVirtualNetworks(Output.of(resolutionVirtualNetworks));
         }
 
+        /**
+         * @param resolutionVirtualNetworks A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolutionVirtualNetworks(SubResourceArgs... resolutionVirtualNetworks) {
             return resolutionVirtualNetworks(List.of(resolutionVirtualNetworks));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zoneName The name of the DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneName(@Nullable Output<String> zoneName) {
             $.zoneName = zoneName;
             return this;
         }
 
+        /**
+         * @param zoneName The name of the DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneName(String zoneName) {
             return zoneName(Output.of(zoneName));
         }
 
+        /**
+         * @param zoneType The type of this DNS zone (Public or Private).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneType(@Nullable Output<ZoneType> zoneType) {
             $.zoneType = zoneType;
             return this;
         }
 
+        /**
+         * @param zoneType The type of this DNS zone (Public or Private).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneType(ZoneType zoneType) {
             return zoneType(Output.of(zoneType));
         }

@@ -22,6 +22,10 @@ public final class DedicatedHostGroupInstanceViewResponse extends com.pulumi.res
     @Import(name="hosts")
     private @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
+    /**
+     * @return List of instance view of the dedicated hosts under the dedicated host group.
+     * 
+     */
     public Optional<List<DedicatedHostInstanceViewWithNameResponse>> hosts() {
         return Optional.ofNullable(this.hosts);
     }
@@ -50,11 +54,23 @@ public final class DedicatedHostGroupInstanceViewResponse extends com.pulumi.res
             $ = new DedicatedHostGroupInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hosts List of instance view of the dedicated hosts under the dedicated host group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts List of instance view of the dedicated hosts under the dedicated host group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(DedicatedHostInstanceViewWithNameResponse... hosts) {
             return hosts(List.of(hosts));
         }

@@ -19,6 +19,10 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
     @Import(name="associationName", required=true)
     private String associationName;
 
+    /**
+     * @return The name of the diagnostic settings association.
+     * 
+     */
     public String associationName() {
         return this.associationName;
     }
@@ -30,6 +34,10 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The fully qualified ID of the resource, including the resource name and resource type.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -59,11 +67,23 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends com.pulumi
             $ = new GetGuestDiagnosticsSettingsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationName The name of the diagnostic settings association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified ID of the resource, including the resource name and resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

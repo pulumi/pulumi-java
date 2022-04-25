@@ -22,6 +22,10 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
     @Import(name="iterationResults", required=true)
     private List<BqmlIterationResultResponse> iterationResults;
 
+    /**
+     * @return [Output-only, Beta] List of each iteration results.
+     * 
+     */
     public List<BqmlIterationResultResponse> iterationResults() {
         return this.iterationResults;
     }
@@ -33,6 +37,10 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return [Output-only, Beta] Training run start time in milliseconds since the epoch.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -44,6 +52,10 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -55,6 +67,10 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
     @Import(name="trainingOptions", required=true)
     private BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
+    /**
+     * @return [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
+     * 
+     */
     public BqmlTrainingRunTrainingOptionsResponse trainingOptions() {
         return this.trainingOptions;
     }
@@ -86,25 +102,55 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
             $ = new BqmlTrainingRunResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iterationResults [Output-only, Beta] List of each iteration results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iterationResults(List<BqmlIterationResultResponse> iterationResults) {
             $.iterationResults = iterationResults;
             return this;
         }
 
+        /**
+         * @param iterationResults [Output-only, Beta] List of each iteration results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iterationResults(BqmlIterationResultResponse... iterationResults) {
             return iterationResults(List.of(iterationResults));
         }
 
+        /**
+         * @param startTime [Output-only, Beta] Training run start time in milliseconds since the epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param trainingOptions [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
             $.trainingOptions = trainingOptions;
             return this;

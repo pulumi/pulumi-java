@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentPatchConfigWindowsUpdate {
     /**
-     * Only apply updates of these windows update classifications. If empty, all updates are applied.
+     * @return Only apply updates of these windows update classifications. If empty, all updates are applied.
      * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
      * 
      */
     private final @Nullable List<String> classifications;
     /**
-     * List of KBs to exclude from update.
+     * @return List of KBs to exclude from update.
      * 
      */
     private final @Nullable List<String> excludes;
     /**
-     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
+     * @return An exclusive list of kbs to be updated. These are the only patches that will be updated.
      * This field must not be used with other patch configurations.
      * 
      */
@@ -40,25 +40,25 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
     }
 
     /**
-     * Only apply updates of these windows update classifications. If empty, all updates are applied.
+     * @return Only apply updates of these windows update classifications. If empty, all updates are applied.
      * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
      * 
-    */
+     */
     public List<String> classifications() {
         return this.classifications == null ? List.of() : this.classifications;
     }
     /**
-     * List of KBs to exclude from update.
+     * @return List of KBs to exclude from update.
      * 
-    */
+     */
     public List<String> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
     /**
-     * An exclusive list of kbs to be updated. These are the only patches that will be updated.
+     * @return An exclusive list of kbs to be updated. These are the only patches that will be updated.
      * This field must not be used with other patch configurations.
      * 
-    */
+     */
     public List<String> exclusivePatches() {
         return this.exclusivePatches == null ? List.of() : this.exclusivePatches;
     }

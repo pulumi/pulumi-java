@@ -26,6 +26,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="backupItemType")
     private @Nullable String backupItemType;
 
+    /**
+     * @return Type of backup items associated with this container.
+     * 
+     */
     public Optional<String> backupItemType() {
         return Optional.ofNullable(this.backupItemType);
     }
@@ -37,6 +41,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="backupItems")
     private @Nullable List<String> backupItems;
 
+    /**
+     * @return List of backup items associated with this container.
+     * 
+     */
     public Optional<List<String>> backupItems() {
         return Optional.ofNullable(this.backupItems);
     }
@@ -48,6 +56,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="lastBackupStatus")
     private @Nullable String lastBackupStatus;
 
+    /**
+     * @return Latest backup status of this container.
+     * 
+     */
     public Optional<String> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
@@ -59,6 +71,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="lastRefreshedAt")
     private @Nullable String lastRefreshedAt;
 
+    /**
+     * @return Time stamp when this container was refreshed.
+     * 
+     */
     public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -70,6 +86,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
     @Import(name="policyName")
     private @Nullable String policyName;
 
+    /**
+     * @return Backup policy associated with this container.
+     * 
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -102,30 +122,66 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
             $ = new MabContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupItemType Type of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItemType(@Nullable String backupItemType) {
             $.backupItemType = backupItemType;
             return this;
         }
 
+        /**
+         * @param backupItems List of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItems(@Nullable List<String> backupItems) {
             $.backupItems = backupItems;
             return this;
         }
 
+        /**
+         * @param backupItems List of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItems(String... backupItems) {
             return backupItems(List.of(backupItems));
         }
 
+        /**
+         * @param lastBackupStatus Latest backup status of this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             $.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
+        /**
+         * @param lastRefreshedAt Time stamp when this container was refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
+        /**
+         * @param policyName Backup policy associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable String policyName) {
             $.policyName = policyName;
             return this;

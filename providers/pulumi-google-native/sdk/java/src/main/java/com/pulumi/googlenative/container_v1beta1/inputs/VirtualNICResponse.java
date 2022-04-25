@@ -23,6 +23,10 @@ public final class VirtualNICResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether gVNIC features are enabled in the node pool.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class VirtualNICResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VirtualNICResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether gVNIC features are enabled in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

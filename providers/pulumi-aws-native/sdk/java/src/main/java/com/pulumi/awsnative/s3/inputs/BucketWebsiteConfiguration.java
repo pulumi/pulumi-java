@@ -28,6 +28,10 @@ public final class BucketWebsiteConfiguration extends com.pulumi.resources.Invok
     @Import(name="errorDocument")
     private @Nullable String errorDocument;
 
+    /**
+     * @return The name of the error document for the website.
+     * 
+     */
     public Optional<String> errorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
@@ -39,6 +43,10 @@ public final class BucketWebsiteConfiguration extends com.pulumi.resources.Invok
     @Import(name="indexDocument")
     private @Nullable String indexDocument;
 
+    /**
+     * @return The name of the index document for the website.
+     * 
+     */
     public Optional<String> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }
@@ -84,11 +92,23 @@ public final class BucketWebsiteConfiguration extends com.pulumi.resources.Invok
             $ = new BucketWebsiteConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorDocument The name of the error document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDocument(@Nullable String errorDocument) {
             $.errorDocument = errorDocument;
             return this;
         }
 
+        /**
+         * @param indexDocument The name of the index document for the website.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexDocument(@Nullable String indexDocument) {
             $.indexDocument = indexDocument;
             return this;

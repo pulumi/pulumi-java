@@ -22,6 +22,10 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle")
     private @Nullable Output<String> applicationTitle;
 
+    /**
+     * @return Application name displayed on OAuth consent screen.
+     * 
+     */
     public Optional<Output<String>> applicationTitle() {
         return Optional.ofNullable(this.applicationTitle);
     }
@@ -40,6 +44,10 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
     private @Nullable Output<String> supportEmail;
 
+    /**
+     * @return Support email displayed on the OAuth consent screen.
+     * 
+     */
     public Optional<Output<String>> supportEmail() {
         return Optional.ofNullable(this.supportEmail);
     }
@@ -70,11 +78,23 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BrandArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationTitle Application name displayed on OAuth consent screen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationTitle(@Nullable Output<String> applicationTitle) {
             $.applicationTitle = applicationTitle;
             return this;
         }
 
+        /**
+         * @param applicationTitle Application name displayed on OAuth consent screen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationTitle(String applicationTitle) {
             return applicationTitle(Output.of(applicationTitle));
         }
@@ -88,11 +108,23 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param supportEmail Support email displayed on the OAuth consent screen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
             $.supportEmail = supportEmail;
             return this;
         }
 
+        /**
+         * @param supportEmail Support email displayed on the OAuth consent screen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportEmail(String supportEmail) {
             return supportEmail(Output.of(supportEmail));
         }

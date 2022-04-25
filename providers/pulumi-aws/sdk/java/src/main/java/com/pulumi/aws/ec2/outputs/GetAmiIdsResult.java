@@ -17,7 +17,7 @@ public final class GetAmiIdsResult {
     private final @Nullable List<String> executableUsers;
     private final @Nullable List<GetAmiIdsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -51,9 +51,9 @@ public final class GetAmiIdsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

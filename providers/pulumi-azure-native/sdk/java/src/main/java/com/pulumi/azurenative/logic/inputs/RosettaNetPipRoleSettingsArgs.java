@@ -28,6 +28,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return The action name.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -39,6 +43,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="businessDocument", required=true)
     private Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration business document.
+     * 
+     */
     public Output<RosettaNetPipBusinessDocumentArgs> businessDocument() {
         return this.businessDocument;
     }
@@ -50,6 +58,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -72,6 +88,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="roleType", required=true)
     private Output<RosettaNetPipRoleType> roleType;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration role type.
+     * 
+     */
     public Output<RosettaNetPipRoleType> roleType() {
         return this.roleType;
     }
@@ -83,6 +103,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The service name.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -94,6 +118,10 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
     @Import(name="serviceClassification", required=true)
     private Output<String> serviceClassification;
 
+    /**
+     * @return The service classification name.
+     * 
+     */
     public Output<String> serviceClassification() {
         return this.serviceClassification;
     }
@@ -128,65 +156,149 @@ public final class RosettaNetPipRoleSettingsArgs extends com.pulumi.resources.Re
             $ = new RosettaNetPipRoleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param businessDocument The RosettaNet ProcessConfiguration business document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessDocument(Output<RosettaNetPipBusinessDocumentArgs> businessDocument) {
             $.businessDocument = businessDocument;
             return this;
         }
 
+        /**
+         * @param businessDocument The RosettaNet ProcessConfiguration business document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessDocument(RosettaNetPipBusinessDocumentArgs businessDocument) {
             return businessDocument(Output.of(businessDocument));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param role The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param roleType The RosettaNet ProcessConfiguration role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(Output<RosettaNetPipRoleType> roleType) {
             $.roleType = roleType;
             return this;
         }
 
+        /**
+         * @param roleType The RosettaNet ProcessConfiguration role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleType(RosettaNetPipRoleType roleType) {
             return roleType(Output.of(roleType));
         }
 
+        /**
+         * @param service The service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param serviceClassification The service classification name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceClassification(Output<String> serviceClassification) {
             $.serviceClassification = serviceClassification;
             return this;
         }
 
+        /**
+         * @param serviceClassification The service classification name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceClassification(String serviceClassification) {
             return serviceClassification(Output.of(serviceClassification));
         }

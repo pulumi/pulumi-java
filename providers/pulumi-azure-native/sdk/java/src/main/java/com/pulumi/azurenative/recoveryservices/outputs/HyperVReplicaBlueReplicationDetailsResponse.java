@@ -16,43 +16,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HyperVReplicaBlueReplicationDetailsResponse {
     /**
-     * Initial replication details.
+     * @return Initial replication details.
      * 
      */
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;HyperVReplica2012R2&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The Last replication time.
+     * @return The Last replication time.
      * 
      */
     private final @Nullable String lastReplicatedTime;
     /**
-     * VM disk details.
+     * @return VM disk details.
      * 
      */
     private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
     /**
-     * The virtual machine Id.
+     * @return The virtual machine Id.
      * 
      */
     private final @Nullable String vmId;
     /**
-     * The PE Network details.
+     * @return The PE Network details.
      * 
      */
     private final @Nullable List<VMNicDetailsResponse> vmNics;
     /**
-     * The protection state for the vm.
+     * @return The protection state for the vm.
      * 
      */
     private final @Nullable String vmProtectionState;
     /**
-     * The protection state description for the vm.
+     * @return The protection state description for the vm.
      * 
      */
     private final @Nullable String vmProtectionStateDescription;
@@ -78,59 +78,59 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
     }
 
     /**
-     * Initial replication details.
+     * @return Initial replication details.
      * 
-    */
+     */
     public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;HyperVReplica2012R2&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The Last replication time.
+     * @return The Last replication time.
      * 
-    */
+     */
     public Optional<String> lastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
-     * VM disk details.
+     * @return VM disk details.
      * 
-    */
+     */
     public List<DiskDetailsResponse> vMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
     /**
-     * The virtual machine Id.
+     * @return The virtual machine Id.
      * 
-    */
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
-     * The PE Network details.
+     * @return The PE Network details.
      * 
-    */
+     */
     public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
-     * The protection state for the vm.
+     * @return The protection state for the vm.
      * 
-    */
+     */
     public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
-     * The protection state description for the vm.
+     * @return The protection state description for the vm.
      * 
-    */
+     */
     public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }

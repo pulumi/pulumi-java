@@ -26,6 +26,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="metricColumn")
     private @Nullable String metricColumn;
 
+    /**
+     * @return Evaluation of metric on a particular column
+     * 
+     */
     public Optional<String> metricColumn() {
         return Optional.ofNullable(this.metricColumn);
     }
@@ -37,6 +41,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="metricTriggerType")
     private @Nullable String metricTriggerType;
 
+    /**
+     * @return Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
+     * 
+     */
     public Optional<String> metricTriggerType() {
         return Optional.ofNullable(this.metricTriggerType);
     }
@@ -48,6 +56,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="threshold")
     private @Nullable Double threshold;
 
+    /**
+     * @return The threshold of the metric trigger.
+     * 
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
@@ -59,6 +71,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="thresholdOperator")
     private @Nullable String thresholdOperator;
 
+    /**
+     * @return Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
+     * 
+     */
     public Optional<String> thresholdOperator() {
         return Optional.ofNullable(this.thresholdOperator);
     }
@@ -90,21 +106,45 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
             $ = new LogMetricTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricColumn Evaluation of metric on a particular column
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricColumn(@Nullable String metricColumn) {
             $.metricColumn = metricColumn;
             return this;
         }
 
+        /**
+         * @param metricTriggerType Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTriggerType(@Nullable String metricTriggerType) {
             $.metricTriggerType = metricTriggerType;
             return this;
         }
 
+        /**
+         * @param threshold The threshold of the metric trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(@Nullable Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param thresholdOperator Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdOperator(@Nullable String thresholdOperator) {
             $.thresholdOperator = thresholdOperator;
             return this;

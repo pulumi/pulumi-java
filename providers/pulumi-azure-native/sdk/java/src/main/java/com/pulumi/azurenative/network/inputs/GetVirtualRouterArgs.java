@@ -21,6 +21,10 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="virtualRouterName", required=true)
     private String virtualRouterName;
 
+    /**
+     * @return The name of the Virtual Router.
+     * 
+     */
     public String virtualRouterName() {
         return this.virtualRouterName;
     }
@@ -73,16 +85,34 @@ public final class GetVirtualRouterArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetVirtualRouterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualRouterName The name of the Virtual Router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualRouterName(String virtualRouterName) {
             $.virtualRouterName = virtualRouterName;
             return this;

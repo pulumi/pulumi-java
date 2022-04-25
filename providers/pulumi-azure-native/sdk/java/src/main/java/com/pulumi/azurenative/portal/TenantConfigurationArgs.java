@@ -23,6 +23,10 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="configurationName")
     private @Nullable Output<String> configurationName;
 
+    /**
+     * @return The configuration name. Value must be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> configurationName() {
         return Optional.ofNullable(this.configurationName);
     }
@@ -34,6 +38,10 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="enforcePrivateMarkdownStorage")
     private @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
+    /**
+     * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+     * 
+     */
     public Optional<Output<Boolean>> enforcePrivateMarkdownStorage() {
         return Optional.ofNullable(this.enforcePrivateMarkdownStorage);
     }
@@ -63,20 +71,44 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
             $ = new TenantConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationName The configuration name. Value must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(@Nullable Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param configurationName The configuration name. Value must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             return configurationName(Output.of(configurationName));
         }
 
+        /**
+         * @param enforcePrivateMarkdownStorage When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcePrivateMarkdownStorage(@Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
             $.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
 
+        /**
+         * @param enforcePrivateMarkdownStorage When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcePrivateMarkdownStorage(Boolean enforcePrivateMarkdownStorage) {
             return enforcePrivateMarkdownStorage(Output.of(enforcePrivateMarkdownStorage));
         }

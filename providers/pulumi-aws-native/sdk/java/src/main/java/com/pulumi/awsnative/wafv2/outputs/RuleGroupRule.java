@@ -23,7 +23,7 @@ public final class RuleGroupRule {
     private final String name;
     private final Integer priority;
     /**
-     * Collection of Rule Labels.
+     * @return Collection of Rule Labels.
      * 
      */
     private final @Nullable List<RuleGroupLabel> ruleLabels;
@@ -61,9 +61,9 @@ public final class RuleGroupRule {
         return this.priority;
     }
     /**
-     * Collection of Rule Labels.
+     * @return Collection of Rule Labels.
      * 
-    */
+     */
     public List<RuleGroupLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

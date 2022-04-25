@@ -24,6 +24,10 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
     @Import(name="queryTimeout", required=true)
     private Double queryTimeout;
 
+    /**
+     * @return SQL query timeout. Unit in seconds.
+     * 
+     */
     public Double queryTimeout() {
         return this.queryTimeout;
     }
@@ -35,6 +39,10 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
     @Import(name="sqlQuery", required=true)
     private String sqlQuery;
 
+    /**
+     * @return SQL query
+     * 
+     */
     public String sqlQuery() {
         return this.sqlQuery;
     }
@@ -46,6 +54,10 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
     @Import(name="sqlStoredProcedureName", required=true)
     private String sqlStoredProcedureName;
 
+    /**
+     * @return SQL storedProcedure name
+     * 
+     */
     public String sqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
     }
@@ -57,6 +69,10 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
     @Import(name="sqlTableName", required=true)
     private String sqlTableName;
 
+    /**
+     * @return SQL table name
+     * 
+     */
     public String sqlTableName() {
         return this.sqlTableName;
     }
@@ -88,21 +104,45 @@ public final class DatasetResponseSqlDataPath extends com.pulumi.resources.Invok
             $ = new DatasetResponseSqlDataPath(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryTimeout SQL query timeout. Unit in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(Double queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param sqlQuery SQL query
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlQuery(String sqlQuery) {
             $.sqlQuery = sqlQuery;
             return this;
         }
 
+        /**
+         * @param sqlStoredProcedureName SQL storedProcedure name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlStoredProcedureName(String sqlStoredProcedureName) {
             $.sqlStoredProcedureName = sqlStoredProcedureName;
             return this;
         }
 
+        /**
+         * @param sqlTableName SQL table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlTableName(String sqlTableName) {
             $.sqlTableName = sqlTableName;
             return this;

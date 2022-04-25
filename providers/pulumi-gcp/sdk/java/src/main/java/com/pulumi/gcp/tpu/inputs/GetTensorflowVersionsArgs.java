@@ -22,6 +22,11 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project to list versions for. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -34,6 +39,11 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
     @Import(name="zone")
     private @Nullable String zone;
 
+    /**
+     * @return The zone to list versions for. If it
+     * is not provided, the provider zone is used.
+     * 
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -63,11 +73,25 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
             $ = new GetTensorflowVersionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The project to list versions for. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param zone The zone to list versions for. If it
+         * is not provided, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable String zone) {
             $.zone = zone;
             return this;

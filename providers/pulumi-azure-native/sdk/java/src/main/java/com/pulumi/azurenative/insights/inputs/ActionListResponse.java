@@ -26,6 +26,10 @@ public final class ActionListResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actionGroups")
     private @Nullable List<ActionGroupResponse> actionGroups;
 
+    /**
+     * @return The list of the Action Groups.
+     * 
+     */
     public Optional<List<ActionGroupResponse>> actionGroups() {
         return Optional.ofNullable(this.actionGroups);
     }
@@ -54,11 +58,23 @@ public final class ActionListResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ActionListResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroups The list of the Action Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
             $.actionGroups = actionGroups;
             return this;
         }
 
+        /**
+         * @param actionGroups The list of the Action Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(ActionGroupResponse... actionGroups) {
             return actionGroups(List.of(actionGroups));
         }

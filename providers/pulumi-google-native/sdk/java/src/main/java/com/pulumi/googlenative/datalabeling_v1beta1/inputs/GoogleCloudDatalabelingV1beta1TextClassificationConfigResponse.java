@@ -25,6 +25,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
     @Import(name="allowMultiLabel", required=true)
     private Boolean allowMultiLabel;
 
+    /**
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+     * 
+     */
     public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
     @Import(name="annotationSpecSet", required=true)
     private String annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
     @Import(name="sentimentConfig", required=true)
     private GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
+    /**
+     * @return Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+     * 
+     */
     public GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig() {
         return this.sentimentConfig;
     }
@@ -77,16 +89,34 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
             $ = new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(Boolean allowMultiLabel) {
             $.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param sentimentConfig Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
             $.sentimentConfig = sentimentConfig;
             return this;

@@ -27,6 +27,10 @@ public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.Re
     @Import(name="rollingUpdate")
     private @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
+    /**
+     * @return RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+     * 
+     */
     public Optional<Output<RollingUpdateStatefulSetStrategyArgs>> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
@@ -38,6 +42,10 @@ public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type indicates the type of the StatefulSetUpdateStrategy.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.Re
             $ = new StatefulSetUpdateStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rollingUpdate RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(@Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate) {
             $.rollingUpdate = rollingUpdate;
             return this;
         }
 
+        /**
+         * @param rollingUpdate RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollingUpdate(RollingUpdateStatefulSetStrategyArgs rollingUpdate) {
             return rollingUpdate(Output.of(rollingUpdate));
         }
 
+        /**
+         * @param type Type indicates the type of the StatefulSetUpdateStrategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type indicates the type of the StatefulSetUpdateStrategy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

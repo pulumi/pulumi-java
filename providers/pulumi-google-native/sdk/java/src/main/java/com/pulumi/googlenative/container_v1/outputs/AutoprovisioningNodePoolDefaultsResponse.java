@@ -15,52 +15,52 @@ import java.util.Objects;
 @CustomType
 public final class AutoprovisioningNodePoolDefaultsResponse {
     /**
-     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * @return The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
      * 
      */
     private final String bootDiskKmsKey;
     /**
-     * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
      * 
      */
     private final Integer diskSizeGb;
     /**
-     * Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+     * @return Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
      * 
      */
     private final String diskType;
     /**
-     * The image type to use for NAP created node.
+     * @return The image type to use for NAP created node.
      * 
      */
     private final String imageType;
     /**
-     * Specifies the node management options for NAP created node-pools.
+     * @return Specifies the node management options for NAP created node-pools.
      * 
      */
     private final NodeManagementResponse management;
     /**
-     * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+     * @return Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
      * 
      */
     private final String minCpuPlatform;
     /**
-     * Scopes that are used by NAP when creating node pools.
+     * @return Scopes that are used by NAP when creating node pools.
      * 
      */
     private final List<String> oauthScopes;
     /**
-     * The Google Cloud Platform Service Account to be used by the node VMs.
+     * @return The Google Cloud Platform Service Account to be used by the node VMs.
      * 
      */
     private final String serviceAccount;
     /**
-     * Shielded Instance options.
+     * @return Shielded Instance options.
      * 
      */
     private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
     /**
-     * Specifies the upgrade settings for NAP created node pools
+     * @return Specifies the upgrade settings for NAP created node pools
      * 
      */
     private final UpgradeSettingsResponse upgradeSettings;
@@ -90,72 +90,72 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
     }
 
     /**
-     * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * @return The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
      * 
-    */
+     */
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
     /**
-     * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
      * 
-    */
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+     * @return Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }
     /**
-     * The image type to use for NAP created node.
+     * @return The image type to use for NAP created node.
      * 
-    */
+     */
     public String imageType() {
         return this.imageType;
     }
     /**
-     * Specifies the node management options for NAP created node-pools.
+     * @return Specifies the node management options for NAP created node-pools.
      * 
-    */
+     */
     public NodeManagementResponse management() {
         return this.management;
     }
     /**
-     * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+     * @return Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
      * 
-    */
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
-     * Scopes that are used by NAP when creating node pools.
+     * @return Scopes that are used by NAP when creating node pools.
      * 
-    */
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
     /**
-     * The Google Cloud Platform Service Account to be used by the node VMs.
+     * @return The Google Cloud Platform Service Account to be used by the node VMs.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * Shielded Instance options.
+     * @return Shielded Instance options.
      * 
-    */
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
-     * Specifies the upgrade settings for NAP created node pools
+     * @return Specifies the upgrade settings for NAP created node pools
      * 
-    */
+     */
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }

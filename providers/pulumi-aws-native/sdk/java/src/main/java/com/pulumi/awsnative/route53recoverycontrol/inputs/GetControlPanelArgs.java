@@ -19,6 +19,10 @@ public final class GetControlPanelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="controlPanelArn", required=true)
     private String controlPanelArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the cluster.
+     * 
+     */
     public String controlPanelArn() {
         return this.controlPanelArn;
     }
@@ -47,6 +51,12 @@ public final class GetControlPanelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetControlPanelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(String controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;

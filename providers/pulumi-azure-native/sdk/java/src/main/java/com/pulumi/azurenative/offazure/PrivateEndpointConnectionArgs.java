@@ -22,6 +22,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="peConnectionName")
     private @Nullable Output<String> peConnectionName;
 
+    /**
+     * @return Private link resource name.
+     * 
+     */
     public Optional<Output<String>> peConnectionName() {
         return Optional.ofNullable(this.peConnectionName);
     }
@@ -33,6 +37,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="siteName", required=true)
     private Output<String> siteName;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public Output<String> siteName() {
         return this.siteName;
     }
@@ -74,29 +86,65 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peConnectionName Private link resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peConnectionName(@Nullable Output<String> peConnectionName) {
             $.peConnectionName = peConnectionName;
             return this;
         }
 
+        /**
+         * @param peConnectionName Private link resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peConnectionName(String peConnectionName) {
             return peConnectionName(Output.of(peConnectionName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }

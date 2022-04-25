@@ -19,6 +19,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the export as it appears in the console or from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the export as it appears in the console or from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -19,6 +19,10 @@ public final class GetStaticMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkGroupName", required=true)
     private String networkGroupName;
 
+    /**
+     * @return The name of the network group.
+     * 
+     */
     public String networkGroupName() {
         return this.networkGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetStaticMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkManagerName", required=true)
     private String networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public String networkManagerName() {
         return this.networkManagerName;
     }
@@ -41,6 +49,10 @@ public final class GetStaticMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetStaticMemberArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="staticMemberName", required=true)
     private String staticMemberName;
 
+    /**
+     * @return The name of the static member.
+     * 
+     */
     public String staticMemberName() {
         return this.staticMemberName;
     }
@@ -83,21 +99,45 @@ public final class GetStaticMemberArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStaticMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkGroupName The name of the network group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupName(String networkGroupName) {
             $.networkGroupName = networkGroupName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param staticMemberName The name of the static member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticMemberName(String staticMemberName) {
             $.staticMemberName = staticMemberName;
             return this;

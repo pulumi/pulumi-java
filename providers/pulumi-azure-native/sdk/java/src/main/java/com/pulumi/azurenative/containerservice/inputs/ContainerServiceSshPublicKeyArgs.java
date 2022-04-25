@@ -24,6 +24,10 @@ public final class ContainerServiceSshPublicKeyArgs extends com.pulumi.resources
     @Import(name="keyData", required=true)
     private Output<String> keyData;
 
+    /**
+     * @return Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * 
+     */
     public Output<String> keyData() {
         return this.keyData;
     }
@@ -52,11 +56,23 @@ public final class ContainerServiceSshPublicKeyArgs extends com.pulumi.resources
             $ = new ContainerServiceSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyData Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyData(Output<String> keyData) {
             $.keyData = keyData;
             return this;
         }
 
+        /**
+         * @param keyData Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyData(String keyData) {
             return keyData(Output.of(keyData));
         }

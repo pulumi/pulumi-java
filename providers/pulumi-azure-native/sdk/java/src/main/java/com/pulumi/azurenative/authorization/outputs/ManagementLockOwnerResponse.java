@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementLockOwnerResponse {
     /**
-     * The application ID of the lock owner.
+     * @return The application ID of the lock owner.
      * 
      */
     private final @Nullable String applicationId;
@@ -23,9 +23,9 @@ public final class ManagementLockOwnerResponse {
     }
 
     /**
-     * The application ID of the lock owner.
+     * @return The application ID of the lock owner.
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }

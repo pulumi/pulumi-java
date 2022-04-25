@@ -26,6 +26,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
     @Import(name="publicIPs")
     private @Nullable List<String> publicIPs;
 
+    /**
+     * @return Resource IDs of the public IP addresses that this integration runtime will use.
+     * 
+     */
     public Optional<List<String>> publicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }
@@ -37,6 +41,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
     @Import(name="subnet")
     private @Nullable String subnet;
 
+    /**
+     * @return The name of the subnet this integration runtime will join.
+     * 
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -48,6 +56,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -59,6 +71,10 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
     @Import(name="vNetId")
     private @Nullable String vNetId;
 
+    /**
+     * @return The ID of the VNet that this integration runtime will join.
+     * 
+     */
     public Optional<String> vNetId() {
         return Optional.ofNullable(this.vNetId);
     }
@@ -90,25 +106,55 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends com.pulumi.r
             $ = new IntegrationRuntimeVNetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIPs Resource IDs of the public IP addresses that this integration runtime will use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(@Nullable List<String> publicIPs) {
             $.publicIPs = publicIPs;
             return this;
         }
 
+        /**
+         * @param publicIPs Resource IDs of the public IP addresses that this integration runtime will use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(String... publicIPs) {
             return publicIPs(List.of(publicIPs));
         }
 
+        /**
+         * @param subnet The name of the subnet this integration runtime will join.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable String subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param vNetId The ID of the VNet that this integration runtime will join.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vNetId(@Nullable String vNetId) {
             $.vNetId = vNetId;
             return this;

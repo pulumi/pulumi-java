@@ -25,6 +25,10 @@ public final class GatewayCustomDomainPropertiesResponse extends com.pulumi.reso
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return The thumbprint of bound certificate.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -53,6 +57,12 @@ public final class GatewayCustomDomainPropertiesResponse extends com.pulumi.reso
             $ = new GatewayCustomDomainPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param thumbprint The thumbprint of bound certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;

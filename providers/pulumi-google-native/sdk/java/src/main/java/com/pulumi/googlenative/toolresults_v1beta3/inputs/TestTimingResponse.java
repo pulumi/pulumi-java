@@ -23,6 +23,10 @@ public final class TestTimingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testProcessDuration", required=true)
     private DurationResponse testProcessDuration;
 
+    /**
+     * @return How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+     * 
+     */
     public DurationResponse testProcessDuration() {
         return this.testProcessDuration;
     }
@@ -51,6 +55,12 @@ public final class TestTimingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TestTimingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testProcessDuration How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder testProcessDuration(DurationResponse testProcessDuration) {
             $.testProcessDuration = testProcessDuration;
             return this;

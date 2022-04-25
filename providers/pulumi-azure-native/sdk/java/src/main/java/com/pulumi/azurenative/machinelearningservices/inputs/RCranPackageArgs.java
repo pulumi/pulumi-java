@@ -22,6 +22,10 @@ public final class RCranPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The package name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class RCranPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository")
     private @Nullable Output<String> repository;
 
+    /**
+     * @return The repository name.
+     * 
+     */
     public Optional<Output<String>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -62,20 +70,44 @@ public final class RCranPackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RCranPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param repository The repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository The repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }

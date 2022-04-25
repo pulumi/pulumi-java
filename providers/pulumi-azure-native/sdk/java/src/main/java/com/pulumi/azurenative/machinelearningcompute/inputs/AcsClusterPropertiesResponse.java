@@ -30,6 +30,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="agentCount")
     private @Nullable Integer agentCount;
 
+    /**
+     * @return The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+     * 
+     */
     public Optional<Integer> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
@@ -41,6 +45,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="agentVmSize")
     private @Nullable String agentVmSize;
 
+    /**
+     * @return The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+     * 
+     */
     public Optional<String> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
@@ -52,6 +60,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="clusterFqdn", required=true)
     private String clusterFqdn;
 
+    /**
+     * @return The FQDN of the cluster.
+     * 
+     */
     public String clusterFqdn() {
         return this.clusterFqdn;
     }
@@ -63,6 +75,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="masterCount")
     private @Nullable Integer masterCount;
 
+    /**
+     * @return The number of master nodes in the container service.
+     * 
+     */
     public Optional<Integer> masterCount() {
         return Optional.ofNullable(this.masterCount);
     }
@@ -74,6 +90,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="orchestratorProperties")
     private @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
 
+    /**
+     * @return Orchestrator specific properties
+     * 
+     */
     public Optional<KubernetesClusterPropertiesResponse> orchestratorProperties() {
         return Optional.ofNullable(this.orchestratorProperties);
     }
@@ -85,6 +105,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="orchestratorType", required=true)
     private String orchestratorType;
 
+    /**
+     * @return Type of orchestrator. It cannot be changed once the cluster is created.
+     * 
+     */
     public String orchestratorType() {
         return this.orchestratorType;
     }
@@ -96,6 +120,10 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="systemServices")
     private @Nullable List<SystemServiceResponse> systemServices;
 
+    /**
+     * @return The system services deployed to the cluster
+     * 
+     */
     public Optional<List<SystemServiceResponse>> systemServices() {
         return Optional.ofNullable(this.systemServices);
     }
@@ -130,41 +158,89 @@ public final class AcsClusterPropertiesResponse extends com.pulumi.resources.Inv
             $ = new AcsClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentCount The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentCount(@Nullable Integer agentCount) {
             $.agentCount = agentCount;
             return this;
         }
 
+        /**
+         * @param agentVmSize The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(@Nullable String agentVmSize) {
             $.agentVmSize = agentVmSize;
             return this;
         }
 
+        /**
+         * @param clusterFqdn The FQDN of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterFqdn(String clusterFqdn) {
             $.clusterFqdn = clusterFqdn;
             return this;
         }
 
+        /**
+         * @param masterCount The number of master nodes in the container service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterCount(@Nullable Integer masterCount) {
             $.masterCount = masterCount;
             return this;
         }
 
+        /**
+         * @param orchestratorProperties Orchestrator specific properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesResponse orchestratorProperties) {
             $.orchestratorProperties = orchestratorProperties;
             return this;
         }
 
+        /**
+         * @param orchestratorType Type of orchestrator. It cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorType(String orchestratorType) {
             $.orchestratorType = orchestratorType;
             return this;
         }
 
+        /**
+         * @param systemServices The system services deployed to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(@Nullable List<SystemServiceResponse> systemServices) {
             $.systemServices = systemServices;
             return this;
         }
 
+        /**
+         * @param systemServices The system services deployed to the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(SystemServiceResponse... systemServices) {
             return systemServices(List.of(systemServices));
         }

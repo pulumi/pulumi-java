@@ -23,6 +23,10 @@ public final class StateNotificationConfigResponse extends com.pulumi.resources.
     @Import(name="pubsubTopicName", required=true)
     private String pubsubTopicName;
 
+    /**
+     * @return A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+     * 
+     */
     public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
@@ -51,6 +55,12 @@ public final class StateNotificationConfigResponse extends com.pulumi.resources.
             $ = new StateNotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopicName A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(String pubsubTopicName) {
             $.pubsubTopicName = pubsubTopicName;
             return this;

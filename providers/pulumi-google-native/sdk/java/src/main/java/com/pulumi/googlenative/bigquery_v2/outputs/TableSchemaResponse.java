@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class TableSchemaResponse {
     /**
-     * Describes the fields in a table.
+     * @return Describes the fields in a table.
      * 
      */
     private final List<TableFieldSchemaResponse> fields;
@@ -22,9 +22,9 @@ public final class TableSchemaResponse {
     }
 
     /**
-     * Describes the fields in a table.
+     * @return Describes the fields in a table.
      * 
-    */
+     */
     public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }

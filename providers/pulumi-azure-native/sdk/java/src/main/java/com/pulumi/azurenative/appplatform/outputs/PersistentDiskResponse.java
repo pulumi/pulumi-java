@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PersistentDiskResponse {
     /**
-     * Mount path of the persistent disk
+     * @return Mount path of the persistent disk
      * 
      */
     private final @Nullable String mountPath;
     /**
-     * Size of the persistent disk in GB
+     * @return Size of the persistent disk in GB
      * 
      */
     private final @Nullable Integer sizeInGB;
     /**
-     * Size of the used persistent disk in GB
+     * @return Size of the used persistent disk in GB
      * 
      */
     private final Integer usedInGB;
@@ -39,23 +39,23 @@ public final class PersistentDiskResponse {
     }
 
     /**
-     * Mount path of the persistent disk
+     * @return Mount path of the persistent disk
      * 
-    */
+     */
     public Optional<String> mountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
-     * Size of the persistent disk in GB
+     * @return Size of the persistent disk in GB
      * 
-    */
+     */
     public Optional<Integer> sizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
     /**
-     * Size of the used persistent disk in GB
+     * @return Size of the used persistent disk in GB
      * 
-    */
+     */
     public Integer usedInGB() {
         return this.usedInGB;
     }

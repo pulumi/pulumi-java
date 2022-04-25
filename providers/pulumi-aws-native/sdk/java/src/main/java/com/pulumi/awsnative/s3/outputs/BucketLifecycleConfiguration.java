@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketLifecycleConfiguration {
     /**
-     * A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * @return A lifecycle rule for individual objects in an Amazon S3 bucket.
      * 
      */
     private final List<BucketRule> rules;
@@ -22,9 +22,9 @@ public final class BucketLifecycleConfiguration {
     }
 
     /**
-     * A lifecycle rule for individual objects in an Amazon S3 bucket.
+     * @return A lifecycle rule for individual objects in an Amazon S3 bucket.
      * 
-    */
+     */
     public List<BucketRule> rules() {
         return this.rules;
     }

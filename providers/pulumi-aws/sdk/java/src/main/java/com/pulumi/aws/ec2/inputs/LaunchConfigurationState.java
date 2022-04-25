@@ -28,6 +28,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name of the launch configuration.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -39,6 +43,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="associatePublicIpAddress")
     private @Nullable Output<Boolean> associatePublicIpAddress;
 
+    /**
+     * @return Associate a public ip address with an instance in a VPC.
+     * 
+     */
     public Optional<Output<Boolean>> associatePublicIpAddress() {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
@@ -51,6 +59,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="ebsBlockDevices")
     private @Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
+    /**
+     * @return Additional EBS block devices to attach to the
+     * instance.  See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
         return Optional.ofNullable(this.ebsBlockDevices);
     }
@@ -62,6 +75,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="ebsOptimized")
     private @Nullable Output<Boolean> ebsOptimized;
 
+    /**
+     * @return If true, the launched EC2 instance will be EBS-optimized.
+     * 
+     */
     public Optional<Output<Boolean>> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
@@ -73,6 +90,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="enableMonitoring")
     private @Nullable Output<Boolean> enableMonitoring;
 
+    /**
+     * @return Enables/disables detailed monitoring. This is enabled by default.
+     * 
+     */
     public Optional<Output<Boolean>> enableMonitoring() {
         return Optional.ofNullable(this.enableMonitoring);
     }
@@ -85,6 +106,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="ephemeralBlockDevices")
     private @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
+    /**
+     * @return Customize Ephemeral (also known as
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+     * 
+     */
     public Optional<Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
         return Optional.ofNullable(this.ephemeralBlockDevices);
     }
@@ -97,6 +123,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="iamInstanceProfile")
     private @Nullable Output<String> iamInstanceProfile;
 
+    /**
+     * @return The name attribute of the IAM instance profile to associate
+     * with launched instances.
+     * 
+     */
     public Optional<Output<String>> iamInstanceProfile() {
         return Optional.ofNullable(this.iamInstanceProfile);
     }
@@ -108,6 +139,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="imageId")
     private @Nullable Output<String> imageId;
 
+    /**
+     * @return The EC2 image ID to launch.
+     * 
+     */
     public Optional<Output<String>> imageId() {
         return Optional.ofNullable(this.imageId);
     }
@@ -119,6 +154,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The size of instance to launch.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -130,6 +169,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The key name that should be used for the instance.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -141,6 +184,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="metadataOptions")
     private @Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions;
 
+    /**
+     * @return The metadata options for the instance.
+     * 
+     */
     public Optional<Output<LaunchConfigurationMetadataOptionsGetArgs>> metadataOptions() {
         return Optional.ofNullable(this.metadataOptions);
     }
@@ -153,6 +200,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the launch configuration. If you leave
+     * this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -165,6 +217,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -178,6 +235,12 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="placementTenancy")
     private @Nullable Output<String> placementTenancy;
 
+    /**
+     * @return The tenancy of the instance. Valid values are
+     * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+     * for more details
+     * 
+     */
     public Optional<Output<String>> placementTenancy() {
         return Optional.ofNullable(this.placementTenancy);
     }
@@ -190,6 +253,11 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="rootBlockDevice")
     private @Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice;
 
+    /**
+     * @return Customize details about the root block
+     * device of the instance. See Block Devices below for details.
+     * 
+     */
     public Optional<Output<LaunchConfigurationRootBlockDeviceGetArgs>> rootBlockDevice() {
         return Optional.ofNullable(this.rootBlockDevice);
     }
@@ -201,6 +269,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of associated security group IDS.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -212,6 +284,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="spotPrice")
     private @Nullable Output<String> spotPrice;
 
+    /**
+     * @return The maximum price to use for reserving spot instances.
+     * 
+     */
     public Optional<Output<String>> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
@@ -223,6 +299,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="userData")
     private @Nullable Output<String> userData;
 
+    /**
+     * @return The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * 
+     */
     public Optional<Output<String>> userData() {
         return Optional.ofNullable(this.userData);
     }
@@ -234,6 +314,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="userDataBase64")
     private @Nullable Output<String> userDataBase64;
 
+    /**
+     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * 
+     */
     public Optional<Output<String>> userDataBase64() {
         return Optional.ofNullable(this.userDataBase64);
     }
@@ -245,6 +329,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="vpcClassicLinkId")
     private @Nullable Output<String> vpcClassicLinkId;
 
+    /**
+     * @return The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+     * 
+     */
     public Optional<Output<String>> vpcClassicLinkId() {
         return Optional.ofNullable(this.vpcClassicLinkId);
     }
@@ -256,6 +344,10 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
     @Import(name="vpcClassicLinkSecurityGroups")
     private @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
 
+    /**
+     * @return The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+     * 
+     */
     public Optional<Output<List<String>>> vpcClassicLinkSecurityGroups() {
         return Optional.ofNullable(this.vpcClassicLinkSecurityGroups);
     }
@@ -304,207 +396,501 @@ public final class LaunchConfigurationState extends com.pulumi.resources.Resourc
             $ = new LaunchConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name of the launch configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name of the launch configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param associatePublicIpAddress Associate a public ip address with an instance in a VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
             $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
+        /**
+         * @param associatePublicIpAddress Associate a public ip address with an instance in a VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
             return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(@Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(List<LaunchConfigurationEbsBlockDeviceGetArgs> ebsBlockDevices) {
             return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsBlockDevices Additional EBS block devices to attach to the
+         * instance.  See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsBlockDevices(LaunchConfigurationEbsBlockDeviceGetArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
 
+        /**
+         * @param ebsOptimized If true, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             $.ebsOptimized = ebsOptimized;
             return this;
         }
 
+        /**
+         * @param ebsOptimized If true, the launched EC2 instance will be EBS-optimized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsOptimized(Boolean ebsOptimized) {
             return ebsOptimized(Output.of(ebsOptimized));
         }
 
+        /**
+         * @param enableMonitoring Enables/disables detailed monitoring. This is enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMonitoring(@Nullable Output<Boolean> enableMonitoring) {
             $.enableMonitoring = enableMonitoring;
             return this;
         }
 
+        /**
+         * @param enableMonitoring Enables/disables detailed monitoring. This is enabled by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMonitoring(Boolean enableMonitoring) {
             return enableMonitoring(Output.of(enableMonitoring));
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(@Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(List<LaunchConfigurationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param ephemeralBlockDevices Customize Ephemeral (also known as
+         * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralBlockDevices(LaunchConfigurationEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
 
+        /**
+         * @param iamInstanceProfile The name attribute of the IAM instance profile to associate
+         * with launched instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
             $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
+        /**
+         * @param iamInstanceProfile The name attribute of the IAM instance profile to associate
+         * with launched instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamInstanceProfile(String iamInstanceProfile) {
             return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
 
+        /**
+         * @param imageId The EC2 image ID to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(@Nullable Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param imageId The EC2 image ID to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }
 
+        /**
+         * @param instanceType The size of instance to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The size of instance to launch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param keyName The key name that should be used for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The key name that should be used for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param metadataOptions The metadata options for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(@Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions) {
             $.metadataOptions = metadataOptions;
             return this;
         }
 
+        /**
+         * @param metadataOptions The metadata options for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataOptions(LaunchConfigurationMetadataOptionsGetArgs metadataOptions) {
             return metadataOptions(Output.of(metadataOptions));
         }
 
+        /**
+         * @param name The name of the launch configuration. If you leave
+         * this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the launch configuration. If you leave
+         * this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param placementTenancy The tenancy of the instance. Valid values are
+         * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+         * for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
             $.placementTenancy = placementTenancy;
             return this;
         }
 
+        /**
+         * @param placementTenancy The tenancy of the instance. Valid values are
+         * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+         * for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementTenancy(String placementTenancy) {
             return placementTenancy(Output.of(placementTenancy));
         }
 
+        /**
+         * @param rootBlockDevice Customize details about the root block
+         * device of the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootBlockDevice(@Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice) {
             $.rootBlockDevice = rootBlockDevice;
             return this;
         }
 
+        /**
+         * @param rootBlockDevice Customize details about the root block
+         * device of the instance. See Block Devices below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootBlockDevice(LaunchConfigurationRootBlockDeviceGetArgs rootBlockDevice) {
             return rootBlockDevice(Output.of(rootBlockDevice));
         }
 
+        /**
+         * @param securityGroups A list of associated security group IDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of associated security group IDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of associated security group IDS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param spotPrice The maximum price to use for reserving spot instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             $.spotPrice = spotPrice;
             return this;
         }
 
+        /**
+         * @param spotPrice The maximum price to use for reserving spot instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotPrice(String spotPrice) {
             return spotPrice(Output.of(spotPrice));
         }
 
+        /**
+         * @param userData The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userData(@Nullable Output<String> userData) {
             $.userData = userData;
             return this;
         }
 
+        /**
+         * @param userData The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userData(String userData) {
             return userData(Output.of(userData));
         }
 
+        /**
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             $.userDataBase64 = userDataBase64;
             return this;
         }
 
+        /**
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataBase64(String userDataBase64) {
             return userDataBase64(Output.of(userDataBase64));
         }
 
+        /**
+         * @param vpcClassicLinkId The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcClassicLinkId(@Nullable Output<String> vpcClassicLinkId) {
             $.vpcClassicLinkId = vpcClassicLinkId;
             return this;
         }
 
+        /**
+         * @param vpcClassicLinkId The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcClassicLinkId(String vpcClassicLinkId) {
             return vpcClassicLinkId(Output.of(vpcClassicLinkId));
         }
 
+        /**
+         * @param vpcClassicLinkSecurityGroups The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcClassicLinkSecurityGroups(@Nullable Output<List<String>> vpcClassicLinkSecurityGroups) {
             $.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
             return this;
         }
 
+        /**
+         * @param vpcClassicLinkSecurityGroups The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcClassicLinkSecurityGroups(List<String> vpcClassicLinkSecurityGroups) {
             return vpcClassicLinkSecurityGroups(Output.of(vpcClassicLinkSecurityGroups));
         }
 
+        /**
+         * @param vpcClassicLinkSecurityGroups The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcClassicLinkSecurityGroups(String... vpcClassicLinkSecurityGroups) {
             return vpcClassicLinkSecurityGroups(List.of(vpcClassicLinkSecurityGroups));
         }

@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class PeeringServicePrefixEventResponse {
     /**
-     * The description of the event associated with a prefix.
+     * @return The description of the event associated with a prefix.
      * 
      */
     private final String eventDescription;
     /**
-     * The level of the event associated with a prefix.
+     * @return The level of the event associated with a prefix.
      * 
      */
     private final String eventLevel;
     /**
-     * The summary of the event associated with a prefix.
+     * @return The summary of the event associated with a prefix.
      * 
      */
     private final String eventSummary;
     /**
-     * The timestamp of the event associated with a prefix.
+     * @return The timestamp of the event associated with a prefix.
      * 
      */
     private final String eventTimestamp;
     /**
-     * The type of the event associated with a prefix.
+     * @return The type of the event associated with a prefix.
      * 
      */
     private final String eventType;
@@ -50,37 +50,37 @@ public final class PeeringServicePrefixEventResponse {
     }
 
     /**
-     * The description of the event associated with a prefix.
+     * @return The description of the event associated with a prefix.
      * 
-    */
+     */
     public String eventDescription() {
         return this.eventDescription;
     }
     /**
-     * The level of the event associated with a prefix.
+     * @return The level of the event associated with a prefix.
      * 
-    */
+     */
     public String eventLevel() {
         return this.eventLevel;
     }
     /**
-     * The summary of the event associated with a prefix.
+     * @return The summary of the event associated with a prefix.
      * 
-    */
+     */
     public String eventSummary() {
         return this.eventSummary;
     }
     /**
-     * The timestamp of the event associated with a prefix.
+     * @return The timestamp of the event associated with a prefix.
      * 
-    */
+     */
     public String eventTimestamp() {
         return this.eventTimestamp;
     }
     /**
-     * The type of the event associated with a prefix.
+     * @return The type of the event associated with a prefix.
      * 
-    */
+     */
     public String eventType() {
         return this.eventType;
     }

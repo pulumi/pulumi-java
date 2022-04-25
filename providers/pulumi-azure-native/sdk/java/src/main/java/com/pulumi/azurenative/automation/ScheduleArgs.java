@@ -26,6 +26,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedSchedule")
     private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
+    /**
+     * @return Gets or sets the AdvancedSchedule.
+     * 
+     */
     public Optional<Output<AdvancedScheduleArgs>> advancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
@@ -37,6 +41,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -48,6 +56,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets the description of the schedule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiryTime")
     private @Nullable Output<String> expiryTime;
 
+    /**
+     * @return Gets or sets the end time of the schedule.
+     * 
+     */
     public Optional<Output<String>> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
@@ -70,6 +86,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequency", required=true)
     private Output<Either<String,ScheduleFrequency>> frequency;
 
+    /**
+     * @return Gets or sets the frequency of the schedule.
+     * 
+     */
     public Output<Either<String,ScheduleFrequency>> frequency() {
         return this.frequency;
     }
@@ -81,6 +101,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interval")
     private @Nullable Output<Object> interval;
 
+    /**
+     * @return Gets or sets the interval of the schedule.
+     * 
+     */
     public Optional<Output<Object>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -92,6 +116,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the Schedule.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -103,6 +131,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleName")
     private @Nullable Output<String> scheduleName;
 
+    /**
+     * @return The schedule name.
+     * 
+     */
     public Optional<Output<String>> scheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }
@@ -125,6 +161,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return Gets or sets the start time of the schedule.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -136,6 +176,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return Gets or sets the time zone of the schedule.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -174,109 +218,253 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedSchedule Gets or sets the AdvancedSchedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSchedule(@Nullable Output<AdvancedScheduleArgs> advancedSchedule) {
             $.advancedSchedule = advancedSchedule;
             return this;
         }
 
+        /**
+         * @param advancedSchedule Gets or sets the AdvancedSchedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSchedule(AdvancedScheduleArgs advancedSchedule) {
             return advancedSchedule(Output.of(advancedSchedule));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param description Gets or sets the description of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expiryTime Gets or sets the end time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param expiryTime Gets or sets the end time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(String expiryTime) {
             return expiryTime(Output.of(expiryTime));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Output<Either<String,ScheduleFrequency>> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Either<String,ScheduleFrequency> frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             return frequency(Either.ofLeft(frequency));
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(ScheduleFrequency frequency) {
             return frequency(Either.ofRight(frequency));
         }
 
+        /**
+         * @param interval Gets or sets the interval of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Object> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Object interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param name Gets or sets the name of the Schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the Schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scheduleName The schedule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
             $.scheduleName = scheduleName;
             return this;
         }
 
+        /**
+         * @param scheduleName The schedule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(String scheduleName) {
             return scheduleName(Output.of(scheduleName));
         }
 
+        /**
+         * @param startTime Gets or sets the start time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Gets or sets the start time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param timeZone Gets or sets the time zone of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Gets or sets the time zone of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

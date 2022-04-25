@@ -24,6 +24,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appName")
     private @Nullable Output<String> appName;
 
+    /**
+     * @return The name of the App resource.
+     * 
+     */
     public Optional<Output<String>> appName() {
         return Optional.ofNullable(this.appName);
     }
@@ -35,6 +39,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ManagedIdentityPropertiesArgs> identity;
 
+    /**
+     * @return The Managed Identity type of the app resource
+     * 
+     */
     public Optional<Output<ManagedIdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -46,6 +54,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The GEO location of the application, always the same with its parent resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<AppResourcePropertiesArgs> properties;
 
+    /**
+     * @return Properties of the App resource
+     * 
+     */
     public Optional<Output<AppResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -68,6 +84,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -112,56 +136,128 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(@Nullable Output<String> appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             return appName(Output.of(appName));
         }
 
+        /**
+         * @param identity The Managed Identity type of the app resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedIdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The Managed Identity type of the app resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedIdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The GEO location of the application, always the same with its parent resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The GEO location of the application, always the same with its parent resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Properties of the App resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<AppResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the App resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(AppResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

@@ -28,6 +28,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="blobTypes", required=true)
     private Output<List<String>> blobTypes;
 
+    /**
+     * @return An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+     * 
+     */
     public Output<List<String>> blobTypes() {
         return this.blobTypes;
     }
@@ -39,6 +43,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="includeBlobVersions")
     private @Nullable Output<Boolean> includeBlobVersions;
 
+    /**
+     * @return Includes blob versions in blob inventory when value set to true.
+     * 
+     */
     public Optional<Output<Boolean>> includeBlobVersions() {
         return Optional.ofNullable(this.includeBlobVersions);
     }
@@ -50,6 +58,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="includeSnapshots")
     private @Nullable Output<Boolean> includeSnapshots;
 
+    /**
+     * @return Includes blob snapshots in blob inventory when value set to true.
+     * 
+     */
     public Optional<Output<Boolean>> includeSnapshots() {
         return Optional.ofNullable(this.includeSnapshots);
     }
@@ -61,6 +73,10 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="prefixMatch")
     private @Nullable Output<List<String>> prefixMatch;
 
+    /**
+     * @return An array of strings for blob prefixes to be matched.
+     * 
+     */
     public Optional<Output<List<String>>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -92,46 +108,106 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
             $ = new BlobInventoryPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(Output<List<String>> blobTypes) {
             $.blobTypes = blobTypes;
             return this;
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(List<String> blobTypes) {
             return blobTypes(Output.of(blobTypes));
         }
 
+        /**
+         * @param blobTypes An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
 
+        /**
+         * @param includeBlobVersions Includes blob versions in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeBlobVersions(@Nullable Output<Boolean> includeBlobVersions) {
             $.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
+        /**
+         * @param includeBlobVersions Includes blob versions in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeBlobVersions(Boolean includeBlobVersions) {
             return includeBlobVersions(Output.of(includeBlobVersions));
         }
 
+        /**
+         * @param includeSnapshots Includes blob snapshots in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSnapshots(@Nullable Output<Boolean> includeSnapshots) {
             $.includeSnapshots = includeSnapshots;
             return this;
         }
 
+        /**
+         * @param includeSnapshots Includes blob snapshots in blob inventory when value set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSnapshots(Boolean includeSnapshots) {
             return includeSnapshots(Output.of(includeSnapshots));
         }
 
+        /**
+         * @param prefixMatch An array of strings for blob prefixes to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch An array of strings for blob prefixes to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(List<String> prefixMatch) {
             return prefixMatch(Output.of(prefixMatch));
         }
 
+        /**
+         * @param prefixMatch An array of strings for blob prefixes to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

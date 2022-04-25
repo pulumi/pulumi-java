@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class YearlyRetentionScheduleResponse {
     /**
-     * List of months of year of yearly retention policy.
+     * @return List of months of year of yearly retention policy.
      * 
      */
     private final @Nullable List<String> monthsOfYear;
     /**
-     * Retention duration of retention Policy.
+     * @return Retention duration of retention Policy.
      * 
      */
     private final @Nullable RetentionDurationResponse retentionDuration;
     /**
-     * Daily retention format for yearly retention policy.
+     * @return Daily retention format for yearly retention policy.
      * 
      */
     private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
     /**
-     * Retention schedule format for yearly retention policy.
+     * @return Retention schedule format for yearly retention policy.
      * 
      */
     private final @Nullable String retentionScheduleFormatType;
     /**
-     * Weekly retention format for yearly retention policy.
+     * @return Weekly retention format for yearly retention policy.
      * 
      */
     private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
     /**
-     * Retention times of retention policy.
+     * @return Retention times of retention policy.
      * 
      */
     private final @Nullable List<String> retentionTimes;
@@ -63,44 +63,44 @@ public final class YearlyRetentionScheduleResponse {
     }
 
     /**
-     * List of months of year of yearly retention policy.
+     * @return List of months of year of yearly retention policy.
      * 
-    */
+     */
     public List<String> monthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
     /**
-     * Retention duration of retention Policy.
+     * @return Retention duration of retention Policy.
      * 
-    */
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
-     * Daily retention format for yearly retention policy.
+     * @return Daily retention format for yearly retention policy.
      * 
-    */
+     */
     public Optional<DailyRetentionFormatResponse> retentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
     /**
-     * Retention schedule format for yearly retention policy.
+     * @return Retention schedule format for yearly retention policy.
      * 
-    */
+     */
     public Optional<String> retentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
     /**
-     * Weekly retention format for yearly retention policy.
+     * @return Weekly retention format for yearly retention policy.
      * 
-    */
+     */
     public Optional<WeeklyRetentionFormatResponse> retentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
     /**
-     * Retention times of retention policy.
+     * @return Retention times of retention policy.
      * 
-    */
+     */
     public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }

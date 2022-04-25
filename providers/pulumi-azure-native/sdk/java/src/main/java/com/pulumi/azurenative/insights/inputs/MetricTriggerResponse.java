@@ -29,6 +29,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dimensions")
     private @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
 
+    /**
+     * @return List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
+     * 
+     */
     public Optional<List<ScaleRuleMetricDimensionResponse>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -40,6 +44,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dividePerInstance")
     private @Nullable Boolean dividePerInstance;
 
+    /**
+     * @return a value indicating whether metric should divide per instance.
+     * 
+     */
     public Optional<Boolean> dividePerInstance() {
         return Optional.ofNullable(this.dividePerInstance);
     }
@@ -51,6 +59,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return the name of the metric that defines what the rule monitors.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -62,6 +74,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metricNamespace")
     private @Nullable String metricNamespace;
 
+    /**
+     * @return the namespace of the metric that defines what the rule monitors.
+     * 
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -73,6 +89,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metricResourceLocation")
     private @Nullable String metricResourceLocation;
 
+    /**
+     * @return the location of the resource the rule monitors.
+     * 
+     */
     public Optional<String> metricResourceLocation() {
         return Optional.ofNullable(this.metricResourceLocation);
     }
@@ -84,6 +104,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metricResourceUri", required=true)
     private String metricResourceUri;
 
+    /**
+     * @return the resource identifier of the resource the rule monitors.
+     * 
+     */
     public String metricResourceUri() {
         return this.metricResourceUri;
     }
@@ -95,6 +119,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return the operator that is used to compare the metric data and the threshold.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -106,6 +134,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="statistic", required=true)
     private String statistic;
 
+    /**
+     * @return the metric statistic type. How the metrics from multiple instances are combined.
+     * 
+     */
     public String statistic() {
         return this.statistic;
     }
@@ -117,6 +149,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="threshold", required=true)
     private Double threshold;
 
+    /**
+     * @return the threshold of the metric that triggers the scale action.
+     * 
+     */
     public Double threshold() {
         return this.threshold;
     }
@@ -128,6 +164,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timeAggregation", required=true)
     private String timeAggregation;
 
+    /**
+     * @return time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+     * 
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }
@@ -139,6 +179,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timeGrain", required=true)
     private String timeGrain;
 
+    /**
+     * @return the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+     * 
+     */
     public String timeGrain() {
         return this.timeGrain;
     }
@@ -150,6 +194,10 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timeWindow", required=true)
     private String timeWindow;
 
+    /**
+     * @return the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+     * 
+     */
     public String timeWindow() {
         return this.timeWindow;
     }
@@ -189,65 +237,143 @@ public final class MetricTriggerResponse extends com.pulumi.resources.InvokeArgs
             $ = new MetricTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(ScaleRuleMetricDimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param dividePerInstance a value indicating whether metric should divide per instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             $.dividePerInstance = dividePerInstance;
             return this;
         }
 
+        /**
+         * @param metricName the name of the metric that defines what the rule monitors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricNamespace the namespace of the metric that defines what the rule monitors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable String metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param metricResourceLocation the location of the resource the rule monitors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             $.metricResourceLocation = metricResourceLocation;
             return this;
         }
 
+        /**
+         * @param metricResourceUri the resource identifier of the resource the rule monitors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricResourceUri(String metricResourceUri) {
             $.metricResourceUri = metricResourceUri;
             return this;
         }
 
+        /**
+         * @param operator the operator that is used to compare the metric data and the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param statistic the metric statistic type. How the metrics from multiple instances are combined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statistic(String statistic) {
             $.statistic = statistic;
             return this;
         }
 
+        /**
+         * @param threshold the threshold of the metric that triggers the scale action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param timeAggregation time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(String timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;
         }
 
+        /**
+         * @param timeGrain the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeGrain(String timeGrain) {
             $.timeGrain = timeGrain;
             return this;
         }
 
+        /**
+         * @param timeWindow the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindow(String timeWindow) {
             $.timeWindow = timeWindow;
             return this;

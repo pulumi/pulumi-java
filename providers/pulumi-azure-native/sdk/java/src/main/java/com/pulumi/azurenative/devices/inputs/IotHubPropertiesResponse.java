@@ -38,6 +38,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="authorizationPolicies")
     private @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
 
+    /**
+     * @return The shared access policies you can use to secure a connection to the IoT hub.
+     * 
+     */
     public Optional<List<SharedAccessSignatureAuthorizationRuleResponse>> authorizationPolicies() {
         return Optional.ofNullable(this.authorizationPolicies);
     }
@@ -49,6 +53,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="cloudToDevice")
     private @Nullable CloudToDevicePropertiesResponse cloudToDevice;
 
+    /**
+     * @return The IoT hub cloud-to-device messaging properties.
+     * 
+     */
     public Optional<CloudToDevicePropertiesResponse> cloudToDevice() {
         return Optional.ofNullable(this.cloudToDevice);
     }
@@ -60,6 +68,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="comments")
     private @Nullable String comments;
 
+    /**
+     * @return IoT hub comments.
+     * 
+     */
     public Optional<String> comments() {
         return Optional.ofNullable(this.comments);
     }
@@ -71,6 +83,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="enableFileUploadNotifications")
     private @Nullable Boolean enableFileUploadNotifications;
 
+    /**
+     * @return If True, file upload notifications are enabled.
+     * 
+     */
     public Optional<Boolean> enableFileUploadNotifications() {
         return Optional.ofNullable(this.enableFileUploadNotifications);
     }
@@ -82,6 +98,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="eventHubEndpoints")
     private @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
 
+    /**
+     * @return The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
+     * 
+     */
     public Optional<Map<String,EventHubPropertiesResponse>> eventHubEndpoints() {
         return Optional.ofNullable(this.eventHubEndpoints);
     }
@@ -93,6 +113,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="features")
     private @Nullable String features;
 
+    /**
+     * @return The capabilities and features enabled for the IoT hub.
+     * 
+     */
     public Optional<String> features() {
         return Optional.ofNullable(this.features);
     }
@@ -104,6 +128,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return The name of the host.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -115,6 +143,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipFilterRules")
     private @Nullable List<IpFilterRuleResponse> ipFilterRules;
 
+    /**
+     * @return The IP filter rules.
+     * 
+     */
     public Optional<List<IpFilterRuleResponse>> ipFilterRules() {
         return Optional.ofNullable(this.ipFilterRules);
     }
@@ -126,6 +158,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="locations", required=true)
     private List<IotHubLocationDescriptionResponse> locations;
 
+    /**
+     * @return Primary and secondary location for iot hub
+     * 
+     */
     public List<IotHubLocationDescriptionResponse> locations() {
         return this.locations;
     }
@@ -137,6 +173,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="messagingEndpoints")
     private @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
 
+    /**
+     * @return The messaging endpoint properties for the file upload notification queue.
+     * 
+     */
     public Optional<Map<String,MessagingEndpointPropertiesResponse>> messagingEndpoints() {
         return Optional.ofNullable(this.messagingEndpoints);
     }
@@ -148,6 +188,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="minTlsVersion")
     private @Nullable String minTlsVersion;
 
+    /**
+     * @return Specifies the minimum TLS version to support for this hub. Can be set to &#34;1.2&#34; to have clients that use a TLS version below 1.2 to be rejected.
+     * 
+     */
     public Optional<String> minTlsVersion() {
         return Optional.ofNullable(this.minTlsVersion);
     }
@@ -159,6 +203,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkRuleSets")
     private @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
 
+    /**
+     * @return Network Rule Set Properties of IotHub
+     * 
+     */
     public Optional<NetworkRuleSetPropertiesResponse> networkRuleSets() {
         return Optional.ofNullable(this.networkRuleSets);
     }
@@ -170,6 +218,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateEndpointConnections")
     private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections created on this IotHub
+     * 
+     */
     public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -181,6 +233,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -192,6 +248,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Whether requests from Public Network are allowed
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -203,6 +263,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="routing")
     private @Nullable RoutingPropertiesResponse routing;
 
+    /**
+     * @return The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
+     * 
+     */
     public Optional<RoutingPropertiesResponse> routing() {
         return Optional.ofNullable(this.routing);
     }
@@ -214,6 +278,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The hub state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -225,6 +293,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="storageEndpoints")
     private @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
+    /**
+     * @return The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
+     * 
+     */
     public Optional<Map<String,StorageEndpointPropertiesResponse>> storageEndpoints() {
         return Optional.ofNullable(this.storageEndpoints);
     }
@@ -270,107 +342,239 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new IotHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationPolicies The shared access policies you can use to secure a connection to the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies) {
             $.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
+        /**
+         * @param authorizationPolicies The shared access policies you can use to secure a connection to the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleResponse... authorizationPolicies) {
             return authorizationPolicies(List.of(authorizationPolicies));
         }
 
+        /**
+         * @param cloudToDevice The IoT hub cloud-to-device messaging properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudToDevice(@Nullable CloudToDevicePropertiesResponse cloudToDevice) {
             $.cloudToDevice = cloudToDevice;
             return this;
         }
 
+        /**
+         * @param comments IoT hub comments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(@Nullable String comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param enableFileUploadNotifications If True, file upload notifications are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
             $.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
 
+        /**
+         * @param eventHubEndpoints The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints) {
             $.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
 
+        /**
+         * @param features The capabilities and features enabled for the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable String features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param hostName The name of the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(@Nullable List<IpFilterRuleResponse> ipFilterRules) {
             $.ipFilterRules = ipFilterRules;
             return this;
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(IpFilterRuleResponse... ipFilterRules) {
             return ipFilterRules(List.of(ipFilterRules));
         }
 
+        /**
+         * @param locations Primary and secondary location for iot hub
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<IotHubLocationDescriptionResponse> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Primary and secondary location for iot hub
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(IotHubLocationDescriptionResponse... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param messagingEndpoints The messaging endpoint properties for the file upload notification queue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints) {
             $.messagingEndpoints = messagingEndpoints;
             return this;
         }
 
+        /**
+         * @param minTlsVersion Specifies the minimum TLS version to support for this hub. Can be set to &#34;1.2&#34; to have clients that use a TLS version below 1.2 to be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
             $.minTlsVersion = minTlsVersion;
             return this;
         }
 
+        /**
+         * @param networkRuleSets Network Rule Set Properties of IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesResponse networkRuleSets) {
             $.networkRuleSets = networkRuleSets;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param routing The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
+         * 
+         * @return builder
+         * 
+         */
         public Builder routing(@Nullable RoutingPropertiesResponse routing) {
             $.routing = routing;
             return this;
         }
 
+        /**
+         * @param state The hub state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param storageEndpoints The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
             $.storageEndpoints = storageEndpoints;
             return this;

@@ -26,6 +26,10 @@ public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return While set to true, versioning is fully enabled for this bucket.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class BucketVersioningArgs extends com.pulumi.resources.ResourceArg
             $ = new BucketVersioningArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled While set to true, versioning is fully enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled While set to true, versioning is fully enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

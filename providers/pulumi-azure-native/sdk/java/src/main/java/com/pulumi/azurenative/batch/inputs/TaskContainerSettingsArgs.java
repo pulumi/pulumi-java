@@ -24,6 +24,10 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="containerRunOptions")
     private @Nullable Output<String> containerRunOptions;
 
+    /**
+     * @return These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+     * 
+     */
     public Optional<Output<String>> containerRunOptions() {
         return Optional.ofNullable(this.containerRunOptions);
     }
@@ -35,6 +39,10 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="imageName", required=true)
     private Output<String> imageName;
 
+    /**
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+     * 
+     */
     public Output<String> imageName() {
         return this.imageName;
     }
@@ -46,6 +54,10 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="registry")
     private @Nullable Output<ContainerRegistryArgs> registry;
 
+    /**
+     * @return This setting can be omitted if was already provided at pool creation.
+     * 
+     */
     public Optional<Output<ContainerRegistryArgs>> registry() {
         return Optional.ofNullable(this.registry);
     }
@@ -84,29 +96,65 @@ public final class TaskContainerSettingsArgs extends com.pulumi.resources.Resour
             $ = new TaskContainerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerRunOptions These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRunOptions(@Nullable Output<String> containerRunOptions) {
             $.containerRunOptions = containerRunOptions;
             return this;
         }
 
+        /**
+         * @param containerRunOptions These additional options are supplied as arguments to the &#34;docker create&#34; command, in addition to those controlled by the Batch Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRunOptions(String containerRunOptions) {
             return containerRunOptions(Output.of(containerRunOptions));
         }
 
+        /**
+         * @param imageName This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName This is the full image reference, as would be specified to &#34;docker pull&#34;. If no tag is provided as part of the image name, the tag &#34;:latest&#34; is used as a default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param registry This setting can be omitted if was already provided at pool creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(@Nullable Output<ContainerRegistryArgs> registry) {
             $.registry = registry;
             return this;
         }
 
+        /**
+         * @param registry This setting can be omitted if was already provided at pool creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registry(ContainerRegistryArgs registry) {
             return registry(Output.of(registry));
         }

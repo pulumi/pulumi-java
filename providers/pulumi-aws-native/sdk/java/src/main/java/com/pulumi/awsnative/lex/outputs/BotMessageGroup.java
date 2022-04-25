@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class BotMessageGroup {
     private final BotMessage message;
     /**
-     * Message variations to send to the user.
+     * @return Message variations to send to the user.
      * 
      */
     private final @Nullable List<BotMessage> variations;
@@ -30,9 +30,9 @@ public final class BotMessageGroup {
         return this.message;
     }
     /**
-     * Message variations to send to the user.
+     * @return Message variations to send to the user.
      * 
-    */
+     */
     public List<BotMessage> variations() {
         return this.variations == null ? List.of() : this.variations;
     }

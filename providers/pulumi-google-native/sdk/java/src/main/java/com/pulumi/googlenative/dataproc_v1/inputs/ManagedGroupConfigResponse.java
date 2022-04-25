@@ -23,6 +23,10 @@ public final class ManagedGroupConfigResponse extends com.pulumi.resources.Invok
     @Import(name="instanceGroupManagerName", required=true)
     private String instanceGroupManagerName;
 
+    /**
+     * @return The name of the Instance Group Manager for this group.
+     * 
+     */
     public String instanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
@@ -34,6 +38,10 @@ public final class ManagedGroupConfigResponse extends com.pulumi.resources.Invok
     @Import(name="instanceTemplateName", required=true)
     private String instanceTemplateName;
 
+    /**
+     * @return The name of the Instance Template used for the Managed Instance Group.
+     * 
+     */
     public String instanceTemplateName() {
         return this.instanceTemplateName;
     }
@@ -63,11 +71,23 @@ public final class ManagedGroupConfigResponse extends com.pulumi.resources.Invok
             $ = new ManagedGroupConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceGroupManagerName The name of the Instance Group Manager for this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceGroupManagerName(String instanceGroupManagerName) {
             $.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
 
+        /**
+         * @param instanceTemplateName The name of the Instance Template used for the Managed Instance Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplateName(String instanceTemplateName) {
             $.instanceTemplateName = instanceTemplateName;
             return this;

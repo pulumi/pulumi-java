@@ -27,6 +27,10 @@ public final class ChangeFeedArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicates whether change feed event logging is enabled for the Blob service.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class ChangeFeedArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -67,20 +75,44 @@ public final class ChangeFeedArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChangeFeedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Indicates whether change feed event logging is enabled for the Blob service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicates whether change feed event logging is enabled for the Blob service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param retentionInDays Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }

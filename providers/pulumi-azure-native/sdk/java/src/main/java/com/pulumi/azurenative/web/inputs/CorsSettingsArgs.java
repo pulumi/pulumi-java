@@ -29,6 +29,11 @@ public final class CorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedOrigins")
     private @Nullable Output<List<String>> allowedOrigins;
 
+    /**
+     * @return Gets or sets the list of origins that should be allowed to make cross-origin
+     * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
+     * 
+     */
     public Optional<Output<List<String>>> allowedOrigins() {
         return Optional.ofNullable(this.allowedOrigins);
     }
@@ -42,6 +47,12 @@ public final class CorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportCredentials")
     private @Nullable Output<Boolean> supportCredentials;
 
+    /**
+     * @return Gets or sets whether CORS requests with credentials are allowed. See
+     * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+     * for more details.
+     * 
+     */
     public Optional<Output<Boolean>> supportCredentials() {
         return Optional.ofNullable(this.supportCredentials);
     }
@@ -71,24 +82,61 @@ public final class CorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CorsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin
+         * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin
+         * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             return allowedOrigins(Output.of(allowedOrigins));
         }
 
+        /**
+         * @param allowedOrigins Gets or sets the list of origins that should be allowed to make cross-origin
+         * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
 
+        /**
+         * @param supportCredentials Gets or sets whether CORS requests with credentials are allowed. See
+         * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+         * for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportCredentials(@Nullable Output<Boolean> supportCredentials) {
             $.supportCredentials = supportCredentials;
             return this;
         }
 
+        /**
+         * @param supportCredentials Gets or sets whether CORS requests with credentials are allowed. See
+         * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+         * for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportCredentials(Boolean supportCredentials) {
             return supportCredentials(Output.of(supportCredentials));
         }

@@ -31,6 +31,11 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
     @Import(name="commandType", required=true)
     private String commandType;
 
+    /**
+     * @return Command type.
+     * Expected value is &#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;.
+     * 
+     */
     public String commandType() {
         return this.commandType;
     }
@@ -42,6 +47,10 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
     @Import(name="errors", required=true)
     private List<ODataErrorResponse> errors;
 
+    /**
+     * @return Array of errors. This is ignored if submitted.
+     * 
+     */
     public List<ODataErrorResponse> errors() {
         return this.errors;
     }
@@ -53,6 +62,10 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
     @Import(name="input")
     private @Nullable MigrateMISyncCompleteCommandInputResponse input;
 
+    /**
+     * @return Command input
+     * 
+     */
     public Optional<MigrateMISyncCompleteCommandInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
@@ -64,6 +77,10 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
     @Import(name="output", required=true)
     private MigrateMISyncCompleteCommandOutputResponse output;
 
+    /**
+     * @return Command output. This is ignored if submitted.
+     * 
+     */
     public MigrateMISyncCompleteCommandOutputResponse output() {
         return this.output;
     }
@@ -75,6 +92,10 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the command. This is ignored if submitted.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -107,30 +128,67 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends com.pu
             $ = new MigrateMISyncCompleteCommandPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commandType Command type.
+         * Expected value is &#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandType(String commandType) {
             $.commandType = commandType;
             return this;
         }
 
+        /**
+         * @param errors Array of errors. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<ODataErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Array of errors. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ODataErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param input Command input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable MigrateMISyncCompleteCommandInputResponse input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param output Command output. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(MigrateMISyncCompleteCommandOutputResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param state The state of the command. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

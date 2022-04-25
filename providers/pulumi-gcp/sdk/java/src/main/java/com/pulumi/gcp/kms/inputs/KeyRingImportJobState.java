@@ -27,6 +27,12 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="attestations")
     private @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations;
 
+    /**
+     * @return Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
+     * statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
+     * ImportMethod is one with a protection level of HSM.
+     * 
+     */
     public Optional<Output<List<KeyRingImportJobAttestationGetArgs>>> attestations() {
         return Optional.ofNullable(this.attestations);
     }
@@ -38,6 +44,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -49,6 +59,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="importJobId")
     private @Nullable Output<String> importJobId;
 
+    /**
+     * @return It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+     * 
+     */
     public Optional<Output<String>> importJobId() {
         return Optional.ofNullable(this.importJobId);
     }
@@ -61,6 +75,11 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="importMethod")
     private @Nullable Output<String> importMethod;
 
+    /**
+     * @return The wrapping method to be used for incoming key material.
+     * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
+     * 
+     */
     public Optional<Output<String>> importMethod() {
         return Optional.ofNullable(this.importMethod);
     }
@@ -73,6 +92,11 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="keyRing")
     private @Nullable Output<String> keyRing;
 
+    /**
+     * @return The KeyRing that this import job belongs to.
+     * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+     * 
+     */
     public Optional<Output<String>> keyRing() {
         return Optional.ofNullable(this.keyRing);
     }
@@ -84,6 +108,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for this ImportJob in the format projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -97,6 +125,12 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="protectionLevel")
     private @Nullable Output<String> protectionLevel;
 
+    /**
+     * @return The protection level of the ImportJob. This must match the protectionLevel of the
+     * versionTemplate on the CryptoKey you attempt to import into.
+     * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
+     * 
+     */
     public Optional<Output<String>> protectionLevel() {
         return Optional.ofNullable(this.protectionLevel);
     }
@@ -108,6 +142,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="publicKeys")
     private @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
 
+    /**
+     * @return The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
+     * 
+     */
     public Optional<Output<List<KeyRingImportJobPublicKeyGetArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -119,6 +157,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The current state of the ImportJob, indicating if it can be used.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -155,91 +197,225 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
             $ = new KeyRingImportJobState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestations Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
+         * statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
+         * ImportMethod is one with a protection level of HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestations(@Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations) {
             $.attestations = attestations;
             return this;
         }
 
+        /**
+         * @param attestations Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
+         * statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
+         * ImportMethod is one with a protection level of HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestations(List<KeyRingImportJobAttestationGetArgs> attestations) {
             return attestations(Output.of(attestations));
         }
 
+        /**
+         * @param attestations Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
+         * statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
+         * ImportMethod is one with a protection level of HSM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestations(KeyRingImportJobAttestationGetArgs... attestations) {
             return attestations(List.of(attestations));
         }
 
+        /**
+         * @param expireTime The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
+        /**
+         * @param importJobId It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+         * 
+         * @return builder
+         * 
+         */
         public Builder importJobId(@Nullable Output<String> importJobId) {
             $.importJobId = importJobId;
             return this;
         }
 
+        /**
+         * @param importJobId It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
+         * 
+         * @return builder
+         * 
+         */
         public Builder importJobId(String importJobId) {
             return importJobId(Output.of(importJobId));
         }
 
+        /**
+         * @param importMethod The wrapping method to be used for incoming key material.
+         * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(@Nullable Output<String> importMethod) {
             $.importMethod = importMethod;
             return this;
         }
 
+        /**
+         * @param importMethod The wrapping method to be used for incoming key material.
+         * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(String importMethod) {
             return importMethod(Output.of(importMethod));
         }
 
+        /**
+         * @param keyRing The KeyRing that this import job belongs to.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRing(@Nullable Output<String> keyRing) {
             $.keyRing = keyRing;
             return this;
         }
 
+        /**
+         * @param keyRing The KeyRing that this import job belongs to.
+         * Format: `&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRing(String keyRing) {
             return keyRing(Output.of(keyRing));
         }
 
+        /**
+         * @param name The resource name for this ImportJob in the format projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for this ImportJob in the format projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param protectionLevel The protection level of the ImportJob. This must match the protectionLevel of the
+         * versionTemplate on the CryptoKey you attempt to import into.
+         * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
             $.protectionLevel = protectionLevel;
             return this;
         }
 
+        /**
+         * @param protectionLevel The protection level of the ImportJob. This must match the protectionLevel of the
+         * versionTemplate on the CryptoKey you attempt to import into.
+         * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(String protectionLevel) {
             return protectionLevel(Output.of(protectionLevel));
         }
 
+        /**
+         * @param publicKeys The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys The public key with which to wrap key material prior to import. Only returned if state is &#39;ACTIVE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(KeyRingImportJobPublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
 
+        /**
+         * @param state The current state of the ImportJob, indicating if it can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The current state of the ImportJob, indicating if it can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

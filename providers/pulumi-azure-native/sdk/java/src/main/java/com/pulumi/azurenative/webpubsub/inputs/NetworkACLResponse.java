@@ -26,6 +26,10 @@ public final class NetworkACLResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allow")
     private @Nullable List<String> allow;
 
+    /**
+     * @return Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<List<String>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -37,6 +41,10 @@ public final class NetworkACLResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deny")
     private @Nullable List<String> deny;
 
+    /**
+     * @return Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     * 
+     */
     public Optional<List<String>> deny() {
         return Optional.ofNullable(this.deny);
     }
@@ -66,20 +74,44 @@ public final class NetworkACLResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NetworkACLResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable List<String> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(String... allow) {
             return allow(List.of(allow));
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(@Nullable List<String> deny) {
             $.deny = deny;
             return this;
         }
 
+        /**
+         * @param deny Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deny(String... deny) {
             return deny(List.of(deny));
         }

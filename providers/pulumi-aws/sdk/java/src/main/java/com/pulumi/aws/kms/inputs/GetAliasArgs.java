@@ -19,6 +19,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

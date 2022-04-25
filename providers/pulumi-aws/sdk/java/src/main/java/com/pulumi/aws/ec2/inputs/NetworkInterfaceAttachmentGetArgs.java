@@ -30,6 +30,10 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
     @Import(name="deviceIndex", required=true)
     private Output<Integer> deviceIndex;
 
+    /**
+     * @return Integer to define the devices index.
+     * 
+     */
     public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
@@ -41,6 +45,10 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
     @Import(name="instance", required=true)
     private Output<String> instance;
 
+    /**
+     * @return ID of the instance to attach to.
+     * 
+     */
     public Output<String> instance() {
         return this.instance;
     }
@@ -80,20 +88,44 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
             return attachmentId(Output.of(attachmentId));
         }
 
+        /**
+         * @param deviceIndex Integer to define the devices index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Output<Integer> deviceIndex) {
             $.deviceIndex = deviceIndex;
             return this;
         }
 
+        /**
+         * @param deviceIndex Integer to define the devices index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Integer deviceIndex) {
             return deviceIndex(Output.of(deviceIndex));
         }
 
+        /**
+         * @param instance ID of the instance to attach to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance ID of the instance to attach to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }

@@ -33,6 +33,10 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
     @Import(name="ruleName", required=true)
     private Output<String> ruleName;
 
+    /**
+     * @return The archive rule name
+     * 
+     */
     public Output<String> ruleName() {
         return this.ruleName;
     }
@@ -75,11 +79,23 @@ public final class AnalyzerArchiveRuleArgs extends com.pulumi.resources.Resource
             return filter(List.of(filter));
         }
 
+        /**
+         * @param ruleName The archive rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The archive rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }

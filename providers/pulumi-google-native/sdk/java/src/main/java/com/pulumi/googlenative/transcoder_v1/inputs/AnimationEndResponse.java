@@ -23,6 +23,10 @@ public final class AnimationEndResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startTimeOffset", required=true)
     private String startTimeOffset;
 
+    /**
+     * @return The time to end overlay object, in seconds. Default: 0
+     * 
+     */
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
@@ -51,6 +55,12 @@ public final class AnimationEndResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AnimationEndResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTimeOffset The time to end overlay object, in seconds. Default: 0
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;

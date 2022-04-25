@@ -29,6 +29,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<ManagedIdentityType> type;
 
+    /**
+     * @return The type of managed identity for the resource.
+     * 
+     */
     public Optional<Output<ManagedIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -41,6 +45,11 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -70,20 +79,46 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of managed identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ManagedIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of managed identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

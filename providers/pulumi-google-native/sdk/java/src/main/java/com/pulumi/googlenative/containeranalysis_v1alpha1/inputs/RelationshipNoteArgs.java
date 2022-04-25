@@ -26,6 +26,10 @@ public final class RelationshipNoteArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<RelationshipNoteType> type;
 
+    /**
+     * @return The type of relationship between the source and target SPDX elements
+     * 
+     */
     public Optional<Output<RelationshipNoteType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class RelationshipNoteArgs extends com.pulumi.resources.ResourceArg
             $ = new RelationshipNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of relationship between the source and target SPDX elements
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<RelationshipNoteType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of relationship between the source and target SPDX elements
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RelationshipNoteType type) {
             return type(Output.of(type));
         }

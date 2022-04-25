@@ -26,6 +26,10 @@ public final class VirtualHubRouteTableResponse extends com.pulumi.resources.Inv
     @Import(name="routes")
     private @Nullable List<VirtualHubRouteResponse> routes;
 
+    /**
+     * @return List of all routes.
+     * 
+     */
     public Optional<List<VirtualHubRouteResponse>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -54,11 +58,23 @@ public final class VirtualHubRouteTableResponse extends com.pulumi.resources.Inv
             $ = new VirtualHubRouteTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable List<VirtualHubRouteResponse> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(VirtualHubRouteResponse... routes) {
             return routes(List.of(routes));
         }

@@ -27,6 +27,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Capacity of the particular SKU.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -38,6 +42,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -49,6 +57,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the SKU, typically, a letter + Number code, e.g. P3.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
     private @Nullable Output<String> size;
 
+    /**
+     * @return Size of the particular SKU
+     * 
+     */
     public Optional<Output<String>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -71,6 +87,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return The tier or edition of the particular SKU, e.g. Basic, Premium.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -103,47 +123,107 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Capacity of the particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Capacity of the particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param family If the service has different generations of hardware, for the same SKU, then that can be captured here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family If the service has different generations of hardware, for the same SKU, then that can be captured here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param name The name of the SKU, typically, a letter + Number code, e.g. P3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU, typically, a letter + Number code, e.g. P3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param size Size of the particular SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<String> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size Size of the particular SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(String size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param tier The tier or edition of the particular SKU, e.g. Basic, Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The tier or edition of the particular SKU, e.g. Basic, Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

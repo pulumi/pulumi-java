@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRuleResult {
     /**
-     * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+     * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
      */
     private final @Nullable ActionResponse action;
     /**
-     * Properties of correlationFilter
+     * @return Properties of correlationFilter
      * 
      */
     private final @Nullable CorrelationFilterResponse correlationFilter;
     /**
-     * Filter type that is evaluated against a BrokeredMessage.
+     * @return Filter type that is evaluated against a BrokeredMessage.
      * 
      */
     private final @Nullable String filterType;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Properties of sqlFilter
+     * @return Properties of sqlFilter
      * 
      */
     private final @Nullable SqlFilterResponse sqlFilter;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetRuleResult {
     }
 
     /**
-     * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+     * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
-    */
+     */
     public Optional<ActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Properties of correlationFilter
+     * @return Properties of correlationFilter
      * 
-    */
+     */
     public Optional<CorrelationFilterResponse> correlationFilter() {
         return Optional.ofNullable(this.correlationFilter);
     }
     /**
-     * Filter type that is evaluated against a BrokeredMessage.
+     * @return Filter type that is evaluated against a BrokeredMessage.
      * 
-    */
+     */
     public Optional<String> filterType() {
         return Optional.ofNullable(this.filterType);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of sqlFilter
+     * @return Properties of sqlFilter
      * 
-    */
+     */
     public Optional<SqlFilterResponse> sqlFilter() {
         return Optional.ofNullable(this.sqlFilter);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

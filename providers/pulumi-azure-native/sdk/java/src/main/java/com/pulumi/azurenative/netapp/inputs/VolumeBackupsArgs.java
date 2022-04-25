@@ -28,6 +28,10 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupsCount")
     private @Nullable Output<Integer> backupsCount;
 
+    /**
+     * @return Total count of backups for volume
+     * 
+     */
     public Optional<Output<Integer>> backupsCount() {
         return Optional.ofNullable(this.backupsCount);
     }
@@ -39,6 +43,10 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyEnabled")
     private @Nullable Output<Boolean> policyEnabled;
 
+    /**
+     * @return Policy enabled
+     * 
+     */
     public Optional<Output<Boolean>> policyEnabled() {
         return Optional.ofNullable(this.policyEnabled);
     }
@@ -50,6 +58,10 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeName")
     private @Nullable Output<String> volumeName;
 
+    /**
+     * @return Volume name
+     * 
+     */
     public Optional<Output<String>> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -80,29 +92,65 @@ public final class VolumeBackupsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeBackupsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupsCount Total count of backups for volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupsCount(@Nullable Output<Integer> backupsCount) {
             $.backupsCount = backupsCount;
             return this;
         }
 
+        /**
+         * @param backupsCount Total count of backups for volume
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupsCount(Integer backupsCount) {
             return backupsCount(Output.of(backupsCount));
         }
 
+        /**
+         * @param policyEnabled Policy enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnabled(@Nullable Output<Boolean> policyEnabled) {
             $.policyEnabled = policyEnabled;
             return this;
         }
 
+        /**
+         * @param policyEnabled Policy enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyEnabled(Boolean policyEnabled) {
             return policyEnabled(Output.of(policyEnabled));
         }
 
+        /**
+         * @param volumeName Volume name
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(@Nullable Output<String> volumeName) {
             $.volumeName = volumeName;
             return this;
         }
 
+        /**
+         * @param volumeName Volume name
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(String volumeName) {
             return volumeName(Output.of(volumeName));
         }

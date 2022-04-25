@@ -33,6 +33,10 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
     private @Nullable Output<List<Object>> inputs;
 
+    /**
+     * @return List of inputs to a Job.
+     * 
+     */
     public Optional<Output<List<Object>>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -45,6 +49,11 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -74,24 +83,56 @@ public final class JobInputsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobInputsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs List of inputs to a Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable Output<List<Object>> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of inputs to a Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<Object> inputs) {
             return inputs(Output.of(inputs));
         }
 
+        /**
+         * @param inputs List of inputs to a Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

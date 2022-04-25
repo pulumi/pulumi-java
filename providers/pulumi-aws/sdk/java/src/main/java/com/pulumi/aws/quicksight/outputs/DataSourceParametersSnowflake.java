@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceParametersSnowflake {
     /**
-     * The database to which to connect.
+     * @return The database to which to connect.
      * 
      */
     private final String database;
     /**
-     * The host to which to connect.
+     * @return The host to which to connect.
      * 
      */
     private final String host;
     /**
-     * The warehouse to which to connect.
+     * @return The warehouse to which to connect.
      * 
      */
     private final String warehouse;
@@ -36,23 +36,23 @@ public final class DataSourceParametersSnowflake {
     }
 
     /**
-     * The database to which to connect.
+     * @return The database to which to connect.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * The host to which to connect.
+     * @return The host to which to connect.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The warehouse to which to connect.
+     * @return The warehouse to which to connect.
      * 
-    */
+     */
     public String warehouse() {
         return this.warehouse;
     }

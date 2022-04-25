@@ -19,6 +19,10 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
     @Import(name="sqlPoolName", required=true)
     private String sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public String sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
     @Import(name="workloadGroupName", required=true)
     private String workloadGroupName;
 
+    /**
+     * @return The name of the workload group.
+     * 
+     */
     public String workloadGroupName() {
         return this.workloadGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
             $ = new GetSqlPoolWorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

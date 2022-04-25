@@ -24,6 +24,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
     private String address;
 
+    /**
+     * @return Address of the runtime element hosting this deployment.
+     * 
+     */
     public String address() {
         return this.address;
     }
@@ -35,6 +39,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
     private String config;
 
+    /**
+     * @return Configuration used to create this deployment.
+     * 
+     */
     public String config() {
         return this.config;
     }
@@ -46,6 +54,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deployTime", required=true)
     private String deployTime;
 
+    /**
+     * @return Beginning of the lifetime of this deployment.
+     * 
+     */
     public String deployTime() {
         return this.deployTime;
     }
@@ -57,6 +69,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="platform", required=true)
     private String platform;
 
+    /**
+     * @return Platform hosting this deployment.
+     * 
+     */
     public String platform() {
         return this.platform;
     }
@@ -68,6 +84,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
     private List<String> resourceUri;
 
+    /**
+     * @return Resource URI for the artifact being deployed taken from the deployable field with the same name.
+     * 
+     */
     public List<String> resourceUri() {
         return this.resourceUri;
     }
@@ -79,6 +99,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="undeployTime", required=true)
     private String undeployTime;
 
+    /**
+     * @return End of the lifetime of this deployment.
+     * 
+     */
     public String undeployTime() {
         return this.undeployTime;
     }
@@ -90,6 +114,10 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userEmail", required=true)
     private String userEmail;
 
+    /**
+     * @return Identity of the user that triggered this deployment.
+     * 
+     */
     public String userEmail() {
         return this.userEmail;
     }
@@ -124,40 +152,88 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the runtime element hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param config Configuration used to create this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param deployTime Beginning of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployTime(String deployTime) {
             $.deployTime = deployTime;
             return this;
         }
 
+        /**
+         * @param platform Platform hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed taken from the deployable field with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(List<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri Resource URI for the artifact being deployed taken from the deployable field with the same name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
         }
 
+        /**
+         * @param undeployTime End of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeployTime(String undeployTime) {
             $.undeployTime = undeployTime;
             return this;
         }
 
+        /**
+         * @param userEmail Identity of the user that triggered this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmail(String userEmail) {
             $.userEmail = userEmail;
             return this;

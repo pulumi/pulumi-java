@@ -27,6 +27,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="datapathProvider", required=true)
     private String datapathProvider;
 
+    /**
+     * @return The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+     * 
+     */
     public String datapathProvider() {
         return this.datapathProvider;
     }
@@ -38,6 +42,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="defaultSnatStatus", required=true)
     private DefaultSnatStatusResponse defaultSnatStatus;
 
+    /**
+     * @return Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+     * 
+     */
     public DefaultSnatStatusResponse defaultSnatStatus() {
         return this.defaultSnatStatus;
     }
@@ -49,6 +57,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dnsConfig", required=true)
     private DNSConfigResponse dnsConfig;
 
+    /**
+     * @return DNSConfig contains clusterDNS config for this cluster.
+     * 
+     */
     public DNSConfigResponse dnsConfig() {
         return this.dnsConfig;
     }
@@ -60,6 +72,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enableIntraNodeVisibility", required=true)
     private Boolean enableIntraNodeVisibility;
 
+    /**
+     * @return Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+     * 
+     */
     public Boolean enableIntraNodeVisibility() {
         return this.enableIntraNodeVisibility;
     }
@@ -71,6 +87,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enableL4ilbSubsetting", required=true)
     private Boolean enableL4ilbSubsetting;
 
+    /**
+     * @return Whether L4ILB Subsetting is enabled for this cluster.
+     * 
+     */
     public Boolean enableL4ilbSubsetting() {
         return this.enableL4ilbSubsetting;
     }
@@ -82,6 +102,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -93,6 +117,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="privateIpv6GoogleAccess", required=true)
     private String privateIpv6GoogleAccess;
 
+    /**
+     * @return The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+     * 
+     */
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
@@ -104,6 +132,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serviceExternalIpsConfig", required=true)
     private ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
 
+    /**
+     * @return ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+     * 
+     */
     public ServiceExternalIPsConfigResponse serviceExternalIpsConfig() {
         return this.serviceExternalIpsConfig;
     }
@@ -115,6 +147,10 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetwork", required=true)
     private String subnetwork;
 
+    /**
+     * @return The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
+     * 
+     */
     public String subnetwork() {
         return this.subnetwork;
     }
@@ -151,46 +187,100 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datapathProvider The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datapathProvider(String datapathProvider) {
             $.datapathProvider = datapathProvider;
             return this;
         }
 
+        /**
+         * @param defaultSnatStatus Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSnatStatus(DefaultSnatStatusResponse defaultSnatStatus) {
             $.defaultSnatStatus = defaultSnatStatus;
             return this;
         }
 
+        /**
+         * @param dnsConfig DNSConfig contains clusterDNS config for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(DNSConfigResponse dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param enableIntraNodeVisibility Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
             $.enableIntraNodeVisibility = enableIntraNodeVisibility;
             return this;
         }
 
+        /**
+         * @param enableL4ilbSubsetting Whether L4ILB Subsetting is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
             $.enableL4ilbSubsetting = enableL4ilbSubsetting;
             return this;
         }
 
+        /**
+         * @param network The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param serviceExternalIpsConfig ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigResponse serviceExternalIpsConfig) {
             $.serviceExternalIpsConfig = serviceExternalIpsConfig;
             return this;
         }
 
+        /**
+         * @param subnetwork The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             $.subnetwork = subnetwork;
             return this;

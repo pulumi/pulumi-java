@@ -25,6 +25,10 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return The properties of the key used to encrypt the account.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -36,6 +40,10 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<Either<String,AccountEncryptionKeyType>> type;
 
+    /**
+     * @return The type of key used to encrypt the Account Key.
+     * 
+     */
     public Output<Either<String,AccountEncryptionKeyType>> type() {
         return this.type;
     }
@@ -65,28 +73,64 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
             $ = new AccountEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultProperties The properties of the key used to encrypt the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The properties of the key used to encrypt the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,AccountEncryptionKeyType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of key used to encrypt the Account Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AccountEncryptionKeyType type) {
             return type(Either.ofRight(type));
         }

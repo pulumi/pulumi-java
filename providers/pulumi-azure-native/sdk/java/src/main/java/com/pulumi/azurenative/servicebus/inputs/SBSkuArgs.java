@@ -28,6 +28,10 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -39,6 +43,10 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<SkuName> name;
 
+    /**
+     * @return Name of this SKU.
+     * 
+     */
     public Output<SkuName> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<SkuTier> tier;
 
+    /**
+     * @return The billing tier of this particular SKU.
+     * 
+     */
     public Optional<Output<SkuTier>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -80,29 +92,65 @@ public final class SBSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SBSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<SkuName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<SkuTier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The billing tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(SkuTier tier) {
             return tier(Output.of(tier));
         }

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProfileEnumValidValuesFormatResponse {
     /**
-     * Localized names of the enum member.
+     * @return Localized names of the enum member.
      * 
      */
     private final @Nullable Map<String,String> localizedValueNames;
     /**
-     * The integer value of the enum member.
+     * @return The integer value of the enum member.
      * 
      */
     private final @Nullable Integer value;
@@ -33,16 +33,16 @@ public final class ProfileEnumValidValuesFormatResponse {
     }
 
     /**
-     * Localized names of the enum member.
+     * @return Localized names of the enum member.
      * 
-    */
+     */
     public Map<String,String> localizedValueNames() {
         return this.localizedValueNames == null ? Map.of() : this.localizedValueNames;
     }
     /**
-     * The integer value of the enum member.
+     * @return The integer value of the enum member.
      * 
-    */
+     */
     public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }

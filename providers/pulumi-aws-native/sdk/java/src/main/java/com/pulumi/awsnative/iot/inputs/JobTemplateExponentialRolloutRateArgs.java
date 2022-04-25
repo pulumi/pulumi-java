@@ -26,6 +26,10 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
     @Import(name="baseRatePerMinute", required=true)
     private Output<Integer> baseRatePerMinute;
 
+    /**
+     * @return The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
+     * 
+     */
     public Output<Integer> baseRatePerMinute() {
         return this.baseRatePerMinute;
     }
@@ -37,6 +41,10 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
     @Import(name="incrementFactor", required=true)
     private Output<Double> incrementFactor;
 
+    /**
+     * @return The exponential factor to increase the rate of rollout for a job.
+     * 
+     */
     public Output<Double> incrementFactor() {
         return this.incrementFactor;
     }
@@ -48,6 +56,10 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
     @Import(name="rateIncreaseCriteria", required=true)
     private Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
 
+    /**
+     * @return The criteria to initiate the increase in rate of rollout for a job.
+     * 
+     */
     public Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }
@@ -78,29 +90,65 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
             $ = new JobTemplateExponentialRolloutRateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseRatePerMinute The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseRatePerMinute(Output<Integer> baseRatePerMinute) {
             $.baseRatePerMinute = baseRatePerMinute;
             return this;
         }
 
+        /**
+         * @param baseRatePerMinute The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseRatePerMinute(Integer baseRatePerMinute) {
             return baseRatePerMinute(Output.of(baseRatePerMinute));
         }
 
+        /**
+         * @param incrementFactor The exponential factor to increase the rate of rollout for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementFactor(Output<Double> incrementFactor) {
             $.incrementFactor = incrementFactor;
             return this;
         }
 
+        /**
+         * @param incrementFactor The exponential factor to increase the rate of rollout for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incrementFactor(Double incrementFactor) {
             return incrementFactor(Output.of(incrementFactor));
         }
 
+        /**
+         * @param rateIncreaseCriteria The criteria to initiate the increase in rate of rollout for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateIncreaseCriteria(Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria) {
             $.rateIncreaseCriteria = rateIncreaseCriteria;
             return this;
         }
 
+        /**
+         * @param rateIncreaseCriteria The criteria to initiate the increase in rate of rollout for a job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateIncreaseCriteria(JobTemplateRateIncreaseCriteriaArgs rateIncreaseCriteria) {
             return rateIncreaseCriteria(Output.of(rateIncreaseCriteria));
         }

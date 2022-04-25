@@ -20,6 +20,10 @@ public final class GetVpcDhcpOptionsFilter extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the field to filter.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class GetVpcDhcpOptionsFilter extends com.pulumi.resources.InvokeAr
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Set of values for filtering.
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -60,16 +68,34 @@ public final class GetVpcDhcpOptionsFilter extends com.pulumi.resources.InvokeAr
             $ = new GetVpcDhcpOptionsFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the field to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param values Set of values for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Set of values for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

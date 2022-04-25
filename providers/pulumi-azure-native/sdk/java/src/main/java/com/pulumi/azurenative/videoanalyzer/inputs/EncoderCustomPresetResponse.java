@@ -28,6 +28,10 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="audioEncoder")
     private @Nullable AudioEncoderAacResponse audioEncoder;
 
+    /**
+     * @return Describes a custom preset for encoding audio.
+     * 
+     */
     public Optional<AudioEncoderAacResponse> audioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
     }
@@ -40,6 +44,11 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +60,10 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="videoEncoder")
     private @Nullable VideoEncoderH264Response videoEncoder;
 
+    /**
+     * @return Describes a custom preset for encoding video.
+     * 
+     */
     public Optional<VideoEncoderH264Response> videoEncoder() {
         return Optional.ofNullable(this.videoEncoder);
     }
@@ -81,16 +94,35 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
             $ = new EncoderCustomPresetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioEncoder Describes a custom preset for encoding audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoder(@Nullable AudioEncoderAacResponse audioEncoder) {
             $.audioEncoder = audioEncoder;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param videoEncoder Describes a custom preset for encoding video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoEncoder(@Nullable VideoEncoderH264Response videoEncoder) {
             $.videoEncoder = videoEncoder;
             return this;

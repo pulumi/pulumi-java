@@ -172,6 +172,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataIntegrationUnits")
     private @Nullable Object dataIntegrationUnits;
 
+    /**
+     * @return Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> dataIntegrationUnits() {
         return Optional.ofNullable(this.dataIntegrationUnits);
     }
@@ -183,6 +187,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -194,6 +202,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -205,6 +217,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableSkipIncompatibleRow")
     private @Nullable Object enableSkipIncompatibleRow;
 
+    /**
+     * @return Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableSkipIncompatibleRow() {
         return Optional.ofNullable(this.enableSkipIncompatibleRow);
     }
@@ -216,6 +232,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableStaging")
     private @Nullable Object enableStaging;
 
+    /**
+     * @return Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableStaging() {
         return Optional.ofNullable(this.enableStaging);
     }
@@ -227,6 +247,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputs")
     private @Nullable List<DatasetReferenceResponse> inputs;
 
+    /**
+     * @return List of inputs for the activity.
+     * 
+     */
     public Optional<List<DatasetReferenceResponse>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -238,6 +262,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -249,6 +277,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logSettings")
     private @Nullable LogSettingsResponse logSettings;
 
+    /**
+     * @return Log settings customer needs provide when enabling log.
+     * 
+     */
     public Optional<LogSettingsResponse> logSettings() {
         return Optional.ofNullable(this.logSettings);
     }
@@ -260,6 +292,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logStorageSettings")
     private @Nullable LogStorageSettingsResponse logStorageSettings;
 
+    /**
+     * @return (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
+     * 
+     */
     public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
@@ -271,6 +307,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -282,6 +322,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="outputs")
     private @Nullable List<DatasetReferenceResponse> outputs;
 
+    /**
+     * @return List of outputs for the activity.
+     * 
+     */
     public Optional<List<DatasetReferenceResponse>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
@@ -293,6 +337,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="parallelCopies")
     private @Nullable Object parallelCopies;
 
+    /**
+     * @return Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> parallelCopies() {
         return Optional.ofNullable(this.parallelCopies);
     }
@@ -304,6 +352,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -315,6 +367,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="preserve")
     private @Nullable List<Object> preserve;
 
+    /**
+     * @return Preserve rules.
+     * 
+     */
     public Optional<List<Object>> preserve() {
         return Optional.ofNullable(this.preserve);
     }
@@ -326,6 +382,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="preserveRules")
     private @Nullable List<Object> preserveRules;
 
+    /**
+     * @return Preserve Rules.
+     * 
+     */
     public Optional<List<Object>> preserveRules() {
         return Optional.ofNullable(this.preserveRules);
     }
@@ -337,6 +397,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="redirectIncompatibleRowSettings")
     private @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
 
+    /**
+     * @return Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
+     * 
+     */
     public Optional<RedirectIncompatibleRowSettingsResponse> redirectIncompatibleRowSettings() {
         return Optional.ofNullable(this.redirectIncompatibleRowSettings);
     }
@@ -348,6 +412,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sink", required=true)
     private Object sink;
 
+    /**
+     * @return Copy activity sink.
+     * 
+     */
     public Object sink() {
         return this.sink;
     }
@@ -359,6 +427,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="skipErrorFile")
     private @Nullable SkipErrorFileResponse skipErrorFile;
 
+    /**
+     * @return Specify the fault tolerance for data consistency.
+     * 
+     */
     public Optional<SkipErrorFileResponse> skipErrorFile() {
         return Optional.ofNullable(this.skipErrorFile);
     }
@@ -370,6 +442,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="source", required=true)
     private Object source;
 
+    /**
+     * @return Copy activity source.
+     * 
+     */
     public Object source() {
         return this.source;
     }
@@ -381,6 +457,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="stagingSettings")
     private @Nullable StagingSettingsResponse stagingSettings;
 
+    /**
+     * @return Specifies interim staging settings when EnableStaging is true.
+     * 
+     */
     public Optional<StagingSettingsResponse> stagingSettings() {
         return Optional.ofNullable(this.stagingSettings);
     }
@@ -392,6 +472,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="translator")
     private @Nullable Object translator;
 
+    /**
+     * @return Copy activity translator. If not specified, tabular translator is used.
+     * 
+     */
     public Optional<Object> translator() {
         return Optional.ofNullable(this.translator);
     }
@@ -404,6 +488,11 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Copy&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -415,6 +504,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -426,6 +519,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="validateDataConsistency")
     private @Nullable Object validateDataConsistency;
 
+    /**
+     * @return Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> validateDataConsistency() {
         return Optional.ofNullable(this.validateDataConsistency);
     }
@@ -477,145 +574,326 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CopyActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataIntegrationUnits Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
             $.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param enableSkipIncompatibleRow Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
             $.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
 
+        /**
+         * @param enableStaging Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStaging(@Nullable Object enableStaging) {
             $.enableStaging = enableStaging;
             return this;
         }
 
+        /**
+         * @param inputs List of inputs for the activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable List<DatasetReferenceResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs List of inputs for the activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(DatasetReferenceResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param logSettings Log settings customer needs provide when enabling log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logSettings(@Nullable LogSettingsResponse logSettings) {
             $.logSettings = logSettings;
             return this;
         }
 
+        /**
+         * @param logStorageSettings (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
             $.logStorageSettings = logStorageSettings;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outputs List of outputs for the activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(@Nullable List<DatasetReferenceResponse> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs List of outputs for the activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(DatasetReferenceResponse... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param parallelCopies Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelCopies(@Nullable Object parallelCopies) {
             $.parallelCopies = parallelCopies;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param preserve Preserve rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserve(@Nullable List<Object> preserve) {
             $.preserve = preserve;
             return this;
         }
 
+        /**
+         * @param preserve Preserve rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserve(Object... preserve) {
             return preserve(List.of(preserve));
         }
 
+        /**
+         * @param preserveRules Preserve Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
             $.preserveRules = preserveRules;
             return this;
         }
 
+        /**
+         * @param preserveRules Preserve Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveRules(Object... preserveRules) {
             return preserveRules(List.of(preserveRules));
         }
 
+        /**
+         * @param redirectIncompatibleRowSettings Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings) {
             $.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
 
+        /**
+         * @param sink Copy activity sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sink(Object sink) {
             $.sink = sink;
             return this;
         }
 
+        /**
+         * @param skipErrorFile Specify the fault tolerance for data consistency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipErrorFile(@Nullable SkipErrorFileResponse skipErrorFile) {
             $.skipErrorFile = skipErrorFile;
             return this;
         }
 
+        /**
+         * @param source Copy activity source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Object source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param stagingSettings Specifies interim staging settings when EnableStaging is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingSettings(@Nullable StagingSettingsResponse stagingSettings) {
             $.stagingSettings = stagingSettings;
             return this;
         }
 
+        /**
+         * @param translator Copy activity translator. If not specified, tabular translator is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder translator(@Nullable Object translator) {
             $.translator = translator;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Copy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
 
+        /**
+         * @param validateDataConsistency Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
             $.validateDataConsistency = validateDataConsistency;
             return this;

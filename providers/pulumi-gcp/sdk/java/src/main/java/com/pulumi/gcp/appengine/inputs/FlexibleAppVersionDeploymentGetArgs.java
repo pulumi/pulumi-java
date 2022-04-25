@@ -27,6 +27,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="cloudBuildOptions")
     private @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
 
+    /**
+     * @return Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs>> cloudBuildOptions() {
         return Optional.ofNullable(this.cloudBuildOptions);
     }
@@ -39,6 +44,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="container")
     private @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
 
+    /**
+     * @return The Docker image for the container that runs the version.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionDeploymentContainerGetArgs>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -52,6 +62,12 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="files")
     private @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
 
+    /**
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<FlexibleAppVersionDeploymentFileGetArgs>>> files() {
         return Optional.ofNullable(this.files);
     }
@@ -64,6 +80,11 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="zip")
     private @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
 
+    /**
+     * @return Zip File
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<FlexibleAppVersionDeploymentZipGetArgs>> zip() {
         return Optional.ofNullable(this.zip);
     }
@@ -95,42 +116,108 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
             $ = new FlexibleAppVersionDeploymentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudBuildOptions Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildOptions(@Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
             $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
+        /**
+         * @param cloudBuildOptions Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudBuildOptions(FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
             return cloudBuildOptions(Output.of(cloudBuildOptions));
         }
 
+        /**
+         * @param container The Docker image for the container that runs the version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The Docker image for the container that runs the version.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(FlexibleAppVersionDeploymentContainerGetArgs container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(@Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(List<FlexibleAppVersionDeploymentFileGetArgs> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(FlexibleAppVersionDeploymentFileGetArgs... files) {
             return files(List.of(files));
         }
 
+        /**
+         * @param zip Zip File
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(@Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip) {
             $.zip = zip;
             return this;
         }
 
+        /**
+         * @param zip Zip File
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(FlexibleAppVersionDeploymentZipGetArgs zip) {
             return zip(Output.of(zip));
         }

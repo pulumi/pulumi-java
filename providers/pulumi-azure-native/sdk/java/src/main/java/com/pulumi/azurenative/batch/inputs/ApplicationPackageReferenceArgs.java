@@ -29,6 +29,10 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -67,11 +71,23 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
             return id(Output.of(id));
         }
 
+        /**
+         * @param version If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

@@ -27,6 +27,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return Fqdn that resolves to private endpoint ip address.
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -38,6 +42,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddresses")
     private @Nullable List<String> ipAddresses;
 
+    /**
+     * @return The private ip address of the private endpoint.
+     * 
+     */
     public Optional<List<String>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -49,6 +57,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the recordset.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -60,6 +72,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordSetName")
     private @Nullable String recordSetName;
 
+    /**
+     * @return Recordset name.
+     * 
+     */
     public Optional<String> recordSetName() {
         return Optional.ofNullable(this.recordSetName);
     }
@@ -71,6 +87,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordType")
     private @Nullable String recordType;
 
+    /**
+     * @return Resource record type.
+     * 
+     */
     public Optional<String> recordType() {
         return Optional.ofNullable(this.recordType);
     }
@@ -82,6 +102,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttl")
     private @Nullable Integer ttl;
 
+    /**
+     * @return Recordset time to live.
+     * 
+     */
     public Optional<Integer> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -115,35 +139,77 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RecordSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn Fqdn that resolves to private endpoint ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param ipAddresses The private ip address of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses The private ip address of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the recordset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param recordSetName Recordset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSetName(@Nullable String recordSetName) {
             $.recordSetName = recordSetName;
             return this;
         }
 
+        /**
+         * @param recordType Resource record type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(@Nullable String recordType) {
             $.recordType = recordType;
             return this;
         }
 
+        /**
+         * @param ttl Recordset time to live.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Integer ttl) {
             $.ttl = ttl;
             return this;

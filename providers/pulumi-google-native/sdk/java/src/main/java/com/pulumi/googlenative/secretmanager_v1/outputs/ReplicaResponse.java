@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ReplicaResponse {
     /**
-     * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * @return Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
      * 
      */
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
     /**
-     * The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
      * 
      */
     private final String location;
@@ -30,16 +30,16 @@ public final class ReplicaResponse {
     }
 
     /**
-     * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * @return Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
      * 
-    */
+     */
     public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
     /**
-     * The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
+     * @return The canonical IDs of the location to replicate data. For example: `&#34;us-east1&#34;`.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }

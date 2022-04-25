@@ -24,6 +24,10 @@ public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources
     @Import(name="sourcePropertyName", required=true)
     private Output<String> sourcePropertyName;
 
+    /**
+     * @return The source property that maps to the target property.
+     * 
+     */
     public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
     }
@@ -35,6 +39,10 @@ public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources
     @Import(name="targetPropertyName", required=true)
     private Output<String> targetPropertyName;
 
+    /**
+     * @return The target property that maps to the source property.
+     * 
+     */
     public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
@@ -64,20 +72,44 @@ public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources
             $ = new ParticipantPropertyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourcePropertyName The source property that maps to the target property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {
             $.sourcePropertyName = sourcePropertyName;
             return this;
         }
 
+        /**
+         * @param sourcePropertyName The source property that maps to the target property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePropertyName(String sourcePropertyName) {
             return sourcePropertyName(Output.of(sourcePropertyName));
         }
 
+        /**
+         * @param targetPropertyName The target property that maps to the source property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(Output<String> targetPropertyName) {
             $.targetPropertyName = targetPropertyName;
             return this;
         }
 
+        /**
+         * @param targetPropertyName The target property that maps to the source property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPropertyName(String targetPropertyName) {
             return targetPropertyName(Output.of(targetPropertyName));
         }

@@ -27,6 +27,10 @@ public final class BucketRoutingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="redirectRule", required=true)
     private Output<BucketRedirectRuleArgs> redirectRule;
 
+    /**
+     * @return Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
+     * 
+     */
     public Output<BucketRedirectRuleArgs> redirectRule() {
         return this.redirectRule;
     }
@@ -63,11 +67,23 @@ public final class BucketRoutingRuleArgs extends com.pulumi.resources.ResourceAr
             $ = new BucketRoutingRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectRule Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectRule(Output<BucketRedirectRuleArgs> redirectRule) {
             $.redirectRule = redirectRule;
             return this;
         }
 
+        /**
+         * @param redirectRule Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectRule(BucketRedirectRuleArgs redirectRule) {
             return redirectRule(Output.of(redirectRule));
         }

@@ -27,6 +27,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty data disk in gigabytes.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -38,6 +42,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,20 +75,44 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

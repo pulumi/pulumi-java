@@ -26,6 +26,10 @@ public final class ServicePlacementPolicyDescriptionArgs extends com.pulumi.reso
     @Import(name="type", required=true)
     private Output<Either<String,ServicePlacementPolicyType>> type;
 
+    /**
+     * @return The type of placement policy for a service fabric service. Following are the possible values.
+     * 
+     */
     public Output<Either<String,ServicePlacementPolicyType>> type() {
         return this.type;
     }
@@ -54,19 +58,43 @@ public final class ServicePlacementPolicyDescriptionArgs extends com.pulumi.reso
             $ = new ServicePlacementPolicyDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of placement policy for a service fabric service. Following are the possible values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ServicePlacementPolicyType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of placement policy for a service fabric service. Following are the possible values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ServicePlacementPolicyType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of placement policy for a service fabric service. Following are the possible values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of placement policy for a service fabric service. Following are the possible values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ServicePlacementPolicyType type) {
             return type(Either.ofRight(type));
         }

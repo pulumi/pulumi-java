@@ -19,6 +19,10 @@ public final class GetOperationalizationClusterArgs extends com.pulumi.resources
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetOperationalizationClusterArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which the cluster is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetOperationalizationClusterArgs extends com.pulumi.resources
             $ = new GetOperationalizationClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which the cluster is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

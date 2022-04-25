@@ -30,6 +30,10 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
     @Import(name="consentStoreId", required=true)
     private Output<String> consentStoreId;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
@@ -43,6 +47,12 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
     @Import(name="dataset", required=true)
     private Output<String> dataset;
 
+    /**
+     * @return Identifies the dataset addressed by this request. Must be in the format
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+     * Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> dataset() {
         return this.dataset;
     }
@@ -63,6 +73,12 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -104,20 +120,48 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param consentStoreId Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
+        /**
+         * @param consentStoreId Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(String consentStoreId) {
             return consentStoreId(Output.of(consentStoreId));
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(Output<String> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Identifies the dataset addressed by this request. Must be in the format
+         * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+         * Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             return dataset(Output.of(dataset));
         }
@@ -131,11 +175,27 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.ConsentStoreIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

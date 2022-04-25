@@ -34,6 +34,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="agentConfiguration")
     private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
+    /**
+     * @return The machine configuration of the run agent.
+     * 
+     */
     public Optional<Output<AgentPropertiesArgs>> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
@@ -45,6 +49,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="agentPoolName")
     private @Nullable Output<String> agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<Output<String>> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -56,6 +64,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="arguments")
     private @Nullable Output<List<ArgumentArgs>> arguments;
 
+    /**
+     * @return The collection of override arguments to be used when executing the run.
+     * 
+     */
     public Optional<Output<List<ArgumentArgs>>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -67,6 +79,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="credentials")
     private @Nullable Output<CredentialsArgs> credentials;
 
+    /**
+     * @return The properties that describes a set of credentials that will be used when this run is invoked.
+     * 
+     */
     public Optional<Output<CredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -78,6 +94,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="dockerFilePath", required=true)
     private Output<String> dockerFilePath;
 
+    /**
+     * @return The Docker file path relative to the source location.
+     * 
+     */
     public Output<String> dockerFilePath() {
         return this.dockerFilePath;
     }
@@ -89,6 +109,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="imageNames")
     private @Nullable Output<List<String>> imageNames;
 
+    /**
+     * @return The fully qualified image names including the repository and tag.
+     * 
+     */
     public Optional<Output<List<String>>> imageNames() {
         return Optional.ofNullable(this.imageNames);
     }
@@ -100,6 +124,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="isArchiveEnabled")
     private @Nullable Output<Boolean> isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Output<Boolean>> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -111,6 +139,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="isPushEnabled")
     private @Nullable Output<Boolean> isPushEnabled;
 
+    /**
+     * @return The value of this property indicates whether the image built should be pushed to the registry or not.
+     * 
+     */
     public Optional<Output<Boolean>> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
@@ -122,6 +154,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="logTemplate")
     private @Nullable Output<String> logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<Output<String>> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -133,6 +169,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="noCache")
     private @Nullable Output<Boolean> noCache;
 
+    /**
+     * @return The value of this property indicates whether the image cache is enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> noCache() {
         return Optional.ofNullable(this.noCache);
     }
@@ -144,6 +184,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="platform", required=true)
     private Output<PlatformPropertiesArgs> platform;
 
+    /**
+     * @return The platform properties against which the run has to happen.
+     * 
+     */
     public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
     }
@@ -156,6 +200,11 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="sourceLocation")
     private @Nullable Output<String> sourceLocation;
 
+    /**
+     * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     * 
+     */
     public Optional<Output<String>> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
@@ -167,6 +216,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return The name of the target build stage for the docker build.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -178,6 +231,10 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return Run timeout in seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -190,6 +247,11 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;DockerBuildRequest&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -232,145 +294,341 @@ public final class DockerBuildRequestArgs extends com.pulumi.resources.ResourceA
             $ = new DockerBuildRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
             $.agentConfiguration = agentConfiguration;
             return this;
         }
 
+        /**
+         * @param agentConfiguration The machine configuration of the run agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentConfiguration(AgentPropertiesArgs agentConfiguration) {
             return agentConfiguration(Output.of(agentConfiguration));
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(String agentPoolName) {
             return agentPoolName(Output.of(agentPoolName));
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(List<ArgumentArgs> arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(CredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param dockerFilePath The Docker file path relative to the source location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerFilePath(Output<String> dockerFilePath) {
             $.dockerFilePath = dockerFilePath;
             return this;
         }
 
+        /**
+         * @param dockerFilePath The Docker file path relative to the source location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerFilePath(String dockerFilePath) {
             return dockerFilePath(Output.of(dockerFilePath));
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(@Nullable Output<List<String>> imageNames) {
             $.imageNames = imageNames;
             return this;
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(List<String> imageNames) {
             return imageNames(Output.of(imageNames));
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(Boolean isArchiveEnabled) {
             return isArchiveEnabled(Output.of(isArchiveEnabled));
         }
 
+        /**
+         * @param isPushEnabled The value of this property indicates whether the image built should be pushed to the registry or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
             $.isPushEnabled = isPushEnabled;
             return this;
         }
 
+        /**
+         * @param isPushEnabled The value of this property indicates whether the image built should be pushed to the registry or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(Boolean isPushEnabled) {
             return isPushEnabled(Output.of(isPushEnabled));
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(String logTemplate) {
             return logTemplate(Output.of(logTemplate));
         }
 
+        /**
+         * @param noCache The value of this property indicates whether the image cache is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noCache(@Nullable Output<Boolean> noCache) {
             $.noCache = noCache;
             return this;
         }
 
+        /**
+         * @param noCache The value of this property indicates whether the image cache is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noCache(Boolean noCache) {
             return noCache(Output.of(noCache));
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(Output<PlatformPropertiesArgs> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform The platform properties against which the run has to happen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(PlatformPropertiesArgs platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             $.sourceLocation = sourceLocation;
             return this;
         }
 
+        /**
+         * @param sourceLocation The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocation(String sourceLocation) {
             return sourceLocation(Output.of(sourceLocation));
         }
 
+        /**
+         * @param target The name of the target build stage for the docker build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The name of the target build stage for the docker build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Run timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;DockerBuildRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;DockerBuildRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

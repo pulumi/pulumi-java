@@ -26,6 +26,10 @@ public final class AutomaticArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryption")
     private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
+    /**
+     * @return Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+     * 
+     */
     public Optional<Output<CustomerManagedEncryptionArgs>> customerManagedEncryption() {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
@@ -54,11 +58,23 @@ public final class AutomaticArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AutomaticArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
             $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
+        /**
+         * @param customerManagedEncryption Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerManagedEncryption(CustomerManagedEncryptionArgs customerManagedEncryption) {
             return customerManagedEncryption(Output.of(customerManagedEncryption));
         }

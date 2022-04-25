@@ -24,6 +24,12 @@ public final class JobQueryScriptOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="keyResultStatement")
     private @Nullable Output<String> keyResultStatement;
 
+    /**
+     * @return Determines which statement in the script represents the &#34;key result&#34;,
+     * used to populate the schema and query results of the script job.
+     * Possible values are `LAST` and `FIRST_SELECT`.
+     * 
+     */
     public Optional<Output<String>> keyResultStatement() {
         return Optional.ofNullable(this.keyResultStatement);
     }
@@ -35,6 +41,10 @@ public final class JobQueryScriptOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="statementByteBudget")
     private @Nullable Output<String> statementByteBudget;
 
+    /**
+     * @return Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+     * 
+     */
     public Optional<Output<String>> statementByteBudget() {
         return Optional.ofNullable(this.statementByteBudget);
     }
@@ -46,6 +56,10 @@ public final class JobQueryScriptOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="statementTimeoutMs")
     private @Nullable Output<String> statementTimeoutMs;
 
+    /**
+     * @return Timeout period for each statement in a script.
+     * 
+     */
     public Optional<Output<String>> statementTimeoutMs() {
         return Optional.ofNullable(this.statementTimeoutMs);
     }
@@ -76,29 +90,69 @@ public final class JobQueryScriptOptionsGetArgs extends com.pulumi.resources.Res
             $ = new JobQueryScriptOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyResultStatement Determines which statement in the script represents the &#34;key result&#34;,
+         * used to populate the schema and query results of the script job.
+         * Possible values are `LAST` and `FIRST_SELECT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyResultStatement(@Nullable Output<String> keyResultStatement) {
             $.keyResultStatement = keyResultStatement;
             return this;
         }
 
+        /**
+         * @param keyResultStatement Determines which statement in the script represents the &#34;key result&#34;,
+         * used to populate the schema and query results of the script job.
+         * Possible values are `LAST` and `FIRST_SELECT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyResultStatement(String keyResultStatement) {
             return keyResultStatement(Output.of(keyResultStatement));
         }
 
+        /**
+         * @param statementByteBudget Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementByteBudget(@Nullable Output<String> statementByteBudget) {
             $.statementByteBudget = statementByteBudget;
             return this;
         }
 
+        /**
+         * @param statementByteBudget Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementByteBudget(String statementByteBudget) {
             return statementByteBudget(Output.of(statementByteBudget));
         }
 
+        /**
+         * @param statementTimeoutMs Timeout period for each statement in a script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementTimeoutMs(@Nullable Output<String> statementTimeoutMs) {
             $.statementTimeoutMs = statementTimeoutMs;
             return this;
         }
 
+        /**
+         * @param statementTimeoutMs Timeout period for each statement in a script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementTimeoutMs(String statementTimeoutMs) {
             return statementTimeoutMs(Output.of(statementTimeoutMs));
         }

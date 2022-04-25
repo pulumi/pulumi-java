@@ -28,6 +28,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="additionalFeaturesServerConfigurations")
     private @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
+    /**
+     * @return Additional SQL feature settings.
+     * 
+     */
     public Optional<AdditionalFeaturesServerConfigurationsResponse> additionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
@@ -39,6 +43,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlConnectivityUpdateSettings")
     private @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
+    /**
+     * @return SQL connectivity type settings.
+     * 
+     */
     public Optional<SqlConnectivityUpdateSettingsResponse> sqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
@@ -50,6 +58,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlStorageUpdateSettings")
     private @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
+    /**
+     * @return SQL storage update settings.
+     * 
+     */
     public Optional<SqlStorageUpdateSettingsResponse> sqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
@@ -61,6 +73,10 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlWorkloadTypeUpdateSettings")
     private @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
+    /**
+     * @return SQL workload type settings.
+     * 
+     */
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> sqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
@@ -92,21 +108,45 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
             $ = new ServerConfigurationsManagementSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalFeaturesServerConfigurations Additional SQL feature settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations) {
             $.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
 
+        /**
+         * @param sqlConnectivityUpdateSettings SQL connectivity type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings) {
             $.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
 
+        /**
+         * @param sqlStorageUpdateSettings SQL storage update settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings) {
             $.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
 
+        /**
+         * @param sqlWorkloadTypeUpdateSettings SQL workload type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
             $.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;

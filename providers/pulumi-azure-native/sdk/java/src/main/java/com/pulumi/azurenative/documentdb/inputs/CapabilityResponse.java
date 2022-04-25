@@ -25,6 +25,10 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CapabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

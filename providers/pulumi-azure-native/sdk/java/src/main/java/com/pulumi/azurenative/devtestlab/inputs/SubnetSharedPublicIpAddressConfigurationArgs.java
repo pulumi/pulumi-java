@@ -27,6 +27,10 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends com.pulu
     @Import(name="allowedPorts")
     private @Nullable Output<List<PortArgs>> allowedPorts;
 
+    /**
+     * @return Backend ports that virtual machines on this subnet are allowed to expose
+     * 
+     */
     public Optional<Output<List<PortArgs>>> allowedPorts() {
         return Optional.ofNullable(this.allowedPorts);
     }
@@ -55,15 +59,33 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends com.pulu
             $ = new SubnetSharedPublicIpAddressConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPorts Backend ports that virtual machines on this subnet are allowed to expose
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPorts(@Nullable Output<List<PortArgs>> allowedPorts) {
             $.allowedPorts = allowedPorts;
             return this;
         }
 
+        /**
+         * @param allowedPorts Backend ports that virtual machines on this subnet are allowed to expose
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPorts(List<PortArgs> allowedPorts) {
             return allowedPorts(Output.of(allowedPorts));
         }
 
+        /**
+         * @param allowedPorts Backend ports that virtual machines on this subnet are allowed to expose
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPorts(PortArgs... allowedPorts) {
             return allowedPorts(List.of(allowedPorts));
         }

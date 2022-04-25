@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatabaseFileInfoResponse {
     /**
-     * Name of the database
+     * @return Name of the database
      * 
      */
     private final @Nullable String databaseName;
     /**
-     * Database file type
+     * @return Database file type
      * 
      */
     private final @Nullable String fileType;
     /**
-     * Unique identifier for database file
+     * @return Unique identifier for database file
      * 
      */
     private final @Nullable String id;
     /**
-     * Logical name of the file
+     * @return Logical name of the file
      * 
      */
     private final @Nullable String logicalName;
     /**
-     * Operating-system full path of the file
+     * @return Operating-system full path of the file
      * 
      */
     private final @Nullable String physicalFullName;
     /**
-     * Suggested full path of the file for restoring
+     * @return Suggested full path of the file for restoring
      * 
      */
     private final @Nullable String restoreFullName;
     /**
-     * Size of the file in megabytes
+     * @return Size of the file in megabytes
      * 
      */
     private final @Nullable Double sizeMB;
@@ -67,51 +67,51 @@ public final class DatabaseFileInfoResponse {
     }
 
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * Database file type
+     * @return Database file type
      * 
-    */
+     */
     public Optional<String> fileType() {
         return Optional.ofNullable(this.fileType);
     }
     /**
-     * Unique identifier for database file
+     * @return Unique identifier for database file
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Logical name of the file
+     * @return Logical name of the file
      * 
-    */
+     */
     public Optional<String> logicalName() {
         return Optional.ofNullable(this.logicalName);
     }
     /**
-     * Operating-system full path of the file
+     * @return Operating-system full path of the file
      * 
-    */
+     */
     public Optional<String> physicalFullName() {
         return Optional.ofNullable(this.physicalFullName);
     }
     /**
-     * Suggested full path of the file for restoring
+     * @return Suggested full path of the file for restoring
      * 
-    */
+     */
     public Optional<String> restoreFullName() {
         return Optional.ofNullable(this.restoreFullName);
     }
     /**
-     * Size of the file in megabytes
+     * @return Size of the file in megabytes
      * 
-    */
+     */
     public Optional<Double> sizeMB() {
         return Optional.ofNullable(this.sizeMB);
     }

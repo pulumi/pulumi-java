@@ -26,6 +26,10 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleAppVersion")
     private @Nullable Output<Boolean> incompatibleAppVersion;
 
+    /**
+     * @return If the App doesn&#39;t support the specific API level.
+     * 
+     */
     public Optional<Output<Boolean>> incompatibleAppVersion() {
         return Optional.ofNullable(this.incompatibleAppVersion);
     }
@@ -37,6 +41,10 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleArchitecture")
     private @Nullable Output<Boolean> incompatibleArchitecture;
 
+    /**
+     * @return If the App doesn&#39;t run on the specific architecture, for example, x86.
+     * 
+     */
     public Optional<Output<Boolean>> incompatibleArchitecture() {
         return Optional.ofNullable(this.incompatibleArchitecture);
     }
@@ -48,6 +56,10 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleDevice")
     private @Nullable Output<Boolean> incompatibleDevice;
 
+    /**
+     * @return If the requested OS version doesn&#39;t run on the specific device model.
+     * 
+     */
     public Optional<Output<Boolean>> incompatibleDevice() {
         return Optional.ofNullable(this.incompatibleDevice);
     }
@@ -78,29 +90,65 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkippedDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incompatibleAppVersion If the App doesn&#39;t support the specific API level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleAppVersion(@Nullable Output<Boolean> incompatibleAppVersion) {
             $.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
 
+        /**
+         * @param incompatibleAppVersion If the App doesn&#39;t support the specific API level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleAppVersion(Boolean incompatibleAppVersion) {
             return incompatibleAppVersion(Output.of(incompatibleAppVersion));
         }
 
+        /**
+         * @param incompatibleArchitecture If the App doesn&#39;t run on the specific architecture, for example, x86.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleArchitecture(@Nullable Output<Boolean> incompatibleArchitecture) {
             $.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
 
+        /**
+         * @param incompatibleArchitecture If the App doesn&#39;t run on the specific architecture, for example, x86.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
             return incompatibleArchitecture(Output.of(incompatibleArchitecture));
         }
 
+        /**
+         * @param incompatibleDevice If the requested OS version doesn&#39;t run on the specific device model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleDevice(@Nullable Output<Boolean> incompatibleDevice) {
             $.incompatibleDevice = incompatibleDevice;
             return this;
         }
 
+        /**
+         * @param incompatibleDevice If the requested OS version doesn&#39;t run on the specific device model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompatibleDevice(Boolean incompatibleDevice) {
             return incompatibleDevice(Output.of(incompatibleDevice));
         }

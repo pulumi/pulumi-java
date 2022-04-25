@@ -24,6 +24,10 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="lastModified", required=true)
     private String lastModified;
 
+    /**
+     * @return Last modified time of this blueprint definition.
+     * 
+     */
     public String lastModified() {
         return this.lastModified;
     }
@@ -35,6 +39,10 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="managedResources", required=true)
     private List<String> managedResources;
 
+    /**
+     * @return List of resources that were created by the blueprint assignment.
+     * 
+     */
     public List<String> managedResources() {
         return this.managedResources;
     }
@@ -46,6 +54,10 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="timeCreated", required=true)
     private String timeCreated;
 
+    /**
+     * @return Creation time of this blueprint definition.
+     * 
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
@@ -76,20 +88,44 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
             $ = new AssignmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastModified Last modified time of this blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param managedResources List of resources that were created by the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResources(List<String> managedResources) {
             $.managedResources = managedResources;
             return this;
         }
 
+        /**
+         * @param managedResources List of resources that were created by the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResources(String... managedResources) {
             return managedResources(List.of(managedResources));
         }
 
+        /**
+         * @param timeCreated Creation time of this blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             $.timeCreated = timeCreated;
             return this;

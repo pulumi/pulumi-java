@@ -24,6 +24,10 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
     @Import(name="pullDeps", required=true)
     private Boolean pullDeps;
 
+    /**
+     * @return Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+     * 
+     */
     public Boolean pullDeps() {
         return this.pullDeps;
     }
@@ -35,6 +39,10 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
     @Import(name="source", required=true)
     private OSPolicyResourceFileResponse source;
 
+    /**
+     * @return A deb package.
+     * 
+     */
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }
@@ -64,11 +72,23 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
             $ = new OSPolicyResourcePackageResourceDebResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(Boolean pullDeps) {
             $.pullDeps = pullDeps;
             return this;
         }
 
+        /**
+         * @param source A deb package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OSPolicyResourceFileResponse source) {
             $.source = source;
             return this;

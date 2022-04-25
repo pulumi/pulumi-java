@@ -33,6 +33,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="canIpForward", required=true)
     private Boolean canIpForward;
 
+    /**
+     * @return Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+     * 
+     */
     public Boolean canIpForward() {
         return this.canIpForward;
     }
@@ -44,6 +48,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="deletionProtection", required=true)
     private Boolean deletionProtection;
 
+    /**
+     * @return Whether the instance created from this machine image should be protected against deletion.
+     * 
+     */
     public Boolean deletionProtection() {
         return this.deletionProtection;
     }
@@ -55,6 +63,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional text description for the instances that are created from this machine image.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -66,6 +78,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="disks", required=true)
     private List<SavedAttachedDiskResponse> disks;
 
+    /**
+     * @return An array of disks that are associated with the instances that are created from this machine image.
+     * 
+     */
     public List<SavedAttachedDiskResponse> disks() {
         return this.disks;
     }
@@ -77,6 +93,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="guestAccelerators", required=true)
     private List<AcceleratorConfigResponse> guestAccelerators;
 
+    /**
+     * @return A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
+     * 
+     */
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
@@ -88,6 +108,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Labels to apply to instances that are created from this machine image.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -99,6 +123,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="machineType", required=true)
     private String machineType;
 
+    /**
+     * @return The machine type to use for instances that are created from this machine image.
+     * 
+     */
     public String machineType() {
         return this.machineType;
     }
@@ -110,6 +138,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="metadata", required=true)
     private MetadataResponse metadata;
 
+    /**
+     * @return The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+     * 
+     */
     public MetadataResponse metadata() {
         return this.metadata;
     }
@@ -121,6 +153,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -132,6 +168,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="networkInterfaces", required=true)
     private List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return An array of network access configurations for this interface.
+     * 
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -143,6 +183,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="postKeyRevocationActionType", required=true)
     private String postKeyRevocationActionType;
 
+    /**
+     * @return PostKeyRevocationActionType of the instance.
+     * 
+     */
     public String postKeyRevocationActionType() {
         return this.postKeyRevocationActionType;
     }
@@ -154,6 +198,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="scheduling", required=true)
     private SchedulingResponse scheduling;
 
+    /**
+     * @return Specifies the scheduling options for the instances that are created from this machine image.
+     * 
+     */
     public SchedulingResponse scheduling() {
         return this.scheduling;
     }
@@ -165,6 +213,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="serviceAccounts", required=true)
     private List<ServiceAccountResponse> serviceAccounts;
 
+    /**
+     * @return A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+     * 
+     */
     public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
@@ -176,6 +228,10 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
     @Import(name="tags", required=true)
     private TagsResponse tags;
 
+    /**
+     * @return A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+     * 
+     */
     public TagsResponse tags() {
         return this.tags;
     }
@@ -217,87 +273,195 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
             $ = new SourceInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canIpForward Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param deletionProtection Whether the instance created from this machine image should be protected against deletion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param description An optional text description for the instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<SavedAttachedDiskResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks An array of disks that are associated with the instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(SavedAttachedDiskResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators A list of guest accelerator cards&#39; type and count to use for instances created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param labels Labels to apply to instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to use for instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param metadata The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MetadataResponse metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: &#34;Intel Haswell&#34; or minCpuPlatform: &#34;Intel Sandy Bridge&#34;. For more information, read Specifying a Minimum CPU Platform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces An array of network access configurations for this interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param postKeyRevocationActionType PostKeyRevocationActionType of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             $.postKeyRevocationActionType = postKeyRevocationActionType;
             return this;
         }
 
+        /**
+         * @param scheduling Specifies the scheduling options for the instances that are created from this machine image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(SchedulingResponse scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             $.serviceAccounts = serviceAccounts;
             return this;
         }
 
+        /**
+         * @param serviceAccounts A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
             return serviceAccounts(List.of(serviceAccounts));
         }
 
+        /**
+         * @param tags A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TagsResponse tags) {
             $.tags = tags;
             return this;

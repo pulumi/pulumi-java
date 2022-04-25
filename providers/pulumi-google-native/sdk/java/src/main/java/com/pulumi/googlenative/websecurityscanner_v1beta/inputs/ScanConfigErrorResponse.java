@@ -23,6 +23,10 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Indicates the reason code for a configuration failure.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="fieldName", required=true)
     private String fieldName;
 
+    /**
+     * @return Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     * 
+     */
     public String fieldName() {
         return this.fieldName;
     }
@@ -63,11 +71,23 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
             $ = new ScanConfigErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Indicates the reason code for a configuration failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param fieldName Indicates the full name of the ScanConfig field that triggers this error, for example &#34;scan_config.max_qps&#34;. This field is provided for troubleshooting purposes only and its actual value can change in the future.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             $.fieldName = fieldName;
             return this;

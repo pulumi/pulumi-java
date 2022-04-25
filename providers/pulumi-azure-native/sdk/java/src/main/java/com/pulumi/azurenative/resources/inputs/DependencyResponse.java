@@ -27,6 +27,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dependsOn")
     private @Nullable List<BasicDependencyResponse> dependsOn;
 
+    /**
+     * @return The list of dependencies.
+     * 
+     */
     public Optional<List<BasicDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -38,6 +42,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the dependency.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName")
     private @Nullable String resourceName;
 
+    /**
+     * @return The dependency resource name.
+     * 
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -60,6 +72,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return The dependency resource type.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -91,25 +107,55 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DependencyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn The list of dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn The list of dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(BasicDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param id The ID of the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resourceName The dependency resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType The dependency resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;

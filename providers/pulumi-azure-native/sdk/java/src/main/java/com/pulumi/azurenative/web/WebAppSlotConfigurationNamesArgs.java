@@ -23,6 +23,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="appSettingNames")
     private @Nullable Output<List<String>> appSettingNames;
 
+    /**
+     * @return List of application settings names.
+     * 
+     */
     public Optional<Output<List<String>>> appSettingNames() {
         return Optional.ofNullable(this.appSettingNames);
     }
@@ -34,6 +38,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="azureStorageConfigNames")
     private @Nullable Output<List<String>> azureStorageConfigNames;
 
+    /**
+     * @return List of external Azure storage account identifiers.
+     * 
+     */
     public Optional<Output<List<String>>> azureStorageConfigNames() {
         return Optional.ofNullable(this.azureStorageConfigNames);
     }
@@ -45,6 +53,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="connectionStringNames")
     private @Nullable Output<List<String>> connectionStringNames;
 
+    /**
+     * @return List of connection string names.
+     * 
+     */
     public Optional<Output<List<String>>> connectionStringNames() {
         return Optional.ofNullable(this.connectionStringNames);
     }
@@ -56,6 +68,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -67,6 +83,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,6 +98,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,68 +135,158 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
             $ = new WebAppSlotConfigurationNamesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appSettingNames List of application settings names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettingNames(@Nullable Output<List<String>> appSettingNames) {
             $.appSettingNames = appSettingNames;
             return this;
         }
 
+        /**
+         * @param appSettingNames List of application settings names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettingNames(List<String> appSettingNames) {
             return appSettingNames(Output.of(appSettingNames));
         }
 
+        /**
+         * @param appSettingNames List of application settings names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSettingNames(String... appSettingNames) {
             return appSettingNames(List.of(appSettingNames));
         }
 
+        /**
+         * @param azureStorageConfigNames List of external Azure storage account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageConfigNames(@Nullable Output<List<String>> azureStorageConfigNames) {
             $.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
 
+        /**
+         * @param azureStorageConfigNames List of external Azure storage account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageConfigNames(List<String> azureStorageConfigNames) {
             return azureStorageConfigNames(Output.of(azureStorageConfigNames));
         }
 
+        /**
+         * @param azureStorageConfigNames List of external Azure storage account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageConfigNames(String... azureStorageConfigNames) {
             return azureStorageConfigNames(List.of(azureStorageConfigNames));
         }
 
+        /**
+         * @param connectionStringNames List of connection string names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringNames(@Nullable Output<List<String>> connectionStringNames) {
             $.connectionStringNames = connectionStringNames;
             return this;
         }
 
+        /**
+         * @param connectionStringNames List of connection string names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringNames(List<String> connectionStringNames) {
             return connectionStringNames(Output.of(connectionStringNames));
         }
 
+        /**
+         * @param connectionStringNames List of connection string names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringNames(String... connectionStringNames) {
             return connectionStringNames(List.of(connectionStringNames));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

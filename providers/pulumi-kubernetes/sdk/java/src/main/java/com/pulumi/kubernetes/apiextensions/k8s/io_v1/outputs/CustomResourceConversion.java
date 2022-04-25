@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomResourceConversion {
     /**
-     * strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
+     * @return strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.
      * 
      */
     private final String strategy;
     /**
-     * webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
+     * @return webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
      * 
      */
     private final @Nullable WebhookConversion webhook;
@@ -33,17 +33,17 @@ public final class CustomResourceConversion {
     }
 
     /**
-     * strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
+     * @return strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.
      * 
-    */
+     */
     public String strategy() {
         return this.strategy;
     }
     /**
-     * webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
+     * @return webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
      * 
-    */
+     */
     public Optional<WebhookConversion> webhook() {
         return Optional.ofNullable(this.webhook);
     }

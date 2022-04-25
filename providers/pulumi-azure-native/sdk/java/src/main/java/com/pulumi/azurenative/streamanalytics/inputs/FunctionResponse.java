@@ -26,6 +26,10 @@ public final class FunctionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class FunctionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class FunctionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable ScalarFunctionPropertiesResponse properties;
 
+    /**
+     * @return The properties that are associated with a function.
+     * 
+     */
     public Optional<ScalarFunctionPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -59,6 +71,10 @@ public final class FunctionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -90,21 +106,45 @@ public final class FunctionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FunctionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable ScalarFunctionPropertiesResponse properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

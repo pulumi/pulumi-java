@@ -22,6 +22,11 @@ public final class AuthorityConfigGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="subjectConfig", required=true)
     private Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
 
+    /**
+     * @return Specifies some of the values in a certificate that are related to the subject.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
     }
@@ -34,6 +39,11 @@ public final class AuthorityConfigGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="x509Config", required=true)
     private Output<AuthorityConfigX509ConfigGetArgs> x509Config;
 
+    /**
+     * @return Describes how some of the technical X.509 fields in a certificate should be populated.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
@@ -63,20 +73,48 @@ public final class AuthorityConfigGetArgs extends com.pulumi.resources.ResourceA
             $ = new AuthorityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig) {
             $.subjectConfig = subjectConfig;
             return this;
         }
 
+        /**
+         * @param subjectConfig Specifies some of the values in a certificate that are related to the subject.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectConfig(AuthorityConfigSubjectConfigGetArgs subjectConfig) {
             return subjectConfig(Output.of(subjectConfig));
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(Output<AuthorityConfigX509ConfigGetArgs> x509Config) {
             $.x509Config = x509Config;
             return this;
         }
 
+        /**
+         * @param x509Config Describes how some of the technical X.509 fields in a certificate should be populated.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509Config(AuthorityConfigX509ConfigGetArgs x509Config) {
             return x509Config(Output.of(x509Config));
         }

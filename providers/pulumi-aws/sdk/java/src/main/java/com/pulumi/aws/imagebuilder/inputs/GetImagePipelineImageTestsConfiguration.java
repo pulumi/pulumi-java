@@ -20,6 +20,10 @@ public final class GetImagePipelineImageTestsConfiguration extends com.pulumi.re
     @Import(name="imageTestsEnabled", required=true)
     private Boolean imageTestsEnabled;
 
+    /**
+     * @return Whether image tests are enabled.
+     * 
+     */
     public Boolean imageTestsEnabled() {
         return this.imageTestsEnabled;
     }
@@ -31,6 +35,10 @@ public final class GetImagePipelineImageTestsConfiguration extends com.pulumi.re
     @Import(name="timeoutMinutes", required=true)
     private Integer timeoutMinutes;
 
+    /**
+     * @return Number of minutes before image tests time out.
+     * 
+     */
     public Integer timeoutMinutes() {
         return this.timeoutMinutes;
     }
@@ -60,11 +68,23 @@ public final class GetImagePipelineImageTestsConfiguration extends com.pulumi.re
             $ = new GetImagePipelineImageTestsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageTestsEnabled Whether image tests are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
             $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
+        /**
+         * @param timeoutMinutes Number of minutes before image tests time out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(Integer timeoutMinutes) {
             $.timeoutMinutes = timeoutMinutes;
             return this;

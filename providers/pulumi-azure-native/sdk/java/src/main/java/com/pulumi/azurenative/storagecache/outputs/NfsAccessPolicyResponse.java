@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class NfsAccessPolicyResponse {
     /**
-     * The set of rules describing client accesses allowed under this policy.
+     * @return The set of rules describing client accesses allowed under this policy.
      * 
      */
     private final List<NfsAccessRuleResponse> accessRules;
     /**
-     * Name identifying this policy. Access Policy names are not case sensitive.
+     * @return Name identifying this policy. Access Policy names are not case sensitive.
      * 
      */
     private final String name;
@@ -31,16 +31,16 @@ public final class NfsAccessPolicyResponse {
     }
 
     /**
-     * The set of rules describing client accesses allowed under this policy.
+     * @return The set of rules describing client accesses allowed under this policy.
      * 
-    */
+     */
     public List<NfsAccessRuleResponse> accessRules() {
         return this.accessRules;
     }
     /**
-     * Name identifying this policy. Access Policy names are not case sensitive.
+     * @return Name identifying this policy. Access Policy names are not case sensitive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

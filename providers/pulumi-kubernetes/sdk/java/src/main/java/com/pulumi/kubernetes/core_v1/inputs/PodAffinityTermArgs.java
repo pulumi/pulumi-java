@@ -28,6 +28,10 @@ public final class PodAffinityTermArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="labelSelector")
     private @Nullable Output<LabelSelectorArgs> labelSelector;
 
+    /**
+     * @return A label query over a set of resources, in this case pods.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> labelSelector() {
         return Optional.ofNullable(this.labelSelector);
     }
@@ -39,6 +43,10 @@ public final class PodAffinityTermArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaceSelector")
     private @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
+    /**
+     * @return A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means &#34;this pod&#39;s namespace&#34;. An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> namespaceSelector() {
         return Optional.ofNullable(this.namespaceSelector);
     }
@@ -50,6 +58,10 @@ public final class PodAffinityTermArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaces")
     private @Nullable Output<List<String>> namespaces;
 
+    /**
+     * @return namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means &#34;this pod&#39;s namespace&#34;
+     * 
+     */
     public Optional<Output<List<String>>> namespaces() {
         return Optional.ofNullable(this.namespaces);
     }
@@ -61,6 +73,10 @@ public final class PodAffinityTermArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="topologyKey", required=true)
     private Output<String> topologyKey;
 
+    /**
+     * @return This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.
+     * 
+     */
     public Output<String> topologyKey() {
         return this.topologyKey;
     }
@@ -92,42 +108,96 @@ public final class PodAffinityTermArgs extends com.pulumi.resources.ResourceArgs
             $ = new PodAffinityTermArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labelSelector A label query over a set of resources, in this case pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelSelector(@Nullable Output<LabelSelectorArgs> labelSelector) {
             $.labelSelector = labelSelector;
             return this;
         }
 
+        /**
+         * @param labelSelector A label query over a set of resources, in this case pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelSelector(LabelSelectorArgs labelSelector) {
             return labelSelector(Output.of(labelSelector));
         }
 
+        /**
+         * @param namespaceSelector A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means &#34;this pod&#39;s namespace&#34;. An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
             $.namespaceSelector = namespaceSelector;
             return this;
         }
 
+        /**
+         * @param namespaceSelector A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means &#34;this pod&#39;s namespace&#34;. An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceSelector(LabelSelectorArgs namespaceSelector) {
             return namespaceSelector(Output.of(namespaceSelector));
         }
 
+        /**
+         * @param namespaces namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means &#34;this pod&#39;s namespace&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
             $.namespaces = namespaces;
             return this;
         }
 
+        /**
+         * @param namespaces namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means &#34;this pod&#39;s namespace&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaces(List<String> namespaces) {
             return namespaces(Output.of(namespaces));
         }
 
+        /**
+         * @param namespaces namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means &#34;this pod&#39;s namespace&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaces(String... namespaces) {
             return namespaces(List.of(namespaces));
         }
 
+        /**
+         * @param topologyKey This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKey(Output<String> topologyKey) {
             $.topologyKey = topologyKey;
             return this;
         }
 
+        /**
+         * @param topologyKey This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKey(String topologyKey) {
             return topologyKey(Output.of(topologyKey));
         }

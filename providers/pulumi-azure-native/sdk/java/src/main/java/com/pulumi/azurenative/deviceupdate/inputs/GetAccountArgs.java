@@ -19,6 +19,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

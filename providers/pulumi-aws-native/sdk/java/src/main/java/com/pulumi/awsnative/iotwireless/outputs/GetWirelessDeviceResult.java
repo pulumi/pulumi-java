@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWirelessDeviceResult {
     /**
-     * Wireless device arn. Returned after successful create.
+     * @return Wireless device arn. Returned after successful create.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Wireless device description
+     * @return Wireless device description
      * 
      */
     private final @Nullable String description;
     /**
-     * Wireless device destination name
+     * @return Wireless device destination name
      * 
      */
     private final @Nullable String destinationName;
     /**
-     * Wireless device Id. Returned after successful create.
+     * @return Wireless device Id. Returned after successful create.
      * 
      */
     private final @Nullable String id;
     /**
-     * The date and time when the most recent uplink was received.
+     * @return The date and time when the most recent uplink was received.
      * 
      */
     private final @Nullable String lastUplinkReceivedAt;
     /**
-     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
      */
     private final @Nullable WirelessDeviceLoRaWANDevice loRaWAN;
     /**
-     * Wireless device name
+     * @return Wireless device name
      * 
      */
     private final @Nullable String name;
     /**
-     * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
      */
     private final @Nullable List<WirelessDeviceTag> tags;
     /**
-     * Thing arn. Passed into update to associate Thing with Wireless device.
+     * @return Thing arn. Passed into update to associate Thing with Wireless device.
      * 
      */
     private final @Nullable String thingArn;
     /**
-     * Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
      */
     private final @Nullable String thingName;
     /**
-     * Wireless device type, currently only Sidewalk and LoRa
+     * @return Wireless device type, currently only Sidewalk and LoRa
      * 
      */
     private final @Nullable WirelessDeviceType type;
@@ -98,79 +98,79 @@ public final class GetWirelessDeviceResult {
     }
 
     /**
-     * Wireless device arn. Returned after successful create.
+     * @return Wireless device arn. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Wireless device description
+     * @return Wireless device description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Wireless device destination name
+     * @return Wireless device destination name
      * 
-    */
+     */
     public Optional<String> destinationName() {
         return Optional.ofNullable(this.destinationName);
     }
     /**
-     * Wireless device Id. Returned after successful create.
+     * @return Wireless device Id. Returned after successful create.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The date and time when the most recent uplink was received.
+     * @return The date and time when the most recent uplink was received.
      * 
-    */
+     */
     public Optional<String> lastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
     /**
-     * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
-    */
+     */
     public Optional<WirelessDeviceLoRaWANDevice> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
-     * Wireless device name
+     * @return Wireless device name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
-    */
+     */
     public List<WirelessDeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * Thing arn. Passed into update to associate Thing with Wireless device.
+     * @return Thing arn. Passed into update to associate Thing with Wireless device.
      * 
-    */
+     */
     public Optional<String> thingArn() {
         return Optional.ofNullable(this.thingArn);
     }
     /**
-     * Thing Arn. If there is a Thing created, this can be returned with a Get call.
+     * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
-    */
+     */
     public Optional<String> thingName() {
         return Optional.ofNullable(this.thingName);
     }
     /**
-     * Wireless device type, currently only Sidewalk and LoRa
+     * @return Wireless device type, currently only Sidewalk and LoRa
      * 
-    */
+     */
     public Optional<WirelessDeviceType> type() {
         return Optional.ofNullable(this.type);
     }

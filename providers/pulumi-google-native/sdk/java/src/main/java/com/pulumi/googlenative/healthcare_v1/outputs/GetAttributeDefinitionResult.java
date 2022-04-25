@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetAttributeDefinitionResult {
     /**
-     * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+     * @return Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
      * 
      */
     private final List<String> allowedValues;
     /**
-     * The category of the attribute. The value of this field cannot be changed after creation.
+     * @return The category of the attribute. The value of this field cannot be changed after creation.
      * 
      */
     private final String category;
     /**
-     * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+     * @return Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
      * 
      */
     private final List<String> consentDefaultValues;
     /**
-     * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+     * @return Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
      * 
      */
     private final String dataMappingDefaultValue;
     /**
-     * Optional. A description of the attribute.
+     * @return Optional. A description of the attribute.
      * 
      */
     private final String description;
     /**
-     * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+     * @return Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
      * 
      */
     private final String name;
@@ -58,44 +58,44 @@ public final class GetAttributeDefinitionResult {
     }
 
     /**
-     * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
+     * @return Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
      * 
-    */
+     */
     public List<String> allowedValues() {
         return this.allowedValues;
     }
     /**
-     * The category of the attribute. The value of this field cannot be changed after creation.
+     * @return The category of the attribute. The value of this field cannot be changed after creation.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
+     * @return Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
      * 
-    */
+     */
     public List<String> consentDefaultValues() {
         return this.consentDefaultValues;
     }
     /**
-     * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
+     * @return Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
      * 
-    */
+     */
     public String dataMappingDefaultValue() {
         return this.dataMappingDefaultValue;
     }
     /**
-     * Optional. A description of the attribute.
+     * @return Optional. A description of the attribute.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
+     * @return Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

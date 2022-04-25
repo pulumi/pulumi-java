@@ -28,6 +28,10 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalVariables", required=true)
     private List<ConfigVariableResponse> additionalVariables;
 
+    /**
+     * @return List containing additional auth configs.
+     * 
+     */
     public List<ConfigVariableResponse> additionalVariables() {
         return this.additionalVariables;
     }
@@ -39,6 +43,10 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The type of authentication configured.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -50,6 +58,10 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oauth2ClientCredentials", required=true)
     private Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
+    /**
+     * @return Oauth2ClientCredentials.
+     * 
+     */
     public Oauth2ClientCredentialsResponse oauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
@@ -61,6 +73,10 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oauth2JwtBearer", required=true)
     private Oauth2JwtBearerResponse oauth2JwtBearer;
 
+    /**
+     * @return Oauth2JwtBearer.
+     * 
+     */
     public Oauth2JwtBearerResponse oauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
@@ -72,6 +88,10 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userPassword", required=true)
     private UserPasswordResponse userPassword;
 
+    /**
+     * @return UserPassword.
+     * 
+     */
     public UserPasswordResponse userPassword() {
         return this.userPassword;
     }
@@ -104,30 +124,66 @@ public final class AuthConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AuthConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalVariables List containing additional auth configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalVariables(List<ConfigVariableResponse> additionalVariables) {
             $.additionalVariables = additionalVariables;
             return this;
         }
 
+        /**
+         * @param additionalVariables List containing additional auth configs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalVariables(ConfigVariableResponse... additionalVariables) {
             return additionalVariables(List.of(additionalVariables));
         }
 
+        /**
+         * @param authType The type of authentication configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param oauth2ClientCredentials Oauth2ClientCredentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientCredentials(Oauth2ClientCredentialsResponse oauth2ClientCredentials) {
             $.oauth2ClientCredentials = oauth2ClientCredentials;
             return this;
         }
 
+        /**
+         * @param oauth2JwtBearer Oauth2JwtBearer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2JwtBearer(Oauth2JwtBearerResponse oauth2JwtBearer) {
             $.oauth2JwtBearer = oauth2JwtBearer;
             return this;
         }
 
+        /**
+         * @param userPassword UserPassword.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPassword(UserPasswordResponse userPassword) {
             $.userPassword = userPassword;
             return this;

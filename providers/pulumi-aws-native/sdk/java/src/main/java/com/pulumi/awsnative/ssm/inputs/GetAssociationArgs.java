@@ -19,6 +19,10 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="associationId", required=true)
     private String associationId;
 
+    /**
+     * @return Unique identifier of the association.
+     * 
+     */
     public String associationId() {
         return this.associationId;
     }
@@ -47,6 +51,12 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationId Unique identifier of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationId(String associationId) {
             $.associationId = associationId;
             return this;

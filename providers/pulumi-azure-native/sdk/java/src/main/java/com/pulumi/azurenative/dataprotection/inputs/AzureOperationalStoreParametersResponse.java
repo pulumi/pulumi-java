@@ -26,6 +26,10 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="dataStoreType", required=true)
     private String dataStoreType;
 
+    /**
+     * @return type of datastore; Operational/Vault/Archive
+     * 
+     */
     public String dataStoreType() {
         return this.dataStoreType;
     }
@@ -38,6 +42,11 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AzureOperationalStoreParameters&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -49,6 +58,10 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="resourceGroupId")
     private @Nullable String resourceGroupId;
 
+    /**
+     * @return Gets or sets the Snapshot Resource Group Uri.
+     * 
+     */
     public Optional<String> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
@@ -79,16 +92,35 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
             $ = new AzureOperationalStoreParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreType type of datastore; Operational/Vault/Archive
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreType(String dataStoreType) {
             $.dataStoreType = dataStoreType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureOperationalStoreParameters&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param resourceGroupId Gets or sets the Snapshot Resource Group Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;

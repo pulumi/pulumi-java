@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition {
     /**
-     * A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
+     * @return A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
      * 
      */
     private final FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction;
@@ -21,9 +21,9 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     /**
-     * A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
+     * @return A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
      * 
-    */
+     */
     public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction() {
         return this.publishMetricAction;
     }

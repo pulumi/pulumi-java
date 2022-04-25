@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class MetricBucketOptionsExplicitBuckets {
     /**
-     * The values must be monotonically increasing.
+     * @return The values must be monotonically increasing.
      * 
      */
     private final List<Double> bounds;
@@ -22,9 +22,9 @@ public final class MetricBucketOptionsExplicitBuckets {
     }
 
     /**
-     * The values must be monotonically increasing.
+     * @return The values must be monotonically increasing.
      * 
-    */
+     */
     public List<Double> bounds() {
         return this.bounds;
     }

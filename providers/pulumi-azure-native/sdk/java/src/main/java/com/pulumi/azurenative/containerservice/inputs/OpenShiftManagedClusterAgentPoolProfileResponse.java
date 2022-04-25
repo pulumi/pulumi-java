@@ -27,6 +27,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return Number of agents (VMs) to host docker containers.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -38,6 +42,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique name of the pool profile in the context of the subscription and resource group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -60,6 +72,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return Define the role of the AgentPoolProfile.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -71,6 +87,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="subnetCidr")
     private @Nullable String subnetCidr;
 
+    /**
+     * @return Subnet CIDR for the peering.
+     * 
+     */
     public Optional<String> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
@@ -82,6 +102,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
     @Import(name="vmSize", required=true)
     private String vmSize;
 
+    /**
+     * @return Size of agent VMs.
+     * 
+     */
     public String vmSize() {
         return this.vmSize;
     }
@@ -115,31 +139,67 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends com.p
             $ = new OpenShiftManagedClusterAgentPoolProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of agents (VMs) to host docker containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param name Unique name of the pool profile in the context of the subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param role Define the role of the AgentPoolProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param subnetCidr Subnet CIDR for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetCidr(@Nullable String subnetCidr) {
             $.subnetCidr = subnetCidr;
             return this;
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             $.vmSize = vmSize;
             return this;

@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiOAuthSettingsResponse {
     /**
-     * Resource provider client id
+     * @return Resource provider client id
      * 
      */
     private final @Nullable String clientId;
     /**
-     * Client Secret needed for OAuth
+     * @return Client Secret needed for OAuth
      * 
      */
     private final @Nullable String clientSecret;
     /**
-     * OAuth parameters key is the name of parameter
+     * @return OAuth parameters key is the name of parameter
      * 
      */
     private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
     /**
-     * Identity provider
+     * @return Identity provider
      * 
      */
     private final @Nullable String identityProvider;
     /**
-     * Read only properties for this oauth setting.
+     * @return Read only properties for this oauth setting.
      * 
      */
     private final @Nullable Object properties;
     /**
-     * Url
+     * @return Url
      * 
      */
     private final @Nullable String redirectUrl;
     /**
-     * OAuth scopes
+     * @return OAuth scopes
      * 
      */
     private final @Nullable List<String> scopes;
@@ -70,51 +70,51 @@ public final class ApiOAuthSettingsResponse {
     }
 
     /**
-     * Resource provider client id
+     * @return Resource provider client id
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * Client Secret needed for OAuth
+     * @return Client Secret needed for OAuth
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * OAuth parameters key is the name of parameter
+     * @return OAuth parameters key is the name of parameter
      * 
-    */
+     */
     public Map<String,ApiOAuthSettingsParameterResponse> customParameters() {
         return this.customParameters == null ? Map.of() : this.customParameters;
     }
     /**
-     * Identity provider
+     * @return Identity provider
      * 
-    */
+     */
     public Optional<String> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
     /**
-     * Read only properties for this oauth setting.
+     * @return Read only properties for this oauth setting.
      * 
-    */
+     */
     public Optional<Object> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Url
+     * @return Url
      * 
-    */
+     */
     public Optional<String> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
     /**
-     * OAuth scopes
+     * @return OAuth scopes
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

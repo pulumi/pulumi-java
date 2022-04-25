@@ -20,6 +20,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path for the route.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -31,6 +35,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port for the route.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -60,11 +68,23 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param port The port for the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

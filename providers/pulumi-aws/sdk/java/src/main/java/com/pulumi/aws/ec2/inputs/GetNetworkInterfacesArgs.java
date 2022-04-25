@@ -24,6 +24,10 @@ public final class GetNetworkInterfacesArgs extends com.pulumi.resources.InvokeA
     @Import(name="filters")
     private @Nullable List<GetNetworkInterfacesFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetNetworkInterfacesFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,11 @@ public final class GetNetworkInterfacesArgs extends com.pulumi.resources.InvokeA
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired network interfaces.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -65,15 +74,34 @@ public final class GetNetworkInterfacesArgs extends com.pulumi.resources.InvokeA
             $ = new GetNetworkInterfacesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetNetworkInterfacesFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetNetworkInterfacesFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

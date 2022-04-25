@@ -23,6 +23,10 @@ public final class ApplianceNetworkConfigurationResponse extends com.pulumi.reso
     @Import(name="macAddress", required=true)
     private String macAddress;
 
+    /**
+     * @return Mac Address.
+     * 
+     */
     public String macAddress() {
         return this.macAddress;
     }
@@ -34,6 +38,10 @@ public final class ApplianceNetworkConfigurationResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the network.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class ApplianceNetworkConfigurationResponse extends com.pulumi.reso
             $ = new ApplianceNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param macAddress Mac Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(String macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param name Name of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

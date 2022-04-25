@@ -12,24 +12,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetResourceDefaultVersionResult {
     /**
-     * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
+     * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
      * 
      */
     private final @Nullable String arn;
     /**
-     * The name of the type being registered.
+     * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
     private final @Nullable String typeName;
     /**
-     * The Amazon Resource Name (ARN) of the type version.
+     * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
     private final @Nullable String typeVersionArn;
     /**
-     * The ID of an existing version of the resource to set as the default.
+     * @return The ID of an existing version of the resource to set as the default.
      * 
      */
     private final @Nullable String versionId;
@@ -47,32 +47,32 @@ public final class GetResourceDefaultVersionResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
+     * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The name of the type being registered.
+     * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
-    */
+     */
     public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }
     /**
-     * The Amazon Resource Name (ARN) of the type version.
+     * @return The Amazon Resource Name (ARN) of the type version.
      * 
-    */
+     */
     public Optional<String> typeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
     /**
-     * The ID of an existing version of the resource to set as the default.
+     * @return The ID of an existing version of the resource to set as the default.
      * 
-    */
+     */
     public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }

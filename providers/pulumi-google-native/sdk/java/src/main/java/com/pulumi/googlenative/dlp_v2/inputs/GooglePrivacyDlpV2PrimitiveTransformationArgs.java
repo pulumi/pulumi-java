@@ -37,6 +37,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="bucketingConfig")
     private @Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig;
 
+    /**
+     * @return Bucketing
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2BucketingConfigArgs>> bucketingConfig() {
         return Optional.ofNullable(this.bucketingConfig);
     }
@@ -48,6 +52,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="characterMaskConfig")
     private @Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig;
 
+    /**
+     * @return Mask
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CharacterMaskConfigArgs>> characterMaskConfig() {
         return Optional.ofNullable(this.characterMaskConfig);
     }
@@ -59,6 +67,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="cryptoDeterministicConfig")
     private @Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig;
 
+    /**
+     * @return Deterministic Crypto
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs>> cryptoDeterministicConfig() {
         return Optional.ofNullable(this.cryptoDeterministicConfig);
     }
@@ -70,6 +82,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="cryptoHashConfig")
     private @Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig;
 
+    /**
+     * @return Crypto
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CryptoHashConfigArgs>> cryptoHashConfig() {
         return Optional.ofNullable(this.cryptoHashConfig);
     }
@@ -81,6 +97,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="cryptoReplaceFfxFpeConfig")
     private @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig;
 
+    /**
+     * @return Ffx-Fpe
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs>> cryptoReplaceFfxFpeConfig() {
         return Optional.ofNullable(this.cryptoReplaceFfxFpeConfig);
     }
@@ -92,6 +112,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="dateShiftConfig")
     private @Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig;
 
+    /**
+     * @return Date Shift
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2DateShiftConfigArgs>> dateShiftConfig() {
         return Optional.ofNullable(this.dateShiftConfig);
     }
@@ -103,6 +127,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="fixedSizeBucketingConfig")
     private @Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig;
 
+    /**
+     * @return Fixed size bucketing
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs>> fixedSizeBucketingConfig() {
         return Optional.ofNullable(this.fixedSizeBucketingConfig);
     }
@@ -114,6 +142,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="redactConfig")
     private @Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig;
 
+    /**
+     * @return Redact
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RedactConfigArgs>> redactConfig() {
         return Optional.ofNullable(this.redactConfig);
     }
@@ -125,6 +157,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="replaceConfig")
     private @Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig;
 
+    /**
+     * @return Replace with a specified value.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ReplaceValueConfigArgs>> replaceConfig() {
         return Optional.ofNullable(this.replaceConfig);
     }
@@ -136,6 +172,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="replaceDictionaryConfig")
     private @Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig;
 
+    /**
+     * @return Replace with a value randomly drawn (with replacement) from a dictionary.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs>> replaceDictionaryConfig() {
         return Optional.ofNullable(this.replaceDictionaryConfig);
     }
@@ -147,6 +187,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="replaceWithInfoTypeConfig")
     private @Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig;
 
+    /**
+     * @return Replace with infotype
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs>> replaceWithInfoTypeConfig() {
         return Optional.ofNullable(this.replaceWithInfoTypeConfig);
     }
@@ -158,6 +202,10 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
     @Import(name="timePartConfig")
     private @Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig;
 
+    /**
+     * @return Time extraction
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2TimePartConfigArgs>> timePartConfig() {
         return Optional.ofNullable(this.timePartConfig);
     }
@@ -197,110 +245,254 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationArgs extends com.pul
             $ = new GooglePrivacyDlpV2PrimitiveTransformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketingConfig Bucketing
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketingConfig(@Nullable Output<GooglePrivacyDlpV2BucketingConfigArgs> bucketingConfig) {
             $.bucketingConfig = bucketingConfig;
             return this;
         }
 
+        /**
+         * @param bucketingConfig Bucketing
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketingConfig(GooglePrivacyDlpV2BucketingConfigArgs bucketingConfig) {
             return bucketingConfig(Output.of(bucketingConfig));
         }
 
+        /**
+         * @param characterMaskConfig Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterMaskConfig(@Nullable Output<GooglePrivacyDlpV2CharacterMaskConfigArgs> characterMaskConfig) {
             $.characterMaskConfig = characterMaskConfig;
             return this;
         }
 
+        /**
+         * @param characterMaskConfig Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfigArgs characterMaskConfig) {
             return characterMaskConfig(Output.of(characterMaskConfig));
         }
 
+        /**
+         * @param cryptoDeterministicConfig Deterministic Crypto
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoDeterministicConfig(@Nullable Output<GooglePrivacyDlpV2CryptoDeterministicConfigArgs> cryptoDeterministicConfig) {
             $.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
 
+        /**
+         * @param cryptoDeterministicConfig Deterministic Crypto
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfigArgs cryptoDeterministicConfig) {
             return cryptoDeterministicConfig(Output.of(cryptoDeterministicConfig));
         }
 
+        /**
+         * @param cryptoHashConfig Crypto
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoHashConfig(@Nullable Output<GooglePrivacyDlpV2CryptoHashConfigArgs> cryptoHashConfig) {
             $.cryptoHashConfig = cryptoHashConfig;
             return this;
         }
 
+        /**
+         * @param cryptoHashConfig Crypto
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoHashConfig(GooglePrivacyDlpV2CryptoHashConfigArgs cryptoHashConfig) {
             return cryptoHashConfig(Output.of(cryptoHashConfig));
         }
 
+        /**
+         * @param cryptoReplaceFfxFpeConfig Ffx-Fpe
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoReplaceFfxFpeConfig(@Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs> cryptoReplaceFfxFpeConfig) {
             $.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
 
+        /**
+         * @param cryptoReplaceFfxFpeConfig Ffx-Fpe
+         * 
+         * @return builder
+         * 
+         */
         public Builder cryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs cryptoReplaceFfxFpeConfig) {
             return cryptoReplaceFfxFpeConfig(Output.of(cryptoReplaceFfxFpeConfig));
         }
 
+        /**
+         * @param dateShiftConfig Date Shift
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateShiftConfig(@Nullable Output<GooglePrivacyDlpV2DateShiftConfigArgs> dateShiftConfig) {
             $.dateShiftConfig = dateShiftConfig;
             return this;
         }
 
+        /**
+         * @param dateShiftConfig Date Shift
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateShiftConfig(GooglePrivacyDlpV2DateShiftConfigArgs dateShiftConfig) {
             return dateShiftConfig(Output.of(dateShiftConfig));
         }
 
+        /**
+         * @param fixedSizeBucketingConfig Fixed size bucketing
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedSizeBucketingConfig(@Nullable Output<GooglePrivacyDlpV2FixedSizeBucketingConfigArgs> fixedSizeBucketingConfig) {
             $.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
             return this;
         }
 
+        /**
+         * @param fixedSizeBucketingConfig Fixed size bucketing
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedSizeBucketingConfig(GooglePrivacyDlpV2FixedSizeBucketingConfigArgs fixedSizeBucketingConfig) {
             return fixedSizeBucketingConfig(Output.of(fixedSizeBucketingConfig));
         }
 
+        /**
+         * @param redactConfig Redact
+         * 
+         * @return builder
+         * 
+         */
         public Builder redactConfig(@Nullable Output<GooglePrivacyDlpV2RedactConfigArgs> redactConfig) {
             $.redactConfig = redactConfig;
             return this;
         }
 
+        /**
+         * @param redactConfig Redact
+         * 
+         * @return builder
+         * 
+         */
         public Builder redactConfig(GooglePrivacyDlpV2RedactConfigArgs redactConfig) {
             return redactConfig(Output.of(redactConfig));
         }
 
+        /**
+         * @param replaceConfig Replace with a specified value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceValueConfigArgs> replaceConfig) {
             $.replaceConfig = replaceConfig;
             return this;
         }
 
+        /**
+         * @param replaceConfig Replace with a specified value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceConfig(GooglePrivacyDlpV2ReplaceValueConfigArgs replaceConfig) {
             return replaceConfig(Output.of(replaceConfig));
         }
 
+        /**
+         * @param replaceDictionaryConfig Replace with a value randomly drawn (with replacement) from a dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceDictionaryConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceDictionaryConfigArgs> replaceDictionaryConfig) {
             $.replaceDictionaryConfig = replaceDictionaryConfig;
             return this;
         }
 
+        /**
+         * @param replaceDictionaryConfig Replace with a value randomly drawn (with replacement) from a dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceDictionaryConfig(GooglePrivacyDlpV2ReplaceDictionaryConfigArgs replaceDictionaryConfig) {
             return replaceDictionaryConfig(Output.of(replaceDictionaryConfig));
         }
 
+        /**
+         * @param replaceWithInfoTypeConfig Replace with infotype
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceWithInfoTypeConfig(@Nullable Output<GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs> replaceWithInfoTypeConfig) {
             $.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
 
+        /**
+         * @param replaceWithInfoTypeConfig Replace with infotype
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceWithInfoTypeConfig(GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs replaceWithInfoTypeConfig) {
             return replaceWithInfoTypeConfig(Output.of(replaceWithInfoTypeConfig));
         }
 
+        /**
+         * @param timePartConfig Time extraction
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartConfig(@Nullable Output<GooglePrivacyDlpV2TimePartConfigArgs> timePartConfig) {
             $.timePartConfig = timePartConfig;
             return this;
         }
 
+        /**
+         * @param timePartConfig Time extraction
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePartConfig(GooglePrivacyDlpV2TimePartConfigArgs timePartConfig) {
             return timePartConfig(Output.of(timePartConfig));
         }

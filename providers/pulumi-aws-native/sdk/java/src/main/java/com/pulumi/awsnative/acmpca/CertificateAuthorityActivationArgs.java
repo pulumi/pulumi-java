@@ -22,6 +22,10 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
     @Import(name="certificate", required=true)
     private Output<String> certificate;
 
+    /**
+     * @return Certificate Authority certificate that will be installed in the Certificate Authority.
+     * 
+     */
     public Output<String> certificate() {
         return this.certificate;
     }
@@ -33,6 +37,10 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
     @Import(name="certificateAuthorityArn", required=true)
     private Output<String> certificateAuthorityArn;
 
+    /**
+     * @return Arn of the Certificate Authority.
+     * 
+     */
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -44,6 +52,10 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
     @Import(name="certificateChain")
     private @Nullable Output<String> certificateChain;
 
+    /**
+     * @return Certificate chain for the Certificate Authority certificate.
+     * 
+     */
     public Optional<Output<String>> certificateChain() {
         return Optional.ofNullable(this.certificateChain);
     }
@@ -55,6 +67,10 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The status of the Certificate Authority.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -86,38 +102,86 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
             $ = new CertificateAuthorityActivationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate Certificate Authority certificate that will be installed in the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate Certificate Authority certificate that will be installed in the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param certificateAuthorityArn Arn of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn Arn of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
 
+        /**
+         * @param certificateChain Certificate chain for the Certificate Authority certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain Certificate chain for the Certificate Authority certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }
 
+        /**
+         * @param status The status of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

@@ -15,35 +15,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSubnetworkResult {
     /**
-     * Description of this subnetwork.
+     * @return Description of this subnetwork.
      * 
      */
     private final String description;
     /**
-     * The IP address of the gateway.
+     * @return The IP address of the gateway.
      * 
      */
     private final String gatewayAddress;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The range of IP addresses belonging to this subnetwork
+     * @return The range of IP addresses belonging to this subnetwork
      * secondary range.
      * 
      */
     private final String ipCidrRange;
     private final @Nullable String name;
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
      */
     private final String network;
     /**
-     * Whether the VMs in this subnet
+     * @return Whether the VMs in this subnet
      * can access Google services without assigned external IP
      * addresses.
      * 
@@ -52,7 +52,7 @@ public final class GetSubnetworkResult {
     private final String project;
     private final String region;
     /**
-     * An array of configurations for secondary IP ranges for
+     * @return An array of configurations for secondary IP ranges for
      * VM instances contained in this subnetwork. Structure is documented below.
      * 
      */
@@ -86,31 +86,31 @@ public final class GetSubnetworkResult {
     }
 
     /**
-     * Description of this subnetwork.
+     * @return Description of this subnetwork.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The IP address of the gateway.
+     * @return The IP address of the gateway.
      * 
-    */
+     */
     public String gatewayAddress() {
         return this.gatewayAddress;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The range of IP addresses belonging to this subnetwork
+     * @return The range of IP addresses belonging to this subnetwork
      * secondary range.
      * 
-    */
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -118,19 +118,19 @@ public final class GetSubnetworkResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
     /**
-     * Whether the VMs in this subnet
+     * @return Whether the VMs in this subnet
      * can access Google services without assigned external IP
      * addresses.
      * 
-    */
+     */
     public Boolean privateIpGoogleAccess() {
         return this.privateIpGoogleAccess;
     }
@@ -141,10 +141,10 @@ public final class GetSubnetworkResult {
         return this.region;
     }
     /**
-     * An array of configurations for secondary IP ranges for
+     * @return An array of configurations for secondary IP ranges for
      * VM instances contained in this subnetwork. Structure is documented below.
      * 
-    */
+     */
     public List<GetSubnetworkSecondaryIpRange> secondaryIpRanges() {
         return this.secondaryIpRanges;
     }

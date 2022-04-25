@@ -23,6 +23,10 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
     @Import(name="blackhole")
     private @Nullable Output<Boolean> blackhole;
 
+    /**
+     * @return Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> blackhole() {
         return Optional.ofNullable(this.blackhole);
     }
@@ -34,6 +38,10 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
     @Import(name="prefixListId")
     private @Nullable Output<String> prefixListId;
 
+    /**
+     * @return Identifier of EC2 Prefix List.
+     * 
+     */
     public Optional<Output<String>> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
@@ -52,6 +60,10 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
     @Import(name="transitGatewayAttachmentId")
     private @Nullable Output<String> transitGatewayAttachmentId;
 
+    /**
+     * @return Identifier of EC2 Transit Gateway Attachment.
+     * 
+     */
     public Optional<Output<String>> transitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
@@ -63,6 +75,10 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
     @Import(name="transitGatewayRouteTableId")
     private @Nullable Output<String> transitGatewayRouteTableId;
 
+    /**
+     * @return Identifier of EC2 Transit Gateway Route Table.
+     * 
+     */
     public Optional<Output<String>> transitGatewayRouteTableId() {
         return Optional.ofNullable(this.transitGatewayRouteTableId);
     }
@@ -95,20 +111,44 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
             $ = new PrefixListReferenceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blackhole Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blackhole(@Nullable Output<Boolean> blackhole) {
             $.blackhole = blackhole;
             return this;
         }
 
+        /**
+         * @param blackhole Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blackhole(Boolean blackhole) {
             return blackhole(Output.of(blackhole));
         }
 
+        /**
+         * @param prefixListId Identifier of EC2 Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
             $.prefixListId = prefixListId;
             return this;
         }
 
+        /**
+         * @param prefixListId Identifier of EC2 Prefix List.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListId(String prefixListId) {
             return prefixListId(Output.of(prefixListId));
         }
@@ -122,20 +162,44 @@ public final class PrefixListReferenceState extends com.pulumi.resources.Resourc
             return prefixListOwnerId(Output.of(prefixListOwnerId));
         }
 
+        /**
+         * @param transitGatewayAttachmentId Identifier of EC2 Transit Gateway Attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
+        /**
+         * @param transitGatewayAttachmentId Identifier of EC2 Transit Gateway Attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
 
+        /**
+         * @param transitGatewayRouteTableId Identifier of EC2 Transit Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
             $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param transitGatewayRouteTableId Identifier of EC2 Transit Gateway Route Table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
             return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
         }

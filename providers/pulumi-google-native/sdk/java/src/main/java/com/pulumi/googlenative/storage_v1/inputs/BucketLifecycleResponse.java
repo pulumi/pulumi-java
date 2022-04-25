@@ -24,6 +24,10 @@ public final class BucketLifecycleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="rule", required=true)
     private List<BucketLifecycleRuleItemResponse> rule;
 
+    /**
+     * @return A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+     * 
+     */
     public List<BucketLifecycleRuleItemResponse> rule() {
         return this.rule;
     }
@@ -52,11 +56,23 @@ public final class BucketLifecycleResponse extends com.pulumi.resources.InvokeAr
             $ = new BucketLifecycleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rule A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(List<BucketLifecycleRuleItemResponse> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(BucketLifecycleRuleItemResponse... rule) {
             return rule(List.of(rule));
         }

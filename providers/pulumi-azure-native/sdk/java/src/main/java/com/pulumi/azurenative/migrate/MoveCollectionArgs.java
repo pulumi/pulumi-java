@@ -25,6 +25,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return Defines the MSI properties of the Move Collection.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -36,6 +40,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="moveCollectionName")
     private @Nullable Output<String> moveCollectionName;
 
+    /**
+     * @return The Move Collection Name.
+     * 
+     */
     public Optional<Output<String>> moveCollectionName() {
         return Optional.ofNullable(this.moveCollectionName);
     }
@@ -58,6 +70,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<MoveCollectionPropertiesArgs> properties;
 
+    /**
+     * @return Defines the move collection properties.
+     * 
+     */
     public Optional<Output<MoveCollectionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -69,6 +85,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class MoveCollectionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MoveCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity Defines the MSI properties of the Move Collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Defines the MSI properties of the Move Collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(@Nullable Output<String> moveCollectionName) {
             $.moveCollectionName = moveCollectionName;
             return this;
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(String moveCollectionName) {
             return moveCollectionName(Output.of(moveCollectionName));
         }
 
+        /**
+         * @param properties Defines the move collection properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MoveCollectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Defines the move collection properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MoveCollectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

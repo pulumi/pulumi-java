@@ -33,6 +33,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoStart")
     private @Nullable Output<Boolean> autoStart;
 
+    /**
+     * @return Determines if the connection monitor will start automatically once created.
+     * 
+     */
     public Optional<Output<Boolean>> autoStart() {
         return Optional.ofNullable(this.autoStart);
     }
@@ -44,6 +48,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectionMonitorName")
     private @Nullable Output<String> connectionMonitorName;
 
+    /**
+     * @return The name of the connection monitor.
+     * 
+     */
     public Optional<Output<String>> connectionMonitorName() {
         return Optional.ofNullable(this.connectionMonitorName);
     }
@@ -55,6 +63,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="destination")
     private @Nullable Output<ConnectionMonitorDestinationArgs> destination;
 
+    /**
+     * @return Describes the destination of connection monitor.
+     * 
+     */
     public Optional<Output<ConnectionMonitorDestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -66,6 +78,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpoints")
     private @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
 
+    /**
+     * @return List of connection monitor endpoints.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -77,6 +93,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Connection monitor location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -88,6 +108,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="migrate")
     private @Nullable Output<String> migrate;
 
+    /**
+     * @return Value indicating whether connection monitor V1 should be migrated to V2 format.
+     * 
+     */
     public Optional<Output<String>> migrate() {
         return Optional.ofNullable(this.migrate);
     }
@@ -99,6 +123,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitoringIntervalInSeconds")
     private @Nullable Output<Integer> monitoringIntervalInSeconds;
 
+    /**
+     * @return Monitoring interval in seconds.
+     * 
+     */
     public Optional<Output<Integer>> monitoringIntervalInSeconds() {
         return Optional.ofNullable(this.monitoringIntervalInSeconds);
     }
@@ -110,6 +138,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkWatcherName", required=true)
     private Output<String> networkWatcherName;
 
+    /**
+     * @return The name of the Network Watcher resource.
+     * 
+     */
     public Output<String> networkWatcherName() {
         return this.networkWatcherName;
     }
@@ -121,6 +153,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return Optional notes to be associated with the connection monitor.
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -132,6 +168,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="outputs")
     private @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
 
+    /**
+     * @return List of connection monitor outputs.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorOutputArgs>>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
@@ -143,6 +183,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing Network Watcher.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -154,6 +198,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="source")
     private @Nullable Output<ConnectionMonitorSourceArgs> source;
 
+    /**
+     * @return Describes the source of connection monitor.
+     * 
+     */
     public Optional<Output<ConnectionMonitorSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -165,6 +213,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Connection monitor tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -176,6 +228,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testConfigurations")
     private @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
+    /**
+     * @return List of connection monitor test configurations.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorTestConfigurationArgs>>> testConfigurations() {
         return Optional.ofNullable(this.testConfigurations);
     }
@@ -187,6 +243,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
     @Import(name="testGroups")
     private @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
 
+    /**
+     * @return List of connection monitor test groups.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorTestGroupArgs>>> testGroups() {
         return Optional.ofNullable(this.testGroups);
     }
@@ -229,153 +289,357 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
             $ = new ConnectionMonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoStart Determines if the connection monitor will start automatically once created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
             $.autoStart = autoStart;
             return this;
         }
 
+        /**
+         * @param autoStart Determines if the connection monitor will start automatically once created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStart(Boolean autoStart) {
             return autoStart(Output.of(autoStart));
         }
 
+        /**
+         * @param connectionMonitorName The name of the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorName(@Nullable Output<String> connectionMonitorName) {
             $.connectionMonitorName = connectionMonitorName;
             return this;
         }
 
+        /**
+         * @param connectionMonitorName The name of the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorName(String connectionMonitorName) {
             return connectionMonitorName(Output.of(connectionMonitorName));
         }
 
+        /**
+         * @param destination Describes the destination of connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<ConnectionMonitorDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Describes the destination of connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(ConnectionMonitorDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param endpoints List of connection monitor endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints List of connection monitor endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<ConnectionMonitorEndpointArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param endpoints List of connection monitor endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(ConnectionMonitorEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param location Connection monitor location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Connection monitor location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migrate Value indicating whether connection monitor V1 should be migrated to V2 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrate(@Nullable Output<String> migrate) {
             $.migrate = migrate;
             return this;
         }
 
+        /**
+         * @param migrate Value indicating whether connection monitor V1 should be migrated to V2 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrate(String migrate) {
             return migrate(Output.of(migrate));
         }
 
+        /**
+         * @param monitoringIntervalInSeconds Monitoring interval in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringIntervalInSeconds(@Nullable Output<Integer> monitoringIntervalInSeconds) {
             $.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param monitoringIntervalInSeconds Monitoring interval in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringIntervalInSeconds(Integer monitoringIntervalInSeconds) {
             return monitoringIntervalInSeconds(Output.of(monitoringIntervalInSeconds));
         }
 
+        /**
+         * @param networkWatcherName The name of the Network Watcher resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherName(Output<String> networkWatcherName) {
             $.networkWatcherName = networkWatcherName;
             return this;
         }
 
+        /**
+         * @param networkWatcherName The name of the Network Watcher resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherName(String networkWatcherName) {
             return networkWatcherName(Output.of(networkWatcherName));
         }
 
+        /**
+         * @param notes Optional notes to be associated with the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes Optional notes to be associated with the connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param outputs List of connection monitor outputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(@Nullable Output<List<ConnectionMonitorOutputArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs List of connection monitor outputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(List<ConnectionMonitorOutputArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
+        /**
+         * @param outputs List of connection monitor outputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(ConnectionMonitorOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing Network Watcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing Network Watcher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Describes the source of connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<ConnectionMonitorSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Describes the source of connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(ConnectionMonitorSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Connection monitor tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Connection monitor tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param testConfigurations List of connection monitor test configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(@Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
             $.testConfigurations = testConfigurations;
             return this;
         }
 
+        /**
+         * @param testConfigurations List of connection monitor test configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
             return testConfigurations(Output.of(testConfigurations));
         }
 
+        /**
+         * @param testConfigurations List of connection monitor test configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(ConnectionMonitorTestConfigurationArgs... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
         }
 
+        /**
+         * @param testGroups List of connection monitor test groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testGroups(@Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
             $.testGroups = testGroups;
             return this;
         }
 
+        /**
+         * @param testGroups List of connection monitor test groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testGroups(List<ConnectionMonitorTestGroupArgs> testGroups) {
             return testGroups(Output.of(testGroups));
         }
 
+        /**
+         * @param testGroups List of connection monitor test groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testGroups(ConnectionMonitorTestGroupArgs... testGroups) {
             return testGroups(List.of(testGroups));
         }

@@ -20,6 +20,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return The private link service connection description.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -31,6 +35,10 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return The private link service connection status.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -60,20 +68,44 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
             $ = new PrivateLinkServiceConnectionStatePropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The private link service connection description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The private link service connection status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

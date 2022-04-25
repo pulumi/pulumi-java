@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetKeyPairResult {
     /**
-     * The ARN of the Key Pair.
+     * @return The ARN of the Key Pair.
      * 
      */
     private final String arn;
     private final @Nullable List<GetKeyPairFilter> filters;
     /**
-     * The SHA-1 digest of the DER encoded private key.
+     * @return The SHA-1 digest of the DER encoded private key.
      * 
      */
     private final String fingerprint;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable String keyName;
     private final @Nullable String keyPairId;
     /**
-     * Any tags assigned to the Key Pair.
+     * @return Any tags assigned to the Key Pair.
      * 
      */
     private final Map<String,String> tags;
@@ -57,9 +57,9 @@ public final class GetKeyPairResult {
     }
 
     /**
-     * The ARN of the Key Pair.
+     * @return The ARN of the Key Pair.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -67,16 +67,16 @@ public final class GetKeyPairResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The SHA-1 digest of the DER encoded private key.
+     * @return The SHA-1 digest of the DER encoded private key.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -87,9 +87,9 @@ public final class GetKeyPairResult {
         return Optional.ofNullable(this.keyPairId);
     }
     /**
-     * Any tags assigned to the Key Pair.
+     * @return Any tags assigned to the Key Pair.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

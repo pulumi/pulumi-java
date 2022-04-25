@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchTemplateMonitoring {
     /**
-     * If `true`, the launched EC2 instance will have detailed monitoring enabled.
+     * @return If `true`, the launched EC2 instance will have detailed monitoring enabled.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -23,9 +23,9 @@ public final class LaunchTemplateMonitoring {
     }
 
     /**
-     * If `true`, the launched EC2 instance will have detailed monitoring enabled.
+     * @return If `true`, the launched EC2 instance will have detailed monitoring enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

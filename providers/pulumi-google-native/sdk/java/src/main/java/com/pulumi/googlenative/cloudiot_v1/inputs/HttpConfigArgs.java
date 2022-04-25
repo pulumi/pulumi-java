@@ -26,6 +26,10 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpEnabledState")
     private @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
+    /**
+     * @return If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+     * 
+     */
     public Optional<Output<HttpConfigHttpEnabledState>> httpEnabledState() {
         return Optional.ofNullable(this.httpEnabledState);
     }
@@ -54,11 +58,23 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpEnabledState If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEnabledState(@Nullable Output<HttpConfigHttpEnabledState> httpEnabledState) {
             $.httpEnabledState = httpEnabledState;
             return this;
         }
 
+        /**
+         * @param httpEnabledState If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpEnabledState(HttpConfigHttpEnabledState httpEnabledState) {
             return httpEnabledState(Output.of(httpEnabledState));
         }

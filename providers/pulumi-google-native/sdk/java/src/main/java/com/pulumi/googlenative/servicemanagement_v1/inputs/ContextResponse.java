@@ -24,6 +24,10 @@ public final class ContextResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
     private List<ContextRuleResponse> rules;
 
+    /**
+     * @return A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public List<ContextRuleResponse> rules() {
         return this.rules;
     }
@@ -52,11 +56,23 @@ public final class ContextResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ContextRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ContextRuleResponse... rules) {
             return rules(List.of(rules));
         }

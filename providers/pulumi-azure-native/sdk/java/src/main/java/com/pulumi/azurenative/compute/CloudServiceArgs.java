@@ -24,6 +24,10 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudServiceName")
     private @Nullable Output<String> cloudServiceName;
 
+    /**
+     * @return Name of the cloud service.
+     * 
+     */
     public Optional<Output<String>> cloudServiceName() {
         return Optional.ofNullable(this.cloudServiceName);
     }
@@ -35,6 +39,10 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<CloudServicePropertiesArgs> properties;
 
+    /**
+     * @return Cloud service properties
+     * 
+     */
     public Optional<Output<CloudServicePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -57,6 +69,10 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class CloudServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CloudServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudServiceName Name of the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceName(@Nullable Output<String> cloudServiceName) {
             $.cloudServiceName = cloudServiceName;
             return this;
         }
 
+        /**
+         * @param cloudServiceName Name of the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceName(String cloudServiceName) {
             return cloudServiceName(Output.of(cloudServiceName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties Cloud service properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CloudServicePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Cloud service properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CloudServicePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

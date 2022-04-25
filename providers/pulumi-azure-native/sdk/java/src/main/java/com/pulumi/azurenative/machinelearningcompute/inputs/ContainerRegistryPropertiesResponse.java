@@ -25,6 +25,10 @@ public final class ContainerRegistryPropertiesResponse extends com.pulumi.resour
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -53,6 +57,12 @@ public final class ContainerRegistryPropertiesResponse extends com.pulumi.resour
             $ = new ContainerRegistryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId ARM resource ID of the Azure Container Registry used to store Docker images for web services in the cluster. If not provided one will be created. This cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

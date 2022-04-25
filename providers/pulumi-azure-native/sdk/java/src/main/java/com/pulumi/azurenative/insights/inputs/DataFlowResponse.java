@@ -26,6 +26,10 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destinations")
     private @Nullable List<String> destinations;
 
+    /**
+     * @return List of destinations for this data flow.
+     * 
+     */
     public Optional<List<String>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -37,6 +41,10 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="streams")
     private @Nullable List<String> streams;
 
+    /**
+     * @return List of streams for this data flow.
+     * 
+     */
     public Optional<List<String>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -66,20 +74,44 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DataFlowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of destinations for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable List<String> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of destinations for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param streams List of streams for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable List<String> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }

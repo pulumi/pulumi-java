@@ -28,6 +28,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copy")
     private @Nullable Output<JobCopyArgs> copy;
 
+    /**
+     * @return Copies a table.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobCopyArgs>> copy() {
         return Optional.ofNullable(this.copy);
     }
@@ -40,6 +45,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extract")
     private @Nullable Output<JobExtractArgs> extract;
 
+    /**
+     * @return Configures an extract job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobExtractArgs>> extract() {
         return Optional.ofNullable(this.extract);
     }
@@ -51,6 +61,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
     private Output<String> jobId;
 
+    /**
+     * @return The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     * 
+     */
     public Output<String> jobId() {
         return this.jobId;
     }
@@ -62,6 +76,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobTimeoutMs")
     private @Nullable Output<String> jobTimeoutMs;
 
+    /**
+     * @return Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     * 
+     */
     public Optional<Output<String>> jobTimeoutMs() {
         return Optional.ofNullable(this.jobTimeoutMs);
     }
@@ -73,6 +91,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this job. You can use these to organize and group your jobs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -85,6 +107,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="load")
     private @Nullable Output<JobLoadArgs> load;
 
+    /**
+     * @return Configures a load job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobLoadArgs>> load() {
         return Optional.ofNullable(this.load);
     }
@@ -96,6 +123,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geographic location of the job. The default value is US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -108,6 +139,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -120,6 +156,11 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
     private @Nullable Output<JobQueryArgs> query;
 
+    /**
+     * @return Configures a query job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<JobQueryArgs>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -156,83 +197,201 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copy Copies a table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copy(@Nullable Output<JobCopyArgs> copy) {
             $.copy = copy;
             return this;
         }
 
+        /**
+         * @param copy Copies a table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copy(JobCopyArgs copy) {
             return copy(Output.of(copy));
         }
 
+        /**
+         * @param extract Configures an extract job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(@Nullable Output<JobExtractArgs> extract) {
             $.extract = extract;
             return this;
         }
 
+        /**
+         * @param extract Configures an extract job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(JobExtractArgs extract) {
             return extract(Output.of(extract));
         }
 
+        /**
+         * @param jobId The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
+        /**
+         * @param jobId The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobId(String jobId) {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param jobTimeoutMs Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
             $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
+        /**
+         * @param jobTimeoutMs Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTimeoutMs(String jobTimeoutMs) {
             return jobTimeoutMs(Output.of(jobTimeoutMs));
         }
 
+        /**
+         * @param labels The labels associated with this job. You can use these to organize and group your jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this job. You can use these to organize and group your jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param load Configures a load job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(@Nullable Output<JobLoadArgs> load) {
             $.load = load;
             return this;
         }
 
+        /**
+         * @param load Configures a load job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(JobLoadArgs load) {
             return load(Output.of(load));
         }
 
+        /**
+         * @param location The geographic location of the job. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geographic location of the job. The default value is US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param query Configures a query job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<JobQueryArgs> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Configures a query job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(JobQueryArgs query) {
             return query(Output.of(query));
         }

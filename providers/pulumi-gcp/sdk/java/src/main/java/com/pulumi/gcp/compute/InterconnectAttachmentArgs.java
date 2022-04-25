@@ -26,6 +26,11 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="adminEnabled")
     private @Nullable Output<Boolean> adminEnabled;
 
+    /**
+     * @return Whether the VLAN attachment is enabled or disabled.  When using
+     * PARTNER type this will Pre-Activate the interconnect attachment
+     * 
+     */
     public Optional<Output<Boolean>> adminEnabled() {
         return Optional.ofNullable(this.adminEnabled);
     }
@@ -42,6 +47,15 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="bandwidth")
     private @Nullable Output<String> bandwidth;
 
+    /**
+     * @return Provisioned bandwidth capacity for the interconnect attachment.
+     * For attachments of type DEDICATED, the user can set the bandwidth.
+     * For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
+     * Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
+     * Defaults to BPS_10G
+     * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
+     * 
+     */
     public Optional<Output<String>> bandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
@@ -59,6 +73,16 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="candidateSubnets")
     private @Nullable Output<List<String>> candidateSubnets;
 
+    /**
+     * @return Up to 16 candidate prefixes that can be used to restrict the allocation
+     * of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
+     * All prefixes must be within link-local address space (169.254.0.0/16)
+     * and must be /29 or shorter (/28, /27, etc). Google will attempt to select
+     * an unused /29 from the supplied candidate prefix(es). The request will
+     * fail if all possible /29s are in use on Google&#39;s edge. If not supplied,
+     * Google will randomly select an unused /29 from all of link-local space.
+     * 
+     */
     public Optional<Output<List<String>>> candidateSubnets() {
         return Optional.ofNullable(this.candidateSubnets);
     }
@@ -70,6 +94,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -86,6 +114,15 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="edgeAvailabilityDomain")
     private @Nullable Output<String> edgeAvailabilityDomain;
 
+    /**
+     * @return Desired availability domain for the attachment. Only available for type
+     * PARTNER, at creation time. For improved reliability, customers should
+     * configure a pair of attachments with one per availability domain. The
+     * selected availability domain will be provided to the Partner via the
+     * pairing key so that the provisioned circuit will lie in the specified
+     * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+     * 
+     */
     public Optional<Output<String>> edgeAvailabilityDomain() {
         return Optional.ofNullable(this.edgeAvailabilityDomain);
     }
@@ -109,6 +146,22 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="encryption")
     private @Nullable Output<String> encryption;
 
+    /**
+     * @return Indicates the user-supplied encryption option of this interconnect
+     * attachment:
+     * NONE is the default value, which means that the attachment carries
+     * unencrypted traffic. VMs can send traffic to, or receive traffic
+     * from, this type of attachment.
+     * IPSEC indicates that the attachment carries only traffic encrypted by
+     * an IPsec device such as an HA VPN gateway. VMs cannot directly send
+     * traffic to, or receive traffic from, such an attachment. To use
+     * IPsec-encrypted Cloud Interconnect create the attachment using this
+     * option.
+     * Not currently available publicly.
+     * Default value is `NONE`.
+     * Possible values are `NONE` and `IPSEC`.
+     * 
+     */
     public Optional<Output<String>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -122,6 +175,12 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="interconnect")
     private @Nullable Output<String> interconnect;
 
+    /**
+     * @return URL of the underlying Interconnect object that this attachment&#39;s
+     * traffic will traverse through. Required if type is DEDICATED, must not
+     * be set if type is PARTNER.
+     * 
+     */
     public Optional<Output<String>> interconnect() {
         return Optional.ofNullable(this.interconnect);
     }
@@ -148,6 +207,25 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="ipsecInternalAddresses")
     private @Nullable Output<List<String>> ipsecInternalAddresses;
 
+    /**
+     * @return URL of addresses that have been reserved for the interconnect
+     * attachment, Used only for interconnect attachment that has the
+     * encryption option as IPSEC.
+     * The addresses must be RFC 1918 IP address ranges. When creating HA
+     * VPN gateway over the interconnect attachment, if the attachment is
+     * configured to use an RFC 1918 IP address, then the VPN gateway&#39;s IP
+     * address will be allocated from the IP address range specified
+     * here.
+     * For example, if the HA VPN gateway&#39;s interface 0 is paired to this
+     * interconnect attachment, then an RFC 1918 IP address for the VPN
+     * gateway interface 0 will be allocated from the IP address specified
+     * for this interconnect attachment.
+     * If this field is not specified for interconnect attachment that has
+     * encryption option as IPSEC, later on when creating HA VPN gateway on
+     * this interconnect attachment, the HA VPN gateway&#39;s IP address will be
+     * allocated from regional external IP address pool.
+     * 
+     */
     public Optional<Output<List<String>>> ipsecInternalAddresses() {
         return Optional.ofNullable(this.ipsecInternalAddresses);
     }
@@ -160,6 +238,11 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="mtu")
     private @Nullable Output<String> mtu;
 
+    /**
+     * @return Maximum Transmission Unit (MTU), in bytes, of packets passing through
+     * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+     * 
+     */
     public Optional<Output<String>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
@@ -176,6 +259,15 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The
+     * name must be 1-63 characters long, and comply with RFC1035. Specifically, the
+     * name must be 1-63 characters long and match the regular expression
+     * `a-z?` which means the first character must be a
+     * lowercase letter, and all following characters must be a dash, lowercase
+     * letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -188,6 +280,11 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -199,6 +296,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where the regional interconnect attachment resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -213,6 +314,13 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="router", required=true)
     private Output<String> router;
 
+    /**
+     * @return URL of the cloud router to be used for dynamic routing. This router must be in
+     * the same region as this InterconnectAttachment. The InterconnectAttachment will
+     * automatically connect the Interconnect to the network &amp; region within which the
+     * Cloud Router is configured.
+     * 
+     */
     public Output<String> router() {
         return this.router;
     }
@@ -226,6 +334,12 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of InterconnectAttachment you wish to create. Defaults to
+     * DEDICATED.
+     * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -238,6 +352,11 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     @Import(name="vlanTag8021q")
     private @Nullable Output<Integer> vlanTag8021q;
 
+    /**
+     * @return The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
+     * using PARTNER type this will be managed upstream.
+     * 
+     */
     public Optional<Output<Integer>> vlanTag8021q() {
         return Optional.ofNullable(this.vlanTag8021q);
     }
@@ -280,145 +399,476 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
             $ = new InterconnectAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminEnabled Whether the VLAN attachment is enabled or disabled.  When using
+         * PARTNER type this will Pre-Activate the interconnect attachment
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminEnabled(@Nullable Output<Boolean> adminEnabled) {
             $.adminEnabled = adminEnabled;
             return this;
         }
 
+        /**
+         * @param adminEnabled Whether the VLAN attachment is enabled or disabled.  When using
+         * PARTNER type this will Pre-Activate the interconnect attachment
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminEnabled(Boolean adminEnabled) {
             return adminEnabled(Output.of(adminEnabled));
         }
 
+        /**
+         * @param bandwidth Provisioned bandwidth capacity for the interconnect attachment.
+         * For attachments of type DEDICATED, the user can set the bandwidth.
+         * For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
+         * Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
+         * Defaults to BPS_10G
+         * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
             $.bandwidth = bandwidth;
             return this;
         }
 
+        /**
+         * @param bandwidth Provisioned bandwidth capacity for the interconnect attachment.
+         * For attachments of type DEDICATED, the user can set the bandwidth.
+         * For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
+         * Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
+         * Defaults to BPS_10G
+         * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidth(String bandwidth) {
             return bandwidth(Output.of(bandwidth));
         }
 
+        /**
+         * @param candidateSubnets Up to 16 candidate prefixes that can be used to restrict the allocation
+         * of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
+         * All prefixes must be within link-local address space (169.254.0.0/16)
+         * and must be /29 or shorter (/28, /27, etc). Google will attempt to select
+         * an unused /29 from the supplied candidate prefix(es). The request will
+         * fail if all possible /29s are in use on Google&#39;s edge. If not supplied,
+         * Google will randomly select an unused /29 from all of link-local space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder candidateSubnets(@Nullable Output<List<String>> candidateSubnets) {
             $.candidateSubnets = candidateSubnets;
             return this;
         }
 
+        /**
+         * @param candidateSubnets Up to 16 candidate prefixes that can be used to restrict the allocation
+         * of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
+         * All prefixes must be within link-local address space (169.254.0.0/16)
+         * and must be /29 or shorter (/28, /27, etc). Google will attempt to select
+         * an unused /29 from the supplied candidate prefix(es). The request will
+         * fail if all possible /29s are in use on Google&#39;s edge. If not supplied,
+         * Google will randomly select an unused /29 from all of link-local space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder candidateSubnets(List<String> candidateSubnets) {
             return candidateSubnets(Output.of(candidateSubnets));
         }
 
+        /**
+         * @param candidateSubnets Up to 16 candidate prefixes that can be used to restrict the allocation
+         * of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
+         * All prefixes must be within link-local address space (169.254.0.0/16)
+         * and must be /29 or shorter (/28, /27, etc). Google will attempt to select
+         * an unused /29 from the supplied candidate prefix(es). The request will
+         * fail if all possible /29s are in use on Google&#39;s edge. If not supplied,
+         * Google will randomly select an unused /29 from all of link-local space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder candidateSubnets(String... candidateSubnets) {
             return candidateSubnets(List.of(candidateSubnets));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param edgeAvailabilityDomain Desired availability domain for the attachment. Only available for type
+         * PARTNER, at creation time. For improved reliability, customers should
+         * configure a pair of attachments with one per availability domain. The
+         * selected availability domain will be provided to the Partner via the
+         * pairing key so that the provisioned circuit will lie in the specified
+         * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeAvailabilityDomain(@Nullable Output<String> edgeAvailabilityDomain) {
             $.edgeAvailabilityDomain = edgeAvailabilityDomain;
             return this;
         }
 
+        /**
+         * @param edgeAvailabilityDomain Desired availability domain for the attachment. Only available for type
+         * PARTNER, at creation time. For improved reliability, customers should
+         * configure a pair of attachments with one per availability domain. The
+         * selected availability domain will be provided to the Partner via the
+         * pairing key so that the provisioned circuit will lie in the specified
+         * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeAvailabilityDomain(String edgeAvailabilityDomain) {
             return edgeAvailabilityDomain(Output.of(edgeAvailabilityDomain));
         }
 
+        /**
+         * @param encryption Indicates the user-supplied encryption option of this interconnect
+         * attachment:
+         * NONE is the default value, which means that the attachment carries
+         * unencrypted traffic. VMs can send traffic to, or receive traffic
+         * from, this type of attachment.
+         * IPSEC indicates that the attachment carries only traffic encrypted by
+         * an IPsec device such as an HA VPN gateway. VMs cannot directly send
+         * traffic to, or receive traffic from, such an attachment. To use
+         * IPsec-encrypted Cloud Interconnect create the attachment using this
+         * option.
+         * Not currently available publicly.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `IPSEC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<String> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Indicates the user-supplied encryption option of this interconnect
+         * attachment:
+         * NONE is the default value, which means that the attachment carries
+         * unencrypted traffic. VMs can send traffic to, or receive traffic
+         * from, this type of attachment.
+         * IPSEC indicates that the attachment carries only traffic encrypted by
+         * an IPsec device such as an HA VPN gateway. VMs cannot directly send
+         * traffic to, or receive traffic from, such an attachment. To use
+         * IPsec-encrypted Cloud Interconnect create the attachment using this
+         * option.
+         * Not currently available publicly.
+         * Default value is `NONE`.
+         * Possible values are `NONE` and `IPSEC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(String encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param interconnect URL of the underlying Interconnect object that this attachment&#39;s
+         * traffic will traverse through. Required if type is DEDICATED, must not
+         * be set if type is PARTNER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnect(@Nullable Output<String> interconnect) {
             $.interconnect = interconnect;
             return this;
         }
 
+        /**
+         * @param interconnect URL of the underlying Interconnect object that this attachment&#39;s
+         * traffic will traverse through. Required if type is DEDICATED, must not
+         * be set if type is PARTNER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnect(String interconnect) {
             return interconnect(Output.of(interconnect));
         }
 
+        /**
+         * @param ipsecInternalAddresses URL of addresses that have been reserved for the interconnect
+         * attachment, Used only for interconnect attachment that has the
+         * encryption option as IPSEC.
+         * The addresses must be RFC 1918 IP address ranges. When creating HA
+         * VPN gateway over the interconnect attachment, if the attachment is
+         * configured to use an RFC 1918 IP address, then the VPN gateway&#39;s IP
+         * address will be allocated from the IP address range specified
+         * here.
+         * For example, if the HA VPN gateway&#39;s interface 0 is paired to this
+         * interconnect attachment, then an RFC 1918 IP address for the VPN
+         * gateway interface 0 will be allocated from the IP address specified
+         * for this interconnect attachment.
+         * If this field is not specified for interconnect attachment that has
+         * encryption option as IPSEC, later on when creating HA VPN gateway on
+         * this interconnect attachment, the HA VPN gateway&#39;s IP address will be
+         * allocated from regional external IP address pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecInternalAddresses(@Nullable Output<List<String>> ipsecInternalAddresses) {
             $.ipsecInternalAddresses = ipsecInternalAddresses;
             return this;
         }
 
+        /**
+         * @param ipsecInternalAddresses URL of addresses that have been reserved for the interconnect
+         * attachment, Used only for interconnect attachment that has the
+         * encryption option as IPSEC.
+         * The addresses must be RFC 1918 IP address ranges. When creating HA
+         * VPN gateway over the interconnect attachment, if the attachment is
+         * configured to use an RFC 1918 IP address, then the VPN gateway&#39;s IP
+         * address will be allocated from the IP address range specified
+         * here.
+         * For example, if the HA VPN gateway&#39;s interface 0 is paired to this
+         * interconnect attachment, then an RFC 1918 IP address for the VPN
+         * gateway interface 0 will be allocated from the IP address specified
+         * for this interconnect attachment.
+         * If this field is not specified for interconnect attachment that has
+         * encryption option as IPSEC, later on when creating HA VPN gateway on
+         * this interconnect attachment, the HA VPN gateway&#39;s IP address will be
+         * allocated from regional external IP address pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecInternalAddresses(List<String> ipsecInternalAddresses) {
             return ipsecInternalAddresses(Output.of(ipsecInternalAddresses));
         }
 
+        /**
+         * @param ipsecInternalAddresses URL of addresses that have been reserved for the interconnect
+         * attachment, Used only for interconnect attachment that has the
+         * encryption option as IPSEC.
+         * The addresses must be RFC 1918 IP address ranges. When creating HA
+         * VPN gateway over the interconnect attachment, if the attachment is
+         * configured to use an RFC 1918 IP address, then the VPN gateway&#39;s IP
+         * address will be allocated from the IP address range specified
+         * here.
+         * For example, if the HA VPN gateway&#39;s interface 0 is paired to this
+         * interconnect attachment, then an RFC 1918 IP address for the VPN
+         * gateway interface 0 will be allocated from the IP address specified
+         * for this interconnect attachment.
+         * If this field is not specified for interconnect attachment that has
+         * encryption option as IPSEC, later on when creating HA VPN gateway on
+         * this interconnect attachment, the HA VPN gateway&#39;s IP address will be
+         * allocated from regional external IP address pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
             return ipsecInternalAddresses(List.of(ipsecInternalAddresses));
         }
 
+        /**
+         * @param mtu Maximum Transmission Unit (MTU), in bytes, of packets passing through
+         * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(@Nullable Output<String> mtu) {
             $.mtu = mtu;
             return this;
         }
 
+        /**
+         * @param mtu Maximum Transmission Unit (MTU), in bytes, of packets passing through
+         * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(String mtu) {
             return mtu(Output.of(mtu));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The
+         * name must be 1-63 characters long, and comply with RFC1035. Specifically, the
+         * name must be 1-63 characters long and match the regular expression
+         * `a-z?` which means the first character must be a
+         * lowercase letter, and all following characters must be a dash, lowercase
+         * letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The
+         * name must be 1-63 characters long, and comply with RFC1035. Specifically, the
+         * name must be 1-63 characters long and match the regular expression
+         * `a-z?` which means the first character must be a
+         * lowercase letter, and all following characters must be a dash, lowercase
+         * letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where the regional interconnect attachment resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where the regional interconnect attachment resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param router URL of the cloud router to be used for dynamic routing. This router must be in
+         * the same region as this InterconnectAttachment. The InterconnectAttachment will
+         * automatically connect the Interconnect to the network &amp; region within which the
+         * Cloud Router is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(Output<String> router) {
             $.router = router;
             return this;
         }
 
+        /**
+         * @param router URL of the cloud router to be used for dynamic routing. This router must be in
+         * the same region as this InterconnectAttachment. The InterconnectAttachment will
+         * automatically connect the Interconnect to the network &amp; region within which the
+         * Cloud Router is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(String router) {
             return router(Output.of(router));
         }
 
+        /**
+         * @param type The type of InterconnectAttachment you wish to create. Defaults to
+         * DEDICATED.
+         * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of InterconnectAttachment you wish to create. Defaults to
+         * DEDICATED.
+         * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vlanTag8021q The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
+         * using PARTNER type this will be managed upstream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanTag8021q(@Nullable Output<Integer> vlanTag8021q) {
             $.vlanTag8021q = vlanTag8021q;
             return this;
         }
 
+        /**
+         * @param vlanTag8021q The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
+         * using PARTNER type this will be managed upstream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vlanTag8021q(Integer vlanTag8021q) {
             return vlanTag8021q(Output.of(vlanTag8021q));
         }

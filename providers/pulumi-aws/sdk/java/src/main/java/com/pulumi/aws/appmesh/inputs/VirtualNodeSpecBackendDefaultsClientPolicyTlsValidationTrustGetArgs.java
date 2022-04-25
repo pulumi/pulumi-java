@@ -24,6 +24,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
     @Import(name="acm")
     private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
+    /**
+     * @return The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs>> acm() {
         return Optional.ofNullable(this.acm);
     }
@@ -35,6 +39,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
     @Import(name="file")
     private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
+    /**
+     * @return The TLS validation context trust for a local file certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs>> file() {
         return Optional.ofNullable(this.file);
     }
@@ -46,6 +54,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
     @Import(name="sds")
     private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
+    /**
+     * @return The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs>> sds() {
         return Optional.ofNullable(this.sds);
     }
@@ -76,29 +88,65 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
             $ = new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acm The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
             $.acm = acm;
             return this;
         }
 
+        /**
+         * @param acm The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acm(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
             return acm(Output.of(acm));
         }
 
+        /**
+         * @param file The TLS validation context trust for a local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param file The TLS validation context trust for a local file certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
             return file(Output.of(file));
         }
 
+        /**
+         * @param sds The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
             $.sds = sds;
             return this;
         }
 
+        /**
+         * @param sds The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sds(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
             return sds(Output.of(sds));
         }

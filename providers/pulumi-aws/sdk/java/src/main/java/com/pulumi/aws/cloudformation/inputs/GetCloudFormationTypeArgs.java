@@ -21,6 +21,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the CloudFormation Type. For example, `arn:aws:cloudformation:us-west-2::type/resource/AWS-EC2-VPC`.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -32,6 +36,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return CloudFormation Registry Type. For example, `RESOURCE`.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -43,6 +51,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="typeName")
     private @Nullable String typeName;
 
+    /**
+     * @return CloudFormation Type name. For example, `AWS::EC2::VPC`.
+     * 
+     */
     public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -54,6 +66,10 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
     @Import(name="versionId")
     private @Nullable String versionId;
 
+    /**
+     * @return Identifier of the CloudFormation Type version.
+     * 
+     */
     public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -85,21 +101,45 @@ public final class GetCloudFormationTypeArgs extends com.pulumi.resources.Invoke
             $ = new GetCloudFormationTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the CloudFormation Type. For example, `arn:aws:cloudformation:us-west-2::type/resource/AWS-EC2-VPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param type CloudFormation Registry Type. For example, `RESOURCE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param typeName CloudFormation Type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(@Nullable String typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param versionId Identifier of the CloudFormation Type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(@Nullable String versionId) {
             $.versionId = versionId;
             return this;

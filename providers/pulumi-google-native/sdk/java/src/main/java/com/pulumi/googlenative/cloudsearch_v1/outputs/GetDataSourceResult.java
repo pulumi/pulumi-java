@@ -13,47 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GetDataSourceResult {
     /**
-     * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * @return If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
      * 
      */
     private final Boolean disableModifications;
     /**
-     * Disable serving any search or assist results.
+     * @return Disable serving any search or assist results.
      * 
      */
     private final Boolean disableServing;
     /**
-     * Display name of the datasource The maximum length is 300 characters.
+     * @return Display name of the datasource The maximum length is 300 characters.
      * 
      */
     private final String displayName;
     /**
-     * List of service accounts that have indexing access.
+     * @return List of service accounts that have indexing access.
      * 
      */
     private final List<String> indexingServiceAccounts;
     /**
-     * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * @return This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
      * 
      */
     private final List<GSuitePrincipalResponse> itemsVisibility;
     /**
-     * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * @return Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
      * 
      */
     private final String name;
     /**
-     * IDs of the Long Running Operations (LROs) currently running for this schema.
+     * @return IDs of the Long Running Operations (LROs) currently running for this schema.
      * 
      */
     private final List<String> operationIds;
     /**
-     * Can a user request to get thumbnail URI for Items indexed in this data source.
+     * @return Can a user request to get thumbnail URI for Items indexed in this data source.
      * 
      */
     private final Boolean returnThumbnailUrls;
     /**
-     * A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * @return A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
      * 
      */
     private final String shortName;
@@ -81,65 +81,65 @@ public final class GetDataSourceResult {
     }
 
     /**
-     * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
+     * @return If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
      * 
-    */
+     */
     public Boolean disableModifications() {
         return this.disableModifications;
     }
     /**
-     * Disable serving any search or assist results.
+     * @return Disable serving any search or assist results.
      * 
-    */
+     */
     public Boolean disableServing() {
         return this.disableServing;
     }
     /**
-     * Display name of the datasource The maximum length is 300 characters.
+     * @return Display name of the datasource The maximum length is 300 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * List of service accounts that have indexing access.
+     * @return List of service accounts that have indexing access.
      * 
-    */
+     */
     public List<String> indexingServiceAccounts() {
         return this.indexingServiceAccounts;
     }
     /**
-     * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
+     * @return This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
      * 
-    */
+     */
     public List<GSuitePrincipalResponse> itemsVisibility() {
         return this.itemsVisibility;
     }
     /**
-     * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
+     * @return Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * IDs of the Long Running Operations (LROs) currently running for this schema.
+     * @return IDs of the Long Running Operations (LROs) currently running for this schema.
      * 
-    */
+     */
     public List<String> operationIds() {
         return this.operationIds;
     }
     /**
-     * Can a user request to get thumbnail URI for Items indexed in this data source.
+     * @return Can a user request to get thumbnail URI for Items indexed in this data source.
      * 
-    */
+     */
     public Boolean returnThumbnailUrls() {
         return this.returnThumbnailUrls;
     }
     /**
-     * A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
+     * @return A short name or alias for the source. This value will be used to match the &#39;source&#39; operator. For example, if the short name is *&lt;value&gt;* then queries like *source:&lt;value&gt;* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with &#39;google&#39; and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
      * 
-    */
+     */
     public String shortName() {
         return this.shortName;
     }

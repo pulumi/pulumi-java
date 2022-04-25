@@ -24,6 +24,10 @@ public final class LabelSelectorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return Resource labels for this selector.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -52,6 +56,12 @@ public final class LabelSelectorResponse extends com.pulumi.resources.InvokeArgs
             $ = new LabelSelectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Resource labels for this selector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;

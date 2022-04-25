@@ -27,6 +27,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowCors")
     private @Nullable Output<Boolean> allowCors;
 
+    /**
+     * @return Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
+     * 
+     */
     public Optional<Output<Boolean>> allowCors() {
         return Optional.ofNullable(this.allowCors);
     }
@@ -38,6 +42,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The canonical name of this endpoint.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -79,29 +91,65 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCors Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCors(@Nullable Output<Boolean> allowCors) {
             $.allowCors = allowCors;
             return this;
         }
 
+        /**
+         * @param allowCors Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCors(Boolean allowCors) {
             return allowCors(Output.of(allowCors));
         }
 
+        /**
+         * @param name The canonical name of this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The canonical name of this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param target The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The specification of an Internet routable address of API frontend that will handle requests to this [API Endpoint](https://cloud.google.com/apis/design/glossary). It should be either a valid IPv4 address or a fully-qualified domain name. For example, &#34;8.8.8.8&#34; or &#34;myservice.appspot.com&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

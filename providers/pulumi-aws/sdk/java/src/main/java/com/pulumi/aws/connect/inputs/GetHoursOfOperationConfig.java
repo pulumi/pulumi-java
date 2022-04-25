@@ -22,6 +22,10 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="day", required=true)
     private String day;
 
+    /**
+     * @return Specifies the day that the hours of operation applies to.
+     * 
+     */
     public String day() {
         return this.day;
     }
@@ -33,6 +37,10 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="endTimes", required=true)
     private List<GetHoursOfOperationConfigEndTime> endTimes;
 
+    /**
+     * @return A end time block specifies the time that your contact center closes. The `end_time` is documented below.
+     * 
+     */
     public List<GetHoursOfOperationConfigEndTime> endTimes() {
         return this.endTimes;
     }
@@ -44,6 +52,10 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
     @Import(name="startTimes", required=true)
     private List<GetHoursOfOperationConfigStartTime> startTimes;
 
+    /**
+     * @return A start time block specifies the time that your contact center opens. The `start_time` is documented below.
+     * 
+     */
     public List<GetHoursOfOperationConfigStartTime> startTimes() {
         return this.startTimes;
     }
@@ -74,25 +86,55 @@ public final class GetHoursOfOperationConfig extends com.pulumi.resources.Invoke
             $ = new GetHoursOfOperationConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Specifies the day that the hours of operation applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param endTimes A end time block specifies the time that your contact center closes. The `end_time` is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
             $.endTimes = endTimes;
             return this;
         }
 
+        /**
+         * @param endTimes A end time block specifies the time that your contact center closes. The `end_time` is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimes(GetHoursOfOperationConfigEndTime... endTimes) {
             return endTimes(List.of(endTimes));
         }
 
+        /**
+         * @param startTimes A start time block specifies the time that your contact center opens. The `start_time` is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
             $.startTimes = startTimes;
             return this;
         }
 
+        /**
+         * @param startTimes A start time block specifies the time that your contact center opens. The `start_time` is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimes(GetHoursOfOperationConfigStartTime... startTimes) {
             return startTimes(List.of(startTimes));
         }

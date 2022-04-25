@@ -23,6 +23,10 @@ public final class DetectorModelResetTimer extends com.pulumi.resources.InvokeAr
     @Import(name="timerName", required=true)
     private String timerName;
 
+    /**
+     * @return The name of the timer to reset.
+     * 
+     */
     public String timerName() {
         return this.timerName;
     }
@@ -51,6 +55,12 @@ public final class DetectorModelResetTimer extends com.pulumi.resources.InvokeAr
             $ = new DetectorModelResetTimer(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timerName The name of the timer to reset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerName(String timerName) {
             $.timerName = timerName;
             return this;

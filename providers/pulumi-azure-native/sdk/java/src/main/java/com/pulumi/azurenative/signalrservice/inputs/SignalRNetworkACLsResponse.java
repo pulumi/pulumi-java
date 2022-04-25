@@ -29,6 +29,10 @@ public final class SignalRNetworkACLsResponse extends com.pulumi.resources.Invok
     @Import(name="defaultAction")
     private @Nullable String defaultAction;
 
+    /**
+     * @return Default action when no other rule matches
+     * 
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -40,6 +44,10 @@ public final class SignalRNetworkACLsResponse extends com.pulumi.resources.Invok
     @Import(name="privateEndpoints")
     private @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
+    /**
+     * @return ACLs for requests from private endpoints
+     * 
+     */
     public Optional<List<PrivateEndpointACLResponse>> privateEndpoints() {
         return Optional.ofNullable(this.privateEndpoints);
     }
@@ -51,6 +59,10 @@ public final class SignalRNetworkACLsResponse extends com.pulumi.resources.Invok
     @Import(name="publicNetwork")
     private @Nullable NetworkACLResponse publicNetwork;
 
+    /**
+     * @return ACL for requests from public network
+     * 
+     */
     public Optional<NetworkACLResponse> publicNetwork() {
         return Optional.ofNullable(this.publicNetwork);
     }
@@ -81,20 +93,44 @@ public final class SignalRNetworkACLsResponse extends com.pulumi.resources.Invok
             $ = new SignalRNetworkACLsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultAction Default action when no other rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable String defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param privateEndpoints ACLs for requests from private endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(@Nullable List<PrivateEndpointACLResponse> privateEndpoints) {
             $.privateEndpoints = privateEndpoints;
             return this;
         }
 
+        /**
+         * @param privateEndpoints ACLs for requests from private endpoints
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoints(PrivateEndpointACLResponse... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
 
+        /**
+         * @param publicNetwork ACL for requests from public network
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetwork(@Nullable NetworkACLResponse publicNetwork) {
             $.publicNetwork = publicNetwork;
             return this;

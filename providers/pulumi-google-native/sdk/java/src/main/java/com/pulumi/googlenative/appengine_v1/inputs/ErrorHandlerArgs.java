@@ -27,6 +27,10 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorCode")
     private @Nullable Output<ErrorHandlerErrorCode> errorCode;
 
+    /**
+     * @return Error condition this handler applies to.
+     * 
+     */
     public Optional<Output<ErrorHandlerErrorCode>> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
@@ -38,6 +42,10 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
     private @Nullable Output<String> mimeType;
 
+    /**
+     * @return MIME type of file. Defaults to text/html.
+     * 
+     */
     public Optional<Output<String>> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -49,6 +57,10 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticFile")
     private @Nullable Output<String> staticFile;
 
+    /**
+     * @return Static file content to be served for this error.
+     * 
+     */
     public Optional<Output<String>> staticFile() {
         return Optional.ofNullable(this.staticFile);
     }
@@ -79,29 +91,65 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ErrorHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Error condition this handler applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(@Nullable Output<ErrorHandlerErrorCode> errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorCode Error condition this handler applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(ErrorHandlerErrorCode errorCode) {
             return errorCode(Output.of(errorCode));
         }
 
+        /**
+         * @param mimeType MIME type of file. Defaults to text/html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(@Nullable Output<String> mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param mimeType MIME type of file. Defaults to text/html.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(String mimeType) {
             return mimeType(Output.of(mimeType));
         }
 
+        /**
+         * @param staticFile Static file content to be served for this error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticFile(@Nullable Output<String> staticFile) {
             $.staticFile = staticFile;
             return this;
         }
 
+        /**
+         * @param staticFile Static file content to be served for this error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staticFile(String staticFile) {
             return staticFile(Output.of(staticFile));
         }

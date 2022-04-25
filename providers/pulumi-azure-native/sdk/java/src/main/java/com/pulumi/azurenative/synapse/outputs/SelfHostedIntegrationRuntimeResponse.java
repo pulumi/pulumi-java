@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SelfHostedIntegrationRuntimeResponse {
     /**
-     * Integration runtime description.
+     * @return Integration runtime description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Linked integration runtime type from data factory
+     * @return Linked integration runtime type from data factory
      * 
      */
     private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;SelfHosted&#39;.
      * 
      */
@@ -42,24 +42,24 @@ public final class SelfHostedIntegrationRuntimeResponse {
     }
 
     /**
-     * Integration runtime description.
+     * @return Integration runtime description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Linked integration runtime type from data factory
+     * @return Linked integration runtime type from data factory
      * 
-    */
+     */
     public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
     /**
-     * The type of integration runtime.
+     * @return The type of integration runtime.
      * Expected value is &#39;SelfHosted&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -19,6 +19,10 @@ public final class GetUserPoolClientsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="userPoolId", required=true)
     private String userPoolId;
 
+    /**
+     * @return The Cognito user pool ID.
+     * 
+     */
     public String userPoolId() {
         return this.userPoolId;
     }
@@ -47,6 +51,12 @@ public final class GetUserPoolClientsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetUserPoolClientsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userPoolId The Cognito user pool ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             $.userPoolId = userPoolId;
             return this;

@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
     /**
-     * List of databases on target server
+     * @return List of databases on target server
      * 
      */
     private final List<String> databases;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Version of the target server
+     * @return Version of the target server
      * 
      */
     private final String serverVersion;
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
      */
     private final String targetServerBrandVersion;
     /**
-     * Validation errors associated with the task
+     * @return Validation errors associated with the task
      * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
@@ -52,37 +52,37 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
     }
 
     /**
-     * List of databases on target server
+     * @return List of databases on target server
      * 
-    */
+     */
     public List<String> databases() {
         return this.databases;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Version of the target server
+     * @return Version of the target server
      * 
-    */
+     */
     public String serverVersion() {
         return this.serverVersion;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Validation errors associated with the task
+     * @return Validation errors associated with the task
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

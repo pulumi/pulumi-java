@@ -24,6 +24,10 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
     @Import(name="controlInputParameters")
     private @Nullable List<FrameworkControlInputParameter> controlInputParameters;
 
+    /**
+     * @return A list of ParameterName and ParameterValue pairs.
+     * 
+     */
     public Optional<List<FrameworkControlInputParameter>> controlInputParameters() {
         return Optional.ofNullable(this.controlInputParameters);
     }
@@ -35,6 +39,10 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
     @Import(name="controlName", required=true)
     private String controlName;
 
+    /**
+     * @return The name of a control. This name is between 1 and 256 characters.
+     * 
+     */
     public String controlName() {
         return this.controlName;
     }
@@ -46,6 +54,10 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
     @Import(name="controlScope")
     private @Nullable FrameworkControlControlScopeProperties controlScope;
 
+    /**
+     * @return The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+     * 
+     */
     public Optional<FrameworkControlControlScopeProperties> controlScope() {
         return Optional.ofNullable(this.controlScope);
     }
@@ -76,20 +88,44 @@ public final class FrameworkControl extends com.pulumi.resources.InvokeArgs {
             $ = new FrameworkControl(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controlInputParameters A list of ParameterName and ParameterValue pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
             $.controlInputParameters = controlInputParameters;
             return this;
         }
 
+        /**
+         * @param controlInputParameters A list of ParameterName and ParameterValue pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlInputParameters(FrameworkControlInputParameter... controlInputParameters) {
             return controlInputParameters(List.of(controlInputParameters));
         }
 
+        /**
+         * @param controlName The name of a control. This name is between 1 and 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlName(String controlName) {
             $.controlName = controlName;
             return this;
         }
 
+        /**
+         * @param controlScope The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
             $.controlScope = controlScope;
             return this;

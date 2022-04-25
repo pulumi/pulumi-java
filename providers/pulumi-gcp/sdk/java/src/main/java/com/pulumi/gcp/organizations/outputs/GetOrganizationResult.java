@@ -12,33 +12,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOrganizationResult {
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String createTime;
     /**
-     * The Google for Work customer ID of the Organization.
+     * @return The Google for Work customer ID of the Organization.
      * 
      */
     private final String directoryCustomerId;
     private final String domain;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The Organization&#39;s current lifecycle state.
+     * @return The Organization&#39;s current lifecycle state.
      * 
      */
     private final String lifecycleState;
     /**
-     * The resource name of the Organization in the form `organizations/{organization_id}`.
+     * @return The resource name of the Organization in the form `organizations/{organization_id}`.
      * 
      */
     private final String name;
     /**
-     * The Organization ID.
+     * @return The Organization ID.
      * 
      */
     private final String orgId;
@@ -65,16 +65,16 @@ public final class GetOrganizationResult {
     }
 
     /**
-     * Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * @return Timestamp when the Organization was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The Google for Work customer ID of the Organization.
+     * @return The Google for Work customer ID of the Organization.
      * 
-    */
+     */
     public String directoryCustomerId() {
         return this.directoryCustomerId;
     }
@@ -82,30 +82,30 @@ public final class GetOrganizationResult {
         return this.domain;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Organization&#39;s current lifecycle state.
+     * @return The Organization&#39;s current lifecycle state.
      * 
-    */
+     */
     public String lifecycleState() {
         return this.lifecycleState;
     }
     /**
-     * The resource name of the Organization in the form `organizations/{organization_id}`.
+     * @return The resource name of the Organization in the form `organizations/{organization_id}`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Organization ID.
+     * @return The Organization ID.
      * 
-    */
+     */
     public String orgId() {
         return this.orgId;
     }

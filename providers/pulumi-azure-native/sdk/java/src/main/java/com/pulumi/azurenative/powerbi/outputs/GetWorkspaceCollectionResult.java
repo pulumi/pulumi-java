@@ -15,29 +15,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkspaceCollectionResult {
     /**
-     * Resource id
+     * @return Resource id
      * 
      */
     private final @Nullable String id;
     /**
-     * Azure location
+     * @return Azure location
      * 
      */
     private final @Nullable String location;
     /**
-     * Workspace collection name
+     * @return Workspace collection name
      * 
      */
     private final @Nullable String name;
     /**
-     * Properties
+     * @return Properties
      * 
      */
     private final Object properties;
     private final @Nullable AzureSkuResponse sku;
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final @Nullable String type;
@@ -61,30 +61,30 @@ public final class GetWorkspaceCollectionResult {
     }
 
     /**
-     * Resource id
+     * @return Resource id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Azure location
+     * @return Azure location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Workspace collection name
+     * @return Workspace collection name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Properties
+     * @return Properties
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
@@ -95,9 +95,9 @@ public final class GetWorkspaceCollectionResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

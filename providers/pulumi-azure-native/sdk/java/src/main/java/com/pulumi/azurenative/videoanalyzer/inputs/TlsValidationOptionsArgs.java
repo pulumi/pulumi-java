@@ -26,6 +26,10 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
     @Import(name="ignoreHostname")
     private @Nullable Output<String> ignoreHostname;
 
+    /**
+     * @return When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<Output<String>> ignoreHostname() {
         return Optional.ofNullable(this.ignoreHostname);
     }
@@ -37,6 +41,10 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
     @Import(name="ignoreSignature")
     private @Nullable Output<String> ignoreSignature;
 
+    /**
+     * @return When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
+     * 
+     */
     public Optional<Output<String>> ignoreSignature() {
         return Optional.ofNullable(this.ignoreSignature);
     }
@@ -66,20 +74,44 @@ public final class TlsValidationOptionsArgs extends com.pulumi.resources.Resourc
             $ = new TlsValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreHostname When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(@Nullable Output<String> ignoreHostname) {
             $.ignoreHostname = ignoreHostname;
             return this;
         }
 
+        /**
+         * @param ignoreHostname When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(String ignoreHostname) {
             return ignoreHostname(Output.of(ignoreHostname));
         }
 
+        /**
+         * @param ignoreSignature When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(@Nullable Output<String> ignoreSignature) {
             $.ignoreSignature = ignoreSignature;
             return this;
         }
 
+        /**
+         * @param ignoreSignature When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(String ignoreSignature) {
             return ignoreSignature(Output.of(ignoreSignature));
         }

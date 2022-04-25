@@ -24,6 +24,10 @@ public final class DSSEAttestationOccurrenceResponse extends com.pulumi.resource
     @Import(name="envelope", required=true)
     private EnvelopeResponse envelope;
 
+    /**
+     * @return If doing something security critical, make sure to verify the signatures in this metadata.
+     * 
+     */
     public EnvelopeResponse envelope() {
         return this.envelope;
     }
@@ -60,6 +64,12 @@ public final class DSSEAttestationOccurrenceResponse extends com.pulumi.resource
             $ = new DSSEAttestationOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envelope If doing something security critical, make sure to verify the signatures in this metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelope(EnvelopeResponse envelope) {
             $.envelope = envelope;
             return this;

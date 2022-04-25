@@ -24,6 +24,10 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mode")
     private @Nullable Output<Either<String,DataMaskingMode>> mode;
 
+    /**
+     * @return Data masking mode.
+     * 
+     */
     public Optional<Output<Either<String,DataMaskingMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -35,6 +39,10 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The name of an entity to mask (e.g. a name of a header or a query parameter).
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -64,28 +72,64 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
             $ = new DataMaskingEntityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Data masking mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,DataMaskingMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Data masking mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,DataMaskingMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Data masking mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Data masking mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(DataMaskingMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param value The name of an entity to mask (e.g. a name of a header or a query parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The name of an entity to mask (e.g. a name of a header or a query parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

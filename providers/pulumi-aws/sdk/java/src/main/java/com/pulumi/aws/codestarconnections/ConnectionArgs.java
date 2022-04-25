@@ -23,6 +23,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostArn")
     private @Nullable Output<String> hostArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+     * 
+     */
     public Optional<Output<String>> hostArn() {
         return Optional.ofNullable(this.hostArn);
     }
@@ -34,6 +38,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
     private @Nullable Output<String> providerType;
 
+    /**
+     * @return The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
+     * 
+     */
     public Optional<Output<String>> providerType() {
         return Optional.ofNullable(this.providerType);
     }
@@ -56,6 +68,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostArn The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostArn(@Nullable Output<String> hostArn) {
             $.hostArn = hostArn;
             return this;
         }
 
+        /**
+         * @param hostArn The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostArn(String hostArn) {
             return hostArn(Output.of(hostArn));
         }
 
+        /**
+         * @param name The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(@Nullable Output<String> providerType) {
             $.providerType = providerType;
             return this;
         }
 
+        /**
+         * @param providerType The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerType(String providerType) {
             return providerType(Output.of(providerType));
         }
 
+        /**
+         * @param tags Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

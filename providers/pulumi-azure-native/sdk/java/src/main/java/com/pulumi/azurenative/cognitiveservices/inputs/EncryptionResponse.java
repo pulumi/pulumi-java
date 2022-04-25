@@ -27,6 +27,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keySource")
     private @Nullable String keySource;
 
+    /**
+     * @return Enumerates the possible value of keySource for Encryption
+     * 
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
@@ -38,6 +42,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultProperties")
     private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
+    /**
+     * @return Properties of KeyVault
+     * 
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -67,11 +75,23 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keySource Enumerates the possible value of keySource for Encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(@Nullable String keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Properties of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;

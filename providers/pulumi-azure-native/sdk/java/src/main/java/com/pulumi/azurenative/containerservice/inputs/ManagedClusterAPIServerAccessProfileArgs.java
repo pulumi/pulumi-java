@@ -28,6 +28,10 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="authorizedIPRanges")
     private @Nullable Output<List<String>> authorizedIPRanges;
 
+    /**
+     * @return Authorized IP Ranges to kubernetes API server.
+     * 
+     */
     public Optional<Output<List<String>>> authorizedIPRanges() {
         return Optional.ofNullable(this.authorizedIPRanges);
     }
@@ -39,6 +43,10 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="enablePrivateCluster")
     private @Nullable Output<Boolean> enablePrivateCluster;
 
+    /**
+     * @return Whether to create the cluster as a private cluster or not.
+     * 
+     */
     public Optional<Output<Boolean>> enablePrivateCluster() {
         return Optional.ofNullable(this.enablePrivateCluster);
     }
@@ -50,6 +58,10 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="privateDNSZone")
     private @Nullable Output<String> privateDNSZone;
 
+    /**
+     * @return Private dns zone mode for private cluster.
+     * 
+     */
     public Optional<Output<String>> privateDNSZone() {
         return Optional.ofNullable(this.privateDNSZone);
     }
@@ -80,33 +92,75 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
             $ = new ManagedClusterAPIServerAccessProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedIPRanges Authorized IP Ranges to kubernetes API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedIPRanges(@Nullable Output<List<String>> authorizedIPRanges) {
             $.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
+        /**
+         * @param authorizedIPRanges Authorized IP Ranges to kubernetes API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedIPRanges(List<String> authorizedIPRanges) {
             return authorizedIPRanges(Output.of(authorizedIPRanges));
         }
 
+        /**
+         * @param authorizedIPRanges Authorized IP Ranges to kubernetes API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedIPRanges(String... authorizedIPRanges) {
             return authorizedIPRanges(List.of(authorizedIPRanges));
         }
 
+        /**
+         * @param enablePrivateCluster Whether to create the cluster as a private cluster or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateCluster(@Nullable Output<Boolean> enablePrivateCluster) {
             $.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
+        /**
+         * @param enablePrivateCluster Whether to create the cluster as a private cluster or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateCluster(Boolean enablePrivateCluster) {
             return enablePrivateCluster(Output.of(enablePrivateCluster));
         }
 
+        /**
+         * @param privateDNSZone Private dns zone mode for private cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDNSZone(@Nullable Output<String> privateDNSZone) {
             $.privateDNSZone = privateDNSZone;
             return this;
         }
 
+        /**
+         * @param privateDNSZone Private dns zone mode for private cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDNSZone(String privateDNSZone) {
             return privateDNSZone(Output.of(privateDNSZone));
         }

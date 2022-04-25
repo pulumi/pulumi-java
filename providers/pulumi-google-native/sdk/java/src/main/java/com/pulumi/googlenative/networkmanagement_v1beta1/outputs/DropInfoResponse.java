@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DropInfoResponse {
     /**
-     * Cause that the packet is dropped.
+     * @return Cause that the packet is dropped.
      * 
      */
     private final String cause;
     /**
-     * URI of the resource that caused the drop.
+     * @return URI of the resource that caused the drop.
      * 
      */
     private final String resourceUri;
@@ -29,16 +29,16 @@ public final class DropInfoResponse {
     }
 
     /**
-     * Cause that the packet is dropped.
+     * @return Cause that the packet is dropped.
      * 
-    */
+     */
     public String cause() {
         return this.cause;
     }
     /**
-     * URI of the resource that caused the drop.
+     * @return URI of the resource that caused the drop.
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }

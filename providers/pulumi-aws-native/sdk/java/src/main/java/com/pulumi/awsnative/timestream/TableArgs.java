@@ -26,6 +26,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name for the database which the table to be created belongs to.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -37,6 +41,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="magneticStoreWriteProperties")
     private @Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
 
+    /**
+     * @return The properties that determine whether magnetic store writes are enabled.
+     * 
+     */
     public Optional<Output<MagneticStoreWritePropertiesPropertiesArgs>> magneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
@@ -48,6 +56,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionProperties")
     private @Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties;
 
+    /**
+     * @return The retention duration of the memory store and the magnetic store.
+     * 
+     */
     public Optional<Output<RetentionPropertiesPropertiesArgs>> retentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
@@ -59,6 +71,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -70,6 +86,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<TableTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<TableTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,51 +122,117 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name for the database which the table to be created belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name for the database which the table to be created belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param magneticStoreWriteProperties The properties that determine whether magnetic store writes are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreWriteProperties(@Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties) {
             $.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
 
+        /**
+         * @param magneticStoreWriteProperties The properties that determine whether magnetic store writes are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreWriteProperties(MagneticStoreWritePropertiesPropertiesArgs magneticStoreWriteProperties) {
             return magneticStoreWriteProperties(Output.of(magneticStoreWriteProperties));
         }
 
+        /**
+         * @param retentionProperties The retention duration of the memory store and the magnetic store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionProperties(@Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties) {
             $.retentionProperties = retentionProperties;
             return this;
         }
 
+        /**
+         * @param retentionProperties The retention duration of the memory store and the magnetic store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionProperties(RetentionPropertiesPropertiesArgs retentionProperties) {
             return retentionProperties(Output.of(retentionProperties));
         }
 
+        /**
+         * @param tableName The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TableTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TableTagArgs... tags) {
             return tags(List.of(tags));
         }

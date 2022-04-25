@@ -23,6 +23,10 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
     @Import(name="ignoreCoordinates")
     private @Nullable Output<List<String>> ignoreCoordinates;
 
+    /**
+     * @return List of coordinates of rectangles to be ignored during visual testing
+     * 
+     */
     public Optional<Output<List<String>>> ignoreCoordinates() {
         return Optional.ofNullable(this.ignoreCoordinates);
     }
@@ -34,6 +38,10 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
     @Import(name="screenshotName", required=true)
     private Output<String> screenshotName;
 
+    /**
+     * @return Name of the screenshot to be used as base reference for visual testing
+     * 
+     */
     public Output<String> screenshotName() {
         return this.screenshotName;
     }
@@ -63,24 +71,54 @@ public final class CanaryBaseScreenshotArgs extends com.pulumi.resources.Resourc
             $ = new CanaryBaseScreenshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreCoordinates List of coordinates of rectangles to be ignored during visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCoordinates(@Nullable Output<List<String>> ignoreCoordinates) {
             $.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
 
+        /**
+         * @param ignoreCoordinates List of coordinates of rectangles to be ignored during visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCoordinates(List<String> ignoreCoordinates) {
             return ignoreCoordinates(Output.of(ignoreCoordinates));
         }
 
+        /**
+         * @param ignoreCoordinates List of coordinates of rectangles to be ignored during visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCoordinates(String... ignoreCoordinates) {
             return ignoreCoordinates(List.of(ignoreCoordinates));
         }
 
+        /**
+         * @param screenshotName Name of the screenshot to be used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder screenshotName(Output<String> screenshotName) {
             $.screenshotName = screenshotName;
             return this;
         }
 
+        /**
+         * @param screenshotName Name of the screenshot to be used as base reference for visual testing
+         * 
+         * @return builder
+         * 
+         */
         public Builder screenshotName(String screenshotName) {
             return screenshotName(Output.of(screenshotName));
         }

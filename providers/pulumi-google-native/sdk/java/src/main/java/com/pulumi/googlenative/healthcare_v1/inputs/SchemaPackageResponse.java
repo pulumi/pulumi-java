@@ -27,6 +27,10 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ignoreMinOccurs", required=true)
     private Boolean ignoreMinOccurs;
 
+    /**
+     * @return Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+     * 
+     */
     public Boolean ignoreMinOccurs() {
         return this.ignoreMinOccurs;
     }
@@ -38,6 +42,10 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schemas", required=true)
     private List<Hl7SchemaConfigResponse> schemas;
 
+    /**
+     * @return Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+     * 
+     */
     public List<Hl7SchemaConfigResponse> schemas() {
         return this.schemas;
     }
@@ -49,6 +57,10 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schematizedParsingType", required=true)
     private String schematizedParsingType;
 
+    /**
+     * @return Determines how messages that fail to parse are handled.
+     * 
+     */
     public String schematizedParsingType() {
         return this.schematizedParsingType;
     }
@@ -60,6 +72,10 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="types", required=true)
     private List<Hl7TypesConfigResponse> types;
 
+    /**
+     * @return Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+     * 
+     */
     public List<Hl7TypesConfigResponse> types() {
         return this.types;
     }
@@ -71,6 +87,10 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="unexpectedSegmentHandling", required=true)
     private String unexpectedSegmentHandling;
 
+    /**
+     * @return Determines how unexpected segments (segments not matched to the schema) are handled.
+     * 
+     */
     public String unexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling;
     }
@@ -103,34 +123,76 @@ public final class SchemaPackageResponse extends com.pulumi.resources.InvokeArgs
             $ = new SchemaPackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreMinOccurs Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMinOccurs(Boolean ignoreMinOccurs) {
             $.ignoreMinOccurs = ignoreMinOccurs;
             return this;
         }
 
+        /**
+         * @param schemas Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(List<Hl7SchemaConfigResponse> schemas) {
             $.schemas = schemas;
             return this;
         }
 
+        /**
+         * @param schemas Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemas(Hl7SchemaConfigResponse... schemas) {
             return schemas(List.of(schemas));
         }
 
+        /**
+         * @param schematizedParsingType Determines how messages that fail to parse are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schematizedParsingType(String schematizedParsingType) {
             $.schematizedParsingType = schematizedParsingType;
             return this;
         }
 
+        /**
+         * @param types Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<Hl7TypesConfigResponse> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(Hl7TypesConfigResponse... types) {
             return types(List.of(types));
         }
 
+        /**
+         * @param unexpectedSegmentHandling Determines how unexpected segments (segments not matched to the schema) are handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unexpectedSegmentHandling(String unexpectedSegmentHandling) {
             $.unexpectedSegmentHandling = unexpectedSegmentHandling;
             return this;

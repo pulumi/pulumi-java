@@ -12,28 +12,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VideoResponse {
     /**
-     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
      */
     private final @Nullable String keyFrameInterval;
     /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
     private final @Nullable String label;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.Video&#39;.
      * 
      */
     private final String odataType;
     /**
-     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
      */
     private final @Nullable String stretchMode;
     /**
-     * The Video Sync Mode
+     * @return The Video Sync Mode
      * 
      */
     private final @Nullable String syncMode;
@@ -53,38 +53,38 @@ public final class VideoResponse {
     }
 
     /**
-     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
-    */
+     */
     public Optional<String> keyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
     /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.Video&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
-    */
+     */
     public Optional<String> stretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
     /**
-     * The Video Sync Mode
+     * @return The Video Sync Mode
      * 
-    */
+     */
     public Optional<String> syncMode() {
         return Optional.ofNullable(this.syncMode);
     }

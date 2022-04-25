@@ -35,6 +35,10 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends com.pulumi.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the step, used as an identifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +50,10 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends com.pulumi.
     @Import(name="overwriteExisting")
     private @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
+    /**
+     * @return A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
+     * 
+     */
     public Optional<Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting>> overwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }
@@ -85,20 +93,44 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends com.pulumi.
             return destinationFileLocation(Output.of(destinationFileLocation));
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the step, used as an identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param overwriteExisting A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExisting(@Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
             $.overwriteExisting = overwriteExisting;
             return this;
         }
 
+        /**
+         * @param overwriteExisting A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExisting(WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
             return overwriteExisting(Output.of(overwriteExisting));
         }

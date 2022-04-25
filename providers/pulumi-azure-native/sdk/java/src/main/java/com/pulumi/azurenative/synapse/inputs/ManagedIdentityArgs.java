@@ -26,6 +26,10 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The type of managed identity for the workspace
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of managed identity for the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of managed identity for the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

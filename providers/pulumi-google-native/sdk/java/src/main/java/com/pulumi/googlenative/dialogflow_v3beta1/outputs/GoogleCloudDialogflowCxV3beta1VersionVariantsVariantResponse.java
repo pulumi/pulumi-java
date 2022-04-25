@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse {
     /**
-     * Whether the variant is for the control group.
+     * @return Whether the variant is for the control group.
      * 
      */
     private final Boolean isControlGroup;
     /**
-     * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+     * @return Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
      * 
      */
     private final Double trafficAllocation;
     /**
-     * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+     * @return The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
      * 
      */
     private final String version;
@@ -38,23 +38,23 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
     }
 
     /**
-     * Whether the variant is for the control group.
+     * @return Whether the variant is for the control group.
      * 
-    */
+     */
     public Boolean isControlGroup() {
         return this.isControlGroup;
     }
     /**
-     * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
+     * @return Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
      * 
-    */
+     */
     public Double trafficAllocation() {
         return this.trafficAllocation;
     }
     /**
-     * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
+     * @return The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

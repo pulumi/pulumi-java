@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig {
     /**
-     * Replace each input value with a given value.
+     * @return Replace each input value with a given value.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * Replace each input value with a given value.
+     * @return Replace each input value with a given value.
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue newValue() {
         return this.newValue;
     }

@@ -28,6 +28,11 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalOrderDetails", required=true)
     private Map<String,String> additionalOrderDetails;
 
+    /**
+     * @return Dictionary to hold generic information which is not stored
+     * by the already existing properties
+     * 
+     */
     public Map<String,String> additionalOrderDetails() {
         return this.additionalOrderDetails;
     }
@@ -39,6 +44,10 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="comments")
     private @Nullable String comments;
 
+    /**
+     * @return Comments related to this status change.
+     * 
+     */
     public Optional<String> comments() {
         return Optional.ofNullable(this.comments);
     }
@@ -50,6 +59,10 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the order as per the allowed status types.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -61,6 +74,10 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trackingInformation", required=true)
     private TrackingInfoResponse trackingInformation;
 
+    /**
+     * @return Tracking information related to the state in the ordering flow
+     * 
+     */
     public TrackingInfoResponse trackingInformation() {
         return this.trackingInformation;
     }
@@ -72,6 +89,10 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateDateTime", required=true)
     private String updateDateTime;
 
+    /**
+     * @return Time of status update.
+     * 
+     */
     public String updateDateTime() {
         return this.updateDateTime;
     }
@@ -104,26 +125,57 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OrderStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalOrderDetails Dictionary to hold generic information which is not stored
+         * by the already existing properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalOrderDetails(Map<String,String> additionalOrderDetails) {
             $.additionalOrderDetails = additionalOrderDetails;
             return this;
         }
 
+        /**
+         * @param comments Comments related to this status change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comments(@Nullable String comments) {
             $.comments = comments;
             return this;
         }
 
+        /**
+         * @param status Status of the order as per the allowed status types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param trackingInformation Tracking information related to the state in the ordering flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingInformation(TrackingInfoResponse trackingInformation) {
             $.trackingInformation = trackingInformation;
             return this;
         }
 
+        /**
+         * @param updateDateTime Time of status update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDateTime(String updateDateTime) {
             $.updateDateTime = updateDateTime;
             return this;

@@ -25,6 +25,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addr")
     private @Nullable String addr;
 
+    /**
+     * @return The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
+     * 
+     */
     public Optional<String> addr() {
         return Optional.ofNullable(this.addr);
     }
@@ -36,6 +40,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="host")
     private @Nullable String host;
 
+    /**
+     * @return The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
+     * 
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
@@ -47,6 +55,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the request that initiated the event.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="method")
     private @Nullable String method;
 
+    /**
+     * @return The request method that generated the event.
+     * 
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
@@ -69,6 +85,10 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="useragent")
     private @Nullable String useragent;
 
+    /**
+     * @return The user agent header of the request.
+     * 
+     */
     public Optional<String> useragent() {
         return Optional.ofNullable(this.useragent);
     }
@@ -101,26 +121,56 @@ public final class RequestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addr The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addr(@Nullable String addr) {
             $.addr = addr;
             return this;
         }
 
+        /**
+         * @param host The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param id The ID of the request that initiated the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param method The request method that generated the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param useragent The user agent header of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useragent(@Nullable String useragent) {
             $.useragent = useragent;
             return this;

@@ -14,48 +14,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BookmarkTimelineItemResponse {
     /**
-     * The bookmark azure resource id.
+     * @return The bookmark azure resource id.
      * 
      */
     private final String azureResourceId;
     /**
-     * Describes a user that created the bookmark
+     * @return Describes a user that created the bookmark
      * 
      */
     private final @Nullable UserInfoResponse createdBy;
     /**
-     * The bookmark display name.
+     * @return The bookmark display name.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The bookmark end time.
+     * @return The bookmark end time.
      * 
      */
     private final @Nullable String endTimeUtc;
     /**
-     * The bookmark event time.
+     * @return The bookmark event time.
      * 
      */
     private final @Nullable String eventTime;
     /**
-     * The entity query kind
+     * @return The entity query kind
      * Expected value is &#39;Bookmark&#39;.
      * 
      */
     private final String kind;
     /**
-     * List of labels relevant to this bookmark
+     * @return List of labels relevant to this bookmark
      * 
      */
     private final @Nullable List<String> labels;
     /**
-     * The notes of the bookmark
+     * @return The notes of the bookmark
      * 
      */
     private final @Nullable String notes;
     /**
-     * The bookmark start time.
+     * @return The bookmark start time.
      * 
      */
     private final @Nullable String startTimeUtc;
@@ -83,66 +83,66 @@ public final class BookmarkTimelineItemResponse {
     }
 
     /**
-     * The bookmark azure resource id.
+     * @return The bookmark azure resource id.
      * 
-    */
+     */
     public String azureResourceId() {
         return this.azureResourceId;
     }
     /**
-     * Describes a user that created the bookmark
+     * @return Describes a user that created the bookmark
      * 
-    */
+     */
     public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The bookmark display name.
+     * @return The bookmark display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The bookmark end time.
+     * @return The bookmark end time.
      * 
-    */
+     */
     public Optional<String> endTimeUtc() {
         return Optional.ofNullable(this.endTimeUtc);
     }
     /**
-     * The bookmark event time.
+     * @return The bookmark event time.
      * 
-    */
+     */
     public Optional<String> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
-     * The entity query kind
+     * @return The entity query kind
      * Expected value is &#39;Bookmark&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * List of labels relevant to this bookmark
+     * @return List of labels relevant to this bookmark
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * The notes of the bookmark
+     * @return The notes of the bookmark
      * 
-    */
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * The bookmark start time.
+     * @return The bookmark start time.
      * 
-    */
+     */
     public Optional<String> startTimeUtc() {
         return Optional.ofNullable(this.startTimeUtc);
     }

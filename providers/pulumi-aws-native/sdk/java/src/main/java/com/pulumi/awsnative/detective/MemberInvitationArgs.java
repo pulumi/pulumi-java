@@ -23,6 +23,10 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableEmailNotification")
     private @Nullable Output<Boolean> disableEmailNotification;
 
+    /**
+     * @return When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
+     * 
+     */
     public Optional<Output<Boolean>> disableEmailNotification() {
         return Optional.ofNullable(this.disableEmailNotification);
     }
@@ -34,6 +38,10 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="graphArn", required=true)
     private Output<String> graphArn;
 
+    /**
+     * @return The ARN of the graph to which the member account will be invited
+     * 
+     */
     public Output<String> graphArn() {
         return this.graphArn;
     }
@@ -45,6 +53,10 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memberEmailAddress", required=true)
     private Output<String> memberEmailAddress;
 
+    /**
+     * @return The root email address for the account to be invited, for validation. Updating this field has no effect.
+     * 
+     */
     public Output<String> memberEmailAddress() {
         return this.memberEmailAddress;
     }
@@ -56,6 +68,10 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memberId", required=true)
     private Output<String> memberId;
 
+    /**
+     * @return The AWS account ID to be invited to join the graph as a member
+     * 
+     */
     public Output<String> memberId() {
         return this.memberId;
     }
@@ -67,6 +83,10 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -99,47 +119,107 @@ public final class MemberInvitationArgs extends com.pulumi.resources.ResourceArg
             $ = new MemberInvitationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableEmailNotification When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
             $.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
+        /**
+         * @param disableEmailNotification When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableEmailNotification(Boolean disableEmailNotification) {
             return disableEmailNotification(Output.of(disableEmailNotification));
         }
 
+        /**
+         * @param graphArn The ARN of the graph to which the member account will be invited
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphArn(Output<String> graphArn) {
             $.graphArn = graphArn;
             return this;
         }
 
+        /**
+         * @param graphArn The ARN of the graph to which the member account will be invited
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphArn(String graphArn) {
             return graphArn(Output.of(graphArn));
         }
 
+        /**
+         * @param memberEmailAddress The root email address for the account to be invited, for validation. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberEmailAddress(Output<String> memberEmailAddress) {
             $.memberEmailAddress = memberEmailAddress;
             return this;
         }
 
+        /**
+         * @param memberEmailAddress The root email address for the account to be invited, for validation. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberEmailAddress(String memberEmailAddress) {
             return memberEmailAddress(Output.of(memberEmailAddress));
         }
 
+        /**
+         * @param memberId The AWS account ID to be invited to join the graph as a member
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberId(Output<String> memberId) {
             $.memberId = memberId;
             return this;
         }
 
+        /**
+         * @param memberId The AWS account ID to be invited to join the graph as a member
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberId(String memberId) {
             return memberId(Output.of(memberId));
         }
 
+        /**
+         * @param message A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1ReportPropertyResponse {
     /**
-     * name of the property
+     * @return name of the property
      * 
      */
     private final String property;
     /**
-     * property values
+     * @return property values
      * 
      */
     private final List<GoogleCloudApigeeV1AttributeResponse> value;
@@ -31,16 +31,16 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
     }
 
     /**
-     * name of the property
+     * @return name of the property
      * 
-    */
+     */
     public String property() {
         return this.property;
     }
     /**
-     * property values
+     * @return property values
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1AttributeResponse> value() {
         return this.value;
     }

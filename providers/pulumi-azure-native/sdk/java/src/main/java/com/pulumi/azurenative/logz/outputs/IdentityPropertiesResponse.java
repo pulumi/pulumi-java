@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityPropertiesResponse {
     /**
-     * The identity ID.
+     * @return The identity ID.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
      */
     private final String tenantId;
@@ -34,16 +34,16 @@ public final class IdentityPropertiesResponse {
     }
 
     /**
-     * The identity ID.
+     * @return The identity ID.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

@@ -19,6 +19,10 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
     @Import(name="pipelineExecutionStartCondition", required=true)
     private String pipelineExecutionStartCondition;
 
+    /**
+     * @return Condition when the pipeline should trigger a new image build.
+     * 
+     */
     public String pipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
     }
@@ -30,6 +34,10 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
     @Import(name="scheduleExpression", required=true)
     private String scheduleExpression;
 
+    /**
+     * @return Cron expression of how often the pipeline start condition is evaluated.
+     * 
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
@@ -59,11 +67,23 @@ public final class GetImagePipelineSchedule extends com.pulumi.resources.InvokeA
             $ = new GetImagePipelineSchedule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineExecutionStartCondition Condition when the pipeline should trigger a new image build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
             $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
+        /**
+         * @param scheduleExpression Cron expression of how often the pipeline start condition is evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;

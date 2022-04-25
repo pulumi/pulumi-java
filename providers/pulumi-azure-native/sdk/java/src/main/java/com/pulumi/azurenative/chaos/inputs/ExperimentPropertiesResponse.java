@@ -28,6 +28,10 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="selectors", required=true)
     private List<SelectorResponse> selectors;
 
+    /**
+     * @return List of selectors.
+     * 
+     */
     public List<SelectorResponse> selectors() {
         return this.selectors;
     }
@@ -39,6 +43,10 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="startOnCreation")
     private @Nullable Boolean startOnCreation;
 
+    /**
+     * @return A boolean value that indicates if experiment should be started on creation or not.
+     * 
+     */
     public Optional<Boolean> startOnCreation() {
         return Optional.ofNullable(this.startOnCreation);
     }
@@ -50,6 +58,10 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="steps", required=true)
     private List<StepResponse> steps;
 
+    /**
+     * @return List of steps.
+     * 
+     */
     public List<StepResponse> steps() {
         return this.steps;
     }
@@ -80,25 +92,55 @@ public final class ExperimentPropertiesResponse extends com.pulumi.resources.Inv
             $ = new ExperimentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectors List of selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<SelectorResponse> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors List of selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(SelectorResponse... selectors) {
             return selectors(List.of(selectors));
         }
 
+        /**
+         * @param startOnCreation A boolean value that indicates if experiment should be started on creation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             $.startOnCreation = startOnCreation;
             return this;
         }
 
+        /**
+         * @param steps List of steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<StepResponse> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps List of steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(StepResponse... steps) {
             return steps(List.of(steps));
         }

@@ -28,6 +28,10 @@ public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
     private @Nullable Output<String> creationTime;
 
+    /**
+     * @return The creation datetime of the password.
+     * 
+     */
     public Optional<Output<String>> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -39,6 +43,10 @@ public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiry")
     private @Nullable Output<String> expiry;
 
+    /**
+     * @return The expiry datetime of the password.
+     * 
+     */
     public Optional<Output<String>> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -50,6 +58,10 @@ public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,TokenPasswordName>> name;
 
+    /**
+     * @return The password name &#34;password1&#34; or &#34;password2&#34;
+     * 
+     */
     public Optional<Output<Either<String,TokenPasswordName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,37 +92,85 @@ public final class TokenPasswordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TokenPasswordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The creation datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable Output<String> creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param creationTime The creation datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             return creationTime(Output.of(creationTime));
         }
 
+        /**
+         * @param expiry The expiry datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable Output<String> expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param expiry The expiry datetime of the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             return expiry(Output.of(expiry));
         }
 
+        /**
+         * @param name The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,TokenPasswordName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,TokenPasswordName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(TokenPasswordName name) {
             return name(Either.ofRight(name));
         }

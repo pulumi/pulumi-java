@@ -26,6 +26,10 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The business document description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The business document name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return The business document version.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -78,29 +90,65 @@ public final class RosettaNetPipBusinessDocumentArgs extends com.pulumi.resource
             $ = new RosettaNetPipBusinessDocumentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The business document description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The business document description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The business document name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The business document name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version The business document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The business document version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

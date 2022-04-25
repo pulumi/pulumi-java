@@ -26,6 +26,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="commitment", required=true)
     private String commitment;
 
+    /**
+     * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+     * 
+     */
     public String commitment() {
         return this.commitment;
     }
@@ -37,6 +41,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="creationTimestamp", required=true)
     private String creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public String creationTimestamp() {
         return this.creationTimestamp;
     }
@@ -48,6 +56,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -59,6 +71,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of the resource. Always compute#reservations for reservations.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -70,6 +86,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -81,6 +101,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="satisfiesPzs", required=true)
     private Boolean satisfiesPzs;
 
+    /**
+     * @return Reserved for future use.
+     * 
+     */
     public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
@@ -92,6 +116,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
     private String selfLink;
 
+    /**
+     * @return Server-defined fully-qualified URL for this resource.
+     * 
+     */
     public String selfLink() {
         return this.selfLink;
     }
@@ -103,6 +131,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shareSettings", required=true)
     private ShareSettingsResponse shareSettings;
 
+    /**
+     * @return Share-settings for shared-reservation
+     * 
+     */
     public ShareSettingsResponse shareSettings() {
         return this.shareSettings;
     }
@@ -114,6 +146,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="specificReservation", required=true)
     private AllocationSpecificSKUReservationResponse specificReservation;
 
+    /**
+     * @return Reservation for instances with specific machine shapes.
+     * 
+     */
     public AllocationSpecificSKUReservationResponse specificReservation() {
         return this.specificReservation;
     }
@@ -125,6 +161,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="specificReservationRequired", required=true)
     private Boolean specificReservationRequired;
 
+    /**
+     * @return Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * 
+     */
     public Boolean specificReservationRequired() {
         return this.specificReservationRequired;
     }
@@ -136,6 +176,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the reservation.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -147,6 +191,10 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -186,61 +234,133 @@ public final class ReservationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReservationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitment Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitment(String commitment) {
             $.commitment = commitment;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kind Type of the resource. Always compute#reservations for reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param satisfiesPzs Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             $.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
+        /**
+         * @param selfLink Server-defined fully-qualified URL for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param shareSettings Share-settings for shared-reservation
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSettings(ShareSettingsResponse shareSettings) {
             $.shareSettings = shareSettings;
             return this;
         }
 
+        /**
+         * @param specificReservation Reservation for instances with specific machine shapes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservation(AllocationSpecificSKUReservationResponse specificReservation) {
             $.specificReservation = specificReservation;
             return this;
         }
 
+        /**
+         * @param specificReservationRequired Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specificReservationRequired(Boolean specificReservationRequired) {
             $.specificReservationRequired = specificReservationRequired;
             return this;
         }
 
+        /**
+         * @param status The status of the reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param zone Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

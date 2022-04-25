@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProvisioningErrorResponse {
     /**
-     * Verbose error message about the provisioning failure
+     * @return Verbose error message about the provisioning failure
      * 
      */
     private final @Nullable String message;
     /**
-     * Error code of the provisioning failure
+     * @return Error code of the provisioning failure
      * 
      */
     private final @Nullable String provisioningErrorCode;
@@ -31,16 +31,16 @@ public final class ProvisioningErrorResponse {
     }
 
     /**
-     * Verbose error message about the provisioning failure
+     * @return Verbose error message about the provisioning failure
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Error code of the provisioning failure
+     * @return Error code of the provisioning failure
      * 
-    */
+     */
     public Optional<String> provisioningErrorCode() {
         return Optional.ofNullable(this.provisioningErrorCode);
     }

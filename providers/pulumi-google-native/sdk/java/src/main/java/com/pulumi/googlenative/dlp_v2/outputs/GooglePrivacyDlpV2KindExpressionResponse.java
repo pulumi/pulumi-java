@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2KindExpressionResponse {
     /**
-     * The name of the kind.
+     * @return The name of the kind.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
     }
 
     /**
-     * The name of the kind.
+     * @return The name of the kind.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

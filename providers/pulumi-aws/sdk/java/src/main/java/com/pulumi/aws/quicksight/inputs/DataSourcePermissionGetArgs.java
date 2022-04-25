@@ -21,6 +21,10 @@ public final class DataSourcePermissionGetArgs extends com.pulumi.resources.Reso
     @Import(name="actions", required=true)
     private Output<List<String>> actions;
 
+    /**
+     * @return Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+     * 
+     */
     public Output<List<String>> actions() {
         return this.actions;
     }
@@ -32,6 +36,10 @@ public final class DataSourcePermissionGetArgs extends com.pulumi.resources.Reso
     @Import(name="principal", required=true)
     private Output<String> principal;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the principal.
+     * 
+     */
     public Output<String> principal() {
         return this.principal;
     }
@@ -61,24 +69,54 @@ public final class DataSourcePermissionGetArgs extends com.pulumi.resources.Reso
             $ = new DataSourcePermissionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<String>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param principal The Amazon Resource Name (ARN) of the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal The Amazon Resource Name (ARN) of the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }

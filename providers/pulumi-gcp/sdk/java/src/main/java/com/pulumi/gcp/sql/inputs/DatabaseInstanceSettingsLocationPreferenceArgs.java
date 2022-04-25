@@ -23,6 +23,11 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends com.pu
     @Import(name="followGaeApplication")
     private @Nullable Output<String> followGaeApplication;
 
+    /**
+     * @return A GAE application whose zone to remain
+     * in. Must be in the same region as this instance.
+     * 
+     */
     public Optional<Output<String>> followGaeApplication() {
         return Optional.ofNullable(this.followGaeApplication);
     }
@@ -35,6 +40,11 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends com.pu
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The preferred compute engine
+     * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -64,20 +74,48 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends com.pu
             $ = new DatabaseInstanceSettingsLocationPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param followGaeApplication A GAE application whose zone to remain
+         * in. Must be in the same region as this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
             $.followGaeApplication = followGaeApplication;
             return this;
         }
 
+        /**
+         * @param followGaeApplication A GAE application whose zone to remain
+         * in. Must be in the same region as this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder followGaeApplication(String followGaeApplication) {
             return followGaeApplication(Output.of(followGaeApplication));
         }
 
+        /**
+         * @param zone The preferred compute engine
+         * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The preferred compute engine
+         * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

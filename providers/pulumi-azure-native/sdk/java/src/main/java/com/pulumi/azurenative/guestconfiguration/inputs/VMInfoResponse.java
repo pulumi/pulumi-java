@@ -23,6 +23,10 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Azure resource Id of the VM.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uuid", required=true)
     private String uuid;
 
+    /**
+     * @return UUID(Universally Unique Identifier) of the VM.
+     * 
+     */
     public String uuid() {
         return this.uuid;
     }
@@ -63,11 +71,23 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VMInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Azure resource Id of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param uuid UUID(Universally Unique Identifier) of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uuid(String uuid) {
             $.uuid = uuid;
             return this;

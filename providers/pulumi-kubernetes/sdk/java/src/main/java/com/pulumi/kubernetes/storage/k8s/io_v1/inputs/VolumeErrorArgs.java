@@ -26,6 +26,10 @@ public final class VolumeErrorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -37,6 +41,10 @@ public final class VolumeErrorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return Time the error was encountered.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -66,20 +74,44 @@ public final class VolumeErrorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeErrorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param time Time the error was encountered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time Time the error was encountered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

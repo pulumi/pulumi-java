@@ -27,6 +27,11 @@ public final class DeliveryRuleCacheExpirationActionArgs extends com.pulumi.reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the action for the delivery rule.
+     * Expected value is &#39;CacheExpiration&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class DeliveryRuleCacheExpirationActionArgs extends com.pulumi.reso
     @Import(name="parameters", required=true)
     private Output<CacheExpirationActionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the action.
+     * 
+     */
     public Output<CacheExpirationActionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class DeliveryRuleCacheExpirationActionArgs extends com.pulumi.reso
             $ = new DeliveryRuleCacheExpirationActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;CacheExpiration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;CacheExpiration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<CacheExpirationActionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(CacheExpirationActionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

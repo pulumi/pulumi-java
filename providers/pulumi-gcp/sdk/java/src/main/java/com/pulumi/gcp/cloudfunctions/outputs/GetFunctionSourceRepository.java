@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetFunctionSourceRepository {
     private final String deployedUrl;
     /**
-     * The URL pointing to the hosted repository where the function is defined.
+     * @return The URL pointing to the hosted repository where the function is defined.
      * 
      */
     private final String url;
@@ -28,9 +28,9 @@ public final class GetFunctionSourceRepository {
         return this.deployedUrl;
     }
     /**
-     * The URL pointing to the hosted repository where the function is defined.
+     * @return The URL pointing to the hosted repository where the function is defined.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

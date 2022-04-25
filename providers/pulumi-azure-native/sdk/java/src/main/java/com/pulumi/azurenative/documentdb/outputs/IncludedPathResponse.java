@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IncludedPathResponse {
     /**
-     * List of indexes for this path
+     * @return List of indexes for this path
      * 
      */
     private final @Nullable List<IndexesResponse> indexes;
     /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
      */
     private final @Nullable String path;
@@ -33,16 +33,16 @@ public final class IncludedPathResponse {
     }
 
     /**
-     * List of indexes for this path
+     * @return List of indexes for this path
      * 
-    */
+     */
     public List<IndexesResponse> indexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
     /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }

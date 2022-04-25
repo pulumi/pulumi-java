@@ -23,6 +23,10 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -34,6 +38,10 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="credential")
     private @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
 
+    /**
+     * @return Sets the credential of a worker group.
+     * 
+     */
     public Optional<Output<RunAsCredentialAssociationPropertyArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -45,6 +53,10 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="hybridRunbookWorkerGroupName")
     private @Nullable Output<String> hybridRunbookWorkerGroupName;
 
+    /**
+     * @return The hybrid runbook worker group name
+     * 
+     */
     public Optional<Output<String>> hybridRunbookWorkerGroupName() {
         return Optional.ofNullable(this.hybridRunbookWorkerGroupName);
     }
@@ -56,6 +68,10 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
             $ = new HybridRunbookWorkerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param credential Sets the credential of a worker group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<RunAsCredentialAssociationPropertyArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential Sets the credential of a worker group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(RunAsCredentialAssociationPropertyArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerGroupName(@Nullable Output<String> hybridRunbookWorkerGroupName) {
             $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             return hybridRunbookWorkerGroupName(Output.of(hybridRunbookWorkerGroupName));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

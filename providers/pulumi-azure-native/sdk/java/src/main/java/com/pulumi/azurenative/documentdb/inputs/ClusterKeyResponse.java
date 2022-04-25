@@ -25,6 +25,10 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table cluster key
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="orderBy")
     private @Nullable String orderBy;
 
+    /**
+     * @return Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+     * 
+     */
     public Optional<String> orderBy() {
         return Optional.ofNullable(this.orderBy);
     }
@@ -65,11 +73,23 @@ public final class ClusterKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Cosmos DB Cassandra table cluster key
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param orderBy Order of the Cosmos DB Cassandra table cluster key, only support &#34;Asc&#34; and &#34;Desc&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderBy(@Nullable String orderBy) {
             $.orderBy = orderBy;
             return this;

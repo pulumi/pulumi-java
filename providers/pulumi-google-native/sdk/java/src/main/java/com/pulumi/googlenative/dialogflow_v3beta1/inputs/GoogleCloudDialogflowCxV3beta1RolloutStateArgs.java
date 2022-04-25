@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends com.pu
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return Start time of the current step.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends com.pu
     @Import(name="step")
     private @Nullable Output<String> step;
 
+    /**
+     * @return Display name of the current auto rollout step.
+     * 
+     */
     public Optional<Output<String>> step() {
         return Optional.ofNullable(this.step);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends com.pu
     @Import(name="stepIndex")
     private @Nullable Output<Integer> stepIndex;
 
+    /**
+     * @return Index of the current step in the auto rollout steps list.
+     * 
+     */
     public Optional<Output<Integer>> stepIndex() {
         return Optional.ofNullable(this.stepIndex);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateArgs extends com.pu
             $ = new GoogleCloudDialogflowCxV3beta1RolloutStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTime Start time of the current step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the current step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param step Display name of the current auto rollout step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder step(@Nullable Output<String> step) {
             $.step = step;
             return this;
         }
 
+        /**
+         * @param step Display name of the current auto rollout step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder step(String step) {
             return step(Output.of(step));
         }
 
+        /**
+         * @param stepIndex Index of the current step in the auto rollout steps list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepIndex(@Nullable Output<Integer> stepIndex) {
             $.stepIndex = stepIndex;
             return this;
         }
 
+        /**
+         * @param stepIndex Index of the current step in the auto rollout steps list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepIndex(Integer stepIndex) {
             return stepIndex(Output.of(stepIndex));
         }

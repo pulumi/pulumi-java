@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class BusinessIdentityResponse {
     /**
-     * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+     * @return The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
      * 
      */
     private final String qualifier;
     /**
-     * The user defined business identity value.
+     * @return The user defined business identity value.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class BusinessIdentityResponse {
     }
 
     /**
-     * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
+     * @return The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
      * 
-    */
+     */
     public String qualifier() {
         return this.qualifier;
     }
     /**
-     * The user defined business identity value.
+     * @return The user defined business identity value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

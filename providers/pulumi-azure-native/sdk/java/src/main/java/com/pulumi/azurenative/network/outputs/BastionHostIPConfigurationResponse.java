@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BastionHostIPConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Private IP allocation method.
+     * @return Private IP allocation method.
      * 
      */
     private final @Nullable String privateIPAllocationMethod;
     /**
-     * The provisioning state of the bastion host IP configuration resource.
+     * @return The provisioning state of the bastion host IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Reference of the PublicIP resource.
+     * @return Reference of the PublicIP resource.
      * 
      */
     private final SubResourceResponse publicIPAddress;
     /**
-     * Reference of the subnet resource.
+     * @return Reference of the subnet resource.
      * 
      */
     private final SubResourceResponse subnet;
     /**
-     * Ip configuration type.
+     * @return Ip configuration type.
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class BastionHostIPConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Private IP allocation method.
+     * @return Private IP allocation method.
      * 
-    */
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
-     * The provisioning state of the bastion host IP configuration resource.
+     * @return The provisioning state of the bastion host IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Reference of the PublicIP resource.
+     * @return Reference of the PublicIP resource.
      * 
-    */
+     */
     public SubResourceResponse publicIPAddress() {
         return this.publicIPAddress;
     }
     /**
-     * Reference of the subnet resource.
+     * @return Reference of the subnet resource.
      * 
-    */
+     */
     public SubResourceResponse subnet() {
         return this.subnet;
     }
     /**
-     * Ip configuration type.
+     * @return Ip configuration type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

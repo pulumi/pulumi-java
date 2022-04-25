@@ -30,6 +30,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Operation response description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
     @Import(name="headers")
     private @Nullable Output<List<ParameterContractArgs>> headers;
 
+    /**
+     * @return Collection of operation response headers.
+     * 
+     */
     public Optional<Output<List<ParameterContractArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -52,6 +60,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
     @Import(name="representations")
     private @Nullable Output<List<RepresentationContractArgs>> representations;
 
+    /**
+     * @return Collection of operation response representations.
+     * 
+     */
     public Optional<Output<List<RepresentationContractArgs>>> representations() {
         return Optional.ofNullable(this.representations);
     }
@@ -63,6 +75,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
     @Import(name="statusCode", required=true)
     private Output<Integer> statusCode;
 
+    /**
+     * @return Operation response HTTP status code.
+     * 
+     */
     public Output<Integer> statusCode() {
         return this.statusCode;
     }
@@ -94,46 +110,106 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
             $ = new ResponseContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Operation response description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Operation response description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param headers Collection of operation response headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Collection of operation response headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<ParameterContractArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers Collection of operation response headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(ParameterContractArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param representations Collection of operation response representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
             $.representations = representations;
             return this;
         }
 
+        /**
+         * @param representations Collection of operation response representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(List<RepresentationContractArgs> representations) {
             return representations(Output.of(representations));
         }
 
+        /**
+         * @param representations Collection of operation response representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(RepresentationContractArgs... representations) {
             return representations(List.of(representations));
         }
 
+        /**
+         * @param statusCode Operation response HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<Integer> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode Operation response HTTP status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Integer statusCode) {
             return statusCode(Output.of(statusCode));
         }

@@ -22,6 +22,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="field", required=true)
     private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field;
 
+    /**
+     * @return Designated field in the BigQuery table.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field() {
         return this.field;
     }
@@ -34,6 +39,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
     @Import(name="table", required=true)
     private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table;
 
+    /**
+     * @return Field in a BigQuery table where each cell represents a dictionary phrase.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table() {
         return this.table;
     }
@@ -63,20 +73,48 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArg
             $ = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Designated field in the BigQuery table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Designated field in the BigQuery table.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param table Field in a BigQuery table where each cell represents a dictionary phrase.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Field in a BigQuery table where each cell represents a dictionary phrase.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs table) {
             return table(Output.of(table));
         }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PartitionStorageDescriptorSerDeInfo {
     /**
-     * Name of the SerDe.
+     * @return Name of the SerDe.
      * 
      */
     private final @Nullable String name;
     /**
-     * A map of initialization parameters for the SerDe, in key-value form.
+     * @return A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
     private final @Nullable Map<String,String> parameters;
     /**
-     * Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+     * @return Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
      * 
      */
     private final @Nullable String serializationLibrary;
@@ -39,23 +39,23 @@ public final class PartitionStorageDescriptorSerDeInfo {
     }
 
     /**
-     * Name of the SerDe.
+     * @return Name of the SerDe.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A map of initialization parameters for the SerDe, in key-value form.
+     * @return A map of initialization parameters for the SerDe, in key-value form.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+     * @return Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
      * 
-    */
+     */
     public Optional<String> serializationLibrary() {
         return Optional.ofNullable(this.serializationLibrary);
     }

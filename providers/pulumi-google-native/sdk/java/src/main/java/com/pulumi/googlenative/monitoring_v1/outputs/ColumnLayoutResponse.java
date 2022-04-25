@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ColumnLayoutResponse {
     /**
-     * The columns of content to display.
+     * @return The columns of content to display.
      * 
      */
     private final List<ColumnResponse> columns;
@@ -22,9 +22,9 @@ public final class ColumnLayoutResponse {
     }
 
     /**
-     * The columns of content to display.
+     * @return The columns of content to display.
      * 
-    */
+     */
     public List<ColumnResponse> columns() {
         return this.columns;
     }

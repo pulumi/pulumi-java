@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class PackageShippingDetailsResponse {
     /**
-     * Name of the carrier.
+     * @return Name of the carrier.
      * 
      */
     private final String carrierName;
     /**
-     * Tracking Id of shipment.
+     * @return Tracking Id of shipment.
      * 
      */
     private final String trackingId;
     /**
-     * Url where shipment can be tracked.
+     * @return Url where shipment can be tracked.
      * 
      */
     private final String trackingUrl;
@@ -36,23 +36,23 @@ public final class PackageShippingDetailsResponse {
     }
 
     /**
-     * Name of the carrier.
+     * @return Name of the carrier.
      * 
-    */
+     */
     public String carrierName() {
         return this.carrierName;
     }
     /**
-     * Tracking Id of shipment.
+     * @return Tracking Id of shipment.
      * 
-    */
+     */
     public String trackingId() {
         return this.trackingId;
     }
     /**
-     * Url where shipment can be tracked.
+     * @return Url where shipment can be tracked.
      * 
-    */
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }

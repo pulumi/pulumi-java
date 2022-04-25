@@ -22,6 +22,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hoursOfOperationId")
     private @Nullable String hoursOfOperationId;
 
+    /**
+     * @return Returns information on a specific Hours of Operation by hours of operation id
+     * 
+     */
     public Optional<String> hoursOfOperationId() {
         return Optional.ofNullable(this.hoursOfOperationId);
     }
@@ -33,6 +37,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return Reference to the hosting Amazon Connect Instance
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -44,6 +52,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Returns information on a specific Hours of Operation by name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A the map of tags to assign to the Hours of Operation.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -86,21 +102,45 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hoursOfOperationId Returns information on a specific Hours of Operation by hours of operation id
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             $.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
 
+        /**
+         * @param instanceId Reference to the hosting Amazon Connect Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param name Returns information on a specific Hours of Operation by name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags A the map of tags to assign to the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

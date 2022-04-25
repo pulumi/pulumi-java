@@ -25,6 +25,10 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the quick connect.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -47,6 +55,10 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the quick connect.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quickConnectConfig", required=true)
     private Output<QuickConnectConfigArgs> quickConnectConfig;
 
+    /**
+     * @return Configuration settings for the quick connect.
+     * 
+     */
     public Output<QuickConnectConfigArgs> quickConnectConfig() {
         return this.quickConnectConfig;
     }
@@ -69,6 +85,10 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<QuickConnectTagArgs>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Optional<Output<List<QuickConnectTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class QuickConnectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QuickConnectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param name The name of the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param quickConnectConfig Configuration settings for the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectConfig(Output<QuickConnectConfigArgs> quickConnectConfig) {
             $.quickConnectConfig = quickConnectConfig;
             return this;
         }
 
+        /**
+         * @param quickConnectConfig Configuration settings for the quick connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quickConnectConfig(QuickConnectConfigArgs quickConnectConfig) {
             return quickConnectConfig(Output.of(quickConnectConfig));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<QuickConnectTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<QuickConnectTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(QuickConnectTagArgs... tags) {
             return tags(List.of(tags));
         }

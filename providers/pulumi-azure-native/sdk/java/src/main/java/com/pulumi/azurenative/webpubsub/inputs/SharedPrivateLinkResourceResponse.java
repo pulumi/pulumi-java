@@ -26,6 +26,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -37,6 +41,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Fully qualified resource Id for the resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -48,6 +56,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="privateLinkResourceId", required=true)
     private String privateLinkResourceId;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for
+     * 
+     */
     public String privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
@@ -70,6 +86,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the shared private link resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -92,6 +116,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the shared private link resource
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -103,6 +131,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="systemData", required=true)
     private SystemDataResponse systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
@@ -114,6 +146,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -150,46 +186,100 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
             $ = new SharedPrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param id Fully qualified resource Id for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param status Status of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param systemData Metadata pertaining to creation and last modification of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(SystemDataResponse systemData) {
             $.systemData = systemData;
             return this;
         }
 
+        /**
+         * @param type The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

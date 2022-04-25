@@ -23,6 +23,10 @@ public final class VpcAccessConnectorResponse extends com.pulumi.resources.Invok
     @Import(name="egressSetting", required=true)
     private String egressSetting;
 
+    /**
+     * @return The egress setting for the connector, controlling what traffic is diverted through it.
+     * 
+     */
     public String egressSetting() {
         return this.egressSetting;
     }
@@ -34,6 +38,10 @@ public final class VpcAccessConnectorResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class VpcAccessConnectorResponse extends com.pulumi.resources.Invok
             $ = new VpcAccessConnectorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressSetting The egress setting for the connector, controlling what traffic is diverted through it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressSetting(String egressSetting) {
             $.egressSetting = egressSetting;
             return this;
         }
 
+        /**
+         * @param name Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -29,6 +29,10 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="bindingType")
     private @Nullable Output<Either<String,BindingType>> bindingType;
 
+    /**
+     * @return Buildpack Binding Type
+     * 
+     */
     public Optional<Output<Either<String,BindingType>>> bindingType() {
         return Optional.ofNullable(this.bindingType);
     }
@@ -40,6 +44,10 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="launchProperties")
     private @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
+    /**
+     * @return The object describes the buildpack binding launch properties
+     * 
+     */
     public Optional<Output<BuildpackBindingLaunchPropertiesArgs>> launchProperties() {
         return Optional.ofNullable(this.launchProperties);
     }
@@ -69,28 +77,64 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
             $ = new BuildpackBindingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingType Buildpack Binding Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingType(@Nullable Output<Either<String,BindingType>> bindingType) {
             $.bindingType = bindingType;
             return this;
         }
 
+        /**
+         * @param bindingType Buildpack Binding Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingType(Either<String,BindingType> bindingType) {
             return bindingType(Output.of(bindingType));
         }
 
+        /**
+         * @param bindingType Buildpack Binding Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingType(String bindingType) {
             return bindingType(Either.ofLeft(bindingType));
         }
 
+        /**
+         * @param bindingType Buildpack Binding Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingType(BindingType bindingType) {
             return bindingType(Either.ofRight(bindingType));
         }
 
+        /**
+         * @param launchProperties The object describes the buildpack binding launch properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
             $.launchProperties = launchProperties;
             return this;
         }
 
+        /**
+         * @param launchProperties The object describes the buildpack binding launch properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProperties(BuildpackBindingLaunchPropertiesArgs launchProperties) {
             return launchProperties(Output.of(launchProperties));
         }

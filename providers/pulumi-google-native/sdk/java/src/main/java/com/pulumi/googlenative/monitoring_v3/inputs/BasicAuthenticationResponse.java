@@ -23,6 +23,10 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password to use when authenticating with the HTTP server.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -34,6 +38,10 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The username to use when authenticating with the HTTP server.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -63,11 +71,23 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
             $ = new BasicAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username The username to use when authenticating with the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

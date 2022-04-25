@@ -31,6 +31,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="coolDownPeriodSec", required=true)
     private Integer coolDownPeriodSec;
 
+    /**
+     * @return The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
+     * 
+     */
     public Integer coolDownPeriodSec() {
         return this.coolDownPeriodSec;
     }
@@ -42,6 +46,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="cpuUtilization", required=true)
     private AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
 
+    /**
+     * @return Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
+     * 
+     */
     public AutoscalingPolicyCpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
     }
@@ -53,6 +61,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="customMetricUtilizations", required=true)
     private List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
 
+    /**
+     * @return Configuration parameters of autoscaling based on a custom metric.
+     * 
+     */
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations() {
         return this.customMetricUtilizations;
     }
@@ -64,6 +76,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="loadBalancingUtilization", required=true)
     private AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
 
+    /**
+     * @return Configuration parameters of autoscaling based on load balancer.
+     * 
+     */
     public AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization() {
         return this.loadBalancingUtilization;
     }
@@ -75,6 +91,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="maxNumReplicas", required=true)
     private Integer maxNumReplicas;
 
+    /**
+     * @return The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
+     * 
+     */
     public Integer maxNumReplicas() {
         return this.maxNumReplicas;
     }
@@ -86,6 +106,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="minNumReplicas", required=true)
     private Integer minNumReplicas;
 
+    /**
+     * @return The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
+     * 
+     */
     public Integer minNumReplicas() {
         return this.minNumReplicas;
     }
@@ -97,6 +121,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Defines operating mode for this policy.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -122,6 +150,10 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="scalingSchedules", required=true)
     private Map<String,String> scalingSchedules;
 
+    /**
+     * @return Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
+     * 
+     */
     public Map<String,String> scalingSchedules() {
         return this.scalingSchedules;
     }
@@ -159,40 +191,88 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
             $ = new AutoscalingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coolDownPeriodSec The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coolDownPeriodSec(Integer coolDownPeriodSec) {
             $.coolDownPeriodSec = coolDownPeriodSec;
             return this;
         }
 
+        /**
+         * @param cpuUtilization Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuUtilization(AutoscalingPolicyCpuUtilizationResponse cpuUtilization) {
             $.cpuUtilization = cpuUtilization;
             return this;
         }
 
+        /**
+         * @param customMetricUtilizations Configuration parameters of autoscaling based on a custom metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMetricUtilizations(List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations) {
             $.customMetricUtilizations = customMetricUtilizations;
             return this;
         }
 
+        /**
+         * @param customMetricUtilizations Configuration parameters of autoscaling based on a custom metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customMetricUtilizations(AutoscalingPolicyCustomMetricUtilizationResponse... customMetricUtilizations) {
             return customMetricUtilizations(List.of(customMetricUtilizations));
         }
 
+        /**
+         * @param loadBalancingUtilization Configuration parameters of autoscaling based on load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization) {
             $.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
 
+        /**
+         * @param maxNumReplicas The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNumReplicas(Integer maxNumReplicas) {
             $.maxNumReplicas = maxNumReplicas;
             return this;
         }
 
+        /**
+         * @param minNumReplicas The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNumReplicas(Integer minNumReplicas) {
             $.minNumReplicas = minNumReplicas;
             return this;
         }
 
+        /**
+         * @param mode Defines operating mode for this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
@@ -208,6 +288,12 @@ public final class AutoscalingPolicyResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param scalingSchedules Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingSchedules(Map<String,String> scalingSchedules) {
             $.scalingSchedules = scalingSchedules;
             return this;

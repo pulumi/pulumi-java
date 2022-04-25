@@ -28,6 +28,10 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the extended location.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<Either<String,ExtendedLocationTypes>> type;
 
+    /**
+     * @return The type of the extended location.
+     * 
+     */
     public Optional<Output<Either<String,ExtendedLocationTypes>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
             $ = new ExtendedLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The type of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ExtendedLocationTypes>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ExtendedLocationTypes> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ExtendedLocationTypes type) {
             return type(Either.ofRight(type));
         }

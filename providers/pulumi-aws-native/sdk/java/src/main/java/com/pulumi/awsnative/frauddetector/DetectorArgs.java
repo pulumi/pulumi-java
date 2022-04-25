@@ -29,6 +29,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associatedModels")
     private @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
+    /**
+     * @return The models to associate with this detector.
+     * 
+     */
     public Optional<Output<List<DetectorModelArgs>>> associatedModels() {
         return Optional.ofNullable(this.associatedModels);
     }
@@ -40,6 +44,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the detector.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
     private Output<String> detectorId;
 
+    /**
+     * @return The ID of the detector
+     * 
+     */
     public Output<String> detectorId() {
         return this.detectorId;
     }
@@ -62,6 +74,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorVersionStatus")
     private @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
+    /**
+     * @return The desired detector version status for the detector
+     * 
+     */
     public Optional<Output<DetectorVersionStatus>> detectorVersionStatus() {
         return Optional.ofNullable(this.detectorVersionStatus);
     }
@@ -73,6 +89,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
     private Output<DetectorEventTypeArgs> eventType;
 
+    /**
+     * @return The event type to associate this detector with.
+     * 
+     */
     public Output<DetectorEventTypeArgs> eventType() {
         return this.eventType;
     }
@@ -98,6 +118,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DetectorTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this detector.
+     * 
+     */
     public Optional<Output<List<DetectorTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -133,51 +157,117 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associatedModels The models to associate with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedModels(@Nullable Output<List<DetectorModelArgs>> associatedModels) {
             $.associatedModels = associatedModels;
             return this;
         }
 
+        /**
+         * @param associatedModels The models to associate with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedModels(List<DetectorModelArgs> associatedModels) {
             return associatedModels(Output.of(associatedModels));
         }
 
+        /**
+         * @param associatedModels The models to associate with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedModels(DetectorModelArgs... associatedModels) {
             return associatedModels(List.of(associatedModels));
         }
 
+        /**
+         * @param description The description of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param detectorId The ID of the detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(Output<String> detectorId) {
             $.detectorId = detectorId;
             return this;
         }
 
+        /**
+         * @param detectorId The ID of the detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorId(String detectorId) {
             return detectorId(Output.of(detectorId));
         }
 
+        /**
+         * @param detectorVersionStatus The desired detector version status for the detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorVersionStatus(@Nullable Output<DetectorVersionStatus> detectorVersionStatus) {
             $.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
 
+        /**
+         * @param detectorVersionStatus The desired detector version status for the detector
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectorVersionStatus(DetectorVersionStatus detectorVersionStatus) {
             return detectorVersionStatus(Output.of(detectorVersionStatus));
         }
 
+        /**
+         * @param eventType The event type to associate this detector with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(Output<DetectorEventTypeArgs> eventType) {
             $.eventType = eventType;
             return this;
         }
 
+        /**
+         * @param eventType The event type to associate this detector with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(DetectorEventTypeArgs eventType) {
             return eventType(Output.of(eventType));
         }
@@ -204,15 +294,33 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param tags Tags associated with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DetectorTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DetectorTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -23,6 +23,10 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
     @Import(name="receiveAgreement", required=true)
     private EdifactOneWayAgreementResponse receiveAgreement;
 
+    /**
+     * @return The EDIFACT one-way receive agreement.
+     * 
+     */
     public EdifactOneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -34,6 +38,10 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
     @Import(name="sendAgreement", required=true)
     private EdifactOneWayAgreementResponse sendAgreement;
 
+    /**
+     * @return The EDIFACT one-way send agreement.
+     * 
+     */
     public EdifactOneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
@@ -63,11 +71,23 @@ public final class EdifactAgreementContentResponse extends com.pulumi.resources.
             $ = new EdifactAgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The EDIFACT one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(EdifactOneWayAgreementResponse receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The EDIFACT one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(EdifactOneWayAgreementResponse sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;

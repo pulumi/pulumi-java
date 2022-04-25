@@ -28,6 +28,10 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
     @Import(name="actionName", required=true)
     private String actionName;
 
+    /**
+     * @return The action name.
+     * 
+     */
     public String actionName() {
         return this.actionName;
     }
@@ -39,6 +43,10 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
     @Import(name="customDetails", required=true)
     private Object customDetails;
 
+    /**
+     * @return The custom details.
+     * 
+     */
     public Object customDetails() {
         return this.customDetails;
     }
@@ -50,6 +58,10 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
     @Import(name="failoverDirections", required=true)
     private List<String> failoverDirections;
 
+    /**
+     * @return The list of failover directions.
+     * 
+     */
     public List<String> failoverDirections() {
         return this.failoverDirections;
     }
@@ -61,6 +73,10 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
     @Import(name="failoverTypes", required=true)
     private List<String> failoverTypes;
 
+    /**
+     * @return The list of failover types.
+     * 
+     */
     public List<String> failoverTypes() {
         return this.failoverTypes;
     }
@@ -92,30 +108,66 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
             $ = new RecoveryPlanActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionName The action name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(String actionName) {
             $.actionName = actionName;
             return this;
         }
 
+        /**
+         * @param customDetails The custom details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDetails(Object customDetails) {
             $.customDetails = customDetails;
             return this;
         }
 
+        /**
+         * @param failoverDirections The list of failover directions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDirections(List<String> failoverDirections) {
             $.failoverDirections = failoverDirections;
             return this;
         }
 
+        /**
+         * @param failoverDirections The list of failover directions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDirections(String... failoverDirections) {
             return failoverDirections(List.of(failoverDirections));
         }
 
+        /**
+         * @param failoverTypes The list of failover types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTypes(List<String> failoverTypes) {
             $.failoverTypes = failoverTypes;
             return this;
         }
 
+        /**
+         * @param failoverTypes The list of failover types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTypes(String... failoverTypes) {
             return failoverTypes(List.of(failoverTypes));
         }

@@ -31,6 +31,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="awsS3DataSource", required=true)
     private AwsS3DataResponse awsS3DataSource;
 
+    /**
+     * @return An AWS S3 data source.
+     * 
+     */
     public AwsS3DataResponse awsS3DataSource() {
         return this.awsS3DataSource;
     }
@@ -42,6 +46,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="azureBlobStorageDataSource", required=true)
     private AzureBlobStorageDataResponse azureBlobStorageDataSource;
 
+    /**
+     * @return An Azure Blob Storage data source.
+     * 
+     */
     public AzureBlobStorageDataResponse azureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
     }
@@ -53,6 +61,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcsDataSink", required=true)
     private GcsDataResponse gcsDataSink;
 
+    /**
+     * @return A Cloud Storage data sink.
+     * 
+     */
     public GcsDataResponse gcsDataSink() {
         return this.gcsDataSink;
     }
@@ -64,6 +76,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcsDataSource", required=true)
     private GcsDataResponse gcsDataSource;
 
+    /**
+     * @return A Cloud Storage data source.
+     * 
+     */
     public GcsDataResponse gcsDataSource() {
         return this.gcsDataSource;
     }
@@ -75,6 +91,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcsIntermediateDataLocation", required=true)
     private GcsDataResponse gcsIntermediateDataLocation;
 
+    /**
+     * @return Cloud Storage intermediate data location.
+     * 
+     */
     public GcsDataResponse gcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
     }
@@ -86,6 +106,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="httpDataSource", required=true)
     private HttpDataResponse httpDataSource;
 
+    /**
+     * @return An HTTP URL data source.
+     * 
+     */
     public HttpDataResponse httpDataSource() {
         return this.httpDataSource;
     }
@@ -97,6 +121,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectConditions", required=true)
     private ObjectConditionsResponse objectConditions;
 
+    /**
+     * @return Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+     * 
+     */
     public ObjectConditionsResponse objectConditions() {
         return this.objectConditions;
     }
@@ -108,6 +136,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="posixDataSink", required=true)
     private PosixFilesystemResponse posixDataSink;
 
+    /**
+     * @return A POSIX Filesystem data sink.
+     * 
+     */
     public PosixFilesystemResponse posixDataSink() {
         return this.posixDataSink;
     }
@@ -119,6 +151,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="posixDataSource", required=true)
     private PosixFilesystemResponse posixDataSource;
 
+    /**
+     * @return A POSIX Filesystem data source.
+     * 
+     */
     public PosixFilesystemResponse posixDataSource() {
         return this.posixDataSource;
     }
@@ -130,6 +166,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sinkAgentPoolName", required=true)
     private String sinkAgentPoolName;
 
+    /**
+     * @return Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+     * 
+     */
     public String sinkAgentPoolName() {
         return this.sinkAgentPoolName;
     }
@@ -141,6 +181,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceAgentPoolName", required=true)
     private String sourceAgentPoolName;
 
+    /**
+     * @return Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+     * 
+     */
     public String sourceAgentPoolName() {
         return this.sourceAgentPoolName;
     }
@@ -152,6 +196,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="transferManifest", required=true)
     private TransferManifestResponse transferManifest;
 
+    /**
+     * @return A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+     * 
+     */
     public TransferManifestResponse transferManifest() {
         return this.transferManifest;
     }
@@ -163,6 +211,10 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="transferOptions", required=true)
     private TransferOptionsResponse transferOptions;
 
+    /**
+     * @return If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+     * 
+     */
     public TransferOptionsResponse transferOptions() {
         return this.transferOptions;
     }
@@ -203,66 +255,144 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TransferSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsS3DataSource An AWS S3 data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsS3DataSource(AwsS3DataResponse awsS3DataSource) {
             $.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
+        /**
+         * @param azureBlobStorageDataSource An Azure Blob Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorageDataSource(AzureBlobStorageDataResponse azureBlobStorageDataSource) {
             $.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
+        /**
+         * @param gcsDataSink A Cloud Storage data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSink(GcsDataResponse gcsDataSink) {
             $.gcsDataSink = gcsDataSink;
             return this;
         }
 
+        /**
+         * @param gcsDataSource A Cloud Storage data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsDataSource(GcsDataResponse gcsDataSource) {
             $.gcsDataSource = gcsDataSource;
             return this;
         }
 
+        /**
+         * @param gcsIntermediateDataLocation Cloud Storage intermediate data location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsIntermediateDataLocation(GcsDataResponse gcsIntermediateDataLocation) {
             $.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
             return this;
         }
 
+        /**
+         * @param httpDataSource An HTTP URL data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpDataSource(HttpDataResponse httpDataSource) {
             $.httpDataSource = httpDataSource;
             return this;
         }
 
+        /**
+         * @param objectConditions Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects&#39; &#34;last modification time&#34; do not exclude objects in a data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectConditions(ObjectConditionsResponse objectConditions) {
             $.objectConditions = objectConditions;
             return this;
         }
 
+        /**
+         * @param posixDataSink A POSIX Filesystem data sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSink(PosixFilesystemResponse posixDataSink) {
             $.posixDataSink = posixDataSink;
             return this;
         }
 
+        /**
+         * @param posixDataSource A POSIX Filesystem data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder posixDataSource(PosixFilesystemResponse posixDataSource) {
             $.posixDataSource = posixDataSource;
             return this;
         }
 
+        /**
+         * @param sinkAgentPoolName Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkAgentPoolName(String sinkAgentPoolName) {
             $.sinkAgentPoolName = sinkAgentPoolName;
             return this;
         }
 
+        /**
+         * @param sourceAgentPoolName Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgentPoolName(String sourceAgentPoolName) {
             $.sourceAgentPoolName = sourceAgentPoolName;
             return this;
         }
 
+        /**
+         * @param transferManifest A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferManifest(TransferManifestResponse transferManifest) {
             $.transferManifest = transferManifest;
             return this;
         }
 
+        /**
+         * @param transferOptions If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as &#39;last modification time&#39; are specified, the request fails with an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferOptions(TransferOptionsResponse transferOptions) {
             $.transferOptions = transferOptions;
             return this;

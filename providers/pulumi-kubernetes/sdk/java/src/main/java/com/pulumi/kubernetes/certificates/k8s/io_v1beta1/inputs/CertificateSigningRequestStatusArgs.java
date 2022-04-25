@@ -24,6 +24,10 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return If request was approved, the controller will place the issued certificate here.
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -35,6 +39,10 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
     @Import(name="conditions")
     private @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
+    /**
+     * @return Conditions applied to the request, such as approval or denial.
+     * 
+     */
     public Optional<Output<List<CertificateSigningRequestConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -64,24 +72,54 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
             $ = new CertificateSigningRequestStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate If request was approved, the controller will place the issued certificate here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate If request was approved, the controller will place the issued certificate here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param conditions Conditions applied to the request, such as approval or denial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Conditions applied to the request, such as approval or denial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<CertificateSigningRequestConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Conditions applied to the request, such as approval or denial.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(CertificateSigningRequestConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }

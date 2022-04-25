@@ -23,6 +23,10 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
     @Import(name="buildServiceName", required=true)
     private Output<String> buildServiceName;
 
+    /**
+     * @return The name of the build service resource.
+     * 
+     */
     public Output<String> buildServiceName() {
         return this.buildServiceName;
     }
@@ -34,6 +38,10 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
     @Import(name="builderName")
     private @Nullable Output<String> builderName;
 
+    /**
+     * @return The name of the builder resource.
+     * 
+     */
     public Optional<Output<String>> builderName() {
         return Optional.ofNullable(this.builderName);
     }
@@ -45,6 +53,10 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
     private @Nullable Output<BuilderPropertiesArgs> properties;
 
+    /**
+     * @return Property of the Builder resource.
+     * 
+     */
     public Optional<Output<BuilderPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,47 +119,107 @@ public final class BuildServiceBuilderArgs extends com.pulumi.resources.Resource
             $ = new BuildServiceBuilderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildServiceName The name of the build service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildServiceName(Output<String> buildServiceName) {
             $.buildServiceName = buildServiceName;
             return this;
         }
 
+        /**
+         * @param buildServiceName The name of the build service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildServiceName(String buildServiceName) {
             return buildServiceName(Output.of(buildServiceName));
         }
 
+        /**
+         * @param builderName The name of the builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderName(@Nullable Output<String> builderName) {
             $.builderName = builderName;
             return this;
         }
 
+        /**
+         * @param builderName The name of the builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderName(String builderName) {
             return builderName(Output.of(builderName));
         }
 
+        /**
+         * @param properties Property of the Builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<BuilderPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Property of the Builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(BuilderPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

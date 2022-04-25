@@ -25,6 +25,10 @@ public final class OracleSchemaResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="oracleTables", required=true)
     private List<OracleTableResponse> oracleTables;
 
+    /**
+     * @return Tables in the schema.
+     * 
+     */
     public List<OracleTableResponse> oracleTables() {
         return this.oracleTables;
     }
@@ -36,6 +40,10 @@ public final class OracleSchemaResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="schema", required=true)
     private String schema;
 
+    /**
+     * @return Schema name.
+     * 
+     */
     public String schema() {
         return this.schema;
     }
@@ -65,15 +73,33 @@ public final class OracleSchemaResponse extends com.pulumi.resources.InvokeArgs 
             $ = new OracleSchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleTables Tables in the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleTables(List<OracleTableResponse> oracleTables) {
             $.oracleTables = oracleTables;
             return this;
         }
 
+        /**
+         * @param oracleTables Tables in the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleTables(OracleTableResponse... oracleTables) {
             return oracleTables(List.of(oracleTables));
         }
 
+        /**
+         * @param schema Schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             $.schema = schema;
             return this;

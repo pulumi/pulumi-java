@@ -25,6 +25,10 @@ public final class InputDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="attributes", required=true)
     private Output<List<InputAttributeArgs>> attributes;
 
+    /**
+     * @return The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
+     * 
+     */
     public Output<List<InputAttributeArgs>> attributes() {
         return this.attributes;
     }
@@ -53,15 +57,33 @@ public final class InputDefinitionArgs extends com.pulumi.resources.ResourceArgs
             $ = new InputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Output<List<InputAttributeArgs>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<InputAttributeArgs> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param attributes The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(InputAttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }

@@ -27,6 +27,10 @@ public final class TargetCopySettingResponse extends com.pulumi.resources.Invoke
     @Import(name="copyAfter", required=true)
     private Object copyAfter;
 
+    /**
+     * @return It can be CustomCopyOption or ImmediateCopyOption.
+     * 
+     */
     public Object copyAfter() {
         return this.copyAfter;
     }
@@ -38,6 +42,10 @@ public final class TargetCopySettingResponse extends com.pulumi.resources.Invoke
     @Import(name="dataStore", required=true)
     private DataStoreInfoBaseResponse dataStore;
 
+    /**
+     * @return Info of target datastore
+     * 
+     */
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
@@ -67,11 +75,23 @@ public final class TargetCopySettingResponse extends com.pulumi.resources.Invoke
             $ = new TargetCopySettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyAfter It can be CustomCopyOption or ImmediateCopyOption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyAfter(Object copyAfter) {
             $.copyAfter = copyAfter;
             return this;
         }
 
+        /**
+         * @param dataStore Info of target datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             $.dataStore = dataStore;
             return this;

@@ -24,6 +24,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="azureBlobFileSystemConfiguration")
     private @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<AzureBlobFileSystemConfigurationResponse> azureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
@@ -35,6 +39,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="azureFileShareConfiguration")
     private @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<AzureFileShareConfigurationResponse> azureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
@@ -46,6 +54,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="cifsMountConfiguration")
     private @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<CIFSMountConfigurationResponse> cifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
@@ -57,6 +69,10 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="nfsMountConfiguration")
     private @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
+    /**
+     * @return This property is mutually exclusive with all other properties.
+     * 
+     */
     public Optional<NFSMountConfigurationResponse> nfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);
     }
@@ -88,21 +104,45 @@ public final class MountConfigurationResponse extends com.pulumi.resources.Invok
             $ = new MountConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobFileSystemConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobFileSystemConfiguration(@Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration) {
             $.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
             return this;
         }
 
+        /**
+         * @param azureFileShareConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileShareConfiguration(@Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration) {
             $.azureFileShareConfiguration = azureFileShareConfiguration;
             return this;
         }
 
+        /**
+         * @param cifsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cifsMountConfiguration(@Nullable CIFSMountConfigurationResponse cifsMountConfiguration) {
             $.cifsMountConfiguration = cifsMountConfiguration;
             return this;
         }
 
+        /**
+         * @param nfsMountConfiguration This property is mutually exclusive with all other properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsMountConfiguration(@Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
             $.nfsMountConfiguration = nfsMountConfiguration;
             return this;

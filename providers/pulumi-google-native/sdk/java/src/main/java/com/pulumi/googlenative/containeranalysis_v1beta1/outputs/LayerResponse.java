@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class LayerResponse {
     /**
-     * The recovered arguments to the Dockerfile directive.
+     * @return The recovered arguments to the Dockerfile directive.
      * 
      */
     private final String arguments;
     /**
-     * The recovered Dockerfile directive used to construct this layer.
+     * @return The recovered Dockerfile directive used to construct this layer.
      * 
      */
     private final String directive;
@@ -29,16 +29,16 @@ public final class LayerResponse {
     }
 
     /**
-     * The recovered arguments to the Dockerfile directive.
+     * @return The recovered arguments to the Dockerfile directive.
      * 
-    */
+     */
     public String arguments() {
         return this.arguments;
     }
     /**
-     * The recovered Dockerfile directive used to construct this layer.
+     * @return The recovered Dockerfile directive used to construct this layer.
      * 
-    */
+     */
     public String directive() {
         return this.directive;
     }

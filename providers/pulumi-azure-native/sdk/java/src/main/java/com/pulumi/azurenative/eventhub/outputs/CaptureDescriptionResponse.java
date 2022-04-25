@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CaptureDescriptionResponse {
     /**
-     * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+     * @return Properties of Destination where capture will be stored. (Storage Account, Blob Names)
      * 
      */
     private final @Nullable DestinationResponse destination;
     /**
-     * A value that indicates whether capture description is enabled.
+     * @return A value that indicates whether capture description is enabled.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+     * @return Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
      * 
      */
     private final @Nullable String encoding;
     /**
-     * The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+     * @return The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
      * 
      */
     private final @Nullable Integer intervalInSeconds;
     /**
-     * The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+     * @return The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
      * 
      */
     private final @Nullable Integer sizeLimitInBytes;
     /**
-     * A value that indicates whether to Skip Empty Archives
+     * @return A value that indicates whether to Skip Empty Archives
      * 
      */
     private final @Nullable Boolean skipEmptyArchives;
@@ -62,44 +62,44 @@ public final class CaptureDescriptionResponse {
     }
 
     /**
-     * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+     * @return Properties of Destination where capture will be stored. (Storage Account, Blob Names)
      * 
-    */
+     */
     public Optional<DestinationResponse> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * A value that indicates whether capture description is enabled.
+     * @return A value that indicates whether capture description is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+     * @return Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
      * 
-    */
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+     * @return The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
      * 
-    */
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
-     * The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+     * @return The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
      * 
-    */
+     */
     public Optional<Integer> sizeLimitInBytes() {
         return Optional.ofNullable(this.sizeLimitInBytes);
     }
     /**
-     * A value that indicates whether to Skip Empty Archives
+     * @return A value that indicates whether to Skip Empty Archives
      * 
-    */
+     */
     public Optional<Boolean> skipEmptyArchives() {
         return Optional.ofNullable(this.skipEmptyArchives);
     }

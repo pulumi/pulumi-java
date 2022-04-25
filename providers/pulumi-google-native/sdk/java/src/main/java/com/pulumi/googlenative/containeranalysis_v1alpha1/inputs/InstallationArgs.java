@@ -27,6 +27,10 @@ public final class InstallationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<List<LocationArgs>> location;
 
+    /**
+     * @return All of the places within the filesystem versions of this package have been found.
+     * 
+     */
     public Optional<Output<List<LocationArgs>>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -55,15 +59,33 @@ public final class InstallationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstallationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<List<LocationArgs>> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(List<LocationArgs> location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param location All of the places within the filesystem versions of this package have been found.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(LocationArgs... location) {
             return location(List.of(location));
         }

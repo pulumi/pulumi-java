@@ -22,6 +22,10 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="creationToken")
     private @Nullable String creationToken;
 
+    /**
+     * @return Restricts the list to the file system with this creation token.
+     * 
+     */
     public Optional<String> creationToken() {
         return Optional.ofNullable(this.creationToken);
     }
@@ -33,6 +37,10 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileSystemId")
     private @Nullable String fileSystemId;
 
+    /**
+     * @return The ID that identifies the file system (e.g., fs-ccfc0d65).
+     * 
+     */
     public Optional<String> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -44,6 +52,10 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Restricts the list to the file system with these tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -74,16 +86,34 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFileSystemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationToken Restricts the list to the file system with this creation token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationToken(@Nullable String creationToken) {
             $.creationToken = creationToken;
             return this;
         }
 
+        /**
+         * @param fileSystemId The ID that identifies the file system (e.g., fs-ccfc0d65).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable String fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param tags Restricts the list to the file system with these tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

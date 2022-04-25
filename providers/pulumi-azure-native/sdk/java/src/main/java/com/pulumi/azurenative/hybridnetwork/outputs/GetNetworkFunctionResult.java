@@ -17,82 +17,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkFunctionResult {
     /**
-     * The reference to the device resource.
+     * @return The reference to the device resource.
      * 
      */
     private final @Nullable SubResourceResponse device;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The resource URI of the managed application.
+     * @return The resource URI of the managed application.
      * 
      */
     private final SubResourceResponse managedApplication;
     /**
-     * The parameters for the managed application.
+     * @return The parameters for the managed application.
      * 
      */
     private final @Nullable Object managedApplicationParameters;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The network function configurations from the user.
+     * @return The network function configurations from the user.
      * 
      */
     private final @Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations;
     /**
-     * The provisioning state of the network function resource.
+     * @return The provisioning state of the network function resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The service key for the network function resource.
+     * @return The service key for the network function resource.
      * 
      */
     private final String serviceKey;
     /**
-     * The sku name for the network function.
+     * @return The sku name for the network function.
      * 
      */
     private final @Nullable String skuName;
     /**
-     * The sku type for the network function.
+     * @return The sku type for the network function.
      * 
      */
     private final String skuType;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * The vendor name for the network function.
+     * @return The vendor name for the network function.
      * 
      */
     private final @Nullable String vendorName;
     /**
-     * The vendor provisioning state for the network function resource.
+     * @return The vendor provisioning state for the network function resource.
      * 
      */
     private final String vendorProvisioningState;
@@ -134,114 +134,114 @@ public final class GetNetworkFunctionResult {
     }
 
     /**
-     * The reference to the device resource.
+     * @return The reference to the device resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> device() {
         return Optional.ofNullable(this.device);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource URI of the managed application.
+     * @return The resource URI of the managed application.
      * 
-    */
+     */
     public SubResourceResponse managedApplication() {
         return this.managedApplication;
     }
     /**
-     * The parameters for the managed application.
+     * @return The parameters for the managed application.
      * 
-    */
+     */
     public Optional<Object> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The network function configurations from the user.
+     * @return The network function configurations from the user.
      * 
-    */
+     */
     public List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations == null ? List.of() : this.networkFunctionUserConfigurations;
     }
     /**
-     * The provisioning state of the network function resource.
+     * @return The provisioning state of the network function resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The service key for the network function resource.
+     * @return The service key for the network function resource.
      * 
-    */
+     */
     public String serviceKey() {
         return this.serviceKey;
     }
     /**
-     * The sku name for the network function.
+     * @return The sku name for the network function.
      * 
-    */
+     */
     public Optional<String> skuName() {
         return Optional.ofNullable(this.skuName);
     }
     /**
-     * The sku type for the network function.
+     * @return The sku type for the network function.
      * 
-    */
+     */
     public String skuType() {
         return this.skuType;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The vendor name for the network function.
+     * @return The vendor name for the network function.
      * 
-    */
+     */
     public Optional<String> vendorName() {
         return Optional.ofNullable(this.vendorName);
     }
     /**
-     * The vendor provisioning state for the network function resource.
+     * @return The vendor provisioning state for the network function resource.
      * 
-    */
+     */
     public String vendorProvisioningState() {
         return this.vendorProvisioningState;
     }

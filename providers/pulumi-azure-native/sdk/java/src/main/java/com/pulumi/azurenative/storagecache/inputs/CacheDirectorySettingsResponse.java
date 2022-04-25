@@ -26,6 +26,10 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
     @Import(name="activeDirectory")
     private @Nullable CacheActiveDirectorySettingsResponse activeDirectory;
 
+    /**
+     * @return Specifies settings for joining the HPC Cache to an Active Directory domain.
+     * 
+     */
     public Optional<CacheActiveDirectorySettingsResponse> activeDirectory() {
         return Optional.ofNullable(this.activeDirectory);
     }
@@ -37,6 +41,10 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
     @Import(name="usernameDownload")
     private @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
 
+    /**
+     * @return Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
+     * 
+     */
     public Optional<CacheUsernameDownloadSettingsResponse> usernameDownload() {
         return Optional.ofNullable(this.usernameDownload);
     }
@@ -66,11 +74,23 @@ public final class CacheDirectorySettingsResponse extends com.pulumi.resources.I
             $ = new CacheDirectorySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDirectory Specifies settings for joining the HPC Cache to an Active Directory domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsResponse activeDirectory) {
             $.activeDirectory = activeDirectory;
             return this;
         }
 
+        /**
+         * @param usernameDownload Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
             $.usernameDownload = usernameDownload;
             return this;

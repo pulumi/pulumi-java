@@ -22,6 +22,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="authMechanism")
     private @Nullable Output<String> authMechanism;
 
+    /**
+     * @return Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+     * 
+     */
     public Optional<Output<String>> authMechanism() {
         return Optional.ofNullable(this.authMechanism);
     }
@@ -33,6 +37,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="authSource")
     private @Nullable Output<String> authSource;
 
+    /**
+     * @return Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+     * 
+     */
     public Optional<Output<String>> authSource() {
         return Optional.ofNullable(this.authSource);
     }
@@ -44,6 +52,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="authType")
     private @Nullable Output<String> authType;
 
+    /**
+     * @return Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+     * 
+     */
     public Optional<Output<String>> authType() {
         return Optional.ofNullable(this.authType);
     }
@@ -55,6 +67,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="docsToInvestigate")
     private @Nullable Output<String> docsToInvestigate;
 
+    /**
+     * @return Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+     * 
+     */
     public Optional<Output<String>> docsToInvestigate() {
         return Optional.ofNullable(this.docsToInvestigate);
     }
@@ -66,6 +82,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="extractDocId")
     private @Nullable Output<String> extractDocId;
 
+    /**
+     * @return Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+     * 
+     */
     public Optional<Output<String>> extractDocId() {
         return Optional.ofNullable(this.extractDocId);
     }
@@ -77,6 +97,10 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="nestingLevel")
     private @Nullable Output<String> nestingLevel;
 
+    /**
+     * @return Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+     * 
+     */
     public Optional<Output<String>> nestingLevel() {
         return Optional.ofNullable(this.nestingLevel);
     }
@@ -110,56 +134,128 @@ public final class EndpointMongodbSettingsGetArgs extends com.pulumi.resources.R
             $ = new EndpointMongodbSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authMechanism Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMechanism(@Nullable Output<String> authMechanism) {
             $.authMechanism = authMechanism;
             return this;
         }
 
+        /**
+         * @param authMechanism Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMechanism(String authMechanism) {
             return authMechanism(Output.of(authMechanism));
         }
 
+        /**
+         * @param authSource Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authSource(@Nullable Output<String> authSource) {
             $.authSource = authSource;
             return this;
         }
 
+        /**
+         * @param authSource Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authSource(String authSource) {
             return authSource(Output.of(authSource));
         }
 
+        /**
+         * @param authType Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(@Nullable Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param docsToInvestigate Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docsToInvestigate(@Nullable Output<String> docsToInvestigate) {
             $.docsToInvestigate = docsToInvestigate;
             return this;
         }
 
+        /**
+         * @param docsToInvestigate Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docsToInvestigate(String docsToInvestigate) {
             return docsToInvestigate(Output.of(docsToInvestigate));
         }
 
+        /**
+         * @param extractDocId Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extractDocId(@Nullable Output<String> extractDocId) {
             $.extractDocId = extractDocId;
             return this;
         }
 
+        /**
+         * @param extractDocId Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extractDocId(String extractDocId) {
             return extractDocId(Output.of(extractDocId));
         }
 
+        /**
+         * @param nestingLevel Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestingLevel(@Nullable Output<String> nestingLevel) {
             $.nestingLevel = nestingLevel;
             return this;
         }
 
+        /**
+         * @param nestingLevel Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestingLevel(String nestingLevel) {
             return nestingLevel(Output.of(nestingLevel));
         }

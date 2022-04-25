@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     @Import(name="action", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
 
+    /**
+     * @return Predefined client side actions that user can choose
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action() {
         return this.action;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     @Import(name="reply", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
+    /**
+     * @return Predefined replies for user to select instead of typing
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply() {
         return this.reply;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Predefined client side actions that user can choose
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param reply Predefined replies for user to select instead of typing
+         * 
+         * @return builder
+         * 
+         */
         public Builder reply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
             $.reply = reply;
             return this;

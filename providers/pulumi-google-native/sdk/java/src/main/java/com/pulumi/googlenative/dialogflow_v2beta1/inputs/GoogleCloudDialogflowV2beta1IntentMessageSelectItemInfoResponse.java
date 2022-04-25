@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A unique key that will be sent back to the agent if this response is given.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
     @Import(name="synonyms", required=true)
     private List<String> synonyms;
 
+    /**
+     * @return Optional. A list of synonyms that can also be used to trigger this item in dialog.
+     * 
+     */
     public List<String> synonyms() {
         return this.synonyms;
     }
@@ -64,16 +72,34 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A unique key that will be sent back to the agent if this response is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param synonyms Optional. A list of synonyms that can also be used to trigger this item in dialog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms Optional. A list of synonyms that can also be used to trigger this item in dialog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }

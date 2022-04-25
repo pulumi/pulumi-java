@@ -28,6 +28,10 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="errors")
     private @Nullable List<ResizeErrorResponse> errors;
 
+    /**
+     * @return This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
+     * 
+     */
     public Optional<List<ResizeErrorResponse>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -39,6 +43,10 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="nodeDeallocationOption")
     private @Nullable String nodeDeallocationOption;
 
+    /**
+     * @return The default value is requeue.
+     * 
+     */
     public Optional<String> nodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
@@ -50,6 +58,10 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="resizeTimeout")
     private @Nullable String resizeTimeout;
 
+    /**
+     * @return The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+     * 
+     */
     public Optional<String> resizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
@@ -104,20 +116,44 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
             $ = new ResizeOperationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable List<ResizeErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ResizeErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param nodeDeallocationOption The default value is requeue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
+        /**
+         * @param resizeTimeout The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
             $.resizeTimeout = resizeTimeout;
             return this;

@@ -24,6 +24,10 @@ public final class AssignedUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return User’s AAD Object Id.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -35,6 +39,10 @@ public final class AssignedUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId", required=true)
     private Output<String> tenantId;
 
+    /**
+     * @return User’s AAD Tenant Id.
+     * 
+     */
     public Output<String> tenantId() {
         return this.tenantId;
     }
@@ -64,20 +72,44 @@ public final class AssignedUserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssignedUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId User’s AAD Object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId User’s AAD Object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param tenantId User’s AAD Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId User’s AAD Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

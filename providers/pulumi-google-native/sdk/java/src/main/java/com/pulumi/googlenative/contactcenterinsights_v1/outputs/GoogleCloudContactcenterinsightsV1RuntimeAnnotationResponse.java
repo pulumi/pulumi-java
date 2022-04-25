@@ -17,52 +17,52 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
     /**
-     * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
+     * @return The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
      * 
      */
     private final String annotationId;
     /**
-     * The feedback that the customer has about the answer in `data`.
+     * @return The feedback that the customer has about the answer in `data`.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
     /**
-     * Agent Assist Article Suggestion data.
+     * @return Agent Assist Article Suggestion data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
     /**
-     * The time at which this annotation was created.
+     * @return The time at which this annotation was created.
      * 
      */
     private final String createTime;
     /**
-     * Dialogflow interaction data.
+     * @return Dialogflow interaction data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
     /**
-     * The boundary in the conversation where the annotation ends, inclusive.
+     * @return The boundary in the conversation where the annotation ends, inclusive.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
     /**
-     * Agent Assist FAQ answer data.
+     * @return Agent Assist FAQ answer data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
     /**
-     * Agent Assist Smart Compose suggestion data.
+     * @return Agent Assist Smart Compose suggestion data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
     /**
-     * Agent Assist Smart Reply data.
+     * @return Agent Assist Smart Reply data.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
     /**
-     * The boundary in the conversation where the annotation starts, inclusive.
+     * @return The boundary in the conversation where the annotation starts, inclusive.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
@@ -92,72 +92,72 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
     }
 
     /**
-     * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
+     * @return The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
      * 
-    */
+     */
     public String annotationId() {
         return this.annotationId;
     }
     /**
-     * The feedback that the customer has about the answer in `data`.
+     * @return The feedback that the customer has about the answer in `data`.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback() {
         return this.answerFeedback;
     }
     /**
-     * Agent Assist Article Suggestion data.
+     * @return Agent Assist Article Suggestion data.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion() {
         return this.articleSuggestion;
     }
     /**
-     * The time at which this annotation was created.
+     * @return The time at which this annotation was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Dialogflow interaction data.
+     * @return Dialogflow interaction data.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction() {
         return this.dialogflowInteraction;
     }
     /**
-     * The boundary in the conversation where the annotation ends, inclusive.
+     * @return The boundary in the conversation where the annotation ends, inclusive.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary() {
         return this.endBoundary;
     }
     /**
-     * Agent Assist FAQ answer data.
+     * @return Agent Assist FAQ answer data.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer() {
         return this.faqAnswer;
     }
     /**
-     * Agent Assist Smart Compose suggestion data.
+     * @return Agent Assist Smart Compose suggestion data.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion() {
         return this.smartComposeSuggestion;
     }
     /**
-     * Agent Assist Smart Reply data.
+     * @return Agent Assist Smart Reply data.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply() {
         return this.smartReply;
     }
     /**
-     * The boundary in the conversation where the annotation starts, inclusive.
+     * @return The boundary in the conversation where the annotation starts, inclusive.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary() {
         return this.startBoundary;
     }

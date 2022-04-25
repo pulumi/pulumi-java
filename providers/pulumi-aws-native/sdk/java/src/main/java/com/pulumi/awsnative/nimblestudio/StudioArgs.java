@@ -24,6 +24,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminRoleArn", required=true)
     private Output<String> adminRoleArn;
 
+    /**
+     * @return &lt;p&gt;The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+     * 
+     */
     public Output<String> adminRoleArn() {
         return this.adminRoleArn;
     }
@@ -35,6 +39,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return &lt;p&gt;A friendly name for the studio.&lt;/p&gt;
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -53,6 +61,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="studioName")
     private @Nullable Output<String> studioName;
 
+    /**
+     * @return &lt;p&gt;The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> studioName() {
         return Optional.ofNullable(this.studioName);
     }
@@ -71,6 +83,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userRoleArn", required=true)
     private Output<String> userRoleArn;
 
+    /**
+     * @return &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+     * 
+     */
     public Output<String> userRoleArn() {
         return this.userRoleArn;
     }
@@ -104,20 +120,44 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminRoleArn &lt;p&gt;The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminRoleArn(Output<String> adminRoleArn) {
             $.adminRoleArn = adminRoleArn;
             return this;
         }
 
+        /**
+         * @param adminRoleArn &lt;p&gt;The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminRoleArn(String adminRoleArn) {
             return adminRoleArn(Output.of(adminRoleArn));
         }
 
+        /**
+         * @param displayName &lt;p&gt;A friendly name for the studio.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName &lt;p&gt;A friendly name for the studio.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -131,11 +171,23 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
             return studioEncryptionConfiguration(Output.of(studioEncryptionConfiguration));
         }
 
+        /**
+         * @param studioName &lt;p&gt;The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioName(@Nullable Output<String> studioName) {
             $.studioName = studioName;
             return this;
         }
 
+        /**
+         * @param studioName &lt;p&gt;The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioName(String studioName) {
             return studioName(Output.of(studioName));
         }
@@ -149,11 +201,23 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userRoleArn &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRoleArn(Output<String> userRoleArn) {
             $.userRoleArn = userRoleArn;
             return this;
         }
 
+        /**
+         * @param userRoleArn &lt;p&gt;The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRoleArn(String userRoleArn) {
             return userRoleArn(Output.of(userRoleArn));
         }

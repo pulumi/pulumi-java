@@ -28,6 +28,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="normalizedVertices")
     private @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
 
+    /**
+     * @return The bounding polygon normalized vertices.
+     * 
+     */
     public Optional<Output<List<NormalizedVertexArgs>>> normalizedVertices() {
         return Optional.ofNullable(this.normalizedVertices);
     }
@@ -39,6 +43,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vertices")
     private @Nullable Output<List<VertexArgs>> vertices;
 
+    /**
+     * @return The bounding polygon vertices.
+     * 
+     */
     public Optional<Output<List<VertexArgs>>> vertices() {
         return Optional.ofNullable(this.vertices);
     }
@@ -68,28 +76,64 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BoundingPolyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param normalizedVertices The bounding polygon normalized vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder normalizedVertices(@Nullable Output<List<NormalizedVertexArgs>> normalizedVertices) {
             $.normalizedVertices = normalizedVertices;
             return this;
         }
 
+        /**
+         * @param normalizedVertices The bounding polygon normalized vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder normalizedVertices(List<NormalizedVertexArgs> normalizedVertices) {
             return normalizedVertices(Output.of(normalizedVertices));
         }
 
+        /**
+         * @param normalizedVertices The bounding polygon normalized vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder normalizedVertices(NormalizedVertexArgs... normalizedVertices) {
             return normalizedVertices(List.of(normalizedVertices));
         }
 
+        /**
+         * @param vertices The bounding polygon vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
             $.vertices = vertices;
             return this;
         }
 
+        /**
+         * @param vertices The bounding polygon vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(List<VertexArgs> vertices) {
             return vertices(Output.of(vertices));
         }
 
+        /**
+         * @param vertices The bounding polygon vertices.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vertices(VertexArgs... vertices) {
             return vertices(List.of(vertices));
         }

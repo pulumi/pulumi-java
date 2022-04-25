@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="azureResourceName", required=true)
     private String azureResourceName;
 
+    /**
+     * @return The name of the Azure resource.
+     * 
+     */
     public String azureResourceName() {
         return this.azureResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointName", required=true)
     private String privateEndpointName;
 
+    /**
+     * @return The name of the private endpoint.
+     * 
+     */
     public String privateEndpointName() {
         return this.privateEndpointName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureResourceName The name of the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(String azureResourceName) {
             $.azureResourceName = azureResourceName;
             return this;
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(String privateEndpointName) {
             $.privateEndpointName = privateEndpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

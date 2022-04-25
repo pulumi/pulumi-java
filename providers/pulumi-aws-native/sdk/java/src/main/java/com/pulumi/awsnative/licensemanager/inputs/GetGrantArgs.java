@@ -19,6 +19,10 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="grantArn", required=true)
     private String grantArn;
 
+    /**
+     * @return Arn of the grant.
+     * 
+     */
     public String grantArn() {
         return this.grantArn;
     }
@@ -47,6 +51,12 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGrantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grantArn Arn of the grant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantArn(String grantArn) {
             $.grantArn = grantArn;
             return this;

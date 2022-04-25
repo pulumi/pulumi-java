@@ -25,6 +25,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A short text description of the Channel.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressAccessLogs")
     private @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
 
+    /**
+     * @return The configuration parameters for egress access logging.
+     * 
+     */
     public Optional<Output<ChannelLogConfigurationArgs>> egressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);
     }
@@ -47,6 +55,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingressAccessLogs")
     private @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
 
+    /**
+     * @return The configuration parameters for egress access logging.
+     * 
+     */
     public Optional<Output<ChannelLogConfigurationArgs>> ingressAccessLogs() {
         return Optional.ofNullable(this.ingressAccessLogs);
     }
@@ -58,6 +70,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ChannelTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<ChannelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A short text description of the Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A short text description of the Channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param egressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs) {
             $.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
+        /**
+         * @param egressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressAccessLogs(ChannelLogConfigurationArgs egressAccessLogs) {
             return egressAccessLogs(Output.of(egressAccessLogs));
         }
 
+        /**
+         * @param ingressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs) {
             $.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
 
+        /**
+         * @param ingressAccessLogs The configuration parameters for egress access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressAccessLogs(ChannelLogConfigurationArgs ingressAccessLogs) {
             return ingressAccessLogs(Output.of(ingressAccessLogs));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ChannelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ChannelTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -23,6 +23,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="minimumLength")
     private @Nullable Output<Integer> minimumLength;
 
+    /**
+     * @return Minimum length of the password policy that you have set.
+     * 
+     */
     public Optional<Output<Integer>> minimumLength() {
         return Optional.ofNullable(this.minimumLength);
     }
@@ -34,6 +38,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireLowercase")
     private @Nullable Output<Boolean> requireLowercase;
 
+    /**
+     * @return Whether you have required users to use at least one lowercase letter in their password.
+     * 
+     */
     public Optional<Output<Boolean>> requireLowercase() {
         return Optional.ofNullable(this.requireLowercase);
     }
@@ -45,6 +53,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireNumbers")
     private @Nullable Output<Boolean> requireNumbers;
 
+    /**
+     * @return Whether you have required users to use at least one number in their password.
+     * 
+     */
     public Optional<Output<Boolean>> requireNumbers() {
         return Optional.ofNullable(this.requireNumbers);
     }
@@ -56,6 +68,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireSymbols")
     private @Nullable Output<Boolean> requireSymbols;
 
+    /**
+     * @return Whether you have required users to use at least one symbol in their password.
+     * 
+     */
     public Optional<Output<Boolean>> requireSymbols() {
         return Optional.ofNullable(this.requireSymbols);
     }
@@ -67,6 +83,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="requireUppercase")
     private @Nullable Output<Boolean> requireUppercase;
 
+    /**
+     * @return Whether you have required users to use at least one uppercase letter in their password.
+     * 
+     */
     public Optional<Output<Boolean>> requireUppercase() {
         return Optional.ofNullable(this.requireUppercase);
     }
@@ -78,6 +98,10 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="temporaryPasswordValidityDays")
     private @Nullable Output<Integer> temporaryPasswordValidityDays;
 
+    /**
+     * @return In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
+     * 
+     */
     public Optional<Output<Integer>> temporaryPasswordValidityDays() {
         return Optional.ofNullable(this.temporaryPasswordValidityDays);
     }
@@ -111,56 +135,128 @@ public final class UserPoolPasswordPolicyArgs extends com.pulumi.resources.Resou
             $ = new UserPoolPasswordPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minimumLength Minimum length of the password policy that you have set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumLength(@Nullable Output<Integer> minimumLength) {
             $.minimumLength = minimumLength;
             return this;
         }
 
+        /**
+         * @param minimumLength Minimum length of the password policy that you have set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumLength(Integer minimumLength) {
             return minimumLength(Output.of(minimumLength));
         }
 
+        /**
+         * @param requireLowercase Whether you have required users to use at least one lowercase letter in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireLowercase(@Nullable Output<Boolean> requireLowercase) {
             $.requireLowercase = requireLowercase;
             return this;
         }
 
+        /**
+         * @param requireLowercase Whether you have required users to use at least one lowercase letter in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireLowercase(Boolean requireLowercase) {
             return requireLowercase(Output.of(requireLowercase));
         }
 
+        /**
+         * @param requireNumbers Whether you have required users to use at least one number in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
             $.requireNumbers = requireNumbers;
             return this;
         }
 
+        /**
+         * @param requireNumbers Whether you have required users to use at least one number in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireNumbers(Boolean requireNumbers) {
             return requireNumbers(Output.of(requireNumbers));
         }
 
+        /**
+         * @param requireSymbols Whether you have required users to use at least one symbol in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
             $.requireSymbols = requireSymbols;
             return this;
         }
 
+        /**
+         * @param requireSymbols Whether you have required users to use at least one symbol in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireSymbols(Boolean requireSymbols) {
             return requireSymbols(Output.of(requireSymbols));
         }
 
+        /**
+         * @param requireUppercase Whether you have required users to use at least one uppercase letter in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireUppercase(@Nullable Output<Boolean> requireUppercase) {
             $.requireUppercase = requireUppercase;
             return this;
         }
 
+        /**
+         * @param requireUppercase Whether you have required users to use at least one uppercase letter in their password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireUppercase(Boolean requireUppercase) {
             return requireUppercase(Output.of(requireUppercase));
         }
 
+        /**
+         * @param temporaryPasswordValidityDays In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryPasswordValidityDays(@Nullable Output<Integer> temporaryPasswordValidityDays) {
             $.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
             return this;
         }
 
+        /**
+         * @param temporaryPasswordValidityDays In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryPasswordValidityDays(Integer temporaryPasswordValidityDays) {
             return temporaryPasswordValidityDays(Output.of(temporaryPasswordValidityDays));
         }

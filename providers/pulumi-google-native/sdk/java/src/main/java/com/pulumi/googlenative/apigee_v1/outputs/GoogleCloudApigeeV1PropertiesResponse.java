@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudApigeeV1PropertiesResponse {
     /**
-     * List of all properties in the object
+     * @return List of all properties in the object
      * 
      */
     private final List<GoogleCloudApigeeV1PropertyResponse> property;
@@ -22,9 +22,9 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
     }
 
     /**
-     * List of all properties in the object
+     * @return List of all properties in the object
      * 
-    */
+     */
     public List<GoogleCloudApigeeV1PropertyResponse> property() {
         return this.property;
     }

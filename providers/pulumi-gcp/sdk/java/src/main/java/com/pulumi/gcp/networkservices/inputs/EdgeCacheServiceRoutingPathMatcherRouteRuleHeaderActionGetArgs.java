@@ -27,6 +27,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     @Import(name="requestHeaderToAdds")
     private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
 
+    /**
+     * @return Describes a header to add.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>>> requestHeaderToAdds() {
         return Optional.ofNullable(this.requestHeaderToAdds);
     }
@@ -39,6 +44,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     @Import(name="requestHeaderToRemoves")
     private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
 
+    /**
+     * @return A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>>> requestHeaderToRemoves() {
         return Optional.ofNullable(this.requestHeaderToRemoves);
     }
@@ -52,6 +62,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     @Import(name="responseHeaderToAdds")
     private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
 
+    /**
+     * @return Headers to add to the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>>> responseHeaderToAdds() {
         return Optional.ofNullable(this.responseHeaderToAdds);
     }
@@ -64,6 +80,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
     @Import(name="responseHeaderToRemoves")
     private @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
 
+    /**
+     * @return A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>>> responseHeaderToRemoves() {
         return Optional.ofNullable(this.responseHeaderToRemoves);
     }
@@ -95,54 +116,141 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestHeaderToAdds Describes a header to add.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToAdds(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds) {
             $.requestHeaderToAdds = requestHeaderToAdds;
             return this;
         }
 
+        /**
+         * @param requestHeaderToAdds Describes a header to add.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToAdds(List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs> requestHeaderToAdds) {
             return requestHeaderToAdds(Output.of(requestHeaderToAdds));
         }
 
+        /**
+         * @param requestHeaderToAdds Describes a header to add.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs... requestHeaderToAdds) {
             return requestHeaderToAdds(List.of(requestHeaderToAdds));
         }
 
+        /**
+         * @param requestHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves) {
             $.requestHeaderToRemoves = requestHeaderToRemoves;
             return this;
         }
 
+        /**
+         * @param requestHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToRemoves(List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs> requestHeaderToRemoves) {
             return requestHeaderToRemoves(Output.of(requestHeaderToRemoves));
         }
 
+        /**
+         * @param requestHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs... requestHeaderToRemoves) {
             return requestHeaderToRemoves(List.of(requestHeaderToRemoves));
         }
 
+        /**
+         * @param responseHeaderToAdds Headers to add to the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToAdds(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds) {
             $.responseHeaderToAdds = responseHeaderToAdds;
             return this;
         }
 
+        /**
+         * @param responseHeaderToAdds Headers to add to the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToAdds(List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs> responseHeaderToAdds) {
             return responseHeaderToAdds(Output.of(responseHeaderToAdds));
         }
 
+        /**
+         * @param responseHeaderToAdds Headers to add to the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToAdds(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs... responseHeaderToAdds) {
             return responseHeaderToAdds(List.of(responseHeaderToAdds));
         }
 
+        /**
+         * @param responseHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToRemoves(@Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves) {
             $.responseHeaderToRemoves = responseHeaderToRemoves;
             return this;
         }
 
+        /**
+         * @param responseHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToRemoves(List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs> responseHeaderToRemoves) {
             return responseHeaderToRemoves(Output.of(responseHeaderToRemoves));
         }
 
+        /**
+         * @param responseHeaderToRemoves A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseHeaderToRemoves(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs... responseHeaderToRemoves) {
             return responseHeaderToRemoves(List.of(responseHeaderToRemoves));
         }

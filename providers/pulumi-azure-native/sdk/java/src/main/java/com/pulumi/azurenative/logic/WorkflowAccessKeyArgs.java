@@ -22,6 +22,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accessKeyName")
     private @Nullable Output<String> accessKeyName;
 
+    /**
+     * @return The workflow access key name.
+     * 
+     */
     public Optional<Output<String>> accessKeyName() {
         return Optional.ofNullable(this.accessKeyName);
     }
@@ -33,6 +37,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Gets or sets the resource id.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -44,6 +52,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="notAfter")
     private @Nullable Output<String> notAfter;
 
+    /**
+     * @return Gets or sets the not-after time.
+     * 
+     */
     public Optional<Output<String>> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -55,6 +67,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="notBefore")
     private @Nullable Output<String> notBefore;
 
+    /**
+     * @return Gets or sets the not-before time.
+     * 
+     */
     public Optional<Output<String>> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
@@ -66,6 +82,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workflowName", required=true)
     private Output<String> workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public Output<String> workflowName() {
         return this.workflowName;
     }
@@ -110,56 +134,128 @@ public final class WorkflowAccessKeyArgs extends com.pulumi.resources.ResourceAr
             $ = new WorkflowAccessKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyName The workflow access key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyName(@Nullable Output<String> accessKeyName) {
             $.accessKeyName = accessKeyName;
             return this;
         }
 
+        /**
+         * @param accessKeyName The workflow access key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyName(String accessKeyName) {
             return accessKeyName(Output.of(accessKeyName));
         }
 
+        /**
+         * @param id Gets or sets the resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Gets or sets the resource id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param notAfter Gets or sets the not-after time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable Output<String> notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param notAfter Gets or sets the not-after time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(String notAfter) {
             return notAfter(Output.of(notAfter));
         }
 
+        /**
+         * @param notBefore Gets or sets the not-before time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(@Nullable Output<String> notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param notBefore Gets or sets the not-before time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(String notBefore) {
             return notBefore(Output.of(notBefore));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(Output<String> workflowName) {
             $.workflowName = workflowName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             return workflowName(Output.of(workflowName));
         }

@@ -19,6 +19,10 @@ public final class GetSystemTopicEventSubscriptionArgs extends com.pulumi.resour
     @Import(name="eventSubscriptionName", required=true)
     private String eventSubscriptionName;
 
+    /**
+     * @return Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     * 
+     */
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
@@ -30,6 +34,10 @@ public final class GetSystemTopicEventSubscriptionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSystemTopicEventSubscriptionArgs extends com.pulumi.resour
     @Import(name="systemTopicName", required=true)
     private String systemTopicName;
 
+    /**
+     * @return Name of the system topic.
+     * 
+     */
     public String systemTopicName() {
         return this.systemTopicName;
     }
@@ -71,16 +83,34 @@ public final class GetSystemTopicEventSubscriptionArgs extends com.pulumi.resour
             $ = new GetSystemTopicEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventSubscriptionName Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param systemTopicName Name of the system topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemTopicName(String systemTopicName) {
             $.systemTopicName = systemTopicName;
             return this;

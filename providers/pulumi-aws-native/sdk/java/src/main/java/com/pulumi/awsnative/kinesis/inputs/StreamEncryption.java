@@ -24,6 +24,10 @@ public final class StreamEncryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionType", required=true)
     private StreamEncryptionEncryptionType encryptionType;
 
+    /**
+     * @return The encryption type to use. The only valid value is KMS.
+     * 
+     */
     public StreamEncryptionEncryptionType encryptionType() {
         return this.encryptionType;
     }
@@ -35,6 +39,10 @@ public final class StreamEncryption extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -64,11 +72,23 @@ public final class StreamEncryption extends com.pulumi.resources.InvokeArgs {
             $ = new StreamEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionType The encryption type to use. The only valid value is KMS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param keyId The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by &#34;alias/&#34;.You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;

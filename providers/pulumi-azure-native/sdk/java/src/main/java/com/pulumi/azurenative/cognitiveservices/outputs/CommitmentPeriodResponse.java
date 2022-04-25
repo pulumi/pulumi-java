@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CommitmentPeriodResponse {
     /**
-     * Commitment period commitment count.
+     * @return Commitment period commitment count.
      * 
      */
     private final @Nullable Integer count;
     /**
-     * Commitment period end date.
+     * @return Commitment period end date.
      * 
      */
     private final String endDate;
     /**
-     * Cognitive Services account commitment quota.
+     * @return Cognitive Services account commitment quota.
      * 
      */
     private final CommitmentQuotaResponse quota;
     /**
-     * Commitment period start date.
+     * @return Commitment period start date.
      * 
      */
     private final String startDate;
     /**
-     * Commitment period commitment tier.
+     * @return Commitment period commitment tier.
      * 
      */
     private final @Nullable String tier;
@@ -54,37 +54,37 @@ public final class CommitmentPeriodResponse {
     }
 
     /**
-     * Commitment period commitment count.
+     * @return Commitment period commitment count.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Commitment period end date.
+     * @return Commitment period end date.
      * 
-    */
+     */
     public String endDate() {
         return this.endDate;
     }
     /**
-     * Cognitive Services account commitment quota.
+     * @return Cognitive Services account commitment quota.
      * 
-    */
+     */
     public CommitmentQuotaResponse quota() {
         return this.quota;
     }
     /**
-     * Commitment period start date.
+     * @return Commitment period start date.
      * 
-    */
+     */
     public String startDate() {
         return this.startDate;
     }
     /**
-     * Commitment period commitment tier.
+     * @return Commitment period commitment tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

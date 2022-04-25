@@ -26,6 +26,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="groupProperties")
     private @Nullable Output<Map<String,String>> groupProperties;
 
+    /**
+     * @return dictionary object for SchemaGroup group properties
+     * 
+     */
     public Optional<Output<Map<String,String>>> groupProperties() {
         return Optional.ofNullable(this.groupProperties);
     }
@@ -37,6 +41,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -48,6 +56,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +78,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schemaGroupName")
     private @Nullable Output<String> schemaGroupName;
 
+    /**
+     * @return The Schema Group name
+     * 
+     */
     public Optional<Output<String>> schemaGroupName() {
         return Optional.ofNullable(this.schemaGroupName);
     }
@@ -106,29 +122,65 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SchemaRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupProperties dictionary object for SchemaGroup group properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupProperties(@Nullable Output<Map<String,String>> groupProperties) {
             $.groupProperties = groupProperties;
             return this;
         }
 
+        /**
+         * @param groupProperties dictionary object for SchemaGroup group properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupProperties(Map<String,String> groupProperties) {
             return groupProperties(Output.of(groupProperties));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
@@ -150,11 +202,23 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
             return schemaCompatibility(Either.ofRight(schemaCompatibility));
         }
 
+        /**
+         * @param schemaGroupName The Schema Group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaGroupName(@Nullable Output<String> schemaGroupName) {
             $.schemaGroupName = schemaGroupName;
             return this;
         }
 
+        /**
+         * @param schemaGroupName The Schema Group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaGroupName(String schemaGroupName) {
             return schemaGroupName(Output.of(schemaGroupName));
         }

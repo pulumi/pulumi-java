@@ -23,6 +23,10 @@ public final class PatchDeploymentPatchConfigAptArgs extends com.pulumi.resource
     @Import(name="excludes")
     private @Nullable Output<List<String>> excludes;
 
+    /**
+     * @return List of KBs to exclude from update.
+     * 
+     */
     public Optional<Output<List<String>>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
@@ -36,6 +40,12 @@ public final class PatchDeploymentPatchConfigAptArgs extends com.pulumi.resource
     @Import(name="exclusivePackages")
     private @Nullable Output<List<String>> exclusivePackages;
 
+    /**
+     * @return An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     public Optional<Output<List<String>>> exclusivePackages() {
         return Optional.ofNullable(this.exclusivePackages);
     }
@@ -48,6 +58,11 @@ public final class PatchDeploymentPatchConfigAptArgs extends com.pulumi.resource
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
+     * Possible values are `DIST` and `UPGRADE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -78,37 +93,93 @@ public final class PatchDeploymentPatchConfigAptArgs extends com.pulumi.resource
             $ = new PatchDeploymentPatchConfigAptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(@Nullable Output<List<String>> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             return excludes(Output.of(excludes));
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             $.exclusivePackages = exclusivePackages;
             return this;
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(List<String> exclusivePackages) {
             return exclusivePackages(Output.of(exclusivePackages));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
 
+        /**
+         * @param type By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
+         * Possible values are `DIST` and `UPGRADE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
+         * Possible values are `DIST` and `UPGRADE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

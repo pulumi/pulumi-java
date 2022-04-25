@@ -25,6 +25,10 @@ public final class QuotaInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="coresUsed")
     private @Nullable Integer coresUsed;
 
+    /**
+     * @return The cores used by the cluster.
+     * 
+     */
     public Optional<Integer> coresUsed() {
         return Optional.ofNullable(this.coresUsed);
     }
@@ -53,6 +57,12 @@ public final class QuotaInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QuotaInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coresUsed The cores used by the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coresUsed(@Nullable Integer coresUsed) {
             $.coresUsed = coresUsed;
             return this;

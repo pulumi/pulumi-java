@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends com.pulumi.reso
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends com.pulumi.reso
             $ = new GooglePrivacyDlpV2PublishToPubSubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

@@ -26,6 +26,10 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
     @Import(name="event", required=true)
     private String event;
 
+    /**
+     * @return The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+     * 
+     */
     public String event() {
         return this.event;
     }
@@ -37,6 +41,10 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
     @Import(name="filter")
     private @Nullable BucketNotificationFilter filter;
 
+    /**
+     * @return The filtering rules that determine which objects invoke the AWS Lambda function.
+     * 
+     */
     public Optional<BucketNotificationFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -48,6 +56,10 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
     @Import(name="function", required=true)
     private String function;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+     * 
+     */
     public String function() {
         return this.function;
     }
@@ -78,16 +90,34 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
             $ = new BucketLambdaConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The Amazon S3 bucket event for which to invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param filter The filtering rules that determine which objects invoke the AWS Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable BucketNotificationFilter filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param function The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             $.function = function;
             return this;

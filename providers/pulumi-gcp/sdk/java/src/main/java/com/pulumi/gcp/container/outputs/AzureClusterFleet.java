@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureClusterFleet {
     /**
-     * - 
+     * @return -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
      * 
      */
     private final @Nullable String membership;
     /**
-     * The project for the resource
+     * @return The project for the resource
      * 
      */
     private final @Nullable String project;
@@ -32,17 +32,17 @@ public final class AzureClusterFleet {
     }
 
     /**
-     * - 
+     * @return -
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.
      * 
-    */
+     */
     public Optional<String> membership() {
         return Optional.ofNullable(this.membership);
     }
     /**
-     * The project for the resource
+     * @return The project for the resource
      * 
-    */
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }

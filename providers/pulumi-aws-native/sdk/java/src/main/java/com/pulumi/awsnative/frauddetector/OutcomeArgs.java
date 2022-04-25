@@ -24,6 +24,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The outcome description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the outcome.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<OutcomeTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this outcome.
+     * 
+     */
     public Optional<Output<List<OutcomeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutcomeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The outcome description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The outcome description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the outcome.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the outcome.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags associated with this outcome.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<OutcomeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this outcome.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<OutcomeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this outcome.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(OutcomeTagArgs... tags) {
             return tags(List.of(tags));
         }

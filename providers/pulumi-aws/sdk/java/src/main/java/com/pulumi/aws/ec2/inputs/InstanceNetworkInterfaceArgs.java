@@ -24,6 +24,10 @@ public final class InstanceNetworkInterfaceArgs extends com.pulumi.resources.Res
     @Import(name="deleteOnTermination")
     private @Nullable Output<Boolean> deleteOnTermination;
 
+    /**
+     * @return Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+     * 
+     */
     public Optional<Output<Boolean>> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
@@ -35,6 +39,10 @@ public final class InstanceNetworkInterfaceArgs extends com.pulumi.resources.Res
     @Import(name="deviceIndex", required=true)
     private Output<Integer> deviceIndex;
 
+    /**
+     * @return Integer index of the network interface attachment. Limited by instance type.
+     * 
+     */
     public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
@@ -46,6 +54,10 @@ public final class InstanceNetworkInterfaceArgs extends com.pulumi.resources.Res
     @Import(name="networkInterfaceId", required=true)
     private Output<String> networkInterfaceId;
 
+    /**
+     * @return ID of the network interface to attach.
+     * 
+     */
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
@@ -76,29 +88,65 @@ public final class InstanceNetworkInterfaceArgs extends com.pulumi.resources.Res
             $ = new InstanceNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deleteOnTermination Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             return deleteOnTermination(Output.of(deleteOnTermination));
         }
 
+        /**
+         * @param deviceIndex Integer index of the network interface attachment. Limited by instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Output<Integer> deviceIndex) {
             $.deviceIndex = deviceIndex;
             return this;
         }
 
+        /**
+         * @param deviceIndex Integer index of the network interface attachment. Limited by instance type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Integer deviceIndex) {
             return deviceIndex(Output.of(deviceIndex));
         }
 
+        /**
+         * @param networkInterfaceId ID of the network interface to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId ID of the network interface to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }

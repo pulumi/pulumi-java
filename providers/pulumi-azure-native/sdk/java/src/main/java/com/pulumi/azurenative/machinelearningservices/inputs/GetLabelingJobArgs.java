@@ -22,6 +22,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeJobInstructions")
     private @Nullable Boolean includeJobInstructions;
 
+    /**
+     * @return Boolean value to indicate whether to include JobInstructions in response.
+     * 
+     */
     public Optional<Boolean> includeJobInstructions() {
         return Optional.ofNullable(this.includeJobInstructions);
     }
@@ -33,6 +37,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeLabelCategories")
     private @Nullable Boolean includeLabelCategories;
 
+    /**
+     * @return Boolean value to indicate whether to include LabelCategories in response.
+     * 
+     */
     public Optional<Boolean> includeLabelCategories() {
         return Optional.ofNullable(this.includeLabelCategories);
     }
@@ -44,6 +52,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labelingJobId", required=true)
     private String labelingJobId;
 
+    /**
+     * @return Name and identifier for LabelingJob.
+     * 
+     */
     public String labelingJobId() {
         return this.labelingJobId;
     }
@@ -55,6 +67,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -98,26 +118,56 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLabelingJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeJobInstructions Boolean value to indicate whether to include JobInstructions in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeJobInstructions(@Nullable Boolean includeJobInstructions) {
             $.includeJobInstructions = includeJobInstructions;
             return this;
         }
 
+        /**
+         * @param includeLabelCategories Boolean value to indicate whether to include LabelCategories in response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeLabelCategories(@Nullable Boolean includeLabelCategories) {
             $.includeLabelCategories = includeLabelCategories;
             return this;
         }
 
+        /**
+         * @param labelingJobId Name and identifier for LabelingJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobId(String labelingJobId) {
             $.labelingJobId = labelingJobId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

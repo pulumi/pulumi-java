@@ -26,6 +26,11 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuancePolicy")
     private @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
 
+    /**
+     * @return The IssuancePolicy to control how Certificates will be issued from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyGetArgs>> issuancePolicy() {
         return Optional.ofNullable(this.issuancePolicy);
     }
@@ -39,6 +44,12 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels with user-defined metadata.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+     * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -50,6 +61,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +76,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for this CaPool.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +92,11 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -85,6 +109,11 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishingOptions")
     private @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
 
+    /**
+     * @return The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolPublishingOptionsGetArgs>> publishingOptions() {
         return Optional.ofNullable(this.publishingOptions);
     }
@@ -97,6 +126,11 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return The Tier of this CaPool.
+     * Possible values are `ENTERPRISE` and `DEVOPS`.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -131,65 +165,161 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
             $ = new CaPoolState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuancePolicy The IssuancePolicy to control how Certificates will be issued from this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy) {
             $.issuancePolicy = issuancePolicy;
             return this;
         }
 
+        /**
+         * @param issuancePolicy The IssuancePolicy to control how Certificates will be issued from this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuancePolicy(CaPoolIssuancePolicyGetArgs issuancePolicy) {
             return issuancePolicy(Output.of(issuancePolicy));
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels with user-defined metadata.
+         * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+         * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name for this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for this CaPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param publishingOptions The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions) {
             $.publishingOptions = publishingOptions;
             return this;
         }
 
+        /**
+         * @param publishingOptions The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingOptions(CaPoolPublishingOptionsGetArgs publishingOptions) {
             return publishingOptions(Output.of(publishingOptions));
         }
 
+        /**
+         * @param tier The Tier of this CaPool.
+         * Possible values are `ENTERPRISE` and `DEVOPS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The Tier of this CaPool.
+         * Possible values are `ENTERPRISE` and `DEVOPS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

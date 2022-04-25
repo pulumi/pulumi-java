@@ -23,6 +23,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a VPN tunnel.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return URI of a Compute Engine network where the VPN tunnel is configured.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -45,6 +53,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return Name of a Google Cloud region where this VPN tunnel is configured.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -56,6 +68,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="remoteGateway", required=true)
     private String remoteGateway;
 
+    /**
+     * @return URI of a VPN gateway at remote end of the tunnel.
+     * 
+     */
     public String remoteGateway() {
         return this.remoteGateway;
     }
@@ -67,6 +83,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="remoteGatewayIp", required=true)
     private String remoteGatewayIp;
 
+    /**
+     * @return Remote VPN gateway&#39;s IP address.
+     * 
+     */
     public String remoteGatewayIp() {
         return this.remoteGatewayIp;
     }
@@ -78,6 +98,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="routingType", required=true)
     private String routingType;
 
+    /**
+     * @return Type of the routing policy.
+     * 
+     */
     public String routingType() {
         return this.routingType;
     }
@@ -89,6 +113,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceGateway", required=true)
     private String sourceGateway;
 
+    /**
+     * @return URI of the VPN gateway at local end of the tunnel.
+     * 
+     */
     public String sourceGateway() {
         return this.sourceGateway;
     }
@@ -100,6 +128,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceGatewayIp", required=true)
     private String sourceGatewayIp;
 
+    /**
+     * @return Local VPN gateway&#39;s IP address.
+     * 
+     */
     public String sourceGatewayIp() {
         return this.sourceGatewayIp;
     }
@@ -111,6 +143,10 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a VPN tunnel.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -147,46 +183,100 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new VpnTunnelInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param networkUri URI of a Compute Engine network where the VPN tunnel is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param region Name of a Google Cloud region where this VPN tunnel is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param remoteGateway URI of a VPN gateway at remote end of the tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteGateway(String remoteGateway) {
             $.remoteGateway = remoteGateway;
             return this;
         }
 
+        /**
+         * @param remoteGatewayIp Remote VPN gateway&#39;s IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteGatewayIp(String remoteGatewayIp) {
             $.remoteGatewayIp = remoteGatewayIp;
             return this;
         }
 
+        /**
+         * @param routingType Type of the routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingType(String routingType) {
             $.routingType = routingType;
             return this;
         }
 
+        /**
+         * @param sourceGateway URI of the VPN gateway at local end of the tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceGateway(String sourceGateway) {
             $.sourceGateway = sourceGateway;
             return this;
         }
 
+        /**
+         * @param sourceGatewayIp Local VPN gateway&#39;s IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceGatewayIp(String sourceGatewayIp) {
             $.sourceGatewayIp = sourceGatewayIp;
             return this;
         }
 
+        /**
+         * @param uri URI of a VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

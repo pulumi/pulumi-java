@@ -25,6 +25,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -36,6 +40,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
     @Import(name="max")
     private @Nullable Output<Integer> max;
 
+    /**
+     * @return The maximum inclusive value of the range.
+     * 
+     */
     public Optional<Output<Integer>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -47,6 +55,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
     @Import(name="min")
     private @Nullable Output<Integer> min;
 
+    /**
+     * @return The minimum inclusive value of the range.
+     * 
+     */
     public Optional<Output<Integer>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -58,6 +70,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
     @Import(name="result")
     private @Nullable Output<Integer> result;
 
+    /**
+     * @return The random integer result.
+     * 
+     */
     public Optional<Output<Integer>> result() {
         return Optional.ofNullable(this.result);
     }
@@ -69,6 +85,10 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
     @Import(name="seed")
     private @Nullable Output<String> seed;
 
+    /**
+     * @return A custom seed to always produce the same value.
+     * 
+     */
     public Optional<Output<String>> seed() {
         return Optional.ofNullable(this.seed);
     }
@@ -101,47 +121,107 @@ public final class RandomIntegerState extends com.pulumi.resources.ResourceArgs 
             $ = new RandomIntegerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param max The maximum inclusive value of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<Integer> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max The maximum inclusive value of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Integer max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min The minimum inclusive value of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<Integer> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min The minimum inclusive value of the range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Integer min) {
             return min(Output.of(min));
         }
 
+        /**
+         * @param result The random integer result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(@Nullable Output<Integer> result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param result The random integer result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(Integer result) {
             return result(Output.of(result));
         }
 
+        /**
+         * @param seed A custom seed to always produce the same value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seed(@Nullable Output<String> seed) {
             $.seed = seed;
             return this;
         }
 
+        /**
+         * @param seed A custom seed to always produce the same value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seed(String seed) {
             return seed(Output.of(seed));
         }

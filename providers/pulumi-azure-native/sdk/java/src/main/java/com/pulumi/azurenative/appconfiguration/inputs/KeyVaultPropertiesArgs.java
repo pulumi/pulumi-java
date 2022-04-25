@@ -26,6 +26,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="identityClientId")
     private @Nullable Output<String> identityClientId;
 
+    /**
+     * @return The client id of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<Output<String>> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyIdentifier")
     private @Nullable Output<String> keyIdentifier;
 
+    /**
+     * @return The URI of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<Output<String>> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -66,20 +74,44 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable Output<String> identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param identityClientId The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(String identityClientId) {
             return identityClientId(Output.of(identityClientId));
         }
 
+        /**
+         * @param keyIdentifier The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             return keyIdentifier(Output.of(keyIdentifier));
         }

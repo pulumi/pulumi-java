@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GroupConnectivityInformationResponse {
     /**
-     * List of customer visible FQDNs.
+     * @return List of customer visible FQDNs.
      * 
      */
     private final @Nullable List<String> customerVisibleFqdns;
     /**
-     * Group ID.
+     * @return Group ID.
      * 
      */
     private final String groupId;
     /**
-     * Internal FQDN.
+     * @return Internal FQDN.
      * 
      */
     private final String internalFqdn;
     /**
-     * Member name.
+     * @return Member name.
      * 
      */
     private final String memberName;
     /**
-     * PrivateLinkService ARM region.
+     * @return PrivateLinkService ARM region.
      * 
      */
     private final @Nullable String privateLinkServiceArmRegion;
     /**
-     * Redirect map ID.
+     * @return Redirect map ID.
      * 
      */
     private final @Nullable String redirectMapId;
@@ -60,44 +60,44 @@ public final class GroupConnectivityInformationResponse {
     }
 
     /**
-     * List of customer visible FQDNs.
+     * @return List of customer visible FQDNs.
      * 
-    */
+     */
     public List<String> customerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
     /**
-     * Group ID.
+     * @return Group ID.
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
     /**
-     * Internal FQDN.
+     * @return Internal FQDN.
      * 
-    */
+     */
     public String internalFqdn() {
         return this.internalFqdn;
     }
     /**
-     * Member name.
+     * @return Member name.
      * 
-    */
+     */
     public String memberName() {
         return this.memberName;
     }
     /**
-     * PrivateLinkService ARM region.
+     * @return PrivateLinkService ARM region.
      * 
-    */
+     */
     public Optional<String> privateLinkServiceArmRegion() {
         return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
     /**
-     * Redirect map ID.
+     * @return Redirect map ID.
      * 
-    */
+     */
     public Optional<String> redirectMapId() {
         return Optional.ofNullable(this.redirectMapId);
     }

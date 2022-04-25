@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="defaultValue", required=true)
     private Object defaultValue;
 
+    /**
+     * @return The default value of an optional parameter. If the parameter is required, the default value will be ignored.
+     * 
+     */
     public Object defaultValue() {
         return this.defaultValue;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The human-readable name of the parameter, unique within the form.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="entityType", required=true)
     private String entityType;
 
+    /**
+     * @return The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+     * 
+     */
     public String entityType() {
         return this.entityType;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="fillBehavior", required=true)
     private GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior;
 
+    /**
+     * @return Defines fill behavior for the parameter.
+     * 
+     */
     public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior() {
         return this.fillBehavior;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="isList", required=true)
     private Boolean isList;
 
+    /**
+     * @return Indicates whether the parameter represents a list of values.
+     * 
+     */
     public Boolean isList() {
         return this.isList;
     }
@@ -81,6 +101,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="redact", required=true)
     private Boolean redact;
 
+    /**
+     * @return Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+     * 
+     */
     public Boolean redact() {
         return this.redact;
     }
@@ -92,6 +116,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
     @Import(name="required", required=true)
     private Boolean required;
 
+    /**
+     * @return Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
+     * 
+     */
     public Boolean required() {
         return this.required;
     }
@@ -126,36 +154,78 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends com.pu
             $ = new GoogleCloudDialogflowCxV3FormParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue The default value of an optional parameter. If the parameter is required, the default value will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(Object defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param displayName The human-readable name of the parameter, unique within the form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param entityType The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(String entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param fillBehavior Defines fill behavior for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fillBehavior(GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior) {
             $.fillBehavior = fillBehavior;
             return this;
         }
 
+        /**
+         * @param isList Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(Boolean isList) {
             $.isList = isList;
             return this;
         }
 
+        /**
+         * @param redact Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redact(Boolean redact) {
             $.redact = redact;
             return this;
         }
 
+        /**
+         * @param required Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(Boolean required) {
             $.required = required;
             return this;

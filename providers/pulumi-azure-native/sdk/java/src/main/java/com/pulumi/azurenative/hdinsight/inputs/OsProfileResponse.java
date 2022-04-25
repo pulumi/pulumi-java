@@ -25,6 +25,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxOperatingSystemProfile")
     private @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
+    /**
+     * @return The Linux OS profile.
+     * 
+     */
     public Optional<LinuxOperatingSystemProfileResponse> linuxOperatingSystemProfile() {
         return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }
@@ -53,6 +57,12 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OsProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOperatingSystemProfile The Linux OS profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
             $.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;

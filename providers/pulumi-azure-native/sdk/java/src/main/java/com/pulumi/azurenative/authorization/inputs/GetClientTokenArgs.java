@@ -21,6 +21,10 @@ public final class GetClientTokenArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -49,6 +53,12 @@ public final class GetClientTokenArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClientTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;

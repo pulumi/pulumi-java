@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class ResourcePolicyGroupPlacementPolicyResponse {
     /**
-     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
      */
     private final Integer availabilityDomainCount;
     /**
-     * Specifies network collocation
+     * @return Specifies network collocation
      * 
      */
     private final String collocation;
     /**
-     * Specifies network locality
+     * @return Specifies network locality
      * 
      */
     private final String locality;
     /**
-     * Scope specifies the availability domain to which the VMs should be spread.
+     * @return Scope specifies the availability domain to which the VMs should be spread.
      * 
      */
     private final String scope;
     /**
-     * Specifies instances to hosts placement relationship
+     * @return Specifies instances to hosts placement relationship
      * 
      */
     private final String style;
     /**
-     * Number of vms in this placement group
+     * @return Number of vms in this placement group
      * 
      */
     private final Integer vmCount;
@@ -58,44 +58,44 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     }
 
     /**
-     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     * @return The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
-    */
+     */
     public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
     /**
-     * Specifies network collocation
+     * @return Specifies network collocation
      * 
-    */
+     */
     public String collocation() {
         return this.collocation;
     }
     /**
-     * Specifies network locality
+     * @return Specifies network locality
      * 
-    */
+     */
     public String locality() {
         return this.locality;
     }
     /**
-     * Scope specifies the availability domain to which the VMs should be spread.
+     * @return Scope specifies the availability domain to which the VMs should be spread.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * Specifies instances to hosts placement relationship
+     * @return Specifies instances to hosts placement relationship
      * 
-    */
+     */
     public String style() {
         return this.style;
     }
     /**
-     * Number of vms in this placement group
+     * @return Number of vms in this placement group
      * 
-    */
+     */
     public Integer vmCount() {
         return this.vmCount;
     }

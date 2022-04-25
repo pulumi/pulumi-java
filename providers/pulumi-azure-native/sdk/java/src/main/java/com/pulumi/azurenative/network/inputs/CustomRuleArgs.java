@@ -33,6 +33,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
     private Output<Either<String,ActionType>> action;
 
+    /**
+     * @return Describes what action to be applied when rule matches.
+     * 
+     */
     public Output<Either<String,ActionType>> action() {
         return this.action;
     }
@@ -44,6 +48,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
+    /**
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     public Optional<Output<Either<String,CustomRuleEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -55,6 +63,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchConditions", required=true)
     private Output<List<FrontDoorMatchConditionArgs>> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public Output<List<FrontDoorMatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
@@ -66,6 +78,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Describes the name of the rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +93,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -88,6 +108,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rateLimitDurationInMinutes")
     private @Nullable Output<Integer> rateLimitDurationInMinutes;
 
+    /**
+     * @return Time window for resetting the rate limit count. Default is 1 minute.
+     * 
+     */
     public Optional<Output<Integer>> rateLimitDurationInMinutes() {
         return Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
@@ -99,6 +123,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rateLimitThreshold")
     private @Nullable Output<Integer> rateLimitThreshold;
 
+    /**
+     * @return Number of allowed requests per client within the time window.
+     * 
+     */
     public Optional<Output<Integer>> rateLimitThreshold() {
         return Optional.ofNullable(this.rateLimitThreshold);
     }
@@ -110,6 +138,10 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleType", required=true)
     private Output<Either<String,RuleType>> ruleType;
 
+    /**
+     * @return Describes type of rule.
+     * 
+     */
     public Output<Either<String,RuleType>> ruleType() {
         return this.ruleType;
     }
@@ -145,102 +177,240 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<Either<String,ActionType>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,ActionType> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(ActionType action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,CustomRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(CustomRuleEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(Output<List<FrontDoorMatchConditionArgs>> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<FrontDoorMatchConditionArgs> matchConditions) {
             return matchConditions(Output.of(matchConditions));
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(FrontDoorMatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name Describes the name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Describes the name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param rateLimitDurationInMinutes Time window for resetting the rate limit count. Default is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitDurationInMinutes(@Nullable Output<Integer> rateLimitDurationInMinutes) {
             $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
+        /**
+         * @param rateLimitDurationInMinutes Time window for resetting the rate limit count. Default is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
             return rateLimitDurationInMinutes(Output.of(rateLimitDurationInMinutes));
         }
 
+        /**
+         * @param rateLimitThreshold Number of allowed requests per client within the time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(@Nullable Output<Integer> rateLimitThreshold) {
             $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
+        /**
+         * @param rateLimitThreshold Number of allowed requests per client within the time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
             return rateLimitThreshold(Output.of(rateLimitThreshold));
         }
 
+        /**
+         * @param ruleType Describes type of rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Output<Either<String,RuleType>> ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param ruleType Describes type of rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Either<String,RuleType> ruleType) {
             return ruleType(Output.of(ruleType));
         }
 
+        /**
+         * @param ruleType Describes type of rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             return ruleType(Either.ofLeft(ruleType));
         }
 
+        /**
+         * @param ruleType Describes type of rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(RuleType ruleType) {
             return ruleType(Either.ofRight(ruleType));
         }

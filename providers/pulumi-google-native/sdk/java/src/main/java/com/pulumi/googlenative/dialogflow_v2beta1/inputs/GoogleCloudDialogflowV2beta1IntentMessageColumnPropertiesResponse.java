@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResp
     @Import(name="header", required=true)
     private String header;
 
+    /**
+     * @return Column heading.
+     * 
+     */
     public String header() {
         return this.header;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResp
     @Import(name="horizontalAlignment", required=true)
     private String horizontalAlignment;
 
+    /**
+     * @return Optional. Defines text alignment for all cells in this column.
+     * 
+     */
     public String horizontalAlignment() {
         return this.horizontalAlignment;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResp
             $ = new GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Column heading.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param horizontalAlignment Optional. Defines text alignment for all cells in this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalAlignment(String horizontalAlignment) {
             $.horizontalAlignment = horizontalAlignment;
             return this;

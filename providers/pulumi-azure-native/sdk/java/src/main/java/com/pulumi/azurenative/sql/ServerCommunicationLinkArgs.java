@@ -22,6 +22,10 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
     @Import(name="communicationLinkName")
     private @Nullable Output<String> communicationLinkName;
 
+    /**
+     * @return The name of the server communication link.
+     * 
+     */
     public Optional<Output<String>> communicationLinkName() {
         return Optional.ofNullable(this.communicationLinkName);
     }
@@ -33,6 +37,10 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
     @Import(name="partnerServer", required=true)
     private Output<String> partnerServer;
 
+    /**
+     * @return The name of the partner server.
+     * 
+     */
     public Output<String> partnerServer() {
         return this.partnerServer;
     }
@@ -44,6 +52,10 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -86,38 +102,86 @@ public final class ServerCommunicationLinkArgs extends com.pulumi.resources.Reso
             $ = new ServerCommunicationLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param communicationLinkName The name of the server communication link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationLinkName(@Nullable Output<String> communicationLinkName) {
             $.communicationLinkName = communicationLinkName;
             return this;
         }
 
+        /**
+         * @param communicationLinkName The name of the server communication link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder communicationLinkName(String communicationLinkName) {
             return communicationLinkName(Output.of(communicationLinkName));
         }
 
+        /**
+         * @param partnerServer The name of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerServer(Output<String> partnerServer) {
             $.partnerServer = partnerServer;
             return this;
         }
 
+        /**
+         * @param partnerServer The name of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerServer(String partnerServer) {
             return partnerServer(Output.of(partnerServer));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

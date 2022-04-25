@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs extend
     @Import(name="enableSpeechAdaptation")
     private @Nullable Output<Boolean> enableSpeechAdaptation;
 
+    /**
+     * @return Whether to use speech adaptation for speech recognition.
+     * 
+     */
     public Optional<Output<Boolean>> enableSpeechAdaptation() {
         return Optional.ofNullable(this.enableSpeechAdaptation);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs extend
             $ = new GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableSpeechAdaptation Whether to use speech adaptation for speech recognition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSpeechAdaptation(@Nullable Output<Boolean> enableSpeechAdaptation) {
             $.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
 
+        /**
+         * @param enableSpeechAdaptation Whether to use speech adaptation for speech recognition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSpeechAdaptation(Boolean enableSpeechAdaptation) {
             return enableSpeechAdaptation(Output.of(enableSpeechAdaptation));
         }

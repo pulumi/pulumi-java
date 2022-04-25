@@ -23,6 +23,11 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * formatted date time string indicating when this whitelist expires.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -34,6 +39,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for this whitelist entry.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +56,12 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return A CIDR notation IPv4 or IPv6 address that is allowed to
+     * access this instance. Must be set even if other two attributes are not for
+     * the whitelist to become active.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -77,29 +92,71 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
             $ = new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+         * formatted date time string indicating when this whitelist expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+         * formatted date time string indicating when this whitelist expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for this whitelist entry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value A CIDR notation IPv4 or IPv6 address that is allowed to
+         * access this instance. Must be set even if other two attributes are not for
+         * the whitelist to become active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A CIDR notation IPv4 or IPv6 address that is allowed to
+         * access this instance. Must be set even if other two attributes are not for
+         * the whitelist to become active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -31,6 +31,10 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -42,6 +46,10 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name of this managed zone, for instance &#34;example.com.&#34;.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -54,6 +62,11 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnssecConfig")
     private @Nullable Output<ManagedZoneDnssecConfigGetArgs> dnssecConfig;
 
+    /**
+     * @return DNSSEC configuration
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedZoneDnssecConfigGetArgs>> dnssecConfig() {
         return Optional.ofNullable(this.dnssecConfig);
     }
@@ -65,6 +78,10 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
     private @Nullable Output<Boolean> forceDestroy;
 
+    /**
+     * @return Set this true to delete all records in the zone.
+     * 
+     */
     public Optional<Output<Boolean>> forceDestroy() {
         return Optional.ofNullable(this.forceDestroy);
     }
@@ -79,6 +96,13 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardingConfig")
     private @Nullable Output<ManagedZoneForwardingConfigGetArgs> forwardingConfig;
 
+    /**
+     * @return The presence for this field indicates that outbound forwarding is enabled
+     * for this zone. The value of this field contains the set of destinations
+     * to forward to.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedZoneForwardingConfigGetArgs>> forwardingConfig() {
         return Optional.ofNullable(this.forwardingConfig);
     }
@@ -90,6 +114,10 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this ManagedZone.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -102,6 +130,11 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return User assigned name for this resource.
+     * Must be unique within the project.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -113,6 +146,10 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nameServers")
     private @Nullable Output<List<String>> nameServers;
 
+    /**
+     * @return Delegate your managed_zone to these virtual name servers; defined by the server
+     * 
+     */
     public Optional<Output<List<String>>> nameServers() {
         return Optional.ofNullable(this.nameServers);
     }
@@ -126,6 +163,12 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringConfig")
     private @Nullable Output<ManagedZonePeeringConfigGetArgs> peeringConfig;
 
+    /**
+     * @return The presence of this field indicates that DNS Peering is enabled for this
+     * zone. The value of this field contains the network to peer with.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedZonePeeringConfigGetArgs>> peeringConfig() {
         return Optional.ofNullable(this.peeringConfig);
     }
@@ -139,6 +182,12 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateVisibilityConfig")
     private @Nullable Output<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig;
 
+    /**
+     * @return For privately visible zones, the set of Virtual Private Cloud
+     * resources that the zone is visible from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedZonePrivateVisibilityConfigGetArgs>> privateVisibilityConfig() {
         return Optional.ofNullable(this.privateVisibilityConfig);
     }
@@ -151,6 +200,11 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -164,6 +218,12 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="reverseLookup")
     private @Nullable Output<Boolean> reverseLookup;
 
+    /**
+     * @return Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+     * lookup queries using automatically configured records for VPC resources. This only applies
+     * to networks listed under `private_visibility_config`.
+     * 
+     */
     public Optional<Output<Boolean>> reverseLookup() {
         return Optional.ofNullable(this.reverseLookup);
     }
@@ -176,6 +236,11 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceDirectoryConfig")
     private @Nullable Output<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig;
 
+    /**
+     * @return The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedZoneServiceDirectoryConfigGetArgs>> serviceDirectoryConfig() {
         return Optional.ofNullable(this.serviceDirectoryConfig);
     }
@@ -190,6 +255,13 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibility")
     private @Nullable Output<String> visibility;
 
+    /**
+     * @return The zone&#39;s visibility: public zones are exposed to the Internet,
+     * while private zones are visible only to Virtual Private Cloud resources.
+     * Default value is `public`.
+     * Possible values are `private` and `public`.
+     * 
+     */
     public Optional<Output<String>> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -231,132 +303,338 @@ public final class ManagedZoneState extends com.pulumi.resources.ResourceArgs {
             $ = new ManagedZoneState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A textual description field. Defaults to &#39;Managed by Pulumi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsName The DNS name of this managed zone, for instance &#34;example.com.&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name of this managed zone, for instance &#34;example.com.&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param dnssecConfig DNSSEC configuration
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnssecConfig(@Nullable Output<ManagedZoneDnssecConfigGetArgs> dnssecConfig) {
             $.dnssecConfig = dnssecConfig;
             return this;
         }
 
+        /**
+         * @param dnssecConfig DNSSEC configuration
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnssecConfig(ManagedZoneDnssecConfigGetArgs dnssecConfig) {
             return dnssecConfig(Output.of(dnssecConfig));
         }
 
+        /**
+         * @param forceDestroy Set this true to delete all records in the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             $.forceDestroy = forceDestroy;
             return this;
         }
 
+        /**
+         * @param forceDestroy Set this true to delete all records in the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDestroy(Boolean forceDestroy) {
             return forceDestroy(Output.of(forceDestroy));
         }
 
+        /**
+         * @param forwardingConfig The presence for this field indicates that outbound forwarding is enabled
+         * for this zone. The value of this field contains the set of destinations
+         * to forward to.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigGetArgs> forwardingConfig) {
             $.forwardingConfig = forwardingConfig;
             return this;
         }
 
+        /**
+         * @param forwardingConfig The presence for this field indicates that outbound forwarding is enabled
+         * for this zone. The value of this field contains the set of destinations
+         * to forward to.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingConfig(ManagedZoneForwardingConfigGetArgs forwardingConfig) {
             return forwardingConfig(Output.of(forwardingConfig));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this ManagedZone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this ManagedZone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name User assigned name for this resource.
+         * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name User assigned name for this resource.
+         * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             return nameServers(Output.of(nameServers));
         }
 
+        /**
+         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
 
+        /**
+         * @param peeringConfig The presence of this field indicates that DNS Peering is enabled for this
+         * zone. The value of this field contains the network to peer with.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigGetArgs> peeringConfig) {
             $.peeringConfig = peeringConfig;
             return this;
         }
 
+        /**
+         * @param peeringConfig The presence of this field indicates that DNS Peering is enabled for this
+         * zone. The value of this field contains the network to peer with.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringConfig(ManagedZonePeeringConfigGetArgs peeringConfig) {
             return peeringConfig(Output.of(peeringConfig));
         }
 
+        /**
+         * @param privateVisibilityConfig For privately visible zones, the set of Virtual Private Cloud
+         * resources that the zone is visible from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigGetArgs> privateVisibilityConfig) {
             $.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
 
+        /**
+         * @param privateVisibilityConfig For privately visible zones, the set of Virtual Private Cloud
+         * resources that the zone is visible from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigGetArgs privateVisibilityConfig) {
             return privateVisibilityConfig(Output.of(privateVisibilityConfig));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reverseLookup Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+         * lookup queries using automatically configured records for VPC resources. This only applies
+         * to networks listed under `private_visibility_config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseLookup(@Nullable Output<Boolean> reverseLookup) {
             $.reverseLookup = reverseLookup;
             return this;
         }
 
+        /**
+         * @param reverseLookup Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
+         * lookup queries using automatically configured records for VPC resources. This only applies
+         * to networks listed under `private_visibility_config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reverseLookup(Boolean reverseLookup) {
             return reverseLookup(Output.of(reverseLookup));
         }
 
+        /**
+         * @param serviceDirectoryConfig The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigGetArgs> serviceDirectoryConfig) {
             $.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
 
+        /**
+         * @param serviceDirectoryConfig The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigGetArgs serviceDirectoryConfig) {
             return serviceDirectoryConfig(Output.of(serviceDirectoryConfig));
         }
 
+        /**
+         * @param visibility The zone&#39;s visibility: public zones are exposed to the Internet,
+         * while private zones are visible only to Virtual Private Cloud resources.
+         * Default value is `public`.
+         * Possible values are `private` and `public`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable Output<String> visibility) {
             $.visibility = visibility;
             return this;
         }
 
+        /**
+         * @param visibility The zone&#39;s visibility: public zones are exposed to the Internet,
+         * while private zones are visible only to Virtual Private Cloud resources.
+         * Default value is `public`.
+         * Possible values are `private` and `public`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(String visibility) {
             return visibility(Output.of(visibility));
         }

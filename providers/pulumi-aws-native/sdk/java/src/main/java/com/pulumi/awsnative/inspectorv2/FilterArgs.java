@@ -24,6 +24,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Findings filter description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterAction", required=true)
     private Output<FilterAction> filterAction;
 
+    /**
+     * @return Findings filter action.
+     * 
+     */
     public Output<FilterAction> filterAction() {
         return this.filterAction;
     }
@@ -46,6 +54,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterCriteria", required=true)
     private Output<FilterCriteriaArgs> filterCriteria;
 
+    /**
+     * @return Findings filter criteria.
+     * 
+     */
     public Output<FilterCriteriaArgs> filterCriteria() {
         return this.filterCriteria;
     }
@@ -57,6 +69,10 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Findings filter name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -88,38 +104,86 @@ public final class FilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Findings filter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Findings filter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param filterAction Findings filter action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterAction(Output<FilterAction> filterAction) {
             $.filterAction = filterAction;
             return this;
         }
 
+        /**
+         * @param filterAction Findings filter action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterAction(FilterAction filterAction) {
             return filterAction(Output.of(filterAction));
         }
 
+        /**
+         * @param filterCriteria Findings filter criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterCriteria(Output<FilterCriteriaArgs> filterCriteria) {
             $.filterCriteria = filterCriteria;
             return this;
         }
 
+        /**
+         * @param filterCriteria Findings filter criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterCriteria(FilterCriteriaArgs filterCriteria) {
             return filterCriteria(Output.of(filterCriteria));
         }
 
+        /**
+         * @param name Findings filter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Findings filter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

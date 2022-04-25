@@ -26,6 +26,11 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="basicAlgorithm")
     private @Nullable Output<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm;
 
+    /**
+     * @return Basic algorithm for autoscaling.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AutoscalingPolicyBasicAlgorithmArgs>> basicAlgorithm() {
         return Optional.ofNullable(this.basicAlgorithm);
     }
@@ -38,6 +43,11 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The  location where the autoscaling policy should reside.
+     * The default value is `global`.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -51,6 +61,12 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyId", required=true)
     private Output<String> policyId;
 
+    /**
+     * @return The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+     * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+     * 3 and 50 characters.
+     * 
+     */
     public Output<String> policyId() {
         return this.policyId;
     }
@@ -63,6 +79,11 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -75,6 +96,11 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="secondaryWorkerConfig")
     private @Nullable Output<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
+    /**
+     * @return Describes how the autoscaler will operate for secondary workers.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AutoscalingPolicySecondaryWorkerConfigArgs>> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
@@ -87,6 +113,11 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workerConfig")
     private @Nullable Output<AutoscalingPolicyWorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Describes how the autoscaler will operate for primary workers.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AutoscalingPolicyWorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -120,56 +151,142 @@ public final class AutoscalingPolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicAlgorithm Basic algorithm for autoscaling.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAlgorithm(@Nullable Output<AutoscalingPolicyBasicAlgorithmArgs> basicAlgorithm) {
             $.basicAlgorithm = basicAlgorithm;
             return this;
         }
 
+        /**
+         * @param basicAlgorithm Basic algorithm for autoscaling.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAlgorithm(AutoscalingPolicyBasicAlgorithmArgs basicAlgorithm) {
             return basicAlgorithm(Output.of(basicAlgorithm));
         }
 
+        /**
+         * @param location The  location where the autoscaling policy should reside.
+         * The default value is `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The  location where the autoscaling policy should reside.
+         * The default value is `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param policyId The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+         * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+         * 3 and 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
+         * and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
+         * 3 and 50 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param secondaryWorkerConfig Describes how the autoscaler will operate for secondary workers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(@Nullable Output<AutoscalingPolicySecondaryWorkerConfigArgs> secondaryWorkerConfig) {
             $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
+        /**
+         * @param secondaryWorkerConfig Describes how the autoscaler will operate for secondary workers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWorkerConfig(AutoscalingPolicySecondaryWorkerConfigArgs secondaryWorkerConfig) {
             return secondaryWorkerConfig(Output.of(secondaryWorkerConfig));
         }
 
+        /**
+         * @param workerConfig Describes how the autoscaler will operate for primary workers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<AutoscalingPolicyWorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Describes how the autoscaler will operate for primary workers.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(AutoscalingPolicyWorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

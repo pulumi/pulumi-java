@@ -25,6 +25,10 @@ public final class EdifactOneWayAgreementArgs extends com.pulumi.resources.Resou
     @Import(name="protocolSettings", required=true)
     private Output<EdifactProtocolSettingsArgs> protocolSettings;
 
+    /**
+     * @return The EDIFACT protocol settings.
+     * 
+     */
     public Output<EdifactProtocolSettingsArgs> protocolSettings() {
         return this.protocolSettings;
     }
@@ -36,6 +40,10 @@ public final class EdifactOneWayAgreementArgs extends com.pulumi.resources.Resou
     @Import(name="receiverBusinessIdentity", required=true)
     private Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
+    /**
+     * @return The receiver business identity
+     * 
+     */
     public Output<BusinessIdentityArgs> receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
@@ -47,6 +55,10 @@ public final class EdifactOneWayAgreementArgs extends com.pulumi.resources.Resou
     @Import(name="senderBusinessIdentity", required=true)
     private Output<BusinessIdentityArgs> senderBusinessIdentity;
 
+    /**
+     * @return The sender business identity
+     * 
+     */
     public Output<BusinessIdentityArgs> senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
@@ -77,29 +89,65 @@ public final class EdifactOneWayAgreementArgs extends com.pulumi.resources.Resou
             $ = new EdifactOneWayAgreementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocolSettings The EDIFACT protocol settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolSettings(Output<EdifactProtocolSettingsArgs> protocolSettings) {
             $.protocolSettings = protocolSettings;
             return this;
         }
 
+        /**
+         * @param protocolSettings The EDIFACT protocol settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolSettings(EdifactProtocolSettingsArgs protocolSettings) {
             return protocolSettings(Output.of(protocolSettings));
         }
 
+        /**
+         * @param receiverBusinessIdentity The receiver business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverBusinessIdentity(Output<BusinessIdentityArgs> receiverBusinessIdentity) {
             $.receiverBusinessIdentity = receiverBusinessIdentity;
             return this;
         }
 
+        /**
+         * @param receiverBusinessIdentity The receiver business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
             return receiverBusinessIdentity(Output.of(receiverBusinessIdentity));
         }
 
+        /**
+         * @param senderBusinessIdentity The sender business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderBusinessIdentity(Output<BusinessIdentityArgs> senderBusinessIdentity) {
             $.senderBusinessIdentity = senderBusinessIdentity;
             return this;
         }
 
+        /**
+         * @param senderBusinessIdentity The sender business identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
             return senderBusinessIdentity(Output.of(senderBusinessIdentity));
         }

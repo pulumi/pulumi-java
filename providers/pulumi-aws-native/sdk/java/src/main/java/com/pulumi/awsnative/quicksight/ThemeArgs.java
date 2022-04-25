@@ -36,6 +36,13 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="baseThemeId")
     private @Nullable Output<String> baseThemeId;
 
+    /**
+     * @return &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+     * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
+     * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+     * 			within a QuickSight analysis. &lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> baseThemeId() {
         return Optional.ofNullable(this.baseThemeId);
     }
@@ -54,6 +61,10 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A display name for the theme.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +77,11 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<ThemeResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -78,6 +94,11 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ThemeTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<ThemeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,6 +120,13 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
     private @Nullable Output<String> versionDescription;
 
+    /**
+     * @return &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+     * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+     * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+     * 			field.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> versionDescription() {
         return Optional.ofNullable(this.versionDescription);
     }
@@ -143,11 +171,29 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
             return awsAccountId(Output.of(awsAccountId));
         }
 
+        /**
+         * @param baseThemeId &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+         * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
+         * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+         * 			within a QuickSight analysis. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseThemeId(@Nullable Output<String> baseThemeId) {
             $.baseThemeId = baseThemeId;
             return this;
         }
 
+        /**
+         * @param baseThemeId &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+         * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
+         * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+         * 			within a QuickSight analysis. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseThemeId(String baseThemeId) {
             return baseThemeId(Output.of(baseThemeId));
         }
@@ -161,37 +207,91 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the theme.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+         * 			&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<ThemeResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+         * 			&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<ThemeResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+         * 			&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(ThemeResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param tags &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+         * 			resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ThemeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+         * 			resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ThemeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+         * 			resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ThemeTagArgs... tags) {
             return tags(List.of(tags));
         }
@@ -205,11 +305,29 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
             return themeId(Output.of(themeId));
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+         * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+         * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+         * 			field.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             $.versionDescription = versionDescription;
             return this;
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+         * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+         * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+         * 			field.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(String versionDescription) {
             return versionDescription(Output.of(versionDescription));
         }

@@ -13,37 +13,37 @@ import java.util.Objects;
 @CustomType
 public final class MethodResponse {
     /**
-     * The simple name of this method.
+     * @return The simple name of this method.
      * 
      */
     private final String name;
     /**
-     * Any metadata attached to the method.
+     * @return Any metadata attached to the method.
      * 
      */
     private final List<OptionResponse> options;
     /**
-     * If true, the request is streamed.
+     * @return If true, the request is streamed.
      * 
      */
     private final Boolean requestStreaming;
     /**
-     * A URL of the input message type.
+     * @return A URL of the input message type.
      * 
      */
     private final String requestTypeUrl;
     /**
-     * If true, the response is streamed.
+     * @return If true, the response is streamed.
      * 
      */
     private final Boolean responseStreaming;
     /**
-     * The URL of the output message type.
+     * @return The URL of the output message type.
      * 
      */
     private final String responseTypeUrl;
     /**
-     * The source syntax of this method.
+     * @return The source syntax of this method.
      * 
      */
     private final String syntax;
@@ -67,51 +67,51 @@ public final class MethodResponse {
     }
 
     /**
-     * The simple name of this method.
+     * @return The simple name of this method.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Any metadata attached to the method.
+     * @return Any metadata attached to the method.
      * 
-    */
+     */
     public List<OptionResponse> options() {
         return this.options;
     }
     /**
-     * If true, the request is streamed.
+     * @return If true, the request is streamed.
      * 
-    */
+     */
     public Boolean requestStreaming() {
         return this.requestStreaming;
     }
     /**
-     * A URL of the input message type.
+     * @return A URL of the input message type.
      * 
-    */
+     */
     public String requestTypeUrl() {
         return this.requestTypeUrl;
     }
     /**
-     * If true, the response is streamed.
+     * @return If true, the response is streamed.
      * 
-    */
+     */
     public Boolean responseStreaming() {
         return this.responseStreaming;
     }
     /**
-     * The URL of the output message type.
+     * @return The URL of the output message type.
      * 
-    */
+     */
     public String responseTypeUrl() {
         return this.responseTypeUrl;
     }
     /**
-     * The source syntax of this method.
+     * @return The source syntax of this method.
      * 
-    */
+     */
     public String syntax() {
         return this.syntax;
     }

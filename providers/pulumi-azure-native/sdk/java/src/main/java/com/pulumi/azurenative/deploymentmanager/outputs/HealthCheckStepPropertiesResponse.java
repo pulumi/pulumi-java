@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class HealthCheckStepPropertiesResponse {
     /**
-     * The health check step attributes
+     * @return The health check step attributes
      * 
      */
     private final RestHealthCheckStepAttributesResponse attributes;
     /**
-     * The type of step.
+     * @return The type of step.
      * Expected value is &#39;HealthCheck&#39;.
      * 
      */
@@ -31,17 +31,17 @@ public final class HealthCheckStepPropertiesResponse {
     }
 
     /**
-     * The health check step attributes
+     * @return The health check step attributes
      * 
-    */
+     */
     public RestHealthCheckStepAttributesResponse attributes() {
         return this.attributes;
     }
     /**
-     * The type of step.
+     * @return The type of step.
      * Expected value is &#39;HealthCheck&#39;.
      * 
-    */
+     */
     public String stepType() {
         return this.stepType;
     }

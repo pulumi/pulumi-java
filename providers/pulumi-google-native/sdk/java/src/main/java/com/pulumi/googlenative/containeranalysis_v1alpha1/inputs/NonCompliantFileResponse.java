@@ -23,6 +23,10 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
     @Import(name="displayCommand", required=true)
     private String displayCommand;
 
+    /**
+     * @return Command to display the non-compliant files.
+     * 
+     */
     public String displayCommand() {
         return this.displayCommand;
     }
@@ -34,6 +38,10 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -45,6 +53,10 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return Explains why a file is non compliant for a CIS check.
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -75,16 +87,34 @@ public final class NonCompliantFileResponse extends com.pulumi.resources.InvokeA
             $ = new NonCompliantFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayCommand Command to display the non-compliant files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayCommand(String displayCommand) {
             $.displayCommand = displayCommand;
             return this;
         }
 
+        /**
+         * @param path display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param reason Explains why a file is non compliant for a CIS check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;

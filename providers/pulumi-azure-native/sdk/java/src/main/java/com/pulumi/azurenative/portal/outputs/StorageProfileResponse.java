@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageProfileResponse {
     /**
-     * Size of file share
+     * @return Size of file share
      * 
      */
     private final @Nullable Integer diskSizeInGB;
     /**
-     * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * @return Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
      * 
      */
     private final @Nullable String fileShareName;
     /**
-     * Full resource ID of storage account.
+     * @return Full resource ID of storage account.
      * 
      */
     private final @Nullable String storageAccountResourceId;
@@ -39,23 +39,23 @@ public final class StorageProfileResponse {
     }
 
     /**
-     * Size of file share
+     * @return Size of file share
      * 
-    */
+     */
     public Optional<Integer> diskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
     /**
-     * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * @return Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
      * 
-    */
+     */
     public Optional<String> fileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
     /**
-     * Full resource ID of storage account.
+     * @return Full resource ID of storage account.
      * 
-    */
+     */
     public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }

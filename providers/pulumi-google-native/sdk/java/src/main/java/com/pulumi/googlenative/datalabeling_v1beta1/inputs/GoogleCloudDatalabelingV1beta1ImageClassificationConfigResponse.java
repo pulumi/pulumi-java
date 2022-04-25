@@ -24,6 +24,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="allowMultiLabel", required=true)
     private Boolean allowMultiLabel;
 
+    /**
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+     * 
+     */
     public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="annotationSpecSet", required=true)
     private String annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="answerAggregationType", required=true)
     private String answerAggregationType;
 
+    /**
+     * @return Optional. The type of how to aggregate answers.
+     * 
+     */
     public String answerAggregationType() {
         return this.answerAggregationType;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
             $ = new GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(Boolean allowMultiLabel) {
             $.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param answerAggregationType Optional. The type of how to aggregate answers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder answerAggregationType(String answerAggregationType) {
             $.answerAggregationType = answerAggregationType;
             return this;

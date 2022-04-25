@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey {
     /**
-     * Kms wrapped key
+     * @return Kms wrapped key
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped kmsWrapped;
     /**
-     * Transient crypto key
+     * @return Transient crypto key
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient transient_;
     /**
-     * Unwrapped crypto key
+     * @return Unwrapped crypto key
      * Structure is documented below.
      * 
      */
@@ -43,26 +43,26 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * Kms wrapped key
+     * @return Kms wrapped key
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped> kmsWrapped() {
         return Optional.ofNullable(this.kmsWrapped);
     }
     /**
-     * Transient crypto key
+     * @return Transient crypto key
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient> transient_() {
         return Optional.ofNullable(this.transient_);
     }
     /**
-     * Unwrapped crypto key
+     * @return Unwrapped crypto key
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped> unwrapped() {
         return Optional.ofNullable(this.unwrapped);
     }

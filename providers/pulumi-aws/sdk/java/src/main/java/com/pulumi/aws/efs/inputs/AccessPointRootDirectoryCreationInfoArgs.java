@@ -21,6 +21,10 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends com.pulumi.r
     @Import(name="ownerGid", required=true)
     private Output<Integer> ownerGid;
 
+    /**
+     * @return POSIX group ID to apply to the `root_directory`.
+     * 
+     */
     public Output<Integer> ownerGid() {
         return this.ownerGid;
     }
@@ -32,6 +36,10 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends com.pulumi.r
     @Import(name="ownerUid", required=true)
     private Output<Integer> ownerUid;
 
+    /**
+     * @return POSIX user ID to apply to the `root_directory`.
+     * 
+     */
     public Output<Integer> ownerUid() {
         return this.ownerUid;
     }
@@ -43,6 +51,10 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends com.pulumi.r
     @Import(name="permissions", required=true)
     private Output<String> permissions;
 
+    /**
+     * @return POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+     * 
+     */
     public Output<String> permissions() {
         return this.permissions;
     }
@@ -73,29 +85,65 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends com.pulumi.r
             $ = new AccessPointRootDirectoryCreationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ownerGid POSIX group ID to apply to the `root_directory`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerGid(Output<Integer> ownerGid) {
             $.ownerGid = ownerGid;
             return this;
         }
 
+        /**
+         * @param ownerGid POSIX group ID to apply to the `root_directory`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerGid(Integer ownerGid) {
             return ownerGid(Output.of(ownerGid));
         }
 
+        /**
+         * @param ownerUid POSIX user ID to apply to the `root_directory`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerUid(Output<Integer> ownerUid) {
             $.ownerUid = ownerUid;
             return this;
         }
 
+        /**
+         * @param ownerUid POSIX user ID to apply to the `root_directory`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerUid(Integer ownerUid) {
             return ownerUid(Output.of(ownerUid));
         }
 
+        /**
+         * @param permissions POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Output<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             return permissions(Output.of(permissions));
         }

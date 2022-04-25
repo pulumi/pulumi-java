@@ -26,6 +26,10 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
+    /**
+     * @return The last time the condition transitioned from one status to another.
+     * 
+     */
     public Optional<Output<String>> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
@@ -37,6 +41,10 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return A human readable message indicating details about the transition.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -48,6 +56,10 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return The reason for the condition&#39;s last transition.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -59,6 +71,10 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return Status of the condition, one of True, False, Unknown.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -70,6 +86,10 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of replication controller condition.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -102,47 +122,107 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
             $ = new ReplicationControllerConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastTransitionTime The last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
             $.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
+        /**
+         * @param lastTransitionTime The last time the condition transitioned from one status to another.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTransitionTime(String lastTransitionTime) {
             return lastTransitionTime(Output.of(lastTransitionTime));
         }
 
+        /**
+         * @param message A human readable message indicating details about the transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message A human readable message indicating details about the transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason The reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason The reason for the condition&#39;s last transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }
 
+        /**
+         * @param status Status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the condition, one of True, False, Unknown.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param type Type of replication controller condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of replication controller condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

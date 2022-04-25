@@ -24,6 +24,10 @@ public final class EventConnectionAuthParametersOauthGetArgs extends com.pulumi.
     @Import(name="authorizationEndpoint", required=true)
     private Output<String> authorizationEndpoint;
 
+    /**
+     * @return The URL to the authorization endpoint.
+     * 
+     */
     public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
@@ -35,6 +39,10 @@ public final class EventConnectionAuthParametersOauthGetArgs extends com.pulumi.
     @Import(name="clientParameters")
     private @Nullable Output<EventConnectionAuthParametersOauthClientParametersGetArgs> clientParameters;
 
+    /**
+     * @return Contains the client parameters for OAuth authorization. Contains the following two parameters.
+     * 
+     */
     public Optional<Output<EventConnectionAuthParametersOauthClientParametersGetArgs>> clientParameters() {
         return Optional.ofNullable(this.clientParameters);
     }
@@ -46,6 +54,10 @@ public final class EventConnectionAuthParametersOauthGetArgs extends com.pulumi.
     @Import(name="httpMethod", required=true)
     private Output<String> httpMethod;
 
+    /**
+     * @return A password for the authorization. Created and stored in AWS Secrets Manager.
+     * 
+     */
     public Output<String> httpMethod() {
         return this.httpMethod;
     }
@@ -57,6 +69,10 @@ public final class EventConnectionAuthParametersOauthGetArgs extends com.pulumi.
     @Import(name="oauthHttpParameters", required=true)
     private Output<EventConnectionAuthParametersOauthOauthHttpParametersGetArgs> oauthHttpParameters;
 
+    /**
+     * @return OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+     * 
+     */
     public Output<EventConnectionAuthParametersOauthOauthHttpParametersGetArgs> oauthHttpParameters() {
         return this.oauthHttpParameters;
     }
@@ -88,38 +104,86 @@ public final class EventConnectionAuthParametersOauthGetArgs extends com.pulumi.
             $ = new EventConnectionAuthParametersOauthGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationEndpoint The URL to the authorization endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
+        /**
+         * @param authorizationEndpoint The URL to the authorization endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             return authorizationEndpoint(Output.of(authorizationEndpoint));
         }
 
+        /**
+         * @param clientParameters Contains the client parameters for OAuth authorization. Contains the following two parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientParameters(@Nullable Output<EventConnectionAuthParametersOauthClientParametersGetArgs> clientParameters) {
             $.clientParameters = clientParameters;
             return this;
         }
 
+        /**
+         * @param clientParameters Contains the client parameters for OAuth authorization. Contains the following two parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientParameters(EventConnectionAuthParametersOauthClientParametersGetArgs clientParameters) {
             return clientParameters(Output.of(clientParameters));
         }
 
+        /**
+         * @param httpMethod A password for the authorization. Created and stored in AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param httpMethod A password for the authorization. Created and stored in AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param oauthHttpParameters OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthHttpParameters(Output<EventConnectionAuthParametersOauthOauthHttpParametersGetArgs> oauthHttpParameters) {
             $.oauthHttpParameters = oauthHttpParameters;
             return this;
         }
 
+        /**
+         * @param oauthHttpParameters OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersGetArgs oauthHttpParameters) {
             return oauthHttpParameters(Output.of(oauthHttpParameters));
         }

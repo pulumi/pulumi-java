@@ -19,6 +19,10 @@ public final class ListStreamingLocatorPathsArgs extends com.pulumi.resources.In
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListStreamingLocatorPathsArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class ListStreamingLocatorPathsArgs extends com.pulumi.resources.In
     @Import(name="streamingLocatorName", required=true)
     private String streamingLocatorName;
 
+    /**
+     * @return The Streaming Locator name.
+     * 
+     */
     public String streamingLocatorName() {
         return this.streamingLocatorName;
     }
@@ -71,16 +83,34 @@ public final class ListStreamingLocatorPathsArgs extends com.pulumi.resources.In
             $ = new ListStreamingLocatorPathsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param streamingLocatorName The Streaming Locator name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingLocatorName(String streamingLocatorName) {
             $.streamingLocatorName = streamingLocatorName;
             return this;

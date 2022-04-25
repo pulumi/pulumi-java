@@ -22,6 +22,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFileShareName")
     private @Nullable Output<String> azureFileShareName;
 
+    /**
+     * @return Azure file share name
+     * 
+     */
     public Optional<Output<String>> azureFileShareName() {
         return Optional.ofNullable(this.azureFileShareName);
     }
@@ -33,6 +37,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudEndpointName")
     private @Nullable Output<String> cloudEndpointName;
 
+    /**
+     * @return Name of Cloud Endpoint object.
+     * 
+     */
     public Optional<Output<String>> cloudEndpointName() {
         return Optional.ofNullable(this.cloudEndpointName);
     }
@@ -44,6 +52,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly Name
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -55,6 +67,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountResourceId")
     private @Nullable Output<String> storageAccountResourceId;
 
+    /**
+     * @return Storage Account Resource Id
+     * 
+     */
     public Optional<Output<String>> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -77,6 +97,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountTenantId")
     private @Nullable Output<String> storageAccountTenantId;
 
+    /**
+     * @return Storage Account Tenant Id
+     * 
+     */
     public Optional<Output<String>> storageAccountTenantId() {
         return Optional.ofNullable(this.storageAccountTenantId);
     }
@@ -88,6 +112,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSyncServiceName", required=true)
     private Output<String> storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -99,6 +127,10 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName", required=true)
     private Output<String> syncGroupName;
 
+    /**
+     * @return Name of Sync Group resource.
+     * 
+     */
     public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
@@ -134,74 +166,170 @@ public final class CloudEndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CloudEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFileShareName Azure file share name
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileShareName(@Nullable Output<String> azureFileShareName) {
             $.azureFileShareName = azureFileShareName;
             return this;
         }
 
+        /**
+         * @param azureFileShareName Azure file share name
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileShareName(String azureFileShareName) {
             return azureFileShareName(Output.of(azureFileShareName));
         }
 
+        /**
+         * @param cloudEndpointName Name of Cloud Endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudEndpointName(@Nullable Output<String> cloudEndpointName) {
             $.cloudEndpointName = cloudEndpointName;
             return this;
         }
 
+        /**
+         * @param cloudEndpointName Name of Cloud Endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudEndpointName(String cloudEndpointName) {
             return cloudEndpointName(Output.of(cloudEndpointName));
         }
 
+        /**
+         * @param friendlyName Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageAccountResourceId Storage Account Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             $.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
+        /**
+         * @param storageAccountResourceId Storage Account Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(String storageAccountResourceId) {
             return storageAccountResourceId(Output.of(storageAccountResourceId));
         }
 
+        /**
+         * @param storageAccountTenantId Storage Account Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountTenantId(@Nullable Output<String> storageAccountTenantId) {
             $.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
 
+        /**
+         * @param storageAccountTenantId Storage Account Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountTenantId(String storageAccountTenantId) {
             return storageAccountTenantId(Output.of(storageAccountTenantId));
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
 
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(Output<String> syncGroupName) {
             $.syncGroupName = syncGroupName;
             return this;
         }
 
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(String syncGroupName) {
             return syncGroupName(Output.of(syncGroupName));
         }

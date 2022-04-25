@@ -27,6 +27,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The provider ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -49,6 +57,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="registrationPolicy", required=true)
     private String registrationPolicy;
 
+    /**
+     * @return The registration policy of the resource provider.
+     * 
+     */
     public String registrationPolicy() {
         return this.registrationPolicy;
     }
@@ -60,6 +72,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="registrationState", required=true)
     private String registrationState;
 
+    /**
+     * @return The registration state of the resource provider.
+     * 
+     */
     public String registrationState() {
         return this.registrationState;
     }
@@ -71,6 +87,10 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceTypes", required=true)
     private List<ProviderResourceTypeResponse> resourceTypes;
 
+    /**
+     * @return The collection of provider resource types.
+     * 
+     */
     public List<ProviderResourceTypeResponse> resourceTypes() {
         return this.resourceTypes;
     }
@@ -103,31 +123,67 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The provider ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param namespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param registrationPolicy The registration policy of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationPolicy(String registrationPolicy) {
             $.registrationPolicy = registrationPolicy;
             return this;
         }
 
+        /**
+         * @param registrationState The registration state of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationState(String registrationState) {
             $.registrationState = registrationState;
             return this;
         }
 
+        /**
+         * @param resourceTypes The collection of provider resource types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(List<ProviderResourceTypeResponse> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
 
+        /**
+         * @param resourceTypes The collection of provider resource types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTypes(ProviderResourceTypeResponse... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }

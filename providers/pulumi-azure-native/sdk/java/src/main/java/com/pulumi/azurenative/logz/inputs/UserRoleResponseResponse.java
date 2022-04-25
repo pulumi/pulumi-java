@@ -25,6 +25,10 @@ public final class UserRoleResponseResponse extends com.pulumi.resources.InvokeA
     @Import(name="role")
     private @Nullable String role;
 
+    /**
+     * @return User roles on configured in Logz.io account.
+     * 
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
@@ -53,6 +57,12 @@ public final class UserRoleResponseResponse extends com.pulumi.resources.InvokeA
             $ = new UserRoleResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param role User roles on configured in Logz.io account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable String role) {
             $.role = role;
             return this;

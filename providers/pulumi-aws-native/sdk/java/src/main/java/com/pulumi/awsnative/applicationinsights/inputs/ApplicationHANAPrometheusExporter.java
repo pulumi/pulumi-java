@@ -26,6 +26,10 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
     @Import(name="agreeToInstallHANADBClient", required=true)
     private Boolean agreeToInstallHANADBClient;
 
+    /**
+     * @return A flag which indicates agreeing to install SAP HANA DB client.
+     * 
+     */
     public Boolean agreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
@@ -37,6 +41,10 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
     @Import(name="hANAPort", required=true)
     private String hANAPort;
 
+    /**
+     * @return The HANA DB port.
+     * 
+     */
     public String hANAPort() {
         return this.hANAPort;
     }
@@ -48,6 +56,10 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
     @Import(name="hANASID", required=true)
     private String hANASID;
 
+    /**
+     * @return HANA DB SID.
+     * 
+     */
     public String hANASID() {
         return this.hANASID;
     }
@@ -62,6 +74,13 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
     @Import(name="hANASecretName", required=true)
     private String hANASecretName;
 
+    /**
+     * @return The secret name which manages the HANA DB credentials e.g. {
+     *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
+     *   &#34;password&#34;: &#34;&lt;&gt;&#34;
+     * }.
+     * 
+     */
     public String hANASecretName() {
         return this.hANASecretName;
     }
@@ -73,6 +92,10 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
     @Import(name="prometheusPort")
     private @Nullable String prometheusPort;
 
+    /**
+     * @return Prometheus exporter port.
+     * 
+     */
     public Optional<String> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
@@ -105,26 +128,59 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
             $ = new ApplicationHANAPrometheusExporter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agreeToInstallHANADBClient A flag which indicates agreeing to install SAP HANA DB client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
             $.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
             return this;
         }
 
+        /**
+         * @param hANAPort The HANA DB port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hANAPort(String hANAPort) {
             $.hANAPort = hANAPort;
             return this;
         }
 
+        /**
+         * @param hANASID HANA DB SID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hANASID(String hANASID) {
             $.hANASID = hANASID;
             return this;
         }
 
+        /**
+         * @param hANASecretName The secret name which manages the HANA DB credentials e.g. {
+         *   &#34;username&#34;: &#34;&lt;&gt;&#34;,
+         *   &#34;password&#34;: &#34;&lt;&gt;&#34;
+         * }.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hANASecretName(String hANASecretName) {
             $.hANASecretName = hANASecretName;
             return this;
         }
 
+        /**
+         * @param prometheusPort Prometheus exporter port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusPort(@Nullable String prometheusPort) {
             $.prometheusPort = prometheusPort;
             return this;

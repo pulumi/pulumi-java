@@ -23,6 +23,10 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bitLockerKey", required=true)
     private String bitLockerKey;
 
+    /**
+     * @return Bit Locker key of the disk which can be used to unlock the disk to copy data.
+     * 
+     */
     public String bitLockerKey() {
         return this.bitLockerKey;
     }
@@ -34,6 +38,10 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSerialNumber", required=true)
     private String diskSerialNumber;
 
+    /**
+     * @return Serial number of the assigned disk.
+     * 
+     */
     public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
@@ -63,11 +71,23 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskSecretResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitLockerKey Bit Locker key of the disk which can be used to unlock the disk to copy data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitLockerKey(String bitLockerKey) {
             $.bitLockerKey = bitLockerKey;
             return this;
         }
 
+        /**
+         * @param diskSerialNumber Serial number of the assigned disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSerialNumber(String diskSerialNumber) {
             $.diskSerialNumber = diskSerialNumber;
             return this;

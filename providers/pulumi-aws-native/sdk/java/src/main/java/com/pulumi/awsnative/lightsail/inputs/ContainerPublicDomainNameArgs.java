@@ -34,6 +34,10 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
     @Import(name="domainNames")
     private @Nullable Output<List<String>> domainNames;
 
+    /**
+     * @return An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     public Optional<Output<List<String>>> domainNames() {
         return Optional.ofNullable(this.domainNames);
     }
@@ -72,15 +76,33 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param domainNames An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
             $.domainNames = domainNames;
             return this;
         }
 
+        /**
+         * @param domainNames An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNames(List<String> domainNames) {
             return domainNames(Output.of(domainNames));
         }
 
+        /**
+         * @param domainNames An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNames(String... domainNames) {
             return domainNames(List.of(domainNames));
         }

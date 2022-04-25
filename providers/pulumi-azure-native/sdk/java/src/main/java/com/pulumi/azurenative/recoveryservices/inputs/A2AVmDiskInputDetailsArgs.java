@@ -26,6 +26,10 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="diskUri")
     private @Nullable Output<String> diskUri;
 
+    /**
+     * @return The disk Uri.
+     * 
+     */
     public Optional<Output<String>> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
@@ -37,6 +41,10 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="primaryStagingAzureStorageAccountId")
     private @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
+    /**
+     * @return The primary staging storage account Id.
+     * 
+     */
     public Optional<Output<String>> primaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
@@ -48,6 +56,10 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="recoveryAzureStorageAccountId")
     private @Nullable Output<String> recoveryAzureStorageAccountId;
 
+    /**
+     * @return The recovery VHD storage account Id.
+     * 
+     */
     public Optional<Output<String>> recoveryAzureStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
@@ -78,29 +90,65 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
             $ = new A2AVmDiskInputDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskUri The disk Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(@Nullable Output<String> diskUri) {
             $.diskUri = diskUri;
             return this;
         }
 
+        /**
+         * @param diskUri The disk Uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(String diskUri) {
             return diskUri(Output.of(diskUri));
         }
 
+        /**
+         * @param primaryStagingAzureStorageAccountId The primary staging storage account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStagingAzureStorageAccountId(@Nullable Output<String> primaryStagingAzureStorageAccountId) {
             $.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
+        /**
+         * @param primaryStagingAzureStorageAccountId The primary staging storage account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStagingAzureStorageAccountId(String primaryStagingAzureStorageAccountId) {
             return primaryStagingAzureStorageAccountId(Output.of(primaryStagingAzureStorageAccountId));
         }
 
+        /**
+         * @param recoveryAzureStorageAccountId The recovery VHD storage account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureStorageAccountId(@Nullable Output<String> recoveryAzureStorageAccountId) {
             $.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureStorageAccountId The recovery VHD storage account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureStorageAccountId(String recoveryAzureStorageAccountId) {
             return recoveryAzureStorageAccountId(Output.of(recoveryAzureStorageAccountId));
         }

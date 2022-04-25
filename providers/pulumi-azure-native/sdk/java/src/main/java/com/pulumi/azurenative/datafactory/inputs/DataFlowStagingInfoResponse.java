@@ -26,6 +26,10 @@ public final class DataFlowStagingInfoResponse extends com.pulumi.resources.Invo
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return Folder path for staging blob. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -37,6 +41,10 @@ public final class DataFlowStagingInfoResponse extends com.pulumi.resources.Invo
     @Import(name="linkedService")
     private @Nullable LinkedServiceReferenceResponse linkedService;
 
+    /**
+     * @return Staging linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
@@ -66,11 +74,23 @@ public final class DataFlowStagingInfoResponse extends com.pulumi.resources.Invo
             $ = new DataFlowStagingInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param folderPath Folder path for staging blob. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param linkedService Staging linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             $.linkedService = linkedService;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class PrivateEndpointConnectionVaultPropertiesResponse {
     /**
-     * Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
+     * @return Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
      * 
      */
     private final String id;
     /**
-     * Private Endpoint Connection Response Properties.
+     * @return Private Endpoint Connection Response Properties.
      * 
      */
     private final VaultPrivateEndpointConnectionResponse properties;
@@ -30,16 +30,16 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
     }
 
     /**
-     * Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
+     * @return Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Private Endpoint Connection Response Properties.
+     * @return Private Endpoint Connection Response Properties.
      * 
-    */
+     */
     public VaultPrivateEndpointConnectionResponse properties() {
         return this.properties;
     }

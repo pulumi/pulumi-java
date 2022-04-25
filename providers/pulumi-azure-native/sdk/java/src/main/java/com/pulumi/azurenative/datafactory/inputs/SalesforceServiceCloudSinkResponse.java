@@ -27,6 +27,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -38,6 +42,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="externalIdFieldName")
     private @Nullable Object externalIdFieldName;
 
+    /**
+     * @return The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> externalIdFieldName() {
         return Optional.ofNullable(this.externalIdFieldName);
     }
@@ -49,6 +57,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="ignoreNullValues")
     private @Nullable Object ignoreNullValues;
 
+    /**
+     * @return The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> ignoreNullValues() {
         return Optional.ofNullable(this.ignoreNullValues);
     }
@@ -60,6 +72,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -71,6 +87,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="sinkRetryCount")
     private @Nullable Object sinkRetryCount;
 
+    /**
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
@@ -82,6 +102,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="sinkRetryWait")
     private @Nullable Object sinkRetryWait;
 
+    /**
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -94,6 +118,11 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy sink type.
+     * Expected value is &#39;SalesforceServiceCloudSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -105,6 +134,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="writeBatchSize")
     private @Nullable Object writeBatchSize;
 
+    /**
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
@@ -116,6 +149,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="writeBatchTimeout")
     private @Nullable Object writeBatchTimeout;
 
+    /**
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -127,6 +164,10 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
     @Import(name="writeBehavior")
     private @Nullable String writeBehavior;
 
+    /**
+     * @return The write behavior for the operation. Default is Insert.
+     * 
+     */
     public Optional<String> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }
@@ -164,51 +205,112 @@ public final class SalesforceServiceCloudSinkResponse extends com.pulumi.resourc
             $ = new SalesforceServiceCloudSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param externalIdFieldName The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIdFieldName(@Nullable Object externalIdFieldName) {
             $.externalIdFieldName = externalIdFieldName;
             return this;
         }
 
+        /**
+         * @param ignoreNullValues The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreNullValues(@Nullable Object ignoreNullValues) {
             $.ignoreNullValues = ignoreNullValues;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param sinkRetryCount Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             $.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
+        /**
+         * @param sinkRetryWait Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             $.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy sink type.
+         * Expected value is &#39;SalesforceServiceCloudSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param writeBatchSize Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             $.writeBatchSize = writeBatchSize;
             return this;
         }
 
+        /**
+         * @param writeBatchTimeout Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
+        /**
+         * @param writeBehavior The write behavior for the operation. Default is Insert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBehavior(@Nullable String writeBehavior) {
             $.writeBehavior = writeBehavior;
             return this;

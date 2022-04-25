@@ -27,6 +27,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The directory alias.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -38,6 +42,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerUserName")
     private @Nullable Output<String> customerUserName;
 
+    /**
+     * @return The user name for the service account.
+     * 
+     */
     public Optional<Output<String>> customerUserName() {
         return Optional.ofNullable(this.customerUserName);
     }
@@ -49,6 +57,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
     private @Nullable Output<String> directoryId;
 
+    /**
+     * @return The directory identifier for registration in WorkSpaces service.
+     * 
+     */
     public Optional<Output<String>> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -60,6 +72,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryName")
     private @Nullable Output<String> directoryName;
 
+    /**
+     * @return The name of the directory.
+     * 
+     */
     public Optional<Output<String>> directoryName() {
         return Optional.ofNullable(this.directoryName);
     }
@@ -71,6 +87,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryType")
     private @Nullable Output<String> directoryType;
 
+    /**
+     * @return The directory type.
+     * 
+     */
     public Optional<Output<String>> directoryType() {
         return Optional.ofNullable(this.directoryType);
     }
@@ -82,6 +102,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsIpAddresses")
     private @Nullable Output<List<String>> dnsIpAddresses;
 
+    /**
+     * @return The IP addresses of the DNS servers for the directory.
+     * 
+     */
     public Optional<Output<List<String>>> dnsIpAddresses() {
         return Optional.ofNullable(this.dnsIpAddresses);
     }
@@ -93,6 +117,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleId")
     private @Nullable Output<String> iamRoleId;
 
+    /**
+     * @return The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
+     * 
+     */
     public Optional<Output<String>> iamRoleId() {
         return Optional.ofNullable(this.iamRoleId);
     }
@@ -104,6 +132,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipGroupIds")
     private @Nullable Output<List<String>> ipGroupIds;
 
+    /**
+     * @return The identifiers of the IP access control groups associated with the directory.
+     * 
+     */
     public Optional<Output<List<String>>> ipGroupIds() {
         return Optional.ofNullable(this.ipGroupIds);
     }
@@ -115,6 +147,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationCode")
     private @Nullable Output<String> registrationCode;
 
+    /**
+     * @return The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
+     * 
+     */
     public Optional<Output<String>> registrationCode() {
         return Optional.ofNullable(this.registrationCode);
     }
@@ -126,6 +162,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfServicePermissions")
     private @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
 
+    /**
+     * @return Permissions to enable or disable self-service capabilities. Defined below.
+     * 
+     */
     public Optional<Output<DirectorySelfServicePermissionsGetArgs>> selfServicePermissions() {
         return Optional.ofNullable(this.selfServicePermissions);
     }
@@ -137,6 +177,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return The identifiers of the subnets where the directory resides.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -148,6 +192,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -159,6 +207,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -170,6 +222,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceAccessProperties")
     private @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
 
+    /**
+     * @return Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
+     * 
+     */
     public Optional<Output<DirectoryWorkspaceAccessPropertiesGetArgs>> workspaceAccessProperties() {
         return Optional.ofNullable(this.workspaceAccessProperties);
     }
@@ -181,6 +237,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceCreationProperties")
     private @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
 
+    /**
+     * @return Default properties that are used for creating WorkSpaces. Defined below.
+     * 
+     */
     public Optional<Output<DirectoryWorkspaceCreationPropertiesGetArgs>> workspaceCreationProperties() {
         return Optional.ofNullable(this.workspaceCreationProperties);
     }
@@ -192,6 +252,10 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceSecurityGroupId")
     private @Nullable Output<String> workspaceSecurityGroupId;
 
+    /**
+     * @return The identifier of the security group that is assigned to new WorkSpaces.
+     * 
+     */
     public Optional<Output<String>> workspaceSecurityGroupId() {
         return Optional.ofNullable(this.workspaceSecurityGroupId);
     }
@@ -235,158 +299,368 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
             $ = new DirectoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The directory alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The directory alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param customerUserName The user name for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerUserName(@Nullable Output<String> customerUserName) {
             $.customerUserName = customerUserName;
             return this;
         }
 
+        /**
+         * @param customerUserName The user name for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerUserName(String customerUserName) {
             return customerUserName(Output.of(customerUserName));
         }
 
+        /**
+         * @param directoryId The directory identifier for registration in WorkSpaces service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param directoryId The directory identifier for registration in WorkSpaces service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
+        /**
+         * @param directoryName The name of the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryName(@Nullable Output<String> directoryName) {
             $.directoryName = directoryName;
             return this;
         }
 
+        /**
+         * @param directoryName The name of the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryName(String directoryName) {
             return directoryName(Output.of(directoryName));
         }
 
+        /**
+         * @param directoryType The directory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryType(@Nullable Output<String> directoryType) {
             $.directoryType = directoryType;
             return this;
         }
 
+        /**
+         * @param directoryType The directory type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryType(String directoryType) {
             return directoryType(Output.of(directoryType));
         }
 
+        /**
+         * @param dnsIpAddresses The IP addresses of the DNS servers for the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIpAddresses(@Nullable Output<List<String>> dnsIpAddresses) {
             $.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
 
+        /**
+         * @param dnsIpAddresses The IP addresses of the DNS servers for the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             return dnsIpAddresses(Output.of(dnsIpAddresses));
         }
 
+        /**
+         * @param dnsIpAddresses The IP addresses of the DNS servers for the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsIpAddresses(String... dnsIpAddresses) {
             return dnsIpAddresses(List.of(dnsIpAddresses));
         }
 
+        /**
+         * @param iamRoleId The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleId(@Nullable Output<String> iamRoleId) {
             $.iamRoleId = iamRoleId;
             return this;
         }
 
+        /**
+         * @param iamRoleId The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamRoleId(String iamRoleId) {
             return iamRoleId(Output.of(iamRoleId));
         }
 
+        /**
+         * @param ipGroupIds The identifiers of the IP access control groups associated with the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
             $.ipGroupIds = ipGroupIds;
             return this;
         }
 
+        /**
+         * @param ipGroupIds The identifiers of the IP access control groups associated with the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipGroupIds(List<String> ipGroupIds) {
             return ipGroupIds(Output.of(ipGroupIds));
         }
 
+        /**
+         * @param ipGroupIds The identifiers of the IP access control groups associated with the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipGroupIds(String... ipGroupIds) {
             return ipGroupIds(List.of(ipGroupIds));
         }
 
+        /**
+         * @param registrationCode The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationCode(@Nullable Output<String> registrationCode) {
             $.registrationCode = registrationCode;
             return this;
         }
 
+        /**
+         * @param registrationCode The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationCode(String registrationCode) {
             return registrationCode(Output.of(registrationCode));
         }
 
+        /**
+         * @param selfServicePermissions Permissions to enable or disable self-service capabilities. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
             $.selfServicePermissions = selfServicePermissions;
             return this;
         }
 
+        /**
+         * @param selfServicePermissions Permissions to enable or disable self-service capabilities. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfServicePermissions(DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
             return selfServicePermissions(Output.of(selfServicePermissions));
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets where the directory resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets where the directory resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The identifiers of the subnets where the directory resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param workspaceAccessProperties Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
             $.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
 
+        /**
+         * @param workspaceAccessProperties Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceAccessProperties(DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
             return workspaceAccessProperties(Output.of(workspaceAccessProperties));
         }
 
+        /**
+         * @param workspaceCreationProperties Default properties that are used for creating WorkSpaces. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
             $.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
 
+        /**
+         * @param workspaceCreationProperties Default properties that are used for creating WorkSpaces. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCreationProperties(DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
             return workspaceCreationProperties(Output.of(workspaceCreationProperties));
         }
 
+        /**
+         * @param workspaceSecurityGroupId The identifier of the security group that is assigned to new WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
             $.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param workspaceSecurityGroupId The identifier of the security group that is assigned to new WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             return workspaceSecurityGroupId(Output.of(workspaceSecurityGroupId));
         }

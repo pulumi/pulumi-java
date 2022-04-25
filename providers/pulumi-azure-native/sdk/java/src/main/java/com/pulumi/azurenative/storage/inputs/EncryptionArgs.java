@@ -33,6 +33,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionIdentity")
     private @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
 
+    /**
+     * @return The identity to be used with service-side encryption at rest.
+     * 
+     */
     public Optional<Output<EncryptionIdentityArgs>> encryptionIdentity() {
         return Optional.ofNullable(this.encryptionIdentity);
     }
@@ -44,6 +48,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySource", required=true)
     private Output<Either<String,KeySource>> keySource;
 
+    /**
+     * @return The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+     * 
+     */
     public Output<Either<String,KeySource>> keySource() {
         return this.keySource;
     }
@@ -55,6 +63,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return Properties provided by key vault.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -66,6 +78,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireInfrastructureEncryption")
     private @Nullable Output<Boolean> requireInfrastructureEncryption;
 
+    /**
+     * @return A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+     * 
+     */
     public Optional<Output<Boolean>> requireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
@@ -77,6 +93,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="services")
     private @Nullable Output<EncryptionServicesArgs> services;
 
+    /**
+     * @return List of services which support encryption.
+     * 
+     */
     public Optional<Output<EncryptionServicesArgs>> services() {
         return Optional.ofNullable(this.services);
     }
@@ -109,55 +129,127 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionIdentity The identity to be used with service-side encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionIdentity(@Nullable Output<EncryptionIdentityArgs> encryptionIdentity) {
             $.encryptionIdentity = encryptionIdentity;
             return this;
         }
 
+        /**
+         * @param encryptionIdentity The identity to be used with service-side encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionIdentity(EncryptionIdentityArgs encryptionIdentity) {
             return encryptionIdentity(Output.of(encryptionIdentity));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(Output<Either<String,KeySource>> keySource) {
             $.keySource = keySource;
             return this;
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(Either<String,KeySource> keySource) {
             return keySource(Output.of(keySource));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(String keySource) {
             return keySource(Either.ofLeft(keySource));
         }
 
+        /**
+         * @param keySource The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySource(KeySource keySource) {
             return keySource(Either.ofRight(keySource));
         }
 
+        /**
+         * @param keyVaultProperties Properties provided by key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties Properties provided by key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
             $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param requireInfrastructureEncryption A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireInfrastructureEncryption(Boolean requireInfrastructureEncryption) {
             return requireInfrastructureEncryption(Output.of(requireInfrastructureEncryption));
         }
 
+        /**
+         * @param services List of services which support encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder services(@Nullable Output<EncryptionServicesArgs> services) {
             $.services = services;
             return this;
         }
 
+        /**
+         * @param services List of services which support encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder services(EncryptionServicesArgs services) {
             return services(Output.of(services));
         }

@@ -21,6 +21,10 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     @Import(name="listenerArns", required=true)
     private Output<List<String>> listenerArns;
 
+    /**
+     * @return List of Amazon Resource Names (ARNs) of the load balancer listeners.
+     * 
+     */
     public Output<List<String>> listenerArns() {
         return this.listenerArns;
     }
@@ -49,15 +53,33 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
             $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param listenerArns List of Amazon Resource Names (ARNs) of the load balancer listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArns(Output<List<String>> listenerArns) {
             $.listenerArns = listenerArns;
             return this;
         }
 
+        /**
+         * @param listenerArns List of Amazon Resource Names (ARNs) of the load balancer listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArns(List<String> listenerArns) {
             return listenerArns(Output.of(listenerArns));
         }
 
+        /**
+         * @param listenerArns List of Amazon Resource Names (ARNs) of the load balancer listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArns(String... listenerArns) {
             return listenerArns(List.of(listenerArns));
         }

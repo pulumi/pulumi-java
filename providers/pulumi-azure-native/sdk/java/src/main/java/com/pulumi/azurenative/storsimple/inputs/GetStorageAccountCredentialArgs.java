@@ -19,6 +19,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -30,6 +34,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="storageAccountCredentialName", required=true)
     private String storageAccountCredentialName;
 
+    /**
+     * @return The name of storage account credential to be fetched.
+     * 
+     */
     public String storageAccountCredentialName() {
         return this.storageAccountCredentialName;
     }
@@ -71,16 +83,34 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
             $ = new GetStorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageAccountCredentialName The name of storage account credential to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountCredentialName(String storageAccountCredentialName) {
             $.storageAccountCredentialName = storageAccountCredentialName;
             return this;

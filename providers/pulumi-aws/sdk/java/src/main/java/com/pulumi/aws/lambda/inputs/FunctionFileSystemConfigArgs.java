@@ -20,6 +20,10 @@ public final class FunctionFileSystemConfigArgs extends com.pulumi.resources.Res
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -31,6 +35,10 @@ public final class FunctionFileSystemConfigArgs extends com.pulumi.resources.Res
     @Import(name="localMountPath", required=true)
     private Output<String> localMountPath;
 
+    /**
+     * @return Path where the function can access the file system, starting with /mnt/.
+     * 
+     */
     public Output<String> localMountPath() {
         return this.localMountPath;
     }
@@ -60,20 +68,44 @@ public final class FunctionFileSystemConfigArgs extends com.pulumi.resources.Res
             $ = new FunctionFileSystemConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param localMountPath Path where the function can access the file system, starting with /mnt/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localMountPath(Output<String> localMountPath) {
             $.localMountPath = localMountPath;
             return this;
         }
 
+        /**
+         * @param localMountPath Path where the function can access the file system, starting with /mnt/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localMountPath(String localMountPath) {
             return localMountPath(Output.of(localMountPath));
         }

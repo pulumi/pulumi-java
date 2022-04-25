@@ -27,6 +27,10 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bitrateKbps")
     private @Nullable Output<String> bitrateKbps;
 
+    /**
+     * @return Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+     * 
+     */
     public Optional<Output<String>> bitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
@@ -39,6 +43,11 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -68,20 +77,46 @@ public final class AudioEncoderAacArgs extends com.pulumi.resources.ResourceArgs
             $ = new AudioEncoderAacArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrateKbps Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
             $.bitrateKbps = bitrateKbps;
             return this;
         }
 
+        /**
+         * @param bitrateKbps Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(String bitrateKbps) {
             return bitrateKbps(Output.of(bitrateKbps));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

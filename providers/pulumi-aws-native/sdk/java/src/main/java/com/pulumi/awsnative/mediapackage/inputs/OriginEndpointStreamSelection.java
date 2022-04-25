@@ -26,6 +26,10 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
     @Import(name="maxVideoBitsPerSecond")
     private @Nullable Integer maxVideoBitsPerSecond;
 
+    /**
+     * @return The maximum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Integer> maxVideoBitsPerSecond() {
         return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
@@ -37,6 +41,10 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
     @Import(name="minVideoBitsPerSecond")
     private @Nullable Integer minVideoBitsPerSecond;
 
+    /**
+     * @return The minimum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Integer> minVideoBitsPerSecond() {
         return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
@@ -48,6 +56,10 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
     @Import(name="streamOrder")
     private @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
+    /**
+     * @return A directive that determines the order of streams in the output.
+     * 
+     */
     public Optional<OriginEndpointStreamSelectionStreamOrder> streamOrder() {
         return Optional.ofNullable(this.streamOrder);
     }
@@ -78,16 +90,34 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
             $ = new OriginEndpointStreamSelection(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxVideoBitsPerSecond The maximum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             $.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
+        /**
+         * @param minVideoBitsPerSecond The minimum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             $.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
+        /**
+         * @param streamOrder A directive that determines the order of streams in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
             $.streamOrder = streamOrder;
             return this;

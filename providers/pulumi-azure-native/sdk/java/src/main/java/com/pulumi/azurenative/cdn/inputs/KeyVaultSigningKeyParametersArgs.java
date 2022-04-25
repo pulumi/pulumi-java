@@ -31,6 +31,10 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -42,6 +46,10 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
+    /**
+     * @return The name of secret in Key Vault.
+     * 
+     */
     public Output<String> secretName() {
         return this.secretName;
     }
@@ -53,6 +61,10 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="secretVersion", required=true)
     private Output<String> secretVersion;
 
+    /**
+     * @return The version(GUID) of secret in Key Vault.
+     * 
+     */
     public Output<String> secretVersion() {
         return this.secretVersion;
     }
@@ -64,6 +76,10 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription Id of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -75,6 +91,10 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
     @Import(name="vaultName", required=true)
     private Output<String> vaultName;
 
+    /**
+     * @return The name of the user&#39;s Key Vault containing the secret
+     * 
+     */
     public Output<String> vaultName() {
         return this.vaultName;
     }
@@ -117,47 +137,107 @@ public final class KeyVaultSigningKeyParametersArgs extends com.pulumi.resources
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param resourceGroupName Resource group of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param secretName The name of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName The name of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }
 
+        /**
+         * @param secretVersion The version(GUID) of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion The version(GUID) of secret in Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }
 
+        /**
+         * @param subscriptionId Subscription Id of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param vaultName The name of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the user&#39;s Key Vault containing the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

@@ -26,6 +26,10 @@ public final class ConnectionDrainingArgs extends com.pulumi.resources.ResourceA
     @Import(name="drainingTimeoutSec")
     private @Nullable Output<Integer> drainingTimeoutSec;
 
+    /**
+     * @return Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+     * 
+     */
     public Optional<Output<Integer>> drainingTimeoutSec() {
         return Optional.ofNullable(this.drainingTimeoutSec);
     }
@@ -54,11 +58,23 @@ public final class ConnectionDrainingArgs extends com.pulumi.resources.ResourceA
             $ = new ConnectionDrainingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drainingTimeoutSec Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainingTimeoutSec(@Nullable Output<Integer> drainingTimeoutSec) {
             $.drainingTimeoutSec = drainingTimeoutSec;
             return this;
         }
 
+        /**
+         * @param drainingTimeoutSec Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
             return drainingTimeoutSec(Output.of(drainingTimeoutSec));
         }

@@ -29,6 +29,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The metadata.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -51,6 +59,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
     private @Nullable Output<Either<String,ParameterType>> type;
 
+    /**
+     * @return The type.
+     * 
+     */
     public Optional<Output<Either<String,ParameterType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -62,6 +74,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return The value.
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -93,46 +109,106 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
             $ = new WorkflowParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ParameterType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ParameterType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value The value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

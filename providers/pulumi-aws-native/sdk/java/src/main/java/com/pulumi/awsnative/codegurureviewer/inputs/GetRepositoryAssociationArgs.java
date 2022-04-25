@@ -19,6 +19,10 @@ public final class GetRepositoryAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="associationArn", required=true)
     private String associationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the repository association.
+     * 
+     */
     public String associationArn() {
         return this.associationArn;
     }
@@ -47,6 +51,12 @@ public final class GetRepositoryAssociationArgs extends com.pulumi.resources.Inv
             $ = new GetRepositoryAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationArn The Amazon Resource Name (ARN) of the repository association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationArn(String associationArn) {
             $.associationArn = associationArn;
             return this;

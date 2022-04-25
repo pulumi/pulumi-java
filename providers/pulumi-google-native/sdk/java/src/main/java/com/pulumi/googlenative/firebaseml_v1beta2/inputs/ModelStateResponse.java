@@ -24,6 +24,10 @@ public final class ModelStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="published", required=true)
     private Boolean published;
 
+    /**
+     * @return Indicates if this model has been published.
+     * 
+     */
     public Boolean published() {
         return this.published;
     }
@@ -35,6 +39,10 @@ public final class ModelStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="validationError", required=true)
     private StatusResponse validationError;
 
+    /**
+     * @return Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
+     * 
+     */
     public StatusResponse validationError() {
         return this.validationError;
     }
@@ -64,11 +72,23 @@ public final class ModelStateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ModelStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param published Indicates if this model has been published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder published(Boolean published) {
             $.published = published;
             return this;
         }
 
+        /**
+         * @param validationError Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationError(StatusResponse validationError) {
             $.validationError = validationError;
             return this;

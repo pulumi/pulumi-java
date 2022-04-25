@@ -16,53 +16,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAFDCustomDomainResult {
     /**
-     * Resource reference to the Azure DNS zone
+     * @return Resource reference to the Azure DNS zone
      * 
      */
     private final @Nullable ResourceReferenceResponse azureDnsZone;
     private final String deploymentStatus;
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
      */
     private final String domainValidationState;
     /**
-     * The host name of the domain. Must be a domain name.
+     * @return The host name of the domain. Must be a domain name.
      * 
      */
     private final String hostName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
      */
     private final String provisioningState;
     /**
-     * Read only system data
+     * @return Read only system data
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
     private final @Nullable AFDDomainHttpsParametersResponse tlsSettings;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Values the customer needs to validate domain ownership
+     * @return Values the customer needs to validate domain ownership
      * 
      */
     private final DomainValidationPropertiesResponse validationProperties;
@@ -94,9 +94,9 @@ public final class GetAFDCustomDomainResult {
     }
 
     /**
-     * Resource reference to the Azure DNS zone
+     * @return Resource reference to the Azure DNS zone
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> azureDnsZone() {
         return Optional.ofNullable(this.azureDnsZone);
     }
@@ -104,65 +104,65 @@ public final class GetAFDCustomDomainResult {
         return this.deploymentStatus;
     }
     /**
-     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
-    */
+     */
     public String domainValidationState() {
         return this.domainValidationState;
     }
     /**
-     * The host name of the domain. Must be a domain name.
+     * @return The host name of the domain. Must be a domain name.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
+     * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user&#39;s own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
-    */
+     */
     public Optional<AFDDomainHttpsParametersResponse> tlsSettings() {
         return Optional.ofNullable(this.tlsSettings);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Values the customer needs to validate domain ownership
+     * @return Values the customer needs to validate domain ownership
      * 
-    */
+     */
     public DomainValidationPropertiesResponse validationProperties() {
         return this.validationProperties;
     }

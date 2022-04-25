@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
     @Import(name="audioUri", required=true)
     private Output<String> audioUri;
 
+    /**
+     * @return URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+     * 
+     */
     public Output<String> audioUri() {
         return this.audioUri;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs ex
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(Output<String> audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param audioUri URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             return audioUri(Output.of(audioUri));
         }

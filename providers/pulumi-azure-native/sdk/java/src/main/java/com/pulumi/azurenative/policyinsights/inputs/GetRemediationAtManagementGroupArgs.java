@@ -19,6 +19,10 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="managementGroupId", required=true)
     private String managementGroupId;
 
+    /**
+     * @return Management group ID.
+     * 
+     */
     public String managementGroupId() {
         return this.managementGroupId;
     }
@@ -30,6 +34,10 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="managementGroupsNamespace", required=true)
     private String managementGroupsNamespace;
 
+    /**
+     * @return The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+     * 
+     */
     public String managementGroupsNamespace() {
         return this.managementGroupsNamespace;
     }
@@ -41,6 +49,10 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -71,16 +83,34 @@ public final class GetRemediationAtManagementGroupArgs extends com.pulumi.resour
             $ = new GetRemediationAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroupId Management group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param managementGroupsNamespace The namespace for Microsoft Management RP; only &#34;Microsoft.Management&#34; is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;

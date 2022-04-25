@@ -23,6 +23,10 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The path of the file, with the repo root as the root of the path.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -34,6 +38,10 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="repoType", required=true)
     private String repoType;
 
+    /**
+     * @return See RepoType above.
+     * 
+     */
     public String repoType() {
         return this.repoType;
     }
@@ -45,6 +53,10 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="revision", required=true)
     private String revision;
 
+    /**
+     * @return The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+     * 
+     */
     public String revision() {
         return this.revision;
     }
@@ -56,6 +68,10 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -87,21 +103,45 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
             $ = new GitFileSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The path of the file, with the repo root as the root of the path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param repoType See RepoType above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoType(String repoType) {
             $.repoType = repoType;
             return this;
         }
 
+        /**
+         * @param revision The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(String revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param uri The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

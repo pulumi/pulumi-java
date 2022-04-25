@@ -26,6 +26,10 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="brightness")
     private @Nullable Output<Double> brightness;
 
+    /**
+     * @return Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> brightness() {
         return Optional.ofNullable(this.brightness);
     }
@@ -37,6 +41,10 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contrast")
     private @Nullable Output<Double> contrast;
 
+    /**
+     * @return Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> contrast() {
         return Optional.ofNullable(this.contrast);
     }
@@ -48,6 +56,10 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="saturation")
     private @Nullable Output<Double> saturation;
 
+    /**
+     * @return Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
+     * 
+     */
     public Optional<Output<Double>> saturation() {
         return Optional.ofNullable(this.saturation);
     }
@@ -78,29 +90,65 @@ public final class ColorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ColorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param brightness Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brightness(@Nullable Output<Double> brightness) {
             $.brightness = brightness;
             return this;
         }
 
+        /**
+         * @param brightness Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder brightness(Double brightness) {
             return brightness(Output.of(brightness));
         }
 
+        /**
+         * @param contrast Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contrast(@Nullable Output<Double> contrast) {
             $.contrast = contrast;
             return this;
         }
 
+        /**
+         * @param contrast Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contrast(Double contrast) {
             return contrast(Output.of(contrast));
         }
 
+        /**
+         * @param saturation Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saturation(@Nullable Output<Double> saturation) {
             $.saturation = saturation;
             return this;
         }
 
+        /**
+         * @param saturation Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saturation(Double saturation) {
             return saturation(Output.of(saturation));
         }

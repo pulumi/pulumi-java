@@ -20,6 +20,10 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     @Import(name="cloudWatchLogGroupArn", required=true)
     private Output<String> cloudWatchLogGroupArn;
 
+    /**
+     * @return A string used to identify this tag
+     * 
+     */
     public Output<String> cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
@@ -31,6 +35,10 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
     @Import(name="logPrefix", required=true)
     private Output<String> logPrefix;
 
+    /**
+     * @return A string containing the value for the tag
+     * 
+     */
     public Output<String> logPrefix() {
         return this.logPrefix;
     }
@@ -60,20 +68,44 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends com.pulu
             $ = new BotAliasCloudWatchLogGroupLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchLogGroupArn A string used to identify this tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogGroupArn(Output<String> cloudWatchLogGroupArn) {
             $.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudWatchLogGroupArn A string used to identify this tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
             return cloudWatchLogGroupArn(Output.of(cloudWatchLogGroupArn));
         }
 
+        /**
+         * @param logPrefix A string containing the value for the tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPrefix(Output<String> logPrefix) {
             $.logPrefix = logPrefix;
             return this;
         }
 
+        /**
+         * @param logPrefix A string containing the value for the tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPrefix(String logPrefix) {
             return logPrefix(Output.of(logPrefix));
         }

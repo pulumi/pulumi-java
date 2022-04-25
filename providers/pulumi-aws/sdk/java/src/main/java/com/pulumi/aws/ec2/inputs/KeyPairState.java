@@ -23,6 +23,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The key pair ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -45,6 +53,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name for the key pair.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -56,6 +68,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyNamePrefix")
     private @Nullable Output<String> keyNamePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+     * 
+     */
     public Optional<Output<String>> keyNamePrefix() {
         return Optional.ofNullable(this.keyNamePrefix);
     }
@@ -67,6 +83,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPairId")
     private @Nullable Output<String> keyPairId;
 
+    /**
+     * @return The key pair ID.
+     * 
+     */
     public Optional<Output<String>> keyPairId() {
         return Optional.ofNullable(this.keyPairId);
     }
@@ -78,6 +98,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return The public key material.
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -89,6 +113,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,6 +128,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -135,74 +167,170 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
             $ = new KeyPairState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The key pair ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The key pair ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param fingerprint The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param keyName The name for the key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name for the key pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             $.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
+        /**
+         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyNamePrefix(String keyNamePrefix) {
             return keyNamePrefix(Output.of(keyNamePrefix));
         }
 
+        /**
+         * @param keyPairId The key pair ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPairId(@Nullable Output<String> keyPairId) {
             $.keyPairId = keyPairId;
             return this;
         }
 
+        /**
+         * @param keyPairId The key pair ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPairId(String keyPairId) {
             return keyPairId(Output.of(keyPairId));
         }
 
+        /**
+         * @param publicKey The public key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey The public key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

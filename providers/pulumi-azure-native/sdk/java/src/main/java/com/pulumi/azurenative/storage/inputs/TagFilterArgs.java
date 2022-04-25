@@ -24,6 +24,10 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return This is the filter tag name, it can have 1 - 128 characters
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="op", required=true)
     private Output<String> op;
 
+    /**
+     * @return This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
+     * 
+     */
     public Output<String> op() {
         return this.op;
     }
@@ -46,6 +54,10 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -76,29 +88,65 @@ public final class TagFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name This is the filter tag name, it can have 1 - 128 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name This is the filter tag name, it can have 1 - 128 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param op This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder op(Output<String> op) {
             $.op = op;
             return this;
         }
 
+        /**
+         * @param op This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder op(String op) {
             return op(Output.of(op));
         }
 
+        /**
+         * @param value This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

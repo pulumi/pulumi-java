@@ -26,6 +26,10 @@ public final class AzureStaticWebAppsRegistrationArgs extends com.pulumi.resourc
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The Client ID of the app used for login.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -54,11 +58,23 @@ public final class AzureStaticWebAppsRegistrationArgs extends com.pulumi.resourc
             $ = new AzureStaticWebAppsRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The Client ID of the app used for login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The Client ID of the app used for login.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }

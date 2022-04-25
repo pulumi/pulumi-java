@@ -19,27 +19,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FirewallPolicyFilterRuleResponse {
     /**
-     * The action type of a Filter rule.
+     * @return The action type of a Filter rule.
      * 
      */
     private final @Nullable FirewallPolicyFilterRuleActionResponse action;
     /**
-     * The name of the rule.
+     * @return The name of the rule.
      * 
      */
     private final @Nullable String name;
     /**
-     * Priority of the Firewall Policy Rule resource.
+     * @return Priority of the Firewall Policy Rule resource.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * Collection of rule conditions used by a rule.
+     * @return Collection of rule conditions used by a rule.
      * 
      */
     private final @Nullable List<Object> ruleConditions;
     /**
-     * The type of the rule.
+     * @return The type of the rule.
      * Expected value is &#39;FirewallPolicyFilterRule&#39;.
      * 
      */
@@ -60,38 +60,38 @@ public final class FirewallPolicyFilterRuleResponse {
     }
 
     /**
-     * The action type of a Filter rule.
+     * @return The action type of a Filter rule.
      * 
-    */
+     */
     public Optional<FirewallPolicyFilterRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * The name of the rule.
+     * @return The name of the rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Priority of the Firewall Policy Rule resource.
+     * @return Priority of the Firewall Policy Rule resource.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Collection of rule conditions used by a rule.
+     * @return Collection of rule conditions used by a rule.
      * 
-    */
+     */
     public List<Object> ruleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
     }
     /**
-     * The type of the rule.
+     * @return The type of the rule.
      * Expected value is &#39;FirewallPolicyFilterRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }

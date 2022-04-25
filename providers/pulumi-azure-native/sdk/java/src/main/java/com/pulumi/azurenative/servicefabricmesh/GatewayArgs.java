@@ -27,6 +27,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the gateway.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationNetwork", required=true)
     private Output<NetworkRefArgs> destinationNetwork;
 
+    /**
+     * @return Network that the Application is using.
+     * 
+     */
     public Output<NetworkRefArgs> destinationNetwork() {
         return this.destinationNetwork;
     }
@@ -49,6 +57,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayResourceName")
     private @Nullable Output<String> gatewayResourceName;
 
+    /**
+     * @return The identity of the gateway.
+     * 
+     */
     public Optional<Output<String>> gatewayResourceName() {
         return Optional.ofNullable(this.gatewayResourceName);
     }
@@ -60,6 +72,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="http")
     private @Nullable Output<List<HttpConfigArgs>> http;
 
+    /**
+     * @return Configuration for http connectivity for this gateway.
+     * 
+     */
     public Optional<Output<List<HttpConfigArgs>>> http() {
         return Optional.ofNullable(this.http);
     }
@@ -71,6 +87,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -82,6 +102,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceNetwork", required=true)
     private Output<NetworkRefArgs> sourceNetwork;
 
+    /**
+     * @return Network the gateway should listen on for requests.
+     * 
+     */
     public Output<NetworkRefArgs> sourceNetwork() {
         return this.sourceNetwork;
     }
@@ -104,6 +132,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,6 +147,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tcp")
     private @Nullable Output<List<TcpConfigArgs>> tcp;
 
+    /**
+     * @return Configuration for tcp connectivity for this gateway.
+     * 
+     */
     public Optional<Output<List<TcpConfigArgs>>> tcp() {
         return Optional.ofNullable(this.tcp);
     }
@@ -151,91 +187,211 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User readable description of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationNetwork Network that the Application is using.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetwork(Output<NetworkRefArgs> destinationNetwork) {
             $.destinationNetwork = destinationNetwork;
             return this;
         }
 
+        /**
+         * @param destinationNetwork Network that the Application is using.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetwork(NetworkRefArgs destinationNetwork) {
             return destinationNetwork(Output.of(destinationNetwork));
         }
 
+        /**
+         * @param gatewayResourceName The identity of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceName(@Nullable Output<String> gatewayResourceName) {
             $.gatewayResourceName = gatewayResourceName;
             return this;
         }
 
+        /**
+         * @param gatewayResourceName The identity of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayResourceName(String gatewayResourceName) {
             return gatewayResourceName(Output.of(gatewayResourceName));
         }
 
+        /**
+         * @param http Configuration for http connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(@Nullable Output<List<HttpConfigArgs>> http) {
             $.http = http;
             return this;
         }
 
+        /**
+         * @param http Configuration for http connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(List<HttpConfigArgs> http) {
             return http(Output.of(http));
         }
 
+        /**
+         * @param http Configuration for http connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(HttpConfigArgs... http) {
             return http(List.of(http));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceNetwork Network the gateway should listen on for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNetwork(Output<NetworkRefArgs> sourceNetwork) {
             $.sourceNetwork = sourceNetwork;
             return this;
         }
 
+        /**
+         * @param sourceNetwork Network the gateway should listen on for requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNetwork(NetworkRefArgs sourceNetwork) {
             return sourceNetwork(Output.of(sourceNetwork));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tcp Configuration for tcp connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcp(@Nullable Output<List<TcpConfigArgs>> tcp) {
             $.tcp = tcp;
             return this;
         }
 
+        /**
+         * @param tcp Configuration for tcp connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcp(List<TcpConfigArgs> tcp) {
             return tcp(Output.of(tcp));
         }
 
+        /**
+         * @param tcp Configuration for tcp connectivity for this gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcp(TcpConfigArgs... tcp) {
             return tcp(List.of(tcp));
         }

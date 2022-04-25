@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScriptStringExecutionParameterResponse {
     /**
-     * The parameter name
+     * @return The parameter name
      * 
      */
     private final String name;
     /**
-     * The type of execution parameter
+     * @return The type of execution parameter
      * Expected value is &#39;Value&#39;.
      * 
      */
     private final String type;
     /**
-     * The value for the passed parameter
+     * @return The value for the passed parameter
      * 
      */
     private final @Nullable String value;
@@ -39,24 +39,24 @@ public final class ScriptStringExecutionParameterResponse {
     }
 
     /**
-     * The parameter name
+     * @return The parameter name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of execution parameter
+     * @return The type of execution parameter
      * Expected value is &#39;Value&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The value for the passed parameter
+     * @return The value for the passed parameter
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

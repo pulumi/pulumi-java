@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class AccountPropertiesResponseEndpoints {
     /**
-     * Gets the catalog endpoint.
+     * @return Gets the catalog endpoint.
      * 
      */
     private final String catalog;
     /**
-     * Gets the guardian endpoint.
+     * @return Gets the guardian endpoint.
      * 
      */
     private final String guardian;
     /**
-     * Gets the scan endpoint.
+     * @return Gets the scan endpoint.
      * 
      */
     private final String scan;
@@ -36,23 +36,23 @@ public final class AccountPropertiesResponseEndpoints {
     }
 
     /**
-     * Gets the catalog endpoint.
+     * @return Gets the catalog endpoint.
      * 
-    */
+     */
     public String catalog() {
         return this.catalog;
     }
     /**
-     * Gets the guardian endpoint.
+     * @return Gets the guardian endpoint.
      * 
-    */
+     */
     public String guardian() {
         return this.guardian;
     }
     /**
-     * Gets the scan endpoint.
+     * @return Gets the scan endpoint.
      * 
-    */
+     */
     public String scan() {
         return this.scan;
     }

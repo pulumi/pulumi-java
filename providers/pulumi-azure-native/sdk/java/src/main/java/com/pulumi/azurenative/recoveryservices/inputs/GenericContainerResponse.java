@@ -27,6 +27,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -42,6 +46,14 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;GenericContainer&#39;.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -53,6 +65,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="extendedInformation")
     private @Nullable GenericContainerExtendedInfoResponse extendedInformation;
 
+    /**
+     * @return Extended information (not returned in List container API calls)
+     * 
+     */
     public Optional<GenericContainerExtendedInfoResponse> extendedInformation() {
         return Optional.ofNullable(this.extendedInformation);
     }
@@ -64,6 +80,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="fabricName")
     private @Nullable String fabricName;
 
+    /**
+     * @return Name of the container&#39;s fabric
+     * 
+     */
     public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
@@ -75,6 +95,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -86,6 +110,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="healthStatus")
     private @Nullable String healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -97,6 +125,10 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
     @Import(name="registrationStatus")
     private @Nullable String registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -131,36 +163,82 @@ public final class GenericContainerResponse extends com.pulumi.resources.InvokeA
             $ = new GenericContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;GenericContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param extendedInformation Extended information (not returned in List container API calls)
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInformation(@Nullable GenericContainerExtendedInfoResponse extendedInformation) {
             $.extendedInformation = extendedInformation;
             return this;
         }
 
+        /**
+         * @param fabricName Name of the container&#39;s fabric
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(@Nullable String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable String healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable String registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;

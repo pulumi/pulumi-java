@@ -27,6 +27,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of step in the Cloud Dataflow job.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -38,6 +42,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -79,29 +91,65 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The kind of step in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of step in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }

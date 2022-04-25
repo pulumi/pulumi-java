@@ -27,6 +27,10 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
     @Import(name="backup")
     private @Nullable VolumeBackupPropertiesResponse backup;
 
+    /**
+     * @return Backup Properties
+     * 
+     */
     public Optional<VolumeBackupPropertiesResponse> backup() {
         return Optional.ofNullable(this.backup);
     }
@@ -38,6 +42,10 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
     @Import(name="replication")
     private @Nullable ReplicationObjectResponse replication;
 
+    /**
+     * @return Replication properties
+     * 
+     */
     public Optional<ReplicationObjectResponse> replication() {
         return Optional.ofNullable(this.replication);
     }
@@ -49,6 +57,10 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
     @Import(name="snapshot")
     private @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
+    /**
+     * @return Snapshot properties.
+     * 
+     */
     public Optional<VolumeSnapshotPropertiesResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -79,16 +91,34 @@ public final class VolumePropertiesResponseDataProtection extends com.pulumi.res
             $ = new VolumePropertiesResponseDataProtection(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backup Backup Properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder backup(@Nullable VolumeBackupPropertiesResponse backup) {
             $.backup = backup;
             return this;
         }
 
+        /**
+         * @param replication Replication properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder replication(@Nullable ReplicationObjectResponse replication) {
             $.replication = replication;
             return this;
         }
 
+        /**
+         * @param snapshot Snapshot properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesResponse snapshot) {
             $.snapshot = snapshot;
             return this;

@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="ssml")
     private @Nullable Output<String> ssml;
 
+    /**
+     * @return The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+     * 
+     */
     public Optional<Output<String>> ssml() {
         return Optional.ofNullable(this.ssml);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return The raw text to be synthesized.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
             $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ssml The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(@Nullable Output<String> ssml) {
             $.ssml = ssml;
             return this;
         }
 
+        /**
+         * @param ssml The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssml(String ssml) {
             return ssml(Output.of(ssml));
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The raw text to be synthesized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

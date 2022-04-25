@@ -30,6 +30,13 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allUpdatesRule")
     private @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
+    /**
+     * @return Defines notifications that are sent on every update to the
+     * billing account&#39;s spend, regardless of the thresholds defined
+     * using threshold rules.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BudgetAllUpdatesRuleArgs>> allUpdatesRule() {
         return Optional.ofNullable(this.allUpdatesRule);
     }
@@ -42,6 +49,11 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
     private Output<BudgetAmountArgs> amount;
 
+    /**
+     * @return The budgeted amount for each usage period.
+     * Structure is documented below.
+     * 
+     */
     public Output<BudgetAmountArgs> amount() {
         return this.amount;
     }
@@ -53,6 +65,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount", required=true)
     private Output<String> billingAccount;
 
+    /**
+     * @return ID of the billing account to set a budget on.
+     * 
+     */
     public Output<String> billingAccount() {
         return this.billingAccount;
     }
@@ -66,6 +82,12 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetFilter")
     private @Nullable Output<BudgetBudgetFilterArgs> budgetFilter;
 
+    /**
+     * @return Filters that define which resources are used to compute the actual
+     * spend against the budget.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BudgetBudgetFilterArgs>> budgetFilter() {
         return Optional.ofNullable(this.budgetFilter);
     }
@@ -77,6 +99,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User data for display name in UI. Must be &lt;= 60 chars.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -91,6 +117,13 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholdRules", required=true)
     private Output<List<BudgetThresholdRuleArgs>> thresholdRules;
 
+    /**
+     * @return Rules that trigger alerts (notifications of thresholds being
+     * crossed) when spend exceeds the specified percentages of the
+     * budget.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<BudgetThresholdRuleArgs>> thresholdRules() {
         return this.thresholdRules;
     }
@@ -124,60 +157,159 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allUpdatesRule Defines notifications that are sent on every update to the
+         * billing account&#39;s spend, regardless of the thresholds defined
+         * using threshold rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allUpdatesRule(@Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule) {
             $.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
+        /**
+         * @param allUpdatesRule Defines notifications that are sent on every update to the
+         * billing account&#39;s spend, regardless of the thresholds defined
+         * using threshold rules.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allUpdatesRule(BudgetAllUpdatesRuleArgs allUpdatesRule) {
             return allUpdatesRule(Output.of(allUpdatesRule));
         }
 
+        /**
+         * @param amount The budgeted amount for each usage period.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(Output<BudgetAmountArgs> amount) {
             $.amount = amount;
             return this;
         }
 
+        /**
+         * @param amount The budgeted amount for each usage period.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amount(BudgetAmountArgs amount) {
             return amount(Output.of(amount));
         }
 
+        /**
+         * @param billingAccount ID of the billing account to set a budget on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
 
+        /**
+         * @param billingAccount ID of the billing account to set a budget on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
+        /**
+         * @param budgetFilter Filters that define which resources are used to compute the actual
+         * spend against the budget.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterArgs> budgetFilter) {
             $.budgetFilter = budgetFilter;
             return this;
         }
 
+        /**
+         * @param budgetFilter Filters that define which resources are used to compute the actual
+         * spend against the budget.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetFilter(BudgetBudgetFilterArgs budgetFilter) {
             return budgetFilter(Output.of(budgetFilter));
         }
 
+        /**
+         * @param displayName User data for display name in UI. Must be &lt;= 60 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User data for display name in UI. Must be &lt;= 60 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param thresholdRules Rules that trigger alerts (notifications of thresholds being
+         * crossed) when spend exceeds the specified percentages of the
+         * budget.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(Output<List<BudgetThresholdRuleArgs>> thresholdRules) {
             $.thresholdRules = thresholdRules;
             return this;
         }
 
+        /**
+         * @param thresholdRules Rules that trigger alerts (notifications of thresholds being
+         * crossed) when spend exceeds the specified percentages of the
+         * budget.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(List<BudgetThresholdRuleArgs> thresholdRules) {
             return thresholdRules(Output.of(thresholdRules));
         }
 
+        /**
+         * @param thresholdRules Rules that trigger alerts (notifications of thresholds being
+         * crossed) when spend exceeds the specified percentages of the
+         * budget.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdRules(BudgetThresholdRuleArgs... thresholdRules) {
             return thresholdRules(List.of(thresholdRules));
         }

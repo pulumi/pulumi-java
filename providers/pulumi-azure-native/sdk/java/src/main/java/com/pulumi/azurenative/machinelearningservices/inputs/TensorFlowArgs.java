@@ -29,6 +29,11 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
     private Output<String> distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;TensorFlow&#39;.
+     * 
+     */
     public Output<String> distributionType() {
         return this.distributionType;
     }
@@ -40,6 +45,10 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameterServerCount")
     private @Nullable Output<Integer> parameterServerCount;
 
+    /**
+     * @return Number of parameter server tasks.
+     * 
+     */
     public Optional<Output<Integer>> parameterServerCount() {
         return Optional.ofNullable(this.parameterServerCount);
     }
@@ -51,6 +60,10 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
     private @Nullable Output<Integer> workerCount;
 
+    /**
+     * @return Number of workers. Overwrites the node count in compute binding.
+     * 
+     */
     public Optional<Output<Integer>> workerCount() {
         return Optional.ofNullable(this.workerCount);
     }
@@ -81,29 +94,67 @@ public final class TensorFlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TensorFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;TensorFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(Output<String> distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;TensorFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             return distributionType(Output.of(distributionType));
         }
 
+        /**
+         * @param parameterServerCount Number of parameter server tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerCount(@Nullable Output<Integer> parameterServerCount) {
             $.parameterServerCount = parameterServerCount;
             return this;
         }
 
+        /**
+         * @param parameterServerCount Number of parameter server tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterServerCount(Integer parameterServerCount) {
             return parameterServerCount(Output.of(parameterServerCount));
         }
 
+        /**
+         * @param workerCount Number of workers. Overwrites the node count in compute binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(@Nullable Output<Integer> workerCount) {
             $.workerCount = workerCount;
             return this;
         }
 
+        /**
+         * @param workerCount Number of workers. Overwrites the node count in compute binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(Integer workerCount) {
             return workerCount(Output.of(workerCount));
         }

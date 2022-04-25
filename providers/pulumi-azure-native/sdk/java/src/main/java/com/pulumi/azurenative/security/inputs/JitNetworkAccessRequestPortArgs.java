@@ -27,6 +27,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="allowedSourceAddressPrefix")
     private @Nullable Output<String> allowedSourceAddressPrefix;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * 
+     */
     public Optional<Output<String>> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
@@ -38,6 +42,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="allowedSourceAddressPrefixes")
     private @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * 
+     */
     public Optional<Output<List<String>>> allowedSourceAddressPrefixes() {
         return Optional.ofNullable(this.allowedSourceAddressPrefixes);
     }
@@ -49,6 +57,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="endTimeUtc", required=true)
     private Output<String> endTimeUtc;
 
+    /**
+     * @return The date &amp; time at which the request ends in UTC
+     * 
+     */
     public Output<String> endTimeUtc() {
         return this.endTimeUtc;
     }
@@ -60,6 +72,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="mappedPort")
     private @Nullable Output<Integer> mappedPort;
 
+    /**
+     * @return The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+     * 
+     */
     public Optional<Output<Integer>> mappedPort() {
         return Optional.ofNullable(this.mappedPort);
     }
@@ -78,6 +94,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="status", required=true)
     private Output<Either<String,Status>> status;
 
+    /**
+     * @return The status of the port
+     * 
+     */
     public Output<Either<String,Status>> status() {
         return this.status;
     }
@@ -89,6 +109,10 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
     @Import(name="statusReason", required=true)
     private Output<Either<String,StatusReason>> statusReason;
 
+    /**
+     * @return A description of why the `status` has its value
+     * 
+     */
     public Output<Either<String,StatusReason>> statusReason() {
         return this.statusReason;
     }
@@ -123,42 +147,96 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
             $ = new JitNetworkAccessRequestPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedSourceAddressPrefix Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefix(@Nullable Output<String> allowedSourceAddressPrefix) {
             $.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefix Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefix(String allowedSourceAddressPrefix) {
             return allowedSourceAddressPrefix(Output.of(allowedSourceAddressPrefix));
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
             $.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(List<String> allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(Output.of(allowedSourceAddressPrefixes));
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
         }
 
+        /**
+         * @param endTimeUtc The date &amp; time at which the request ends in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(Output<String> endTimeUtc) {
             $.endTimeUtc = endTimeUtc;
             return this;
         }
 
+        /**
+         * @param endTimeUtc The date &amp; time at which the request ends in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(String endTimeUtc) {
             return endTimeUtc(Output.of(endTimeUtc));
         }
 
+        /**
+         * @param mappedPort The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedPort(@Nullable Output<Integer> mappedPort) {
             $.mappedPort = mappedPort;
             return this;
         }
 
+        /**
+         * @param mappedPort The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedPort(Integer mappedPort) {
             return mappedPort(Output.of(mappedPort));
         }
@@ -172,36 +250,84 @@ public final class JitNetworkAccessRequestPortArgs extends com.pulumi.resources.
             return number(Output.of(number));
         }
 
+        /**
+         * @param status The status of the port
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,Status>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the port
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,Status> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the port
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the port
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Status status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param statusReason A description of why the `status` has its value
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(Output<Either<String,StatusReason>> statusReason) {
             $.statusReason = statusReason;
             return this;
         }
 
+        /**
+         * @param statusReason A description of why the `status` has its value
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(Either<String,StatusReason> statusReason) {
             return statusReason(Output.of(statusReason));
         }
 
+        /**
+         * @param statusReason A description of why the `status` has its value
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(String statusReason) {
             return statusReason(Either.ofLeft(statusReason));
         }
 
+        /**
+         * @param statusReason A description of why the `status` has its value
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(StatusReason statusReason) {
             return statusReason(Either.ofRight(statusReason));
         }

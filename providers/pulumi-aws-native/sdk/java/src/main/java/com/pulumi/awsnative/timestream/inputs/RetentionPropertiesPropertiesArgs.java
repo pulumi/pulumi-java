@@ -26,6 +26,10 @@ public final class RetentionPropertiesPropertiesArgs extends com.pulumi.resource
     @Import(name="magneticStoreRetentionPeriodInDays")
     private @Nullable Output<String> magneticStoreRetentionPeriodInDays;
 
+    /**
+     * @return The duration for which data must be stored in the magnetic store.
+     * 
+     */
     public Optional<Output<String>> magneticStoreRetentionPeriodInDays() {
         return Optional.ofNullable(this.magneticStoreRetentionPeriodInDays);
     }
@@ -37,6 +41,10 @@ public final class RetentionPropertiesPropertiesArgs extends com.pulumi.resource
     @Import(name="memoryStoreRetentionPeriodInHours")
     private @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
+    /**
+     * @return The duration for which data must be stored in the memory store.
+     * 
+     */
     public Optional<Output<String>> memoryStoreRetentionPeriodInHours() {
         return Optional.ofNullable(this.memoryStoreRetentionPeriodInHours);
     }
@@ -66,20 +74,44 @@ public final class RetentionPropertiesPropertiesArgs extends com.pulumi.resource
             $ = new RetentionPropertiesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the magnetic store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreRetentionPeriodInDays(@Nullable Output<String> magneticStoreRetentionPeriodInDays) {
             $.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
 
+        /**
+         * @param magneticStoreRetentionPeriodInDays The duration for which data must be stored in the magnetic store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreRetentionPeriodInDays(String magneticStoreRetentionPeriodInDays) {
             return magneticStoreRetentionPeriodInDays(Output.of(magneticStoreRetentionPeriodInDays));
         }
 
+        /**
+         * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the memory store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryStoreRetentionPeriodInHours(@Nullable Output<String> memoryStoreRetentionPeriodInHours) {
             $.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
 
+        /**
+         * @param memoryStoreRetentionPeriodInHours The duration for which data must be stored in the memory store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryStoreRetentionPeriodInHours(String memoryStoreRetentionPeriodInHours) {
             return memoryStoreRetentionPeriodInHours(Output.of(memoryStoreRetentionPeriodInHours));
         }

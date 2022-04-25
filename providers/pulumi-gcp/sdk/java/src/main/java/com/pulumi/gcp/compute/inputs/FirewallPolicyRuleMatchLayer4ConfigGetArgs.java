@@ -23,6 +23,10 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends com.pulumi
     @Import(name="ipProtocol", required=true)
     private Output<String> ipProtocol;
 
+    /**
+     * @return The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
+     * 
+     */
     public Output<String> ipProtocol() {
         return this.ipProtocol;
     }
@@ -34,6 +38,10 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends com.pulumi
     @Import(name="ports")
     private @Nullable Output<List<String>> ports;
 
+    /**
+     * @return An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
+     * 
+     */
     public Optional<Output<List<String>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -63,24 +71,54 @@ public final class FirewallPolicyRuleMatchLayer4ConfigGetArgs extends com.pulumi
             $ = new FirewallPolicyRuleMatchLayer4ConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipProtocol The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocol(Output<String> ipProtocol) {
             $.ipProtocol = ipProtocol;
             return this;
         }
 
+        /**
+         * @param ipProtocol The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocol(String ipProtocol) {
             return ipProtocol(Output.of(ipProtocol));
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<String>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<String> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }

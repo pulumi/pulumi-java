@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportRecurrencePeriodResponse {
     /**
-     * The start date of recurrence.
+     * @return The start date of recurrence.
      * 
      */
     private final String from;
     /**
-     * The end date of recurrence.
+     * @return The end date of recurrence.
      * 
      */
     private final @Nullable String to;
@@ -31,16 +31,16 @@ public final class ReportRecurrencePeriodResponse {
     }
 
     /**
-     * The start date of recurrence.
+     * @return The start date of recurrence.
      * 
-    */
+     */
     public String from() {
         return this.from;
     }
     /**
-     * The end date of recurrence.
+     * @return The end date of recurrence.
      * 
-    */
+     */
     public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }

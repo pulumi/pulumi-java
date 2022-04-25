@@ -23,6 +23,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endTimeUtc", required=true)
     private String endTimeUtc;
 
+    /**
+     * @return UTC time at which the upgrade operation has ended.
+     * 
+     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
@@ -34,6 +38,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastUpdatedTimeUtc", required=true)
     private String lastUpdatedTimeUtc;
 
+    /**
+     * @return UTC time at which the upgrade operation status was last updated.
+     * 
+     */
     public String lastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
     }
@@ -45,6 +53,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Message to the user containing information about the upgrade operation.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -56,6 +68,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operationId", required=true)
     private String operationId;
 
+    /**
+     * @return ID of the vault upgrade operation.
+     * 
+     */
     public String operationId() {
         return this.operationId;
     }
@@ -67,6 +83,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="previousResourceId", required=true)
     private String previousResourceId;
 
+    /**
+     * @return Resource ID of the vault before the upgrade.
+     * 
+     */
     public String previousResourceId() {
         return this.previousResourceId;
     }
@@ -78,6 +98,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTimeUtc", required=true)
     private String startTimeUtc;
 
+    /**
+     * @return UTC time at which the upgrade operation has started.
+     * 
+     */
     public String startTimeUtc() {
         return this.startTimeUtc;
     }
@@ -89,6 +113,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the vault upgrade operation.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -100,6 +128,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="triggerType", required=true)
     private String triggerType;
 
+    /**
+     * @return The way the vault upgrade was triggered.
+     * 
+     */
     public String triggerType() {
         return this.triggerType;
     }
@@ -111,6 +143,10 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="upgradedResourceId", required=true)
     private String upgradedResourceId;
 
+    /**
+     * @return Resource ID of the upgraded vault.
+     * 
+     */
     public String upgradedResourceId() {
         return this.upgradedResourceId;
     }
@@ -147,46 +183,100 @@ public final class UpgradeDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new UpgradeDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTimeUtc UTC time at which the upgrade operation has ended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(String endTimeUtc) {
             $.endTimeUtc = endTimeUtc;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTimeUtc UTC time at which the upgrade operation status was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
             $.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
             return this;
         }
 
+        /**
+         * @param message Message to the user containing information about the upgrade operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param operationId ID of the vault upgrade operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationId(String operationId) {
             $.operationId = operationId;
             return this;
         }
 
+        /**
+         * @param previousResourceId Resource ID of the vault before the upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder previousResourceId(String previousResourceId) {
             $.previousResourceId = previousResourceId;
             return this;
         }
 
+        /**
+         * @param startTimeUtc UTC time at which the upgrade operation has started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(String startTimeUtc) {
             $.startTimeUtc = startTimeUtc;
             return this;
         }
 
+        /**
+         * @param status Status of the vault upgrade operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param triggerType The way the vault upgrade was triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerType(String triggerType) {
             $.triggerType = triggerType;
             return this;
         }
 
+        /**
+         * @param upgradedResourceId Resource ID of the upgraded vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradedResourceId(String upgradedResourceId) {
             $.upgradedResourceId = upgradedResourceId;
             return this;

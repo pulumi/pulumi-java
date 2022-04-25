@@ -23,6 +23,10 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Unique Azure Resource ID of the Managed Disk.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Unique Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

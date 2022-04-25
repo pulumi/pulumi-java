@@ -19,6 +19,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Fabric name.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -30,6 +34,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -52,6 +64,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
     @Import(name="storageClassificationMappingName", required=true)
     private String storageClassificationMappingName;
 
+    /**
+     * @return Storage classification mapping name.
+     * 
+     */
     public String storageClassificationMappingName() {
         return this.storageClassificationMappingName;
     }
@@ -63,6 +79,10 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
     @Import(name="storageClassificationName", required=true)
     private String storageClassificationName;
 
+    /**
+     * @return Storage classification name.
+     * 
+     */
     public String storageClassificationName() {
         return this.storageClassificationName;
     }
@@ -95,26 +115,56 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
             $ = new GetReplicationStorageClassificationMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param storageClassificationMappingName Storage classification mapping name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationMappingName(String storageClassificationMappingName) {
             $.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
 
+        /**
+         * @param storageClassificationName Storage classification name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClassificationName(String storageClassificationName) {
             $.storageClassificationName = storageClassificationName;
             return this;

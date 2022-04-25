@@ -23,6 +23,10 @@ public final class NetworkPolicyConfigResponse extends com.pulumi.resources.Invo
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether NetworkPolicy is enabled for this cluster.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -51,6 +55,12 @@ public final class NetworkPolicyConfigResponse extends com.pulumi.resources.Invo
             $ = new NetworkPolicyConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether NetworkPolicy is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

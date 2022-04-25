@@ -29,6 +29,10 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
 
+    /**
+     * @return Specify public IP sku name
+     * 
+     */
     public Optional<Output<Either<String,PublicIPAddressSkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
     @Import(name="tier")
     private @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
 
+    /**
+     * @return Specify public IP sku tier
+     * 
+     */
     public Optional<Output<Either<String,PublicIPAddressSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -69,36 +77,84 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
             $ = new PublicIPAddressSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Specify public IP sku name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,PublicIPAddressSkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specify public IP sku name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,PublicIPAddressSkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Specify public IP sku name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Specify public IP sku name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(PublicIPAddressSkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Specify public IP sku tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Specify public IP sku tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,PublicIPAddressSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Specify public IP sku tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Specify public IP sku tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(PublicIPAddressSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

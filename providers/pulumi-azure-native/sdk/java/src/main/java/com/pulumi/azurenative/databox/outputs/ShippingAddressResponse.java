@@ -12,52 +12,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ShippingAddressResponse {
     /**
-     * Type of address.
+     * @return Type of address.
      * 
      */
     private final @Nullable String addressType;
     /**
-     * Name of the City.
+     * @return Name of the City.
      * 
      */
     private final @Nullable String city;
     /**
-     * Name of the company.
+     * @return Name of the company.
      * 
      */
     private final @Nullable String companyName;
     /**
-     * Name of the Country.
+     * @return Name of the Country.
      * 
      */
     private final String country;
     /**
-     * Postal code.
+     * @return Postal code.
      * 
      */
     private final @Nullable String postalCode;
     /**
-     * Name of the State or Province.
+     * @return Name of the State or Province.
      * 
      */
     private final @Nullable String stateOrProvince;
     /**
-     * Street Address line 1.
+     * @return Street Address line 1.
      * 
      */
     private final String streetAddress1;
     /**
-     * Street Address line 2.
+     * @return Street Address line 2.
      * 
      */
     private final @Nullable String streetAddress2;
     /**
-     * Street Address line 3.
+     * @return Street Address line 3.
      * 
      */
     private final @Nullable String streetAddress3;
     /**
-     * Extended Zip Code.
+     * @return Extended Zip Code.
      * 
      */
     private final @Nullable String zipExtendedCode;
@@ -87,72 +87,72 @@ public final class ShippingAddressResponse {
     }
 
     /**
-     * Type of address.
+     * @return Type of address.
      * 
-    */
+     */
     public Optional<String> addressType() {
         return Optional.ofNullable(this.addressType);
     }
     /**
-     * Name of the City.
+     * @return Name of the City.
      * 
-    */
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
-     * Name of the company.
+     * @return Name of the company.
      * 
-    */
+     */
     public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
     /**
-     * Name of the Country.
+     * @return Name of the Country.
      * 
-    */
+     */
     public String country() {
         return this.country;
     }
     /**
-     * Postal code.
+     * @return Postal code.
      * 
-    */
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
-     * Name of the State or Province.
+     * @return Name of the State or Province.
      * 
-    */
+     */
     public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
-     * Street Address line 1.
+     * @return Street Address line 1.
      * 
-    */
+     */
     public String streetAddress1() {
         return this.streetAddress1;
     }
     /**
-     * Street Address line 2.
+     * @return Street Address line 2.
      * 
-    */
+     */
     public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
     /**
-     * Street Address line 3.
+     * @return Street Address line 3.
      * 
-    */
+     */
     public Optional<String> streetAddress3() {
         return Optional.ofNullable(this.streetAddress3);
     }
     /**
-     * Extended Zip Code.
+     * @return Extended Zip Code.
      * 
-    */
+     */
     public Optional<String> zipExtendedCode() {
         return Optional.ofNullable(this.zipExtendedCode);
     }

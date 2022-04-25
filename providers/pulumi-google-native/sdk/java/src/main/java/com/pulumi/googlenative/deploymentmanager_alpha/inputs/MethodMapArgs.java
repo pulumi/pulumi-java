@@ -26,6 +26,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="create")
     private @Nullable Output<String> create;
 
+    /**
+     * @return The action identifier for the create method to be used for this collection
+     * 
+     */
     public Optional<Output<String>> create() {
         return Optional.ofNullable(this.create);
     }
@@ -37,6 +41,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="delete")
     private @Nullable Output<String> delete;
 
+    /**
+     * @return The action identifier for the delete method to be used for this collection
+     * 
+     */
     public Optional<Output<String>> delete() {
         return Optional.ofNullable(this.delete);
     }
@@ -48,6 +56,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="get")
     private @Nullable Output<String> get;
 
+    /**
+     * @return The action identifier for the get method to be used for this collection
+     * 
+     */
     public Optional<Output<String>> get() {
         return Optional.ofNullable(this.get);
     }
@@ -59,6 +71,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="setIamPolicy")
     private @Nullable Output<String> setIamPolicy;
 
+    /**
+     * @return The action identifier for the setIamPolicy method to be used for this collection
+     * 
+     */
     public Optional<Output<String>> setIamPolicy() {
         return Optional.ofNullable(this.setIamPolicy);
     }
@@ -70,6 +86,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="update")
     private @Nullable Output<String> update;
 
+    /**
+     * @return The action identifier for the update method to be used for this collection
+     * 
+     */
     public Optional<Output<String>> update() {
         return Optional.ofNullable(this.update);
     }
@@ -102,47 +122,107 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MethodMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param create The action identifier for the create method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder create(@Nullable Output<String> create) {
             $.create = create;
             return this;
         }
 
+        /**
+         * @param create The action identifier for the create method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder create(String create) {
             return create(Output.of(create));
         }
 
+        /**
+         * @param delete The action identifier for the delete method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(@Nullable Output<String> delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param delete The action identifier for the delete method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(String delete) {
             return delete(Output.of(delete));
         }
 
+        /**
+         * @param get The action identifier for the get method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(@Nullable Output<String> get) {
             $.get = get;
             return this;
         }
 
+        /**
+         * @param get The action identifier for the get method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder get(String get) {
             return get(Output.of(get));
         }
 
+        /**
+         * @param setIamPolicy The action identifier for the setIamPolicy method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder setIamPolicy(@Nullable Output<String> setIamPolicy) {
             $.setIamPolicy = setIamPolicy;
             return this;
         }
 
+        /**
+         * @param setIamPolicy The action identifier for the setIamPolicy method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder setIamPolicy(String setIamPolicy) {
             return setIamPolicy(Output.of(setIamPolicy));
         }
 
+        /**
+         * @param update The action identifier for the update method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(@Nullable Output<String> update) {
             $.update = update;
             return this;
         }
 
+        /**
+         * @param update The action identifier for the update method to be used for this collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder update(String update) {
             return update(Output.of(update));
         }

@@ -28,6 +28,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The friendly name of the management group.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -39,6 +43,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -50,6 +58,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inheritedPermissions")
     private @Nullable String inheritedPermissions;
 
+    /**
+     * @return The users specific permissions to this item.
+     * 
+     */
     public Optional<String> inheritedPermissions() {
         return Optional.ofNullable(this.inheritedPermissions);
     }
@@ -61,6 +73,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfChildGroups")
     private @Nullable Integer numberOfChildGroups;
 
+    /**
+     * @return Number of children is the number of Groups that are exactly one level underneath the current Group.
+     * 
+     */
     public Optional<Integer> numberOfChildGroups() {
         return Optional.ofNullable(this.numberOfChildGroups);
     }
@@ -83,6 +103,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfChildren")
     private @Nullable Integer numberOfChildren;
 
+    /**
+     * @return Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
+     * 
+     */
     public Optional<Integer> numberOfChildren() {
         return Optional.ofNullable(this.numberOfChildren);
     }
@@ -101,6 +125,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parent")
     private @Nullable EntityParentGroupInfoResponse parent;
 
+    /**
+     * @return (Optional) The ID of the parent management group.
+     * 
+     */
     public Optional<EntityParentGroupInfoResponse> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -112,6 +140,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentDisplayNameChain")
     private @Nullable List<String> parentDisplayNameChain;
 
+    /**
+     * @return The parent display name chain from the root group to the immediate parent
+     * 
+     */
     public Optional<List<String>> parentDisplayNameChain() {
         return Optional.ofNullable(this.parentDisplayNameChain);
     }
@@ -123,6 +155,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentNameChain")
     private @Nullable List<String> parentNameChain;
 
+    /**
+     * @return The parent name chain from the root group to the immediate parent
+     * 
+     */
     public Optional<List<String>> parentNameChain() {
         return Optional.ofNullable(this.parentNameChain);
     }
@@ -134,6 +170,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissions")
     private @Nullable String permissions;
 
+    /**
+     * @return The users specific permissions to this item.
+     * 
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -145,6 +185,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -156,6 +200,10 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource. For example, Microsoft.Management/managementGroups
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -196,31 +244,67 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EntityInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The friendly name of the management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param inheritedPermissions The users specific permissions to this item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inheritedPermissions(@Nullable String inheritedPermissions) {
             $.inheritedPermissions = inheritedPermissions;
             return this;
         }
 
+        /**
+         * @param name The name of the entity. For example, 00000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param numberOfChildGroups Number of children is the number of Groups that are exactly one level underneath the current Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfChildGroups(@Nullable Integer numberOfChildGroups) {
             $.numberOfChildGroups = numberOfChildGroups;
             return this;
         }
 
+        /**
+         * @param numberOfChildren Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfChildren(@Nullable Integer numberOfChildren) {
             $.numberOfChildren = numberOfChildren;
             return this;
@@ -231,39 +315,87 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param parent (Optional) The ID of the parent management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable EntityParentGroupInfoResponse parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parentDisplayNameChain The parent display name chain from the root group to the immediate parent
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentDisplayNameChain(@Nullable List<String> parentDisplayNameChain) {
             $.parentDisplayNameChain = parentDisplayNameChain;
             return this;
         }
 
+        /**
+         * @param parentDisplayNameChain The parent display name chain from the root group to the immediate parent
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentDisplayNameChain(String... parentDisplayNameChain) {
             return parentDisplayNameChain(List.of(parentDisplayNameChain));
         }
 
+        /**
+         * @param parentNameChain The parent name chain from the root group to the immediate parent
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentNameChain(@Nullable List<String> parentNameChain) {
             $.parentNameChain = parentNameChain;
             return this;
         }
 
+        /**
+         * @param parentNameChain The parent name chain from the root group to the immediate parent
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentNameChain(String... parentNameChain) {
             return parentNameChain(List.of(parentNameChain));
         }
 
+        /**
+         * @param permissions The users specific permissions to this item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param tenantId The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of the resource. For example, Microsoft.Management/managementGroups
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -26,6 +26,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="controllerKey")
     private @Nullable Integer controllerKey;
 
+    /**
+     * @return Gets or sets the controller id.
+     * 
+     */
     public Optional<Integer> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
@@ -37,6 +41,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceKey")
     private @Nullable Integer deviceKey;
 
+    /**
+     * @return Gets or sets the device key value.
+     * 
+     */
     public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
@@ -48,6 +56,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName")
     private @Nullable String deviceName;
 
+    /**
+     * @return Gets or sets the device name.
+     * 
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -59,6 +71,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskMode")
     private @Nullable String diskMode;
 
+    /**
+     * @return Gets or sets the disk mode.
+     * 
+     */
     public Optional<String> diskMode() {
         return Optional.ofNullable(this.diskMode);
     }
@@ -70,6 +86,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskObjectId", required=true)
     private String diskObjectId;
 
+    /**
+     * @return Gets or sets the disk object id.
+     * 
+     */
     public String diskObjectId() {
         return this.diskObjectId;
     }
@@ -81,6 +101,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Gets or sets the disk total size.
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -92,6 +116,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskType")
     private @Nullable String diskType;
 
+    /**
+     * @return Gets or sets the disk backing type.
+     * 
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -103,6 +131,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return Gets or sets the label of the virtual disk in vCenter.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -114,6 +146,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name of the virtual disk.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -125,6 +161,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unitNumber")
     private @Nullable Integer unitNumber;
 
+    /**
+     * @return Gets or sets the unit number of the disk on the controller.
+     * 
+     */
     public Optional<Integer> unitNumber() {
         return Optional.ofNullable(this.unitNumber);
     }
@@ -162,51 +202,111 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VirtualDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controllerKey Gets or sets the controller id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerKey(@Nullable Integer controllerKey) {
             $.controllerKey = controllerKey;
             return this;
         }
 
+        /**
+         * @param deviceKey Gets or sets the device key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceKey(@Nullable Integer deviceKey) {
             $.deviceKey = deviceKey;
             return this;
         }
 
+        /**
+         * @param deviceName Gets or sets the device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param diskMode Gets or sets the disk mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMode(@Nullable String diskMode) {
             $.diskMode = diskMode;
             return this;
         }
 
+        /**
+         * @param diskObjectId Gets or sets the disk object id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskObjectId(String diskObjectId) {
             $.diskObjectId = diskObjectId;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Gets or sets the disk total size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskType Gets or sets the disk backing type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param label Gets or sets the label of the virtual disk in vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the virtual disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param unitNumber Gets or sets the unit number of the disk on the controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unitNumber(@Nullable Integer unitNumber) {
             $.unitNumber = unitNumber;
             return this;

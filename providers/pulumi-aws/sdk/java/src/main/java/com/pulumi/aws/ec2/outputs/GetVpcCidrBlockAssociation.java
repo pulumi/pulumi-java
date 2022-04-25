@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetVpcCidrBlockAssociation {
     /**
-     * The association ID for the the IPv4 CIDR block.
+     * @return The association ID for the the IPv4 CIDR block.
      * 
      */
     private final String associationId;
     /**
-     * The cidr block of the desired VPC.
+     * @return The cidr block of the desired VPC.
      * 
      */
     private final String cidrBlock;
     /**
-     * The current state of the desired VPC.
+     * @return The current state of the desired VPC.
      * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
      */
@@ -37,24 +37,24 @@ public final class GetVpcCidrBlockAssociation {
     }
 
     /**
-     * The association ID for the the IPv4 CIDR block.
+     * @return The association ID for the the IPv4 CIDR block.
      * 
-    */
+     */
     public String associationId() {
         return this.associationId;
     }
     /**
-     * The cidr block of the desired VPC.
+     * @return The cidr block of the desired VPC.
      * 
-    */
+     */
     public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
-     * The current state of the desired VPC.
+     * @return The current state of the desired VPC.
      * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -27,6 +27,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exec")
     private @Nullable ContainerExecResponse exec;
 
+    /**
+     * @return The execution command to probe
+     * 
+     */
     public Optional<ContainerExecResponse> exec() {
         return Optional.ofNullable(this.exec);
     }
@@ -38,6 +42,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="failureThreshold")
     private @Nullable Integer failureThreshold;
 
+    /**
+     * @return The failure threshold.
+     * 
+     */
     public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -49,6 +57,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="httpGet")
     private @Nullable ContainerHttpGetResponse httpGet;
 
+    /**
+     * @return The Http Get settings to probe
+     * 
+     */
     public Optional<ContainerHttpGetResponse> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
@@ -60,6 +72,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="initialDelaySeconds")
     private @Nullable Integer initialDelaySeconds;
 
+    /**
+     * @return The initial delay seconds.
+     * 
+     */
     public Optional<Integer> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
@@ -71,6 +87,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="periodSeconds")
     private @Nullable Integer periodSeconds;
 
+    /**
+     * @return The period seconds.
+     * 
+     */
     public Optional<Integer> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
@@ -82,6 +102,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="successThreshold")
     private @Nullable Integer successThreshold;
 
+    /**
+     * @return The success threshold.
+     * 
+     */
     public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -93,6 +117,10 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeoutSeconds")
     private @Nullable Integer timeoutSeconds;
 
+    /**
+     * @return The timeout seconds.
+     * 
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -127,36 +155,78 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerProbeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exec The execution command to probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder exec(@Nullable ContainerExecResponse exec) {
             $.exec = exec;
             return this;
         }
 
+        /**
+         * @param failureThreshold The failure threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param httpGet The Http Get settings to probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpGet(@Nullable ContainerHttpGetResponse httpGet) {
             $.httpGet = httpGet;
             return this;
         }
 
+        /**
+         * @param initialDelaySeconds The initial delay seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
+        /**
+         * @param periodSeconds The period seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             $.periodSeconds = periodSeconds;
             return this;
         }
 
+        /**
+         * @param successThreshold The success threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Integer successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds The timeout seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;

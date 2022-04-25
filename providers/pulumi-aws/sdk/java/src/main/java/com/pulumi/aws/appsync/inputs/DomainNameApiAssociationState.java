@@ -22,6 +22,10 @@ public final class DomainNameApiAssociationState extends com.pulumi.resources.Re
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The API ID.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -33,6 +37,10 @@ public final class DomainNameApiAssociationState extends com.pulumi.resources.Re
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The Appsync domain name.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -62,20 +70,44 @@ public final class DomainNameApiAssociationState extends com.pulumi.resources.Re
             $ = new DomainNameApiAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param domainName The Appsync domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The Appsync domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }

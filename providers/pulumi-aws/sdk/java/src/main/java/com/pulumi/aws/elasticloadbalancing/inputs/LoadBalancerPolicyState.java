@@ -24,6 +24,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="loadBalancerName")
     private @Nullable Output<String> loadBalancerName;
 
+    /**
+     * @return The load balancer on which the policy is defined.
+     * 
+     */
     public Optional<Output<String>> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
@@ -35,6 +39,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyAttributes")
     private @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
+    /**
+     * @return Policy attribute to apply to the policy.
+     * 
+     */
     public Optional<Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>>> policyAttributes() {
         return Optional.ofNullable(this.policyAttributes);
     }
@@ -46,6 +54,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return The name of the load balancer policy.
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -57,6 +69,10 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
     @Import(name="policyTypeName")
     private @Nullable Output<String> policyTypeName;
 
+    /**
+     * @return The policy type.
+     * 
+     */
     public Optional<Output<String>> policyTypeName() {
         return Optional.ofNullable(this.policyTypeName);
     }
@@ -88,42 +104,96 @@ public final class LoadBalancerPolicyState extends com.pulumi.resources.Resource
             $ = new LoadBalancerPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loadBalancerName The load balancer on which the policy is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
         }
 
+        /**
+         * @param loadBalancerName The load balancer on which the policy is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerName(String loadBalancerName) {
             return loadBalancerName(Output.of(loadBalancerName));
         }
 
+        /**
+         * @param policyAttributes Policy attribute to apply to the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAttributes(@Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
             $.policyAttributes = policyAttributes;
             return this;
         }
 
+        /**
+         * @param policyAttributes Policy attribute to apply to the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAttributes(List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
             return policyAttributes(Output.of(policyAttributes));
         }
 
+        /**
+         * @param policyAttributes Policy attribute to apply to the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeGetArgs... policyAttributes) {
             return policyAttributes(List.of(policyAttributes));
         }
 
+        /**
+         * @param policyName The name of the load balancer policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName The name of the load balancer policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param policyTypeName The policy type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypeName(@Nullable Output<String> policyTypeName) {
             $.policyTypeName = policyTypeName;
             return this;
         }
 
+        /**
+         * @param policyTypeName The policy type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyTypeName(String policyTypeName) {
             return policyTypeName(Output.of(policyTypeName));
         }

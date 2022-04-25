@@ -28,6 +28,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfigurations")
     private @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
+    /**
+     * @return The list of endpoint objects.
+     * 
+     */
     public Optional<Output<List<EndpointGroupEndpointConfigurationArgs>>> endpointConfigurations() {
         return Optional.ofNullable(this.endpointConfigurations);
     }
@@ -39,6 +43,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointGroupRegion", required=true)
     private Output<String> endpointGroupRegion;
 
+    /**
+     * @return The name of the AWS Region where the endpoint group is located
+     * 
+     */
     public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion;
     }
@@ -50,6 +58,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckIntervalSeconds")
     private @Nullable Output<Integer> healthCheckIntervalSeconds;
 
+    /**
+     * @return The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
+     * 
+     */
     public Optional<Output<Integer>> healthCheckIntervalSeconds() {
         return Optional.ofNullable(this.healthCheckIntervalSeconds);
     }
@@ -68,6 +80,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckPort")
     private @Nullable Output<Integer> healthCheckPort;
 
+    /**
+     * @return The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+     * 
+     */
     public Optional<Output<Integer>> healthCheckPort() {
         return Optional.ofNullable(this.healthCheckPort);
     }
@@ -79,6 +95,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckProtocol")
     private @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
+    /**
+     * @return The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+     * 
+     */
     public Optional<Output<EndpointGroupHealthCheckProtocol>> healthCheckProtocol() {
         return Optional.ofNullable(this.healthCheckProtocol);
     }
@@ -90,6 +110,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn", required=true)
     private Output<String> listenerArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the listener
+     * 
+     */
     public Output<String> listenerArn() {
         return this.listenerArn;
     }
@@ -108,6 +132,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholdCount")
     private @Nullable Output<Integer> thresholdCount;
 
+    /**
+     * @return The number of consecutive health checks required to set the state of the endpoint to unhealthy.
+     * 
+     */
     public Optional<Output<Integer>> thresholdCount() {
         return Optional.ofNullable(this.thresholdCount);
     }
@@ -119,6 +147,10 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficDialPercentage")
     private @Nullable Output<Double> trafficDialPercentage;
 
+    /**
+     * @return The percentage of traffic to sent to an AWS Region
+     * 
+     */
     public Optional<Output<Double>> trafficDialPercentage() {
         return Optional.ofNullable(this.trafficDialPercentage);
     }
@@ -156,33 +188,75 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointConfigurations The list of endpoint objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfigurations(@Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations) {
             $.endpointConfigurations = endpointConfigurations;
             return this;
         }
 
+        /**
+         * @param endpointConfigurations The list of endpoint objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfigurations(List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
             return endpointConfigurations(Output.of(endpointConfigurations));
         }
 
+        /**
+         * @param endpointConfigurations The list of endpoint objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfigurations(EndpointGroupEndpointConfigurationArgs... endpointConfigurations) {
             return endpointConfigurations(List.of(endpointConfigurations));
         }
 
+        /**
+         * @param endpointGroupRegion The name of the AWS Region where the endpoint group is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointGroupRegion(Output<String> endpointGroupRegion) {
             $.endpointGroupRegion = endpointGroupRegion;
             return this;
         }
 
+        /**
+         * @param endpointGroupRegion The name of the AWS Region where the endpoint group is located
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             return endpointGroupRegion(Output.of(endpointGroupRegion));
         }
 
+        /**
+         * @param healthCheckIntervalSeconds The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckIntervalSeconds(@Nullable Output<Integer> healthCheckIntervalSeconds) {
             $.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param healthCheckIntervalSeconds The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
             return healthCheckIntervalSeconds(Output.of(healthCheckIntervalSeconds));
         }
@@ -196,29 +270,65 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
             return healthCheckPath(Output.of(healthCheckPath));
         }
 
+        /**
+         * @param healthCheckPort The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPort(@Nullable Output<Integer> healthCheckPort) {
             $.healthCheckPort = healthCheckPort;
             return this;
         }
 
+        /**
+         * @param healthCheckPort The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckPort(Integer healthCheckPort) {
             return healthCheckPort(Output.of(healthCheckPort));
         }
 
+        /**
+         * @param healthCheckProtocol The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckProtocol(@Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol) {
             $.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
 
+        /**
+         * @param healthCheckProtocol The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckProtocol(EndpointGroupHealthCheckProtocol healthCheckProtocol) {
             return healthCheckProtocol(Output.of(healthCheckProtocol));
         }
 
+        /**
+         * @param listenerArn The Amazon Resource Name (ARN) of the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArn(Output<String> listenerArn) {
             $.listenerArn = listenerArn;
             return this;
         }
 
+        /**
+         * @param listenerArn The Amazon Resource Name (ARN) of the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArn(String listenerArn) {
             return listenerArn(Output.of(listenerArn));
         }
@@ -236,20 +346,44 @@ public final class EndpointGroupArgs extends com.pulumi.resources.ResourceArgs {
             return portOverrides(List.of(portOverrides));
         }
 
+        /**
+         * @param thresholdCount The number of consecutive health checks required to set the state of the endpoint to unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdCount(@Nullable Output<Integer> thresholdCount) {
             $.thresholdCount = thresholdCount;
             return this;
         }
 
+        /**
+         * @param thresholdCount The number of consecutive health checks required to set the state of the endpoint to unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdCount(Integer thresholdCount) {
             return thresholdCount(Output.of(thresholdCount));
         }
 
+        /**
+         * @param trafficDialPercentage The percentage of traffic to sent to an AWS Region
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficDialPercentage(@Nullable Output<Double> trafficDialPercentage) {
             $.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
 
+        /**
+         * @param trafficDialPercentage The percentage of traffic to sent to an AWS Region
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficDialPercentage(Double trafficDialPercentage) {
             return trafficDialPercentage(Output.of(trafficDialPercentage));
         }

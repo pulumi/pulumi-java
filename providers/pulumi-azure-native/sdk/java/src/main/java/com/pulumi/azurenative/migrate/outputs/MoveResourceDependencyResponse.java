@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MoveResourceDependencyResponse {
     /**
-     * Defines the properties for automatic resolution.
+     * @return Defines the properties for automatic resolution.
      * 
      */
     private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
     /**
-     * Defines the dependency type.
+     * @return Defines the dependency type.
      * 
      */
     private final @Nullable String dependencyType;
     /**
-     * Gets the source ARM ID of the dependent resource.
+     * @return Gets the source ARM ID of the dependent resource.
      * 
      */
     private final @Nullable String id;
     /**
-     * Gets or sets a value indicating whether the dependency is optional.
+     * @return Gets or sets a value indicating whether the dependency is optional.
      * 
      */
     private final @Nullable String isOptional;
     /**
-     * Defines the properties for manual resolution.
+     * @return Defines the properties for manual resolution.
      * 
      */
     private final @Nullable ManualResolutionPropertiesResponse manualResolution;
     /**
-     * Gets the dependency resolution status.
+     * @return Gets the dependency resolution status.
      * 
      */
     private final @Nullable String resolutionStatus;
     /**
-     * Defines the resolution type.
+     * @return Defines the resolution type.
      * 
      */
     private final @Nullable String resolutionType;
@@ -68,51 +68,51 @@ public final class MoveResourceDependencyResponse {
     }
 
     /**
-     * Defines the properties for automatic resolution.
+     * @return Defines the properties for automatic resolution.
      * 
-    */
+     */
     public Optional<AutomaticResolutionPropertiesResponse> automaticResolution() {
         return Optional.ofNullable(this.automaticResolution);
     }
     /**
-     * Defines the dependency type.
+     * @return Defines the dependency type.
      * 
-    */
+     */
     public Optional<String> dependencyType() {
         return Optional.ofNullable(this.dependencyType);
     }
     /**
-     * Gets the source ARM ID of the dependent resource.
+     * @return Gets the source ARM ID of the dependent resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Gets or sets a value indicating whether the dependency is optional.
+     * @return Gets or sets a value indicating whether the dependency is optional.
      * 
-    */
+     */
     public Optional<String> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
     /**
-     * Defines the properties for manual resolution.
+     * @return Defines the properties for manual resolution.
      * 
-    */
+     */
     public Optional<ManualResolutionPropertiesResponse> manualResolution() {
         return Optional.ofNullable(this.manualResolution);
     }
     /**
-     * Gets the dependency resolution status.
+     * @return Gets the dependency resolution status.
      * 
-    */
+     */
     public Optional<String> resolutionStatus() {
         return Optional.ofNullable(this.resolutionStatus);
     }
     /**
-     * Defines the resolution type.
+     * @return Defines the resolution type.
      * 
-    */
+     */
     public Optional<String> resolutionType() {
         return Optional.ofNullable(this.resolutionType);
     }

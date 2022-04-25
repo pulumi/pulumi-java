@@ -26,6 +26,10 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="error")
     private @Nullable ConnectorCollectionErrorInfoResponse error;
 
+    /**
+     * @return Error information of last collection
+     * 
+     */
     public Optional<ConnectorCollectionErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -37,6 +41,10 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="lastChecked", required=true)
     private String lastChecked;
 
+    /**
+     * @return Last time the data acquisition process initiated connecting to the external provider
+     * 
+     */
     public String lastChecked() {
         return this.lastChecked;
     }
@@ -48,6 +56,10 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="lastUpdated", required=true)
     private String lastUpdated;
 
+    /**
+     * @return Last time the external data was updated into Azure
+     * 
+     */
     public String lastUpdated() {
         return this.lastUpdated;
     }
@@ -59,6 +71,10 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="sourceLastUpdated", required=true)
     private String sourceLastUpdated;
 
+    /**
+     * @return Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+     * 
+     */
     public String sourceLastUpdated() {
         return this.sourceLastUpdated;
     }
@@ -90,21 +106,45 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
             $ = new ConnectorCollectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Error information of last collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ConnectorCollectionErrorInfoResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param lastChecked Last time the data acquisition process initiated connecting to the external provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastChecked(String lastChecked) {
             $.lastChecked = lastChecked;
             return this;
         }
 
+        /**
+         * @param lastUpdated Last time the external data was updated into Azure
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdated(String lastUpdated) {
             $.lastUpdated = lastUpdated;
             return this;
         }
 
+        /**
+         * @param sourceLastUpdated Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLastUpdated(String sourceLastUpdated) {
             $.sourceLastUpdated = sourceLastUpdated;
             return this;

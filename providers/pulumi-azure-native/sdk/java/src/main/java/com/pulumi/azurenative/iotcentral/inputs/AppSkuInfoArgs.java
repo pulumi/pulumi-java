@@ -26,6 +26,10 @@ public final class AppSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,AppSku>> name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Output<Either<String,AppSku>> name() {
         return this.name;
     }
@@ -54,19 +58,43 @@ public final class AppSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppSkuInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,AppSku>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,AppSku> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(AppSku name) {
             return name(Either.ofRight(name));
         }

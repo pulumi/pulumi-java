@@ -22,6 +22,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-assigned description of the TagKey. Must not exceed 256 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -45,6 +53,11 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName", required=true)
     private Output<String> shortName;
 
+    /**
+     * @return Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+     * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Output<String> shortName() {
         return this.shortName;
     }
@@ -75,29 +88,67 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-assigned description of the TagKey. Must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-assigned description of the TagKey. Must not exceed 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param parent Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param shortName Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+         * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
+         * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }

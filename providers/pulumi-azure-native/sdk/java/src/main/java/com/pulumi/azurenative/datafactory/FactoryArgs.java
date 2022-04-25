@@ -30,6 +30,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<EncryptionConfigurationArgs> encryption;
 
+    /**
+     * @return Properties to enable Customer Managed Key for the factory.
+     * 
+     */
     public Optional<Output<EncryptionConfigurationArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -41,6 +45,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName")
     private @Nullable Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Optional<Output<String>> factoryName() {
         return Optional.ofNullable(this.factoryName);
     }
@@ -52,6 +60,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalParameters")
     private @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
+    /**
+     * @return List of parameters for factory.
+     * 
+     */
     public Optional<Output<Map<String,GlobalParameterSpecificationArgs>>> globalParameters() {
         return Optional.ofNullable(this.globalParameters);
     }
@@ -63,6 +75,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<FactoryIdentityArgs> identity;
 
+    /**
+     * @return Managed service identity of the factory.
+     * 
+     */
     public Optional<Output<FactoryIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -74,6 +90,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -85,6 +105,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Whether or not public network access is allowed for the data factory.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -96,6 +120,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoConfiguration")
     private @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
+    /**
+     * @return Git repo information of the factory.
+     * 
+     */
     public Optional<Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>>> repoConfiguration() {
         return Optional.ofNullable(this.repoConfiguration);
     }
@@ -107,6 +135,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +150,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -154,99 +190,231 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FactoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Properties to enable Customer Managed Key for the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionConfigurationArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Properties to enable Customer Managed Key for the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionConfigurationArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(@Nullable Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param globalParameters List of parameters for factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(@Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
             $.globalParameters = globalParameters;
             return this;
         }
 
+        /**
+         * @param globalParameters List of parameters for factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(Map<String,GlobalParameterSpecificationArgs> globalParameters) {
             return globalParameters(Output.of(globalParameters));
         }
 
+        /**
+         * @param identity Managed service identity of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<FactoryIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed service identity of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(FactoryIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicNetworkAccess Whether or not public network access is allowed for the data factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether or not public network access is allowed for the data factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether or not public network access is allowed for the data factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Whether or not public network access is allowed for the data factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param repoConfiguration Git repo information of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
             $.repoConfiguration = repoConfiguration;
             return this;
         }
 
+        /**
+         * @param repoConfiguration Git repo information of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoConfiguration(Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
             return repoConfiguration(Output.of(repoConfiguration));
         }
 
+        /**
+         * @param repoConfiguration Git repo information of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoConfiguration(FactoryGitHubConfigurationArgs repoConfiguration) {
             return repoConfiguration(Either.ofLeft(repoConfiguration));
         }
 
+        /**
+         * @param repoConfiguration Git repo information of the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoConfiguration(FactoryVSTSConfigurationArgs repoConfiguration) {
             return repoConfiguration(Either.ofRight(repoConfiguration));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

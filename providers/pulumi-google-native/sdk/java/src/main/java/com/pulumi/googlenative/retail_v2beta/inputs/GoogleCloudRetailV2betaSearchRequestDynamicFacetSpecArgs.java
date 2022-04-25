@@ -26,6 +26,10 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
     @Import(name="mode")
     private @Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode;
 
+    /**
+     * @return Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
+     * 
+     */
     public Optional<Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
             $ = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it&#39;s unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode mode) {
             return mode(Output.of(mode));
         }

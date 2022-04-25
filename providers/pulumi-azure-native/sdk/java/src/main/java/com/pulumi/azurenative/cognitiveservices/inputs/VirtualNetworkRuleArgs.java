@@ -27,6 +27,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ignoreMissingVnetServiceEndpoint")
     private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
+    /**
+     * @return Ignore missing vnet service endpoint or not.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
@@ -49,6 +57,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return Gets the state of virtual network rule.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -79,29 +91,65 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Ignore missing vnet service endpoint or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
             $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Ignore missing vnet service endpoint or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(Boolean ignoreMissingVnetServiceEndpoint) {
             return ignoreMissingVnetServiceEndpoint(Output.of(ignoreMissingVnetServiceEndpoint));
         }
 
+        /**
+         * @param state Gets the state of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Gets the state of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

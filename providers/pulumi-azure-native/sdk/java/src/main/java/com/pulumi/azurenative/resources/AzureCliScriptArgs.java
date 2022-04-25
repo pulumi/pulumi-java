@@ -31,6 +31,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="arguments")
     private @Nullable Output<String> arguments;
 
+    /**
+     * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
+     * 
+     */
     public Optional<Output<String>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -42,6 +46,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="azCliVersion", required=true)
     private Output<String> azCliVersion;
 
+    /**
+     * @return Azure CLI module version to be used.
+     * 
+     */
     public Output<String> azCliVersion() {
         return this.azCliVersion;
     }
@@ -53,6 +61,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cleanupPreference")
     private @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
 
+    /**
+     * @return The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+     * 
+     */
     public Optional<Output<Either<String,CleanupOptions>>> cleanupPreference() {
         return Optional.ofNullable(this.cleanupPreference);
     }
@@ -64,6 +76,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerSettings")
     private @Nullable Output<ContainerConfigurationArgs> containerSettings;
 
+    /**
+     * @return Container settings.
+     * 
+     */
     public Optional<Output<ContainerConfigurationArgs>> containerSettings() {
         return Optional.ofNullable(this.containerSettings);
     }
@@ -75,6 +91,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="environmentVariables")
     private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
+    /**
+     * @return The environment variables to pass over to the script.
+     * 
+     */
     public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -86,6 +106,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -97,6 +121,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -109,6 +137,11 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Type of the script.
+     * Expected value is &#39;AzureCLI&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -120,6 +153,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the ACI and the storage account for the deployment script.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -131,6 +168,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="primaryScriptUri")
     private @Nullable Output<String> primaryScriptUri;
 
+    /**
+     * @return Uri for the script. This is the entry point for the external script.
+     * 
+     */
     public Optional<Output<String>> primaryScriptUri() {
         return Optional.ofNullable(this.primaryScriptUri);
     }
@@ -142,6 +183,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -153,6 +198,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionInterval", required=true)
     private Output<String> retentionInterval;
 
+    /**
+     * @return Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
+     * 
+     */
     public Output<String> retentionInterval() {
         return this.retentionInterval;
     }
@@ -164,6 +213,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scriptContent")
     private @Nullable Output<String> scriptContent;
 
+    /**
+     * @return Script body.
+     * 
+     */
     public Optional<Output<String>> scriptContent() {
         return Optional.ofNullable(this.scriptContent);
     }
@@ -175,6 +228,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scriptName")
     private @Nullable Output<String> scriptName;
 
+    /**
+     * @return Name of the deployment script.
+     * 
+     */
     public Optional<Output<String>> scriptName() {
         return Optional.ofNullable(this.scriptName);
     }
@@ -186,6 +243,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountSettings")
     private @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
 
+    /**
+     * @return Storage Account settings.
+     * 
+     */
     public Optional<Output<StorageAccountConfigurationArgs>> storageAccountSettings() {
         return Optional.ofNullable(this.storageAccountSettings);
     }
@@ -197,6 +258,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="supportingScriptUris")
     private @Nullable Output<List<String>> supportingScriptUris;
 
+    /**
+     * @return Supporting files for the external script.
+     * 
+     */
     public Optional<Output<List<String>>> supportingScriptUris() {
         return Optional.ofNullable(this.supportingScriptUris);
     }
@@ -208,6 +273,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -219,6 +288,10 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
     private @Nullable Output<String> timeout;
 
+    /**
+     * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
+     * 
+     */
     public Optional<Output<String>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -264,180 +337,422 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AzureCliScriptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable Output<String> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(String arguments) {
             return arguments(Output.of(arguments));
         }
 
+        /**
+         * @param azCliVersion Azure CLI module version to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azCliVersion(Output<String> azCliVersion) {
             $.azCliVersion = azCliVersion;
             return this;
         }
 
+        /**
+         * @param azCliVersion Azure CLI module version to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azCliVersion(String azCliVersion) {
             return azCliVersion(Output.of(azCliVersion));
         }
 
+        /**
+         * @param cleanupPreference The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupPreference(@Nullable Output<Either<String,CleanupOptions>> cleanupPreference) {
             $.cleanupPreference = cleanupPreference;
             return this;
         }
 
+        /**
+         * @param cleanupPreference The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupPreference(Either<String,CleanupOptions> cleanupPreference) {
             return cleanupPreference(Output.of(cleanupPreference));
         }
 
+        /**
+         * @param cleanupPreference The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupPreference(String cleanupPreference) {
             return cleanupPreference(Either.ofLeft(cleanupPreference));
         }
 
+        /**
+         * @param cleanupPreference The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupPreference(CleanupOptions cleanupPreference) {
             return cleanupPreference(Either.ofRight(cleanupPreference));
         }
 
+        /**
+         * @param containerSettings Container settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerSettings(@Nullable Output<ContainerConfigurationArgs> containerSettings) {
             $.containerSettings = containerSettings;
             return this;
         }
 
+        /**
+         * @param containerSettings Container settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerSettings(ContainerConfigurationArgs containerSettings) {
             return containerSettings(Output.of(containerSettings));
         }
 
+        /**
+         * @param environmentVariables The environment variables to pass over to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to pass over to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param environmentVariables The environment variables to pass over to the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param forceUpdateTag Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param identity Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind Type of the script.
+         * Expected value is &#39;AzureCLI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Type of the script.
+         * Expected value is &#39;AzureCLI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The location of the ACI and the storage account for the deployment script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the ACI and the storage account for the deployment script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param primaryScriptUri Uri for the script. This is the entry point for the external script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryScriptUri(@Nullable Output<String> primaryScriptUri) {
             $.primaryScriptUri = primaryScriptUri;
             return this;
         }
 
+        /**
+         * @param primaryScriptUri Uri for the script. This is the entry point for the external script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryScriptUri(String primaryScriptUri) {
             return primaryScriptUri(Output.of(primaryScriptUri));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param retentionInterval Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInterval(Output<String> retentionInterval) {
             $.retentionInterval = retentionInterval;
             return this;
         }
 
+        /**
+         * @param retentionInterval Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInterval(String retentionInterval) {
             return retentionInterval(Output.of(retentionInterval));
         }
 
+        /**
+         * @param scriptContent Script body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptContent(@Nullable Output<String> scriptContent) {
             $.scriptContent = scriptContent;
             return this;
         }
 
+        /**
+         * @param scriptContent Script body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptContent(String scriptContent) {
             return scriptContent(Output.of(scriptContent));
         }
 
+        /**
+         * @param scriptName Name of the deployment script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(@Nullable Output<String> scriptName) {
             $.scriptName = scriptName;
             return this;
         }
 
+        /**
+         * @param scriptName Name of the deployment script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptName(String scriptName) {
             return scriptName(Output.of(scriptName));
         }
 
+        /**
+         * @param storageAccountSettings Storage Account settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSettings(@Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings) {
             $.storageAccountSettings = storageAccountSettings;
             return this;
         }
 
+        /**
+         * @param storageAccountSettings Storage Account settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountSettings(StorageAccountConfigurationArgs storageAccountSettings) {
             return storageAccountSettings(Output.of(storageAccountSettings));
         }
 
+        /**
+         * @param supportingScriptUris Supporting files for the external script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportingScriptUris(@Nullable Output<List<String>> supportingScriptUris) {
             $.supportingScriptUris = supportingScriptUris;
             return this;
         }
 
+        /**
+         * @param supportingScriptUris Supporting files for the external script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportingScriptUris(List<String> supportingScriptUris) {
             return supportingScriptUris(Output.of(supportingScriptUris));
         }
 
+        /**
+         * @param supportingScriptUris Supporting files for the external script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportingScriptUris(String... supportingScriptUris) {
             return supportingScriptUris(List.of(supportingScriptUris));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param timeout Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

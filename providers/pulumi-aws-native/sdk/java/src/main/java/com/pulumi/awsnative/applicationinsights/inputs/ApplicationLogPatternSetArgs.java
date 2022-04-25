@@ -26,6 +26,10 @@ public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.Res
     @Import(name="logPatterns", required=true)
     private Output<List<ApplicationLogPatternArgs>> logPatterns;
 
+    /**
+     * @return The log patterns of a set.
+     * 
+     */
     public Output<List<ApplicationLogPatternArgs>> logPatterns() {
         return this.logPatterns;
     }
@@ -37,6 +41,10 @@ public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.Res
     @Import(name="patternSetName", required=true)
     private Output<String> patternSetName;
 
+    /**
+     * @return The name of the log pattern set.
+     * 
+     */
     public Output<String> patternSetName() {
         return this.patternSetName;
     }
@@ -66,24 +74,54 @@ public final class ApplicationLogPatternSetArgs extends com.pulumi.resources.Res
             $ = new ApplicationLogPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logPatterns The log patterns of a set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatterns(Output<List<ApplicationLogPatternArgs>> logPatterns) {
             $.logPatterns = logPatterns;
             return this;
         }
 
+        /**
+         * @param logPatterns The log patterns of a set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatterns(List<ApplicationLogPatternArgs> logPatterns) {
             return logPatterns(Output.of(logPatterns));
         }
 
+        /**
+         * @param logPatterns The log patterns of a set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatterns(ApplicationLogPatternArgs... logPatterns) {
             return logPatterns(List.of(logPatterns));
         }
 
+        /**
+         * @param patternSetName The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSetName(Output<String> patternSetName) {
             $.patternSetName = patternSetName;
             return this;
         }
 
+        /**
+         * @param patternSetName The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSetName(String patternSetName) {
             return patternSetName(Output.of(patternSetName));
         }

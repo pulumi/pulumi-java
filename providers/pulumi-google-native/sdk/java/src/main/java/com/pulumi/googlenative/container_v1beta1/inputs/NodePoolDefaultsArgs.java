@@ -26,6 +26,10 @@ public final class NodePoolDefaultsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nodeConfigDefaults")
     private @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
+    /**
+     * @return Subset of NodeConfig message that has defaults.
+     * 
+     */
     public Optional<Output<NodeConfigDefaultsArgs>> nodeConfigDefaults() {
         return Optional.ofNullable(this.nodeConfigDefaults);
     }
@@ -54,11 +58,23 @@ public final class NodePoolDefaultsArgs extends com.pulumi.resources.ResourceArg
             $ = new NodePoolDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeConfigDefaults Subset of NodeConfig message that has defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfigDefaults(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
             $.nodeConfigDefaults = nodeConfigDefaults;
             return this;
         }
 
+        /**
+         * @param nodeConfigDefaults Subset of NodeConfig message that has defaults.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeConfigDefaults(NodeConfigDefaultsArgs nodeConfigDefaults) {
             return nodeConfigDefaults(Output.of(nodeConfigDefaults));
         }

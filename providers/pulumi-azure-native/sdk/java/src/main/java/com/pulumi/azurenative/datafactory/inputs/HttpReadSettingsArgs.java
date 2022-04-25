@@ -29,6 +29,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="additionalHeaders")
     private @Nullable Output<Object> additionalHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
@@ -40,6 +44,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -51,6 +59,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enablePartitionDiscovery")
     private @Nullable Output<Boolean> enablePartitionDiscovery;
 
+    /**
+     * @return Indicates whether to enable partition discovery.
+     * 
+     */
     public Optional<Output<Boolean>> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
@@ -62,6 +74,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -73,6 +89,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="partitionRootPath")
     private @Nullable Output<Object> partitionRootPath;
 
+    /**
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
@@ -84,6 +104,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requestBody")
     private @Nullable Output<Object> requestBody;
 
+    /**
+     * @return The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
@@ -95,6 +119,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requestMethod")
     private @Nullable Output<Object> requestMethod;
 
+    /**
+     * @return The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
@@ -106,6 +134,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requestTimeout")
     private @Nullable Output<Object> requestTimeout;
 
+    /**
+     * @return Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+     * 
+     */
     public Optional<Output<Object>> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
@@ -118,6 +150,11 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;HttpReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -154,83 +191,193 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new HttpReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalHeaders The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
             $.additionalHeaders = additionalHeaders;
             return this;
         }
 
+        /**
+         * @param additionalHeaders The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(Object additionalHeaders) {
             return additionalHeaders(Output.of(additionalHeaders));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
             $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(Boolean enablePartitionDiscovery) {
             return enablePartitionDiscovery(Output.of(enablePartitionDiscovery));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
             $.partitionRootPath = partitionRootPath;
             return this;
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(Object partitionRootPath) {
             return partitionRootPath(Output.of(partitionRootPath));
         }
 
+        /**
+         * @param requestBody The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(@Nullable Output<Object> requestBody) {
             $.requestBody = requestBody;
             return this;
         }
 
+        /**
+         * @param requestBody The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(Object requestBody) {
             return requestBody(Output.of(requestBody));
         }
 
+        /**
+         * @param requestMethod The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
             $.requestMethod = requestMethod;
             return this;
         }
 
+        /**
+         * @param requestMethod The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(Object requestMethod) {
             return requestMethod(Output.of(requestMethod));
         }
 
+        /**
+         * @param requestTimeout Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(@Nullable Output<Object> requestTimeout) {
             $.requestTimeout = requestTimeout;
             return this;
         }
 
+        /**
+         * @param requestTimeout Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(Object requestTimeout) {
             return requestTimeout(Output.of(requestTimeout));
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;HttpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;HttpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

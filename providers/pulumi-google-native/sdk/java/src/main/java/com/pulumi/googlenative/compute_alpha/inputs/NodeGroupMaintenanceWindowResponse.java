@@ -24,6 +24,10 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -35,6 +39,10 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
     @Import(name="maintenanceDuration", required=true)
     private DurationResponse maintenanceDuration;
 
+    /**
+     * @return [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     * 
+     */
     public DurationResponse maintenanceDuration() {
         return this.maintenanceDuration;
     }
@@ -46,6 +54,10 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -76,16 +88,34 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
             $ = new NodeGroupMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param maintenanceDuration [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceDuration(DurationResponse maintenanceDuration) {
             $.maintenanceDuration = maintenanceDuration;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

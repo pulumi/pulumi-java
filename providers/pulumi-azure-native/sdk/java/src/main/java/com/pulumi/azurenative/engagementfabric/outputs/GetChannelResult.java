@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetChannelResult {
     /**
-     * The functions to be enabled for the channel
+     * @return The functions to be enabled for the channel
      * 
      */
     private final @Nullable List<String> channelFunctions;
     /**
-     * The channel type
+     * @return The channel type
      * 
      */
     private final String channelType;
     /**
-     * The channel credentials
+     * @return The channel credentials
      * 
      */
     private final @Nullable Map<String,String> credentials;
     /**
-     * The ID of the resource
+     * @return The ID of the resource
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The fully qualified type of the resource
+     * @return The fully qualified type of the resource
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetChannelResult {
     }
 
     /**
-     * The functions to be enabled for the channel
+     * @return The functions to be enabled for the channel
      * 
-    */
+     */
     public List<String> channelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
-     * The channel type
+     * @return The channel type
      * 
-    */
+     */
     public String channelType() {
         return this.channelType;
     }
     /**
-     * The channel credentials
+     * @return The channel credentials
      * 
-    */
+     */
     public Map<String,String> credentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
-     * The ID of the resource
+     * @return The ID of the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The fully qualified type of the resource
+     * @return The fully qualified type of the resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

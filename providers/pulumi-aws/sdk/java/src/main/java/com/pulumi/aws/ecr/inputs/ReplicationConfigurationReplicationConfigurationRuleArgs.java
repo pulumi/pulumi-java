@@ -24,6 +24,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="destinations", required=true)
     private Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations;
 
+    /**
+     * @return the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
+     * 
+     */
     public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations() {
         return this.destinations;
     }
@@ -35,6 +39,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="repositoryFilters")
     private @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
+    /**
+     * @return filters for a replication rule. See Repository Filter.
+     * 
+     */
     public Optional<Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>>> repositoryFilters() {
         return Optional.ofNullable(this.repositoryFilters);
     }
@@ -64,28 +72,64 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
             $ = new ReplicationConfigurationReplicationConfigurationRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(ReplicationConfigurationReplicationConfigurationRuleDestinationArgs... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param repositoryFilters filters for a replication rule. See Repository Filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters) {
             $.repositoryFilters = repositoryFilters;
             return this;
         }
 
+        /**
+         * @param repositoryFilters filters for a replication rule. See Repository Filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs> repositoryFilters) {
             return repositoryFilters(Output.of(repositoryFilters));
         }
 
+        /**
+         * @param repositoryFilters filters for a replication rule. See Repository Filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryFilters(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
         }

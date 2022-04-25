@@ -23,6 +23,10 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -34,6 +38,10 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceDisk", required=true)
     private String sourceDisk;
 
+    /**
+     * @return Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+     * 
+     */
     public String sourceDisk() {
         return this.sourceDisk;
     }
@@ -63,11 +71,23 @@ public final class AttachedDiskResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AttachedDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param sourceDisk Specifies the full path to an existing disk. For example: &#34;projects/my-project/zones/us-central1-c/disks/my-disk&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;

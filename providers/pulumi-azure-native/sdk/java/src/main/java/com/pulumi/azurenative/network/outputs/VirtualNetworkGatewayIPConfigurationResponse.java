@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNetworkGatewayIPConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Private IP Address for this gateway.
+     * @return Private IP Address for this gateway.
      * 
      */
     private final String privateIPAddress;
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
      */
     private final @Nullable String privateIPAllocationMethod;
     /**
-     * The provisioning state of the virtual network gateway IP configuration resource.
+     * @return The provisioning state of the virtual network gateway IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The reference to the public IP resource.
+     * @return The reference to the public IP resource.
      * 
      */
     private final @Nullable SubResourceResponse publicIPAddress;
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
      */
     private final @Nullable SubResourceResponse subnet;
@@ -74,58 +74,58 @@ public final class VirtualNetworkGatewayIPConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Private IP Address for this gateway.
+     * @return Private IP Address for this gateway.
      * 
-    */
+     */
     public String privateIPAddress() {
         return this.privateIPAddress;
     }
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
-    */
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
-     * The provisioning state of the virtual network gateway IP configuration resource.
+     * @return The provisioning state of the virtual network gateway IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the public IP resource.
+     * @return The reference to the public IP resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

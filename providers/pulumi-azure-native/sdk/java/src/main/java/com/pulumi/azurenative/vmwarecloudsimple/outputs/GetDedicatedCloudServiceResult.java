@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDedicatedCloudServiceResult {
     /**
-     * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+     * @return gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
      */
     private final String gatewaySubnet;
     /**
-     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
+     * @return /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
      * 
      */
     private final String id;
     /**
-     * indicates whether account onboarded or not in a given region
+     * @return indicates whether account onboarded or not in a given region
      * 
      */
     private final String isAccountOnboarded;
     /**
-     * Azure region
+     * @return Azure region
      * 
      */
     private final String location;
     /**
-     * {dedicatedCloudServiceName}
+     * @return {dedicatedCloudServiceName}
      * 
      */
     private final String name;
     /**
-     * total nodes purchased
+     * @return total nodes purchased
      * 
      */
     private final Integer nodes;
     /**
-     * link to a service management web portal
+     * @return link to a service management web portal
      * 
      */
     private final String serviceURL;
     /**
-     * The list of tags
+     * @return The list of tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
     private final String type;
@@ -81,65 +81,65 @@ public final class GetDedicatedCloudServiceResult {
     }
 
     /**
-     * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
+     * @return gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
-    */
+     */
     public String gatewaySubnet() {
         return this.gatewaySubnet;
     }
     /**
-     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
+     * @return /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * indicates whether account onboarded or not in a given region
+     * @return indicates whether account onboarded or not in a given region
      * 
-    */
+     */
     public String isAccountOnboarded() {
         return this.isAccountOnboarded;
     }
     /**
-     * Azure region
+     * @return Azure region
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * {dedicatedCloudServiceName}
+     * @return {dedicatedCloudServiceName}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * total nodes purchased
+     * @return total nodes purchased
      * 
-    */
+     */
     public Integer nodes() {
         return this.nodes;
     }
     /**
-     * link to a service management web portal
+     * @return link to a service management web portal
      * 
-    */
+     */
     public String serviceURL() {
         return this.serviceURL;
     }
     /**
-     * The list of tags
+     * @return The list of tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

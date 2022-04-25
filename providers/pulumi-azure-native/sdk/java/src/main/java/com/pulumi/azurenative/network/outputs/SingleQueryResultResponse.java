@@ -15,57 +15,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SingleQueryResultResponse {
     /**
-     * Describes what is the signature enforces
+     * @return Describes what is the signature enforces
      * 
      */
     private final @Nullable String description;
     /**
-     * Describes the list of destination ports related to this signature
+     * @return Describes the list of destination ports related to this signature
      * 
      */
     private final @Nullable List<String> destinationPorts;
     /**
-     * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
+     * @return Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
      * 
      */
     private final @Nullable Integer direction;
     /**
-     * Describes the groups the signature belongs to
+     * @return Describes the groups the signature belongs to
      * 
      */
     private final @Nullable String group;
     /**
-     * Describes if this override is inherited from base policy or not
+     * @return Describes if this override is inherited from base policy or not
      * 
      */
     private final @Nullable Boolean inheritedFromParentPolicy;
     /**
-     * Describes the last updated time of the signature (provided from 3rd party vendor)
+     * @return Describes the last updated time of the signature (provided from 3rd party vendor)
      * 
      */
     private final @Nullable String lastUpdated;
     /**
-     * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
+     * @return The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
      * 
      */
     private final @Nullable Integer mode;
     /**
-     * Describes the protocol the signatures is being enforced in
+     * @return Describes the protocol the signatures is being enforced in
      * 
      */
     private final @Nullable String protocol;
     /**
-     * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
+     * @return Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
      * 
      */
     private final @Nullable Integer severity;
     /**
-     * The ID of the signature
+     * @return The ID of the signature
      * 
      */
     private final @Nullable Integer signatureId;
     /**
-     * Describes the list of source ports related to this signature
+     * @return Describes the list of source ports related to this signature
      * 
      */
     private final @Nullable List<String> sourcePorts;
@@ -97,79 +97,79 @@ public final class SingleQueryResultResponse {
     }
 
     /**
-     * Describes what is the signature enforces
+     * @return Describes what is the signature enforces
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Describes the list of destination ports related to this signature
+     * @return Describes the list of destination ports related to this signature
      * 
-    */
+     */
     public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
-     * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
+     * @return Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
      * 
-    */
+     */
     public Optional<Integer> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
-     * Describes the groups the signature belongs to
+     * @return Describes the groups the signature belongs to
      * 
-    */
+     */
     public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
-     * Describes if this override is inherited from base policy or not
+     * @return Describes if this override is inherited from base policy or not
      * 
-    */
+     */
     public Optional<Boolean> inheritedFromParentPolicy() {
         return Optional.ofNullable(this.inheritedFromParentPolicy);
     }
     /**
-     * Describes the last updated time of the signature (provided from 3rd party vendor)
+     * @return Describes the last updated time of the signature (provided from 3rd party vendor)
      * 
-    */
+     */
     public Optional<String> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
     /**
-     * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
+     * @return The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
      * 
-    */
+     */
     public Optional<Integer> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * Describes the protocol the signatures is being enforced in
+     * @return Describes the protocol the signatures is being enforced in
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
+     * @return Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
      * 
-    */
+     */
     public Optional<Integer> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
-     * The ID of the signature
+     * @return The ID of the signature
      * 
-    */
+     */
     public Optional<Integer> signatureId() {
         return Optional.ofNullable(this.signatureId);
     }
     /**
-     * Describes the list of source ports related to this signature
+     * @return Describes the list of source ports related to this signature
      * 
-    */
+     */
     public List<String> sourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }

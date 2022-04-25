@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class AccessConfigResponse {
     /**
-     * An external IP address associated with the TPU worker.
+     * @return An external IP address associated with the TPU worker.
      * 
      */
     private final String externalIp;
@@ -21,9 +21,9 @@ public final class AccessConfigResponse {
     }
 
     /**
-     * An external IP address associated with the TPU worker.
+     * @return An external IP address associated with the TPU worker.
      * 
-    */
+     */
     public String externalIp() {
         return this.externalIp;
     }

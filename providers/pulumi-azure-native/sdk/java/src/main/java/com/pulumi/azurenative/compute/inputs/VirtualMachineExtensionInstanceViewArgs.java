@@ -28,6 +28,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The virtual machine extension name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="statuses")
     private @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<Output<List<InstanceViewStatusArgs>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -50,6 +58,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="substatuses")
     private @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<Output<List<InstanceViewStatusArgs>>> substatuses() {
         return Optional.ofNullable(this.substatuses);
     }
@@ -61,6 +73,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -72,6 +88,10 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="typeHandlerVersion")
     private @Nullable Output<String> typeHandlerVersion;
 
+    /**
+     * @return Specifies the version of the script handler.
+     * 
+     */
     public Optional<Output<String>> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }
@@ -104,55 +124,127 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
             $ = new VirtualMachineExtensionInstanceViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The virtual machine extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The virtual machine extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable Output<List<InstanceViewStatusArgs>> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(List<InstanceViewStatusArgs> statuses) {
             return statuses(Output.of(statuses));
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusArgs... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param substatuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substatuses(@Nullable Output<List<InstanceViewStatusArgs>> substatuses) {
             $.substatuses = substatuses;
             return this;
         }
 
+        /**
+         * @param substatuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substatuses(List<InstanceViewStatusArgs> substatuses) {
             return substatuses(Output.of(substatuses));
         }
 
+        /**
+         * @param substatuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder substatuses(InstanceViewStatusArgs... substatuses) {
             return substatuses(List.of(substatuses));
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
             $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
+        /**
+         * @param typeHandlerVersion Specifies the version of the script handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeHandlerVersion(String typeHandlerVersion) {
             return typeHandlerVersion(Output.of(typeHandlerVersion));
         }

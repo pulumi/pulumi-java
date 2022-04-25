@@ -28,6 +28,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentId")
     private @Nullable String deploymentId;
 
+    /**
+     * @return The identifier of the deployment that the stage points to.
+     * 
+     */
     public Optional<String> deploymentId() {
         return Optional.ofNullable(this.deploymentId);
     }
@@ -39,6 +43,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="percentTraffic")
     private @Nullable Double percentTraffic;
 
+    /**
+     * @return The percentage (0-100) of traffic diverted to a canary deployment.
+     * 
+     */
     public Optional<Double> percentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
@@ -50,6 +58,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageVariableOverrides")
     private @Nullable Object stageVariableOverrides;
 
+    /**
+     * @return Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
+     * 
+     */
     public Optional<Object> stageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
@@ -61,6 +73,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="useStageCache")
     private @Nullable Boolean useStageCache;
 
+    /**
+     * @return Whether the canary deployment uses the stage cache or not.
+     * 
+     */
     public Optional<Boolean> useStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }
@@ -92,21 +108,45 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
             $ = new StageCanarySetting(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentId The identifier of the deployment that the stage points to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentId(@Nullable String deploymentId) {
             $.deploymentId = deploymentId;
             return this;
         }
 
+        /**
+         * @param percentTraffic The percentage (0-100) of traffic diverted to a canary deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentTraffic(@Nullable Double percentTraffic) {
             $.percentTraffic = percentTraffic;
             return this;
         }
 
+        /**
+         * @param stageVariableOverrides Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             $.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
+        /**
+         * @param useStageCache Whether the canary deployment uses the stage cache or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useStageCache(@Nullable Boolean useStageCache) {
             $.useStageCache = useStageCache;
             return this;

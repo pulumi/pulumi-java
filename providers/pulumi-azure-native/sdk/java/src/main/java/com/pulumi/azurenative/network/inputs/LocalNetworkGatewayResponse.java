@@ -28,6 +28,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="bgpSettings")
     private @Nullable BgpSettingsResponse bgpSettings;
 
+    /**
+     * @return Local network gateway&#39;s BGP speaker settings.
+     * 
+     */
     public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
@@ -39,6 +43,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -50,6 +58,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return FQDN of local network gateway.
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -61,6 +73,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="gatewayIpAddress")
     private @Nullable String gatewayIpAddress;
 
+    /**
+     * @return IP address of local network gateway.
+     * 
+     */
     public Optional<String> gatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
@@ -72,6 +88,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -83,6 +103,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="localNetworkAddressSpace")
     private @Nullable AddressSpaceResponse localNetworkAddressSpace;
 
+    /**
+     * @return Local network site address space.
+     * 
+     */
     public Optional<AddressSpaceResponse> localNetworkAddressSpace() {
         return Optional.ofNullable(this.localNetworkAddressSpace);
     }
@@ -94,6 +118,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -105,6 +133,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -116,6 +148,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the local network gateway resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -127,6 +163,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="resourceGuid", required=true)
     private String resourceGuid;
 
+    /**
+     * @return The resource GUID property of the local network gateway resource.
+     * 
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
@@ -138,6 +178,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -149,6 +193,10 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -188,61 +236,133 @@ public final class LocalNetworkGatewayResponse extends com.pulumi.resources.Invo
             $ = new LocalNetworkGatewayResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpSettings Local network gateway&#39;s BGP speaker settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
             $.bgpSettings = bgpSettings;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param fqdn FQDN of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param gatewayIpAddress IP address of local network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             $.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param localNetworkAddressSpace Local network site address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
             $.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the local network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceGuid The resource GUID property of the local network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuid(String resourceGuid) {
             $.resourceGuid = resourceGuid;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

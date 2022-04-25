@@ -20,6 +20,10 @@ public final class NodeGroupAutoscalingPolicyResponse extends com.pulumi.resourc
     @Import(name="maxNodes", required=true)
     private Integer maxNodes;
 
+    /**
+     * @return The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+     * 
+     */
     public Integer maxNodes() {
         return this.maxNodes;
     }
@@ -31,6 +35,10 @@ public final class NodeGroupAutoscalingPolicyResponse extends com.pulumi.resourc
     @Import(name="minNodes", required=true)
     private Integer minNodes;
 
+    /**
+     * @return The minimum number of nodes that the group should have.
+     * 
+     */
     public Integer minNodes() {
         return this.minNodes;
     }
@@ -42,6 +50,10 @@ public final class NodeGroupAutoscalingPolicyResponse extends com.pulumi.resourc
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -72,16 +84,34 @@ public final class NodeGroupAutoscalingPolicyResponse extends com.pulumi.resourc
             $ = new NodeGroupAutoscalingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxNodes The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodes(Integer maxNodes) {
             $.maxNodes = maxNodes;
             return this;
         }
 
+        /**
+         * @param minNodes The minimum number of nodes that the group should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodes(Integer minNodes) {
             $.minNodes = minNodes;
             return this;
         }
 
+        /**
+         * @param mode The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;

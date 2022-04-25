@@ -22,6 +22,10 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The prefix path of the parameter.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -33,6 +37,10 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="recursive")
     private @Nullable Boolean recursive;
 
+    /**
+     * @return Whether to recursively return parameters under `path`. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> recursive() {
         return Optional.ofNullable(this.recursive);
     }
@@ -44,6 +52,10 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
     @Import(name="withDecryption")
     private @Nullable Boolean withDecryption;
 
+    /**
+     * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
+     * 
+     */
     public Optional<Boolean> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
@@ -74,16 +86,34 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
             $ = new GetParametersByPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param path The prefix path of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param recursive Whether to recursively return parameters under `path`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(@Nullable Boolean recursive) {
             $.recursive = recursive;
             return this;
         }
 
+        /**
+         * @param withDecryption Whether to return decrypted `SecureString` value. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder withDecryption(@Nullable Boolean withDecryption) {
             $.withDecryption = withDecryption;
             return this;

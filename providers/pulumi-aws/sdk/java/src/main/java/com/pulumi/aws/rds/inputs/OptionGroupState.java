@@ -26,6 +26,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the db option group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineName")
     private @Nullable Output<String> engineName;
 
+    /**
+     * @return Specifies the name of the engine that this option group should be associated with.
+     * 
+     */
     public Optional<Output<String>> engineName() {
         return Optional.ofNullable(this.engineName);
     }
@@ -48,6 +56,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="majorEngineVersion")
     private @Nullable Output<String> majorEngineVersion;
 
+    /**
+     * @return Specifies the major version of the engine that this option group should be associated with.
+     * 
+     */
     public Optional<Output<String>> majorEngineVersion() {
         return Optional.ofNullable(this.majorEngineVersion);
     }
@@ -59,6 +71,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The Name of the setting.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -81,6 +101,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="optionGroupDescription")
     private @Nullable Output<String> optionGroupDescription;
 
+    /**
+     * @return The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
+     * 
+     */
     public Optional<Output<String>> optionGroupDescription() {
         return Optional.ofNullable(this.optionGroupDescription);
     }
@@ -92,6 +116,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<List<OptionGroupOptionGetArgs>> options;
 
+    /**
+     * @return A list of Options to apply.
+     * 
+     */
     public Optional<Output<List<OptionGroupOptionGetArgs>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -103,6 +131,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +146,10 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -150,87 +186,201 @@ public final class OptionGroupState extends com.pulumi.resources.ResourceArgs {
             $ = new OptionGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the db option group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the db option group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param engineName Specifies the name of the engine that this option group should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineName(@Nullable Output<String> engineName) {
             $.engineName = engineName;
             return this;
         }
 
+        /**
+         * @param engineName Specifies the name of the engine that this option group should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineName(String engineName) {
             return engineName(Output.of(engineName));
         }
 
+        /**
+         * @param majorEngineVersion Specifies the major version of the engine that this option group should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder majorEngineVersion(@Nullable Output<String> majorEngineVersion) {
             $.majorEngineVersion = majorEngineVersion;
             return this;
         }
 
+        /**
+         * @param majorEngineVersion Specifies the major version of the engine that this option group should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder majorEngineVersion(String majorEngineVersion) {
             return majorEngineVersion(Output.of(majorEngineVersion));
         }
 
+        /**
+         * @param name The Name of the setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Name of the setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param optionGroupDescription The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
             $.optionGroupDescription = optionGroupDescription;
             return this;
         }
 
+        /**
+         * @param optionGroupDescription The description of the option group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionGroupDescription(String optionGroupDescription) {
             return optionGroupDescription(Output.of(optionGroupDescription));
         }
 
+        /**
+         * @param options A list of Options to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<OptionGroupOptionGetArgs>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options A list of Options to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<OptionGroupOptionGetArgs> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options A list of Options to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionGroupOptionGetArgs... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

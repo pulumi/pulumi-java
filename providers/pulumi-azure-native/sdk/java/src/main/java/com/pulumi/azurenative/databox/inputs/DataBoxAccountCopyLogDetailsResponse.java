@@ -24,6 +24,10 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -36,6 +40,11 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
     @Import(name="copyLogDetailsType", required=true)
     private String copyLogDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBox&#39;.
+     * 
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
@@ -47,6 +56,10 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
     @Import(name="copyLogLink", required=true)
     private String copyLogLink;
 
+    /**
+     * @return Link for copy logs.
+     * 
+     */
     public String copyLogLink() {
         return this.copyLogLink;
     }
@@ -58,6 +71,10 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
     @Import(name="copyVerboseLogLink", required=true)
     private String copyVerboseLogLink;
 
+    /**
+     * @return Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
+     * 
+     */
     public String copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }
@@ -89,21 +106,46 @@ public final class DataBoxAccountCopyLogDetailsResponse extends com.pulumi.resou
             $ = new DataBoxAccountCopyLogDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param copyLogDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBox&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetailsType(String copyLogDetailsType) {
             $.copyLogDetailsType = copyLogDetailsType;
             return this;
         }
 
+        /**
+         * @param copyLogLink Link for copy logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogLink(String copyLogLink) {
             $.copyLogLink = copyLogLink;
             return this;
         }
 
+        /**
+         * @param copyVerboseLogLink Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyVerboseLogLink(String copyVerboseLogLink) {
             $.copyVerboseLogLink = copyVerboseLogLink;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class CloudFormationTypeLoggingConfig {
     /**
-     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
+     * @return Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
      */
     private final String logGroupName;
     /**
-     * Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
+     * @return Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
      * 
      */
     private final String logRoleArn;
@@ -29,16 +29,16 @@ public final class CloudFormationTypeLoggingConfig {
     }
 
     /**
-     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
+     * @return Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
-    */
+     */
     public String logGroupName() {
         return this.logGroupName;
     }
     /**
-     * Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
+     * @return Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
      * 
-    */
+     */
     public String logRoleArn() {
         return this.logRoleArn;
     }

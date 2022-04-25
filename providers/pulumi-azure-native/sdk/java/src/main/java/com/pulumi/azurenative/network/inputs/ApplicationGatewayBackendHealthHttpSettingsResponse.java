@@ -27,6 +27,10 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends c
     @Import(name="backendHttpSettings")
     private @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
+    /**
+     * @return Reference to an ApplicationGatewayBackendHttpSettings resource.
+     * 
+     */
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends c
     @Import(name="servers")
     private @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
+    /**
+     * @return List of ApplicationGatewayBackendHealthServer resources.
+     * 
+     */
     public Optional<List<ApplicationGatewayBackendHealthServerResponse>> servers() {
         return Optional.ofNullable(this.servers);
     }
@@ -67,16 +75,34 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends c
             $ = new ApplicationGatewayBackendHealthHttpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendHttpSettings Reference to an ApplicationGatewayBackendHttpSettings resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettings(@Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings) {
             $.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
+        /**
+         * @param servers List of ApplicationGatewayBackendHealthServer resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(@Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
             $.servers = servers;
             return this;
         }
 
+        /**
+         * @param servers List of ApplicationGatewayBackendHealthServer resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servers(ApplicationGatewayBackendHealthServerResponse... servers) {
             return servers(List.of(servers));
         }

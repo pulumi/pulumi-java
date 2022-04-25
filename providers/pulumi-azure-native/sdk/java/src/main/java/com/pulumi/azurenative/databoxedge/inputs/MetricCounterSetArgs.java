@@ -25,6 +25,10 @@ public final class MetricCounterSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="counters", required=true)
     private Output<List<MetricCounterArgs>> counters;
 
+    /**
+     * @return The counters that should be collected in this set.
+     * 
+     */
     public Output<List<MetricCounterArgs>> counters() {
         return this.counters;
     }
@@ -53,15 +57,33 @@ public final class MetricCounterSetArgs extends com.pulumi.resources.ResourceArg
             $ = new MetricCounterSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param counters The counters that should be collected in this set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counters(Output<List<MetricCounterArgs>> counters) {
             $.counters = counters;
             return this;
         }
 
+        /**
+         * @param counters The counters that should be collected in this set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counters(List<MetricCounterArgs> counters) {
             return counters(Output.of(counters));
         }
 
+        /**
+         * @param counters The counters that should be collected in this set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counters(MetricCounterArgs... counters) {
             return counters(List.of(counters));
         }

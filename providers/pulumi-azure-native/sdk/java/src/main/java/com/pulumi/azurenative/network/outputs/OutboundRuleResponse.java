@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OutboundRuleResponse {
     /**
-     * The number of outbound ports to be used for NAT.
+     * @return The number of outbound ports to be used for NAT.
      * 
      */
     private final @Nullable Integer allocatedOutboundPorts;
     /**
-     * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
+     * @return A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
      */
     private final SubResourceResponse backendAddressPool;
     /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
     private final @Nullable Boolean enableTcpReset;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The Frontend IP addresses of the load balancer.
+     * @return The Frontend IP addresses of the load balancer.
      * 
      */
     private final List<SubResourceResponse> frontendIPConfigurations;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The timeout for the TCP idle connection.
+     * @return The timeout for the TCP idle connection.
      * 
      */
     private final @Nullable Integer idleTimeoutInMinutes;
     /**
-     * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The protocol for the outbound rule in load balancer.
+     * @return The protocol for the outbound rule in load balancer.
      * 
      */
     private final String protocol;
     /**
-     * The provisioning state of the outbound rule resource.
+     * @return The provisioning state of the outbound rule resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -98,79 +98,79 @@ public final class OutboundRuleResponse {
     }
 
     /**
-     * The number of outbound ports to be used for NAT.
+     * @return The number of outbound ports to be used for NAT.
      * 
-    */
+     */
     public Optional<Integer> allocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
     /**
-     * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
+     * @return A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
-    */
+     */
     public SubResourceResponse backendAddressPool() {
         return this.backendAddressPool;
     }
     /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
-    */
+     */
     public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The Frontend IP addresses of the load balancer.
+     * @return The Frontend IP addresses of the load balancer.
      * 
-    */
+     */
     public List<SubResourceResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The timeout for the TCP idle connection.
+     * @return The timeout for the TCP idle connection.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The protocol for the outbound rule in load balancer.
+     * @return The protocol for the outbound rule in load balancer.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The provisioning state of the outbound rule resource.
+     * @return The provisioning state of the outbound rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

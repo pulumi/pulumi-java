@@ -26,6 +26,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataset")
     private @Nullable Output<String> dataset;
 
+    /**
+     * @return Dataset accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -37,6 +41,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Project accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -48,6 +56,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Query used to access data in the connection.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -59,6 +71,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="table")
     private @Nullable Output<String> table;
 
+    /**
+     * @return Table accessed in the connection.
+     * 
+     */
     public Optional<Output<String>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -90,38 +106,86 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new BigQueryIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Dataset accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<String> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Dataset accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param project Project accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Project accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param query Query used to access data in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Query used to access data in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param table Table accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<String> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table Table accessed in the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             return table(Output.of(table));
         }

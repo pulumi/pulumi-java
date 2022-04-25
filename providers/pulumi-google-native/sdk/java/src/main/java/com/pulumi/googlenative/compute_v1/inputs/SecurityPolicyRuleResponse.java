@@ -29,6 +29,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -40,6 +44,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -51,6 +59,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="headerAction", required=true)
     private SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
+    /**
+     * @return Optional, additional actions that are performed on headers.
+     * 
+     */
     public SecurityPolicyRuleHttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
@@ -62,6 +74,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -73,6 +89,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="match", required=true)
     private SecurityPolicyRuleMatcherResponse match;
 
+    /**
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+     * 
+     */
     public SecurityPolicyRuleMatcherResponse match() {
         return this.match;
     }
@@ -84,6 +104,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="preview", required=true)
     private Boolean preview;
 
+    /**
+     * @return If set to true, the specified action is not enforced.
+     * 
+     */
     public Boolean preview() {
         return this.preview;
     }
@@ -95,6 +119,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -106,6 +134,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="rateLimitOptions", required=true)
     private SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
+    /**
+     * @return Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
+     * 
+     */
     public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {
         return this.rateLimitOptions;
     }
@@ -117,6 +149,10 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
     @Import(name="redirectOptions", required=true)
     private SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
+    /**
+     * @return Parameters defining the redirect action. Cannot be specified for any other actions.
+     * 
+     */
     public SecurityPolicyRuleRedirectOptionsResponse redirectOptions() {
         return this.redirectOptions;
     }
@@ -153,46 +189,100 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
             $ = new SecurityPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param headerAction Optional, additional actions that are performed on headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param kind [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param match A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(SecurityPolicyRuleMatcherResponse match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param preview If set to true, the specified action is not enforced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(Boolean preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param priority An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param rateLimitOptions Must be specified if the action is &#34;rate_based_ban&#34; or &#34;throttle&#34;. Cannot be specified for any other actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             $.rateLimitOptions = rateLimitOptions;
             return this;
         }
 
+        /**
+         * @param redirectOptions Parameters defining the redirect action. Cannot be specified for any other actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             $.redirectOptions = redirectOptions;
             return this;

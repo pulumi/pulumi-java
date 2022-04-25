@@ -27,6 +27,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="collectionOverrides")
     private @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
 
+    /**
+     * @return Allows resource handling overrides for specific collections
+     * 
+     */
     public Optional<Output<List<CollectionOverrideArgs>>> collectionOverrides() {
         return Optional.ofNullable(this.collectionOverrides);
     }
@@ -38,6 +42,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credential")
     private @Nullable Output<CredentialArgs> credential;
 
+    /**
+     * @return Credential used when interacting with this type.
+     * 
+     */
     public Optional<Output<CredentialArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -49,6 +57,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customCertificateAuthorityRoots")
     private @Nullable Output<List<String>> customCertificateAuthorityRoots;
 
+    /**
+     * @return List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+     * 
+     */
     public Optional<Output<List<String>>> customCertificateAuthorityRoots() {
         return Optional.ofNullable(this.customCertificateAuthorityRoots);
     }
@@ -60,6 +72,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the resource; provided by the client when the resource is created.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +87,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="descriptorUrl")
     private @Nullable Output<String> descriptorUrl;
 
+    /**
+     * @return Descriptor Url for the this type provider.
+     * 
+     */
     public Optional<Output<String>> descriptorUrl() {
         return Optional.ofNullable(this.descriptorUrl);
     }
@@ -82,6 +102,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
 
+    /**
+     * @return Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+     * 
+     */
     public Optional<Output<List<TypeProviderLabelEntryArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -93,6 +117,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<OptionsArgs> options;
 
+    /**
+     * @return Options to apply when handling any resources in this service.
+     * 
+     */
     public Optional<Output<OptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -147,86 +179,200 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TypeProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectionOverrides Allows resource handling overrides for specific collections
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionOverrides(@Nullable Output<List<CollectionOverrideArgs>> collectionOverrides) {
             $.collectionOverrides = collectionOverrides;
             return this;
         }
 
+        /**
+         * @param collectionOverrides Allows resource handling overrides for specific collections
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionOverrides(List<CollectionOverrideArgs> collectionOverrides) {
             return collectionOverrides(Output.of(collectionOverrides));
         }
 
+        /**
+         * @param collectionOverrides Allows resource handling overrides for specific collections
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionOverrides(CollectionOverrideArgs... collectionOverrides) {
             return collectionOverrides(List.of(collectionOverrides));
         }
 
+        /**
+         * @param credential Credential used when interacting with this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential Credential used when interacting with this type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param customCertificateAuthorityRoots List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCertificateAuthorityRoots(@Nullable Output<List<String>> customCertificateAuthorityRoots) {
             $.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
             return this;
         }
 
+        /**
+         * @param customCertificateAuthorityRoots List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCertificateAuthorityRoots(List<String> customCertificateAuthorityRoots) {
             return customCertificateAuthorityRoots(Output.of(customCertificateAuthorityRoots));
         }
 
+        /**
+         * @param customCertificateAuthorityRoots List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customCertificateAuthorityRoots(String... customCertificateAuthorityRoots) {
             return customCertificateAuthorityRoots(List.of(customCertificateAuthorityRoots));
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the resource; provided by the client when the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param descriptorUrl Descriptor Url for the this type provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptorUrl(@Nullable Output<String> descriptorUrl) {
             $.descriptorUrl = descriptorUrl;
             return this;
         }
 
+        /**
+         * @param descriptorUrl Descriptor Url for the this type provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptorUrl(String descriptorUrl) {
             return descriptorUrl(Output.of(descriptorUrl));
         }
 
+        /**
+         * @param labels Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<TypeProviderLabelEntryArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<TypeProviderLabelEntryArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(TypeProviderLabelEntryArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param options Options to apply when handling any resources in this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<OptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Options to apply when handling any resources in this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsArgs options) {
             return options(Output.of(options));
         }

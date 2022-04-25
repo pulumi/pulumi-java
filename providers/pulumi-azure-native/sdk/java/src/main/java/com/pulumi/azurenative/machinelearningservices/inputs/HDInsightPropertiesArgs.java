@@ -24,6 +24,10 @@ public final class HDInsightPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Public IP address of the master node of the cluster.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -35,6 +39,10 @@ public final class HDInsightPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="administratorAccount")
     private @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
+    /**
+     * @return Admin credentials for master node of the cluster
+     * 
+     */
     public Optional<Output<VirtualMachineSshCredentialsArgs>> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
@@ -46,6 +54,10 @@ public final class HDInsightPropertiesArgs extends com.pulumi.resources.Resource
     @Import(name="sshPort")
     private @Nullable Output<Integer> sshPort;
 
+    /**
+     * @return Port open for ssh connections on the master node of the cluster.
+     * 
+     */
     public Optional<Output<Integer>> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
@@ -76,29 +88,65 @@ public final class HDInsightPropertiesArgs extends com.pulumi.resources.Resource
             $ = new HDInsightPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Public IP address of the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Public IP address of the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param administratorAccount Admin credentials for master node of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(@Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount) {
             $.administratorAccount = administratorAccount;
             return this;
         }
 
+        /**
+         * @param administratorAccount Admin credentials for master node of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(VirtualMachineSshCredentialsArgs administratorAccount) {
             return administratorAccount(Output.of(administratorAccount));
         }
 
+        /**
+         * @param sshPort Port open for ssh connections on the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(@Nullable Output<Integer> sshPort) {
             $.sshPort = sshPort;
             return this;
         }
 
+        /**
+         * @param sshPort Port open for ssh connections on the master node of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(Integer sshPort) {
             return sshPort(Output.of(sshPort));
         }

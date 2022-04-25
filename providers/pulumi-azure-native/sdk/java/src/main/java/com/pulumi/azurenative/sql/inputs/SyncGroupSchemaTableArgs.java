@@ -28,6 +28,10 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
     @Import(name="columns")
     private @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
 
+    /**
+     * @return List of columns in sync group schema.
+     * 
+     */
     public Optional<Output<List<SyncGroupSchemaTableColumnArgs>>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -39,6 +43,10 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
     @Import(name="quotedName")
     private @Nullable Output<String> quotedName;
 
+    /**
+     * @return Quoted name of sync group schema table.
+     * 
+     */
     public Optional<Output<String>> quotedName() {
         return Optional.ofNullable(this.quotedName);
     }
@@ -68,24 +76,54 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
             $ = new SyncGroupSchemaTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns List of columns in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns List of columns in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<SyncGroupSchemaTableColumnArgs> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns List of columns in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(SyncGroupSchemaTableColumnArgs... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param quotedName Quoted name of sync group schema table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(@Nullable Output<String> quotedName) {
             $.quotedName = quotedName;
             return this;
         }
 
+        /**
+         * @param quotedName Quoted name of sync group schema table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(String quotedName) {
             return quotedName(Output.of(quotedName));
         }

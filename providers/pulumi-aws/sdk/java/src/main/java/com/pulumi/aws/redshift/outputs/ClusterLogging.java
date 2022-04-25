@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterLogging {
     /**
-     * The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+     * @return The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
      * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
      * 
      */
     private final @Nullable String bucketName;
     /**
-     * Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
+     * @return Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * 
      */
     private final Boolean enable;
     /**
-     * The prefix applied to the log file names.
+     * @return The prefix applied to the log file names.
      * 
      */
     private final @Nullable String s3KeyPrefix;
@@ -40,24 +40,24 @@ public final class ClusterLogging {
     }
 
     /**
-     * The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+     * @return The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
      * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
      * 
-    */
+     */
     public Optional<String> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
-     * Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
+     * @return Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * The prefix applied to the log file names.
+     * @return The prefix applied to the log file names.
      * 
-    */
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

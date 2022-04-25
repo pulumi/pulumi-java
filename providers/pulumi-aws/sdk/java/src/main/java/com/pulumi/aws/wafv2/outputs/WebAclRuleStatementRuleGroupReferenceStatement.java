@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRuleStatementRuleGroupReferenceStatement {
     /**
-     * The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
+     * @return The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
      * 
      */
     private final String arn;
     /**
-     * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+     * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
      */
     private final @Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules;
@@ -32,16 +32,16 @@ public final class WebAclRuleStatementRuleGroupReferenceStatement {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
+     * @return The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+     * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }

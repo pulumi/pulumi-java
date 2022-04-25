@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GameServerClusterConnectionInfoResponse {
     /**
-     * Reference to the GKE cluster where the game servers are installed.
+     * @return Reference to the GKE cluster where the game servers are installed.
      * 
      */
     private final GkeClusterReferenceResponse gkeClusterReference;
     /**
-     * Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+     * @return Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
      * 
      */
     private final String namespace;
@@ -30,16 +30,16 @@ public final class GameServerClusterConnectionInfoResponse {
     }
 
     /**
-     * Reference to the GKE cluster where the game servers are installed.
+     * @return Reference to the GKE cluster where the game servers are installed.
      * 
-    */
+     */
     public GkeClusterReferenceResponse gkeClusterReference() {
         return this.gkeClusterReference;
     }
     /**
-     * Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+     * @return Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }

@@ -25,6 +25,10 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the dependency.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceName")
     private @Nullable String resourceName;
 
+    /**
+     * @return The dependency resource name.
+     * 
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -47,6 +55,10 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return The dependency resource type.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -77,16 +89,34 @@ public final class BasicDependencyResponse extends com.pulumi.resources.InvokeAr
             $ = new BasicDependencyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resourceName The dependency resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType The dependency resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;

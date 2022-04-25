@@ -24,6 +24,10 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="identityConfig", required=true)
     private IdentityConfigResponse identityConfig;
 
+    /**
+     * @return Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
+     * 
+     */
     public IdentityConfigResponse identityConfig() {
         return this.identityConfig;
     }
@@ -35,6 +39,10 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="kerberosConfig", required=true)
     private KerberosConfigResponse kerberosConfig;
 
+    /**
+     * @return Optional. Kerberos related configuration.
+     * 
+     */
     public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
@@ -64,11 +72,23 @@ public final class SecurityConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new SecurityConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityConfig Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConfig(IdentityConfigResponse identityConfig) {
             $.identityConfig = identityConfig;
             return this;
         }
 
+        /**
+         * @param kerberosConfig Optional. Kerberos related configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             $.kerberosConfig = kerberosConfig;
             return this;

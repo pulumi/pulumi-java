@@ -27,6 +27,10 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
     private @Nullable Output<ScopeClusterArgs> cluster;
 
+    /**
+     * @return Specifies that the scope of the extensionInstance is Cluster
+     * 
+     */
     public Optional<Output<ScopeClusterArgs>> cluster() {
         return Optional.ofNullable(this.cluster);
     }
@@ -38,6 +42,10 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
     private @Nullable Output<ScopeNamespaceArgs> namespace;
 
+    /**
+     * @return Specifies that the scope of the extensionInstance is Namespace
+     * 
+     */
     public Optional<Output<ScopeNamespaceArgs>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -67,20 +75,44 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster Specifies that the scope of the extensionInstance is Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(@Nullable Output<ScopeClusterArgs> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster Specifies that the scope of the extensionInstance is Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(ScopeClusterArgs cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param namespace Specifies that the scope of the extensionInstance is Namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<ScopeNamespaceArgs> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Specifies that the scope of the extensionInstance is Namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(ScopeNamespaceArgs namespace) {
             return namespace(Output.of(namespace));
         }

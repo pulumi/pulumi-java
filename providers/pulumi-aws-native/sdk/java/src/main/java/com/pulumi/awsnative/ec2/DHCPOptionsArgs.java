@@ -25,6 +25,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return This value is used to complete unqualified DNS hostnames.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -36,6 +40,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainNameServers")
     private @Nullable Output<List<String>> domainNameServers;
 
+    /**
+     * @return The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
+     * 
+     */
     public Optional<Output<List<String>>> domainNameServers() {
         return Optional.ofNullable(this.domainNameServers);
     }
@@ -47,6 +55,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="netbiosNameServers")
     private @Nullable Output<List<String>> netbiosNameServers;
 
+    /**
+     * @return The IPv4 addresses of up to four NetBIOS name servers.
+     * 
+     */
     public Optional<Output<List<String>>> netbiosNameServers() {
         return Optional.ofNullable(this.netbiosNameServers);
     }
@@ -58,6 +70,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="netbiosNodeType")
     private @Nullable Output<Integer> netbiosNodeType;
 
+    /**
+     * @return The NetBIOS node type (1, 2, 4, or 8).
+     * 
+     */
     public Optional<Output<Integer>> netbiosNodeType() {
         return Optional.ofNullable(this.netbiosNodeType);
     }
@@ -69,6 +85,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ntpServers")
     private @Nullable Output<List<String>> ntpServers;
 
+    /**
+     * @return The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+     * 
+     */
     public Optional<Output<List<String>>> ntpServers() {
         return Optional.ofNullable(this.ntpServers);
     }
@@ -80,6 +100,10 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DHCPOptionsTagArgs>> tags;
 
+    /**
+     * @return Any tags assigned to the DHCP options set.
+     * 
+     */
     public Optional<Output<List<DHCPOptionsTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,72 +137,168 @@ public final class DHCPOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DHCPOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName This value is used to complete unqualified DNS hostnames.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName This value is used to complete unqualified DNS hostnames.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param domainNameServers The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameServers(@Nullable Output<List<String>> domainNameServers) {
             $.domainNameServers = domainNameServers;
             return this;
         }
 
+        /**
+         * @param domainNameServers The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameServers(List<String> domainNameServers) {
             return domainNameServers(Output.of(domainNameServers));
         }
 
+        /**
+         * @param domainNameServers The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainNameServers(String... domainNameServers) {
             return domainNameServers(List.of(domainNameServers));
         }
 
+        /**
+         * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(@Nullable Output<List<String>> netbiosNameServers) {
             $.netbiosNameServers = netbiosNameServers;
             return this;
         }
 
+        /**
+         * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(List<String> netbiosNameServers) {
             return netbiosNameServers(Output.of(netbiosNameServers));
         }
 
+        /**
+         * @param netbiosNameServers The IPv4 addresses of up to four NetBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(String... netbiosNameServers) {
             return netbiosNameServers(List.of(netbiosNameServers));
         }
 
+        /**
+         * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNodeType(@Nullable Output<Integer> netbiosNodeType) {
             $.netbiosNodeType = netbiosNodeType;
             return this;
         }
 
+        /**
+         * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNodeType(Integer netbiosNodeType) {
             return netbiosNodeType(Output.of(netbiosNodeType));
         }
 
+        /**
+         * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServers(@Nullable Output<List<String>> ntpServers) {
             $.ntpServers = ntpServers;
             return this;
         }
 
+        /**
+         * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServers(List<String> ntpServers) {
             return ntpServers(Output.of(ntpServers));
         }
 
+        /**
+         * @param ntpServers The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServers(String... ntpServers) {
             return ntpServers(List.of(ntpServers));
         }
 
+        /**
+         * @param tags Any tags assigned to the DHCP options set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DHCPOptionsTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Any tags assigned to the DHCP options set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DHCPOptionsTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Any tags assigned to the DHCP options set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DHCPOptionsTagArgs... tags) {
             return tags(List.of(tags));
         }

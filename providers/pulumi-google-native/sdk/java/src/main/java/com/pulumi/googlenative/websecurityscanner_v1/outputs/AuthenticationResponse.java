@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class AuthenticationResponse {
     /**
-     * Authentication using a custom account.
+     * @return Authentication using a custom account.
      * 
      */
     private final CustomAccountResponse customAccount;
     /**
-     * Authentication using a Google account.
+     * @return Authentication using a Google account.
      * 
      */
     private final GoogleAccountResponse googleAccount;
     /**
-     * Authentication using Identity-Aware-Proxy (IAP).
+     * @return Authentication using Identity-Aware-Proxy (IAP).
      * 
      */
     private final IapCredentialResponse iapCredential;
@@ -38,23 +38,23 @@ public final class AuthenticationResponse {
     }
 
     /**
-     * Authentication using a custom account.
+     * @return Authentication using a custom account.
      * 
-    */
+     */
     public CustomAccountResponse customAccount() {
         return this.customAccount;
     }
     /**
-     * Authentication using a Google account.
+     * @return Authentication using a Google account.
      * 
-    */
+     */
     public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
     }
     /**
-     * Authentication using Identity-Aware-Proxy (IAP).
+     * @return Authentication using Identity-Aware-Proxy (IAP).
      * 
-    */
+     */
     public IapCredentialResponse iapCredential() {
         return this.iapCredential;
     }

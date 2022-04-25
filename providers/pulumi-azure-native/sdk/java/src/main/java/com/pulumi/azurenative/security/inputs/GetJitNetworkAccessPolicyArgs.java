@@ -19,6 +19,10 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="ascLocation", required=true)
     private String ascLocation;
 
+    /**
+     * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
+     * 
+     */
     public String ascLocation() {
         return this.ascLocation;
     }
@@ -30,6 +34,10 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="jitNetworkAccessPolicyName", required=true)
     private String jitNetworkAccessPolicyName;
 
+    /**
+     * @return Name of a Just-in-Time access configuration policy.
+     * 
+     */
     public String jitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName;
     }
@@ -41,6 +49,10 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
             $ = new GetJitNetworkAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
         public Builder ascLocation(String ascLocation) {
             $.ascLocation = ascLocation;
             return this;
         }
 
+        /**
+         * @param jitNetworkAccessPolicyName Name of a Just-in-Time access configuration policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
             $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

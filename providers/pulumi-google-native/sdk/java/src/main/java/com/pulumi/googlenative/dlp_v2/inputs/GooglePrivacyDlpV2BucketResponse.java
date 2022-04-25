@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
     @Import(name="max", required=true)
     private GooglePrivacyDlpV2ValueResponse max;
 
+    /**
+     * @return Upper bound of the range, exclusive; type must match min.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse max() {
         return this.max;
     }
@@ -34,6 +38,10 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
     @Import(name="min", required=true)
     private GooglePrivacyDlpV2ValueResponse min;
 
+    /**
+     * @return Lower bound of the range, inclusive. Type should be the same as max if used.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse min() {
         return this.min;
     }
@@ -45,6 +53,10 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
     @Import(name="replacementValue", required=true)
     private GooglePrivacyDlpV2ValueResponse replacementValue;
 
+    /**
+     * @return Replacement value for this bucket.
+     * 
+     */
     public GooglePrivacyDlpV2ValueResponse replacementValue() {
         return this.replacementValue;
     }
@@ -75,16 +87,34 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
             $ = new GooglePrivacyDlpV2BucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Upper bound of the range, exclusive; type must match min.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(GooglePrivacyDlpV2ValueResponse max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param min Lower bound of the range, inclusive. Type should be the same as max if used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(GooglePrivacyDlpV2ValueResponse min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param replacementValue Replacement value for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
             $.replacementValue = replacementValue;
             return this;

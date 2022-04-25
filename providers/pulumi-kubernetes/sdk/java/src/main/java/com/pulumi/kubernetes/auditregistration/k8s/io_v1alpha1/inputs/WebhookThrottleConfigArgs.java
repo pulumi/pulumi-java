@@ -26,6 +26,10 @@ public final class WebhookThrottleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="burst")
     private @Nullable Output<Integer> burst;
 
+    /**
+     * @return ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
+     * 
+     */
     public Optional<Output<Integer>> burst() {
         return Optional.ofNullable(this.burst);
     }
@@ -37,6 +41,10 @@ public final class WebhookThrottleConfigArgs extends com.pulumi.resources.Resour
     @Import(name="qps")
     private @Nullable Output<Integer> qps;
 
+    /**
+     * @return ThrottleQPS maximum number of batches per second default 10 QPS
+     * 
+     */
     public Optional<Output<Integer>> qps() {
         return Optional.ofNullable(this.qps);
     }
@@ -66,20 +74,44 @@ public final class WebhookThrottleConfigArgs extends com.pulumi.resources.Resour
             $ = new WebhookThrottleConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param burst ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder burst(@Nullable Output<Integer> burst) {
             $.burst = burst;
             return this;
         }
 
+        /**
+         * @param burst ThrottleBurst is the maximum number of events sent at the same moment default 15 QPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder burst(Integer burst) {
             return burst(Output.of(burst));
         }
 
+        /**
+         * @param qps ThrottleQPS maximum number of batches per second default 10 QPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder qps(@Nullable Output<Integer> qps) {
             $.qps = qps;
             return this;
         }
 
+        /**
+         * @param qps ThrottleQPS maximum number of batches per second default 10 QPS
+         * 
+         * @return builder
+         * 
+         */
         public Builder qps(Integer qps) {
             return qps(Output.of(qps));
         }

@@ -25,6 +25,10 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="privateEndpoint", required=true)
     private PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return The Private Endpoint network resource that is linked to the Private Endpoint connection.
+     * 
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
@@ -36,6 +40,10 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="privateLinkServiceConnectionState", required=true)
     private VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Gets or sets private link service connection state.
+     * 
+     */
     public VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
@@ -47,6 +55,10 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Gets or sets provisioning state of the private endpoint connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -77,16 +89,34 @@ public final class VaultPrivateEndpointConnectionResponse extends com.pulumi.res
             $ = new VaultPrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint The Private Endpoint network resource that is linked to the Private Endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Gets or sets private link service connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState Gets or sets provisioning state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

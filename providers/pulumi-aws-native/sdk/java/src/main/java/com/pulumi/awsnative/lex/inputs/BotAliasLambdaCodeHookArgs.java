@@ -24,6 +24,10 @@ public final class BotAliasLambdaCodeHookArgs extends com.pulumi.resources.Resou
     @Import(name="codeHookInterfaceVersion", required=true)
     private Output<String> codeHookInterfaceVersion;
 
+    /**
+     * @return The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+     * 
+     */
     public Output<String> codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
@@ -35,6 +39,10 @@ public final class BotAliasLambdaCodeHookArgs extends com.pulumi.resources.Resou
     @Import(name="lambdaArn", required=true)
     private Output<String> lambdaArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Lambda function.
+     * 
+     */
     public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
@@ -64,20 +72,44 @@ public final class BotAliasLambdaCodeHookArgs extends com.pulumi.resources.Resou
             $ = new BotAliasLambdaCodeHookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeHookInterfaceVersion The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeHookInterfaceVersion(Output<String> codeHookInterfaceVersion) {
             $.codeHookInterfaceVersion = codeHookInterfaceVersion;
             return this;
         }
 
+        /**
+         * @param codeHookInterfaceVersion The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
             return codeHookInterfaceVersion(Output.of(codeHookInterfaceVersion));
         }
 
+        /**
+         * @param lambdaArn The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(Output<String> lambdaArn) {
             $.lambdaArn = lambdaArn;
             return this;
         }
 
+        /**
+         * @param lambdaArn The Amazon Resource Name (ARN) of the Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaArn(String lambdaArn) {
             return lambdaArn(Output.of(lambdaArn));
         }

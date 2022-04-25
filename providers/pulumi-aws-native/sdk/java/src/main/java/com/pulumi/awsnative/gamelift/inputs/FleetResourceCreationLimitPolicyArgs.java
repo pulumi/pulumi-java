@@ -28,6 +28,10 @@ public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resou
     @Import(name="newGameSessionsPerCreator")
     private @Nullable Output<Integer> newGameSessionsPerCreator;
 
+    /**
+     * @return The maximum number of game sessions that an individual can create during the policy period.
+     * 
+     */
     public Optional<Output<Integer>> newGameSessionsPerCreator() {
         return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
@@ -39,6 +43,10 @@ public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resou
     @Import(name="policyPeriodInMinutes")
     private @Nullable Output<Integer> policyPeriodInMinutes;
 
+    /**
+     * @return The time span used in evaluating the resource creation limit policy.
+     * 
+     */
     public Optional<Output<Integer>> policyPeriodInMinutes() {
         return Optional.ofNullable(this.policyPeriodInMinutes);
     }
@@ -68,20 +76,44 @@ public final class FleetResourceCreationLimitPolicyArgs extends com.pulumi.resou
             $ = new FleetResourceCreationLimitPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newGameSessionsPerCreator The maximum number of game sessions that an individual can create during the policy period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newGameSessionsPerCreator(@Nullable Output<Integer> newGameSessionsPerCreator) {
             $.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
 
+        /**
+         * @param newGameSessionsPerCreator The maximum number of game sessions that an individual can create during the policy period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newGameSessionsPerCreator(Integer newGameSessionsPerCreator) {
             return newGameSessionsPerCreator(Output.of(newGameSessionsPerCreator));
         }
 
+        /**
+         * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyPeriodInMinutes(@Nullable Output<Integer> policyPeriodInMinutes) {
             $.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }
 
+        /**
+         * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyPeriodInMinutes(Integer policyPeriodInMinutes) {
             return policyPeriodInMinutes(Output.of(policyPeriodInMinutes));
         }

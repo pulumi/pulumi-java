@@ -23,6 +23,10 @@ public final class TransportPreferencesResponse extends com.pulumi.resources.Inv
     @Import(name="preferredShipmentType", required=true)
     private String preferredShipmentType;
 
+    /**
+     * @return Indicates Shipment Logistics type that the customer preferred.
+     * 
+     */
     public String preferredShipmentType() {
         return this.preferredShipmentType;
     }
@@ -51,6 +55,12 @@ public final class TransportPreferencesResponse extends com.pulumi.resources.Inv
             $ = new TransportPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preferredShipmentType Indicates Shipment Logistics type that the customer preferred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShipmentType(String preferredShipmentType) {
             $.preferredShipmentType = preferredShipmentType;
             return this;

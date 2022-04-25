@@ -31,6 +31,10 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends com.pulumi.
     @Import(name="logStreams")
     private @Nullable Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
+    /**
+     * @return A block the specifies how an opsworks logs look like. See Log Streams.
+     * 
+     */
     public Optional<Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>>> logStreams() {
         return Optional.ofNullable(this.logStreams);
     }
@@ -69,15 +73,33 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends com.pulumi.
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param logStreams A block the specifies how an opsworks logs look like. See Log Streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreams(@Nullable Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             $.logStreams = logStreams;
             return this;
         }
 
+        /**
+         * @param logStreams A block the specifies how an opsworks logs look like. See Log Streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreams(List<CustomLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             return logStreams(Output.of(logStreams));
         }
 
+        /**
+         * @param logStreams A block the specifies how an opsworks logs look like. See Log Streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStreams(CustomLayerCloudwatchConfigurationLogStreamGetArgs... logStreams) {
             return logStreams(List.of(logStreams));
         }

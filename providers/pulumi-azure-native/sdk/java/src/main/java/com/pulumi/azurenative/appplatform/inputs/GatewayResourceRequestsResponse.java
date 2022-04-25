@@ -25,6 +25,10 @@ public final class GatewayResourceRequestsResponse extends com.pulumi.resources.
     @Import(name="cpu")
     private @Nullable String cpu;
 
+    /**
+     * @return Cpu allocated to each Spring Cloud Gateway instance.
+     * 
+     */
     public Optional<String> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -36,6 +40,10 @@ public final class GatewayResourceRequestsResponse extends com.pulumi.resources.
     @Import(name="memory")
     private @Nullable String memory;
 
+    /**
+     * @return Memory allocated to each Spring Cloud Gateway instance.
+     * 
+     */
     public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -65,11 +73,23 @@ public final class GatewayResourceRequestsResponse extends com.pulumi.resources.
             $ = new GatewayResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Cpu allocated to each Spring Cloud Gateway instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable String cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memory Memory allocated to each Spring Cloud Gateway instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable String memory) {
             $.memory = memory;
             return this;

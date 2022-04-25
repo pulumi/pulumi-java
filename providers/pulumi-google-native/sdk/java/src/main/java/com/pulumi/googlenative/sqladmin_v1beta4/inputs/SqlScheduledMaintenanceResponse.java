@@ -31,6 +31,10 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
     @Import(name="canReschedule", required=true)
     private Boolean canReschedule;
 
+    /**
+     * @return If the scheduled maintenance can be rescheduled.
+     * 
+     */
     public Boolean canReschedule() {
         return this.canReschedule;
     }
@@ -42,6 +46,10 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
     @Import(name="scheduleDeadlineTime", required=true)
     private String scheduleDeadlineTime;
 
+    /**
+     * @return Maintenance cannot be rescheduled to start beyond this deadline.
+     * 
+     */
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
@@ -53,6 +61,10 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of any upcoming scheduled maintenance for this instance.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -89,16 +101,34 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
             return this;
         }
 
+        /**
+         * @param canReschedule If the scheduled maintenance can be rescheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReschedule(Boolean canReschedule) {
             $.canReschedule = canReschedule;
             return this;
         }
 
+        /**
+         * @param scheduleDeadlineTime Maintenance cannot be rescheduled to start beyond this deadline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of any upcoming scheduled maintenance for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

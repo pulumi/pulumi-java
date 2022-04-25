@@ -19,6 +19,10 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The ID of a REST API with which to associate this model.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -59,11 +67,23 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of a REST API with which to associate this model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;

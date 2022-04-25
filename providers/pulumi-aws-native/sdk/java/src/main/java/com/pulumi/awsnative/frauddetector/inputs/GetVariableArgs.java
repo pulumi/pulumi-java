@@ -19,6 +19,10 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The ARN of the variable.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVariableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

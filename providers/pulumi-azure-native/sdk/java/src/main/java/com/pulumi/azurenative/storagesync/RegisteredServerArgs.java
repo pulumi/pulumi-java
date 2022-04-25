@@ -22,6 +22,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="agentVersion")
     private @Nullable Output<String> agentVersion;
 
+    /**
+     * @return Registered Server Agent Version
+     * 
+     */
     public Optional<Output<String>> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -33,6 +37,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return Registered Server clusterId
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -44,6 +52,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return Registered Server clusterName
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -55,6 +67,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly Name
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -66,6 +82,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="lastHeartBeat")
     private @Nullable Output<String> lastHeartBeat;
 
+    /**
+     * @return Registered Server last heart beat
+     * 
+     */
     public Optional<Output<String>> lastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
@@ -77,6 +97,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverCertificate")
     private @Nullable Output<String> serverCertificate;
 
+    /**
+     * @return Registered Server Certificate
+     * 
+     */
     public Optional<Output<String>> serverCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
@@ -99,6 +127,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverId")
     private @Nullable Output<String> serverId;
 
+    /**
+     * @return Registered Server serverId
+     * 
+     */
     public Optional<Output<String>> serverId() {
         return Optional.ofNullable(this.serverId);
     }
@@ -110,6 +142,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverOSVersion")
     private @Nullable Output<String> serverOSVersion;
 
+    /**
+     * @return Registered Server OS Version
+     * 
+     */
     public Optional<Output<String>> serverOSVersion() {
         return Optional.ofNullable(this.serverOSVersion);
     }
@@ -121,6 +157,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverRole")
     private @Nullable Output<String> serverRole;
 
+    /**
+     * @return Registered Server serverRole
+     * 
+     */
     public Optional<Output<String>> serverRole() {
         return Optional.ofNullable(this.serverRole);
     }
@@ -132,6 +172,10 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="storageSyncServiceName", required=true)
     private Output<String> storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -170,101 +214,233 @@ public final class RegisteredServerArgs extends com.pulumi.resources.ResourceArg
             $ = new RegisteredServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion Registered Server Agent Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param agentVersion Registered Server Agent Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(String agentVersion) {
             return agentVersion(Output.of(agentVersion));
         }
 
+        /**
+         * @param clusterId Registered Server clusterId
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId Registered Server clusterId
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param clusterName Registered Server clusterName
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Registered Server clusterName
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param friendlyName Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param lastHeartBeat Registered Server last heart beat
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartBeat(@Nullable Output<String> lastHeartBeat) {
             $.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
+        /**
+         * @param lastHeartBeat Registered Server last heart beat
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartBeat(String lastHeartBeat) {
             return lastHeartBeat(Output.of(lastHeartBeat));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverCertificate Registered Server Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificate(@Nullable Output<String> serverCertificate) {
             $.serverCertificate = serverCertificate;
             return this;
         }
 
+        /**
+         * @param serverCertificate Registered Server Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificate(String serverCertificate) {
             return serverCertificate(Output.of(serverCertificate));
         }
 
+        /**
+         * @param serverId Registered Server serverId
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(@Nullable Output<String> serverId) {
             $.serverId = serverId;
             return this;
         }
 
+        /**
+         * @param serverId Registered Server serverId
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverId(String serverId) {
             return serverId(Output.of(serverId));
         }
 
+        /**
+         * @param serverOSVersion Registered Server OS Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverOSVersion(@Nullable Output<String> serverOSVersion) {
             $.serverOSVersion = serverOSVersion;
             return this;
         }
 
+        /**
+         * @param serverOSVersion Registered Server OS Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverOSVersion(String serverOSVersion) {
             return serverOSVersion(Output.of(serverOSVersion));
         }
 
+        /**
+         * @param serverRole Registered Server serverRole
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverRole(@Nullable Output<String> serverRole) {
             $.serverRole = serverRole;
             return this;
         }
 
+        /**
+         * @param serverRole Registered Server serverRole
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverRole(String serverRole) {
             return serverRole(Output.of(serverRole));
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             return storageSyncServiceName(Output.of(storageSyncServiceName));
         }

@@ -23,6 +23,10 @@ public final class HorizontalPodAutoscalingResponse extends com.pulumi.resources
     @Import(name="disabled", required=true)
     private Boolean disabled;
 
+    /**
+     * @return Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
+     * 
+     */
     public Boolean disabled() {
         return this.disabled;
     }
@@ -51,6 +55,12 @@ public final class HorizontalPodAutoscalingResponse extends com.pulumi.resources
             $ = new HorizontalPodAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             $.disabled = disabled;
             return this;

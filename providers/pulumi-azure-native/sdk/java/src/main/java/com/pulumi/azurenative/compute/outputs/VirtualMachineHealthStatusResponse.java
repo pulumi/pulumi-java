@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class VirtualMachineHealthStatusResponse {
     /**
-     * The health status information for the VM.
+     * @return The health status information for the VM.
      * 
      */
     private final InstanceViewStatusResponse status;
@@ -21,9 +21,9 @@ public final class VirtualMachineHealthStatusResponse {
     }
 
     /**
-     * The health status information for the VM.
+     * @return The health status information for the VM.
      * 
-    */
+     */
     public InstanceViewStatusResponse status() {
         return this.status;
     }

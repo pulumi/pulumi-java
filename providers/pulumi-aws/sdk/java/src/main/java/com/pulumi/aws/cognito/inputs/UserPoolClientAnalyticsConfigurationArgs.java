@@ -23,6 +23,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
     @Import(name="applicationArn")
     private @Nullable Output<String> applicationArn;
 
+    /**
+     * @return Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+     * 
+     */
     public Optional<Output<String>> applicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
@@ -34,6 +38,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
+    /**
+     * @return Application ID for an Amazon Pinpoint application.
+     * 
+     */
     public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -45,6 +53,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return ID for the Analytics Configuration. Conflicts with `application_arn`.
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -56,6 +68,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -67,6 +83,10 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
     @Import(name="userDataShared")
     private @Nullable Output<Boolean> userDataShared;
 
+    /**
+     * @return If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+     * 
+     */
     public Optional<Output<Boolean>> userDataShared() {
         return Optional.ofNullable(this.userDataShared);
     }
@@ -99,47 +119,107 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends com.pulumi.r
             $ = new UserPoolClientAnalyticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationArn Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationArn(@Nullable Output<String> applicationArn) {
             $.applicationArn = applicationArn;
             return this;
         }
 
+        /**
+         * @param applicationArn Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationArn(String applicationArn) {
             return applicationArn(Output.of(applicationArn));
         }
 
+        /**
+         * @param applicationId Application ID for an Amazon Pinpoint application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId Application ID for an Amazon Pinpoint application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param externalId ID for the Analytics Configuration. Conflicts with `application_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId ID for the Analytics Configuration. Conflicts with `application_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param userDataShared If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataShared(@Nullable Output<Boolean> userDataShared) {
             $.userDataShared = userDataShared;
             return this;
         }
 
+        /**
+         * @param userDataShared If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataShared(Boolean userDataShared) {
             return userDataShared(Output.of(userDataShared));
         }

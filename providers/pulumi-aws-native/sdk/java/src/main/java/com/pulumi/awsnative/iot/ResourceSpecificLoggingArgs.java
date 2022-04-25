@@ -22,6 +22,10 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="logLevel", required=true)
     private Output<ResourceSpecificLoggingLogLevel> logLevel;
 
+    /**
+     * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+     * 
+     */
     public Output<ResourceSpecificLoggingLogLevel> logLevel() {
         return this.logLevel;
     }
@@ -33,6 +37,10 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="targetName", required=true)
     private Output<String> targetName;
 
+    /**
+     * @return The target name.
+     * 
+     */
     public Output<String> targetName() {
         return this.targetName;
     }
@@ -44,6 +52,10 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
     @Import(name="targetType", required=true)
     private Output<ResourceSpecificLoggingTargetType> targetType;
 
+    /**
+     * @return The target type. Value must be THING_GROUP.
+     * 
+     */
     public Output<ResourceSpecificLoggingTargetType> targetType() {
         return this.targetType;
     }
@@ -74,29 +86,65 @@ public final class ResourceSpecificLoggingArgs extends com.pulumi.resources.Reso
             $ = new ResourceSpecificLoggingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logLevel The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(Output<ResourceSpecificLoggingLogLevel> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(ResourceSpecificLoggingLogLevel logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param targetName The target name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(Output<String> targetName) {
             $.targetName = targetName;
             return this;
         }
 
+        /**
+         * @param targetName The target name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetName(String targetName) {
             return targetName(Output.of(targetName));
         }
 
+        /**
+         * @param targetType The target type. Value must be THING_GROUP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(Output<ResourceSpecificLoggingTargetType> targetType) {
             $.targetType = targetType;
             return this;
         }
 
+        /**
+         * @param targetType The target type. Value must be THING_GROUP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetType(ResourceSpecificLoggingTargetType targetType) {
             return targetType(Output.of(targetType));
         }

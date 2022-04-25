@@ -25,6 +25,10 @@ public final class MasterProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The Azure resource ID of the master subnet (immutable).
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -36,6 +40,10 @@ public final class MasterProfileResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return The size of the master VMs (immutable).
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -65,11 +73,23 @@ public final class MasterProfileResponse extends com.pulumi.resources.InvokeArgs
             $ = new MasterProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId The Azure resource ID of the master subnet (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param vmSize The size of the master VMs (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

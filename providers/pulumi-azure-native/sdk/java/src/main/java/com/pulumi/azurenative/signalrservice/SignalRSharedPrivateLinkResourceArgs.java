@@ -22,6 +22,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="groupId", required=true)
     private Output<String> groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for
+     * 
+     */
     public Output<String> groupId() {
         return this.groupId;
     }
@@ -33,6 +37,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="privateLinkResourceId", required=true)
     private Output<String> privateLinkResourceId;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for
+     * 
+     */
     public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
@@ -44,6 +52,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -55,6 +67,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -77,6 +97,10 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
     @Import(name="sharedPrivateLinkResourceName")
     private @Nullable Output<String> sharedPrivateLinkResourceName;
 
+    /**
+     * @return The name of the shared private link resource
+     * 
+     */
     public Optional<Output<String>> sharedPrivateLinkResourceName() {
         return Optional.ofNullable(this.sharedPrivateLinkResourceName);
     }
@@ -110,56 +134,128 @@ public final class SignalRSharedPrivateLinkResourceArgs extends com.pulumi.resou
             $ = new SignalRSharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(Output<String> privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sharedPrivateLinkResourceName The name of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
             $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
 
+        /**
+         * @param sharedPrivateLinkResourceName The name of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
             return sharedPrivateLinkResourceName(Output.of(sharedPrivateLinkResourceName));
         }

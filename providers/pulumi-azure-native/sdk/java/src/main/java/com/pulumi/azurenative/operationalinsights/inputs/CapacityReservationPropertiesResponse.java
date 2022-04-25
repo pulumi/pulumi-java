@@ -24,6 +24,10 @@ public final class CapacityReservationPropertiesResponse extends com.pulumi.reso
     @Import(name="lastSkuUpdate", required=true)
     private String lastSkuUpdate;
 
+    /**
+     * @return The last time Sku was updated.
+     * 
+     */
     public String lastSkuUpdate() {
         return this.lastSkuUpdate;
     }
@@ -35,6 +39,10 @@ public final class CapacityReservationPropertiesResponse extends com.pulumi.reso
     @Import(name="minCapacity", required=true)
     private Double minCapacity;
 
+    /**
+     * @return Minimum CapacityReservation value in GB.
+     * 
+     */
     public Double minCapacity() {
         return this.minCapacity;
     }
@@ -64,11 +72,23 @@ public final class CapacityReservationPropertiesResponse extends com.pulumi.reso
             $ = new CapacityReservationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastSkuUpdate The last time Sku was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSkuUpdate(String lastSkuUpdate) {
             $.lastSkuUpdate = lastSkuUpdate;
             return this;
         }
 
+        /**
+         * @param minCapacity Minimum CapacityReservation value in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Double minCapacity) {
             $.minCapacity = minCapacity;
             return this;

@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupUser {
     /**
-     * The Amazon Resource Name (ARN) specifying the iam user.
+     * @return The Amazon Resource Name (ARN) specifying the iam user.
      * 
      */
     private final String arn;
     /**
-     * The path to the iam user.
+     * @return The path to the iam user.
      * 
      */
     private final String path;
     /**
-     * The stable and unique string identifying the iam user.
+     * @return The stable and unique string identifying the iam user.
      * 
      */
     private final String userId;
     /**
-     * The name of the iam user.
+     * @return The name of the iam user.
      * 
      */
     private final String userName;
@@ -43,30 +43,30 @@ public final class GetGroupUser {
     }
 
     /**
-     * The Amazon Resource Name (ARN) specifying the iam user.
+     * @return The Amazon Resource Name (ARN) specifying the iam user.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The path to the iam user.
+     * @return The path to the iam user.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The stable and unique string identifying the iam user.
+     * @return The stable and unique string identifying the iam user.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * The name of the iam user.
+     * @return The name of the iam user.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

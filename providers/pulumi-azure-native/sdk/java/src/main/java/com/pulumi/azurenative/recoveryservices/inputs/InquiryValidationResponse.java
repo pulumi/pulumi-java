@@ -26,6 +26,10 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
     @Import(name="additionalDetail", required=true)
     private String additionalDetail;
 
+    /**
+     * @return Error Additional Detail in case the status is non-success.
+     * 
+     */
     public String additionalDetail() {
         return this.additionalDetail;
     }
@@ -37,6 +41,10 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
     @Import(name="errorDetail")
     private @Nullable ErrorDetailResponse errorDetail;
 
+    /**
+     * @return Error Detail in case the status is non-success.
+     * 
+     */
     public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -48,6 +56,10 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status for the Inquiry Validation.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class InquiryValidationResponse extends com.pulumi.resources.Invoke
             $ = new InquiryValidationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalDetail Error Additional Detail in case the status is non-success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalDetail(String additionalDetail) {
             $.additionalDetail = additionalDetail;
             return this;
         }
 
+        /**
+         * @param errorDetail Error Detail in case the status is non-success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             $.errorDetail = errorDetail;
             return this;
         }
 
+        /**
+         * @param status Status for the Inquiry Validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

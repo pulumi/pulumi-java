@@ -28,6 +28,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="availableLocalStorageInBytes")
     private @Nullable Double availableLocalStorageInBytes;
 
+    /**
+     * @return The amount of free local storage available on the device in bytes.
+     * 
+     */
     public Optional<Double> availableLocalStorageInBytes() {
         return Optional.ofNullable(this.availableLocalStorageInBytes);
     }
@@ -39,6 +43,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="availableTieredStorageInBytes")
     private @Nullable Double availableTieredStorageInBytes;
 
+    /**
+     * @return The amount of free tiered storage available for the device in bytes.
+     * 
+     */
     public Optional<Double> availableTieredStorageInBytes() {
         return Optional.ofNullable(this.availableTieredStorageInBytes);
     }
@@ -50,6 +58,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataContainersCount")
     private @Nullable Integer dataContainersCount;
 
+    /**
+     * @return The count of data containers on the device.
+     * 
+     */
     public Optional<Integer> dataContainersCount() {
         return Optional.ofNullable(this.dataContainersCount);
     }
@@ -61,6 +73,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceId")
     private @Nullable String deviceId;
 
+    /**
+     * @return The path ID of the device.
+     * 
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
@@ -72,6 +88,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceLocation")
     private @Nullable String deviceLocation;
 
+    /**
+     * @return The geo location (applicable only for cloud appliances) of the device.
+     * 
+     */
     public Optional<String> deviceLocation() {
         return Optional.ofNullable(this.deviceLocation);
     }
@@ -83,6 +103,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceSoftwareVersion")
     private @Nullable String deviceSoftwareVersion;
 
+    /**
+     * @return The software version of the device.
+     * 
+     */
     public Optional<String> deviceSoftwareVersion() {
         return Optional.ofNullable(this.deviceSoftwareVersion);
     }
@@ -94,6 +118,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="deviceStatus")
     private @Nullable String deviceStatus;
 
+    /**
+     * @return The status of the device.
+     * 
+     */
     public Optional<String> deviceStatus() {
         return Optional.ofNullable(this.deviceStatus);
     }
@@ -105,6 +133,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="eligibilityResult")
     private @Nullable TargetEligibilityResultResponse eligibilityResult;
 
+    /**
+     * @return The eligibility result of the device, as a failover target device.
+     * 
+     */
     public Optional<TargetEligibilityResultResponse> eligibilityResult() {
         return Optional.ofNullable(this.eligibilityResult);
     }
@@ -116,6 +148,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="friendlyDeviceSoftwareVersion")
     private @Nullable String friendlyDeviceSoftwareVersion;
 
+    /**
+     * @return The friendly name for the current version of software on the device.
+     * 
+     */
     public Optional<String> friendlyDeviceSoftwareVersion() {
         return Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
     }
@@ -127,6 +163,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="modelDescription")
     private @Nullable String modelDescription;
 
+    /**
+     * @return The model number of the device.
+     * 
+     */
     public Optional<String> modelDescription() {
         return Optional.ofNullable(this.modelDescription);
     }
@@ -138,6 +178,10 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="volumesCount")
     private @Nullable Integer volumesCount;
 
+    /**
+     * @return The count of volumes on the device.
+     * 
+     */
     public Optional<Integer> volumesCount() {
         return Optional.ofNullable(this.volumesCount);
     }
@@ -176,56 +220,122 @@ public final class FailoverTargetResponse extends com.pulumi.resources.InvokeArg
             $ = new FailoverTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableLocalStorageInBytes The amount of free local storage available on the device in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
             $.availableLocalStorageInBytes = availableLocalStorageInBytes;
             return this;
         }
 
+        /**
+         * @param availableTieredStorageInBytes The amount of free tiered storage available for the device in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
             $.availableTieredStorageInBytes = availableTieredStorageInBytes;
             return this;
         }
 
+        /**
+         * @param dataContainersCount The count of data containers on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataContainersCount(@Nullable Integer dataContainersCount) {
             $.dataContainersCount = dataContainersCount;
             return this;
         }
 
+        /**
+         * @param deviceId The path ID of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(@Nullable String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param deviceLocation The geo location (applicable only for cloud appliances) of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceLocation(@Nullable String deviceLocation) {
             $.deviceLocation = deviceLocation;
             return this;
         }
 
+        /**
+         * @param deviceSoftwareVersion The software version of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
             $.deviceSoftwareVersion = deviceSoftwareVersion;
             return this;
         }
 
+        /**
+         * @param deviceStatus The status of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceStatus(@Nullable String deviceStatus) {
             $.deviceStatus = deviceStatus;
             return this;
         }
 
+        /**
+         * @param eligibilityResult The eligibility result of the device, as a failover target device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
             $.eligibilityResult = eligibilityResult;
             return this;
         }
 
+        /**
+         * @param friendlyDeviceSoftwareVersion The friendly name for the current version of software on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
             $.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
             return this;
         }
 
+        /**
+         * @param modelDescription The model number of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelDescription(@Nullable String modelDescription) {
             $.modelDescription = modelDescription;
             return this;
         }
 
+        /**
+         * @param volumesCount The count of volumes on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumesCount(@Nullable Integer volumesCount) {
             $.volumesCount = volumesCount;
             return this;

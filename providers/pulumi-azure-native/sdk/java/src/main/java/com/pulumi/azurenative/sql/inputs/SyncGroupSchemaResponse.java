@@ -27,6 +27,10 @@ public final class SyncGroupSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="masterSyncMemberName")
     private @Nullable String masterSyncMemberName;
 
+    /**
+     * @return Name of master sync member where the schema is from.
+     * 
+     */
     public Optional<String> masterSyncMemberName() {
         return Optional.ofNullable(this.masterSyncMemberName);
     }
@@ -38,6 +42,10 @@ public final class SyncGroupSchemaResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tables")
     private @Nullable List<SyncGroupSchemaTableResponse> tables;
 
+    /**
+     * @return List of tables in sync group schema.
+     * 
+     */
     public Optional<List<SyncGroupSchemaTableResponse>> tables() {
         return Optional.ofNullable(this.tables);
     }
@@ -67,16 +75,34 @@ public final class SyncGroupSchemaResponse extends com.pulumi.resources.InvokeAr
             $ = new SyncGroupSchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param masterSyncMemberName Name of master sync member where the schema is from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
             $.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
 
+        /**
+         * @param tables List of tables in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
             $.tables = tables;
             return this;
         }
 
+        /**
+         * @param tables List of tables in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tables(SyncGroupSchemaTableResponse... tables) {
             return tables(List.of(tables));
         }

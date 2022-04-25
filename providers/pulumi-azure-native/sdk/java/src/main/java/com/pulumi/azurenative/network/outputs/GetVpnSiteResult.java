@@ -21,82 +21,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpnSiteResult {
     /**
-     * The AddressSpace that contains an array of IP address ranges.
+     * @return The AddressSpace that contains an array of IP address ranges.
      * 
      */
     private final @Nullable AddressSpaceResponse addressSpace;
     /**
-     * The set of bgp properties.
+     * @return The set of bgp properties.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpProperties;
     /**
-     * The device properties.
+     * @return The device properties.
      * 
      */
     private final @Nullable DevicePropertiesResponse deviceProperties;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The ip-address for the vpn-site.
+     * @return The ip-address for the vpn-site.
      * 
      */
     private final @Nullable String ipAddress;
     /**
-     * IsSecuritySite flag.
+     * @return IsSecuritySite flag.
      * 
      */
     private final @Nullable Boolean isSecuritySite;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Office365 Policy.
+     * @return Office365 Policy.
      * 
      */
     private final @Nullable O365PolicyPropertiesResponse o365Policy;
     /**
-     * The provisioning state of the VPN site resource.
+     * @return The provisioning state of the VPN site resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The key for vpn-site that can be used for connections.
+     * @return The key for vpn-site that can be used for connections.
      * 
      */
     private final @Nullable String siteKey;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The VirtualWAN to which the vpnSite belongs.
+     * @return The VirtualWAN to which the vpnSite belongs.
      * 
      */
     private final @Nullable SubResourceResponse virtualWan;
     /**
-     * List of all vpn site links.
+     * @return List of all vpn site links.
      * 
      */
     private final @Nullable List<VpnSiteLinkResponse> vpnSiteLinks;
@@ -138,114 +138,114 @@ public final class GetVpnSiteResult {
     }
 
     /**
-     * The AddressSpace that contains an array of IP address ranges.
+     * @return The AddressSpace that contains an array of IP address ranges.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
     /**
-     * The set of bgp properties.
+     * @return The set of bgp properties.
      * 
-    */
+     */
     public Optional<BgpSettingsResponse> bgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
     /**
-     * The device properties.
+     * @return The device properties.
      * 
-    */
+     */
     public Optional<DevicePropertiesResponse> deviceProperties() {
         return Optional.ofNullable(this.deviceProperties);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ip-address for the vpn-site.
+     * @return The ip-address for the vpn-site.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * IsSecuritySite flag.
+     * @return IsSecuritySite flag.
      * 
-    */
+     */
     public Optional<Boolean> isSecuritySite() {
         return Optional.ofNullable(this.isSecuritySite);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Office365 Policy.
+     * @return Office365 Policy.
      * 
-    */
+     */
     public Optional<O365PolicyPropertiesResponse> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
     /**
-     * The provisioning state of the VPN site resource.
+     * @return The provisioning state of the VPN site resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The key for vpn-site that can be used for connections.
+     * @return The key for vpn-site that can be used for connections.
      * 
-    */
+     */
     public Optional<String> siteKey() {
         return Optional.ofNullable(this.siteKey);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The VirtualWAN to which the vpnSite belongs.
+     * @return The VirtualWAN to which the vpnSite belongs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualWan() {
         return Optional.ofNullable(this.virtualWan);
     }
     /**
-     * List of all vpn site links.
+     * @return List of all vpn site links.
      * 
-    */
+     */
     public List<VpnSiteLinkResponse> vpnSiteLinks() {
         return this.vpnSiteLinks == null ? List.of() : this.vpnSiteLinks;
     }

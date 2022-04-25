@@ -20,6 +20,10 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elb", required=true)
     private Output<String> elb;
 
+    /**
+     * @return The name of the ELB.
+     * 
+     */
     public Output<String> elb() {
         return this.elb;
     }
@@ -31,6 +35,10 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
     private Output<String> instance;
 
+    /**
+     * @return Instance ID to place in the ELB pool.
+     * 
+     */
     public Output<String> instance() {
         return this.instance;
     }
@@ -60,20 +68,44 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elb The name of the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elb(Output<String> elb) {
             $.elb = elb;
             return this;
         }
 
+        /**
+         * @param elb The name of the ELB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elb(String elb) {
             return elb(Output.of(elb));
         }
 
+        /**
+         * @param instance Instance ID to place in the ELB pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance Instance ID to place in the ELB pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }

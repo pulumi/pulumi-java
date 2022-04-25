@@ -26,6 +26,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -38,6 +42,11 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of synchronization on trigger.
+     * Expected value is &#39;ScheduleBased&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -49,6 +58,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="recurrenceInterval", required=true)
     private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
+    /**
+     * @return Recurrence Interval
+     * 
+     */
     public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
     }
@@ -60,6 +73,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +88,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="shareSubscriptionName", required=true)
     private Output<String> shareSubscriptionName;
 
+    /**
+     * @return The name of the share subscription which will hold the data set sink.
+     * 
+     */
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -82,6 +103,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="synchronizationMode")
     private @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
 
+    /**
+     * @return Synchronization mode
+     * 
+     */
     public Optional<Output<Either<String,SynchronizationMode>>> synchronizationMode() {
         return Optional.ofNullable(this.synchronizationMode);
     }
@@ -93,6 +118,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="synchronizationTime", required=true)
     private Output<String> synchronizationTime;
 
+    /**
+     * @return Synchronization time
+     * 
+     */
     public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
@@ -104,6 +133,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="triggerName")
     private @Nullable Output<String> triggerName;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public Optional<Output<String>> triggerName() {
         return Optional.ofNullable(this.triggerName);
     }
@@ -139,90 +172,212 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
             $ = new ScheduledTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param kind Kind of synchronization on trigger.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of synchronization on trigger.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
             $.recurrenceInterval = recurrenceInterval;
             return this;
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             return recurrenceInterval(Output.of(recurrenceInterval));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(String recurrenceInterval) {
             return recurrenceInterval(Either.ofLeft(recurrenceInterval));
         }
 
+        /**
+         * @param recurrenceInterval Recurrence Interval
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceInterval(RecurrenceInterval recurrenceInterval) {
             return recurrenceInterval(Either.ofRight(recurrenceInterval));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the share subscription which will hold the data set sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
 
+        /**
+         * @param synchronizationMode Synchronization mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(@Nullable Output<Either<String,SynchronizationMode>> synchronizationMode) {
             $.synchronizationMode = synchronizationMode;
             return this;
         }
 
+        /**
+         * @param synchronizationMode Synchronization mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(Either<String,SynchronizationMode> synchronizationMode) {
             return synchronizationMode(Output.of(synchronizationMode));
         }
 
+        /**
+         * @param synchronizationMode Synchronization mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(String synchronizationMode) {
             return synchronizationMode(Either.ofLeft(synchronizationMode));
         }
 
+        /**
+         * @param synchronizationMode Synchronization mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(SynchronizationMode synchronizationMode) {
             return synchronizationMode(Either.ofRight(synchronizationMode));
         }
 
+        /**
+         * @param synchronizationTime Synchronization time
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationTime(Output<String> synchronizationTime) {
             $.synchronizationTime = synchronizationTime;
             return this;
         }
 
+        /**
+         * @param synchronizationTime Synchronization time
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationTime(String synchronizationTime) {
             return synchronizationTime(Output.of(synchronizationTime));
         }
 
+        /**
+         * @param triggerName The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(@Nullable Output<String> triggerName) {
             $.triggerName = triggerName;
             return this;
         }
 
+        /**
+         * @param triggerName The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             return triggerName(Output.of(triggerName));
         }

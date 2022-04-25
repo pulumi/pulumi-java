@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNodeSpecListenerPortMapping {
     /**
-     * The port used for the port mapping.
+     * @return The port used for the port mapping.
      * 
      */
     private final Integer port;
     /**
-     * The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+     * @return The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
      */
     private final String protocol;
@@ -30,16 +30,16 @@ public final class VirtualNodeSpecListenerPortMapping {
     }
 
     /**
-     * The port used for the port mapping.
+     * @return The port used for the port mapping.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
+     * @return The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScriptReferenceResponse {
     /**
-     * Optional command line arguments passed to the script to run.
+     * @return Optional command line arguments passed to the script to run.
      * 
      */
     private final @Nullable String scriptArguments;
     /**
-     * The location of scripts in the mounted volume.
+     * @return The location of scripts in the mounted volume.
      * 
      */
     private final @Nullable String scriptData;
     /**
-     * The storage source of the script: inline, workspace.
+     * @return The storage source of the script: inline, workspace.
      * 
      */
     private final @Nullable String scriptSource;
     /**
-     * Optional time period passed to timeout command.
+     * @return Optional time period passed to timeout command.
      * 
      */
     private final @Nullable String timeout;
@@ -45,30 +45,30 @@ public final class ScriptReferenceResponse {
     }
 
     /**
-     * Optional command line arguments passed to the script to run.
+     * @return Optional command line arguments passed to the script to run.
      * 
-    */
+     */
     public Optional<String> scriptArguments() {
         return Optional.ofNullable(this.scriptArguments);
     }
     /**
-     * The location of scripts in the mounted volume.
+     * @return The location of scripts in the mounted volume.
      * 
-    */
+     */
     public Optional<String> scriptData() {
         return Optional.ofNullable(this.scriptData);
     }
     /**
-     * The storage source of the script: inline, workspace.
+     * @return The storage source of the script: inline, workspace.
      * 
-    */
+     */
     public Optional<String> scriptSource() {
         return Optional.ofNullable(this.scriptSource);
     }
     /**
-     * Optional time period passed to timeout command.
+     * @return Optional time period passed to timeout command.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDeviceResult {
     /**
-     * The type of the device.
+     * @return The type of the device.
      * 
      */
     private final String deviceType;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The list of network functions deployed on the device.
+     * @return The list of network functions deployed on the device.
      * 
      */
     private final List<SubResourceResponse> networkFunctions;
     /**
-     * The provisioning state of the device resource.
+     * @return The provisioning state of the device resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The current device status.
+     * @return The current device status.
      * 
      */
     private final String status;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetDeviceResult {
     }
 
     /**
-     * The type of the device.
+     * @return The type of the device.
      * 
-    */
+     */
     public String deviceType() {
         return this.deviceType;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of network functions deployed on the device.
+     * @return The list of network functions deployed on the device.
      * 
-    */
+     */
     public List<SubResourceResponse> networkFunctions() {
         return this.networkFunctions;
     }
     /**
-     * The provisioning state of the device resource.
+     * @return The provisioning state of the device resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The current device status.
+     * @return The current device status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -21,6 +21,10 @@ public final class ScriptStatisticsResponse extends com.pulumi.resources.InvokeA
     @Import(name="evaluationKind", required=true)
     private String evaluationKind;
 
+    /**
+     * @return Whether this child job was a statement or expression.
+     * 
+     */
     public String evaluationKind() {
         return this.evaluationKind;
     }
@@ -32,6 +36,10 @@ public final class ScriptStatisticsResponse extends com.pulumi.resources.InvokeA
     @Import(name="stackFrames", required=true)
     private List<ScriptStackFrameResponse> stackFrames;
 
+    /**
+     * @return Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
+     * 
+     */
     public List<ScriptStackFrameResponse> stackFrames() {
         return this.stackFrames;
     }
@@ -61,16 +69,34 @@ public final class ScriptStatisticsResponse extends com.pulumi.resources.InvokeA
             $ = new ScriptStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param evaluationKind Whether this child job was a statement or expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationKind(String evaluationKind) {
             $.evaluationKind = evaluationKind;
             return this;
         }
 
+        /**
+         * @param stackFrames Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackFrames(List<ScriptStackFrameResponse> stackFrames) {
             $.stackFrames = stackFrames;
             return this;
         }
 
+        /**
+         * @param stackFrames Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackFrames(ScriptStackFrameResponse... stackFrames) {
             return stackFrames(List.of(stackFrames));
         }

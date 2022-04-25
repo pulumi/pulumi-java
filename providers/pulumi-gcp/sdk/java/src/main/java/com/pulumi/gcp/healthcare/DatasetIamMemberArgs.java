@@ -33,6 +33,13 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="datasetId", required=true)
     private Output<String> datasetId;
 
+    /**
+     * @return The dataset ID, in the form
+     * `{project_id}/{location_name}/{dataset_name}` or
+     * `{location_name}/{dataset_name}`. In the second form, the provider&#39;s
+     * project setting will be used as a fallback.
+     * 
+     */
     public Output<String> datasetId() {
         return this.datasetId;
     }
@@ -53,6 +60,12 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.healthcare.DatasetIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -93,11 +106,29 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param datasetId The dataset ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}` or
+         * `{location_name}/{dataset_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param datasetId The dataset ID, in the form
+         * `{project_id}/{location_name}/{dataset_name}` or
+         * `{location_name}/{dataset_name}`. In the second form, the provider&#39;s
+         * project setting will be used as a fallback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             return datasetId(Output.of(datasetId));
         }
@@ -111,11 +142,27 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.DatasetIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.healthcare.DatasetIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

@@ -26,6 +26,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpoint")
     private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
+    /**
+     * @return Specifies the private endpoint.
+     * 
+     */
     public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -37,6 +41,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Specifies the connection state.
+     * 
+     */
     public Optional<Output<ConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -48,6 +56,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
+    /**
+     * @return Provisioning state of the Private Endpoint Connection.
+     * 
+     */
     public Optional<Output<Either<String,ResourceProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -78,37 +90,85 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Specifies the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Specifies the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Specifies the connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Specifies the connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(ConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ResourceProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ResourceProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }

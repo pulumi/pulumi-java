@@ -24,6 +24,10 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return Optional. The number of schedulers.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="cpu", required=true)
     private Double cpu;
 
+    /**
+     * @return Optional. CPU request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Double cpu() {
         return this.cpu;
     }
@@ -46,6 +54,10 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="memoryGb", required=true)
     private Double memoryGb;
 
+    /**
+     * @return Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Double memoryGb() {
         return this.memoryGb;
     }
@@ -57,6 +69,10 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="storageGb", required=true)
     private Double storageGb;
 
+    /**
+     * @return Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+     * 
+     */
     public Double storageGb() {
         return this.storageGb;
     }
@@ -88,21 +104,45 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
             $ = new SchedulerResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Optional. The number of schedulers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param cpu Optional. CPU request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memoryGb Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryGb(Double memoryGb) {
             $.memoryGb = memoryGb;
             return this;
         }
 
+        /**
+         * @param storageGb Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageGb(Double storageGb) {
             $.storageGb = storageGb;
             return this;

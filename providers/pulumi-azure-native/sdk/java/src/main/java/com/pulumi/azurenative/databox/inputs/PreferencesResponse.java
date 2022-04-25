@@ -28,6 +28,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionPreferences")
     private @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
+    /**
+     * @return Preferences related to the Encryption.
+     * 
+     */
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
@@ -39,6 +43,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preferredDataCenterRegion")
     private @Nullable List<String> preferredDataCenterRegion;
 
+    /**
+     * @return Preferred data center region.
+     * 
+     */
     public Optional<List<String>> preferredDataCenterRegion() {
         return Optional.ofNullable(this.preferredDataCenterRegion);
     }
@@ -50,6 +58,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transportPreferences")
     private @Nullable TransportPreferencesResponse transportPreferences;
 
+    /**
+     * @return Preferences related to the shipment logistics of the sku.
+     * 
+     */
     public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -80,20 +92,44 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PreferencesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             $.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
+        /**
+         * @param preferredDataCenterRegion Preferred data center region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             $.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
+        /**
+         * @param preferredDataCenterRegion Preferred data center region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
             return preferredDataCenterRegion(List.of(preferredDataCenterRegion));
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             $.transportPreferences = transportPreferences;
             return this;

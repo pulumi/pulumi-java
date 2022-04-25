@@ -24,6 +24,10 @@ public final class GetCoipPoolsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetCoipPoolsFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetCoipPoolsFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -36,6 +40,11 @@ public final class GetCoipPoolsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A mapping of tags, each pair of which must exactly match
+     * a pair on the desired aws_ec2_coip_pools.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -65,15 +74,34 @@ public final class GetCoipPoolsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCoipPoolsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetCoipPoolsFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetCoipPoolsFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired aws_ec2_coip_pools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

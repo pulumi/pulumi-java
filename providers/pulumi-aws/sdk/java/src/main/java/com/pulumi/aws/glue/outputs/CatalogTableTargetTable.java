@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class CatalogTableTargetTable {
     /**
-     * ID of the Data Catalog in which the table resides.
+     * @return ID of the Data Catalog in which the table resides.
      * 
      */
     private final String catalogId;
     /**
-     * Name of the catalog database that contains the target table.
+     * @return Name of the catalog database that contains the target table.
      * 
      */
     private final String databaseName;
     /**
-     * Name of the target table.
+     * @return Name of the target table.
      * 
      */
     private final String name;
@@ -36,23 +36,23 @@ public final class CatalogTableTargetTable {
     }
 
     /**
-     * ID of the Data Catalog in which the table resides.
+     * @return ID of the Data Catalog in which the table resides.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
     /**
-     * Name of the catalog database that contains the target table.
+     * @return Name of the catalog database that contains the target table.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Name of the target table.
+     * @return Name of the target table.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

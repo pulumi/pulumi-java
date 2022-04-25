@@ -29,6 +29,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="advancedSchedule")
     private @Nullable AdvancedScheduleResponse advancedSchedule;
 
+    /**
+     * @return Gets or sets the advanced schedule.
+     * 
+     */
     public Optional<AdvancedScheduleResponse> advancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
@@ -40,6 +44,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="creationTime")
     private @Nullable String creationTime;
 
+    /**
+     * @return Gets or sets the creation time.
+     * 
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -51,6 +59,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Gets or sets the description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expiryTime")
     private @Nullable String expiryTime;
 
+    /**
+     * @return Gets or sets the end time of the schedule.
+     * 
+     */
     public Optional<String> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
@@ -73,6 +89,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expiryTimeOffsetMinutes")
     private @Nullable Double expiryTimeOffsetMinutes;
 
+    /**
+     * @return Gets or sets the expiry time&#39;s offset in minutes.
+     * 
+     */
     public Optional<Double> expiryTimeOffsetMinutes() {
         return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
@@ -84,6 +104,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="frequency")
     private @Nullable String frequency;
 
+    /**
+     * @return Gets or sets the frequency of the schedule.
+     * 
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -95,6 +119,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="interval")
     private @Nullable Double interval;
 
+    /**
+     * @return Gets or sets the interval of the schedule.
+     * 
+     */
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -106,6 +134,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="isEnabled")
     private @Nullable Boolean isEnabled;
 
+    /**
+     * @return Gets or sets a value indicating whether this schedule is enabled.
+     * 
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -117,6 +149,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="lastModifiedTime")
     private @Nullable String lastModifiedTime;
 
+    /**
+     * @return Gets or sets the last modified time.
+     * 
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
@@ -128,6 +164,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="nextRun")
     private @Nullable String nextRun;
 
+    /**
+     * @return Gets or sets the next run time of the schedule.
+     * 
+     */
     public Optional<String> nextRun() {
         return Optional.ofNullable(this.nextRun);
     }
@@ -139,6 +179,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="nextRunOffsetMinutes")
     private @Nullable Double nextRunOffsetMinutes;
 
+    /**
+     * @return Gets or sets the next run time&#39;s offset in minutes.
+     * 
+     */
     public Optional<Double> nextRunOffsetMinutes() {
         return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
@@ -150,6 +194,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Gets or sets the start time of the schedule.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -161,6 +209,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="startTimeOffsetMinutes", required=true)
     private Double startTimeOffsetMinutes;
 
+    /**
+     * @return Gets the start time&#39;s offset in minutes.
+     * 
+     */
     public Double startTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
@@ -172,6 +224,10 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return Gets or sets the time zone of the schedule.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -213,71 +269,155 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
             $ = new SUCSchedulePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedSchedule Gets or sets the advanced schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedSchedule(@Nullable AdvancedScheduleResponse advancedSchedule) {
             $.advancedSchedule = advancedSchedule;
             return this;
         }
 
+        /**
+         * @param creationTime Gets or sets the creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(@Nullable String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expiryTime Gets or sets the end time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(@Nullable String expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param expiryTimeOffsetMinutes Gets or sets the expiry time&#39;s offset in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
             $.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Double interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param isEnabled Gets or sets a value indicating whether this schedule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime Gets or sets the last modified time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param nextRun Gets or sets the next run time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRun(@Nullable String nextRun) {
             $.nextRun = nextRun;
             return this;
         }
 
+        /**
+         * @param nextRunOffsetMinutes Gets or sets the next run time&#39;s offset in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
             $.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
 
+        /**
+         * @param startTime Gets or sets the start time of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTimeOffsetMinutes Gets the start time&#39;s offset in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffsetMinutes(Double startTimeOffsetMinutes) {
             $.startTimeOffsetMinutes = startTimeOffsetMinutes;
             return this;
         }
 
+        /**
+         * @param timeZone Gets or sets the time zone of the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

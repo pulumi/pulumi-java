@@ -23,6 +23,10 @@ public final class PatientIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return ID type. For example, MRN or NHS.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -34,6 +38,10 @@ public final class PatientIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The patient&#39;s unique identifier.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class PatientIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PatientIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type ID type. For example, MRN or NHS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The patient&#39;s unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

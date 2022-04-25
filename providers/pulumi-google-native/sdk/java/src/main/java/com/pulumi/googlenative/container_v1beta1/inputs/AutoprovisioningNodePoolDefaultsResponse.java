@@ -28,6 +28,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="bootDiskKmsKey", required=true)
     private String bootDiskKmsKey;
 
+    /**
+     * @return  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+     * 
+     */
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
@@ -39,6 +43,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="diskSizeGb", required=true)
     private Integer diskSizeGb;
 
+    /**
+     * @return Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+     * 
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
@@ -50,6 +58,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="diskType", required=true)
     private String diskType;
 
+    /**
+     * @return Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+     * 
+     */
     public String diskType() {
         return this.diskType;
     }
@@ -61,6 +73,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="imageType", required=true)
     private String imageType;
 
+    /**
+     * @return The image type to use for NAP created node.
+     * 
+     */
     public String imageType() {
         return this.imageType;
     }
@@ -72,6 +88,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="management", required=true)
     private NodeManagementResponse management;
 
+    /**
+     * @return NodeManagement configuration for this NodePool.
+     * 
+     */
     public NodeManagementResponse management() {
         return this.management;
     }
@@ -83,6 +103,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="minCpuPlatform", required=true)
     private String minCpuPlatform;
 
+    /**
+     * @return Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: &#34;Intel Haswell&#34;` or `minCpuPlatform: &#34;Intel Sandy Bridge&#34;`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+     * 
+     */
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
@@ -94,6 +118,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="oauthScopes", required=true)
     private List<String> oauthScopes;
 
+    /**
+     * @return The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+     * 
+     */
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
@@ -105,6 +133,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the &#34;default&#34; service account is used.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -116,6 +148,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="shieldedInstanceConfig", required=true)
     private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Shielded Instance options.
+     * 
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -127,6 +163,10 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
     @Import(name="upgradeSettings", required=true)
     private UpgradeSettingsResponse upgradeSettings;
 
+    /**
+     * @return Upgrade settings control disruption and speed of the upgrade.
+     * 
+     */
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
@@ -164,55 +204,121 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
             $ = new AutoprovisioningNodePoolDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootDiskKmsKey  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskType Type of the disk attached to each node (e.g. &#39;pd-standard&#39;, &#39;pd-ssd&#39; or &#39;pd-balanced&#39;) If unspecified, the default disk type is &#39;pd-standard&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param imageType The image type to use for NAP created node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageType(String imageType) {
             $.imageType = imageType;
             return this;
         }
 
+        /**
+         * @param management NodeManagement configuration for this NodePool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder management(NodeManagementResponse management) {
             $.management = management;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: &#34;Intel Haswell&#34;` or `minCpuPlatform: &#34;Intel Sandy Bridge&#34;`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass &#34;automatic&#34; as field value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(List<String> oauthScopes) {
             $.oauthScopes = oauthScopes;
             return this;
         }
 
+        /**
+         * @param oauthScopes The set of Google API scopes to be made available on all of the node VMs under the &#34;default&#34; service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
 
+        /**
+         * @param serviceAccount The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the &#34;default&#34; service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Shielded Instance options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param upgradeSettings Upgrade settings control disruption and speed of the upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;

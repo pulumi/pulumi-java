@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
     @Import(name="synonyms", required=true)
     private List<String> synonyms;
 
+    /**
+     * @return Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+     * 
+     */
     public List<String> synonyms() {
         return this.synonyms;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse exte
             $ = new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }

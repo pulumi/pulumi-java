@@ -24,6 +24,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentConfig")
     private @Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig;
 
+    /**
+     * @return The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
+     * 
+     */
     public Optional<Output<EndpointDeploymentConfigGetArgs>> deploymentConfig() {
         return Optional.ofNullable(this.deploymentConfig);
     }
@@ -46,6 +54,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfigName")
     private @Nullable Output<String> endpointConfigName;
 
+    /**
+     * @return The name of the endpoint configuration to use.
+     * 
+     */
     public Optional<Output<String>> endpointConfigName() {
         return Optional.ofNullable(this.endpointConfigName);
     }
@@ -57,6 +69,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -112,56 +136,128 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param deploymentConfig The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfig(@Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig) {
             $.deploymentConfig = deploymentConfig;
             return this;
         }
 
+        /**
+         * @param deploymentConfig The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentConfig(EndpointDeploymentConfigGetArgs deploymentConfig) {
             return deploymentConfig(Output.of(deploymentConfig));
         }
 
+        /**
+         * @param endpointConfigName The name of the endpoint configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfigName(@Nullable Output<String> endpointConfigName) {
             $.endpointConfigName = endpointConfigName;
             return this;
         }
 
+        /**
+         * @param endpointConfigName The name of the endpoint configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointConfigName(String endpointConfigName) {
             return endpointConfigName(Output.of(endpointConfigName));
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

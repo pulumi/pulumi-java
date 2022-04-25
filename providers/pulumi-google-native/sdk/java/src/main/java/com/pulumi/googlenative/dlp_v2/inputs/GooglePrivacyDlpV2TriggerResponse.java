@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2TriggerResponse extends com.pulumi.resource
     @Import(name="manual", required=true)
     private GooglePrivacyDlpV2ManualResponse manual;
 
+    /**
+     * @return For use with hybrid jobs. Jobs must be manually created and finished.
+     * 
+     */
     public GooglePrivacyDlpV2ManualResponse manual() {
         return this.manual;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2TriggerResponse extends com.pulumi.resource
     @Import(name="schedule", required=true)
     private GooglePrivacyDlpV2ScheduleResponse schedule;
 
+    /**
+     * @return Create a job on a repeating basis based on the elapse of time.
+     * 
+     */
     public GooglePrivacyDlpV2ScheduleResponse schedule() {
         return this.schedule;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2TriggerResponse extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2TriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param manual For use with hybrid jobs. Jobs must be manually created and finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manual(GooglePrivacyDlpV2ManualResponse manual) {
             $.manual = manual;
             return this;
         }
 
+        /**
+         * @param schedule Create a job on a repeating basis based on the elapse of time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
             $.schedule = schedule;
             return this;

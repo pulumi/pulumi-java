@@ -21,6 +21,10 @@ public final class GetDedicatedHostGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. The response shows the list of instance view of the dedicated hosts under the dedicated host group.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetDedicatedHostGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="hostGroupName", required=true)
     private String hostGroupName;
 
+    /**
+     * @return The name of the dedicated host group.
+     * 
+     */
     public String hostGroupName() {
         return this.hostGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetDedicatedHostGroupArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetDedicatedHostGroupArgs extends com.pulumi.resources.Invoke
             $ = new GetDedicatedHostGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. The response shows the list of instance view of the dedicated hosts under the dedicated host group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param hostGroupName The name of the dedicated host group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostGroupName(String hostGroupName) {
             $.hostGroupName = hostGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

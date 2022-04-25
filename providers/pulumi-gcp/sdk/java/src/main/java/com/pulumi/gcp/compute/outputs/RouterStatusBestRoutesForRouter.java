@@ -14,12 +14,12 @@ public final class RouterStatusBestRoutesForRouter {
     private final String description;
     private final String destRange;
     /**
-     * The name of the router.
+     * @return The name of the router.
      * 
      */
     private final String name;
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
      */
@@ -33,7 +33,7 @@ public final class RouterStatusBestRoutesForRouter {
     private final String nextHopVpnTunnel;
     private final Integer priority;
     /**
-     * The ID of the project in which the resource
+     * @return The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
      */
@@ -82,17 +82,17 @@ public final class RouterStatusBestRoutesForRouter {
         return this.destRange;
     }
     /**
-     * The name of the router.
+     * @return The name of the router.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The network name or resource link to the parent
+     * @return The network name or resource link to the parent
      * network of this subnetwork.
      * 
-    */
+     */
     public String network() {
         return this.network;
     }
@@ -121,10 +121,10 @@ public final class RouterStatusBestRoutesForRouter {
         return this.priority;
     }
     /**
-     * The ID of the project in which the resource
+     * @return The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

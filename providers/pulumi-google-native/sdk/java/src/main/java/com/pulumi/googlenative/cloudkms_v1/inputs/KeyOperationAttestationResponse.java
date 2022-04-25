@@ -24,6 +24,10 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
     @Import(name="certChains", required=true)
     private CertificateChainsResponse certChains;
 
+    /**
+     * @return The certificate chains needed to validate the attestation
+     * 
+     */
     public CertificateChainsResponse certChains() {
         return this.certChains;
     }
@@ -35,6 +39,10 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The attestation data provided by the HSM when the key operation was performed.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -46,6 +54,10 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
     @Import(name="format", required=true)
     private String format;
 
+    /**
+     * @return The format of the attestation data.
+     * 
+     */
     public String format() {
         return this.format;
     }
@@ -76,16 +88,34 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
             $ = new KeyOperationAttestationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certChains The certificate chains needed to validate the attestation
+         * 
+         * @return builder
+         * 
+         */
         public Builder certChains(CertificateChainsResponse certChains) {
             $.certChains = certChains;
             return this;
         }
 
+        /**
+         * @param content The attestation data provided by the HSM when the key operation was performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param format The format of the attestation data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             $.format = format;
             return this;

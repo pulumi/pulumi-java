@@ -20,6 +20,10 @@ public final class GetDomainNameEndpointConfiguration extends com.pulumi.resourc
     @Import(name="types", required=true)
     private List<String> types;
 
+    /**
+     * @return List of endpoint types.
+     * 
+     */
     public List<String> types() {
         return this.types;
     }
@@ -48,11 +52,23 @@ public final class GetDomainNameEndpointConfiguration extends com.pulumi.resourc
             $ = new GetDomainNameEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param types List of endpoint types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(List<String> types) {
             $.types = types;
             return this;
         }
 
+        /**
+         * @param types List of endpoint types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(String... types) {
             return types(List.of(types));
         }

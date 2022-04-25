@@ -24,6 +24,10 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
     @Import(name="certificateProviderInstance", required=true)
     private CertificateProviderInstanceResponse certificateProviderInstance;
 
+    /**
+     * @return The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     * 
+     */
     public CertificateProviderInstanceResponse certificateProviderInstance() {
         return this.certificateProviderInstance;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
     @Import(name="grpcEndpoint", required=true)
     private GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
+    /**
+     * @return gRPC specific configuration to access the gRPC server to obtain the cert and private key.
+     * 
+     */
     public GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint() {
         return this.grpcEndpoint;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse exten
             $ = new GoogleCloudNetworksecurityV1CertificateProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateProviderInstance The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
             $.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
 
+        /**
+         * @param grpcEndpoint gRPC specific configuration to access the gRPC server to obtain the cert and private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
             $.grpcEndpoint = grpcEndpoint;
             return this;

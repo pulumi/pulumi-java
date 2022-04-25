@@ -22,6 +22,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
     @Import(name="backendService", required=true)
     private Output<String> backendService;
 
+    /**
+     * @return The default RegionBackendService resource. Before
+     * forwarding the request to backendService, the loadbalancer applies any relevant
+     * headerActions specified as part of this backendServiceWeight.
+     * 
+     */
     public Output<String> backendService() {
         return this.backendService;
     }
@@ -50,11 +56,27 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
             $ = new RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendService The default RegionBackendService resource. Before
+         * forwarding the request to backendService, the loadbalancer applies any relevant
+         * headerActions specified as part of this backendServiceWeight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(Output<String> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService The default RegionBackendService resource. Before
+         * forwarding the request to backendService, the loadbalancer applies any relevant
+         * headerActions specified as part of this backendServiceWeight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(String backendService) {
             return backendService(Output.of(backendService));
         }

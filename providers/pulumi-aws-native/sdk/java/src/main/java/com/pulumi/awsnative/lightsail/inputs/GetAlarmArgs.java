@@ -19,6 +19,10 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="alarmName", required=true)
     private String alarmName;
 
+    /**
+     * @return The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
+     * 
+     */
     public String alarmName() {
         return this.alarmName;
     }
@@ -47,6 +51,12 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAlarmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmName The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(String alarmName) {
             $.alarmName = alarmName;
             return this;

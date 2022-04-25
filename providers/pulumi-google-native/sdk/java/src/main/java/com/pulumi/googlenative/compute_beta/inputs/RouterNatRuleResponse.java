@@ -21,6 +21,10 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="action", required=true)
     private RouterNatRuleActionResponse action;
 
+    /**
+     * @return The action to be enforced for traffic that matches this rule.
+     * 
+     */
     public RouterNatRuleActionResponse action() {
         return this.action;
     }
@@ -32,6 +36,10 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of this rule.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -43,6 +51,10 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="match", required=true)
     private String match;
 
+    /**
+     * @return CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: &#34;inIpRange(destination.ip, &#39;1.1.0.0/16&#39;) || inIpRange(destination.ip, &#39;2.2.0.0/16&#39;)&#34; &#34;destination.ip == &#39;1.1.0.1&#39; || destination.ip == &#39;8.8.8.8&#39;&#34; The following example is a valid match expression for private NAT: &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
+     * 
+     */
     public String match() {
         return this.match;
     }
@@ -54,6 +66,10 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ruleNumber", required=true)
     private Integer ruleNumber;
 
+    /**
+     * @return An integer uniquely identifying a rule in the list. The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+     * 
+     */
     public Integer ruleNumber() {
         return this.ruleNumber;
     }
@@ -85,21 +101,45 @@ public final class RouterNatRuleResponse extends com.pulumi.resources.InvokeArgs
             $ = new RouterNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to be enforced for traffic that matches this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouterNatRuleActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param description An optional description of this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param match CEL expression that specifies the match condition that egress traffic from a VM is evaluated against. If it evaluates to true, the corresponding `action` is enforced. The following examples are valid match expressions for public NAT: &#34;inIpRange(destination.ip, &#39;1.1.0.0/16&#39;) || inIpRange(destination.ip, &#39;2.2.0.0/16&#39;)&#34; &#34;destination.ip == &#39;1.1.0.1&#39; || destination.ip == &#39;8.8.8.8&#39;&#34; The following example is a valid match expression for private NAT: &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(String match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param ruleNumber An integer uniquely identifying a rule in the list. The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(Integer ruleNumber) {
             $.ruleNumber = ruleNumber;
             return this;

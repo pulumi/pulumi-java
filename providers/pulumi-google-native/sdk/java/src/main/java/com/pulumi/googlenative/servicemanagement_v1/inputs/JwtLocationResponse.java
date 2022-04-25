@@ -23,6 +23,10 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="header", required=true)
     private String header;
 
+    /**
+     * @return Specifies HTTP header name to extract JWT token.
+     * 
+     */
     public String header() {
         return this.header;
     }
@@ -34,6 +38,10 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="query", required=true)
     private String query;
 
+    /**
+     * @return Specifies URL query parameter name to extract JWT token.
+     * 
+     */
     public String query() {
         return this.query;
     }
@@ -45,6 +53,10 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="valuePrefix", required=true)
     private String valuePrefix;
 
+    /**
+     * @return The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+     * 
+     */
     public String valuePrefix() {
         return this.valuePrefix;
     }
@@ -75,16 +87,34 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JwtLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Specifies HTTP header name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param query Specifies URL query parameter name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param valuePrefix The value prefix. The value format is &#34;value_prefix{token}&#34; Only applies to &#34;in&#34; header type. Must be empty for &#34;in&#34; query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for &#34;Authorization: Bearer {JWT}&#34;, value_prefix=&#34;Bearer &#34; with a space at the end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valuePrefix(String valuePrefix) {
             $.valuePrefix = valuePrefix;
             return this;

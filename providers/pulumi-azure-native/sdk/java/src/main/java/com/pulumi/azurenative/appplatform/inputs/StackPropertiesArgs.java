@@ -26,6 +26,10 @@ public final class StackPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Id of the ClusterStack.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class StackPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the ClusterStack
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,20 +74,44 @@ public final class StackPropertiesArgs extends com.pulumi.resources.ResourceArgs
             $ = new StackPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the ClusterStack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Id of the ClusterStack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param version Version of the ClusterStack
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the ClusterStack
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

@@ -28,6 +28,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="collectorIlb")
     private @Nullable Output<PacketMirroringForwardingRuleInfoArgs> collectorIlb;
 
+    /**
+     * @return The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
+     * 
+     */
     public Optional<Output<PacketMirroringForwardingRuleInfoArgs>> collectorIlb() {
         return Optional.ofNullable(this.collectorIlb);
     }
@@ -39,6 +43,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enable")
     private @Nullable Output<PacketMirroringEnable> enable;
 
+    /**
+     * @return Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+     * 
+     */
     public Optional<Output<PacketMirroringEnable>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -61,6 +73,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="filter")
     private @Nullable Output<PacketMirroringFilterArgs> filter;
 
+    /**
+     * @return Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+     * 
+     */
     public Optional<Output<PacketMirroringFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -72,6 +88,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mirroredResources")
     private @Nullable Output<PacketMirroringMirroredResourceInfoArgs> mirroredResources;
 
+    /**
+     * @return PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
+     * 
+     */
     public Optional<Output<PacketMirroringMirroredResourceInfoArgs>> mirroredResources() {
         return Optional.ofNullable(this.mirroredResources);
     }
@@ -83,6 +103,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +118,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="network")
     private @Nullable Output<PacketMirroringNetworkInfoArgs> network;
 
+    /**
+     * @return Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
+     * 
+     */
     public Optional<Output<PacketMirroringNetworkInfoArgs>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -105,6 +133,10 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -164,74 +196,170 @@ public final class PacketMirroringArgs extends com.pulumi.resources.ResourceArgs
             $ = new PacketMirroringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectorIlb The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectorIlb(@Nullable Output<PacketMirroringForwardingRuleInfoArgs> collectorIlb) {
             $.collectorIlb = collectorIlb;
             return this;
         }
 
+        /**
+         * @param collectorIlb The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectorIlb(PacketMirroringForwardingRuleInfoArgs collectorIlb) {
             return collectorIlb(Output.of(collectorIlb));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enable Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<PacketMirroringEnable> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(PacketMirroringEnable enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param filter Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<PacketMirroringFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(PacketMirroringFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param mirroredResources PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourceInfoArgs> mirroredResources) {
             $.mirroredResources = mirroredResources;
             return this;
         }
 
+        /**
+         * @param mirroredResources PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mirroredResources(PacketMirroringMirroredResourceInfoArgs mirroredResources) {
             return mirroredResources(Output.of(mirroredResources));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param network Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<PacketMirroringNetworkInfoArgs> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(PacketMirroringNetworkInfoArgs network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param priority The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }

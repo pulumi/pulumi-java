@@ -27,6 +27,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="cloudwatchConfig")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
 
+    /**
+     * @return Configuration options for sending command output to CloudWatch Logs. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs>> cloudwatchConfig() {
         return Optional.ofNullable(this.cloudwatchConfig);
     }
@@ -38,6 +42,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return Information about the command(s) to execute.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -49,6 +57,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHash")
     private @Nullable Output<String> documentHash;
 
+    /**
+     * @return The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
+     * 
+     */
     public Optional<Output<String>> documentHash() {
         return Optional.ofNullable(this.documentHash);
     }
@@ -60,6 +72,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentHashType")
     private @Nullable Output<String> documentHashType;
 
+    /**
+     * @return SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
+     * 
+     */
     public Optional<Output<String>> documentHashType() {
         return Optional.ofNullable(this.documentHashType);
     }
@@ -71,6 +87,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="documentVersion")
     private @Nullable Output<String> documentVersion;
 
+    /**
+     * @return The version of an Automation document to use during task execution.
+     * 
+     */
     public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -82,6 +102,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationConfig")
     private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
 
+    /**
+     * @return Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
+     * 
+     */
     public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs>> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
@@ -93,6 +117,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3Bucket")
     private @Nullable Output<String> outputS3Bucket;
 
+    /**
+     * @return The name of the Amazon S3 bucket.
+     * 
+     */
     public Optional<Output<String>> outputS3Bucket() {
         return Optional.ofNullable(this.outputS3Bucket);
     }
@@ -104,6 +132,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="outputS3KeyPrefix")
     private @Nullable Output<String> outputS3KeyPrefix;
 
+    /**
+     * @return The Amazon S3 bucket subfolder.
+     * 
+     */
     public Optional<Output<String>> outputS3KeyPrefix() {
         return Optional.ofNullable(this.outputS3KeyPrefix);
     }
@@ -115,6 +147,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="parameters")
     private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
 
+    /**
+     * @return The parameters for the RUN_COMMAND task execution. Documented below.
+     * 
+     */
     public Optional<Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -126,6 +162,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="serviceRoleArn")
     private @Nullable Output<String> serviceRoleArn;
 
+    /**
+     * @return The IAM service role to assume during task execution.
+     * 
+     */
     public Optional<Output<String>> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
@@ -137,6 +177,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return If this time is reached and the command has not already started executing, it doesn&#39;t run.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -175,105 +219,243 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             $ = new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchConfig Configuration options for sending command output to CloudWatch Logs. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig) {
             $.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
 
+        /**
+         * @param cloudwatchConfig Configuration options for sending command output to CloudWatch Logs. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchConfig(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs cloudwatchConfig) {
             return cloudwatchConfig(Output.of(cloudwatchConfig));
         }
 
+        /**
+         * @param comment Information about the command(s) to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment Information about the command(s) to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param documentHash The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentHash(@Nullable Output<String> documentHash) {
             $.documentHash = documentHash;
             return this;
         }
 
+        /**
+         * @param documentHash The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentHash(String documentHash) {
             return documentHash(Output.of(documentHash));
         }
 
+        /**
+         * @param documentHashType SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentHashType(@Nullable Output<String> documentHashType) {
             $.documentHashType = documentHashType;
             return this;
         }
 
+        /**
+         * @param documentHashType SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentHashType(String documentHashType) {
             return documentHashType(Output.of(documentHashType));
         }
 
+        /**
+         * @param documentVersion The version of an Automation document to use during task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param documentVersion The version of an Automation document to use during task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 
+        /**
+         * @param notificationConfig Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig) {
             $.notificationConfig = notificationConfig;
             return this;
         }
 
+        /**
+         * @param notificationConfig Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationConfig(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs notificationConfig) {
             return notificationConfig(Output.of(notificationConfig));
         }
 
+        /**
+         * @param outputS3Bucket The name of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputS3Bucket(@Nullable Output<String> outputS3Bucket) {
             $.outputS3Bucket = outputS3Bucket;
             return this;
         }
 
+        /**
+         * @param outputS3Bucket The name of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputS3Bucket(String outputS3Bucket) {
             return outputS3Bucket(Output.of(outputS3Bucket));
         }
 
+        /**
+         * @param outputS3KeyPrefix The Amazon S3 bucket subfolder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputS3KeyPrefix(@Nullable Output<String> outputS3KeyPrefix) {
             $.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
 
+        /**
+         * @param outputS3KeyPrefix The Amazon S3 bucket subfolder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputS3KeyPrefix(String outputS3KeyPrefix) {
             return outputS3KeyPrefix(Output.of(outputS3KeyPrefix));
         }
 
+        /**
+         * @param parameters The parameters for the RUN_COMMAND task execution. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the RUN_COMMAND task execution. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters for the RUN_COMMAND task execution. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param serviceRoleArn The IAM service role to assume during task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
             $.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceRoleArn The IAM service role to assume during task execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRoleArn(String serviceRoleArn) {
             return serviceRoleArn(Output.of(serviceRoleArn));
         }
 
+        /**
+         * @param timeoutSeconds If this time is reached and the command has not already started executing, it doesn&#39;t run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds If this time is reached and the command has not already started executing, it doesn&#39;t run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

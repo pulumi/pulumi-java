@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetVirtualNetworkRuleResult {
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * The resource identifier for the subnet.
+     * @return The resource identifier for the subnet.
      * 
      */
     private final String subnetId;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -43,30 +43,30 @@ public final class GetVirtualNetworkRuleResult {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource identifier for the subnet.
+     * @return The resource identifier for the subnet.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

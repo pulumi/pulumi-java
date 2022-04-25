@@ -19,6 +19,10 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
     @Import(name="sqlServerInstanceName", required=true)
     private String sqlServerInstanceName;
 
+    /**
+     * @return Name of SQL Server Instance
+     * 
+     */
     public String sqlServerInstanceName() {
         return this.sqlServerInstanceName;
     }
@@ -59,11 +67,23 @@ public final class GetSqlServerInstanceArgs extends com.pulumi.resources.InvokeA
             $ = new GetSqlServerInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlServerInstanceName Name of SQL Server Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerInstanceName(String sqlServerInstanceName) {
             $.sqlServerInstanceName = sqlServerInstanceName;
             return this;

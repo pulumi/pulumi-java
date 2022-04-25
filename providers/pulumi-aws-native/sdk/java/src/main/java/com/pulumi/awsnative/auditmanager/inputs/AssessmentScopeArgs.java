@@ -28,6 +28,10 @@ public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="awsAccounts")
     private @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
 
+    /**
+     * @return The AWS accounts included in scope.
+     * 
+     */
     public Optional<Output<List<AssessmentAWSAccountArgs>>> awsAccounts() {
         return Optional.ofNullable(this.awsAccounts);
     }
@@ -39,6 +43,10 @@ public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="awsServices")
     private @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
+    /**
+     * @return The AWS services included in scope.
+     * 
+     */
     public Optional<Output<List<AssessmentAWSServiceArgs>>> awsServices() {
         return Optional.ofNullable(this.awsServices);
     }
@@ -68,28 +76,64 @@ public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs
             $ = new AssessmentScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccounts The AWS accounts included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccounts(@Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts) {
             $.awsAccounts = awsAccounts;
             return this;
         }
 
+        /**
+         * @param awsAccounts The AWS accounts included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccounts(List<AssessmentAWSAccountArgs> awsAccounts) {
             return awsAccounts(Output.of(awsAccounts));
         }
 
+        /**
+         * @param awsAccounts The AWS accounts included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccounts(AssessmentAWSAccountArgs... awsAccounts) {
             return awsAccounts(List.of(awsAccounts));
         }
 
+        /**
+         * @param awsServices The AWS services included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServices(@Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
             $.awsServices = awsServices;
             return this;
         }
 
+        /**
+         * @param awsServices The AWS services included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServices(List<AssessmentAWSServiceArgs> awsServices) {
             return awsServices(Output.of(awsServices));
         }
 
+        /**
+         * @param awsServices The AWS services included in scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsServices(AssessmentAWSServiceArgs... awsServices) {
             return awsServices(List.of(awsServices));
         }

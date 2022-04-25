@@ -19,6 +19,10 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends co
     @Import(name="instanceArn", required=true)
     private String instanceArn;
 
+    /**
+     * @return The ARN of the AWS SSO instance under which the operation will be executed.
+     * 
+     */
     public String instanceArn() {
         return this.instanceArn;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends co
             $ = new GetInstanceAccessControlAttributeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceArn The ARN of the AWS SSO instance under which the operation will be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             $.instanceArn = instanceArn;
             return this;

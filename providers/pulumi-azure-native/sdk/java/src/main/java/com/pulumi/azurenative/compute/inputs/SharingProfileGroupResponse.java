@@ -26,6 +26,10 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
     @Import(name="ids")
     private @Nullable List<String> ids;
 
+    /**
+     * @return A list of subscription/tenant ids the gallery is aimed to be shared to.
+     * 
+     */
     public Optional<List<String>> ids() {
         return Optional.ofNullable(this.ids);
     }
@@ -37,6 +41,10 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return This property allows you to specify the type of sharing group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Subscriptions** &lt;br&gt;&lt;br&gt; **AADTenants**
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,15 +74,33 @@ public final class SharingProfileGroupResponse extends com.pulumi.resources.Invo
             $ = new SharingProfileGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ids A list of subscription/tenant ids the gallery is aimed to be shared to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(@Nullable List<String> ids) {
             $.ids = ids;
             return this;
         }
 
+        /**
+         * @param ids A list of subscription/tenant ids the gallery is aimed to be shared to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ids(String... ids) {
             return ids(List.of(ids));
         }
 
+        /**
+         * @param type This property allows you to specify the type of sharing group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Subscriptions** &lt;br&gt;&lt;br&gt; **AADTenants**
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SchemaSettingsResponse {
     /**
-     * The encoding of messages validated against `schema`.
+     * @return The encoding of messages validated against `schema`.
      * 
      */
     private final String encoding;
     /**
-     * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+     * @return The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
      * 
      */
     private final String schema;
@@ -29,16 +29,16 @@ public final class SchemaSettingsResponse {
     }
 
     /**
-     * The encoding of messages validated against `schema`.
+     * @return The encoding of messages validated against `schema`.
      * 
-    */
+     */
     public String encoding() {
         return this.encoding;
     }
     /**
-     * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
+     * @return The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
      * 
-    */
+     */
     public String schema() {
         return this.schema;
     }

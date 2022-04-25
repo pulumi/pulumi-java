@@ -23,6 +23,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return [Internal] This field is for Google internal use only.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -45,6 +53,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -56,6 +68,10 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -87,38 +103,86 @@ public final class DestinationTablePropertiesArgs extends com.pulumi.resources.R
             $ = new DestinationTablePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expirationTime [Internal] This field is for Google internal use only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime [Internal] This field is for Google internal use only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param friendlyName [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param labels [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

@@ -26,6 +26,10 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="useSystemAssignedIdentity")
     private @Nullable Boolean useSystemAssignedIdentity;
 
+    /**
+     * @return Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
+     * 
+     */
     public Optional<Boolean> useSystemAssignedIdentity() {
         return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
@@ -37,6 +41,10 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userAssignedIdentity")
     private @Nullable String userAssignedIdentity;
 
+    /**
+     * @return The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+     * 
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -66,11 +74,23 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
             $ = new CmkKekIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param useSystemAssignedIdentity Indicate that system assigned identity should be used. Mutually exclusive with &#39;userAssignedIdentity&#39; field
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
             $.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

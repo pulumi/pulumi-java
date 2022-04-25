@@ -22,6 +22,10 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
     @Import(name="appIdClientRegex")
     private @Nullable Output<String> appIdClientRegex;
 
+    /**
+     * @return A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
+     * 
+     */
     public Optional<Output<String>> appIdClientRegex() {
         return Optional.ofNullable(this.appIdClientRegex);
     }
@@ -33,6 +37,10 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
     @Import(name="awsRegion")
     private @Nullable Output<String> awsRegion;
 
+    /**
+     * @return The AWS region in which the user pool was created.
+     * 
+     */
     public Optional<Output<String>> awsRegion() {
         return Optional.ofNullable(this.awsRegion);
     }
@@ -44,6 +52,10 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
     @Import(name="defaultAction", required=true)
     private Output<String> defaultAction;
 
+    /**
+     * @return The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn&#39;t match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
+     * 
+     */
     public Output<String> defaultAction() {
         return this.defaultAction;
     }
@@ -55,6 +67,10 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
     @Import(name="userPoolId", required=true)
     private Output<String> userPoolId;
 
+    /**
+     * @return The user pool ID.
+     * 
+     */
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
@@ -86,38 +102,86 @@ public final class GraphQLApiUserPoolConfigArgs extends com.pulumi.resources.Res
             $ = new GraphQLApiUserPoolConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appIdClientRegex(@Nullable Output<String> appIdClientRegex) {
             $.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
+        /**
+         * @param appIdClientRegex A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appIdClientRegex(String appIdClientRegex) {
             return appIdClientRegex(Output.of(appIdClientRegex));
         }
 
+        /**
+         * @param awsRegion The AWS region in which the user pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
             $.awsRegion = awsRegion;
             return this;
         }
 
+        /**
+         * @param awsRegion The AWS region in which the user pool was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsRegion(String awsRegion) {
             return awsRegion(Output.of(awsRegion));
         }
 
+        /**
+         * @param defaultAction The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn&#39;t match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(Output<String> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param defaultAction The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn&#39;t match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(String defaultAction) {
             return defaultAction(Output.of(defaultAction));
         }
 
+        /**
+         * @param userPoolId The user pool ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(Output<String> userPoolId) {
             $.userPoolId = userPoolId;
             return this;
         }
 
+        /**
+         * @param userPoolId The user pool ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPoolId(String userPoolId) {
             return userPoolId(Output.of(userPoolId));
         }

@@ -29,6 +29,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="apt")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs>> apt() {
         return Optional.ofNullable(this.apt);
     }
@@ -40,6 +44,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="deb")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb;
 
+    /**
+     * @return A deb package file.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs>> deb() {
         return Optional.ofNullable(this.deb);
     }
@@ -51,6 +59,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="desiredState", required=true)
     private Output<String> desiredState;
 
+    /**
+     * @return Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * 
+     */
     public Output<String> desiredState() {
         return this.desiredState;
     }
@@ -62,6 +74,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="googet")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet;
 
+    /**
+     * @return A package managed by GooGet.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs>> googet() {
         return Optional.ofNullable(this.googet);
     }
@@ -73,6 +89,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="msi")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi;
 
+    /**
+     * @return An MSI package.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs>> msi() {
         return Optional.ofNullable(this.msi);
     }
@@ -84,6 +104,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="rpm")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm;
 
+    /**
+     * @return An rpm package file.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs>> rpm() {
         return Optional.ofNullable(this.rpm);
     }
@@ -95,6 +119,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="yum")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs>> yum() {
         return Optional.ofNullable(this.yum);
     }
@@ -106,6 +134,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="zypper")
     private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs>> zypper() {
         return Optional.ofNullable(this.zypper);
     }
@@ -141,74 +173,170 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs apt) {
             return apt(Output.of(apt));
         }
 
+        /**
+         * @param deb A deb package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deb(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb) {
             $.deb = deb;
             return this;
         }
 
+        /**
+         * @param deb A deb package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deb(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs deb) {
             return deb(Output.of(deb));
         }
 
+        /**
+         * @param desiredState Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(Output<String> desiredState) {
             $.desiredState = desiredState;
             return this;
         }
 
+        /**
+         * @param desiredState Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredState(String desiredState) {
             return desiredState(Output.of(desiredState));
         }
 
+        /**
+         * @param googet A package managed by GooGet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googet(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet) {
             $.googet = googet;
             return this;
         }
 
+        /**
+         * @param googet A package managed by GooGet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googet(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs googet) {
             return googet(Output.of(googet));
         }
 
+        /**
+         * @param msi An MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi) {
             $.msi = msi;
             return this;
         }
 
+        /**
+         * @param msi An MSI package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msi(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs msi) {
             return msi(Output.of(msi));
         }
 
+        /**
+         * @param rpm An rpm package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpm(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm) {
             $.rpm = rpm;
             return this;
         }
 
+        /**
+         * @param rpm An rpm package file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpm(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs rpm) {
             return rpm(Output.of(rpm));
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs yum) {
             return yum(Output.of(yum));
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper) {
             $.zypper = zypper;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs zypper) {
             return zypper(Output.of(zypper));
         }

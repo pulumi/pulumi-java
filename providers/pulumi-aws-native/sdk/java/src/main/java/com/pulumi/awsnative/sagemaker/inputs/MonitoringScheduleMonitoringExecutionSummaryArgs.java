@@ -27,6 +27,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="creationTime", required=true)
     private Output<String> creationTime;
 
+    /**
+     * @return The time at which the monitoring job was created.
+     * 
+     */
     public Output<String> creationTime() {
         return this.creationTime;
     }
@@ -45,6 +49,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="failureReason")
     private @Nullable Output<String> failureReason;
 
+    /**
+     * @return Contains the reason a monitoring job failed, if it failed.
+     * 
+     */
     public Optional<Output<String>> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
@@ -56,6 +64,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="lastModifiedTime", required=true)
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return A timestamp that indicates the last time the monitoring job was modified.
+     * 
+     */
     public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -67,6 +79,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="monitoringExecutionStatus", required=true)
     private Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
+    /**
+     * @return The status of the monitoring job.
+     * 
+     */
     public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
@@ -85,6 +101,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="processingJobArn")
     private @Nullable Output<String> processingJobArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the monitoring job.
+     * 
+     */
     public Optional<Output<String>> processingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
@@ -96,6 +116,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
     @Import(name="scheduledTime", required=true)
     private Output<String> scheduledTime;
 
+    /**
+     * @return The time the monitoring job was scheduled.
+     * 
+     */
     public Output<String> scheduledTime() {
         return this.scheduledTime;
     }
@@ -131,11 +155,23 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
             $ = new MonitoringScheduleMonitoringExecutionSummaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTime The time at which the monitoring job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(Output<String> creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param creationTime The time at which the monitoring job was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             return creationTime(Output.of(creationTime));
         }
@@ -149,29 +185,65 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param failureReason Contains the reason a monitoring job failed, if it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(@Nullable Output<String> failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param failureReason Contains the reason a monitoring job failed, if it failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(String failureReason) {
             return failureReason(Output.of(failureReason));
         }
 
+        /**
+         * @param lastModifiedTime A timestamp that indicates the last time the monitoring job was modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(Output<String> lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime A timestamp that indicates the last time the monitoring job was modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             return lastModifiedTime(Output.of(lastModifiedTime));
         }
 
+        /**
+         * @param monitoringExecutionStatus The status of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringExecutionStatus(Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
             $.monitoringExecutionStatus = monitoringExecutionStatus;
             return this;
         }
 
+        /**
+         * @param monitoringExecutionStatus The status of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             return monitoringExecutionStatus(Output.of(monitoringExecutionStatus));
         }
@@ -185,20 +257,44 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
             return monitoringScheduleName(Output.of(monitoringScheduleName));
         }
 
+        /**
+         * @param processingJobArn The Amazon Resource Name (ARN) of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingJobArn(@Nullable Output<String> processingJobArn) {
             $.processingJobArn = processingJobArn;
             return this;
         }
 
+        /**
+         * @param processingJobArn The Amazon Resource Name (ARN) of the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processingJobArn(String processingJobArn) {
             return processingJobArn(Output.of(processingJobArn));
         }
 
+        /**
+         * @param scheduledTime The time the monitoring job was scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledTime(Output<String> scheduledTime) {
             $.scheduledTime = scheduledTime;
             return this;
         }
 
+        /**
+         * @param scheduledTime The time the monitoring job was scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledTime(String scheduledTime) {
             return scheduledTime(Output.of(scheduledTime));
         }

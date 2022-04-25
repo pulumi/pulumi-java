@@ -28,6 +28,10 @@ public final class WindowsOsInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="windowsOsState")
     private @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
 
+    /**
+     * @return The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * 
+     */
     public Optional<Output<Either<String,WindowsOsState>>> windowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }
@@ -56,19 +60,43 @@ public final class WindowsOsInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WindowsOsInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param windowsOsState The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsState(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
             $.windowsOsState = windowsOsState;
             return this;
         }
 
+        /**
+         * @param windowsOsState The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsState(Either<String,WindowsOsState> windowsOsState) {
             return windowsOsState(Output.of(windowsOsState));
         }
 
+        /**
+         * @param windowsOsState The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsState(String windowsOsState) {
             return windowsOsState(Either.ofLeft(windowsOsState));
         }
 
+        /**
+         * @param windowsOsState The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsState(WindowsOsState windowsOsState) {
             return windowsOsState(Either.ofRight(windowsOsState));
         }

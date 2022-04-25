@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResolverRuleTargetAddress {
     /**
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
      * 
      */
     private final String ip;
     /**
-     * The port at Ip that you want to forward DNS queries to.
+     * @return The port at Ip that you want to forward DNS queries to.
      * 
      */
     private final @Nullable String port;
@@ -31,16 +31,16 @@ public final class ResolverRuleTargetAddress {
     }
 
     /**
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
      * 
-    */
+     */
     public String ip() {
         return this.ip;
     }
     /**
-     * The port at Ip that you want to forward DNS queries to.
+     * @return The port at Ip that you want to forward DNS queries to.
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }

@@ -17,47 +17,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMonitorResult {
     /**
-     * ARM id of the monitor resource.
+     * @return ARM id of the monitor resource.
      * 
      */
     private final String id;
     /**
-     * Identity properties of the monitor resource.
+     * @return Identity properties of the monitor resource.
      * 
      */
     private final @Nullable IdentityPropertiesResponse identity;
     /**
-     * The location of the monitor resource
+     * @return The location of the monitor resource
      * 
      */
     private final String location;
     /**
-     * Name of the monitor resource.
+     * @return Name of the monitor resource.
      * 
      */
     private final String name;
     /**
-     * Properties of the monitor resource.
+     * @return Properties of the monitor resource.
      * 
      */
     private final MonitorPropertiesResponse properties;
     /**
-     * SKU of the monitor resource.
+     * @return SKU of the monitor resource.
      * 
      */
     private final @Nullable ResourceSkuResponse sku;
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The tags of the monitor resource.
+     * @return The tags of the monitor resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the monitor resource.
+     * @return The type of the monitor resource.
      * 
      */
     private final String type;
@@ -85,65 +85,65 @@ public final class GetMonitorResult {
     }
 
     /**
-     * ARM id of the monitor resource.
+     * @return ARM id of the monitor resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity properties of the monitor resource.
+     * @return Identity properties of the monitor resource.
      * 
-    */
+     */
     public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the monitor resource
+     * @return The location of the monitor resource
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the monitor resource.
+     * @return Name of the monitor resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the monitor resource.
+     * @return Properties of the monitor resource.
      * 
-    */
+     */
     public MonitorPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * SKU of the monitor resource.
+     * @return SKU of the monitor resource.
      * 
-    */
+     */
     public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The tags of the monitor resource.
+     * @return The tags of the monitor resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the monitor resource.
+     * @return The type of the monitor resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

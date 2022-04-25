@@ -24,6 +24,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="revision", required=true)
     private Integer revision;
 
+    /**
+     * @return The revision number of the update.
+     * 
+     */
     public Integer revision() {
         return this.revision;
     }
@@ -35,6 +39,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateId", required=true)
     private String updateId;
 
+    /**
+     * @return The revision independent identifier of the update.
+     * 
+     */
     public String updateId() {
         return this.updateId;
     }
@@ -64,11 +72,23 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revision The revision number of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param updateId The revision independent identifier of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateId(String updateId) {
             $.updateId = updateId;
             return this;

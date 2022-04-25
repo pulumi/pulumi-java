@@ -14,42 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointsResponse {
     /**
-     * Gets the blob endpoint.
+     * @return Gets the blob endpoint.
      * 
      */
     private final String blob;
     /**
-     * Gets the dfs endpoint.
+     * @return Gets the dfs endpoint.
      * 
      */
     private final String dfs;
     /**
-     * Gets the file endpoint.
+     * @return Gets the file endpoint.
      * 
      */
     private final String file;
     /**
-     * Gets the internet routing storage endpoints
+     * @return Gets the internet routing storage endpoints
      * 
      */
     private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
     /**
-     * Gets the microsoft routing storage endpoints.
+     * @return Gets the microsoft routing storage endpoints.
      * 
      */
     private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
     /**
-     * Gets the queue endpoint.
+     * @return Gets the queue endpoint.
      * 
      */
     private final String queue;
     /**
-     * Gets the table endpoint.
+     * @return Gets the table endpoint.
      * 
      */
     private final String table;
     /**
-     * Gets the web endpoint.
+     * @return Gets the web endpoint.
      * 
      */
     private final String web;
@@ -75,58 +75,58 @@ public final class EndpointsResponse {
     }
 
     /**
-     * Gets the blob endpoint.
+     * @return Gets the blob endpoint.
      * 
-    */
+     */
     public String blob() {
         return this.blob;
     }
     /**
-     * Gets the dfs endpoint.
+     * @return Gets the dfs endpoint.
      * 
-    */
+     */
     public String dfs() {
         return this.dfs;
     }
     /**
-     * Gets the file endpoint.
+     * @return Gets the file endpoint.
      * 
-    */
+     */
     public String file() {
         return this.file;
     }
     /**
-     * Gets the internet routing storage endpoints
+     * @return Gets the internet routing storage endpoints
      * 
-    */
+     */
     public Optional<StorageAccountInternetEndpointsResponse> internetEndpoints() {
         return Optional.ofNullable(this.internetEndpoints);
     }
     /**
-     * Gets the microsoft routing storage endpoints.
+     * @return Gets the microsoft routing storage endpoints.
      * 
-    */
+     */
     public Optional<StorageAccountMicrosoftEndpointsResponse> microsoftEndpoints() {
         return Optional.ofNullable(this.microsoftEndpoints);
     }
     /**
-     * Gets the queue endpoint.
+     * @return Gets the queue endpoint.
      * 
-    */
+     */
     public String queue() {
         return this.queue;
     }
     /**
-     * Gets the table endpoint.
+     * @return Gets the table endpoint.
      * 
-    */
+     */
     public String table() {
         return this.table;
     }
     /**
-     * Gets the web endpoint.
+     * @return Gets the web endpoint.
      * 
-    */
+     */
     public String web() {
         return this.web;
     }

@@ -11,33 +11,33 @@ import java.util.Objects;
 @CustomType
 public final class PurchaseMeterDetailsResponse {
     /**
-     * Represents billing type.
+     * @return Represents billing type.
      * Expected value is &#39;Purchase&#39;.
      * 
      */
     private final String billingType;
     /**
-     * Charging type.
+     * @return Charging type.
      * 
      */
     private final String chargingType;
     /**
-     * Billing unit applicable for Pav2 billing
+     * @return Billing unit applicable for Pav2 billing
      * 
      */
     private final Double multiplier;
     /**
-     * Product Id
+     * @return Product Id
      * 
      */
     private final String productId;
     /**
-     * Sku Id
+     * @return Sku Id
      * 
      */
     private final String skuId;
     /**
-     * Term Id
+     * @return Term Id
      * 
      */
     private final String termId;
@@ -59,45 +59,45 @@ public final class PurchaseMeterDetailsResponse {
     }
 
     /**
-     * Represents billing type.
+     * @return Represents billing type.
      * Expected value is &#39;Purchase&#39;.
      * 
-    */
+     */
     public String billingType() {
         return this.billingType;
     }
     /**
-     * Charging type.
+     * @return Charging type.
      * 
-    */
+     */
     public String chargingType() {
         return this.chargingType;
     }
     /**
-     * Billing unit applicable for Pav2 billing
+     * @return Billing unit applicable for Pav2 billing
      * 
-    */
+     */
     public Double multiplier() {
         return this.multiplier;
     }
     /**
-     * Product Id
+     * @return Product Id
      * 
-    */
+     */
     public String productId() {
         return this.productId;
     }
     /**
-     * Sku Id
+     * @return Sku Id
      * 
-    */
+     */
     public String skuId() {
         return this.skuId;
     }
     /**
-     * Term Id
+     * @return Term Id
      * 
-    */
+     */
     public String termId() {
         return this.termId;
     }

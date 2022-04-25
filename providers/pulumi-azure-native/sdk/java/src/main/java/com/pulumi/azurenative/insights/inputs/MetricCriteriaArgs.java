@@ -35,6 +35,11 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="criterionType", required=true)
     private Output<String> criterionType;
 
+    /**
+     * @return Specifies the type of threshold criteria
+     * Expected value is &#39;StaticThresholdCriterion&#39;.
+     * 
+     */
     public Output<String> criterionType() {
         return this.criterionType;
     }
@@ -46,6 +51,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dimensions")
     private @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
+    /**
+     * @return List of dimension conditions.
+     * 
+     */
     public Optional<Output<List<MetricDimensionArgs>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -57,6 +66,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return Name of the metric.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -68,6 +81,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="metricNamespace")
     private @Nullable Output<String> metricNamespace;
 
+    /**
+     * @return Namespace of the metric.
+     * 
+     */
     public Optional<Output<String>> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -79,6 +96,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the criteria.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -90,6 +111,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operator", required=true)
     private Output<Either<String,Operator>> operator;
 
+    /**
+     * @return the criteria operator.
+     * 
+     */
     public Output<Either<String,Operator>> operator() {
         return this.operator;
     }
@@ -101,6 +126,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="skipMetricValidation")
     private @Nullable Output<Boolean> skipMetricValidation;
 
+    /**
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * 
+     */
     public Optional<Output<Boolean>> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
@@ -112,6 +141,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="threshold", required=true)
     private Output<Double> threshold;
 
+    /**
+     * @return the criteria threshold value that activates the alert.
+     * 
+     */
     public Output<Double> threshold() {
         return this.threshold;
     }
@@ -123,6 +156,10 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeAggregation", required=true)
     private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
+    /**
+     * @return the criteria time aggregation types.
+     * 
+     */
     public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
@@ -159,103 +196,243 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;StaticThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(Output<String> criterionType) {
             $.criterionType = criterionType;
             return this;
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;StaticThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(String criterionType) {
             return criterionType(Output.of(criterionType));
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<MetricDimensionArgs> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(MetricDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(String metricNamespace) {
             return metricNamespace(Output.of(metricNamespace));
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operator the criteria operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,Operator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator the criteria operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator the criteria operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator the criteria operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Operator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(Boolean skipMetricValidation) {
             return skipMetricValidation(Output.of(skipMetricValidation));
         }
 
+        /**
+         * @param threshold the criteria threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold the criteria threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             return timeAggregation(Output.of(timeAggregation));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(String timeAggregation) {
             return timeAggregation(Either.ofLeft(timeAggregation));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(AggregationTypeEnum timeAggregation) {
             return timeAggregation(Either.ofRight(timeAggregation));
         }

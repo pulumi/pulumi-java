@@ -23,6 +23,10 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="allowNullHeader")
     private @Nullable Output<Boolean> allowNullHeader;
 
+    /**
+     * @return Determines whether messages with no header are allowed.
+     * 
+     */
     public Optional<Output<Boolean>> allowNullHeader() {
         return Optional.ofNullable(this.allowNullHeader);
     }
@@ -35,6 +39,11 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="schema")
     private @Nullable Output<String> schema;
 
+    /**
+     * @return JSON encoded string for schemas used to parse messages in this
+     * store if schematized parsing is desired.
+     * 
+     */
     public Optional<Output<String>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -47,6 +56,11 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="segmentTerminator")
     private @Nullable Output<String> segmentTerminator;
 
+    /**
+     * @return Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
+     * A base64-encoded string.
+     * 
+     */
     public Optional<Output<String>> segmentTerminator() {
         return Optional.ofNullable(this.segmentTerminator);
     }
@@ -60,6 +74,12 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the unschematized parser to be used when a custom `schema` is not set.
+     * Default value is `V1`.
+     * Possible values are `V1` and `V2`.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -91,38 +111,94 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
             $ = new Hl7StoreParserConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNullHeader Determines whether messages with no header are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNullHeader(@Nullable Output<Boolean> allowNullHeader) {
             $.allowNullHeader = allowNullHeader;
             return this;
         }
 
+        /**
+         * @param allowNullHeader Determines whether messages with no header are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNullHeader(Boolean allowNullHeader) {
             return allowNullHeader(Output.of(allowNullHeader));
         }
 
+        /**
+         * @param schema JSON encoded string for schemas used to parse messages in this
+         * store if schematized parsing is desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema JSON encoded string for schemas used to parse messages in this
+         * store if schematized parsing is desired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param segmentTerminator Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(String segmentTerminator) {
             return segmentTerminator(Output.of(segmentTerminator));
         }
 
+        /**
+         * @param version The version of the unschematized parser to be used when a custom `schema` is not set.
+         * Default value is `V1`.
+         * Possible values are `V1` and `V2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the unschematized parser to be used when a custom `schema` is not set.
+         * Default value is `V1`.
+         * Possible values are `V1` and `V2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

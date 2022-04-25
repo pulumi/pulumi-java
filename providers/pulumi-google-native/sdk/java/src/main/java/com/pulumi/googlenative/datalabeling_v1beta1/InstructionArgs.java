@@ -24,6 +24,10 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataType", required=true)
     private Output<InstructionDataType> dataType;
 
+    /**
+     * @return The data type of this instruction.
+     * 
+     */
     public Output<InstructionDataType> dataType() {
         return this.dataType;
     }
@@ -35,6 +39,10 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the instruction. Maximum of 64 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -57,6 +69,10 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pdfInstruction")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
+    /**
+     * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs>> pdfInstruction() {
         return Optional.ofNullable(this.pdfInstruction);
     }
@@ -96,38 +112,86 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstructionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The data type of this instruction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(Output<InstructionDataType> dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param dataType The data type of this instruction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(InstructionDataType dataType) {
             return dataType(Output.of(dataType));
         }
 
+        /**
+         * @param description Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the instruction. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the instruction. Maximum of 64 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param pdfInstruction Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pdfInstruction(@Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction) {
             $.pdfInstruction = pdfInstruction;
             return this;
         }
 
+        /**
+         * @param pdfInstruction Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstructionArgs pdfInstruction) {
             return pdfInstruction(Output.of(pdfInstruction));
         }

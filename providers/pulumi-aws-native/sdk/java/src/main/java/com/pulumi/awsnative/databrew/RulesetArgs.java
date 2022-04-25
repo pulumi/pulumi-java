@@ -25,6 +25,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the Ruleset
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the Ruleset
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules", required=true)
     private Output<List<RulesetRuleArgs>> rules;
 
+    /**
+     * @return List of the data quality rules in the ruleset
+     * 
+     */
     public Output<List<RulesetRuleArgs>> rules() {
         return this.rules;
     }
@@ -65,6 +77,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetArn", required=true)
     private Output<String> targetArn;
 
+    /**
+     * @return Arn of the target resource (dataset) to apply the ruleset to
+     * 
+     */
     public Output<String> targetArn() {
         return this.targetArn;
     }
@@ -97,33 +113,75 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RulesetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the Ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rules List of the data quality rules in the ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<RulesetRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of the data quality rules in the ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RulesetRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules List of the data quality rules in the ruleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RulesetRuleArgs... rules) {
             return rules(List.of(rules));
         }
@@ -141,11 +199,23 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param targetArn Arn of the target resource (dataset) to apply the ruleset to
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(Output<String> targetArn) {
             $.targetArn = targetArn;
             return this;
         }
 
+        /**
+         * @param targetArn Arn of the target resource (dataset) to apply the ruleset to
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(String targetArn) {
             return targetArn(Output.of(targetArn));
         }

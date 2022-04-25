@@ -30,6 +30,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="abortIncompleteMultipartUploadDays")
     private @Nullable Output<Integer> abortIncompleteMultipartUploadDays;
 
+    /**
+     * @return Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+     * 
+     */
     public Optional<Output<Integer>> abortIncompleteMultipartUploadDays() {
         return Optional.ofNullable(this.abortIncompleteMultipartUploadDays);
     }
@@ -41,6 +45,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Specifies lifecycle rule status.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -52,6 +60,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="expiration")
     private @Nullable Output<BucketLifecycleRuleExpirationGetArgs> expiration;
 
+    /**
+     * @return Specifies a period in the object&#39;s expire (documented below).
+     * 
+     */
     public Optional<Output<BucketLifecycleRuleExpirationGetArgs>> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -63,6 +75,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -74,6 +90,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="noncurrentVersionExpiration")
     private @Nullable Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration;
 
+    /**
+     * @return Specifies when noncurrent object versions expire (documented below).
+     * 
+     */
     public Optional<Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs>> noncurrentVersionExpiration() {
         return Optional.ofNullable(this.noncurrentVersionExpiration);
     }
@@ -85,6 +105,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="noncurrentVersionTransitions")
     private @Nullable Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions;
 
+    /**
+     * @return Specifies when noncurrent object versions transitions (documented below).
+     * 
+     */
     public Optional<Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>>> noncurrentVersionTransitions() {
         return Optional.ofNullable(this.noncurrentVersionTransitions);
     }
@@ -96,6 +120,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Object key prefix identifying one or more objects to which the rule applies.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -107,6 +135,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Specifies object tags key and value.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -118,6 +150,10 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="transitions")
     private @Nullable Output<List<BucketLifecycleRuleTransitionGetArgs>> transitions;
 
+    /**
+     * @return Specifies a period in the object&#39;s transitions (documented below).
+     * 
+     */
     public Optional<Output<List<BucketLifecycleRuleTransitionGetArgs>>> transitions() {
         return Optional.ofNullable(this.transitions);
     }
@@ -154,91 +190,211 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
             $ = new BucketLifecycleRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortIncompleteMultipartUploadDays Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUploadDays(@Nullable Output<Integer> abortIncompleteMultipartUploadDays) {
             $.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
             return this;
         }
 
+        /**
+         * @param abortIncompleteMultipartUploadDays Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUploadDays(Integer abortIncompleteMultipartUploadDays) {
             return abortIncompleteMultipartUploadDays(Output.of(abortIncompleteMultipartUploadDays));
         }
 
+        /**
+         * @param enabled Specifies lifecycle rule status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies lifecycle rule status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param expiration Specifies a period in the object&#39;s expire (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable Output<BucketLifecycleRuleExpirationGetArgs> expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param expiration Specifies a period in the object&#39;s expire (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(BucketLifecycleRuleExpirationGetArgs expiration) {
             return expiration(Output.of(expiration));
         }
 
+        /**
+         * @param id Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param noncurrentVersionExpiration Specifies when noncurrent object versions expire (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentVersionExpiration(@Nullable Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration) {
             $.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
+        /**
+         * @param noncurrentVersionExpiration Specifies when noncurrent object versions expire (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentVersionExpiration(BucketLifecycleRuleNoncurrentVersionExpirationGetArgs noncurrentVersionExpiration) {
             return noncurrentVersionExpiration(Output.of(noncurrentVersionExpiration));
         }
 
+        /**
+         * @param noncurrentVersionTransitions Specifies when noncurrent object versions transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentVersionTransitions(@Nullable Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions) {
             $.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
+        /**
+         * @param noncurrentVersionTransitions Specifies when noncurrent object versions transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentVersionTransitions(List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs> noncurrentVersionTransitions) {
             return noncurrentVersionTransitions(Output.of(noncurrentVersionTransitions));
         }
 
+        /**
+         * @param noncurrentVersionTransitions Specifies when noncurrent object versions transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder noncurrentVersionTransitions(BucketLifecycleRuleNoncurrentVersionTransitionGetArgs... noncurrentVersionTransitions) {
             return noncurrentVersionTransitions(List.of(noncurrentVersionTransitions));
         }
 
+        /**
+         * @param prefix Object key prefix identifying one or more objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Object key prefix identifying one or more objects to which the rule applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param tags Specifies object tags key and value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies object tags key and value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transitions Specifies a period in the object&#39;s transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitions(@Nullable Output<List<BucketLifecycleRuleTransitionGetArgs>> transitions) {
             $.transitions = transitions;
             return this;
         }
 
+        /**
+         * @param transitions Specifies a period in the object&#39;s transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitions(List<BucketLifecycleRuleTransitionGetArgs> transitions) {
             return transitions(Output.of(transitions));
         }
 
+        /**
+         * @param transitions Specifies a period in the object&#39;s transitions (documented below).
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitions(BucketLifecycleRuleTransitionGetArgs... transitions) {
             return transitions(List.of(transitions));
         }

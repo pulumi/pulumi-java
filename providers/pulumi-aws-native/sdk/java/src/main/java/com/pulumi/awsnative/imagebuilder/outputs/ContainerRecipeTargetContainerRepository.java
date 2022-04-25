@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerRecipeTargetContainerRepository {
     /**
-     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * @return The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
      */
     private final @Nullable String repositoryName;
     /**
-     * Specifies the service in which this image was registered.
+     * @return Specifies the service in which this image was registered.
      * 
      */
     private final @Nullable ContainerRecipeTargetContainerRepositoryService service;
@@ -32,16 +32,16 @@ public final class ContainerRecipeTargetContainerRepository {
     }
 
     /**
-     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * @return The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
-    */
+     */
     public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
-     * Specifies the service in which this image was registered.
+     * @return Specifies the service in which this image was registered.
      * 
-    */
+     */
     public Optional<ContainerRecipeTargetContainerRepositoryService> service() {
         return Optional.ofNullable(this.service);
     }

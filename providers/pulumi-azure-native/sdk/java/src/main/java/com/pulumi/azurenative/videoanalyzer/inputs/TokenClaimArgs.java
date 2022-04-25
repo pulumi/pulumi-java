@@ -24,6 +24,10 @@ public final class TokenClaimArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the claim which must be present on the token.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class TokenClaimArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Expected value of the claim to be present on the token.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class TokenClaimArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TokenClaimArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the claim which must be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the claim which must be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Expected value of the claim to be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Expected value of the claim to be present on the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

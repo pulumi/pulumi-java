@@ -29,6 +29,10 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
     @Import(name="logRules")
     private @Nullable Output<LogRulesArgs> logRules;
 
+    /**
+     * @return Rules for sending logs.
+     * 
+     */
     public Optional<Output<LogRulesArgs>> logRules() {
         return Optional.ofNullable(this.logRules);
     }
@@ -40,6 +44,10 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
+    /**
+     * @return Provisioning state of the monitoring tag rules.
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -69,28 +77,64 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
             $ = new MonitoringTagRulesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logRules Rules for sending logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
             $.logRules = logRules;
             return this;
         }
 
+        /**
+         * @param logRules Rules for sending logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRules(LogRulesArgs logRules) {
             return logRules(Output.of(logRules));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }

@@ -24,6 +24,10 @@ public final class SubordinateConfigChainResponse extends com.pulumi.resources.I
     @Import(name="pemCertificates", required=true)
     private List<String> pemCertificates;
 
+    /**
+     * @return Expected to be in leaf-to-root order according to RFC 5246.
+     * 
+     */
     public List<String> pemCertificates() {
         return this.pemCertificates;
     }
@@ -52,11 +56,23 @@ public final class SubordinateConfigChainResponse extends com.pulumi.resources.I
             $ = new SubordinateConfigChainResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pemCertificates Expected to be in leaf-to-root order according to RFC 5246.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCertificates(List<String> pemCertificates) {
             $.pemCertificates = pemCertificates;
             return this;
         }
 
+        /**
+         * @param pemCertificates Expected to be in leaf-to-root order according to RFC 5246.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pemCertificates(String... pemCertificates) {
             return pemCertificates(List.of(pemCertificates));
         }

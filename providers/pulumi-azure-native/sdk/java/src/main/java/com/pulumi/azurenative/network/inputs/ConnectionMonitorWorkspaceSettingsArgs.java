@@ -26,6 +26,10 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends com.pulumi.res
     @Import(name="workspaceResourceId")
     private @Nullable Output<String> workspaceResourceId;
 
+    /**
+     * @return Log analytics workspace resource ID.
+     * 
+     */
     public Optional<Output<String>> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -54,11 +58,23 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends com.pulumi.res
             $ = new ConnectionMonitorWorkspaceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workspaceResourceId Log analytics workspace resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId Log analytics workspace resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(String workspaceResourceId) {
             return workspaceResourceId(Output.of(workspaceResourceId));
         }

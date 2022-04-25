@@ -27,6 +27,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numFacetBuckets")
     private @Nullable Output<Integer> numFacetBuckets;
 
+    /**
+     * @return Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
+     * 
+     */
     public Optional<Output<Integer>> numFacetBuckets() {
         return Optional.ofNullable(this.numFacetBuckets);
     }
@@ -38,6 +42,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
     private @Nullable Output<String> objectType;
 
+    /**
+     * @return If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
+     * 
+     */
     public Optional<Output<String>> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -49,6 +57,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
     private @Nullable Output<String> operatorName;
 
+    /**
+     * @return Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+     * 
+     */
     public Optional<Output<String>> operatorName() {
         return Optional.ofNullable(this.operatorName);
     }
@@ -60,6 +72,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceName")
     private @Nullable Output<String> sourceName;
 
+    /**
+     * @return Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
+     * 
+     */
     public Optional<Output<String>> sourceName() {
         return Optional.ofNullable(this.sourceName);
     }
@@ -91,38 +107,86 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FacetOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param numFacetBuckets Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFacetBuckets(@Nullable Output<Integer> numFacetBuckets) {
             $.numFacetBuckets = numFacetBuckets;
             return this;
         }
 
+        /**
+         * @param numFacetBuckets Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numFacetBuckets(Integer numFacetBuckets) {
             return numFacetBuckets(Output.of(numFacetBuckets));
         }
 
+        /**
+         * @param objectType If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(@Nullable Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param operatorName Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(@Nullable Output<String> operatorName) {
             $.operatorName = operatorName;
             return this;
         }
 
+        /**
+         * @param operatorName Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(String operatorName) {
             return operatorName(Output.of(operatorName));
         }
 
+        /**
+         * @param sourceName Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(@Nullable Output<String> sourceName) {
             $.sourceName = sourceName;
             return this;
         }
 
+        /**
+         * @param sourceName Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(String sourceName) {
             return sourceName(Output.of(sourceName));
         }

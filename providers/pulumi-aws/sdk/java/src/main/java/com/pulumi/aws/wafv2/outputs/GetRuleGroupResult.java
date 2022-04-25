@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetRuleGroupResult {
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
      */
     private final String arn;
     /**
-     * The description of the rule group that helps with identification.
+     * @return The description of the rule group that helps with identification.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -42,23 +42,23 @@ public final class GetRuleGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the entity.
+     * @return The Amazon Resource Name (ARN) of the entity.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The description of the rule group that helps with identification.
+     * @return The description of the rule group that helps with identification.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

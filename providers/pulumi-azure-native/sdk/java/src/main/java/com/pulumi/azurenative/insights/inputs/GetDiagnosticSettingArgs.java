@@ -19,6 +19,10 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the diagnostic setting.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -59,11 +67,23 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
             $ = new GetDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceUri The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

@@ -27,6 +27,10 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="consumerGroupName")
     private @Nullable Output<String> consumerGroupName;
 
+    /**
+     * @return The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
+     * 
+     */
     public Optional<Output<String>> consumerGroupName() {
         return Optional.ofNullable(this.consumerGroupName);
     }
@@ -38,6 +42,10 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="eventHubName")
     private @Nullable Output<String> eventHubName;
 
+    /**
+     * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -49,6 +57,10 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="serviceBusNamespace")
     private @Nullable Output<String> serviceBusNamespace;
 
+    /**
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
@@ -60,6 +72,10 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="sharedAccessPolicyKey")
     private @Nullable Output<String> sharedAccessPolicyKey;
 
+    /**
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
@@ -71,6 +87,10 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="sharedAccessPolicyName")
     private @Nullable Output<String> sharedAccessPolicyName;
 
+    /**
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -83,6 +103,11 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -116,56 +141,130 @@ public final class EventHubStreamInputDataSourceArgs extends com.pulumi.resource
             $ = new EventHubStreamInputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroupName The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
             $.consumerGroupName = consumerGroupName;
             return this;
         }
 
+        /**
+         * @param consumerGroupName The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(String consumerGroupName) {
             return consumerGroupName(Output.of(consumerGroupName));
         }
 
+        /**
+         * @param eventHubName The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(String serviceBusNamespace) {
             return serviceBusNamespace(Output.of(serviceBusNamespace));
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(String sharedAccessPolicyKey) {
             return sharedAccessPolicyKey(Output.of(sharedAccessPolicyKey));
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
             return sharedAccessPolicyName(Output.of(sharedAccessPolicyName));
         }
 
+        /**
+         * @param type Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

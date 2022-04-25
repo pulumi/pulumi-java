@@ -27,6 +27,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataActions")
     private @Nullable Output<List<String>> dataActions;
 
+    /**
+     * @return An array of data actions that are allowed.
+     * 
+     */
     public Optional<Output<List<String>>> dataActions() {
         return Optional.ofNullable(this.dataActions);
     }
@@ -38,6 +42,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notDataActions")
     private @Nullable Output<List<String>> notDataActions;
 
+    /**
+     * @return An array of data actions that are denied.
+     * 
+     */
     public Optional<Output<List<String>>> notDataActions() {
         return Optional.ofNullable(this.notDataActions);
     }
@@ -67,28 +75,64 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataActions An array of data actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(@Nullable Output<List<String>> dataActions) {
             $.dataActions = dataActions;
             return this;
         }
 
+        /**
+         * @param dataActions An array of data actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(List<String> dataActions) {
             return dataActions(Output.of(dataActions));
         }
 
+        /**
+         * @param dataActions An array of data actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
 
+        /**
+         * @param notDataActions An array of data actions that are denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
             $.notDataActions = notDataActions;
             return this;
         }
 
+        /**
+         * @param notDataActions An array of data actions that are denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(List<String> notDataActions) {
             return notDataActions(Output.of(notDataActions));
         }
 
+        /**
+         * @param notDataActions An array of data actions that are denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
         }

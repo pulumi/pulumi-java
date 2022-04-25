@@ -23,6 +23,10 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operatingSystem", required=true)
     private String operatingSystem;
 
+    /**
+     * @return OS operating system type.
+     * 
+     */
     public String operatingSystem() {
         return this.operatingSystem;
     }
@@ -34,6 +38,10 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceBlobSasUri", required=true)
     private String sourceBlobSasUri;
 
+    /**
+     * @return SAS key for source blob.
+     * 
+     */
     public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
@@ -63,11 +71,23 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OsDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatingSystem OS operating system type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(String operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
 
+        /**
+         * @param sourceBlobSasUri SAS key for source blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             $.sourceBlobSasUri = sourceBlobSasUri;
             return this;

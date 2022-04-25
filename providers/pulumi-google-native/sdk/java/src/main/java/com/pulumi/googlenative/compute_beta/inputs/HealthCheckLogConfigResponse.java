@@ -23,6 +23,10 @@ public final class HealthCheckLogConfigResponse extends com.pulumi.resources.Inv
     @Import(name="enable", required=true)
     private Boolean enable;
 
+    /**
+     * @return Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
+     * 
+     */
     public Boolean enable() {
         return this.enable;
     }
@@ -51,6 +55,12 @@ public final class HealthCheckLogConfigResponse extends com.pulumi.resources.Inv
             $ = new HealthCheckLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             $.enable = enable;
             return this;

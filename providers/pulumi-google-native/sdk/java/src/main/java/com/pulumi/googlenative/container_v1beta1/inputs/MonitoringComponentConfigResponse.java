@@ -24,6 +24,10 @@ public final class MonitoringComponentConfigResponse extends com.pulumi.resource
     @Import(name="enableComponents", required=true)
     private List<String> enableComponents;
 
+    /**
+     * @return Select components to collect metrics. An empty set would disable all monitoring.
+     * 
+     */
     public List<String> enableComponents() {
         return this.enableComponents;
     }
@@ -52,11 +56,23 @@ public final class MonitoringComponentConfigResponse extends com.pulumi.resource
             $ = new MonitoringComponentConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableComponents Select components to collect metrics. An empty set would disable all monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(List<String> enableComponents) {
             $.enableComponents = enableComponents;
             return this;
         }
 
+        /**
+         * @param enableComponents Select components to collect metrics. An empty set would disable all monitoring.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
         }

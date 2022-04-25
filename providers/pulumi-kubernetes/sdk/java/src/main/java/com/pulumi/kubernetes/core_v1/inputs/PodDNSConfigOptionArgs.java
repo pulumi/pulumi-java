@@ -26,6 +26,10 @@ public final class PodDNSConfigOptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Required.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,11 +66,23 @@ public final class PodDNSConfigOptionArgs extends com.pulumi.resources.ResourceA
             $ = new PodDNSConfigOptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -24,6 +24,11 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends com.pulumi.r
     @Import(name="disabled", required=true)
     private Output<Boolean> disabled;
 
+    /**
+     * @return The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * cluster. It is disabled by default. Set `disabled = false` to enable.
+     * 
+     */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
@@ -36,6 +41,11 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends com.pulumi.r
     @Import(name="loadBalancerType")
     private @Nullable Output<String> loadBalancerType;
 
+    /**
+     * @return The load balancer type of CloudRun ingress service. It is external load balancer by default.
+     * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+     * 
+     */
     public Optional<Output<String>> loadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }
@@ -65,20 +75,48 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends com.pulumi.r
             $ = new ClusterAddonsConfigCloudrunConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled The status of the Istio addon, which makes it easy to set up Istio for services in a
+         * cluster. It is disabled by default. Set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param loadBalancerType The load balancer type of CloudRun ingress service. It is external load balancer by default.
+         * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;
         }
 
+        /**
+         * @param loadBalancerType The load balancer type of CloudRun ingress service. It is external load balancer by default.
+         * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(String loadBalancerType) {
             return loadBalancerType(Output.of(loadBalancerType));
         }

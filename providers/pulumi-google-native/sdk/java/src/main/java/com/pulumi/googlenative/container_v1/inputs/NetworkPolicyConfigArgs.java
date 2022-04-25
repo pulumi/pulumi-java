@@ -26,6 +26,10 @@ public final class NetworkPolicyConfigArgs extends com.pulumi.resources.Resource
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return Whether NetworkPolicy is enabled for this cluster.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -54,11 +58,23 @@ public final class NetworkPolicyConfigArgs extends com.pulumi.resources.Resource
             $ = new NetworkPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabled Whether NetworkPolicy is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled Whether NetworkPolicy is enabled for this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }

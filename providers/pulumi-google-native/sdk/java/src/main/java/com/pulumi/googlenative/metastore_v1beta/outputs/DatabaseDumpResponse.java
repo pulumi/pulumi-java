@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class DatabaseDumpResponse {
     /**
-     * The type of the database.
+     * @return The type of the database.
      * 
      */
     private final String databaseType;
     /**
-     * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+     * @return A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
      * 
      */
     private final String gcsUri;
     /**
-     * The name of the source database.
+     * @return The name of the source database.
      * 
      */
     private final String sourceDatabase;
     /**
-     * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+     * @return Optional. The type of the database dump. If unspecified, defaults to MYSQL.
      * 
      */
     private final String type;
@@ -43,30 +43,30 @@ public final class DatabaseDumpResponse {
     }
 
     /**
-     * The type of the database.
+     * @return The type of the database.
      * 
-    */
+     */
     public String databaseType() {
         return this.databaseType;
     }
     /**
-     * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+     * @return A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
      * 
-    */
+     */
     public String gcsUri() {
         return this.gcsUri;
     }
     /**
-     * The name of the source database.
+     * @return The name of the source database.
      * 
-    */
+     */
     public String sourceDatabase() {
         return this.sourceDatabase;
     }
     /**
-     * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+     * @return Optional. The type of the database dump. If unspecified, defaults to MYSQL.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

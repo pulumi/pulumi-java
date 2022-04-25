@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ReservationConfigResponse {
     /**
-     * The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * @return The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
     private final String throughputReservation;
@@ -21,9 +21,9 @@ public final class ReservationConfigResponse {
     }
 
     /**
-     * The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * @return The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
-    */
+     */
     public String throughputReservation() {
         return this.throughputReservation;
     }

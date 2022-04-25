@@ -28,6 +28,10 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="associatedRouteTable")
     private @Nullable Output<SubResourceArgs> associatedRouteTable;
 
+    /**
+     * @return The resource id RouteTable associated with this RoutingConfiguration.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> associatedRouteTable() {
         return Optional.ofNullable(this.associatedRouteTable);
     }
@@ -39,6 +43,10 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="propagatedRouteTables")
     private @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
 
+    /**
+     * @return The list of RouteTables to advertise the routes to.
+     * 
+     */
     public Optional<Output<PropagatedRouteTableArgs>> propagatedRouteTables() {
         return Optional.ofNullable(this.propagatedRouteTables);
     }
@@ -50,6 +58,10 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="vnetRoutes")
     private @Nullable Output<VnetRouteArgs> vnetRoutes;
 
+    /**
+     * @return List of routes that control routing from VirtualHub into a virtual network connection.
+     * 
+     */
     public Optional<Output<VnetRouteArgs>> vnetRoutes() {
         return Optional.ofNullable(this.vnetRoutes);
     }
@@ -80,29 +92,65 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new RoutingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associatedRouteTable The resource id RouteTable associated with this RoutingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedRouteTable(@Nullable Output<SubResourceArgs> associatedRouteTable) {
             $.associatedRouteTable = associatedRouteTable;
             return this;
         }
 
+        /**
+         * @param associatedRouteTable The resource id RouteTable associated with this RoutingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedRouteTable(SubResourceArgs associatedRouteTable) {
             return associatedRouteTable(Output.of(associatedRouteTable));
         }
 
+        /**
+         * @param propagatedRouteTables The list of RouteTables to advertise the routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatedRouteTables(@Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables) {
             $.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
 
+        /**
+         * @param propagatedRouteTables The list of RouteTables to advertise the routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatedRouteTables(PropagatedRouteTableArgs propagatedRouteTables) {
             return propagatedRouteTables(Output.of(propagatedRouteTables));
         }
 
+        /**
+         * @param vnetRoutes List of routes that control routing from VirtualHub into a virtual network connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetRoutes(@Nullable Output<VnetRouteArgs> vnetRoutes) {
             $.vnetRoutes = vnetRoutes;
             return this;
         }
 
+        /**
+         * @param vnetRoutes List of routes that control routing from VirtualHub into a virtual network connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetRoutes(VnetRouteArgs vnetRoutes) {
             return vnetRoutes(Output.of(vnetRoutes));
         }

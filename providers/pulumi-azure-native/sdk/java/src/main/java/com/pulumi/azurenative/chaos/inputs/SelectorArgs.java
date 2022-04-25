@@ -27,6 +27,10 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return String of the selector ID.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targets", required=true)
     private Output<List<TargetReferenceArgs>> targets;
 
+    /**
+     * @return List of Target references.
+     * 
+     */
     public Output<List<TargetReferenceArgs>> targets() {
         return this.targets;
     }
@@ -49,6 +57,10 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<SelectorType> type;
 
+    /**
+     * @return Enum of the selector type.
+     * 
+     */
     public Output<SelectorType> type() {
         return this.type;
     }
@@ -79,33 +91,75 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SelectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id String of the selector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id String of the selector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param targets List of Target references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(Output<List<TargetReferenceArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets List of Target references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<TargetReferenceArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets List of Target references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(TargetReferenceArgs... targets) {
             return targets(List.of(targets));
         }
 
+        /**
+         * @param type Enum of the selector type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<SelectorType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum of the selector type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SelectorType type) {
             return type(Output.of(type));
         }

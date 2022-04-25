@@ -27,6 +27,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
     @Import(name="destinations", required=true)
     private List<String> destinations;
 
+    /**
+     * @return List of destination endpoint names.
+     * 
+     */
     public List<String> destinations() {
         return this.destinations;
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
     @Import(name="disable")
     private @Nullable Boolean disable;
 
+    /**
+     * @return Value indicating whether test group is disabled.
+     * 
+     */
     public Optional<Boolean> disable() {
         return Optional.ofNullable(this.disable);
     }
@@ -49,6 +57,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the connection monitor test group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
     @Import(name="sources", required=true)
     private List<String> sources;
 
+    /**
+     * @return List of source endpoint names.
+     * 
+     */
     public List<String> sources() {
         return this.sources;
     }
@@ -71,6 +87,10 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
     @Import(name="testConfigurations", required=true)
     private List<String> testConfigurations;
 
+    /**
+     * @return List of test configuration names.
+     * 
+     */
     public List<String> testConfigurations() {
         return this.testConfigurations;
     }
@@ -103,39 +123,87 @@ public final class ConnectionMonitorTestGroupResponse extends com.pulumi.resourc
             $ = new ConnectionMonitorTestGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of destination endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of destination endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param disable Value indicating whether test group is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disable(@Nullable Boolean disable) {
             $.disable = disable;
             return this;
         }
 
+        /**
+         * @param name The name of the connection monitor test group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sources List of source endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<String> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of source endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(String... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param testConfigurations List of test configuration names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(List<String> testConfigurations) {
             $.testConfigurations = testConfigurations;
             return this;
         }
 
+        /**
+         * @param testConfigurations List of test configuration names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(String... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
         }

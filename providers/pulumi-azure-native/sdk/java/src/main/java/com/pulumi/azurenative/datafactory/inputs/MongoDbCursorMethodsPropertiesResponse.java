@@ -25,6 +25,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="limit")
     private @Nullable Object limit;
 
+    /**
+     * @return Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -36,6 +40,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="project")
     private @Nullable Object project;
 
+    /**
+     * @return Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +55,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="skip")
     private @Nullable Object skip;
 
+    /**
+     * @return Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> skip() {
         return Optional.ofNullable(this.skip);
     }
@@ -58,6 +70,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
     @Import(name="sort")
     private @Nullable Object sort;
 
+    /**
+     * @return Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sort() {
         return Optional.ofNullable(this.sort);
     }
@@ -89,21 +105,45 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
             $ = new MongoDbCursorMethodsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limit Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Object limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param project Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Object project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param skip Specifies the how many documents skipped and where MongoDB begins returning results. This approach may be useful in implementing paginated results. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder skip(@Nullable Object skip) {
             $.skip = skip;
             return this;
         }
 
+        /**
+         * @param sort Specifies the order in which the query returns matching documents. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sort(@Nullable Object sort) {
             $.sort = sort;
             return this;

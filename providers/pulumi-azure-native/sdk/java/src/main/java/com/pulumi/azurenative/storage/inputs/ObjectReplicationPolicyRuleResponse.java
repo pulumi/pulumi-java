@@ -26,6 +26,10 @@ public final class ObjectReplicationPolicyRuleResponse extends com.pulumi.resour
     @Import(name="destinationContainer", required=true)
     private String destinationContainer;
 
+    /**
+     * @return Required. Destination container name.
+     * 
+     */
     public String destinationContainer() {
         return this.destinationContainer;
     }
@@ -37,6 +41,10 @@ public final class ObjectReplicationPolicyRuleResponse extends com.pulumi.resour
     @Import(name="filters")
     private @Nullable ObjectReplicationPolicyFilterResponse filters;
 
+    /**
+     * @return Optional. An object that defines the filter set.
+     * 
+     */
     public Optional<ObjectReplicationPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -48,6 +56,10 @@ public final class ObjectReplicationPolicyRuleResponse extends com.pulumi.resour
     @Import(name="ruleId")
     private @Nullable String ruleId;
 
+    /**
+     * @return Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * 
+     */
     public Optional<String> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -59,6 +71,10 @@ public final class ObjectReplicationPolicyRuleResponse extends com.pulumi.resour
     @Import(name="sourceContainer", required=true)
     private String sourceContainer;
 
+    /**
+     * @return Required. Source container name.
+     * 
+     */
     public String sourceContainer() {
         return this.sourceContainer;
     }
@@ -90,21 +106,45 @@ public final class ObjectReplicationPolicyRuleResponse extends com.pulumi.resour
             $ = new ObjectReplicationPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationContainer Required. Destination container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationContainer(String destinationContainer) {
             $.destinationContainer = destinationContainer;
             return this;
         }
 
+        /**
+         * @param filters Optional. An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param ruleId Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable String ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param sourceContainer Required. Source container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceContainer(String sourceContainer) {
             $.sourceContainer = sourceContainer;
             return this;

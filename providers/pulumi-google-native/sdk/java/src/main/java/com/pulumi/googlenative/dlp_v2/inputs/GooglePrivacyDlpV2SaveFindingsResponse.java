@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends com.pulumi.res
     @Import(name="outputConfig", required=true)
     private GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
+    /**
+     * @return Location to store findings outside of DLP.
+     * 
+     */
     public GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig() {
         return this.outputConfig;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends com.pulumi.res
             $ = new GooglePrivacyDlpV2SaveFindingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param outputConfig Location to store findings outside of DLP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
             $.outputConfig = outputConfig;
             return this;

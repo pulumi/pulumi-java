@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
     /**
-     * The domain ownership identifier value.
+     * @return The domain ownership identifier value.
      * 
      */
     private final String domainOwnershipIdentifier;
@@ -21,9 +21,9 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
     }
 
     /**
-     * The domain ownership identifier value.
+     * @return The domain ownership identifier value.
      * 
-    */
+     */
     public String domainOwnershipIdentifier() {
         return this.domainOwnershipIdentifier;
     }

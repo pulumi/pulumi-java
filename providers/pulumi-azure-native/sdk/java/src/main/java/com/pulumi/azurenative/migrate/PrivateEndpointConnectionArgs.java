@@ -23,6 +23,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return For optimistic concurrency control.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return Unique name of a private endpoint connection within a project.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="projectName", required=true)
     private Output<String> projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public Output<String> projectName() {
         return this.projectName;
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties", required=true)
     private Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the private endpoint endpoint connection.
+     * 
+     */
     public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
         return this.properties;
     }
@@ -67,6 +83,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param privateEndpointConnectionName Unique name of a private endpoint connection within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Unique name of a private endpoint connection within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param properties Properties of the private endpoint endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the private endpoint endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

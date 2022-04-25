@@ -26,6 +26,10 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends c
     @Import(name="ref")
     private @Nullable Output<String> ref;
 
+    /**
+     * @return The reference name.
+     * 
+     */
     public Optional<Output<String>> ref() {
         return Optional.ofNullable(this.ref);
     }
@@ -54,11 +58,23 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends c
             $ = new IntegrationAccountMapPropertiesParametersSchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ref The reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(@Nullable Output<String> ref) {
             $.ref = ref;
             return this;
         }
 
+        /**
+         * @param ref The reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(String ref) {
             return ref(Output.of(ref));
         }

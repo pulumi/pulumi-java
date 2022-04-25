@@ -14,88 +14,88 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureSqlProtectedItemResponse {
     /**
-     * Type of backup management for the backed up item.
+     * @return Type of backup management for the backed up item.
      * 
      */
     private final @Nullable String backupManagementType;
     /**
-     * Name of the backup set the backup item belongs to
+     * @return Name of the backup set the backup item belongs to
      * 
      */
     private final @Nullable String backupSetName;
     /**
-     * Unique name of container
+     * @return Unique name of container
      * 
      */
     private final @Nullable String containerName;
     /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * @return Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
      */
     private final @Nullable String createMode;
     /**
-     * Time for deferred deletion in UTC
+     * @return Time for deferred deletion in UTC
      * 
      */
     private final @Nullable String deferredDeleteTimeInUTC;
     /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
+     * @return Time remaining before the DS marked for deferred delete is permanently deleted
      * 
      */
     private final @Nullable String deferredDeleteTimeRemaining;
     /**
-     * Additional information for this backup item.
+     * @return Additional information for this backup item.
      * 
      */
     private final @Nullable AzureSqlProtectedItemExtendedInfoResponse extendedInfo;
     /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
+     * @return Flag to identify whether the deferred deleted DS is to be purged soon
      * 
      */
     private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
     /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
+     * @return Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
      */
     private final @Nullable Boolean isRehydrate;
     /**
-     * Flag to identify whether the DS is scheduled for deferred delete
+     * @return Flag to identify whether the DS is scheduled for deferred delete
      * 
      */
     private final @Nullable Boolean isScheduledForDeferredDelete;
     /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
+     * @return Timestamp when the last (latest) backup copy was created for this backup item.
      * 
      */
     private final @Nullable String lastRecoveryPoint;
     /**
-     * ID of the backup policy with which this item is backed up.
+     * @return ID of the backup policy with which this item is backed up.
      * 
      */
     private final @Nullable String policyId;
     /**
-     * Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
+     * @return Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
      * 
      */
     private final @Nullable String protectedItemDataId;
     /**
-     * backup item type.
+     * @return backup item type.
      * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
      * 
      */
     private final String protectedItemType;
     /**
-     * Backup state of the backed up item.
+     * @return Backup state of the backed up item.
      * 
      */
     private final @Nullable String protectionState;
     /**
-     * ARM ID of the resource to be backed up.
+     * @return ARM ID of the resource to be backed up.
      * 
      */
     private final @Nullable String sourceResourceId;
     /**
-     * Type of workload this item represents.
+     * @return Type of workload this item represents.
      * 
      */
     private final @Nullable String workloadType;
@@ -139,122 +139,122 @@ public final class AzureSqlProtectedItemResponse {
     }
 
     /**
-     * Type of backup management for the backed up item.
+     * @return Type of backup management for the backed up item.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * Name of the backup set the backup item belongs to
+     * @return Name of the backup set the backup item belongs to
      * 
-    */
+     */
     public Optional<String> backupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
     /**
-     * Unique name of container
+     * @return Unique name of container
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * @return Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
-    */
+     */
     public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
-     * Time for deferred deletion in UTC
+     * @return Time for deferred deletion in UTC
      * 
-    */
+     */
     public Optional<String> deferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
     /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
+     * @return Time remaining before the DS marked for deferred delete is permanently deleted
      * 
-    */
+     */
     public Optional<String> deferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
-     * Additional information for this backup item.
+     * @return Additional information for this backup item.
      * 
-    */
+     */
     public Optional<AzureSqlProtectedItemExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
+     * @return Flag to identify whether the deferred deleted DS is to be purged soon
      * 
-    */
+     */
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
     /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
+     * @return Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
-    */
+     */
     public Optional<Boolean> isRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
     /**
-     * Flag to identify whether the DS is scheduled for deferred delete
+     * @return Flag to identify whether the DS is scheduled for deferred delete
      * 
-    */
+     */
     public Optional<Boolean> isScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
     /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
+     * @return Timestamp when the last (latest) backup copy was created for this backup item.
      * 
-    */
+     */
     public Optional<String> lastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
     /**
-     * ID of the backup policy with which this item is backed up.
+     * @return ID of the backup policy with which this item is backed up.
      * 
-    */
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
-     * Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
+     * @return Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
      * 
-    */
+     */
     public Optional<String> protectedItemDataId() {
         return Optional.ofNullable(this.protectedItemDataId);
     }
     /**
-     * backup item type.
+     * @return backup item type.
      * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
      * 
-    */
+     */
     public String protectedItemType() {
         return this.protectedItemType;
     }
     /**
-     * Backup state of the backed up item.
+     * @return Backup state of the backed up item.
      * 
-    */
+     */
     public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
-     * ARM ID of the resource to be backed up.
+     * @return ARM ID of the resource to be backed up.
      * 
-    */
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
-     * Type of workload this item represents.
+     * @return Type of workload this item represents.
      * 
-    */
+     */
     public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }

@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class SourceConfigResponse {
     /**
-     * MySQL data source configuration
+     * @return MySQL data source configuration
      * 
      */
     private final MysqlSourceConfigResponse mysqlSourceConfig;
     /**
-     * Oracle data source configuration
+     * @return Oracle data source configuration
      * 
      */
     private final OracleSourceConfigResponse oracleSourceConfig;
     /**
-     * Source connection profile identifier.
+     * @return Source connection profile identifier.
      * 
      */
     private final String sourceConnectionProfileName;
@@ -38,23 +38,23 @@ public final class SourceConfigResponse {
     }
 
     /**
-     * MySQL data source configuration
+     * @return MySQL data source configuration
      * 
-    */
+     */
     public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
     /**
-     * Oracle data source configuration
+     * @return Oracle data source configuration
      * 
-    */
+     */
     public OracleSourceConfigResponse oracleSourceConfig() {
         return this.oracleSourceConfig;
     }
     /**
-     * Source connection profile identifier.
+     * @return Source connection profile identifier.
      * 
-    */
+     */
     public String sourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }

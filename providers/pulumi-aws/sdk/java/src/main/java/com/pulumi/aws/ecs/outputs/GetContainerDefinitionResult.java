@@ -14,47 +14,47 @@ import java.util.Objects;
 public final class GetContainerDefinitionResult {
     private final String containerName;
     /**
-     * The CPU limit for this container definition
+     * @return The CPU limit for this container definition
      * 
      */
     private final Integer cpu;
     /**
-     * Indicator if networking is disabled
+     * @return Indicator if networking is disabled
      * 
      */
     private final Boolean disableNetworking;
     /**
-     * Set docker labels
+     * @return Set docker labels
      * 
      */
     private final Map<String,String> dockerLabels;
     /**
-     * The environment in use
+     * @return The environment in use
      * 
      */
     private final Map<String,String> environment;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The docker image in use, including the digest
+     * @return The docker image in use, including the digest
      * 
      */
     private final String image;
     /**
-     * The digest of the docker image in use
+     * @return The digest of the docker image in use
      * 
      */
     private final String imageDigest;
     /**
-     * The memory limit for this container definition
+     * @return The memory limit for this container definition
      * 
      */
     private final Integer memory;
     /**
-     * The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
+     * @return The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
      * 
      */
     private final Integer memoryReservation;
@@ -90,65 +90,65 @@ public final class GetContainerDefinitionResult {
         return this.containerName;
     }
     /**
-     * The CPU limit for this container definition
+     * @return The CPU limit for this container definition
      * 
-    */
+     */
     public Integer cpu() {
         return this.cpu;
     }
     /**
-     * Indicator if networking is disabled
+     * @return Indicator if networking is disabled
      * 
-    */
+     */
     public Boolean disableNetworking() {
         return this.disableNetworking;
     }
     /**
-     * Set docker labels
+     * @return Set docker labels
      * 
-    */
+     */
     public Map<String,String> dockerLabels() {
         return this.dockerLabels;
     }
     /**
-     * The environment in use
+     * @return The environment in use
      * 
-    */
+     */
     public Map<String,String> environment() {
         return this.environment;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The docker image in use, including the digest
+     * @return The docker image in use, including the digest
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * The digest of the docker image in use
+     * @return The digest of the docker image in use
      * 
-    */
+     */
     public String imageDigest() {
         return this.imageDigest;
     }
     /**
-     * The memory limit for this container definition
+     * @return The memory limit for this container definition
      * 
-    */
+     */
     public Integer memory() {
         return this.memory;
     }
     /**
-     * The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
+     * @return The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
      * 
-    */
+     */
     public Integer memoryReservation() {
         return this.memoryReservation;
     }

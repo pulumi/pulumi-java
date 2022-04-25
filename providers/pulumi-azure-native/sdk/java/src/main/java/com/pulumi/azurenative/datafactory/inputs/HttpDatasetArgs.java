@@ -41,6 +41,12 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalHeaders")
     private @Nullable Output<Object> additionalHeaders;
 
+    /**
+     * @return The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
+     * ...
+     * request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
@@ -52,6 +58,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -63,6 +73,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compression")
     private @Nullable Output<DatasetCompressionArgs> compression;
 
+    /**
+     * @return The data compression method used on files.
+     * 
+     */
     public Optional<Output<DatasetCompressionArgs>> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -74,6 +88,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -85,6 +103,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
     private @Nullable Output<DatasetFolderArgs> folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<Output<DatasetFolderArgs>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -96,6 +118,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<Object> format;
 
+    /**
+     * @return The format of files.
+     * 
+     */
     public Optional<Output<Object>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -107,6 +133,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -118,6 +148,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -129,6 +163,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativeUrl")
     private @Nullable Output<Object> relativeUrl;
 
+    /**
+     * @return The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
@@ -140,6 +178,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestBody")
     private @Nullable Output<Object> requestBody;
 
+    /**
+     * @return The body for the HTTP request. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
@@ -151,6 +193,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestMethod")
     private @Nullable Output<Object> requestMethod;
 
+    /**
+     * @return The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
@@ -162,6 +208,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
     private @Nullable Output<Object> schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Output<Object>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -173,6 +223,10 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="structure")
     private @Nullable Output<Object> structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Output<Object>> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -185,6 +239,11 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;HttpFile&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -226,132 +285,312 @@ public final class HttpDatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalHeaders The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
+         * ...
+         * request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
             $.additionalHeaders = additionalHeaders;
             return this;
         }
 
+        /**
+         * @param additionalHeaders The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
+         * ...
+         * request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(Object additionalHeaders) {
             return additionalHeaders(Output.of(additionalHeaders));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param compression The data compression method used on files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable Output<DatasetCompressionArgs> compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param compression The data compression method used on files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(DatasetCompressionArgs compression) {
             return compression(Output.of(compression));
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(DatasetFolderArgs folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param format The format of files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Object> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Object format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param relativeUrl The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
             $.relativeUrl = relativeUrl;
             return this;
         }
 
+        /**
+         * @param relativeUrl The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(Object relativeUrl) {
             return relativeUrl(Output.of(relativeUrl));
         }
 
+        /**
+         * @param requestBody The body for the HTTP request. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(@Nullable Output<Object> requestBody) {
             $.requestBody = requestBody;
             return this;
         }
 
+        /**
+         * @param requestBody The body for the HTTP request. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(Object requestBody) {
             return requestBody(Output.of(requestBody));
         }
 
+        /**
+         * @param requestMethod The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
             $.requestMethod = requestMethod;
             return this;
         }
 
+        /**
+         * @param requestMethod The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(Object requestMethod) {
             return requestMethod(Output.of(requestMethod));
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<Object> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Object schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Output<Object> structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(Object structure) {
             return structure(Output.of(structure));
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;HttpFile&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;HttpFile&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

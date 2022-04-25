@@ -27,6 +27,10 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
     private @Nullable Output<String> containerImage;
 
+    /**
+     * @return Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+     * 
+     */
     public Optional<Output<String>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -38,6 +42,10 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. A mapping of property names to values, which are used to configure workload execution.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -49,6 +57,10 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Optional. Version of the batch runtime.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -79,29 +91,65 @@ public final class RuntimeConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuntimeConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<String> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(String containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values, which are used to configure workload execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. A mapping of property names to values, which are used to configure workload execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param version Optional. Version of the batch runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Optional. Version of the batch runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

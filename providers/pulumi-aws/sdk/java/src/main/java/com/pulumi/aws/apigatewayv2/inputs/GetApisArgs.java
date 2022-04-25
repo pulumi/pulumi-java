@@ -22,6 +22,10 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The API name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocolType")
     private @Nullable String protocolType;
 
+    /**
+     * @return The API protocol.
+     * 
+     */
     public Optional<String> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
@@ -45,6 +53,11 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired APIs.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -75,16 +88,35 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApisArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The API name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocolType The API protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(@Nullable String protocolType) {
             $.protocolType = protocolType;
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

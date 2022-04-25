@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return Modified whenever there is a change in the state of private endpoint connection.
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of private endpoint connection.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return Properties of the private endpoint object.
+     * 
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -60,6 +72,10 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Approval state of the private link connection.
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -71,6 +87,10 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the private endpoint connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -103,26 +123,56 @@ public final class PrivateEndpointConnectionItemResponse extends com.pulumi.reso
             $ = new PrivateEndpointConnectionItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag Modified whenever there is a change in the state of private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Id of private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Properties of the private endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

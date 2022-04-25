@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InboundSamlConfigSpConfigSpCertificate {
     /**
-     * - 
+     * @return -
      * The x509 certificate
      * 
      */
@@ -24,10 +24,10 @@ public final class InboundSamlConfigSpConfigSpCertificate {
     }
 
     /**
-     * - 
+     * @return -
      * The x509 certificate
      * 
-    */
+     */
     public Optional<String> x509Certificate() {
         return Optional.ofNullable(this.x509Certificate);
     }

@@ -29,6 +29,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Gets the caching type.
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -40,6 +44,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="diskRestorePoint")
     private @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
+    /**
+     * @return Gets the disk restore point Id.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
@@ -51,6 +59,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Gets the disk size in GB.
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -62,6 +74,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="encryptionSettings")
     private @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
+    /**
+     * @return Gets the disk encryption settings.
+     * 
+     */
     public Optional<DiskEncryptionSettingsResponse> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
@@ -73,6 +89,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="managedDisk")
     private @Nullable ManagedDiskParametersResponse managedDisk;
 
+    /**
+     * @return Gets the managed disk details
+     * 
+     */
     public Optional<ManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -84,6 +104,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets the disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return Gets the Operating System type.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -129,36 +157,78 @@ public final class RestorePointSourceVMOSDiskResponse extends com.pulumi.resourc
             $ = new RestorePointSourceVMOSDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Gets the caching type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param diskRestorePoint Gets the disk restore point Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             $.diskRestorePoint = diskRestorePoint;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Gets the disk size in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param encryptionSettings Gets the disk encryption settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             $.encryptionSettings = encryptionSettings;
             return this;
         }
 
+        /**
+         * @param managedDisk Gets the managed disk details
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param name Gets the disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osType Gets the Operating System type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;

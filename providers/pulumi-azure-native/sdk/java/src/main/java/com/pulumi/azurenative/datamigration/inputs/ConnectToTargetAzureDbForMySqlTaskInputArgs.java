@@ -24,6 +24,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends com.pulum
     @Import(name="sourceConnectionInfo", required=true)
     private Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source MySQL server
+     * 
+     */
     public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -35,6 +39,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends com.pulum
     @Import(name="targetConnectionInfo", required=true)
     private Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for MySQL server
+     * 
+     */
     public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -64,20 +72,44 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends com.pulum
             $ = new ConnectToTargetAzureDbForMySqlTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<MySqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<MySqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

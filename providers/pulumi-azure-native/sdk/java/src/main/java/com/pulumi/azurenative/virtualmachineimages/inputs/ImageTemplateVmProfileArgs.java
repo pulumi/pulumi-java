@@ -29,6 +29,10 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="osDiskSizeGB")
     private @Nullable Output<Integer> osDiskSizeGB;
 
+    /**
+     * @return Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
+     * 
+     */
     public Optional<Output<Integer>> osDiskSizeGB() {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
@@ -40,6 +44,10 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -51,6 +59,10 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="vnetConfig")
     private @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
 
+    /**
+     * @return Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
+     * 
+     */
     public Optional<Output<VirtualNetworkConfigArgs>> vnetConfig() {
         return Optional.ofNullable(this.vnetConfig);
     }
@@ -81,29 +93,65 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
             $ = new ImageTemplateVmProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osDiskSizeGB Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskSizeGB(@Nullable Output<Integer> osDiskSizeGB) {
             $.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
+        /**
+         * @param osDiskSizeGB Size of the OS disk in GB. Omit or specify 0 to use Azure&#39;s default OS disk size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskSizeGB(Integer osDiskSizeGB) {
             return osDiskSizeGB(Output.of(osDiskSizeGB));
         }
 
+        /**
+         * @param vmSize Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }
 
+        /**
+         * @param vnetConfig Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetConfig(@Nullable Output<VirtualNetworkConfigArgs> vnetConfig) {
             $.vnetConfig = vnetConfig;
             return this;
         }
 
+        /**
+         * @param vnetConfig Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetConfig(VirtualNetworkConfigArgs vnetConfig) {
             return vnetConfig(Output.of(vnetConfig));
         }

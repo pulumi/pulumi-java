@@ -19,6 +19,10 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
     @Import(name="certificateAuthorityArn", required=true)
     private String certificateAuthorityArn;
 
+    /**
+     * @return Arn of the Certificate Authority.
+     * 
+     */
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -47,6 +51,12 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
             $ = new GetCertificateAuthorityActivationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArn Arn of the Certificate Authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;

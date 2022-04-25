@@ -26,6 +26,10 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="elasticCloudDeployment")
     private @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
 
+    /**
+     * @return Details of the elastic cloud deployment.
+     * 
+     */
     public Optional<ElasticCloudDeploymentResponse> elasticCloudDeployment() {
         return Optional.ofNullable(this.elasticCloudDeployment);
     }
@@ -37,6 +41,10 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="elasticCloudUser")
     private @Nullable ElasticCloudUserResponse elasticCloudUser;
 
+    /**
+     * @return Details of the user&#39;s elastic account.
+     * 
+     */
     public Optional<ElasticCloudUserResponse> elasticCloudUser() {
         return Optional.ofNullable(this.elasticCloudUser);
     }
@@ -66,11 +74,23 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new ElasticPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elasticCloudDeployment Details of the elastic cloud deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
             $.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
 
+        /**
+         * @param elasticCloudUser Details of the user&#39;s elastic account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
             $.elasticCloudUser = elasticCloudUser;
             return this;

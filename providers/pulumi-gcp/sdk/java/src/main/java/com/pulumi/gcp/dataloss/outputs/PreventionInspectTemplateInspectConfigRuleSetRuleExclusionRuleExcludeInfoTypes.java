@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes {
     /**
-     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
      */
@@ -23,10 +23,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     /**
-     * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> infoTypes() {
         return this.infoTypes;
     }

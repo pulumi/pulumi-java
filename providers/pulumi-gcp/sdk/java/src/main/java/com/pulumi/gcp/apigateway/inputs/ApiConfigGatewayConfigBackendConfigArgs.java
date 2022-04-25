@@ -21,6 +21,11 @@ public final class ApiConfigGatewayConfigBackendConfigArgs extends com.pulumi.re
     @Import(name="googleServiceAccount", required=true)
     private Output<String> googleServiceAccount;
 
+    /**
+     * @return Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+     * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+     * 
+     */
     public Output<String> googleServiceAccount() {
         return this.googleServiceAccount;
     }
@@ -49,11 +54,25 @@ public final class ApiConfigGatewayConfigBackendConfigArgs extends com.pulumi.re
             $ = new ApiConfigGatewayConfigBackendConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param googleServiceAccount Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+         * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleServiceAccount(Output<String> googleServiceAccount) {
             $.googleServiceAccount = googleServiceAccount;
             return this;
         }
 
+        /**
+         * @param googleServiceAccount Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
+         * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleServiceAccount(String googleServiceAccount) {
             return googleServiceAccount(Output.of(googleServiceAccount));
         }

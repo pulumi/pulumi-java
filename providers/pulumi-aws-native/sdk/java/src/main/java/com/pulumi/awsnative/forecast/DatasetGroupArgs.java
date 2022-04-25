@@ -25,6 +25,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetArns")
     private @Nullable Output<List<String>> datasetArns;
 
+    /**
+     * @return An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+     * 
+     */
     public Optional<Output<List<String>>> datasetArns() {
         return Optional.ofNullable(this.datasetArns);
     }
@@ -36,6 +40,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetGroupName")
     private @Nullable Output<String> datasetGroupName;
 
+    /**
+     * @return A name for the dataset group.
+     * 
+     */
     public Optional<Output<String>> datasetGroupName() {
         return Optional.ofNullable(this.datasetGroupName);
     }
@@ -47,6 +55,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
     private Output<DatasetGroupDomain> domain;
 
+    /**
+     * @return The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+     * 
+     */
     public Output<DatasetGroupDomain> domain() {
         return this.domain;
     }
@@ -58,6 +70,10 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
+    /**
+     * @return The tags of Application Insights application.
+     * 
+     */
     public Optional<Output<List<DatasetGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,46 +105,106 @@ public final class DatasetGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetArns(@Nullable Output<List<String>> datasetArns) {
             $.datasetArns = datasetArns;
             return this;
         }
 
+        /**
+         * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetArns(List<String> datasetArns) {
             return datasetArns(Output.of(datasetArns));
         }
 
+        /**
+         * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetArns(String... datasetArns) {
             return datasetArns(List.of(datasetArns));
         }
 
+        /**
+         * @param datasetGroupName A name for the dataset group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetGroupName(@Nullable Output<String> datasetGroupName) {
             $.datasetGroupName = datasetGroupName;
             return this;
         }
 
+        /**
+         * @param datasetGroupName A name for the dataset group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetGroupName(String datasetGroupName) {
             return datasetGroupName(Output.of(datasetGroupName));
         }
 
+        /**
+         * @param domain The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<DatasetGroupDomain> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(DatasetGroupDomain domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DatasetGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DatasetGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags of Application Insights application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DatasetGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

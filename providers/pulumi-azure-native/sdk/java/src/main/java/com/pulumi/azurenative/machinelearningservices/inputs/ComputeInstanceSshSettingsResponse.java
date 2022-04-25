@@ -27,6 +27,10 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="adminPublicKey")
     private @Nullable String adminPublicKey;
 
+    /**
+     * @return Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+     * 
+     */
     public Optional<String> adminPublicKey() {
         return Optional.ofNullable(this.adminPublicKey);
     }
@@ -38,6 +42,10 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="adminUserName", required=true)
     private String adminUserName;
 
+    /**
+     * @return Describes the admin user name.
+     * 
+     */
     public String adminUserName() {
         return this.adminUserName;
     }
@@ -49,6 +57,10 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="sshPort", required=true)
     private Integer sshPort;
 
+    /**
+     * @return Describes the port for connecting through SSH.
+     * 
+     */
     public Integer sshPort() {
         return this.sshPort;
     }
@@ -60,6 +72,10 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
     @Import(name="sshPublicAccess")
     private @Nullable String sshPublicAccess;
 
+    /**
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+     * 
+     */
     public Optional<String> sshPublicAccess() {
         return Optional.ofNullable(this.sshPublicAccess);
     }
@@ -91,21 +107,45 @@ public final class ComputeInstanceSshSettingsResponse extends com.pulumi.resourc
             $ = new ComputeInstanceSshSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminPublicKey Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminPublicKey(@Nullable String adminPublicKey) {
             $.adminPublicKey = adminPublicKey;
             return this;
         }
 
+        /**
+         * @param adminUserName Describes the admin user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserName(String adminUserName) {
             $.adminUserName = adminUserName;
             return this;
         }
 
+        /**
+         * @param sshPort Describes the port for connecting through SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(Integer sshPort) {
             $.sshPort = sshPort;
             return this;
         }
 
+        /**
+         * @param sshPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicAccess(@Nullable String sshPublicAccess) {
             $.sshPublicAccess = sshPublicAccess;
             return this;

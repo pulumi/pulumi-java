@@ -25,6 +25,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the route table.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="defaultRouteTableId")
     private @Nullable Output<String> defaultRouteTableId;
 
+    /**
+     * @return ID of the default route table.
+     * 
+     */
     public Optional<Output<String>> defaultRouteTableId() {
         return Optional.ofNullable(this.defaultRouteTableId);
     }
@@ -47,6 +55,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return ID of the AWS account that owns the route table.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -58,6 +70,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="propagatingVgws")
     private @Nullable Output<List<String>> propagatingVgws;
 
+    /**
+     * @return List of virtual gateways for propagation.
+     * 
+     */
     public Optional<Output<List<String>>> propagatingVgws() {
         return Optional.ofNullable(this.propagatingVgws);
     }
@@ -69,6 +85,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="routes")
     private @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes;
 
+    /**
+     * @return Set of objects. Detailed below
+     * 
+     */
     public Optional<Output<List<DefaultRouteTableRouteGetArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -80,6 +100,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -102,6 +130,10 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return ID of the VPC.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -137,82 +169,190 @@ public final class DefaultRouteTableState extends com.pulumi.resources.ResourceA
             $ = new DefaultRouteTableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param defaultRouteTableId ID of the default route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteTableId(@Nullable Output<String> defaultRouteTableId) {
             $.defaultRouteTableId = defaultRouteTableId;
             return this;
         }
 
+        /**
+         * @param defaultRouteTableId ID of the default route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteTableId(String defaultRouteTableId) {
             return defaultRouteTableId(Output.of(defaultRouteTableId));
         }
 
+        /**
+         * @param ownerId ID of the AWS account that owns the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId ID of the AWS account that owns the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param propagatingVgws List of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
             $.propagatingVgws = propagatingVgws;
             return this;
         }
 
+        /**
+         * @param propagatingVgws List of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(List<String> propagatingVgws) {
             return propagatingVgws(Output.of(propagatingVgws));
         }
 
+        /**
+         * @param propagatingVgws List of virtual gateways for propagation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propagatingVgws(String... propagatingVgws) {
             return propagatingVgws(List.of(propagatingVgws));
         }
 
+        /**
+         * @param routes Set of objects. Detailed below
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Set of objects. Detailed below
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<DefaultRouteTableRouteGetArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes Set of objects. Detailed below
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(DefaultRouteTableRouteGetArgs... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

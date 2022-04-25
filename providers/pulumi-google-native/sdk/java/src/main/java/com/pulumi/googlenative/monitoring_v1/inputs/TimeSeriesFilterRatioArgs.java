@@ -28,6 +28,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
     @Import(name="denominator")
     private @Nullable Output<RatioPartArgs> denominator;
 
+    /**
+     * @return The denominator of the ratio.
+     * 
+     */
     public Optional<Output<RatioPartArgs>> denominator() {
         return Optional.ofNullable(this.denominator);
     }
@@ -39,6 +43,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
     @Import(name="numerator")
     private @Nullable Output<RatioPartArgs> numerator;
 
+    /**
+     * @return The numerator of the ratio.
+     * 
+     */
     public Optional<Output<RatioPartArgs>> numerator() {
         return Optional.ofNullable(this.numerator);
     }
@@ -50,6 +58,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
     @Import(name="pickTimeSeriesFilter")
     private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
+    /**
+     * @return Ranking based time series filter.
+     * 
+     */
     public Optional<Output<PickTimeSeriesFilterArgs>> pickTimeSeriesFilter() {
         return Optional.ofNullable(this.pickTimeSeriesFilter);
     }
@@ -61,6 +73,10 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
     @Import(name="secondaryAggregation")
     private @Nullable Output<AggregationArgs> secondaryAggregation;
 
+    /**
+     * @return Apply a second aggregation after the ratio is computed.
+     * 
+     */
     public Optional<Output<AggregationArgs>> secondaryAggregation() {
         return Optional.ofNullable(this.secondaryAggregation);
     }
@@ -92,38 +108,86 @@ public final class TimeSeriesFilterRatioArgs extends com.pulumi.resources.Resour
             $ = new TimeSeriesFilterRatioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param denominator The denominator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denominator(@Nullable Output<RatioPartArgs> denominator) {
             $.denominator = denominator;
             return this;
         }
 
+        /**
+         * @param denominator The denominator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denominator(RatioPartArgs denominator) {
             return denominator(Output.of(denominator));
         }
 
+        /**
+         * @param numerator The numerator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numerator(@Nullable Output<RatioPartArgs> numerator) {
             $.numerator = numerator;
             return this;
         }
 
+        /**
+         * @param numerator The numerator of the ratio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numerator(RatioPartArgs numerator) {
             return numerator(Output.of(numerator));
         }
 
+        /**
+         * @param pickTimeSeriesFilter Ranking based time series filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
             $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
 
+        /**
+         * @param pickTimeSeriesFilter Ranking based time series filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
             return pickTimeSeriesFilter(Output.of(pickTimeSeriesFilter));
         }
 
+        /**
+         * @param secondaryAggregation Apply a second aggregation after the ratio is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
             $.secondaryAggregation = secondaryAggregation;
             return this;
         }
 
+        /**
+         * @param secondaryAggregation Apply a second aggregation after the ratio is computed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAggregation(AggregationArgs secondaryAggregation) {
             return secondaryAggregation(Output.of(secondaryAggregation));
         }

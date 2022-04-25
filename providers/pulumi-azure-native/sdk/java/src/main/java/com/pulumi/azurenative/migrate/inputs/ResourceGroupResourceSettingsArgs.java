@@ -26,6 +26,11 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;resourceGroups&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -37,6 +42,10 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -66,20 +75,46 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
             $ = new ResourceGroupResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;resourceGroups&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;resourceGroups&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }

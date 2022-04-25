@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AcceleratorResponse {
     /**
-     * The type of an accelator for a CDF instance.
+     * @return The type of an accelator for a CDF instance.
      * 
      */
     private final String acceleratorType;
     /**
-     * The state of the accelerator
+     * @return The state of the accelerator
      * 
      */
     private final String state;
@@ -29,16 +29,16 @@ public final class AcceleratorResponse {
     }
 
     /**
-     * The type of an accelator for a CDF instance.
+     * @return The type of an accelator for a CDF instance.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }
     /**
-     * The state of the accelerator
+     * @return The state of the accelerator
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

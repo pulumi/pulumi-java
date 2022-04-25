@@ -24,6 +24,10 @@ public final class GoogleCloudChannelV1PeriodResponse extends com.pulumi.resourc
     @Import(name="duration", required=true)
     private Integer duration;
 
+    /**
+     * @return Total duration of Period Type defined.
+     * 
+     */
     public Integer duration() {
         return this.duration;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudChannelV1PeriodResponse extends com.pulumi.resourc
     @Import(name="periodType", required=true)
     private String periodType;
 
+    /**
+     * @return Period Type.
+     * 
+     */
     public String periodType() {
         return this.periodType;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudChannelV1PeriodResponse extends com.pulumi.resourc
             $ = new GoogleCloudChannelV1PeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration Total duration of Period Type defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Integer duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param periodType Period Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodType(String periodType) {
             $.periodType = periodType;
             return this;

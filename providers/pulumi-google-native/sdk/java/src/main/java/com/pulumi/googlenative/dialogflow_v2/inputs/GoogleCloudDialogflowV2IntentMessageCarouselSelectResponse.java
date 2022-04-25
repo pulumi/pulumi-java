@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse ex
     @Import(name="items", required=true)
     private List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items;
 
+    /**
+     * @return Carousel items.
+     * 
+     */
     public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items() {
         return this.items;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse ex
             $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items Carousel items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Carousel items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse... items) {
             return items(List.of(items));
         }

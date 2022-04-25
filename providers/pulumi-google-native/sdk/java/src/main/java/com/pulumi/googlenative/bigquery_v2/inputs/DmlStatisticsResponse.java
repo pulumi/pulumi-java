@@ -19,6 +19,10 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="deletedRowCount", required=true)
     private String deletedRowCount;
 
+    /**
+     * @return Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+     * 
+     */
     public String deletedRowCount() {
         return this.deletedRowCount;
     }
@@ -30,6 +34,10 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="insertedRowCount", required=true)
     private String insertedRowCount;
 
+    /**
+     * @return Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+     * 
+     */
     public String insertedRowCount() {
         return this.insertedRowCount;
     }
@@ -41,6 +49,10 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="updatedRowCount", required=true)
     private String updatedRowCount;
 
+    /**
+     * @return Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+     * 
+     */
     public String updatedRowCount() {
         return this.updatedRowCount;
     }
@@ -71,16 +83,34 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
             $ = new DmlStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deletedRowCount Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletedRowCount(String deletedRowCount) {
             $.deletedRowCount = deletedRowCount;
             return this;
         }
 
+        /**
+         * @param insertedRowCount Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertedRowCount(String insertedRowCount) {
             $.insertedRowCount = insertedRowCount;
             return this;
         }
 
+        /**
+         * @param updatedRowCount Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedRowCount(String updatedRowCount) {
             $.updatedRowCount = updatedRowCount;
             return this;

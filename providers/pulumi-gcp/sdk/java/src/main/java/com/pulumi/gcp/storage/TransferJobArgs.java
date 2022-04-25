@@ -24,6 +24,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return Unique description to identify the Transfer Job.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -36,6 +40,11 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +56,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<TransferJobScheduleArgs> schedule;
 
+    /**
+     * @return Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
+     * 
+     */
     public Optional<Output<TransferJobScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -58,6 +71,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -69,6 +86,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transferSpec", required=true)
     private Output<TransferJobTransferSpecArgs> transferSpec;
 
+    /**
+     * @return Transfer specification. Structure documented below.
+     * 
+     */
     public Output<TransferJobTransferSpecArgs> transferSpec() {
         return this.transferSpec;
     }
@@ -101,47 +122,109 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TransferJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Unique description to identify the Transfer Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Unique description to identify the Transfer Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param schedule Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(TransferJobScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param status Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param transferSpec Transfer specification. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferSpec(Output<TransferJobTransferSpecArgs> transferSpec) {
             $.transferSpec = transferSpec;
             return this;
         }
 
+        /**
+         * @param transferSpec Transfer specification. Structure documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
             return transferSpec(Output.of(transferSpec));
         }

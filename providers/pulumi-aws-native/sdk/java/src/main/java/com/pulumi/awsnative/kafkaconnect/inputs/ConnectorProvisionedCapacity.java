@@ -25,6 +25,10 @@ public final class ConnectorProvisionedCapacity extends com.pulumi.resources.Inv
     @Import(name="mcuCount")
     private @Nullable Integer mcuCount;
 
+    /**
+     * @return Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+     * 
+     */
     public Optional<Integer> mcuCount() {
         return Optional.ofNullable(this.mcuCount);
     }
@@ -36,6 +40,10 @@ public final class ConnectorProvisionedCapacity extends com.pulumi.resources.Inv
     @Import(name="workerCount", required=true)
     private Integer workerCount;
 
+    /**
+     * @return Number of workers for a connector.
+     * 
+     */
     public Integer workerCount() {
         return this.workerCount;
     }
@@ -65,11 +73,23 @@ public final class ConnectorProvisionedCapacity extends com.pulumi.resources.Inv
             $ = new ConnectorProvisionedCapacity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) are allocated to the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(@Nullable Integer mcuCount) {
             $.mcuCount = mcuCount;
             return this;
         }
 
+        /**
+         * @param workerCount Number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerCount(Integer workerCount) {
             $.workerCount = workerCount;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class HealthCheckAlarmIdentifier {
     /**
-     * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+     * @return The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
      * 
      */
     private final String name;
     /**
-     * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+     * @return For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
      * 
      */
     private final String region;
@@ -29,16 +29,16 @@ public final class HealthCheckAlarmIdentifier {
     }
 
     /**
-     * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+     * @return The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+     * @return For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

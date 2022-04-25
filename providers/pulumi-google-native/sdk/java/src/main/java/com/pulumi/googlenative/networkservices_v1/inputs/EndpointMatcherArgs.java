@@ -26,6 +26,10 @@ public final class EndpointMatcherArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadataLabelMatcher")
     private @Nullable Output<EndpointMatcherMetadataLabelMatcherArgs> metadataLabelMatcher;
 
+    /**
+     * @return The matcher is based on node metadata presented by xDS clients.
+     * 
+     */
     public Optional<Output<EndpointMatcherMetadataLabelMatcherArgs>> metadataLabelMatcher() {
         return Optional.ofNullable(this.metadataLabelMatcher);
     }
@@ -54,11 +58,23 @@ public final class EndpointMatcherArgs extends com.pulumi.resources.ResourceArgs
             $ = new EndpointMatcherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataLabelMatcher The matcher is based on node metadata presented by xDS clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataLabelMatcher(@Nullable Output<EndpointMatcherMetadataLabelMatcherArgs> metadataLabelMatcher) {
             $.metadataLabelMatcher = metadataLabelMatcher;
             return this;
         }
 
+        /**
+         * @param metadataLabelMatcher The matcher is based on node metadata presented by xDS clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataLabelMatcher(EndpointMatcherMetadataLabelMatcherArgs metadataLabelMatcher) {
             return metadataLabelMatcher(Output.of(metadataLabelMatcher));
         }

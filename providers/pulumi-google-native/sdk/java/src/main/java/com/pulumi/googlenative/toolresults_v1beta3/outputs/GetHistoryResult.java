@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetHistoryResult {
     /**
-     * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
+     * @return A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
      */
     private final String displayName;
     /**
-     * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
+     * @return A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
      */
     private final String historyId;
     /**
-     * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
+     * @return A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
      */
     private final String name;
     /**
-     * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
+     * @return The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
      */
     private final String testPlatform;
@@ -43,30 +43,30 @@ public final class GetHistoryResult {
     }
 
     /**
-     * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
+     * @return A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
+     * @return A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
-    */
+     */
     public String historyId() {
         return this.historyId;
     }
     /**
-     * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
+     * @return A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
+     * @return The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
-    */
+     */
     public String testPlatform() {
         return this.testPlatform;
     }

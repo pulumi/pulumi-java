@@ -21,6 +21,10 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Identifier of the Site.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -32,6 +36,10 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the Site.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,11 +69,23 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Identifier of the Site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the Site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

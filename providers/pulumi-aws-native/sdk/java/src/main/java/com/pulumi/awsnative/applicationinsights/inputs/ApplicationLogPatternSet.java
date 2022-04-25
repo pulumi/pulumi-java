@@ -25,6 +25,10 @@ public final class ApplicationLogPatternSet extends com.pulumi.resources.InvokeA
     @Import(name="logPatterns", required=true)
     private List<ApplicationLogPattern> logPatterns;
 
+    /**
+     * @return The log patterns of a set.
+     * 
+     */
     public List<ApplicationLogPattern> logPatterns() {
         return this.logPatterns;
     }
@@ -36,6 +40,10 @@ public final class ApplicationLogPatternSet extends com.pulumi.resources.InvokeA
     @Import(name="patternSetName", required=true)
     private String patternSetName;
 
+    /**
+     * @return The name of the log pattern set.
+     * 
+     */
     public String patternSetName() {
         return this.patternSetName;
     }
@@ -65,15 +73,33 @@ public final class ApplicationLogPatternSet extends com.pulumi.resources.InvokeA
             $ = new ApplicationLogPatternSet(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logPatterns The log patterns of a set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatterns(List<ApplicationLogPattern> logPatterns) {
             $.logPatterns = logPatterns;
             return this;
         }
 
+        /**
+         * @param logPatterns The log patterns of a set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logPatterns(ApplicationLogPattern... logPatterns) {
             return logPatterns(List.of(logPatterns));
         }
 
+        /**
+         * @param patternSetName The name of the log pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternSetName(String patternSetName) {
             $.patternSetName = patternSetName;
             return this;

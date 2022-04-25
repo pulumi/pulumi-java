@@ -28,6 +28,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="clientIPPreservationEnabled")
     private @Nullable Output<Boolean> clientIPPreservationEnabled;
 
+    /**
+     * @return true if client ip should be preserved
+     * 
+     */
     public Optional<Output<Boolean>> clientIPPreservationEnabled() {
         return Optional.ofNullable(this.clientIPPreservationEnabled);
     }
@@ -39,6 +43,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="endpointId", required=true)
     private Output<String> endpointId;
 
+    /**
+     * @return Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+     * 
+     */
     public Output<String> endpointId() {
         return this.endpointId;
     }
@@ -50,6 +58,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return The weight for the endpoint.
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -80,29 +92,65 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
             $ = new EndpointGroupEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientIPPreservationEnabled true if client ip should be preserved
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientIPPreservationEnabled(@Nullable Output<Boolean> clientIPPreservationEnabled) {
             $.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
 
+        /**
+         * @param clientIPPreservationEnabled true if client ip should be preserved
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientIPPreservationEnabled(Boolean clientIPPreservationEnabled) {
             return clientIPPreservationEnabled(Output.of(clientIPPreservationEnabled));
         }
 
+        /**
+         * @param endpointId Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(Output<String> endpointId) {
             $.endpointId = endpointId;
             return this;
         }
 
+        /**
+         * @param endpointId Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(String endpointId) {
             return endpointId(Output.of(endpointId));
         }
 
+        /**
+         * @param weight The weight for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The weight for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

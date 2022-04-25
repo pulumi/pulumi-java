@@ -24,6 +24,11 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
     @Import(name="actions", required=true)
     private Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
 
+    /**
+     * @return A task to execute on the completion of a job.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions() {
         return this.actions;
     }
@@ -35,6 +40,10 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
     @Import(name="inspectTemplateName", required=true)
     private Output<String> inspectTemplateName;
 
+    /**
+     * @return The name of the template to run when this job is triggered.
+     * 
+     */
     public Output<String> inspectTemplateName() {
         return this.inspectTemplateName;
     }
@@ -47,6 +56,11 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
     @Import(name="storageConfig", required=true)
     private Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
 
+    /**
+     * @return Information on where to inspect
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig() {
         return this.storageConfig;
     }
@@ -77,33 +91,80 @@ public final class PreventionJobTriggerInspectJobGetArgs extends com.pulumi.reso
             $ = new PreventionJobTriggerInspectJobGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions A task to execute on the completion of a job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<PreventionJobTriggerInspectJobActionGetArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions A task to execute on the completion of a job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<PreventionJobTriggerInspectJobActionGetArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions A task to execute on the completion of a job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(PreventionJobTriggerInspectJobActionGetArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param inspectTemplateName The name of the template to run when this job is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectTemplateName(Output<String> inspectTemplateName) {
             $.inspectTemplateName = inspectTemplateName;
             return this;
         }
 
+        /**
+         * @param inspectTemplateName The name of the template to run when this job is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inspectTemplateName(String inspectTemplateName) {
             return inspectTemplateName(Output.of(inspectTemplateName));
         }
 
+        /**
+         * @param storageConfig Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfig(Output<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig) {
             $.storageConfig = storageConfig;
             return this;
         }
 
+        /**
+         * @param storageConfig Information on where to inspect
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfigGetArgs storageConfig) {
             return storageConfig(Output.of(storageConfig));
         }

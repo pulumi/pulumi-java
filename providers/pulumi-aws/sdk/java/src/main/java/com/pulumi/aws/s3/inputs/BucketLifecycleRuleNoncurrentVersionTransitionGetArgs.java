@@ -23,6 +23,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return Specifies the number of days noncurrent object versions transition.
+     * 
+     */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -34,6 +38,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="storageClass", required=true)
     private Output<String> storageClass;
 
+    /**
+     * @return Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+     * 
+     */
     public Output<String> storageClass() {
         return this.storageClass;
     }
@@ -63,20 +71,44 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
             $ = new BucketLifecycleRuleNoncurrentVersionTransitionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days Specifies the number of days noncurrent object versions transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Specifies the number of days noncurrent object versions transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param storageClass Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }

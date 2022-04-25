@@ -25,6 +25,10 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="bytesCopied", required=true)
     private Double bytesCopied;
 
+    /**
+     * @return Bytes copied during the copy of disk.
+     * 
+     */
     public Double bytesCopied() {
         return this.bytesCopied;
     }
@@ -36,6 +40,10 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="percentComplete", required=true)
     private Integer percentComplete;
 
+    /**
+     * @return Indicates the percentage completed for the copy of the disk.
+     * 
+     */
     public Integer percentComplete() {
         return this.percentComplete;
     }
@@ -47,6 +55,10 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return The serial number of the disk
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -58,6 +70,10 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The Status of the copy
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -89,21 +105,45 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
             $ = new DataBoxDiskCopyProgressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bytesCopied Bytes copied during the copy of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesCopied(Double bytesCopied) {
             $.bytesCopied = bytesCopied;
             return this;
         }
 
+        /**
+         * @param percentComplete Indicates the percentage completed for the copy of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentComplete(Integer percentComplete) {
             $.percentComplete = percentComplete;
             return this;
         }
 
+        /**
+         * @param serialNumber The serial number of the disk
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param status The Status of the copy
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

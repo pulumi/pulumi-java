@@ -27,6 +27,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<ListenerRuleActionGetArgs>> actions;
 
+    /**
+     * @return An Action block. Action blocks are documented below.
+     * 
+     */
     public Optional<Output<List<ListenerRuleActionGetArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the target group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions;
 
+    /**
+     * @return A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
+     * 
+     */
     public Optional<Output<List<ListenerRuleConditionGetArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -60,6 +72,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn")
     private @Nullable Output<String> listenerArn;
 
+    /**
+     * @return The ARN of the listener to which to attach the rule.
+     * 
+     */
     public Optional<Output<String>> listenerArn() {
         return Optional.ofNullable(this.listenerArn);
     }
@@ -71,6 +87,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can&#39;t have multiple rules with the same priority.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -82,6 +102,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -127,73 +155,169 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
             $ = new ListenerRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions An Action block. Action blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<ListenerRuleActionGetArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions An Action block. Action blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<ListenerRuleActionGetArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions An Action block. Action blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(ListenerRuleActionGetArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param conditions A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ListenerRuleConditionGetArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ListenerRuleConditionGetArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ListenerRuleConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param listenerArn The ARN of the listener to which to attach the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArn(@Nullable Output<String> listenerArn) {
             $.listenerArn = listenerArn;
             return this;
         }
 
+        /**
+         * @param listenerArn The ARN of the listener to which to attach the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArn(String listenerArn) {
             return listenerArn(Output.of(listenerArn));
         }
 
+        /**
+         * @param priority The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can&#39;t have multiple rules with the same priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can&#39;t have multiple rules with the same priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

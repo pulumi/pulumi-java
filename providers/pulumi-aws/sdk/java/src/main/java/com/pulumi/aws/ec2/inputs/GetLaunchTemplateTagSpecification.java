@@ -27,6 +27,10 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -61,6 +65,12 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;

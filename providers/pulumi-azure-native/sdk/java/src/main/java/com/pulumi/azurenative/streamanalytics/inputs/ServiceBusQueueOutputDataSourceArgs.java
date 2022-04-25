@@ -28,6 +28,10 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="propertyColumns")
     private @Nullable Output<List<String>> propertyColumns;
 
+    /**
+     * @return A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+     * 
+     */
     public Optional<Output<List<String>>> propertyColumns() {
         return Optional.ofNullable(this.propertyColumns);
     }
@@ -39,6 +43,10 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="queueName")
     private @Nullable Output<String> queueName;
 
+    /**
+     * @return The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> queueName() {
         return Optional.ofNullable(this.queueName);
     }
@@ -50,6 +58,10 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="serviceBusNamespace")
     private @Nullable Output<String> serviceBusNamespace;
 
+    /**
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
@@ -61,6 +73,10 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="sharedAccessPolicyKey")
     private @Nullable Output<String> sharedAccessPolicyKey;
 
+    /**
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
@@ -72,6 +88,10 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="sharedAccessPolicyName")
     private @Nullable Output<String> sharedAccessPolicyName;
 
+    /**
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -84,6 +104,11 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -117,60 +142,140 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
             $ = new ServiceBusQueueOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param propertyColumns A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyColumns(@Nullable Output<List<String>> propertyColumns) {
             $.propertyColumns = propertyColumns;
             return this;
         }
 
+        /**
+         * @param propertyColumns A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyColumns(List<String> propertyColumns) {
             return propertyColumns(Output.of(propertyColumns));
         }
 
+        /**
+         * @param propertyColumns A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyColumns(String... propertyColumns) {
             return propertyColumns(List.of(propertyColumns));
         }
 
+        /**
+         * @param queueName The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
+        /**
+         * @param queueName The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
             $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
+        /**
+         * @param serviceBusNamespace The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusNamespace(String serviceBusNamespace) {
             return serviceBusNamespace(Output.of(serviceBusNamespace));
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
             $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyKey The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyKey(String sharedAccessPolicyKey) {
             return sharedAccessPolicyKey(Output.of(sharedAccessPolicyKey));
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
             $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
+        /**
+         * @param sharedAccessPolicyName The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
             return sharedAccessPolicyName(Output.of(sharedAccessPolicyName));
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -27,6 +27,10 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return This field denotes whether to enable logging for a particular firewall rule.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -38,6 +42,10 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="metadata")
     private @Nullable Output<FirewallLogConfigMetadata> metadata;
 
+    /**
+     * @return This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+     * 
+     */
     public Optional<Output<FirewallLogConfigMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -67,20 +75,44 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new FirewallLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable This field denotes whether to enable logging for a particular firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable This field denotes whether to enable logging for a particular firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param metadata This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<FirewallLogConfigMetadata> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(FirewallLogConfigMetadata metadata) {
             return metadata(Output.of(metadata));
         }

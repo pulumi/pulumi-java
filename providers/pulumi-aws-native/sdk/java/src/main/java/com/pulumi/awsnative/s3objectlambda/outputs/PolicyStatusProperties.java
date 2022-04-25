@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyStatusProperties {
     /**
-     * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
+     * @return Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
      * 
      */
     private final @Nullable Boolean isPublic;
@@ -23,9 +23,9 @@ public final class PolicyStatusProperties {
     }
 
     /**
-     * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
+     * @return Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
      * 
-    */
+     */
     public Optional<Boolean> isPublic() {
         return Optional.ofNullable(this.isPublic);
     }

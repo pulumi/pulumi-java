@@ -25,6 +25,10 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends com.pulumi.
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -37,6 +41,11 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends com.pulumi.
     @Import(name="copyLogDetailsType", required=true)
     private String copyLogDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBoxHeavy&#39;.
+     * 
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
@@ -48,6 +57,10 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends com.pulumi.
     @Import(name="copyLogLink", required=true)
     private List<String> copyLogLink;
 
+    /**
+     * @return Link for copy logs.
+     * 
+     */
     public List<String> copyLogLink() {
         return this.copyLogLink;
     }
@@ -59,6 +72,10 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends com.pulumi.
     @Import(name="copyVerboseLogLink", required=true)
     private List<String> copyVerboseLogLink;
 
+    /**
+     * @return Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+     * 
+     */
     public List<String> copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }
@@ -90,30 +107,67 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends com.pulumi.
             $ = new DataBoxHeavyAccountCopyLogDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param copyLogDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBoxHeavy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogDetailsType(String copyLogDetailsType) {
             $.copyLogDetailsType = copyLogDetailsType;
             return this;
         }
 
+        /**
+         * @param copyLogLink Link for copy logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogLink(List<String> copyLogLink) {
             $.copyLogLink = copyLogLink;
             return this;
         }
 
+        /**
+         * @param copyLogLink Link for copy logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyLogLink(String... copyLogLink) {
             return copyLogLink(List.of(copyLogLink));
         }
 
+        /**
+         * @param copyVerboseLogLink Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyVerboseLogLink(List<String> copyVerboseLogLink) {
             $.copyVerboseLogLink = copyVerboseLogLink;
             return this;
         }
 
+        /**
+         * @param copyVerboseLogLink Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyVerboseLogLink(String... copyVerboseLogLink) {
             return copyVerboseLogLink(List.of(copyVerboseLogLink));
         }

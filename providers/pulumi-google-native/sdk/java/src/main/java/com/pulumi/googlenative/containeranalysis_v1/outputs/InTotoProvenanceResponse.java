@@ -14,18 +14,18 @@ import java.util.Objects;
 @CustomType
 public final class InTotoProvenanceResponse {
     /**
-     * required
+     * @return required
      * 
      */
     private final BuilderConfigResponse builderConfig;
     /**
-     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
      */
     private final List<String> materials;
     private final MetadataResponse metadata;
     /**
-     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
      */
     private final RecipeResponse recipe;
@@ -43,16 +43,16 @@ public final class InTotoProvenanceResponse {
     }
 
     /**
-     * required
+     * @return required
      * 
-    */
+     */
     public BuilderConfigResponse builderConfig() {
         return this.builderConfig;
     }
     /**
-     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
-    */
+     */
     public List<String> materials() {
         return this.materials;
     }
@@ -60,9 +60,9 @@ public final class InTotoProvenanceResponse {
         return this.metadata;
     }
     /**
-     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
-    */
+     */
     public RecipeResponse recipe() {
         return this.recipe;
     }

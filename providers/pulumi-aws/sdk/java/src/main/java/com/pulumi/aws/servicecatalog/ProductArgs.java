@@ -24,6 +24,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
     private @Nullable Output<String> acceptLanguage;
 
+    /**
+     * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+     * 
+     */
     public Optional<Output<String>> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
@@ -35,6 +39,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributor")
     private @Nullable Output<String> distributor;
 
+    /**
+     * @return Distributor (i.e., vendor) of the product.
+     * 
+     */
     public Optional<Output<String>> distributor() {
         return Optional.ofNullable(this.distributor);
     }
@@ -57,6 +69,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner", required=true)
     private Output<String> owner;
 
+    /**
+     * @return Owner of the product.
+     * 
+     */
     public Output<String> owner() {
         return this.owner;
     }
@@ -79,6 +99,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningArtifactParameters", required=true)
     private Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
+    /**
+     * @return Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+     * 
+     */
     public Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters() {
         return this.provisioningArtifactParameters;
     }
@@ -90,6 +114,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportDescription")
     private @Nullable Output<String> supportDescription;
 
+    /**
+     * @return Support information about the product.
+     * 
+     */
     public Optional<Output<String>> supportDescription() {
         return Optional.ofNullable(this.supportDescription);
     }
@@ -101,6 +129,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
     private @Nullable Output<String> supportEmail;
 
+    /**
+     * @return Contact email for product support.
+     * 
+     */
     public Optional<Output<String>> supportEmail() {
         return Optional.ofNullable(this.supportEmail);
     }
@@ -112,6 +144,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
     private @Nullable Output<String> supportUrl;
 
+    /**
+     * @return Contact URL for product support.
+     * 
+     */
     public Optional<Output<String>> supportUrl() {
         return Optional.ofNullable(this.supportUrl);
     }
@@ -123,6 +159,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -134,6 +174,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -172,101 +216,233 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
 
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(String acceptLanguage) {
             return acceptLanguage(Output.of(acceptLanguage));
         }
 
+        /**
+         * @param description Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param distributor Distributor (i.e., vendor) of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributor(@Nullable Output<String> distributor) {
             $.distributor = distributor;
             return this;
         }
 
+        /**
+         * @param distributor Distributor (i.e., vendor) of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributor(String distributor) {
             return distributor(Output.of(distributor));
         }
 
+        /**
+         * @param name Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner Owner of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(Output<String> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Owner of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param provisioningArtifactParameters Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactParameters(Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters) {
             $.provisioningArtifactParameters = provisioningArtifactParameters;
             return this;
         }
 
+        /**
+         * @param provisioningArtifactParameters Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersArgs provisioningArtifactParameters) {
             return provisioningArtifactParameters(Output.of(provisioningArtifactParameters));
         }
 
+        /**
+         * @param supportDescription Support information about the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportDescription(@Nullable Output<String> supportDescription) {
             $.supportDescription = supportDescription;
             return this;
         }
 
+        /**
+         * @param supportDescription Support information about the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportDescription(String supportDescription) {
             return supportDescription(Output.of(supportDescription));
         }
 
+        /**
+         * @param supportEmail Contact email for product support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
             $.supportEmail = supportEmail;
             return this;
         }
 
+        /**
+         * @param supportEmail Contact email for product support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportEmail(String supportEmail) {
             return supportEmail(Output.of(supportEmail));
         }
 
+        /**
+         * @param supportUrl Contact URL for product support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
             $.supportUrl = supportUrl;
             return this;
         }
 
+        /**
+         * @param supportUrl Contact URL for product support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(String supportUrl) {
             return supportUrl(Output.of(supportUrl));
         }
 
+        /**
+         * @param tags Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

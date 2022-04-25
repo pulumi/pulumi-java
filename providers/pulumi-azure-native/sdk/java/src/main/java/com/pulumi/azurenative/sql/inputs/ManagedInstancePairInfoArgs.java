@@ -26,6 +26,10 @@ public final class ManagedInstancePairInfoArgs extends com.pulumi.resources.Reso
     @Import(name="partnerManagedInstanceId")
     private @Nullable Output<String> partnerManagedInstanceId;
 
+    /**
+     * @return Id of Partner Managed Instance in pair.
+     * 
+     */
     public Optional<Output<String>> partnerManagedInstanceId() {
         return Optional.ofNullable(this.partnerManagedInstanceId);
     }
@@ -37,6 +41,10 @@ public final class ManagedInstancePairInfoArgs extends com.pulumi.resources.Reso
     @Import(name="primaryManagedInstanceId")
     private @Nullable Output<String> primaryManagedInstanceId;
 
+    /**
+     * @return Id of Primary Managed Instance in pair.
+     * 
+     */
     public Optional<Output<String>> primaryManagedInstanceId() {
         return Optional.ofNullable(this.primaryManagedInstanceId);
     }
@@ -66,20 +74,44 @@ public final class ManagedInstancePairInfoArgs extends com.pulumi.resources.Reso
             $ = new ManagedInstancePairInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerManagedInstanceId Id of Partner Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerManagedInstanceId(@Nullable Output<String> partnerManagedInstanceId) {
             $.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
 
+        /**
+         * @param partnerManagedInstanceId Id of Partner Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerManagedInstanceId(String partnerManagedInstanceId) {
             return partnerManagedInstanceId(Output.of(partnerManagedInstanceId));
         }
 
+        /**
+         * @param primaryManagedInstanceId Id of Primary Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryManagedInstanceId(@Nullable Output<String> primaryManagedInstanceId) {
             $.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }
 
+        /**
+         * @param primaryManagedInstanceId Id of Primary Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryManagedInstanceId(String primaryManagedInstanceId) {
             return primaryManagedInstanceId(Output.of(primaryManagedInstanceId));
         }

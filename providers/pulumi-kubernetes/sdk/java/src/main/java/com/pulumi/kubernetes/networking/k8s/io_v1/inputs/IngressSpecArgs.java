@@ -30,6 +30,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultBackend")
     private @Nullable Output<IngressBackendArgs> defaultBackend;
 
+    /**
+     * @return DefaultBackend is the backend that should handle requests that don&#39;t match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
+     * 
+     */
     public Optional<Output<IngressBackendArgs>> defaultBackend() {
         return Optional.ofNullable(this.defaultBackend);
     }
@@ -41,6 +45,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingressClassName")
     private @Nullable Output<String> ingressClassName;
 
+    /**
+     * @return IngressClassName is the name of the IngressClass cluster resource. The associated IngressClass defines which controller will implement the resource. This replaces the deprecated `kubernetes.io/ingress.class` annotation. For backwards compatibility, when that annotation is set, it must be given precedence over this field. The controller may emit a warning if the field and annotation have different values. Implementations of this API should ignore Ingresses without a class specified. An IngressClass resource may be marked as default, which can be used to set a default value for this field. For more information, refer to the IngressClass documentation.
+     * 
+     */
     public Optional<Output<String>> ingressClassName() {
         return Optional.ofNullable(this.ingressClassName);
     }
@@ -52,6 +60,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<IngressRuleArgs>> rules;
 
+    /**
+     * @return A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.
+     * 
+     */
     public Optional<Output<List<IngressRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -63,6 +75,10 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tls")
     private @Nullable Output<List<IngressTLSArgs>> tls;
 
+    /**
+     * @return TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
+     * 
+     */
     public Optional<Output<List<IngressTLSArgs>>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -94,46 +110,106 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultBackend DefaultBackend is the backend that should handle requests that don&#39;t match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackend(@Nullable Output<IngressBackendArgs> defaultBackend) {
             $.defaultBackend = defaultBackend;
             return this;
         }
 
+        /**
+         * @param defaultBackend DefaultBackend is the backend that should handle requests that don&#39;t match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBackend(IngressBackendArgs defaultBackend) {
             return defaultBackend(Output.of(defaultBackend));
         }
 
+        /**
+         * @param ingressClassName IngressClassName is the name of the IngressClass cluster resource. The associated IngressClass defines which controller will implement the resource. This replaces the deprecated `kubernetes.io/ingress.class` annotation. For backwards compatibility, when that annotation is set, it must be given precedence over this field. The controller may emit a warning if the field and annotation have different values. Implementations of this API should ignore Ingresses without a class specified. An IngressClass resource may be marked as default, which can be used to set a default value for this field. For more information, refer to the IngressClass documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressClassName(@Nullable Output<String> ingressClassName) {
             $.ingressClassName = ingressClassName;
             return this;
         }
 
+        /**
+         * @param ingressClassName IngressClassName is the name of the IngressClass cluster resource. The associated IngressClass defines which controller will implement the resource. This replaces the deprecated `kubernetes.io/ingress.class` annotation. For backwards compatibility, when that annotation is set, it must be given precedence over this field. The controller may emit a warning if the field and annotation have different values. Implementations of this API should ignore Ingresses without a class specified. An IngressClass resource may be marked as default, which can be used to set a default value for this field. For more information, refer to the IngressClass documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressClassName(String ingressClassName) {
             return ingressClassName(Output.of(ingressClassName));
         }
 
+        /**
+         * @param rules A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<IngressRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<IngressRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(IngressRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param tls TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<List<IngressTLSArgs>> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(List<IngressTLSArgs> tls) {
             return tls(Output.of(tls));
         }
 
+        /**
+         * @param tls TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(IngressTLSArgs... tls) {
             return tls(List.of(tls));
         }

@@ -25,6 +25,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="amiTags")
     private @Nullable Output<Map<String,String>> amiTags;
 
+    /**
+     * @return Key-value map of tags to apply to the distributed AMI.
+     * 
+     */
     public Optional<Output<Map<String,String>>> amiTags() {
         return Optional.ofNullable(this.amiTags);
     }
@@ -36,6 +40,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the container distribution configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key to encrypt the distributed AMI.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -58,6 +70,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="launchPermission")
     private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
 
+    /**
+     * @return Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
+     * 
+     */
     public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs>> launchPermission() {
         return Optional.ofNullable(this.launchPermission);
     }
@@ -69,6 +85,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name to apply to the distributed AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="targetAccountIds")
     private @Nullable Output<List<String>> targetAccountIds;
 
+    /**
+     * @return Set of AWS Account identifiers to distribute the AMI.
+     * 
+     */
     public Optional<Output<List<String>>> targetAccountIds() {
         return Optional.ofNullable(this.targetAccountIds);
     }
@@ -113,60 +137,138 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             $ = new DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiTags Key-value map of tags to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiTags(@Nullable Output<Map<String,String>> amiTags) {
             $.amiTags = amiTags;
             return this;
         }
 
+        /**
+         * @param amiTags Key-value map of tags to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiTags(Map<String,String> amiTags) {
             return amiTags(Output.of(amiTags));
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of the Key Management Service (KMS) Key to encrypt the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId Amazon Resource Name (ARN) of the Key Management Service (KMS) Key to encrypt the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param launchPermission Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPermission(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
             $.launchPermission = launchPermission;
             return this;
         }
 
+        /**
+         * @param launchPermission Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPermission(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
             return launchPermission(Output.of(launchPermission));
         }
 
+        /**
+         * @param name Name to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetAccountIds Set of AWS Account identifiers to distribute the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(@Nullable Output<List<String>> targetAccountIds) {
             $.targetAccountIds = targetAccountIds;
             return this;
         }
 
+        /**
+         * @param targetAccountIds Set of AWS Account identifiers to distribute the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(List<String> targetAccountIds) {
             return targetAccountIds(Output.of(targetAccountIds));
         }
 
+        /**
+         * @param targetAccountIds Set of AWS Account identifiers to distribute the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(String... targetAccountIds) {
             return targetAccountIds(List.of(targetAccountIds));
         }

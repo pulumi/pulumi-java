@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TypedLocalObjectReference {
     /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * @return APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
      */
     private final @Nullable String apiGroup;
     /**
-     * Kind is the type of resource being referenced
+     * @return Kind is the type of resource being referenced
      * 
      */
     private final String kind;
     /**
-     * Name is the name of resource being referenced
+     * @return Name is the name of resource being referenced
      * 
      */
     private final String name;
@@ -38,23 +38,23 @@ public final class TypedLocalObjectReference {
     }
 
     /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
+     * @return APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
-    */
+     */
     public Optional<String> apiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
     /**
-     * Kind is the type of resource being referenced
+     * @return Kind is the type of resource being referenced
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name is the name of resource being referenced
+     * @return Name is the name of resource being referenced
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

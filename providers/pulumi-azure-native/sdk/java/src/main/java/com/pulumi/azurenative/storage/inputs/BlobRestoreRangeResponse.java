@@ -23,6 +23,10 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
     @Import(name="endRange", required=true)
     private String endRange;
 
+    /**
+     * @return Blob end range. This is exclusive. Empty means account end.
+     * 
+     */
     public String endRange() {
         return this.endRange;
     }
@@ -34,6 +38,10 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
     @Import(name="startRange", required=true)
     private String startRange;
 
+    /**
+     * @return Blob start range. This is inclusive. Empty means account start.
+     * 
+     */
     public String startRange() {
         return this.startRange;
     }
@@ -63,11 +71,23 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
             $ = new BlobRestoreRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endRange Blob end range. This is exclusive. Empty means account end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endRange(String endRange) {
             $.endRange = endRange;
             return this;
         }
 
+        /**
+         * @param startRange Blob start range. This is inclusive. Empty means account start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startRange(String startRange) {
             $.startRange = startRange;
             return this;

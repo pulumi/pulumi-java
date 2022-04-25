@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSupportPlanTypeResult {
     /**
-     * The id of the ARM resource, e.g. &#34;/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}&#34;.
+     * @return The id of the ARM resource, e.g. &#34;/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}&#34;.
      * 
      */
     private final String id;
     /**
-     * The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
+     * @return The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Microsoft.Addons/supportProvider
+     * @return Microsoft.Addons/supportProvider
      * 
      */
     private final String type;
@@ -45,30 +45,30 @@ public final class GetSupportPlanTypeResult {
     }
 
     /**
-     * The id of the ARM resource, e.g. &#34;/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}&#34;.
+     * @return The id of the ARM resource, e.g. &#34;/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}&#34;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
+     * @return The name of the Canonical support plan, i.e. &#34;essential&#34;, &#34;standard&#34; or &#34;advanced&#34;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Microsoft.Addons/supportProvider
+     * @return Microsoft.Addons/supportProvider
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

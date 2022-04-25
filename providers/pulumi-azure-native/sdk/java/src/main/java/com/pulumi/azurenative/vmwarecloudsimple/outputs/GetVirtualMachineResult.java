@@ -21,137 +21,137 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualMachineResult {
     /**
-     * The amount of memory
+     * @return The amount of memory
      * 
      */
     private final Integer amountOfRam;
     /**
-     * The list of Virtual Disks&#39; Controllers
+     * @return The list of Virtual Disks&#39; Controllers
      * 
      */
     private final List<VirtualDiskControllerResponse> controllers;
     /**
-     * Virtual machine properties
+     * @return Virtual machine properties
      * 
      */
     private final @Nullable GuestOSCustomizationResponse customization;
     /**
-     * The list of Virtual Disks
+     * @return The list of Virtual Disks
      * 
      */
     private final @Nullable List<VirtualDiskResponse> disks;
     /**
-     * The DNS name of Virtual Machine in VCenter
+     * @return The DNS name of Virtual Machine in VCenter
      * 
      */
     private final String dnsname;
     /**
-     * Expose Guest OS or not
+     * @return Expose Guest OS or not
      * 
      */
     private final @Nullable Boolean exposeToGuestVM;
     /**
-     * The path to virtual machine folder in VCenter
+     * @return The path to virtual machine folder in VCenter
      * 
      */
     private final String folder;
     /**
-     * The name of Guest OS
+     * @return The name of Guest OS
      * 
      */
     private final String guestOS;
     /**
-     * The Guest OS type
+     * @return The Guest OS type
      * 
      */
     private final String guestOSType;
     /**
-     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/virtualMachines/{virtualMachineName}
+     * @return /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/virtualMachines/{virtualMachineName}
      * 
      */
     private final String id;
     /**
-     * Azure region
+     * @return Azure region
      * 
      */
     private final String location;
     /**
-     * {virtualMachineName}
+     * @return {virtualMachineName}
      * 
      */
     private final String name;
     /**
-     * The list of Virtual NICs
+     * @return The list of Virtual NICs
      * 
      */
     private final @Nullable List<VirtualNicResponse> nics;
     /**
-     * The number of CPU cores
+     * @return The number of CPU cores
      * 
      */
     private final Integer numberOfCores;
     /**
-     * Password for login. Deprecated - use customization property
+     * @return Password for login. Deprecated - use customization property
      * 
      */
     private final @Nullable String password;
     /**
-     * Private Cloud Id
+     * @return Private Cloud Id
      * 
      */
     private final String privateCloudId;
     /**
-     * The provisioning status of the resource
+     * @return The provisioning status of the resource
      * 
      */
     private final String provisioningState;
     /**
-     * The public ip of Virtual Machine
+     * @return The public ip of Virtual Machine
      * 
      */
     private final String publicIP;
     /**
-     * Virtual Machines Resource Pool
+     * @return Virtual Machines Resource Pool
      * 
      */
     private final @Nullable ResourcePoolResponse resourcePool;
     /**
-     * The status of Virtual machine
+     * @return The status of Virtual machine
      * 
      */
     private final String status;
     /**
-     * The list of tags
+     * @return The list of tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Virtual Machine Template Id
+     * @return Virtual Machine Template Id
      * 
      */
     private final @Nullable String templateId;
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
     private final String type;
     /**
-     * Username for login. Deprecated - use customization property
+     * @return Username for login. Deprecated - use customization property
      * 
      */
     private final @Nullable String username;
     /**
-     * The list of Virtual VSphere Networks
+     * @return The list of Virtual VSphere Networks
      * 
      */
     private final @Nullable List<String> vSphereNetworks;
     /**
-     * The internal id of Virtual Machine in VCenter
+     * @return The internal id of Virtual Machine in VCenter
      * 
      */
     private final String vmId;
     /**
-     * VMware tools version
+     * @return VMware tools version
      * 
      */
     private final String vmwaretools;
@@ -215,191 +215,191 @@ public final class GetVirtualMachineResult {
     }
 
     /**
-     * The amount of memory
+     * @return The amount of memory
      * 
-    */
+     */
     public Integer amountOfRam() {
         return this.amountOfRam;
     }
     /**
-     * The list of Virtual Disks&#39; Controllers
+     * @return The list of Virtual Disks&#39; Controllers
      * 
-    */
+     */
     public List<VirtualDiskControllerResponse> controllers() {
         return this.controllers;
     }
     /**
-     * Virtual machine properties
+     * @return Virtual machine properties
      * 
-    */
+     */
     public Optional<GuestOSCustomizationResponse> customization() {
         return Optional.ofNullable(this.customization);
     }
     /**
-     * The list of Virtual Disks
+     * @return The list of Virtual Disks
      * 
-    */
+     */
     public List<VirtualDiskResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * The DNS name of Virtual Machine in VCenter
+     * @return The DNS name of Virtual Machine in VCenter
      * 
-    */
+     */
     public String dnsname() {
         return this.dnsname;
     }
     /**
-     * Expose Guest OS or not
+     * @return Expose Guest OS or not
      * 
-    */
+     */
     public Optional<Boolean> exposeToGuestVM() {
         return Optional.ofNullable(this.exposeToGuestVM);
     }
     /**
-     * The path to virtual machine folder in VCenter
+     * @return The path to virtual machine folder in VCenter
      * 
-    */
+     */
     public String folder() {
         return this.folder;
     }
     /**
-     * The name of Guest OS
+     * @return The name of Guest OS
      * 
-    */
+     */
     public String guestOS() {
         return this.guestOS;
     }
     /**
-     * The Guest OS type
+     * @return The Guest OS type
      * 
-    */
+     */
     public String guestOSType() {
         return this.guestOSType;
     }
     /**
-     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/virtualMachines/{virtualMachineName}
+     * @return /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/virtualMachines/{virtualMachineName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure region
+     * @return Azure region
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * {virtualMachineName}
+     * @return {virtualMachineName}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of Virtual NICs
+     * @return The list of Virtual NICs
      * 
-    */
+     */
     public List<VirtualNicResponse> nics() {
         return this.nics == null ? List.of() : this.nics;
     }
     /**
-     * The number of CPU cores
+     * @return The number of CPU cores
      * 
-    */
+     */
     public Integer numberOfCores() {
         return this.numberOfCores;
     }
     /**
-     * Password for login. Deprecated - use customization property
+     * @return Password for login. Deprecated - use customization property
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Private Cloud Id
+     * @return Private Cloud Id
      * 
-    */
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
-     * The provisioning status of the resource
+     * @return The provisioning status of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The public ip of Virtual Machine
+     * @return The public ip of Virtual Machine
      * 
-    */
+     */
     public String publicIP() {
         return this.publicIP;
     }
     /**
-     * Virtual Machines Resource Pool
+     * @return Virtual Machines Resource Pool
      * 
-    */
+     */
     public Optional<ResourcePoolResponse> resourcePool() {
         return Optional.ofNullable(this.resourcePool);
     }
     /**
-     * The status of Virtual machine
+     * @return The status of Virtual machine
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The list of tags
+     * @return The list of tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Virtual Machine Template Id
+     * @return Virtual Machine Template Id
      * 
-    */
+     */
     public Optional<String> templateId() {
         return Optional.ofNullable(this.templateId);
     }
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username for login. Deprecated - use customization property
+     * @return Username for login. Deprecated - use customization property
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
     /**
-     * The list of Virtual VSphere Networks
+     * @return The list of Virtual VSphere Networks
      * 
-    */
+     */
     public List<String> vSphereNetworks() {
         return this.vSphereNetworks == null ? List.of() : this.vSphereNetworks;
     }
     /**
-     * The internal id of Virtual Machine in VCenter
+     * @return The internal id of Virtual Machine in VCenter
      * 
-    */
+     */
     public String vmId() {
         return this.vmId;
     }
     /**
-     * VMware tools version
+     * @return VMware tools version
      * 
-    */
+     */
     public String vmwaretools() {
         return this.vmwaretools;
     }

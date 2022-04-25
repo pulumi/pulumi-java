@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualApplianceSiteResult {
     /**
-     * Address Prefix.
+     * @return Address Prefix.
      * 
      */
     private final @Nullable String addressPrefix;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the virtual appliance site.
+     * @return Name of the virtual appliance site.
      * 
      */
     private final @Nullable String name;
     /**
-     * Office 365 Policy.
+     * @return Office 365 Policy.
      * 
      */
     private final @Nullable Office365PolicyPropertiesResponse o365Policy;
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Site type.
+     * @return Site type.
      * 
      */
     private final String type;
@@ -67,51 +67,51 @@ public final class GetVirtualApplianceSiteResult {
     }
 
     /**
-     * Address Prefix.
+     * @return Address Prefix.
      * 
-    */
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the virtual appliance site.
+     * @return Name of the virtual appliance site.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Office 365 Policy.
+     * @return Office 365 Policy.
      * 
-    */
+     */
     public Optional<Office365PolicyPropertiesResponse> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Site type.
+     * @return Site type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

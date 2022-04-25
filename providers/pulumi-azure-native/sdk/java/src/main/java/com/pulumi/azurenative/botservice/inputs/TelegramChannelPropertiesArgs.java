@@ -27,6 +27,10 @@ public final class TelegramChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -38,6 +42,10 @@ public final class TelegramChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -49,6 +57,10 @@ public final class TelegramChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="isValidated")
     private @Nullable Output<Boolean> isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Output<Boolean>> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -79,29 +91,65 @@ public final class TelegramChannelPropertiesArgs extends com.pulumi.resources.Re
             $ = new TelegramChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             $.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(Boolean isValidated) {
             return isValidated(Output.of(isValidated));
         }

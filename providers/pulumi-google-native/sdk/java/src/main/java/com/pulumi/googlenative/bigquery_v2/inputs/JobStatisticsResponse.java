@@ -29,6 +29,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="completionRatio", required=true)
     private Double completionRatio;
 
+    /**
+     * @return [TrustedTester] [Output-only] Job progress (0.0 -&gt; 1.0) for LOAD and EXTRACT jobs.
+     * 
+     */
     public Double completionRatio() {
         return this.completionRatio;
     }
@@ -40,6 +44,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="creationTime", required=true)
     private String creationTime;
 
+    /**
+     * @return Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
+     * 
+     */
     public String creationTime() {
         return this.creationTime;
     }
@@ -51,6 +59,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -62,6 +74,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="extract", required=true)
     private JobStatistics4Response extract;
 
+    /**
+     * @return Statistics for an extract job.
+     * 
+     */
     public JobStatistics4Response extract() {
         return this.extract;
     }
@@ -73,6 +89,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="load", required=true)
     private JobStatistics3Response load;
 
+    /**
+     * @return Statistics for a load job.
+     * 
+     */
     public JobStatistics3Response load() {
         return this.load;
     }
@@ -84,6 +104,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="numChildJobs", required=true)
     private String numChildJobs;
 
+    /**
+     * @return Number of child jobs executed.
+     * 
+     */
     public String numChildJobs() {
         return this.numChildJobs;
     }
@@ -95,6 +119,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parentJobId", required=true)
     private String parentJobId;
 
+    /**
+     * @return If this is a child job, the id of the parent.
+     * 
+     */
     public String parentJobId() {
         return this.parentJobId;
     }
@@ -106,6 +134,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="query", required=true)
     private JobStatistics2Response query;
 
+    /**
+     * @return Statistics for a query job.
+     * 
+     */
     public JobStatistics2Response query() {
         return this.query;
     }
@@ -117,6 +149,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="quotaDeferments", required=true)
     private List<String> quotaDeferments;
 
+    /**
+     * @return Quotas which delayed this job&#39;s start time.
+     * 
+     */
     public List<String> quotaDeferments() {
         return this.quotaDeferments;
     }
@@ -128,6 +164,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="reservationId", required=true)
     private String reservationId;
 
+    /**
+     * @return Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
+     * 
+     */
     public String reservationId() {
         return this.reservationId;
     }
@@ -139,6 +179,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="reservationUsage", required=true)
     private List<JobStatisticsReservationUsageItemResponse> reservationUsage;
 
+    /**
+     * @return Job resource usage breakdown by reservation.
+     * 
+     */
     public List<JobStatisticsReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
@@ -150,6 +194,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rowLevelSecurityStatistics", required=true)
     private RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
 
+    /**
+     * @return [Preview] Statistics for row-level security. Present only for query and extract jobs.
+     * 
+     */
     public RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
     }
@@ -161,6 +209,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="scriptStatistics", required=true)
     private ScriptStatisticsResponse scriptStatistics;
 
+    /**
+     * @return Statistics for a child job of a script.
+     * 
+     */
     public ScriptStatisticsResponse scriptStatistics() {
         return this.scriptStatistics;
     }
@@ -172,6 +224,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sessionInfo", required=true)
     private SessionInfoResponse sessionInfo;
 
+    /**
+     * @return [Preview] Information of the session if this job is part of one.
+     * 
+     */
     public SessionInfoResponse sessionInfo() {
         return this.sessionInfo;
     }
@@ -183,6 +239,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -194,6 +254,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="totalSlotMs", required=true)
     private String totalSlotMs;
 
+    /**
+     * @return Slot-milliseconds for the job.
+     * 
+     */
     public String totalSlotMs() {
         return this.totalSlotMs;
     }
@@ -205,6 +269,10 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="transactionInfo", required=true)
     private TransactionInfoResponse transactionInfo;
 
+    /**
+     * @return [Alpha] Information of the multi-statement transaction if this job is part of one.
+     * 
+     */
     public TransactionInfoResponse transactionInfo() {
         return this.transactionInfo;
     }
@@ -249,94 +317,208 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completionRatio [TrustedTester] [Output-only] Job progress (0.0 -&gt; 1.0) for LOAD and EXTRACT jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionRatio(Double completionRatio) {
             $.completionRatio = completionRatio;
             return this;
         }
 
+        /**
+         * @param creationTime Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTime(String creationTime) {
             $.creationTime = creationTime;
             return this;
         }
 
+        /**
+         * @param endTime End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param extract Statistics for an extract job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extract(JobStatistics4Response extract) {
             $.extract = extract;
             return this;
         }
 
+        /**
+         * @param load Statistics for a load job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder load(JobStatistics3Response load) {
             $.load = load;
             return this;
         }
 
+        /**
+         * @param numChildJobs Number of child jobs executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numChildJobs(String numChildJobs) {
             $.numChildJobs = numChildJobs;
             return this;
         }
 
+        /**
+         * @param parentJobId If this is a child job, the id of the parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentJobId(String parentJobId) {
             $.parentJobId = parentJobId;
             return this;
         }
 
+        /**
+         * @param query Statistics for a query job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(JobStatistics2Response query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param quotaDeferments Quotas which delayed this job&#39;s start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaDeferments(List<String> quotaDeferments) {
             $.quotaDeferments = quotaDeferments;
             return this;
         }
 
+        /**
+         * @param quotaDeferments Quotas which delayed this job&#39;s start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaDeferments(String... quotaDeferments) {
             return quotaDeferments(List.of(quotaDeferments));
         }
 
+        /**
+         * @param reservationId Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationId(String reservationId) {
             $.reservationId = reservationId;
             return this;
         }
 
+        /**
+         * @param reservationUsage Job resource usage breakdown by reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationUsage(List<JobStatisticsReservationUsageItemResponse> reservationUsage) {
             $.reservationUsage = reservationUsage;
             return this;
         }
 
+        /**
+         * @param reservationUsage Job resource usage breakdown by reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationUsage(JobStatisticsReservationUsageItemResponse... reservationUsage) {
             return reservationUsage(List.of(reservationUsage));
         }
 
+        /**
+         * @param rowLevelSecurityStatistics [Preview] Statistics for row-level security. Present only for query and extract jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowLevelSecurityStatistics(RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics) {
             $.rowLevelSecurityStatistics = rowLevelSecurityStatistics;
             return this;
         }
 
+        /**
+         * @param scriptStatistics Statistics for a child job of a script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptStatistics(ScriptStatisticsResponse scriptStatistics) {
             $.scriptStatistics = scriptStatistics;
             return this;
         }
 
+        /**
+         * @param sessionInfo [Preview] Information of the session if this job is part of one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionInfo(SessionInfoResponse sessionInfo) {
             $.sessionInfo = sessionInfo;
             return this;
         }
 
+        /**
+         * @param startTime Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param totalSlotMs Slot-milliseconds for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSlotMs(String totalSlotMs) {
             $.totalSlotMs = totalSlotMs;
             return this;
         }
 
+        /**
+         * @param transactionInfo [Alpha] Information of the multi-statement transaction if this job is part of one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionInfo(TransactionInfoResponse transactionInfo) {
             $.transactionInfo = transactionInfo;
             return this;

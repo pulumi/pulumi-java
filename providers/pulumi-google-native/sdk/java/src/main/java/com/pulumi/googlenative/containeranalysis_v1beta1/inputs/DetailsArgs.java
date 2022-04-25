@@ -24,6 +24,10 @@ public final class DetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestation", required=true)
     private Output<AttestationArgs> attestation;
 
+    /**
+     * @return Attestation for the resource.
+     * 
+     */
     public Output<AttestationArgs> attestation() {
         return this.attestation;
     }
@@ -52,11 +56,23 @@ public final class DetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestation Attestation for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(Output<AttestationArgs> attestation) {
             $.attestation = attestation;
             return this;
         }
 
+        /**
+         * @param attestation Attestation for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestation(AttestationArgs attestation) {
             return attestation(Output.of(attestation));
         }

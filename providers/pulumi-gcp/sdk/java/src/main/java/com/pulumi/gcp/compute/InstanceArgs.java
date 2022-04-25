@@ -37,6 +37,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedMachineFeatures")
     private @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
+    /**
+     * @return Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
+     * 
+     */
     public Optional<Output<InstanceAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
         return Optional.ofNullable(this.advancedMachineFeatures);
     }
@@ -49,6 +53,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowStoppingForUpdate")
     private @Nullable Output<Boolean> allowStoppingForUpdate;
 
+    /**
+     * @return If true, allows this prvider to stop the instance to update its properties.
+     * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
+     * 
+     */
     public Optional<Output<Boolean>> allowStoppingForUpdate() {
         return Optional.ofNullable(this.allowStoppingForUpdate);
     }
@@ -60,6 +69,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachedDisks")
     private @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
 
+    /**
+     * @return Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceAttachedDiskArgs>>> attachedDisks() {
         return Optional.ofNullable(this.attachedDisks);
     }
@@ -72,6 +85,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootDisk", required=true)
     private Output<InstanceBootDiskArgs> bootDisk;
 
+    /**
+     * @return The boot disk for the instance.
+     * Structure is documented below.
+     * 
+     */
     public Output<InstanceBootDiskArgs> bootDisk() {
         return this.bootDisk;
     }
@@ -85,6 +103,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="canIpForward")
     private @Nullable Output<Boolean> canIpForward;
 
+    /**
+     * @return Whether to allow sending and receiving of
+     * packets with non-matching source or destination IPs.
+     * This defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> canIpForward() {
         return Optional.ofNullable(this.canIpForward);
     }
@@ -96,6 +120,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="confidentialInstanceConfig")
     private @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
+    /**
+     * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+     * 
+     */
     public Optional<Output<InstanceConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
         return Optional.ofNullable(this.confidentialInstanceConfig);
     }
@@ -108,6 +136,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
     private @Nullable Output<Boolean> deletionProtection;
 
+    /**
+     * @return Enable deletion protection on this instance. Defaults to false.
+     * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
+     * 
+     */
     public Optional<Output<Boolean>> deletionProtection() {
         return Optional.ofNullable(this.deletionProtection);
     }
@@ -119,6 +152,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -131,6 +168,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredStatus")
     private @Nullable Output<String> desiredStatus;
 
+    /**
+     * @return Desired status of the instance. Either
+     * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
+     * 
+     */
     public Optional<Output<String>> desiredStatus() {
         return Optional.ofNullable(this.desiredStatus);
     }
@@ -143,6 +185,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDisplay")
     private @Nullable Output<Boolean> enableDisplay;
 
+    /**
+     * @return Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<Boolean>> enableDisplay() {
         return Optional.ofNullable(this.enableDisplay);
     }
@@ -155,6 +202,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestAccelerators")
     private @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
+    /**
+     * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
+     * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
+     * 
+     */
     public Optional<Output<List<InstanceGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -168,6 +220,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
+     * Valid format is a series of labels 1-63 characters long matching the regular expression `a-z`, concatenated with periods.
+     * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -179,6 +237,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A map of key/value label pairs to assign to the instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -190,6 +252,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType", required=true)
     private Output<String> machineType;
 
+    /**
+     * @return The machine type to create.
+     * 
+     */
     public Output<String> machineType() {
         return this.machineType;
     }
@@ -203,6 +269,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata key/value pairs to make available from
+     * within the instance. Ssh keys attached in the Cloud Console will be removed.
+     * Add them to your config in order to keep them attached to your instance.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -223,6 +295,19 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataStartupScript")
     private @Nullable Output<String> metadataStartupScript;
 
+    /**
+     * @return An alternative to using the
+     * startup-script metadata key, except this one forces the instance to be recreated
+     * (thus re-running the script) if it is changed. This replaces the startup-script
+     * metadata key on the created instance and thus the two mechanisms are not
+     * allowed to be used simultaneously.  Users are free to use either mechanism - the
+     * only distinction is that this separate attribute will cause a recreate on
+     * modification.  On import, `metadata_startup_script` will not be set - if you
+     * choose to specify it you will see a diff immediately after import causing a
+     * destroy/recreate operation. If importing an instance and specifying this value
+     * is desired, you will need to modify your state file.
+     * 
+     */
     public Optional<Output<String>> metadataStartupScript() {
         return Optional.ofNullable(this.metadataStartupScript);
     }
@@ -236,6 +321,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
+     * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -248,6 +339,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the resource, required by GCE.
+     * Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -260,6 +356,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces", required=true)
     private Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return Networks to attach to the instance. This can
+     * be specified multiple times. Structure is documented below.
+     * 
+     */
     public Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces;
     }
@@ -275,6 +376,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkPerformanceConfig")
     private @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
+    /**
+     * @return Configures network performance settings for the instance. Structure is
+     * documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+     * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+     * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+     * in order for this setting to take effect.
+     * 
+     */
     public Optional<Output<InstanceNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
         return Optional.ofNullable(this.networkPerformanceConfig);
     }
@@ -287,6 +396,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -299,6 +413,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservationAffinity")
     private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
+    /**
+     * @return Specifies the reservations that this instance can consume from.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<InstanceReservationAffinityArgs>> reservationAffinity() {
         return Optional.ofNullable(this.reservationAffinity);
     }
@@ -310,6 +429,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
     private @Nullable Output<String> resourcePolicies;
 
+    /**
+     * @return -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+     * 
+     */
     public Optional<Output<String>> resourcePolicies() {
         return Optional.ofNullable(this.resourcePolicies);
     }
@@ -322,6 +445,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
     private @Nullable Output<InstanceSchedulingArgs> scheduling;
 
+    /**
+     * @return The scheduling strategy to use. More details about
+     * this configuration option are detailed below.
+     * 
+     */
     public Optional<Output<InstanceSchedulingArgs>> scheduling() {
         return Optional.ofNullable(this.scheduling);
     }
@@ -334,6 +462,11 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scratchDisks")
     private @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
 
+    /**
+     * @return Scratch disks to attach to the instance. This can be
+     * specified multiple times for multiple scratch disks. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceScratchDiskArgs>>> scratchDisks() {
         return Optional.ofNullable(this.scratchDisks);
     }
@@ -347,6 +480,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
 
+    /**
+     * @return Service account to attach to the instance.
+     * Structure is documented below.
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<InstanceServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -360,6 +499,12 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shieldedInstanceConfig")
     private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
+    /**
+     * @return Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+     * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+     * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+     * 
+     */
     public Optional<Output<InstanceShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -371,6 +516,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return A list of network tags to attach to the instance.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -382,6 +531,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone that the machine should be created in. If it is not provided, the provider zone is used.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -438,283 +591,738 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advancedMachineFeatures Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(@Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
+        /**
+         * @param advancedMachineFeatures Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder advancedMachineFeatures(InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
             return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
 
+        /**
+         * @param allowStoppingForUpdate If true, allows this prvider to stop the instance to update its properties.
+         * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
             $.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
 
+        /**
+         * @param allowStoppingForUpdate If true, allows this prvider to stop the instance to update its properties.
+         * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowStoppingForUpdate(Boolean allowStoppingForUpdate) {
             return allowStoppingForUpdate(Output.of(allowStoppingForUpdate));
         }
 
+        /**
+         * @param attachedDisks Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDisks(@Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks) {
             $.attachedDisks = attachedDisks;
             return this;
         }
 
+        /**
+         * @param attachedDisks Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDisks(List<InstanceAttachedDiskArgs> attachedDisks) {
             return attachedDisks(Output.of(attachedDisks));
         }
 
+        /**
+         * @param attachedDisks Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDisks(InstanceAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
 
+        /**
+         * @param bootDisk The boot disk for the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDisk(Output<InstanceBootDiskArgs> bootDisk) {
             $.bootDisk = bootDisk;
             return this;
         }
 
+        /**
+         * @param bootDisk The boot disk for the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootDisk(InstanceBootDiskArgs bootDisk) {
             return bootDisk(Output.of(bootDisk));
         }
 
+        /**
+         * @param canIpForward Whether to allow sending and receiving of
+         * packets with non-matching source or destination IPs.
+         * This defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             $.canIpForward = canIpForward;
             return this;
         }
 
+        /**
+         * @param canIpForward Whether to allow sending and receiving of
+         * packets with non-matching source or destination IPs.
+         * This defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canIpForward(Boolean canIpForward) {
             return canIpForward(Output.of(canIpForward));
         }
 
+        /**
+         * @param confidentialInstanceConfig Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
+        /**
+         * @param confidentialInstanceConfig Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidentialInstanceConfig(InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
             return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
 
+        /**
+         * @param deletionProtection Enable deletion protection on this instance. Defaults to false.
+         * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             $.deletionProtection = deletionProtection;
             return this;
         }
 
+        /**
+         * @param deletionProtection Enable deletion protection on this instance. Defaults to false.
+         * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionProtection(Boolean deletionProtection) {
             return deletionProtection(Output.of(deletionProtection));
         }
 
+        /**
+         * @param description A brief description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param desiredStatus Desired status of the instance. Either
+         * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
             $.desiredStatus = desiredStatus;
             return this;
         }
 
+        /**
+         * @param desiredStatus Desired status of the instance. Either
+         * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredStatus(String desiredStatus) {
             return desiredStatus(Output.of(desiredStatus));
         }
 
+        /**
+         * @param enableDisplay Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             $.enableDisplay = enableDisplay;
             return this;
         }
 
+        /**
+         * @param enableDisplay Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(Boolean enableDisplay) {
             return enableDisplay(Output.of(enableDisplay));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<InstanceGuestAcceleratorArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators List of the type and count of accelerator cards attached to the instance. Structure documented below.
+         * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(InstanceGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param hostname A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
+         * Valid format is a series of labels 1-63 characters long matching the regular expression `a-z`, concatenated with periods.
+         * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
+         * Valid format is a series of labels 1-63 characters long matching the regular expression `a-z`, concatenated with periods.
+         * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param labels A map of key/value label pairs to assign to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A map of key/value label pairs to assign to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The machine type to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata Metadata key/value pairs to make available from
+         * within the instance. Ssh keys attached in the Cloud Console will be removed.
+         * Add them to your config in order to keep them attached to your instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata key/value pairs to make available from
+         * within the instance. Ssh keys attached in the Cloud Console will be removed.
+         * Add them to your config in order to keep them attached to your instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param metadataStartupScript An alternative to using the
+         * startup-script metadata key, except this one forces the instance to be recreated
+         * (thus re-running the script) if it is changed. This replaces the startup-script
+         * metadata key on the created instance and thus the two mechanisms are not
+         * allowed to be used simultaneously.  Users are free to use either mechanism - the
+         * only distinction is that this separate attribute will cause a recreate on
+         * modification.  On import, `metadata_startup_script` will not be set - if you
+         * choose to specify it you will see a diff immediately after import causing a
+         * destroy/recreate operation. If importing an instance and specifying this value
+         * is desired, you will need to modify your state file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
             $.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
+        /**
+         * @param metadataStartupScript An alternative to using the
+         * startup-script metadata key, except this one forces the instance to be recreated
+         * (thus re-running the script) if it is changed. This replaces the startup-script
+         * metadata key on the created instance and thus the two mechanisms are not
+         * allowed to be used simultaneously.  Users are free to use either mechanism - the
+         * only distinction is that this separate attribute will cause a recreate on
+         * modification.  On import, `metadata_startup_script` will not be set - if you
+         * choose to specify it you will see a diff immediately after import causing a
+         * destroy/recreate operation. If importing an instance and specifying this value
+         * is desired, you will need to modify your state file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataStartupScript(String metadataStartupScript) {
             return metadataStartupScript(Output.of(metadataStartupScript));
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
+         * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
+         * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to the instance. This can
+         * be specified multiple times. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to the instance. This can
+         * be specified multiple times. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Networks to attach to the instance. This can
+         * be specified multiple times. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(InstanceNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance. Structure is
+         * documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+         * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+         * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+         * in order for this setting to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(@Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
             $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
+        /**
+         * @param networkPerformanceConfig Configures network performance settings for the instance. Structure is
+         * documented below. **Note**: `machine_type` must be a [supported type](https://cloud.google.com/compute/docs/networking/configure-vm-with-high-bandwidth-configuration),
+         * the `image` used must include the [`GVNIC`](https://cloud.google.com/compute/docs/networking/using-gvnic#create-instance-gvnic-image)
+         * in `guest-os-features`, and `network_interface.0.nic-type` must be `GVNIC`
+         * in order for this setting to take effect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPerformanceConfig(InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
             return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Specifies the reservations that this instance can consume from.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(InstanceReservationAffinityArgs reservationAffinity) {
             return reservationAffinity(Output.of(reservationAffinity));
         }
 
+        /**
+         * @param resourcePolicies -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
             $.resourcePolicies = resourcePolicies;
             return this;
         }
 
+        /**
+         * @param resourcePolicies -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePolicies(String resourcePolicies) {
             return resourcePolicies(Output.of(resourcePolicies));
         }
 
+        /**
+         * @param scheduling The scheduling strategy to use. More details about
+         * this configuration option are detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(@Nullable Output<InstanceSchedulingArgs> scheduling) {
             $.scheduling = scheduling;
             return this;
         }
 
+        /**
+         * @param scheduling The scheduling strategy to use. More details about
+         * this configuration option are detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduling(InstanceSchedulingArgs scheduling) {
             return scheduling(Output.of(scheduling));
         }
 
+        /**
+         * @param scratchDisks Scratch disks to attach to the instance. This can be
+         * specified multiple times for multiple scratch disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scratchDisks(@Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks) {
             $.scratchDisks = scratchDisks;
             return this;
         }
 
+        /**
+         * @param scratchDisks Scratch disks to attach to the instance. This can be
+         * specified multiple times for multiple scratch disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scratchDisks(List<InstanceScratchDiskArgs> scratchDisks) {
             return scratchDisks(Output.of(scratchDisks));
         }
 
+        /**
+         * @param scratchDisks Scratch disks to attach to the instance. This can be
+         * specified multiple times for multiple scratch disks. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scratchDisks(InstanceScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
 
+        /**
+         * @param serviceAccount Service account to attach to the instance.
+         * Structure is documented below.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<InstanceServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Service account to attach to the instance.
+         * Structure is documented below.
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(InstanceServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param shieldedInstanceConfig Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+         * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceConfig Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
+         * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
+         * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
             return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
 
+        /**
+         * @param tags A list of network tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of network tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of network tags to attach to the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param zone The zone that the machine should be created in. If it is not provided, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone that the machine should be created in. If it is not provided, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

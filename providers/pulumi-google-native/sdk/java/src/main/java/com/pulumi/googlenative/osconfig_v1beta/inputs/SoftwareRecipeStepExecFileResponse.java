@@ -25,6 +25,10 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
     @Import(name="allowedExitCodes", required=true)
     private List<Integer> allowedExitCodes;
 
+    /**
+     * @return Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+     * 
+     */
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
@@ -36,6 +40,10 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Arguments to be passed to the provided executable.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -47,6 +55,10 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
     @Import(name="artifactId", required=true)
     private String artifactId;
 
+    /**
+     * @return The id of the relevant artifact in the recipe.
+     * 
+     */
     public String artifactId() {
         return this.artifactId;
     }
@@ -58,6 +70,10 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
     @Import(name="localPath", required=true)
     private String localPath;
 
+    /**
+     * @return The absolute path of the file on the local filesystem.
+     * 
+     */
     public String localPath() {
         return this.localPath;
     }
@@ -89,29 +105,65 @@ public final class SoftwareRecipeStepExecFileResponse extends com.pulumi.resourc
             $ = new SoftwareRecipeStepExecFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExitCodes Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             $.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
+        /**
+         * @param allowedExitCodes Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
 
+        /**
+         * @param args Arguments to be passed to the provided executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Arguments to be passed to the provided executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param artifactId The id of the relevant artifact in the recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(String artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param localPath The absolute path of the file on the local filesystem.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPath(String localPath) {
             $.localPath = localPath;
             return this;

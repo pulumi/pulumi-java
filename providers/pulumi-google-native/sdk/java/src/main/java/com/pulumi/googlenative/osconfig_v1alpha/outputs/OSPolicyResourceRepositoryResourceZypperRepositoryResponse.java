@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
     /**
-     * The location of the repository directory.
+     * @return The location of the repository directory.
      * 
      */
     private final String baseUrl;
     /**
-     * The display name of the repository.
+     * @return The display name of the repository.
      * 
      */
     private final String displayName;
     /**
-     * URIs of GPG keys.
+     * @return URIs of GPG keys.
      * 
      */
     private final List<String> gpgKeys;
@@ -37,23 +37,23 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
     }
 
     /**
-     * The location of the repository directory.
+     * @return The location of the repository directory.
      * 
-    */
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
     /**
-     * The display name of the repository.
+     * @return The display name of the repository.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * URIs of GPG keys.
+     * @return URIs of GPG keys.
      * 
-    */
+     */
     public List<String> gpgKeys() {
         return this.gpgKeys;
     }

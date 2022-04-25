@@ -27,6 +27,10 @@ public final class DayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="date")
     private @Nullable Output<Integer> date;
 
+    /**
+     * @return Date of the month
+     * 
+     */
     public Optional<Output<Integer>> date() {
         return Optional.ofNullable(this.date);
     }
@@ -38,6 +42,10 @@ public final class DayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isLast")
     private @Nullable Output<Boolean> isLast;
 
+    /**
+     * @return Whether Date is last date of month
+     * 
+     */
     public Optional<Output<Boolean>> isLast() {
         return Optional.ofNullable(this.isLast);
     }
@@ -67,20 +75,44 @@ public final class DayArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param date Date of the month
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(@Nullable Output<Integer> date) {
             $.date = date;
             return this;
         }
 
+        /**
+         * @param date Date of the month
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(Integer date) {
             return date(Output.of(date));
         }
 
+        /**
+         * @param isLast Whether Date is last date of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLast(@Nullable Output<Boolean> isLast) {
             $.isLast = isLast;
             return this;
         }
 
+        /**
+         * @param isLast Whether Date is last date of month
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLast(Boolean isLast) {
             return isLast(Output.of(isLast));
         }

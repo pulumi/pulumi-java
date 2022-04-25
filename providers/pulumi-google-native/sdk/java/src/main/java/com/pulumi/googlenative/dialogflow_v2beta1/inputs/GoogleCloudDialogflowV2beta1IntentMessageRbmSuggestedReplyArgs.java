@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="postbackData")
     private @Nullable Output<String> postbackData;
 
+    /**
+     * @return Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+     * 
+     */
     public Optional<Output<String>> postbackData() {
         return Optional.ofNullable(this.postbackData);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="text")
     private @Nullable Output<String> text;
 
+    /**
+     * @return Suggested reply text.
+     * 
+     */
     public Optional<Output<String>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param postbackData Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postbackData(@Nullable Output<String> postbackData) {
             $.postbackData = postbackData;
             return this;
         }
 
+        /**
+         * @param postbackData Opaque payload that the Dialogflow receives in a user event when the user taps the suggested reply. This data will be also forwarded to webhook to allow performing custom business logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postbackData(String postbackData) {
             return postbackData(Output.of(postbackData));
         }
 
+        /**
+         * @param text Suggested reply text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Suggested reply text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

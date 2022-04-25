@@ -26,6 +26,10 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return A boolean indicating whether or not the service encrypts the data as it is stored.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="keyType")
     private @Nullable String keyType;
 
+    /**
+     * @return Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+     * 
+     */
     public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -48,6 +56,10 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
     @Import(name="lastEnabledTime", required=true)
     private String lastEnabledTime;
 
+    /**
+     * @return Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
+     * 
+     */
     public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
@@ -78,16 +90,34 @@ public final class EncryptionServiceResponse extends com.pulumi.resources.Invoke
             $ = new EncryptionServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled A boolean indicating whether or not the service encrypts the data as it is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param keyType Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable String keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param lastEnabledTime Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastEnabledTime(String lastEnabledTime) {
             $.lastEnabledTime = lastEnabledTime;
             return this;

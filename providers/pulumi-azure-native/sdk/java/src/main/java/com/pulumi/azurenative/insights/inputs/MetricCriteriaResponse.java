@@ -31,6 +31,11 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="criterionType", required=true)
     private String criterionType;
 
+    /**
+     * @return Specifies the type of threshold criteria
+     * Expected value is &#39;StaticThresholdCriterion&#39;.
+     * 
+     */
     public String criterionType() {
         return this.criterionType;
     }
@@ -42,6 +47,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dimensions")
     private @Nullable List<MetricDimensionResponse> dimensions;
 
+    /**
+     * @return List of dimension conditions.
+     * 
+     */
     public Optional<List<MetricDimensionResponse>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -53,6 +62,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metricName", required=true)
     private String metricName;
 
+    /**
+     * @return Name of the metric.
+     * 
+     */
     public String metricName() {
         return this.metricName;
     }
@@ -64,6 +77,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metricNamespace")
     private @Nullable String metricNamespace;
 
+    /**
+     * @return Namespace of the metric.
+     * 
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -75,6 +92,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the criteria.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -86,6 +107,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return the criteria operator.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -97,6 +122,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="skipMetricValidation")
     private @Nullable Boolean skipMetricValidation;
 
+    /**
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * 
+     */
     public Optional<Boolean> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
@@ -108,6 +137,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="threshold", required=true)
     private Double threshold;
 
+    /**
+     * @return the criteria threshold value that activates the alert.
+     * 
+     */
     public Double threshold() {
         return this.threshold;
     }
@@ -119,6 +152,10 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeAggregation", required=true)
     private String timeAggregation;
 
+    /**
+     * @return the criteria time aggregation types.
+     * 
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }
@@ -155,50 +192,111 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
             $ = new MetricCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;StaticThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(String criterionType) {
             $.criterionType = criterionType;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable List<MetricDimensionResponse> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(MetricDimensionResponse... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable String metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator the criteria operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
+        /**
+         * @param threshold the criteria threshold value that activates the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(String timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;

@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExpressRouteCircuitConnectionResult {
     /**
-     * /29 IP address space to carve out Customer addresses for tunnels.
+     * @return /29 IP address space to carve out Customer addresses for tunnels.
      * 
      */
     private final @Nullable String addressPrefix;
     /**
-     * The authorization key.
+     * @return The authorization key.
      * 
      */
     private final @Nullable String authorizationKey;
     /**
-     * Express Route Circuit connection state.
+     * @return Express Route Circuit connection state.
      * 
      */
     private final String circuitConnectionStatus;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+     * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
      */
     private final @Nullable SubResourceResponse expressRouteCircuitPeering;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * IPv6 Address PrefixProperties of the express route circuit connection.
+     * @return IPv6 Address PrefixProperties of the express route circuit connection.
      * 
      */
     private final @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+     * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
      */
     private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
     /**
-     * The provisioning state of the express route circuit connection resource.
+     * @return The provisioning state of the express route circuit connection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -96,79 +96,79 @@ public final class GetExpressRouteCircuitConnectionResult {
     }
 
     /**
-     * /29 IP address space to carve out Customer addresses for tunnels.
+     * @return /29 IP address space to carve out Customer addresses for tunnels.
      * 
-    */
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
-     * The authorization key.
+     * @return The authorization key.
      * 
-    */
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
-     * Express Route Circuit connection state.
+     * @return Express Route Circuit connection state.
      * 
-    */
+     */
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+     * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
-    */
+     */
     public Optional<SubResourceResponse> expressRouteCircuitPeering() {
         return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * IPv6 Address PrefixProperties of the express route circuit connection.
+     * @return IPv6 Address PrefixProperties of the express route circuit connection.
      * 
-    */
+     */
     public Optional<Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig() {
         return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+     * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
-    */
+     */
     public Optional<SubResourceResponse> peerExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
     /**
-     * The provisioning state of the express route circuit connection resource.
+     * @return The provisioning state of the express route circuit connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

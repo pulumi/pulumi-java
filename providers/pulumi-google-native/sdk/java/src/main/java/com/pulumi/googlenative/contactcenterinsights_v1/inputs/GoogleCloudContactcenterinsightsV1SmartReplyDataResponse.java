@@ -25,6 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="confidenceScore", required=true)
     private Double confidenceScore;
 
+    /**
+     * @return The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * 
+     */
     public Double confidenceScore() {
         return this.confidenceScore;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Map that contains metadata about the Smart Reply and the document from which it originates.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="queryRecord", required=true)
     private String queryRecord;
 
+    /**
+     * @return Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+     * 
+     */
     public String queryRecord() {
         return this.queryRecord;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
     @Import(name="reply", required=true)
     private String reply;
 
+    /**
+     * @return The content of the reply.
+     * 
+     */
     public String reply() {
         return this.reply;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
             $ = new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceScore The system&#39;s confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceScore(Double confidenceScore) {
             $.confidenceScore = confidenceScore;
             return this;
         }
 
+        /**
+         * @param metadata Map that contains metadata about the Smart Reply and the document from which it originates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param queryRecord Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryRecord(String queryRecord) {
             $.queryRecord = queryRecord;
             return this;
         }
 
+        /**
+         * @param reply The content of the reply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reply(String reply) {
             $.reply = reply;
             return this;

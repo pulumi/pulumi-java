@@ -23,6 +23,10 @@ public final class TableFieldSchemaPolicyTagsArgs extends com.pulumi.resources.R
     @Import(name="names")
     private @Nullable Output<List<String>> names;
 
+    /**
+     * @return A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
+     * 
+     */
     public Optional<Output<List<String>>> names() {
         return Optional.ofNullable(this.names);
     }
@@ -51,15 +55,33 @@ public final class TableFieldSchemaPolicyTagsArgs extends com.pulumi.resources.R
             $ = new TableFieldSchemaPolicyTagsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param names A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(@Nullable Output<List<String>> names) {
             $.names = names;
             return this;
         }
 
+        /**
+         * @param names A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(List<String> names) {
             return names(Output.of(names));
         }
 
+        /**
+         * @param names A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(String... names) {
             return names(List.of(names));
         }

@@ -25,6 +25,10 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionColumnName")
     private @Nullable Object partitionColumnName;
 
+    /**
+     * @return The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -36,6 +40,10 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionLowerBound")
     private @Nullable Object partitionLowerBound;
 
+    /**
+     * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
@@ -47,6 +55,10 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionUpperBound")
     private @Nullable Object partitionUpperBound;
 
+    /**
+     * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -77,16 +89,34 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
             $ = new TeradataPartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionColumnName The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             $.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             $.partitionUpperBound = partitionUpperBound;
             return this;

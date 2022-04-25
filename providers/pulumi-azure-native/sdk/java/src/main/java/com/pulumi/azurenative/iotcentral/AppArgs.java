@@ -24,6 +24,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the application.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -35,6 +39,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT Central application.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The ARM resource name of the IoT Central application.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -68,6 +84,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<AppSkuInfoArgs> sku;
 
+    /**
+     * @return A valid instance SKU.
+     * 
+     */
     public Output<AppSkuInfoArgs> sku() {
         return this.sku;
     }
@@ -79,6 +99,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
     private @Nullable Output<String> subdomain;
 
+    /**
+     * @return The subdomain of the application.
+     * 
+     */
     public Optional<Output<String>> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
@@ -90,6 +114,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="template")
     private @Nullable Output<String> template;
 
+    /**
+     * @return The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+     * 
+     */
     public Optional<Output<String>> template() {
         return Optional.ofNullable(this.template);
     }
@@ -136,74 +168,170 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The ARM resource name of the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The ARM resource name of the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku A valid instance SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<AppSkuInfoArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku A valid instance SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(AppSkuInfoArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param subdomain The subdomain of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(@Nullable Output<String> subdomain) {
             $.subdomain = subdomain;
             return this;
         }
 
+        /**
+         * @param subdomain The subdomain of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subdomain(String subdomain) {
             return subdomain(Output.of(subdomain));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param template The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(@Nullable Output<String> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(String template) {
             return template(Output.of(template));
         }

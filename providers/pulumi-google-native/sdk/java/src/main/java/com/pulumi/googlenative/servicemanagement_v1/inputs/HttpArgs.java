@@ -28,6 +28,10 @@ public final class HttpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fullyDecodeReservedExpansion")
     private @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
+    /**
+     * @return When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where &#34;%2F&#34; will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+     * 
+     */
     public Optional<Output<Boolean>> fullyDecodeReservedExpansion() {
         return Optional.ofNullable(this.fullyDecodeReservedExpansion);
     }
@@ -39,6 +43,10 @@ public final class HttpArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<HttpRuleArgs>> rules;
 
+    /**
+     * @return A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+     * 
+     */
     public Optional<Output<List<HttpRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -68,24 +76,54 @@ public final class HttpArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullyDecodeReservedExpansion When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where &#34;%2F&#34; will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyDecodeReservedExpansion(@Nullable Output<Boolean> fullyDecodeReservedExpansion) {
             $.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
             return this;
         }
 
+        /**
+         * @param fullyDecodeReservedExpansion When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where &#34;%2F&#34; will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
             return fullyDecodeReservedExpansion(Output.of(fullyDecodeReservedExpansion));
         }
 
+        /**
+         * @param rules A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<HttpRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<HttpRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow &#34;last one wins&#34; order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(HttpRuleArgs... rules) {
             return rules(List.of(rules));
         }

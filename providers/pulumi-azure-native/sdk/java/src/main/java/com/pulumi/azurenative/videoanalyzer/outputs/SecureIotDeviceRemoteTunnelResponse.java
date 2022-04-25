@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class SecureIotDeviceRemoteTunnelResponse {
     /**
-     * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+     * @return The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
      * 
      */
     private final String deviceId;
     /**
-     * Name of the IoT Hub.
+     * @return Name of the IoT Hub.
      * 
      */
     private final String iotHubName;
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
      * 
      */
@@ -37,24 +37,24 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     }
 
     /**
-     * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+     * @return The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
      * 
-    */
+     */
     public String deviceId() {
         return this.deviceId;
     }
     /**
-     * Name of the IoT Hub.
+     * @return Name of the IoT Hub.
      * 
-    */
+     */
     public String iotHubName() {
         return this.iotHubName;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -19,6 +19,10 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
     @Import(name="availabilityGroupListenerName", required=true)
     private String availabilityGroupListenerName;
 
+    /**
+     * @return Name of the availability group listener.
+     * 
+     */
     public String availabilityGroupListenerName() {
         return this.availabilityGroupListenerName;
     }
@@ -30,6 +34,10 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
     @Import(name="sqlVirtualMachineGroupName", required=true)
     private String sqlVirtualMachineGroupName;
 
+    /**
+     * @return Name of the SQL virtual machine group.
+     * 
+     */
     public String sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
             $ = new GetAvailabilityGroupListenerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityGroupListenerName Name of the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
             $.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;

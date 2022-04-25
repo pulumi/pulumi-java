@@ -20,6 +20,10 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends com.pulumi.
     @Import(name="licenseConfigurationArn", required=true)
     private Output<String> licenseConfigurationArn;
 
+    /**
+     * @return ARN of the license configuration.
+     * 
+     */
     public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
@@ -48,11 +52,23 @@ public final class LaunchTemplateLicenseSpecificationGetArgs extends com.pulumi.
             $ = new LaunchTemplateLicenseSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param licenseConfigurationArn ARN of the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArn(Output<String> licenseConfigurationArn) {
             $.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArn ARN of the license configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             return licenseConfigurationArn(Output.of(licenseConfigurationArn));
         }

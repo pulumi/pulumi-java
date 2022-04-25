@@ -23,6 +23,10 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends com.pulumi.resource
     @Import(name="fieldToMatch", required=true)
     private Output<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
+    /**
+     * @return Settings for the ByteMatchTuple. FieldToMatch documented below.
+     * 
+     */
     public Output<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
@@ -34,6 +38,10 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends com.pulumi.resource
     @Import(name="positionalConstraint", required=true)
     private Output<String> positionalConstraint;
 
+    /**
+     * @return Within the portion of a web request that you want to search.
+     * 
+     */
     public Output<String> positionalConstraint() {
         return this.positionalConstraint;
     }
@@ -45,6 +53,10 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends com.pulumi.resource
     @Import(name="targetString")
     private @Nullable Output<String> targetString;
 
+    /**
+     * @return The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
+     * 
+     */
     public Optional<Output<String>> targetString() {
         return Optional.ofNullable(this.targetString);
     }
@@ -56,6 +68,10 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends com.pulumi.resource
     @Import(name="textTransformation", required=true)
     private Output<String> textTransformation;
 
+    /**
+     * @return The formatting way for web request.
+     * 
+     */
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
@@ -87,38 +103,86 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends com.pulumi.resource
             $ = new ByteMatchSetByteMatchTupleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldToMatch Settings for the ByteMatchTuple. FieldToMatch documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(Output<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch) {
             $.fieldToMatch = fieldToMatch;
             return this;
         }
 
+        /**
+         * @param fieldToMatch Settings for the ByteMatchTuple. FieldToMatch documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchGetArgs fieldToMatch) {
             return fieldToMatch(Output.of(fieldToMatch));
         }
 
+        /**
+         * @param positionalConstraint Within the portion of a web request that you want to search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positionalConstraint(Output<String> positionalConstraint) {
             $.positionalConstraint = positionalConstraint;
             return this;
         }
 
+        /**
+         * @param positionalConstraint Within the portion of a web request that you want to search.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positionalConstraint(String positionalConstraint) {
             return positionalConstraint(Output.of(positionalConstraint));
         }
 
+        /**
+         * @param targetString The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetString(@Nullable Output<String> targetString) {
             $.targetString = targetString;
             return this;
         }
 
+        /**
+         * @param targetString The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetString(String targetString) {
             return targetString(Output.of(targetString));
         }
 
+        /**
+         * @param textTransformation The formatting way for web request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformation(Output<String> textTransformation) {
             $.textTransformation = textTransformation;
             return this;
         }
 
+        /**
+         * @param textTransformation The formatting way for web request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformation(String textTransformation) {
             return textTransformation(Output.of(textTransformation));
         }

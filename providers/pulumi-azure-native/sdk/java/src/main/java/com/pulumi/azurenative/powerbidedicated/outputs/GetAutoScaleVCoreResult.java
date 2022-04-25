@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutoScaleVCoreResult {
     /**
-     * The maximum capacity of an auto scale v-core resource.
+     * @return The maximum capacity of an auto scale v-core resource.
      * 
      */
     private final @Nullable Integer capacityLimit;
     /**
-     * The object ID of the capacity resource associated with the auto scale v-core resource.
+     * @return The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
      */
     private final @Nullable String capacityObjectId;
     /**
-     * An identifier that represents the PowerBI Dedicated resource.
+     * @return An identifier that represents the PowerBI Dedicated resource.
      * 
      */
     private final String id;
     /**
-     * Location of the PowerBI Dedicated resource.
+     * @return Location of the PowerBI Dedicated resource.
      * 
      */
     private final String location;
     /**
-     * The name of the PowerBI Dedicated resource.
+     * @return The name of the PowerBI Dedicated resource.
      * 
      */
     private final String name;
     /**
-     * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
     private final String provisioningState;
     /**
-     * The SKU of the auto scale v-core resource.
+     * @return The SKU of the auto scale v-core resource.
      * 
      */
     private final AutoScaleVCoreSkuResponse sku;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final @Nullable SystemDataResponse systemData;
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the PowerBI Dedicated resource.
+     * @return The type of the PowerBI Dedicated resource.
      * 
      */
     private final String type;
@@ -91,72 +91,72 @@ public final class GetAutoScaleVCoreResult {
     }
 
     /**
-     * The maximum capacity of an auto scale v-core resource.
+     * @return The maximum capacity of an auto scale v-core resource.
      * 
-    */
+     */
     public Optional<Integer> capacityLimit() {
         return Optional.ofNullable(this.capacityLimit);
     }
     /**
-     * The object ID of the capacity resource associated with the auto scale v-core resource.
+     * @return The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
-    */
+     */
     public Optional<String> capacityObjectId() {
         return Optional.ofNullable(this.capacityObjectId);
     }
     /**
-     * An identifier that represents the PowerBI Dedicated resource.
+     * @return An identifier that represents the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the PowerBI Dedicated resource.
+     * @return Location of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the PowerBI Dedicated resource.
+     * @return The name of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the auto scale v-core resource.
+     * @return The SKU of the auto scale v-core resource.
      * 
-    */
+     */
     public AutoScaleVCoreSkuResponse sku() {
         return this.sku;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public Optional<SystemDataResponse> systemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the PowerBI Dedicated resource.
+     * @return The type of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

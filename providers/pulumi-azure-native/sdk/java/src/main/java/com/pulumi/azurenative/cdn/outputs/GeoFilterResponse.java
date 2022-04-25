@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GeoFilterResponse {
     /**
-     * Action of the geo filter, i.e. allow or block access.
+     * @return Action of the geo filter, i.e. allow or block access.
      * 
      */
     private final String action;
     /**
-     * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+     * @return Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
      * 
      */
     private final List<String> countryCodes;
     /**
-     * Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+     * @return Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
      * 
      */
     private final String relativePath;
@@ -37,23 +37,23 @@ public final class GeoFilterResponse {
     }
 
     /**
-     * Action of the geo filter, i.e. allow or block access.
+     * @return Action of the geo filter, i.e. allow or block access.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+     * @return Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
      * 
-    */
+     */
     public List<String> countryCodes() {
         return this.countryCodes;
     }
     /**
-     * Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+     * @return Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
      * 
-    */
+     */
     public String relativePath() {
         return this.relativePath;
     }

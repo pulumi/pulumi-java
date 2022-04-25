@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class GetProductSetResult {
     /**
-     * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
+     * @return The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
      * 
      */
     private final String displayName;
     /**
-     * If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
+     * @return If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
      * 
      */
     private final StatusResponse indexError;
     /**
-     * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
+     * @return The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
      * 
      */
     private final String indexTime;
     /**
-     * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
+     * @return The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
      * 
      */
     private final String name;
@@ -44,30 +44,30 @@ public final class GetProductSetResult {
     }
 
     /**
-     * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
+     * @return The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
+     * @return If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
      * 
-    */
+     */
     public StatusResponse indexError() {
         return this.indexError;
     }
     /**
-     * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
+     * @return The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value &#34;1970-01-01T00:00:00Z&#34;. This field is ignored when creating a ProductSet.
      * 
-    */
+     */
     public String indexTime() {
         return this.indexTime;
     }
     /**
-     * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
+     * @return The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

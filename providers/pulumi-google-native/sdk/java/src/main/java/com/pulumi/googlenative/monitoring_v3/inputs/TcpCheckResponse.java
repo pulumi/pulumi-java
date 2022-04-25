@@ -23,6 +23,10 @@ public final class TcpCheckResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -51,6 +55,12 @@ public final class TcpCheckResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TcpCheckResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RolloutPolicyResponse {
     /**
-     * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+     * @return An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
      * 
      */
     private final String defaultRolloutTime;
     /**
-     * Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+     * @return Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
      * 
      */
     private final Map<String,String> locationRolloutPolicies;
@@ -30,16 +30,16 @@ public final class RolloutPolicyResponse {
     }
 
     /**
-     * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+     * @return An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
      * 
-    */
+     */
     public String defaultRolloutTime() {
         return this.defaultRolloutTime;
     }
     /**
-     * Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+     * @return Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
      * 
-    */
+     */
     public Map<String,String> locationRolloutPolicies() {
         return this.locationRolloutPolicies;
     }

@@ -20,6 +20,10 @@ public final class EventIntegrationEventFilterArgs extends com.pulumi.resources.
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The source of the events.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -48,11 +52,23 @@ public final class EventIntegrationEventFilterArgs extends com.pulumi.resources.
             $ = new EventIntegrationEventFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The source of the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source of the events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

@@ -38,6 +38,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="applicationGatewayBackendAddressPools")
     private @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
 
+    /**
+     * @return The reference to ApplicationGatewayBackendAddressPool resource.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayBackendAddressPoolArgs>>> applicationGatewayBackendAddressPools() {
         return Optional.ofNullable(this.applicationGatewayBackendAddressPools);
     }
@@ -49,6 +53,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="applicationSecurityGroups")
     private @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
 
+    /**
+     * @return Application security groups in which the IP configuration is included.
+     * 
+     */
     public Optional<Output<List<ApplicationSecurityGroupArgs>>> applicationSecurityGroups() {
         return Optional.ofNullable(this.applicationSecurityGroups);
     }
@@ -60,6 +68,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -71,6 +83,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="loadBalancerBackendAddressPools")
     private @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
 
+    /**
+     * @return The reference to LoadBalancerBackendAddressPool resource.
+     * 
+     */
     public Optional<Output<List<BackendAddressPoolArgs>>> loadBalancerBackendAddressPools() {
         return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
@@ -82,6 +98,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="loadBalancerInboundNatRules")
     private @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
 
+    /**
+     * @return A list of references of LoadBalancerInboundNatRules.
+     * 
+     */
     public Optional<Output<List<InboundNatRuleArgs>>> loadBalancerInboundNatRules() {
         return Optional.ofNullable(this.loadBalancerInboundNatRules);
     }
@@ -93,6 +113,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +128,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="primary")
     private @Nullable Output<Boolean> primary;
 
+    /**
+     * @return Whether this is a primary customer address on the network interface.
+     * 
+     */
     public Optional<Output<Boolean>> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -115,6 +143,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return Private IP address of the IP configuration.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -126,6 +158,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="privateIPAddressVersion")
     private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
+    /**
+     * @return Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+     * 
+     */
     public Optional<Output<Either<String,IPVersion>>> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
@@ -137,6 +173,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="privateIPAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
+    /**
+     * @return The private IP address allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -148,6 +188,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="publicIPAddress")
     private @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
+    /**
+     * @return Public IP address bound to the IP configuration.
+     * 
+     */
     public Optional<Output<PublicIPAddressArgs>> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -159,6 +203,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="subnet")
     private @Nullable Output<SubnetArgs> subnet;
 
+    /**
+     * @return Subnet bound to the IP configuration.
+     * 
+     */
     public Optional<Output<SubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -170,6 +218,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -181,6 +233,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="virtualNetworkTaps")
     private @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
+    /**
+     * @return The reference to Virtual Network Taps.
+     * 
+     */
     public Optional<Output<List<VirtualNetworkTapArgs>>> virtualNetworkTaps() {
         return Optional.ofNullable(this.virtualNetworkTaps);
     }
@@ -222,164 +278,386 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
             $ = new NetworkInterfaceIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGatewayBackendAddressPools The reference to ApplicationGatewayBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayBackendAddressPools(@Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools) {
             $.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
+        /**
+         * @param applicationGatewayBackendAddressPools The reference to ApplicationGatewayBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayBackendAddressPools(List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(Output.of(applicationGatewayBackendAddressPools));
         }
 
+        /**
+         * @param applicationGatewayBackendAddressPools The reference to ApplicationGatewayBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayBackendAddressPools(ApplicationGatewayBackendAddressPoolArgs... applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
         }
 
+        /**
+         * @param applicationSecurityGroups Application security groups in which the IP configuration is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
             $.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
+        /**
+         * @param applicationSecurityGroups Application security groups in which the IP configuration is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroups(List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
             return applicationSecurityGroups(Output.of(applicationSecurityGroups));
         }
 
+        /**
+         * @param applicationSecurityGroups Application security groups in which the IP configuration is included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroups(ApplicationSecurityGroupArgs... applicationSecurityGroups) {
             return applicationSecurityGroups(List.of(applicationSecurityGroups));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools The reference to LoadBalancerBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
             $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools The reference to LoadBalancerBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(Output.of(loadBalancerBackendAddressPools));
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools The reference to LoadBalancerBackendAddressPool resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(BackendAddressPoolArgs... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
 
+        /**
+         * @param loadBalancerInboundNatRules A list of references of LoadBalancerInboundNatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerInboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
             $.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
 
+        /**
+         * @param loadBalancerInboundNatRules A list of references of LoadBalancerInboundNatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerInboundNatRules(List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
             return loadBalancerInboundNatRules(Output.of(loadBalancerInboundNatRules));
         }
 
+        /**
+         * @param loadBalancerInboundNatRules A list of references of LoadBalancerInboundNatRules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerInboundNatRules(InboundNatRuleArgs... loadBalancerInboundNatRules) {
             return loadBalancerInboundNatRules(List.of(loadBalancerInboundNatRules));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param primary Whether this is a primary customer address on the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Output<Boolean> primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param primary Whether this is a primary customer address on the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(Boolean primary) {
             return primary(Output.of(primary));
         }
 
+        /**
+         * @param privateIPAddress Private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress Private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(Either<String,IPVersion> privateIPAddressVersion) {
             return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(String privateIPAddressVersion) {
             return privateIPAddressVersion(Either.ofLeft(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(IPVersion privateIPAddressVersion) {
             return privateIPAddressVersion(Either.ofRight(privateIPAddressVersion));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAddress Public IP address bound to the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Public IP address bound to the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(PublicIPAddressArgs publicIPAddress) {
             return publicIPAddress(Output.of(publicIPAddress));
         }
 
+        /**
+         * @param subnet Subnet bound to the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Subnet bound to the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param virtualNetworkTaps The reference to Virtual Network Taps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTaps(@Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
             $.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
 
+        /**
+         * @param virtualNetworkTaps The reference to Virtual Network Taps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTaps(List<VirtualNetworkTapArgs> virtualNetworkTaps) {
             return virtualNetworkTaps(Output.of(virtualNetworkTaps));
         }
 
+        /**
+         * @param virtualNetworkTaps The reference to Virtual Network Taps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTaps(VirtualNetworkTapArgs... virtualNetworkTaps) {
             return virtualNetworkTaps(List.of(virtualNetworkTaps));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DedicatedHostAllocatableVMResponse {
     /**
-     * Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
+     * @return Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
      * 
      */
     private final @Nullable Double count;
     /**
-     * VM size in terms of which the unutilized capacity is represented.
+     * @return VM size in terms of which the unutilized capacity is represented.
      * 
      */
     private final @Nullable String vmSize;
@@ -32,16 +32,16 @@ public final class DedicatedHostAllocatableVMResponse {
     }
 
     /**
-     * Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
+     * @return Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
      * 
-    */
+     */
     public Optional<Double> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * VM size in terms of which the unutilized capacity is represented.
+     * @return VM size in terms of which the unutilized capacity is represented.
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

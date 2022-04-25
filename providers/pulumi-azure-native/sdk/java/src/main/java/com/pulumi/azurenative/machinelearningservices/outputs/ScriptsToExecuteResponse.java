@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScriptsToExecuteResponse {
     /**
-     * Script that&#39;s run only once during provision of the compute.
+     * @return Script that&#39;s run only once during provision of the compute.
      * 
      */
     private final @Nullable ScriptReferenceResponse creationScript;
     /**
-     * Script that&#39;s run every time the machine starts.
+     * @return Script that&#39;s run every time the machine starts.
      * 
      */
     private final @Nullable ScriptReferenceResponse startupScript;
@@ -31,16 +31,16 @@ public final class ScriptsToExecuteResponse {
     }
 
     /**
-     * Script that&#39;s run only once during provision of the compute.
+     * @return Script that&#39;s run only once during provision of the compute.
      * 
-    */
+     */
     public Optional<ScriptReferenceResponse> creationScript() {
         return Optional.ofNullable(this.creationScript);
     }
     /**
-     * Script that&#39;s run every time the machine starts.
+     * @return Script that&#39;s run every time the machine starts.
      * 
-    */
+     */
     public Optional<ScriptReferenceResponse> startupScript() {
         return Optional.ofNullable(this.startupScript);
     }

@@ -33,6 +33,10 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. A human-readable description of scenarios this template is intended for.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +48,10 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
     @Import(name="identityConstraints")
     private @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
+    /**
+     * @return Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+     * 
+     */
     public Optional<Output<CertificateIdentityConstraintsArgs>> identityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
@@ -55,6 +63,10 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -73,6 +85,10 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
     @Import(name="passthroughExtensions")
     private @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
+    /**
+     * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+     * 
+     */
     public Optional<Output<CertificateExtensionConstraintsArgs>> passthroughExtensions() {
         return Optional.ofNullable(this.passthroughExtensions);
     }
@@ -84,6 +100,10 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
     @Import(name="predefinedValues")
     private @Nullable Output<X509ParametersArgs> predefinedValues;
 
+    /**
+     * @return Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+     * 
+     */
     public Optional<Output<X509ParametersArgs>> predefinedValues() {
         return Optional.ofNullable(this.predefinedValues);
     }
@@ -143,29 +163,65 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
             return certificateTemplateId(Output.of(certificateTemplateId));
         }
 
+        /**
+         * @param description Optional. A human-readable description of scenarios this template is intended for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. A human-readable description of scenarios this template is intended for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param identityConstraints Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(@Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints) {
             $.identityConstraints = identityConstraints;
             return this;
         }
 
+        /**
+         * @param identityConstraints Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(CertificateIdentityConstraintsArgs identityConstraints) {
             return identityConstraints(Output.of(identityConstraints));
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -179,20 +235,44 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
             return location(Output.of(location));
         }
 
+        /**
+         * @param passthroughExtensions Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passthroughExtensions(@Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions) {
             $.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
+        /**
+         * @param passthroughExtensions Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passthroughExtensions(CertificateExtensionConstraintsArgs passthroughExtensions) {
             return passthroughExtensions(Output.of(passthroughExtensions));
         }
 
+        /**
+         * @param predefinedValues Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedValues(@Nullable Output<X509ParametersArgs> predefinedValues) {
             $.predefinedValues = predefinedValues;
             return this;
         }
 
+        /**
+         * @param predefinedValues Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedValues(X509ParametersArgs predefinedValues) {
             return predefinedValues(Output.of(predefinedValues));
         }

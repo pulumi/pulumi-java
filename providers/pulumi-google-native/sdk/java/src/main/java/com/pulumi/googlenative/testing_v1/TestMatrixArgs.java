@@ -28,6 +28,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientInfo")
     private @Nullable Output<ClientInfoArgs> clientInfo;
 
+    /**
+     * @return Information about the client which invoked the test.
+     * 
+     */
     public Optional<Output<ClientInfoArgs>> clientInfo() {
         return Optional.ofNullable(this.clientInfo);
     }
@@ -39,6 +43,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentMatrix", required=true)
     private Output<EnvironmentMatrixArgs> environmentMatrix;
 
+    /**
+     * @return The devices the tests are being executed on.
+     * 
+     */
     public Output<EnvironmentMatrixArgs> environmentMatrix() {
         return this.environmentMatrix;
     }
@@ -50,6 +58,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failFast")
     private @Nullable Output<Boolean> failFast;
 
+    /**
+     * @return If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+     * 
+     */
     public Optional<Output<Boolean>> failFast() {
         return Optional.ofNullable(this.failFast);
     }
@@ -61,6 +73,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flakyTestAttempts")
     private @Nullable Output<Integer> flakyTestAttempts;
 
+    /**
+     * @return The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+     * 
+     */
     public Optional<Output<Integer>> flakyTestAttempts() {
         return Optional.ofNullable(this.flakyTestAttempts);
     }
@@ -72,6 +88,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The cloud project that owns the test matrix.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -90,6 +110,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resultStorage", required=true)
     private Output<ResultStorageArgs> resultStorage;
 
+    /**
+     * @return Where the results for the matrix are written.
+     * 
+     */
     public Output<ResultStorageArgs> resultStorage() {
         return this.resultStorage;
     }
@@ -101,6 +125,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testSpecification", required=true)
     private Output<TestSpecificationArgs> testSpecification;
 
+    /**
+     * @return How to run the test.
+     * 
+     */
     public Output<TestSpecificationArgs> testSpecification() {
         return this.testSpecification;
     }
@@ -136,47 +164,107 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TestMatrixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientInfo Information about the client which invoked the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfo(@Nullable Output<ClientInfoArgs> clientInfo) {
             $.clientInfo = clientInfo;
             return this;
         }
 
+        /**
+         * @param clientInfo Information about the client which invoked the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientInfo(ClientInfoArgs clientInfo) {
             return clientInfo(Output.of(clientInfo));
         }
 
+        /**
+         * @param environmentMatrix The devices the tests are being executed on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentMatrix(Output<EnvironmentMatrixArgs> environmentMatrix) {
             $.environmentMatrix = environmentMatrix;
             return this;
         }
 
+        /**
+         * @param environmentMatrix The devices the tests are being executed on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
             return environmentMatrix(Output.of(environmentMatrix));
         }
 
+        /**
+         * @param failFast If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failFast(@Nullable Output<Boolean> failFast) {
             $.failFast = failFast;
             return this;
         }
 
+        /**
+         * @param failFast If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failFast(Boolean failFast) {
             return failFast(Output.of(failFast));
         }
 
+        /**
+         * @param flakyTestAttempts The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flakyTestAttempts(@Nullable Output<Integer> flakyTestAttempts) {
             $.flakyTestAttempts = flakyTestAttempts;
             return this;
         }
 
+        /**
+         * @param flakyTestAttempts The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flakyTestAttempts(Integer flakyTestAttempts) {
             return flakyTestAttempts(Output.of(flakyTestAttempts));
         }
 
+        /**
+         * @param project The cloud project that owns the test matrix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The cloud project that owns the test matrix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
@@ -190,20 +278,44 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param resultStorage Where the results for the matrix are written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultStorage(Output<ResultStorageArgs> resultStorage) {
             $.resultStorage = resultStorage;
             return this;
         }
 
+        /**
+         * @param resultStorage Where the results for the matrix are written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultStorage(ResultStorageArgs resultStorage) {
             return resultStorage(Output.of(resultStorage));
         }
 
+        /**
+         * @param testSpecification How to run the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecification(Output<TestSpecificationArgs> testSpecification) {
             $.testSpecification = testSpecification;
             return this;
         }
 
+        /**
+         * @param testSpecification How to run the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecification(TestSpecificationArgs testSpecification) {
             return testSpecification(Output.of(testSpecification));
         }

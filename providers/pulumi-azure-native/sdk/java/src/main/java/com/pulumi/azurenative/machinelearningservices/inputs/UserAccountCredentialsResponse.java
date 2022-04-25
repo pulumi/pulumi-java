@@ -25,6 +25,10 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
     @Import(name="adminUserName", required=true)
     private String adminUserName;
 
+    /**
+     * @return Name of the administrator user account which can be used to SSH to nodes.
+     * 
+     */
     public String adminUserName() {
         return this.adminUserName;
     }
@@ -36,6 +40,10 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
     @Import(name="adminUserPassword")
     private @Nullable String adminUserPassword;
 
+    /**
+     * @return Password of the administrator user account.
+     * 
+     */
     public Optional<String> adminUserPassword() {
         return Optional.ofNullable(this.adminUserPassword);
     }
@@ -47,6 +55,10 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
     @Import(name="adminUserSshPublicKey")
     private @Nullable String adminUserSshPublicKey;
 
+    /**
+     * @return SSH public key of the administrator user account.
+     * 
+     */
     public Optional<String> adminUserSshPublicKey() {
         return Optional.ofNullable(this.adminUserSshPublicKey);
     }
@@ -77,16 +89,34 @@ public final class UserAccountCredentialsResponse extends com.pulumi.resources.I
             $ = new UserAccountCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUserName Name of the administrator user account which can be used to SSH to nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserName(String adminUserName) {
             $.adminUserName = adminUserName;
             return this;
         }
 
+        /**
+         * @param adminUserPassword Password of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserPassword(@Nullable String adminUserPassword) {
             $.adminUserPassword = adminUserPassword;
             return this;
         }
 
+        /**
+         * @param adminUserSshPublicKey SSH public key of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             $.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;

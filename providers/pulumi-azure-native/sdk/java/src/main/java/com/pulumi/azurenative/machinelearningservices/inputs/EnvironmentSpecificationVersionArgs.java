@@ -34,6 +34,11 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="condaFile")
     private @Nullable Output<String> condaFile;
 
+    /**
+     * @return Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
+     * 
+     */
     public Optional<Output<String>> condaFile() {
         return Optional.ofNullable(this.condaFile);
     }
@@ -45,6 +50,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +65,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="docker")
     private @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
+    /**
+     * @return Configuration settings for Docker.
+     * 
+     */
     public Optional<Output<Either<DockerBuildArgs,DockerImageArgs>>> docker() {
         return Optional.ofNullable(this.docker);
     }
@@ -67,6 +80,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="inferenceContainerProperties")
     private @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
+    /**
+     * @return Defines configuration specific to inference.
+     * 
+     */
     public Optional<Output<InferenceContainerPropertiesArgs>> inferenceContainerProperties() {
         return Optional.ofNullable(this.inferenceContainerProperties);
     }
@@ -78,6 +95,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="isAnonymous")
     private @Nullable Output<Boolean> isAnonymous;
 
+    /**
+     * @return If the name version are system generated (anonymous registration).
+     * 
+     */
     public Optional<Output<Boolean>> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
@@ -89,6 +110,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -100,6 +125,10 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -134,73 +163,171 @@ public final class EnvironmentSpecificationVersionArgs extends com.pulumi.resour
             $ = new EnvironmentSpecificationVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condaFile Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+         * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder condaFile(@Nullable Output<String> condaFile) {
             $.condaFile = condaFile;
             return this;
         }
 
+        /**
+         * @param condaFile Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+         * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder condaFile(String condaFile) {
             return condaFile(Output.of(condaFile));
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(@Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker) {
             $.docker = docker;
             return this;
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(Either<DockerBuildArgs,DockerImageArgs> docker) {
             return docker(Output.of(docker));
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(DockerBuildArgs docker) {
             return docker(Either.ofLeft(docker));
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(DockerImageArgs docker) {
             return docker(Either.ofRight(docker));
         }
 
+        /**
+         * @param inferenceContainerProperties Defines configuration specific to inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
             $.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
 
+        /**
+         * @param inferenceContainerProperties Defines configuration specific to inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceContainerProperties(InferenceContainerPropertiesArgs inferenceContainerProperties) {
             return inferenceContainerProperties(Output.of(inferenceContainerProperties));
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
             $.isAnonymous = isAnonymous;
             return this;
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(Boolean isAnonymous) {
             return isAnonymous(Output.of(isAnonymous));
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

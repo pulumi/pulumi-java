@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetZoneResult {
     /**
-     * The etag of the zone.
+     * @return The etag of the zone.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
     private final Double maxNumberOfRecordSets;
     /**
-     * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
     private final Double maxNumberOfRecordsPerRecordSet;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
     private final List<String> nameServers;
     /**
-     * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
     private final Double numberOfRecordSets;
     /**
-     * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+     * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
     private final @Nullable List<SubResourceResponse> registrationVirtualNetworks;
     /**
-     * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+     * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
     private final @Nullable List<SubResourceResponse> resolutionVirtualNetworks;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The type of this DNS zone (Public or Private).
+     * @return The type of this DNS zone (Public or Private).
      * 
      */
     private final @Nullable String zoneType;
@@ -112,93 +112,93 @@ public final class GetZoneResult {
     }
 
     /**
-     * The etag of the zone.
+     * @return The etag of the zone.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double maxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
-     * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double maxNumberOfRecordsPerRecordSet() {
         return this.maxNumberOfRecordsPerRecordSet;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
     /**
-     * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
+     * @return The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double numberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
-     * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+     * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
-    */
+     */
     public List<SubResourceResponse> registrationVirtualNetworks() {
         return this.registrationVirtualNetworks == null ? List.of() : this.registrationVirtualNetworks;
     }
     /**
-     * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+     * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
-    */
+     */
     public List<SubResourceResponse> resolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks == null ? List.of() : this.resolutionVirtualNetworks;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The type of this DNS zone (Public or Private).
+     * @return The type of this DNS zone (Public or Private).
      * 
-    */
+     */
     public Optional<String> zoneType() {
         return Optional.ofNullable(this.zoneType);
     }

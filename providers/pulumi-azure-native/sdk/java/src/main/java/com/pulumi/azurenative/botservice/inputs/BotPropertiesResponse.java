@@ -29,6 +29,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allSettings")
     private @Nullable Map<String,String> allSettings;
 
+    /**
+     * @return Contains resource all settings defined as key/value pairs.
+     * 
+     */
     public Optional<Map<String,String>> allSettings() {
         return Optional.ofNullable(this.allSettings);
     }
@@ -40,6 +44,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="appPasswordHint")
     private @Nullable String appPasswordHint;
 
+    /**
+     * @return The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
+     * 
+     */
     public Optional<String> appPasswordHint() {
         return Optional.ofNullable(this.appPasswordHint);
     }
@@ -51,6 +59,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cmekEncryptionStatus", required=true)
     private String cmekEncryptionStatus;
 
+    /**
+     * @return The CMK encryption status
+     * 
+     */
     public String cmekEncryptionStatus() {
         return this.cmekEncryptionStatus;
     }
@@ -62,6 +74,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="cmekKeyVaultUrl")
     private @Nullable String cmekKeyVaultUrl;
 
+    /**
+     * @return The CMK Url
+     * 
+     */
     public Optional<String> cmekKeyVaultUrl() {
         return Optional.ofNullable(this.cmekKeyVaultUrl);
     }
@@ -73,6 +89,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="configuredChannels", required=true)
     private List<String> configuredChannels;
 
+    /**
+     * @return Collection of channels for which the bot is configured
+     * 
+     */
     public List<String> configuredChannels() {
         return this.configuredChannels;
     }
@@ -84,6 +104,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the bot
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -95,6 +119,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightKey")
     private @Nullable String developerAppInsightKey;
 
+    /**
+     * @return The Application Insights key
+     * 
+     */
     public Optional<String> developerAppInsightKey() {
         return Optional.ofNullable(this.developerAppInsightKey);
     }
@@ -106,6 +134,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightsApiKey")
     private @Nullable String developerAppInsightsApiKey;
 
+    /**
+     * @return The Application Insights Api Key
+     * 
+     */
     public Optional<String> developerAppInsightsApiKey() {
         return Optional.ofNullable(this.developerAppInsightsApiKey);
     }
@@ -117,6 +149,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="developerAppInsightsApplicationId")
     private @Nullable String developerAppInsightsApplicationId;
 
+    /**
+     * @return The Application Insights App Id
+     * 
+     */
     public Optional<String> developerAppInsightsApplicationId() {
         return Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
@@ -128,6 +164,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="disableLocalAuth")
     private @Nullable Boolean disableLocalAuth;
 
+    /**
+     * @return Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+     * 
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -139,6 +179,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The Name of the bot
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -150,6 +194,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabledChannels", required=true)
     private List<String> enabledChannels;
 
+    /**
+     * @return Collection of channels for which the bot is enabled
+     * 
+     */
     public List<String> enabledChannels() {
         return this.enabledChannels;
     }
@@ -161,6 +209,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return The bot&#39;s endpoint
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -172,6 +224,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endpointVersion", required=true)
     private String endpointVersion;
 
+    /**
+     * @return The bot&#39;s endpoint version
+     * 
+     */
     public String endpointVersion() {
         return this.endpointVersion;
     }
@@ -183,6 +239,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="iconUrl")
     private @Nullable String iconUrl;
 
+    /**
+     * @return The Icon Url of the bot
+     * 
+     */
     public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
@@ -194,6 +254,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isCmekEnabled")
     private @Nullable Boolean isCmekEnabled;
 
+    /**
+     * @return Whether Cmek is enabled
+     * 
+     */
     public Optional<Boolean> isCmekEnabled() {
         return Optional.ofNullable(this.isCmekEnabled);
     }
@@ -205,6 +269,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isDeveloperAppInsightsApiKeySet", required=true)
     private Boolean isDeveloperAppInsightsApiKeySet;
 
+    /**
+     * @return Whether the bot is developerAppInsightsApiKey set
+     * 
+     */
     public Boolean isDeveloperAppInsightsApiKeySet() {
         return this.isDeveloperAppInsightsApiKeySet;
     }
@@ -216,6 +284,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isStreamingSupported")
     private @Nullable Boolean isStreamingSupported;
 
+    /**
+     * @return Whether the bot is streaming supported
+     * 
+     */
     public Optional<Boolean> isStreamingSupported() {
         return Optional.ofNullable(this.isStreamingSupported);
     }
@@ -227,6 +299,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="luisAppIds")
     private @Nullable List<String> luisAppIds;
 
+    /**
+     * @return Collection of LUIS App Ids
+     * 
+     */
     public Optional<List<String>> luisAppIds() {
         return Optional.ofNullable(this.luisAppIds);
     }
@@ -238,6 +314,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="luisKey")
     private @Nullable String luisKey;
 
+    /**
+     * @return The LUIS Key
+     * 
+     */
     public Optional<String> luisKey() {
         return Optional.ofNullable(this.luisKey);
     }
@@ -249,6 +329,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="manifestUrl")
     private @Nullable String manifestUrl;
 
+    /**
+     * @return The bot&#39;s manifest url
+     * 
+     */
     public Optional<String> manifestUrl() {
         return Optional.ofNullable(this.manifestUrl);
     }
@@ -260,6 +344,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="migrationToken", required=true)
     private String migrationToken;
 
+    /**
+     * @return Token used to migrate non Azure bot to azure subscription
+     * 
+     */
     public String migrationToken() {
         return this.migrationToken;
     }
@@ -271,6 +359,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppId", required=true)
     private String msaAppId;
 
+    /**
+     * @return Microsoft App Id for the bot
+     * 
+     */
     public String msaAppId() {
         return this.msaAppId;
     }
@@ -282,6 +374,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppMSIResourceId")
     private @Nullable String msaAppMSIResourceId;
 
+    /**
+     * @return Microsoft App Managed Identity Resource Id for the bot
+     * 
+     */
     public Optional<String> msaAppMSIResourceId() {
         return Optional.ofNullable(this.msaAppMSIResourceId);
     }
@@ -293,6 +389,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppTenantId")
     private @Nullable String msaAppTenantId;
 
+    /**
+     * @return Microsoft App Tenant Id for the bot
+     * 
+     */
     public Optional<String> msaAppTenantId() {
         return Optional.ofNullable(this.msaAppTenantId);
     }
@@ -304,6 +404,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="msaAppType")
     private @Nullable String msaAppType;
 
+    /**
+     * @return Microsoft App Type for the bot
+     * 
+     */
     public Optional<String> msaAppType() {
         return Optional.ofNullable(this.msaAppType);
     }
@@ -315,6 +419,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="openWithHint")
     private @Nullable String openWithHint;
 
+    /**
+     * @return The hint to browser (e.g. protocol handler) on how to open the bot for authoring
+     * 
+     */
     public Optional<String> openWithHint() {
         return Optional.ofNullable(this.openWithHint);
     }
@@ -326,6 +434,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="parameters")
     private @Nullable Map<String,String> parameters;
 
+    /**
+     * @return Contains resource parameters defined as key/value pairs.
+     * 
+     */
     public Optional<Map<String,String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -337,6 +449,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -348,6 +464,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Whether the bot is in an isolated network
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -359,6 +479,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publishingCredentials")
     private @Nullable String publishingCredentials;
 
+    /**
+     * @return Publishing credentials of the resource
+     * 
+     */
     public Optional<String> publishingCredentials() {
         return Optional.ofNullable(this.publishingCredentials);
     }
@@ -370,6 +494,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="schemaTransformationVersion")
     private @Nullable String schemaTransformationVersion;
 
+    /**
+     * @return The channel schema transformation version for the bot
+     * 
+     */
     public Optional<String> schemaTransformationVersion() {
         return Optional.ofNullable(this.schemaTransformationVersion);
     }
@@ -381,6 +509,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="storageResourceId")
     private @Nullable String storageResourceId;
 
+    /**
+     * @return The storage resourceId for the bot
+     * 
+     */
     public Optional<String> storageResourceId() {
         return Optional.ofNullable(this.storageResourceId);
     }
@@ -441,178 +573,394 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new BotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allSettings Contains resource all settings defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allSettings(@Nullable Map<String,String> allSettings) {
             $.allSettings = allSettings;
             return this;
         }
 
+        /**
+         * @param appPasswordHint The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPasswordHint(@Nullable String appPasswordHint) {
             $.appPasswordHint = appPasswordHint;
             return this;
         }
 
+        /**
+         * @param cmekEncryptionStatus The CMK encryption status
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmekEncryptionStatus(String cmekEncryptionStatus) {
             $.cmekEncryptionStatus = cmekEncryptionStatus;
             return this;
         }
 
+        /**
+         * @param cmekKeyVaultUrl The CMK Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
             $.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
 
+        /**
+         * @param configuredChannels Collection of channels for which the bot is configured
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuredChannels(List<String> configuredChannels) {
             $.configuredChannels = configuredChannels;
             return this;
         }
 
+        /**
+         * @param configuredChannels Collection of channels for which the bot is configured
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuredChannels(String... configuredChannels) {
             return configuredChannels(List.of(configuredChannels));
         }
 
+        /**
+         * @param description The description of the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param developerAppInsightKey The Application Insights key
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
             $.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
 
+        /**
+         * @param developerAppInsightsApiKey The Application Insights Api Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
             $.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
 
+        /**
+         * @param developerAppInsightsApplicationId The Application Insights App Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
             $.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param displayName The Name of the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param enabledChannels Collection of channels for which the bot is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledChannels(List<String> enabledChannels) {
             $.enabledChannels = enabledChannels;
             return this;
         }
 
+        /**
+         * @param enabledChannels Collection of channels for which the bot is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledChannels(String... enabledChannels) {
             return enabledChannels(List.of(enabledChannels));
         }
 
+        /**
+         * @param endpoint The bot&#39;s endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpointVersion The bot&#39;s endpoint version
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointVersion(String endpointVersion) {
             $.endpointVersion = endpointVersion;
             return this;
         }
 
+        /**
+         * @param iconUrl The Icon Url of the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUrl(@Nullable String iconUrl) {
             $.iconUrl = iconUrl;
             return this;
         }
 
+        /**
+         * @param isCmekEnabled Whether Cmek is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
             $.isCmekEnabled = isCmekEnabled;
             return this;
         }
 
+        /**
+         * @param isDeveloperAppInsightsApiKeySet Whether the bot is developerAppInsightsApiKey set
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeveloperAppInsightsApiKeySet(Boolean isDeveloperAppInsightsApiKeySet) {
             $.isDeveloperAppInsightsApiKeySet = isDeveloperAppInsightsApiKeySet;
             return this;
         }
 
+        /**
+         * @param isStreamingSupported Whether the bot is streaming supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
             $.isStreamingSupported = isStreamingSupported;
             return this;
         }
 
+        /**
+         * @param luisAppIds Collection of LUIS App Ids
+         * 
+         * @return builder
+         * 
+         */
         public Builder luisAppIds(@Nullable List<String> luisAppIds) {
             $.luisAppIds = luisAppIds;
             return this;
         }
 
+        /**
+         * @param luisAppIds Collection of LUIS App Ids
+         * 
+         * @return builder
+         * 
+         */
         public Builder luisAppIds(String... luisAppIds) {
             return luisAppIds(List.of(luisAppIds));
         }
 
+        /**
+         * @param luisKey The LUIS Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder luisKey(@Nullable String luisKey) {
             $.luisKey = luisKey;
             return this;
         }
 
+        /**
+         * @param manifestUrl The bot&#39;s manifest url
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestUrl(@Nullable String manifestUrl) {
             $.manifestUrl = manifestUrl;
             return this;
         }
 
+        /**
+         * @param migrationToken Token used to migrate non Azure bot to azure subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationToken(String migrationToken) {
             $.migrationToken = migrationToken;
             return this;
         }
 
+        /**
+         * @param msaAppId Microsoft App Id for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder msaAppId(String msaAppId) {
             $.msaAppId = msaAppId;
             return this;
         }
 
+        /**
+         * @param msaAppMSIResourceId Microsoft App Managed Identity Resource Id for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
             $.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
 
+        /**
+         * @param msaAppTenantId Microsoft App Tenant Id for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
             $.msaAppTenantId = msaAppTenantId;
             return this;
         }
 
+        /**
+         * @param msaAppType Microsoft App Type for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder msaAppType(@Nullable String msaAppType) {
             $.msaAppType = msaAppType;
             return this;
         }
 
+        /**
+         * @param openWithHint The hint to browser (e.g. protocol handler) on how to open the bot for authoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder openWithHint(@Nullable String openWithHint) {
             $.openWithHint = openWithHint;
             return this;
         }
 
+        /**
+         * @param parameters Contains resource parameters defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether the bot is in an isolated network
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publishingCredentials Publishing credentials of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishingCredentials(@Nullable String publishingCredentials) {
             $.publishingCredentials = publishingCredentials;
             return this;
         }
 
+        /**
+         * @param schemaTransformationVersion The channel schema transformation version for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
             $.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
 
+        /**
+         * @param storageResourceId The storage resourceId for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageResourceId(@Nullable String storageResourceId) {
             $.storageResourceId = storageResourceId;
             return this;

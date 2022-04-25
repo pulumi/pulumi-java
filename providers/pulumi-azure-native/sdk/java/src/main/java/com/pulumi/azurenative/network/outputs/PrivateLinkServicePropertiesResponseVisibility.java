@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateLinkServicePropertiesResponseVisibility {
     /**
-     * The list of subscriptions.
+     * @return The list of subscriptions.
      * 
      */
     private final @Nullable List<String> subscriptions;
@@ -23,9 +23,9 @@ public final class PrivateLinkServicePropertiesResponseVisibility {
     }
 
     /**
-     * The list of subscriptions.
+     * @return The list of subscriptions.
      * 
-    */
+     */
     public List<String> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

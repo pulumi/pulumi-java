@@ -19,6 +19,10 @@ public final class GetTenantConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="configurationName", required=true)
     private String configurationName;
 
+    /**
+     * @return The configuration name. Value must be &#39;default&#39;
+     * 
+     */
     public String configurationName() {
         return this.configurationName;
     }
@@ -47,6 +51,12 @@ public final class GetTenantConfigurationArgs extends com.pulumi.resources.Invok
             $ = new GetTenantConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationName The configuration name. Value must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             $.configurationName = configurationName;
             return this;

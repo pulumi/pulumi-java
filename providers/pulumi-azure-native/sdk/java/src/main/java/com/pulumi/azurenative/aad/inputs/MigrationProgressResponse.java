@@ -26,6 +26,10 @@ public final class MigrationProgressResponse extends com.pulumi.resources.Invoke
     @Import(name="completionPercentage")
     private @Nullable Double completionPercentage;
 
+    /**
+     * @return Completion Percentage
+     * 
+     */
     public Optional<Double> completionPercentage() {
         return Optional.ofNullable(this.completionPercentage);
     }
@@ -37,6 +41,10 @@ public final class MigrationProgressResponse extends com.pulumi.resources.Invoke
     @Import(name="progressMessage")
     private @Nullable String progressMessage;
 
+    /**
+     * @return Progress Message
+     * 
+     */
     public Optional<String> progressMessage() {
         return Optional.ofNullable(this.progressMessage);
     }
@@ -66,11 +74,23 @@ public final class MigrationProgressResponse extends com.pulumi.resources.Invoke
             $ = new MigrationProgressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completionPercentage Completion Percentage
+         * 
+         * @return builder
+         * 
+         */
         public Builder completionPercentage(@Nullable Double completionPercentage) {
             $.completionPercentage = completionPercentage;
             return this;
         }
 
+        /**
+         * @param progressMessage Progress Message
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressMessage(@Nullable String progressMessage) {
             $.progressMessage = progressMessage;
             return this;

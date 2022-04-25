@@ -23,6 +23,10 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -45,6 +53,10 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status provides detailed information for the state.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class ConnectionStatusResponse extends com.pulumi.resources.InvokeA
             $ = new ConnectionStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param state State.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param status Status provides detailed information for the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

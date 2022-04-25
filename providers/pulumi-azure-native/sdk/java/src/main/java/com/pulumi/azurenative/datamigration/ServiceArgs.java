@@ -24,6 +24,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
     private Output<String> groupName;
 
+    /**
+     * @return Name of the resource group
+     * 
+     */
     public Output<String> groupName() {
         return this.groupName;
     }
@@ -35,6 +39,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The resource kind. Only &#39;vm&#39; (the default) is supported.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -46,6 +54,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return The public key of the service, used to encrypt secrets sent to the service
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -68,6 +84,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Name of the service
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -79,6 +99,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ServiceSkuArgs> sku;
 
+    /**
+     * @return Service SKU
+     * 
+     */
     public Optional<Output<ServiceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -90,6 +114,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,6 +129,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualSubnetId", required=true)
     private Output<String> virtualSubnetId;
 
+    /**
+     * @return The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+     * 
+     */
     public Output<String> virtualSubnetId() {
         return this.virtualSubnetId;
     }
@@ -136,74 +168,170 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param kind The resource kind. Only &#39;vm&#39; (the default) is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The resource kind. Only &#39;vm&#39; (the default) is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicKey The public key of the service, used to encrypt secrets sent to the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey The public key of the service, used to encrypt secrets sent to the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sku Service SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ServiceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Service SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ServiceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualSubnetId The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualSubnetId(Output<String> virtualSubnetId) {
             $.virtualSubnetId = virtualSubnetId;
             return this;
         }
 
+        /**
+         * @param virtualSubnetId The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualSubnetId(String virtualSubnetId) {
             return virtualSubnetId(Output.of(virtualSubnetId));
         }

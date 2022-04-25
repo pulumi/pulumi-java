@@ -35,6 +35,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="contactDetails", required=true)
     private Output<ContactDetailsArgs> contactDetails;
 
+    /**
+     * @return Contact details for notification and shipping.
+     * 
+     */
     public Output<ContactDetailsArgs> contactDetails() {
         return this.contactDetails;
     }
@@ -46,6 +50,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataExportDetails")
     private @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
+    /**
+     * @return Details of the data to be exported from azure.
+     * 
+     */
     public Optional<Output<List<DataExportDetailsArgs>>> dataExportDetails() {
         return Optional.ofNullable(this.dataExportDetails);
     }
@@ -57,6 +65,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataImportDetails")
     private @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
+    /**
+     * @return Details of the data to be imported into azure.
+     * 
+     */
     public Optional<Output<List<DataImportDetailsArgs>>> dataImportDetails() {
         return Optional.ofNullable(this.dataImportDetails);
     }
@@ -68,6 +80,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="devicePassword")
     private @Nullable Output<String> devicePassword;
 
+    /**
+     * @return Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * 
+     */
     public Optional<Output<String>> devicePassword() {
         return Optional.ofNullable(this.devicePassword);
     }
@@ -79,6 +95,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expectedDataSizeInTeraBytes")
     private @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
+    /**
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * 
+     */
     public Optional<Output<Integer>> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
@@ -91,6 +111,11 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="jobDetailsType", required=true)
     private Output<String> jobDetailsType;
 
+    /**
+     * @return Indicates the type of job details.
+     * Expected value is &#39;DataBox&#39;.
+     * 
+     */
     public Output<String> jobDetailsType() {
         return this.jobDetailsType;
     }
@@ -102,6 +127,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyEncryptionKey")
     private @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
+    /**
+     * @return Details about which key encryption type is being used.
+     * 
+     */
     public Optional<Output<KeyEncryptionKeyArgs>> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
@@ -113,6 +142,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="preferences")
     private @Nullable Output<PreferencesArgs> preferences;
 
+    /**
+     * @return Preferences for the order.
+     * 
+     */
     public Optional<Output<PreferencesArgs>> preferences() {
         return Optional.ofNullable(this.preferences);
     }
@@ -124,6 +157,10 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shippingAddress")
     private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
+    /**
+     * @return Shipping address of the customer.
+     * 
+     */
     public Optional<Output<ShippingAddressArgs>> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
@@ -160,91 +197,213 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new DataBoxJobDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactDetails Contact details for notification and shipping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             $.contactDetails = contactDetails;
             return this;
         }
 
+        /**
+         * @param contactDetails Contact details for notification and shipping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
             return contactDetails(Output.of(contactDetails));
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(@Nullable Output<List<DataExportDetailsArgs>> dataExportDetails) {
             $.dataExportDetails = dataExportDetails;
             return this;
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(List<DataExportDetailsArgs> dataExportDetails) {
             return dataExportDetails(Output.of(dataExportDetails));
         }
 
+        /**
+         * @param dataExportDetails Details of the data to be exported from azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataExportDetails(DataExportDetailsArgs... dataExportDetails) {
             return dataExportDetails(List.of(dataExportDetails));
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(@Nullable Output<List<DataImportDetailsArgs>> dataImportDetails) {
             $.dataImportDetails = dataImportDetails;
             return this;
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(List<DataImportDetailsArgs> dataImportDetails) {
             return dataImportDetails(Output.of(dataImportDetails));
         }
 
+        /**
+         * @param dataImportDetails Details of the data to be imported into azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataImportDetails(DataImportDetailsArgs... dataImportDetails) {
             return dataImportDetails(List.of(dataImportDetails));
         }
 
+        /**
+         * @param devicePassword Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePassword(@Nullable Output<String> devicePassword) {
             $.devicePassword = devicePassword;
             return this;
         }
 
+        /**
+         * @param devicePassword Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePassword(String devicePassword) {
             return devicePassword(Output.of(devicePassword));
         }
 
+        /**
+         * @param expectedDataSizeInTeraBytes The expected size of the data, which needs to be transferred in this job, in terabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedDataSizeInTeraBytes(@Nullable Output<Integer> expectedDataSizeInTeraBytes) {
             $.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
+        /**
+         * @param expectedDataSizeInTeraBytes The expected size of the data, which needs to be transferred in this job, in terabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedDataSizeInTeraBytes(Integer expectedDataSizeInTeraBytes) {
             return expectedDataSizeInTeraBytes(Output.of(expectedDataSizeInTeraBytes));
         }
 
+        /**
+         * @param jobDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBox&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDetailsType(Output<String> jobDetailsType) {
             $.jobDetailsType = jobDetailsType;
             return this;
         }
 
+        /**
+         * @param jobDetailsType Indicates the type of job details.
+         * Expected value is &#39;DataBox&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDetailsType(String jobDetailsType) {
             return jobDetailsType(Output.of(jobDetailsType));
         }
 
+        /**
+         * @param keyEncryptionKey Details about which key encryption type is being used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(@Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey) {
             $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
+        /**
+         * @param keyEncryptionKey Details about which key encryption type is being used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKey(KeyEncryptionKeyArgs keyEncryptionKey) {
             return keyEncryptionKey(Output.of(keyEncryptionKey));
         }
 
+        /**
+         * @param preferences Preferences for the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             $.preferences = preferences;
             return this;
         }
 
+        /**
+         * @param preferences Preferences for the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(PreferencesArgs preferences) {
             return preferences(Output.of(preferences));
         }
 
+        /**
+         * @param shippingAddress Shipping address of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             $.shippingAddress = shippingAddress;
             return this;
         }
 
+        /**
+         * @param shippingAddress Shipping address of the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingAddress(ShippingAddressArgs shippingAddress) {
             return shippingAddress(Output.of(shippingAddress));
         }

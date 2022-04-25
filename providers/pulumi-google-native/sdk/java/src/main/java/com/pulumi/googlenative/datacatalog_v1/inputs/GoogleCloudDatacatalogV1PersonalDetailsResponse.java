@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends com.p
     @Import(name="starTime", required=true)
     private String starTime;
 
+    /**
+     * @return Set if the entry is starred; unset otherwise.
+     * 
+     */
     public String starTime() {
         return this.starTime;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends com.p
     @Import(name="starred", required=true)
     private Boolean starred;
 
+    /**
+     * @return True if the entry is starred by the user; false otherwise.
+     * 
+     */
     public Boolean starred() {
         return this.starred;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends com.p
             $ = new GoogleCloudDatacatalogV1PersonalDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param starTime Set if the entry is starred; unset otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder starTime(String starTime) {
             $.starTime = starTime;
             return this;
         }
 
+        /**
+         * @param starred True if the entry is starred by the user; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder starred(Boolean starred) {
             $.starred = starred;
             return this;

@@ -21,6 +21,11 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends com.pulumi.resourc
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * The application context of the containing message determines which well-known feature set of CEL is supported.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -49,11 +54,25 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends com.pulumi.resourc
             $ = new SecurityPolicyRuleMatchExprGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * The application context of the containing message determines which well-known feature set of CEL is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * The application context of the containing message determines which well-known feature set of CEL is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }

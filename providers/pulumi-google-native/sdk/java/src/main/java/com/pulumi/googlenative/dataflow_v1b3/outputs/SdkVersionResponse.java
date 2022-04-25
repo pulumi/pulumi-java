@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class SdkVersionResponse {
     /**
-     * The support status for this SDK version.
+     * @return The support status for this SDK version.
      * 
      */
     private final String sdkSupportStatus;
     /**
-     * The version of the SDK used to run the job.
+     * @return The version of the SDK used to run the job.
      * 
      */
     private final String version;
     /**
-     * A readable string describing the version of the SDK.
+     * @return A readable string describing the version of the SDK.
      * 
      */
     private final String versionDisplayName;
@@ -36,23 +36,23 @@ public final class SdkVersionResponse {
     }
 
     /**
-     * The support status for this SDK version.
+     * @return The support status for this SDK version.
      * 
-    */
+     */
     public String sdkSupportStatus() {
         return this.sdkSupportStatus;
     }
     /**
-     * The version of the SDK used to run the job.
+     * @return The version of the SDK used to run the job.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * A readable string describing the version of the SDK.
+     * @return A readable string describing the version of the SDK.
      * 
-    */
+     */
     public String versionDisplayName() {
         return this.versionDisplayName;
     }

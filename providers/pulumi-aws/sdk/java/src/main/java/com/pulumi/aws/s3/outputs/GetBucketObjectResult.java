@@ -15,120 +15,120 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBucketObjectResult {
     /**
-     * Object data (see **limitations above** to understand cases in which this field is actually available)
+     * @return Object data (see **limitations above** to understand cases in which this field is actually available)
      * 
      */
     private final String body;
     private final String bucket;
     /**
-     * (Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+     * @return (Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
      */
     private final Boolean bucketKeyEnabled;
     /**
-     * Specifies caching behavior along the request/reply chain.
+     * @return Specifies caching behavior along the request/reply chain.
      * 
      */
     private final String cacheControl;
     /**
-     * Specifies presentational information for the object.
+     * @return Specifies presentational information for the object.
      * 
      */
     private final String contentDisposition;
     /**
-     * Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
+     * @return Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
      * 
      */
     private final String contentEncoding;
     /**
-     * The language the content is in.
+     * @return The language the content is in.
      * 
      */
     private final String contentLanguage;
     /**
-     * Size of the body in bytes.
+     * @return Size of the body in bytes.
      * 
      */
     private final Integer contentLength;
     /**
-     * A standard MIME type describing the format of the object data.
+     * @return A standard MIME type describing the format of the object data.
      * 
      */
     private final String contentType;
     /**
-     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
+     * @return [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
      * 
      */
     private final String etag;
     /**
-     * If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
+     * @return If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
      * 
      */
     private final String expiration;
     /**
-     * The date and time at which the object is no longer cacheable.
+     * @return The date and time at which the object is no longer cacheable.
      * 
      */
     private final String expires;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String key;
     /**
-     * Last modified date of the object in RFC1123 format (e.g., `Mon, 02 Jan 2006 15:04:05 MST`)
+     * @return Last modified date of the object in RFC1123 format (e.g., `Mon, 02 Jan 2006 15:04:05 MST`)
      * 
      */
     private final String lastModified;
     /**
-     * A map of metadata stored with the object in S3
+     * @return A map of metadata stored with the object in S3
      * 
      */
     private final Map<String,String> metadata;
     /**
-     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
+     * @return Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
      * 
      */
     private final String objectLockLegalHoldStatus;
     /**
-     * The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
+     * @return The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
      * 
      */
     private final String objectLockMode;
     /**
-     * The date and time when this object&#39;s object lock will expire.
+     * @return The date and time when this object&#39;s object lock will expire.
      * 
      */
     private final String objectLockRetainUntilDate;
     private final @Nullable String range;
     /**
-     * If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
+     * @return If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
      * 
      */
     private final String serverSideEncryption;
     /**
-     * If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
+     * @return If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
      * 
      */
     private final String sseKmsKeyId;
     /**
-     * [Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
+     * @return [Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
      * 
      */
     private final String storageClass;
     /**
-     * A map of tags assigned to the object.
+     * @return A map of tags assigned to the object.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * The latest version ID of the object returned.
+     * @return The latest version ID of the object returned.
      * 
      */
     private final String versionId;
     /**
-     * If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
+     * @return If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
      * 
      */
     private final String websiteRedirectLocation;
@@ -190,9 +190,9 @@ public final class GetBucketObjectResult {
     }
 
     /**
-     * Object data (see **limitations above** to understand cases in which this field is actually available)
+     * @return Object data (see **limitations above** to understand cases in which this field is actually available)
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
@@ -200,79 +200,79 @@ public final class GetBucketObjectResult {
         return this.bucket;
     }
     /**
-     * (Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+     * @return (Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
-    */
+     */
     public Boolean bucketKeyEnabled() {
         return this.bucketKeyEnabled;
     }
     /**
-     * Specifies caching behavior along the request/reply chain.
+     * @return Specifies caching behavior along the request/reply chain.
      * 
-    */
+     */
     public String cacheControl() {
         return this.cacheControl;
     }
     /**
-     * Specifies presentational information for the object.
+     * @return Specifies presentational information for the object.
      * 
-    */
+     */
     public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
-     * Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
+     * @return Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
      * 
-    */
+     */
     public String contentEncoding() {
         return this.contentEncoding;
     }
     /**
-     * The language the content is in.
+     * @return The language the content is in.
      * 
-    */
+     */
     public String contentLanguage() {
         return this.contentLanguage;
     }
     /**
-     * Size of the body in bytes.
+     * @return Size of the body in bytes.
      * 
-    */
+     */
     public Integer contentLength() {
         return this.contentLength;
     }
     /**
-     * A standard MIME type describing the format of the object data.
+     * @return A standard MIME type describing the format of the object data.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
+     * @return [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it&#39;s not encrypted)
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
+     * @return If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
      * 
-    */
+     */
     public String expiration() {
         return this.expiration;
     }
     /**
-     * The date and time at which the object is no longer cacheable.
+     * @return The date and time at which the object is no longer cacheable.
      * 
-    */
+     */
     public String expires() {
         return this.expires;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -280,37 +280,37 @@ public final class GetBucketObjectResult {
         return this.key;
     }
     /**
-     * Last modified date of the object in RFC1123 format (e.g., `Mon, 02 Jan 2006 15:04:05 MST`)
+     * @return Last modified date of the object in RFC1123 format (e.g., `Mon, 02 Jan 2006 15:04:05 MST`)
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * A map of metadata stored with the object in S3
+     * @return A map of metadata stored with the object in S3
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
-     * Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
+     * @return Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object&#39;s legal hold status.
      * 
-    */
+     */
     public String objectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus;
     }
     /**
-     * The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
+     * @return The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
      * 
-    */
+     */
     public String objectLockMode() {
         return this.objectLockMode;
     }
     /**
-     * The date and time when this object&#39;s object lock will expire.
+     * @return The date and time when this object&#39;s object lock will expire.
      * 
-    */
+     */
     public String objectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate;
     }
@@ -318,44 +318,44 @@ public final class GetBucketObjectResult {
         return Optional.ofNullable(this.range);
     }
     /**
-     * If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
+     * @return If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
      * 
-    */
+     */
     public String serverSideEncryption() {
         return this.serverSideEncryption;
     }
     /**
-     * If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
+     * @return If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
      * 
-    */
+     */
     public String sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
     /**
-     * [Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
+     * @return [Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
      * 
-    */
+     */
     public String storageClass() {
         return this.storageClass;
     }
     /**
-     * A map of tags assigned to the object.
+     * @return A map of tags assigned to the object.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The latest version ID of the object returned.
+     * @return The latest version ID of the object returned.
      * 
-    */
+     */
     public String versionId() {
         return this.versionId;
     }
     /**
-     * If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
+     * @return If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
      * 
-    */
+     */
     public String websiteRedirectLocation() {
         return this.websiteRedirectLocation;
     }

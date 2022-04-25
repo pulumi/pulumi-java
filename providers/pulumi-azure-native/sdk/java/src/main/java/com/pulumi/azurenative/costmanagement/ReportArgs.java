@@ -27,6 +27,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
     private Output<ReportDefinitionArgs> definition;
 
+    /**
+     * @return Has definition for the report.
+     * 
+     */
     public Output<ReportDefinitionArgs> definition() {
         return this.definition;
     }
@@ -38,6 +42,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo", required=true)
     private Output<ReportDeliveryInfoArgs> deliveryInfo;
 
+    /**
+     * @return Has delivery information for the report.
+     * 
+     */
     public Output<ReportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
@@ -49,6 +57,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<Either<String,FormatType>> format;
 
+    /**
+     * @return The format of the report being delivered.
+     * 
+     */
     public Optional<Output<Either<String,FormatType>>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -60,6 +72,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reportName")
     private @Nullable Output<String> reportName;
 
+    /**
+     * @return Report Name.
+     * 
+     */
     public Optional<Output<String>> reportName() {
         return Optional.ofNullable(this.reportName);
     }
@@ -71,6 +87,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<ReportScheduleArgs> schedule;
 
+    /**
+     * @return Has schedule information for the report.
+     * 
+     */
     public Optional<Output<ReportScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -103,55 +123,127 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition Has definition for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<ReportDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition Has definition for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(ReportDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param deliveryInfo Has delivery information for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(Output<ReportDeliveryInfoArgs> deliveryInfo) {
             $.deliveryInfo = deliveryInfo;
             return this;
         }
 
+        /**
+         * @param deliveryInfo Has delivery information for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
             return deliveryInfo(Output.of(deliveryInfo));
         }
 
+        /**
+         * @param format The format of the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format The format of the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Either<String,FormatType> format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param format The format of the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Either.ofLeft(format));
         }
 
+        /**
+         * @param format The format of the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(FormatType format) {
             return format(Either.ofRight(format));
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(@Nullable Output<String> reportName) {
             $.reportName = reportName;
             return this;
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             return reportName(Output.of(reportName));
         }
 
+        /**
+         * @param schedule Has schedule information for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Has schedule information for the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ReportScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }

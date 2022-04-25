@@ -15,32 +15,32 @@ import java.util.Objects;
 @CustomType
 public final class IamPolicyAnalysisQueryResponse {
     /**
-     * Optional. Specifies roles or permissions for analysis. This is optional.
+     * @return Optional. Specifies roles or permissions for analysis. This is optional.
      * 
      */
     private final AccessSelectorResponse accessSelector;
     /**
-     * Optional. The hypothetical context for IAM conditions evaluation.
+     * @return Optional. The hypothetical context for IAM conditions evaluation.
      * 
      */
     private final ConditionContextResponse conditionContext;
     /**
-     * Optional. Specifies an identity for analysis.
+     * @return Optional. Specifies an identity for analysis.
      * 
      */
     private final IdentitySelectorResponse identitySelector;
     /**
-     * Optional. The query options.
+     * @return Optional. The query options.
      * 
      */
     private final OptionsResponse options;
     /**
-     * Optional. Specifies a resource for analysis.
+     * @return Optional. Specifies a resource for analysis.
      * 
      */
     private final ResourceSelectorResponse resourceSelector;
     /**
-     * The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     * @return The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
      * 
      */
     private final String scope;
@@ -62,44 +62,44 @@ public final class IamPolicyAnalysisQueryResponse {
     }
 
     /**
-     * Optional. Specifies roles or permissions for analysis. This is optional.
+     * @return Optional. Specifies roles or permissions for analysis. This is optional.
      * 
-    */
+     */
     public AccessSelectorResponse accessSelector() {
         return this.accessSelector;
     }
     /**
-     * Optional. The hypothetical context for IAM conditions evaluation.
+     * @return Optional. The hypothetical context for IAM conditions evaluation.
      * 
-    */
+     */
     public ConditionContextResponse conditionContext() {
         return this.conditionContext;
     }
     /**
-     * Optional. Specifies an identity for analysis.
+     * @return Optional. Specifies an identity for analysis.
      * 
-    */
+     */
     public IdentitySelectorResponse identitySelector() {
         return this.identitySelector;
     }
     /**
-     * Optional. The query options.
+     * @return Optional. The query options.
      * 
-    */
+     */
     public OptionsResponse options() {
         return this.options;
     }
     /**
-     * Optional. Specifies a resource for analysis.
+     * @return Optional. Specifies a resource for analysis.
      * 
-    */
+     */
     public ResourceSelectorResponse resourceSelector() {
         return this.resourceSelector;
     }
     /**
-     * The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     * @return The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as &#34;organizations/123&#34;), a folder number (such as &#34;folders/123&#34;), a project ID (such as &#34;projects/my-project-id&#34;), or a project number (such as &#34;projects/12345&#34;). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }

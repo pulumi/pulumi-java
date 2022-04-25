@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends com.pul
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends com.pul
             $ = new GooglePrivacyDlpV2CloudStorageFileSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

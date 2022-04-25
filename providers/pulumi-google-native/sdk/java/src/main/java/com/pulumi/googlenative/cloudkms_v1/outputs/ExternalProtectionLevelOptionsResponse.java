@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ExternalProtectionLevelOptionsResponse {
     /**
-     * The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
+     * @return The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
      * 
      */
     private final String ekmConnectionKeyPath;
     /**
-     * The URI for an external resource that this CryptoKeyVersion represents.
+     * @return The URI for an external resource that this CryptoKeyVersion represents.
      * 
      */
     private final String externalKeyUri;
@@ -29,16 +29,16 @@ public final class ExternalProtectionLevelOptionsResponse {
     }
 
     /**
-     * The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
+     * @return The path to the external key material on the EKM when using EkmConnection e.g., &#34;v0/my/key&#34;. Set this field instead of external_key_uri when using an EkmConnection.
      * 
-    */
+     */
     public String ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath;
     }
     /**
-     * The URI for an external resource that this CryptoKeyVersion represents.
+     * @return The URI for an external resource that this CryptoKeyVersion represents.
      * 
-    */
+     */
     public String externalKeyUri() {
         return this.externalKeyUri;
     }

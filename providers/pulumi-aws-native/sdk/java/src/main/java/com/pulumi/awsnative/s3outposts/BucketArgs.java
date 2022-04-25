@@ -25,6 +25,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return A name for the bucket.
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -36,6 +40,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleConfiguration")
     private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
+    /**
+     * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
+     * 
+     */
     public Optional<Output<BucketLifecycleConfigurationArgs>> lifecycleConfiguration() {
         return Optional.ofNullable(this.lifecycleConfiguration);
     }
@@ -47,6 +55,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
     private Output<String> outpostId;
 
+    /**
+     * @return The id of the customer outpost on which the bucket resides.
+     * 
+     */
     public Output<String> outpostId() {
         return this.outpostId;
     }
@@ -58,6 +70,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<BucketTagArgs>> tags;
 
+    /**
+     * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+     * 
+     */
     public Optional<Output<List<BucketTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName A name for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName A name for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param lifecycleConfiguration Rules that define how Amazon S3Outposts manages objects during their lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfiguration(@Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
             $.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
 
+        /**
+         * @param lifecycleConfiguration Rules that define how Amazon S3Outposts manages objects during their lifetime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleConfiguration(BucketLifecycleConfigurationArgs lifecycleConfiguration) {
             return lifecycleConfiguration(Output.of(lifecycleConfiguration));
         }
 
+        /**
+         * @param outpostId The id of the customer outpost on which the bucket resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(Output<String> outpostId) {
             $.outpostId = outpostId;
             return this;
         }
 
+        /**
+         * @param outpostId The id of the customer outpost on which the bucket resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(String outpostId) {
             return outpostId(Output.of(outpostId));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<BucketTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(BucketTagArgs... tags) {
             return tags(List.of(tags));
         }

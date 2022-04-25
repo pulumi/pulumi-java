@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RouterNatLogConfig {
     /**
-     * Indicates whether or not to export logs.
+     * @return Indicates whether or not to export logs.
      * 
      */
     private final Boolean enable;
     /**
-     * Specifies the desired filtering of logs on this NAT.
+     * @return Specifies the desired filtering of logs on this NAT.
      * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
      * 
      */
@@ -31,17 +31,17 @@ public final class RouterNatLogConfig {
     }
 
     /**
-     * Indicates whether or not to export logs.
+     * @return Indicates whether or not to export logs.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * Specifies the desired filtering of logs on this NAT.
+     * @return Specifies the desired filtering of logs on this NAT.
      * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
      * 
-    */
+     */
     public String filter() {
         return this.filter;
     }

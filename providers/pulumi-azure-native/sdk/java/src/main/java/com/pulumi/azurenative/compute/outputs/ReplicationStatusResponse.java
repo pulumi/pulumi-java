@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ReplicationStatusResponse {
     /**
-     * This is the aggregated replication status based on all the regional replication status flags.
+     * @return This is the aggregated replication status based on all the regional replication status flags.
      * 
      */
     private final String aggregatedState;
     /**
-     * This is a summary of replication status for each region.
+     * @return This is a summary of replication status for each region.
      * 
      */
     private final List<RegionalReplicationStatusResponse> summary;
@@ -31,16 +31,16 @@ public final class ReplicationStatusResponse {
     }
 
     /**
-     * This is the aggregated replication status based on all the regional replication status flags.
+     * @return This is the aggregated replication status based on all the regional replication status flags.
      * 
-    */
+     */
     public String aggregatedState() {
         return this.aggregatedState;
     }
     /**
-     * This is a summary of replication status for each region.
+     * @return This is a summary of replication status for each region.
      * 
-    */
+     */
     public List<RegionalReplicationStatusResponse> summary() {
         return this.summary;
     }

@@ -28,6 +28,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
     @Import(name="backendPool")
     private @Nullable SubResourceResponse backendPool;
 
+    /**
+     * @return A reference to the BackendPool which this rule routes to.
+     * 
+     */
     public Optional<SubResourceResponse> backendPool() {
         return Optional.ofNullable(this.backendPool);
     }
@@ -39,6 +43,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
     @Import(name="cacheConfiguration")
     private @Nullable CacheConfigurationResponse cacheConfiguration;
 
+    /**
+     * @return The caching configuration associated with this rule.
+     * 
+     */
     public Optional<CacheConfigurationResponse> cacheConfiguration() {
         return Optional.ofNullable(this.cacheConfiguration);
     }
@@ -50,6 +58,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
     @Import(name="customForwardingPath")
     private @Nullable String customForwardingPath;
 
+    /**
+     * @return A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+     * 
+     */
     public Optional<String> customForwardingPath() {
         return Optional.ofNullable(this.customForwardingPath);
     }
@@ -61,6 +73,10 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
     @Import(name="forwardingProtocol")
     private @Nullable String forwardingProtocol;
 
+    /**
+     * @return Protocol this rule will use when forwarding traffic to backends.
+     * 
+     */
     public Optional<String> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
@@ -72,6 +88,11 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return
+     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -104,26 +125,57 @@ public final class ForwardingConfigurationResponse extends com.pulumi.resources.
             $ = new ForwardingConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPool A reference to the BackendPool which this rule routes to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPool(@Nullable SubResourceResponse backendPool) {
             $.backendPool = backendPool;
             return this;
         }
 
+        /**
+         * @param cacheConfiguration The caching configuration associated with this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheConfiguration(@Nullable CacheConfigurationResponse cacheConfiguration) {
             $.cacheConfiguration = cacheConfiguration;
             return this;
         }
 
+        /**
+         * @param customForwardingPath A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
             $.customForwardingPath = customForwardingPath;
             return this;
         }
 
+        /**
+         * @param forwardingProtocol Protocol this rule will use when forwarding traffic to backends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
             $.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
+        /**
+         * @param odataType
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

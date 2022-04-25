@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContentHashResponse {
     /**
-     * The algorithm of the content hash.
+     * @return The algorithm of the content hash.
      * 
      */
     private final @Nullable String algorithm;
     /**
-     * The value of the content hash.
+     * @return The value of the content hash.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class ContentHashResponse {
     }
 
     /**
-     * The algorithm of the content hash.
+     * @return The algorithm of the content hash.
      * 
-    */
+     */
     public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
-     * The value of the content hash.
+     * @return The value of the content hash.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

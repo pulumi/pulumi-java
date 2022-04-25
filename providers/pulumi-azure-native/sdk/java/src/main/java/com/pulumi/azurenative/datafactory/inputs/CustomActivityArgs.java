@@ -35,6 +35,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUserSpecification")
     private @Nullable Output<Object> autoUserSpecification;
 
+    /**
+     * @return Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+     * 
+     */
     public Optional<Output<Object>> autoUserSpecification() {
         return Optional.ofNullable(this.autoUserSpecification);
     }
@@ -46,6 +50,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="command", required=true)
     private Output<Object> command;
 
+    /**
+     * @return Command for custom activity Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> command() {
         return this.command;
     }
@@ -57,6 +65,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -68,6 +80,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +95,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedProperties")
     private @Nullable Output<Map<String,Object>> extendedProperties;
 
+    /**
+     * @return User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
@@ -90,6 +110,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Folder path for resource files Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -101,6 +125,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -112,6 +140,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -123,6 +155,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -134,6 +170,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="referenceObjects")
     private @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
 
+    /**
+     * @return Reference objects
+     * 
+     */
     public Optional<Output<CustomActivityReferenceObjectArgs>> referenceObjects() {
         return Optional.ofNullable(this.referenceObjects);
     }
@@ -145,6 +185,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceLinkedService")
     private @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
 
+    /**
+     * @return Resource linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> resourceLinkedService() {
         return Optional.ofNullable(this.resourceLinkedService);
     }
@@ -156,6 +200,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionTimeInDays")
     private @Nullable Output<Object> retentionTimeInDays;
 
+    /**
+     * @return The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+     * 
+     */
     public Optional<Output<Object>> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
@@ -168,6 +216,11 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Custom&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -179,6 +232,10 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -220,136 +277,318 @@ public final class CustomActivityArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CustomActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUserSpecification Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUserSpecification(@Nullable Output<Object> autoUserSpecification) {
             $.autoUserSpecification = autoUserSpecification;
             return this;
         }
 
+        /**
+         * @param autoUserSpecification Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUserSpecification(Object autoUserSpecification) {
             return autoUserSpecification(Output.of(autoUserSpecification));
         }
 
+        /**
+         * @param command Command for custom activity Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(Output<Object> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Command for custom activity Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(Object command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param extendedProperties User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(@Nullable Output<Map<String,Object>> extendedProperties) {
             $.extendedProperties = extendedProperties;
             return this;
         }
 
+        /**
+         * @param extendedProperties User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(Map<String,Object> extendedProperties) {
             return extendedProperties(Output.of(extendedProperties));
         }
 
+        /**
+         * @param folderPath Folder path for resource files Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Folder path for resource files Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param referenceObjects Reference objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceObjects(@Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects) {
             $.referenceObjects = referenceObjects;
             return this;
         }
 
+        /**
+         * @param referenceObjects Reference objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceObjects(CustomActivityReferenceObjectArgs referenceObjects) {
             return referenceObjects(Output.of(referenceObjects));
         }
 
+        /**
+         * @param resourceLinkedService Resource linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLinkedService(@Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService) {
             $.resourceLinkedService = resourceLinkedService;
             return this;
         }
 
+        /**
+         * @param resourceLinkedService Resource linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLinkedService(LinkedServiceReferenceArgs resourceLinkedService) {
             return resourceLinkedService(Output.of(resourceLinkedService));
         }
 
+        /**
+         * @param retentionTimeInDays The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimeInDays(@Nullable Output<Object> retentionTimeInDays) {
             $.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
 
+        /**
+         * @param retentionTimeInDays The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimeInDays(Object retentionTimeInDays) {
             return retentionTimeInDays(Output.of(retentionTimeInDays));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Custom&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Custom&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

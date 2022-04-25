@@ -24,6 +24,10 @@ public final class NsgReferenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceArmResourceId", required=true)
     private Output<String> sourceArmResourceId;
 
+    /**
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
+     * 
+     */
     public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
@@ -52,11 +56,23 @@ public final class NsgReferenceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NsgReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
             $.sourceArmResourceId = sourceArmResourceId;
             return this;
         }
 
+        /**
+         * @param sourceArmResourceId Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArmResourceId(String sourceArmResourceId) {
             return sourceArmResourceId(Output.of(sourceArmResourceId));
         }

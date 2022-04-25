@@ -27,6 +27,10 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
     @Import(name="gkeClusterReference")
     private @Nullable Output<GkeClusterReferenceArgs> gkeClusterReference;
 
+    /**
+     * @return Reference to the GKE cluster where the game servers are installed.
+     * 
+     */
     public Optional<Output<GkeClusterReferenceArgs>> gkeClusterReference() {
         return Optional.ofNullable(this.gkeClusterReference);
     }
@@ -38,6 +42,10 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -67,20 +75,44 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
             $ = new GameServerClusterConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusterReference Reference to the GKE cluster where the game servers are installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterReference(@Nullable Output<GkeClusterReferenceArgs> gkeClusterReference) {
             $.gkeClusterReference = gkeClusterReference;
             return this;
         }
 
+        /**
+         * @param gkeClusterReference Reference to the GKE cluster where the game servers are installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterReference(GkeClusterReferenceArgs gkeClusterReference) {
             return gkeClusterReference(Output.of(gkeClusterReference));
         }
 
+        /**
+         * @param namespace Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

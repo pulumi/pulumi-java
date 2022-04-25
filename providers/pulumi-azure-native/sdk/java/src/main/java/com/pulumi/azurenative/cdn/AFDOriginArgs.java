@@ -27,6 +27,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureOrigin")
     private @Nullable Output<ResourceReferenceArgs> azureOrigin;
 
+    /**
+     * @return Resource reference to the Azure origin resource.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> azureOrigin() {
         return Optional.ofNullable(this.azureOrigin);
     }
@@ -38,6 +42,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
     private @Nullable Output<Either<String,EnabledState>> enabledState;
 
+    /**
+     * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     * 
+     */
     public Optional<Output<Either<String,EnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -49,6 +57,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
     private Output<String> hostName;
 
+    /**
+     * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
+     * 
+     */
     public Output<String> hostName() {
         return this.hostName;
     }
@@ -60,6 +72,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpPort")
     private @Nullable Output<Integer> httpPort;
 
+    /**
+     * @return The value of the HTTP port. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Output<Integer>> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
@@ -71,6 +87,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsPort")
     private @Nullable Output<Integer> httpsPort;
 
+    /**
+     * @return The value of the HTTPS port. Must be between 1 and 65535.
+     * 
+     */
     public Optional<Output<Integer>> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
@@ -82,6 +102,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroupName", required=true)
     private Output<String> originGroupName;
 
+    /**
+     * @return Name of the origin group which is unique within the profile.
+     * 
+     */
     public Output<String> originGroupName() {
         return this.originGroupName;
     }
@@ -93,6 +117,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originHostHeader")
     private @Nullable Output<String> originHostHeader;
 
+    /**
+     * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
+     * 
+     */
     public Optional<Output<String>> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
@@ -104,6 +132,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originName")
     private @Nullable Output<String> originName;
 
+    /**
+     * @return Name of the origin that is unique within the profile.
+     * 
+     */
     public Optional<Output<String>> originName() {
         return Optional.ofNullable(this.originName);
     }
@@ -115,6 +147,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -126,6 +162,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -137,6 +177,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -148,6 +192,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedPrivateLinkResource")
     private @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
 
+    /**
+     * @return The properties of the private link resource for private origin.
+     * 
+     */
     public Optional<Output<SharedPrivateLinkResourcePropertiesArgs>> sharedPrivateLinkResource() {
         return Optional.ofNullable(this.sharedPrivateLinkResource);
     }
@@ -159,6 +207,10 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
+    /**
+     * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+     * 
+     */
     public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -199,127 +251,295 @@ public final class AFDOriginArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AFDOriginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureOrigin Resource reference to the Azure origin resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOrigin(@Nullable Output<ResourceReferenceArgs> azureOrigin) {
             $.azureOrigin = azureOrigin;
             return this;
         }
 
+        /**
+         * @param azureOrigin Resource reference to the Azure origin resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOrigin(ResourceReferenceArgs azureOrigin) {
             return azureOrigin(Output.of(azureOrigin));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,EnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(EnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param hostName The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param httpPort The value of the HTTP port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             $.httpPort = httpPort;
             return this;
         }
 
+        /**
+         * @param httpPort The value of the HTTP port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpPort(Integer httpPort) {
             return httpPort(Output.of(httpPort));
         }
 
+        /**
+         * @param httpsPort The value of the HTTPS port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             $.httpsPort = httpsPort;
             return this;
         }
 
+        /**
+         * @param httpsPort The value of the HTTPS port. Must be between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsPort(Integer httpsPort) {
             return httpsPort(Output.of(httpsPort));
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(Output<String> originGroupName) {
             $.originGroupName = originGroupName;
             return this;
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(String originGroupName) {
             return originGroupName(Output.of(originGroupName));
         }
 
+        /**
+         * @param originHostHeader The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             $.originHostHeader = originHostHeader;
             return this;
         }
 
+        /**
+         * @param originHostHeader The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder originHostHeader(String originHostHeader) {
             return originHostHeader(Output.of(originHostHeader));
         }
 
+        /**
+         * @param originName Name of the origin that is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originName(@Nullable Output<String> originName) {
             $.originName = originName;
             return this;
         }
 
+        /**
+         * @param originName Name of the origin that is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originName(String originName) {
             return originName(Output.of(originName));
         }
 
+        /**
+         * @param priority Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sharedPrivateLinkResource The properties of the private link resource for private origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResource(@Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource) {
             $.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
 
+        /**
+         * @param sharedPrivateLinkResource The properties of the private link resource for private origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResource(SharedPrivateLinkResourcePropertiesArgs sharedPrivateLinkResource) {
             return sharedPrivateLinkResource(Output.of(sharedPrivateLinkResource));
         }
 
+        /**
+         * @param weight Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }

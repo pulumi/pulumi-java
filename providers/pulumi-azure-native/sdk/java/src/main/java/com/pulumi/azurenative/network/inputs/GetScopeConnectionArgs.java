@@ -19,6 +19,10 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="networkManagerName", required=true)
     private String networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public String networkManagerName() {
         return this.networkManagerName;
     }
@@ -30,6 +34,10 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
     @Import(name="scopeConnectionName", required=true)
     private String scopeConnectionName;
 
+    /**
+     * @return Name for the cross-tenant connection.
+     * 
+     */
     public String scopeConnectionName() {
         return this.scopeConnectionName;
     }
@@ -71,16 +83,34 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
             $ = new GetScopeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scopeConnectionName Name for the cross-tenant connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeConnectionName(String scopeConnectionName) {
             $.scopeConnectionName = scopeConnectionName;
             return this;

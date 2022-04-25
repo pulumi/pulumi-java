@@ -13,67 +13,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWorkspaceResult {
     /**
-     * The creation time for this workspace resource.
+     * @return The creation time for this workspace resource.
      * 
      */
     private final String creationTime;
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
      */
     private final String id;
     /**
-     * The key vault identifier used for encrypted workspaces.
+     * @return The key vault identifier used for encrypted workspaces.
      * 
      */
     private final @Nullable String keyVaultIdentifierId;
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
     private final String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The email id of the owner for this workspace.
+     * @return The email id of the owner for this workspace.
      * 
      */
     private final String ownerEmail;
     /**
-     * The regional endpoint for the machine learning studio service which hosts this workspace.
+     * @return The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
      */
     private final String studioEndpoint;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The fully qualified arm id of the storage account associated with this workspace.
+     * @return The fully qualified arm id of the storage account associated with this workspace.
      * 
      */
     private final String userStorageAccountId;
     /**
-     * The immutable id associated with this workspace.
+     * @return The immutable id associated with this workspace.
      * 
      */
     private final String workspaceId;
     /**
-     * The current state of workspace resource.
+     * @return The current state of workspace resource.
      * 
      */
     private final String workspaceState;
     /**
-     * The type of this workspace.
+     * @return The type of this workspace.
      * 
      */
     private final String workspaceType;
@@ -109,93 +109,93 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The creation time for this workspace resource.
+     * @return The creation time for this workspace resource.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The key vault identifier used for encrypted workspaces.
+     * @return The key vault identifier used for encrypted workspaces.
      * 
-    */
+     */
     public Optional<String> keyVaultIdentifierId() {
         return Optional.ofNullable(this.keyVaultIdentifierId);
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The email id of the owner for this workspace.
+     * @return The email id of the owner for this workspace.
      * 
-    */
+     */
     public String ownerEmail() {
         return this.ownerEmail;
     }
     /**
-     * The regional endpoint for the machine learning studio service which hosts this workspace.
+     * @return The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
-    */
+     */
     public String studioEndpoint() {
         return this.studioEndpoint;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The fully qualified arm id of the storage account associated with this workspace.
+     * @return The fully qualified arm id of the storage account associated with this workspace.
      * 
-    */
+     */
     public String userStorageAccountId() {
         return this.userStorageAccountId;
     }
     /**
-     * The immutable id associated with this workspace.
+     * @return The immutable id associated with this workspace.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
     /**
-     * The current state of workspace resource.
+     * @return The current state of workspace resource.
      * 
-    */
+     */
     public String workspaceState() {
         return this.workspaceState;
     }
     /**
-     * The type of this workspace.
+     * @return The type of this workspace.
      * 
-    */
+     */
     public String workspaceType() {
         return this.workspaceType;
     }

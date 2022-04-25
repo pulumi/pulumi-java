@@ -28,6 +28,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
     @Import(name="configId")
     private @Nullable Output<String> configId;
 
+    /**
+     * @return Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
+     * 
+     */
     public Optional<Output<String>> configId() {
         return Optional.ofNullable(this.configId);
     }
@@ -39,6 +43,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
     @Import(name="disableTraceSampling")
     private @Nullable Output<Boolean> disableTraceSampling;
 
+    /**
+     * @return Enable or disable trace sampling. By default, this is set to false for enabled.
+     * 
+     */
     public Optional<Output<Boolean>> disableTraceSampling() {
         return Optional.ofNullable(this.disableTraceSampling);
     }
@@ -50,6 +58,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
     @Import(name="rolloutStrategy")
     private @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
+    /**
+     * @return Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
+     * 
+     */
     public Optional<Output<EndpointsApiServiceRolloutStrategy>> rolloutStrategy() {
         return Optional.ofNullable(this.rolloutStrategy);
     }
@@ -92,38 +108,86 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
             $ = new EndpointsApiServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configId Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(@Nullable Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId Endpoints service configuration ID as specified by the Service Management API. For example &#34;2016-09-19r1&#34;.By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param disableTraceSampling Enable or disable trace sampling. By default, this is set to false for enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
             $.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
+        /**
+         * @param disableTraceSampling Enable or disable trace sampling. By default, this is set to false for enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTraceSampling(Boolean disableTraceSampling) {
             return disableTraceSampling(Output.of(disableTraceSampling));
         }
 
+        /**
+         * @param name Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Endpoints service name which is the name of the &#34;service&#34; resource in the Service Management API. For example &#34;myapi.endpoints.myproject.cloud.goog&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rolloutStrategy Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutStrategy(@Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
             $.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
+        /**
+         * @param rolloutStrategy Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloutStrategy(EndpointsApiServiceRolloutStrategy rolloutStrategy) {
             return rolloutStrategy(Output.of(rolloutStrategy));
         }

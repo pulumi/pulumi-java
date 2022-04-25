@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NoEncryptionResponse {
     /**
-     * Representing supported protocols
+     * @return Representing supported protocols
      * 
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
@@ -23,9 +23,9 @@ public final class NoEncryptionResponse {
     }
 
     /**
-     * Representing supported protocols
+     * @return Representing supported protocols
      * 
-    */
+     */
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }

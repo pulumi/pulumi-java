@@ -24,6 +24,10 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends com
     @Import(name="date")
     private @Nullable Output<String> date;
 
+    /**
+     * @return Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
+     * 
+     */
     public Optional<Output<String>> date() {
         return Optional.ofNullable(this.date);
     }
@@ -35,6 +39,10 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends com
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return Number of days before the object is to be deleted.
+     * 
+     */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -46,6 +54,10 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends com
     @Import(name="expiredObjectDeleteMarker")
     private @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
+    /**
+     * @return Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
+     * 
+     */
     public Optional<Output<Boolean>> expiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }
@@ -76,29 +88,65 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends com
             $ = new BucketLifecycleConfigurationRuleExpirationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param date Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(@Nullable Output<String> date) {
             $.date = date;
             return this;
         }
 
+        /**
+         * @param date Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder date(String date) {
             return date(Output.of(date));
         }
 
+        /**
+         * @param days Number of days before the object is to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days Number of days before the object is to be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param expiredObjectDeleteMarker Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiredObjectDeleteMarker(@Nullable Output<Boolean> expiredObjectDeleteMarker) {
             $.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
+        /**
+         * @param expiredObjectDeleteMarker Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiredObjectDeleteMarker(Boolean expiredObjectDeleteMarker) {
             return expiredObjectDeleteMarker(Output.of(expiredObjectDeleteMarker));
         }

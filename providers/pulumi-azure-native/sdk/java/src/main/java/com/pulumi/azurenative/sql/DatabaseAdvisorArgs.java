@@ -23,6 +23,10 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="advisorName")
     private @Nullable Output<String> advisorName;
 
+    /**
+     * @return The name of the Database Advisor.
+     * 
+     */
     public Optional<Output<String>> advisorName() {
         return Optional.ofNullable(this.advisorName);
     }
@@ -34,6 +38,10 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="autoExecuteStatus", required=true)
     private Output<AutoExecuteStatus> autoExecuteStatus;
 
+    /**
+     * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
+     * 
+     */
     public Output<AutoExecuteStatus> autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
@@ -45,6 +53,10 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -56,6 +68,10 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -99,47 +119,107 @@ public final class DatabaseAdvisorArgs extends com.pulumi.resources.ResourceArgs
             $ = new DatabaseAdvisorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advisorName The name of the Database Advisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advisorName(@Nullable Output<String> advisorName) {
             $.advisorName = advisorName;
             return this;
         }
 
+        /**
+         * @param advisorName The name of the Database Advisor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advisorName(String advisorName) {
             return advisorName(Output.of(advisorName));
         }
 
+        /**
+         * @param autoExecuteStatus Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExecuteStatus(Output<AutoExecuteStatus> autoExecuteStatus) {
             $.autoExecuteStatus = autoExecuteStatus;
             return this;
         }
 
+        /**
+         * @param autoExecuteStatus Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExecuteStatus(AutoExecuteStatus autoExecuteStatus) {
             return autoExecuteStatus(Output.of(autoExecuteStatus));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

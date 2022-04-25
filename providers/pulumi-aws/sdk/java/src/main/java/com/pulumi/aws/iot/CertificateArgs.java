@@ -23,6 +23,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="active", required=true)
     private Output<Boolean> active;
 
+    /**
+     * @return Boolean flag to indicate if the certificate should be active
+     * 
+     */
     public Output<Boolean> active() {
         return this.active;
     }
@@ -38,6 +42,14 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="csr")
     private @Nullable Output<String> csr;
 
+    /**
+     * @return The certificate signing request. Review
+     * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+     * for more information on generating a certificate from a certificate signing request (CSR).
+     * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+     * for more information on generating keys and a certificate.
+     * 
+     */
     public Optional<Output<String>> csr() {
         return Optional.ofNullable(this.csr);
     }
@@ -67,20 +79,52 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active Boolean flag to indicate if the certificate should be active
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Output<Boolean> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active Boolean flag to indicate if the certificate should be active
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(Boolean active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param csr The certificate signing request. Review
+         * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+         * for more information on generating a certificate from a certificate signing request (CSR).
+         * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+         * for more information on generating keys and a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(@Nullable Output<String> csr) {
             $.csr = csr;
             return this;
         }
 
+        /**
+         * @param csr The certificate signing request. Review
+         * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
+         * for more information on generating a certificate from a certificate signing request (CSR).
+         * If none is specified both the certificate and keys will be generated, review [CreateKeysAndCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateKeysAndCertificate.html)
+         * for more information on generating keys and a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csr(String csr) {
             return csr(Output.of(csr));
         }

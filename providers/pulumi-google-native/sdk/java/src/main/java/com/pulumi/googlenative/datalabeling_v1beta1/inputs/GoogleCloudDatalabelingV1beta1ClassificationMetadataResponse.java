@@ -23,6 +23,10 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
     @Import(name="isMultiLabel", required=true)
     private Boolean isMultiLabel;
 
+    /**
+     * @return Whether the classification task is multi-label or not.
+     * 
+     */
     public Boolean isMultiLabel() {
         return this.isMultiLabel;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
             $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isMultiLabel Whether the classification task is multi-label or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMultiLabel(Boolean isMultiLabel) {
             $.isMultiLabel = isMultiLabel;
             return this;

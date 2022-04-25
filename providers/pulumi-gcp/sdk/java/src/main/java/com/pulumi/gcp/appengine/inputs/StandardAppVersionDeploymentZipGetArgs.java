@@ -23,6 +23,10 @@ public final class StandardAppVersionDeploymentZipGetArgs extends com.pulumi.res
     @Import(name="filesCount")
     private @Nullable Output<Integer> filesCount;
 
+    /**
+     * @return files count
+     * 
+     */
     public Optional<Output<Integer>> filesCount() {
         return Optional.ofNullable(this.filesCount);
     }
@@ -34,6 +38,10 @@ public final class StandardAppVersionDeploymentZipGetArgs extends com.pulumi.res
     @Import(name="sourceUrl", required=true)
     private Output<String> sourceUrl;
 
+    /**
+     * @return Source URL
+     * 
+     */
     public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
@@ -63,20 +71,44 @@ public final class StandardAppVersionDeploymentZipGetArgs extends com.pulumi.res
             $ = new StandardAppVersionDeploymentZipGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filesCount files count
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesCount(@Nullable Output<Integer> filesCount) {
             $.filesCount = filesCount;
             return this;
         }
 
+        /**
+         * @param filesCount files count
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesCount(Integer filesCount) {
             return filesCount(Output.of(filesCount));
         }
 
+        /**
+         * @param sourceUrl Source URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(Output<String> sourceUrl) {
             $.sourceUrl = sourceUrl;
             return this;
         }
 
+        /**
+         * @param sourceUrl Source URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrl(String sourceUrl) {
             return sourceUrl(Output.of(sourceUrl));
         }

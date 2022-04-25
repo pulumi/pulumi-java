@@ -25,6 +25,10 @@ public final class MoveResourceDependencyOverrideResponse extends com.pulumi.res
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Gets or sets the ARM ID of the dependent resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,11 @@ public final class MoveResourceDependencyOverrideResponse extends com.pulumi.res
     @Import(name="targetId")
     private @Nullable String targetId;
 
+    /**
+     * @return Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+     * the dependent resource.
+     * 
+     */
     public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -66,11 +75,24 @@ public final class MoveResourceDependencyOverrideResponse extends com.pulumi.res
             $ = new MoveResourceDependencyOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Gets or sets the ARM ID of the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param targetId Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
+         * the dependent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable String targetId) {
             $.targetId = targetId;
             return this;

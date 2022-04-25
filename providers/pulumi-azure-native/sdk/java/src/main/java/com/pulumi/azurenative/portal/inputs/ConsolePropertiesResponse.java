@@ -23,6 +23,10 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return The operating system type of the cloud shell.
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -34,6 +38,10 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the console.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -45,6 +53,10 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return Uri of the console.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -75,16 +87,34 @@ public final class ConsolePropertiesResponse extends com.pulumi.resources.Invoke
             $ = new ConsolePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param osType The operating system type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param uri Uri of the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

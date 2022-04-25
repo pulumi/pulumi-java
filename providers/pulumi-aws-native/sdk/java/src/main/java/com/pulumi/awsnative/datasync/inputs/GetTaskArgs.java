@@ -19,6 +19,10 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskArn", required=true)
     private String taskArn;
 
+    /**
+     * @return The ARN of the task.
+     * 
+     */
     public String taskArn() {
         return this.taskArn;
     }
@@ -47,6 +51,12 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param taskArn The ARN of the task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskArn(String taskArn) {
             $.taskArn = taskArn;
             return this;

@@ -24,6 +24,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="allSubscriptions")
     private @Nullable Output<Boolean> allSubscriptions;
 
+    /**
+     * @return Indicating whether all subscriptions are selected (=true) or not (=false).
+     * 
+     */
     public Optional<Output<Boolean>> allSubscriptions() {
         return Optional.ofNullable(this.allSubscriptions);
     }
@@ -35,6 +39,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="claim")
     private @Nullable Output<String> claim;
 
+    /**
+     * @return Gets or sets the association with Commercial&#39;s Billing Account.
+     * 
+     */
     public Optional<Output<String>> claim() {
         return Optional.ofNullable(this.claim);
     }
@@ -46,6 +54,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="collectionId")
     private @Nullable Output<String> collectionId;
 
+    /**
+     * @return The collection ID
+     * 
+     */
     public Optional<Output<String>> collectionId() {
         return Optional.ofNullable(this.collectionId);
     }
@@ -57,6 +69,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="collectionName")
     private @Nullable Output<String> collectionName;
 
+    /**
+     * @return Gets or sets collection name.
+     * 
+     */
     public Optional<Output<String>> collectionName() {
         return Optional.ofNullable(this.collectionName);
     }
@@ -68,6 +84,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Indicating whether the collection is enabled or disabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -79,6 +99,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="privateStoreId", required=true)
     private Output<String> privateStoreId;
 
+    /**
+     * @return The store ID - must use the tenant ID
+     * 
+     */
     public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
@@ -90,6 +114,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
     @Import(name="subscriptionsList")
     private @Nullable Output<List<String>> subscriptionsList;
 
+    /**
+     * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+     * 
+     */
     public Optional<Output<List<String>>> subscriptionsList() {
         return Optional.ofNullable(this.subscriptionsList);
     }
@@ -124,69 +152,159 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
             $ = new PrivateStoreCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allSubscriptions Indicating whether all subscriptions are selected (=true) or not (=false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allSubscriptions(@Nullable Output<Boolean> allSubscriptions) {
             $.allSubscriptions = allSubscriptions;
             return this;
         }
 
+        /**
+         * @param allSubscriptions Indicating whether all subscriptions are selected (=true) or not (=false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allSubscriptions(Boolean allSubscriptions) {
             return allSubscriptions(Output.of(allSubscriptions));
         }
 
+        /**
+         * @param claim Gets or sets the association with Commercial&#39;s Billing Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claim(@Nullable Output<String> claim) {
             $.claim = claim;
             return this;
         }
 
+        /**
+         * @param claim Gets or sets the association with Commercial&#39;s Billing Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claim(String claim) {
             return claim(Output.of(claim));
         }
 
+        /**
+         * @param collectionId The collection ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionId(@Nullable Output<String> collectionId) {
             $.collectionId = collectionId;
             return this;
         }
 
+        /**
+         * @param collectionId The collection ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionId(String collectionId) {
             return collectionId(Output.of(collectionId));
         }
 
+        /**
+         * @param collectionName Gets or sets collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionName(@Nullable Output<String> collectionName) {
             $.collectionName = collectionName;
             return this;
         }
 
+        /**
+         * @param collectionName Gets or sets collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionName(String collectionName) {
             return collectionName(Output.of(collectionName));
         }
 
+        /**
+         * @param enabled Indicating whether the collection is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Indicating whether the collection is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateStoreId(Output<String> privateStoreId) {
             $.privateStoreId = privateStoreId;
             return this;
         }
 
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateStoreId(String privateStoreId) {
             return privateStoreId(Output.of(privateStoreId));
         }
 
+        /**
+         * @param subscriptionsList Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionsList(@Nullable Output<List<String>> subscriptionsList) {
             $.subscriptionsList = subscriptionsList;
             return this;
         }
 
+        /**
+         * @param subscriptionsList Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionsList(List<String> subscriptionsList) {
             return subscriptionsList(Output.of(subscriptionsList));
         }
 
+        /**
+         * @param subscriptionsList Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionsList(String... subscriptionsList) {
             return subscriptionsList(List.of(subscriptionsList));
         }

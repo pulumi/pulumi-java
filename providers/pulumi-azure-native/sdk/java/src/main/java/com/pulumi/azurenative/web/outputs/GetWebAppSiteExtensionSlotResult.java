@@ -15,118 +15,118 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppSiteExtensionSlotResult {
     /**
-     * List of authors.
+     * @return List of authors.
      * 
      */
     private final @Nullable List<String> authors;
     /**
-     * Site Extension comment.
+     * @return Site Extension comment.
      * 
      */
     private final @Nullable String comment;
     /**
-     * Detailed description.
+     * @return Detailed description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Count of downloads.
+     * @return Count of downloads.
      * 
      */
     private final @Nullable Integer downloadCount;
     /**
-     * Site extension ID.
+     * @return Site extension ID.
      * 
      */
     private final @Nullable String extensionId;
     /**
-     * Site extension type.
+     * @return Site extension type.
      * 
      */
     private final @Nullable String extensionType;
     /**
-     * Extension URL.
+     * @return Extension URL.
      * 
      */
     private final @Nullable String extensionUrl;
     /**
-     * Feed URL.
+     * @return Feed URL.
      * 
      */
     private final @Nullable String feedUrl;
     /**
-     * Icon URL.
+     * @return Icon URL.
      * 
      */
     private final @Nullable String iconUrl;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Installed timestamp.
+     * @return Installed timestamp.
      * 
      */
     private final @Nullable String installedDateTime;
     /**
-     * Installer command line parameters.
+     * @return Installer command line parameters.
      * 
      */
     private final @Nullable String installerCommandLineParams;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * License URL.
+     * @return License URL.
      * 
      */
     private final @Nullable String licenseUrl;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
+     * @return &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     private final @Nullable Boolean localIsLatestVersion;
     /**
-     * Local path.
+     * @return Local path.
      * 
      */
     private final @Nullable String localPath;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Project URL.
+     * @return Project URL.
      * 
      */
     private final @Nullable String projectUrl;
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Published timestamp.
+     * @return Published timestamp.
      * 
      */
     private final @Nullable String publishedDateTime;
     /**
-     * Summary description.
+     * @return Summary description.
      * 
      */
     private final @Nullable String summary;
     private final @Nullable String title;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Version information.
+     * @return Version information.
      * 
      */
     private final @Nullable String version;
@@ -184,149 +184,149 @@ public final class GetWebAppSiteExtensionSlotResult {
     }
 
     /**
-     * List of authors.
+     * @return List of authors.
      * 
-    */
+     */
     public List<String> authors() {
         return this.authors == null ? List.of() : this.authors;
     }
     /**
-     * Site Extension comment.
+     * @return Site Extension comment.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * Detailed description.
+     * @return Detailed description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Count of downloads.
+     * @return Count of downloads.
      * 
-    */
+     */
     public Optional<Integer> downloadCount() {
         return Optional.ofNullable(this.downloadCount);
     }
     /**
-     * Site extension ID.
+     * @return Site extension ID.
      * 
-    */
+     */
     public Optional<String> extensionId() {
         return Optional.ofNullable(this.extensionId);
     }
     /**
-     * Site extension type.
+     * @return Site extension type.
      * 
-    */
+     */
     public Optional<String> extensionType() {
         return Optional.ofNullable(this.extensionType);
     }
     /**
-     * Extension URL.
+     * @return Extension URL.
      * 
-    */
+     */
     public Optional<String> extensionUrl() {
         return Optional.ofNullable(this.extensionUrl);
     }
     /**
-     * Feed URL.
+     * @return Feed URL.
      * 
-    */
+     */
     public Optional<String> feedUrl() {
         return Optional.ofNullable(this.feedUrl);
     }
     /**
-     * Icon URL.
+     * @return Icon URL.
      * 
-    */
+     */
     public Optional<String> iconUrl() {
         return Optional.ofNullable(this.iconUrl);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Installed timestamp.
+     * @return Installed timestamp.
      * 
-    */
+     */
     public Optional<String> installedDateTime() {
         return Optional.ofNullable(this.installedDateTime);
     }
     /**
-     * Installer command line parameters.
+     * @return Installer command line parameters.
      * 
-    */
+     */
     public Optional<String> installerCommandLineParams() {
         return Optional.ofNullable(this.installerCommandLineParams);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * License URL.
+     * @return License URL.
      * 
-    */
+     */
     public Optional<String> licenseUrl() {
         return Optional.ofNullable(this.licenseUrl);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
+     * @return &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
-    */
+     */
     public Optional<Boolean> localIsLatestVersion() {
         return Optional.ofNullable(this.localIsLatestVersion);
     }
     /**
-     * Local path.
+     * @return Local path.
      * 
-    */
+     */
     public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Project URL.
+     * @return Project URL.
      * 
-    */
+     */
     public Optional<String> projectUrl() {
         return Optional.ofNullable(this.projectUrl);
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Published timestamp.
+     * @return Published timestamp.
      * 
-    */
+     */
     public Optional<String> publishedDateTime() {
         return Optional.ofNullable(this.publishedDateTime);
     }
     /**
-     * Summary description.
+     * @return Summary description.
      * 
-    */
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -334,16 +334,16 @@ public final class GetWebAppSiteExtensionSlotResult {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version information.
+     * @return Version information.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

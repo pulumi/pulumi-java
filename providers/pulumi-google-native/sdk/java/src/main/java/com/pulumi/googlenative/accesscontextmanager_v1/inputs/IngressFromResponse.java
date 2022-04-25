@@ -25,6 +25,10 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identities", required=true)
     private List<String> identities;
 
+    /**
+     * @return A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     public List<String> identities() {
         return this.identities;
     }
@@ -36,6 +40,10 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityType", required=true)
     private String identityType;
 
+    /**
+     * @return Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     public String identityType() {
         return this.identityType;
     }
@@ -47,6 +55,10 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sources", required=true)
     private List<IngressSourceResponse> sources;
 
+    /**
+     * @return Sources that this IngressPolicy authorizes access from.
+     * 
+     */
     public List<IngressSourceResponse> sources() {
         return this.sources;
     }
@@ -77,25 +89,55 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IngressFromResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(List<String> identities) {
             $.identities = identities;
             return this;
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param sources Sources that this IngressPolicy authorizes access from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<IngressSourceResponse> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources Sources that this IngressPolicy authorizes access from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(IngressSourceResponse... sources) {
             return sources(List.of(sources));
         }

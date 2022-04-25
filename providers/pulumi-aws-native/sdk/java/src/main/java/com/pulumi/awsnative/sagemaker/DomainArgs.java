@@ -27,6 +27,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkAccessType")
     private @Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType;
 
+    /**
+     * @return Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
+     * 
+     */
     public Optional<Output<DomainAppNetworkAccessType>> appNetworkAccessType() {
         return Optional.ofNullable(this.appNetworkAccessType);
     }
@@ -38,6 +42,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
     private Output<DomainAuthMode> authMode;
 
+    /**
+     * @return The mode of authentication that members use to access the domain.
+     * 
+     */
     public Output<DomainAuthMode> authMode() {
         return this.authMode;
     }
@@ -49,6 +57,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultUserSettings", required=true)
     private Output<DomainUserSettingsArgs> defaultUserSettings;
 
+    /**
+     * @return The default user settings.
+     * 
+     */
     public Output<DomainUserSettingsArgs> defaultUserSettings() {
         return this.defaultUserSettings;
     }
@@ -60,6 +72,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return A name for the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -71,6 +87,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -82,6 +102,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return The VPC subnets that Studio uses for communication.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -93,6 +117,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DomainTagArgs>> tags;
 
+    /**
+     * @return A list of tags to apply to the user profile.
+     * 
+     */
     public Optional<Output<List<DomainTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -139,82 +171,190 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appNetworkAccessType Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appNetworkAccessType(@Nullable Output<DomainAppNetworkAccessType> appNetworkAccessType) {
             $.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
+        /**
+         * @param appNetworkAccessType Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appNetworkAccessType(DomainAppNetworkAccessType appNetworkAccessType) {
             return appNetworkAccessType(Output.of(appNetworkAccessType));
         }
 
+        /**
+         * @param authMode The mode of authentication that members use to access the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(Output<DomainAuthMode> authMode) {
             $.authMode = authMode;
             return this;
         }
 
+        /**
+         * @param authMode The mode of authentication that members use to access the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(DomainAuthMode authMode) {
             return authMode(Output.of(authMode));
         }
 
+        /**
+         * @param defaultUserSettings The default user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUserSettings(Output<DomainUserSettingsArgs> defaultUserSettings) {
             $.defaultUserSettings = defaultUserSettings;
             return this;
         }
 
+        /**
+         * @param defaultUserSettings The default user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUserSettings(DomainUserSettingsArgs defaultUserSettings) {
             return defaultUserSettings(Output.of(defaultUserSettings));
         }
 
+        /**
+         * @param domainName A name for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName A name for the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param kmsKeyId SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param subnetIds The VPC subnets that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The VPC subnets that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The VPC subnets that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A list of tags to apply to the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DomainTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags to apply to the user profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcId The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

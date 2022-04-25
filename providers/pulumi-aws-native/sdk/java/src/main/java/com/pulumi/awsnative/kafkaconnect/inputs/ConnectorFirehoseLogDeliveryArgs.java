@@ -27,6 +27,10 @@ public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources
     @Import(name="deliveryStream")
     private @Nullable Output<String> deliveryStream;
 
+    /**
+     * @return The Kinesis Data Firehose delivery stream that is the destination for log delivery.
+     * 
+     */
     public Optional<Output<String>> deliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
@@ -38,6 +42,10 @@ public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -67,20 +75,44 @@ public final class ConnectorFirehoseLogDeliveryArgs extends com.pulumi.resources
             $ = new ConnectorFirehoseLogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deliveryStream The Kinesis Data Firehose delivery stream that is the destination for log delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryStream(@Nullable Output<String> deliveryStream) {
             $.deliveryStream = deliveryStream;
             return this;
         }
 
+        /**
+         * @param deliveryStream The Kinesis Data Firehose delivery stream that is the destination for log delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryStream(String deliveryStream) {
             return deliveryStream(Output.of(deliveryStream));
         }
 
+        /**
+         * @param enabled Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

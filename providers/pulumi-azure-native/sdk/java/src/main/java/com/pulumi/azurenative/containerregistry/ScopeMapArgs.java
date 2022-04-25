@@ -25,6 +25,12 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
     private Output<List<String>> actions;
 
+    /**
+     * @return The list of scoped permissions for registry artifacts.
+     * E.g. repositories/repository-name/content/read,
+     * repositories/repository-name/metadata/write
+     * 
+     */
     public Output<List<String>> actions() {
         return this.actions;
     }
@@ -36,6 +42,10 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The user friendly description of the scope map.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +57,10 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -58,6 +72,10 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +87,10 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeMapName")
     private @Nullable Output<String> scopeMapName;
 
+    /**
+     * @return The name of the scope map.
+     * 
+     */
     public Optional<Output<String>> scopeMapName() {
         return Optional.ofNullable(this.scopeMapName);
     }
@@ -101,51 +123,123 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScopeMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The list of scoped permissions for registry artifacts.
+         * E.g. repositories/repository-name/content/read,
+         * repositories/repository-name/metadata/write
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(Output<List<String>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The list of scoped permissions for registry artifacts.
+         * E.g. repositories/repository-name/content/read,
+         * repositories/repository-name/metadata/write
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<String> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The list of scoped permissions for registry artifacts.
+         * E.g. repositories/repository-name/content/read,
+         * repositories/repository-name/metadata/write
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param description The user friendly description of the scope map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The user friendly description of the scope map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopeMapName The name of the scope map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeMapName(@Nullable Output<String> scopeMapName) {
             $.scopeMapName = scopeMapName;
             return this;
         }
 
+        /**
+         * @param scopeMapName The name of the scope map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeMapName(String scopeMapName) {
             return scopeMapName(Output.of(scopeMapName));
         }

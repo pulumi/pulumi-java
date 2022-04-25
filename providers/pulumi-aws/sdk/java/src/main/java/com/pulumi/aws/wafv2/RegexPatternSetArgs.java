@@ -25,6 +25,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A friendly description of the regular expression pattern set.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name of the regular expression pattern set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="regularExpressions")
     private @Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
+    /**
+     * @return One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
+     * 
+     */
     public Optional<Output<List<RegexPatternSetRegularExpressionArgs>>> regularExpressions() {
         return Optional.ofNullable(this.regularExpressions);
     }
@@ -58,6 +70,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -69,6 +85,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,51 +121,117 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
             $ = new RegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A friendly description of the regular expression pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A friendly description of the regular expression pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name A friendly name of the regular expression pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name of the regular expression pattern set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param regularExpressions One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions) {
             $.regularExpressions = regularExpressions;
             return this;
         }
 
+        /**
+         * @param regularExpressions One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularExpressions(List<RegexPatternSetRegularExpressionArgs> regularExpressions) {
             return regularExpressions(Output.of(regularExpressions));
         }
 
+        /**
+         * @param regularExpressions One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regularExpressions(RegexPatternSetRegularExpressionArgs... regularExpressions) {
             return regularExpressions(List.of(regularExpressions));
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -26,6 +26,10 @@ public final class AnnotationSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cloudHealthcareSource")
     private @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
+    /**
+     * @return Cloud Healthcare API resource.
+     * 
+     */
     public Optional<Output<CloudHealthcareSourceArgs>> cloudHealthcareSource() {
         return Optional.ofNullable(this.cloudHealthcareSource);
     }
@@ -54,11 +58,23 @@ public final class AnnotationSourceArgs extends com.pulumi.resources.ResourceArg
             $ = new AnnotationSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudHealthcareSource Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudHealthcareSource(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
             $.cloudHealthcareSource = cloudHealthcareSource;
             return this;
         }
 
+        /**
+         * @param cloudHealthcareSource Cloud Healthcare API resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudHealthcareSource(CloudHealthcareSourceArgs cloudHealthcareSource) {
             return cloudHealthcareSource(Output.of(cloudHealthcareSource));
         }

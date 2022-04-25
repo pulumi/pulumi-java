@@ -25,6 +25,10 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="consumerGroup")
     private @Nullable String consumerGroup;
 
+    /**
+     * @return Consumer group of the event hub to connected to.
+     * 
+     */
     public Optional<String> consumerGroup() {
         return Optional.ofNullable(this.consumerGroup);
     }
@@ -36,6 +40,10 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="eventHubName")
     private @Nullable String eventHubName;
 
+    /**
+     * @return Event Hub name to connect to.
+     * 
+     */
     public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -47,6 +55,10 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="fullyQualifiedEventHubNamespace")
     private @Nullable String fullyQualifiedEventHubNamespace;
 
+    /**
+     * @return Fully qualified namespace of the Event Hub to connect to.
+     * 
+     */
     public Optional<String> fullyQualifiedEventHubNamespace() {
         return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
@@ -77,16 +89,34 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
             $ = new IotEventHubIngestionEndpointConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroup Consumer group of the event hub to connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroup(@Nullable String consumerGroup) {
             $.consumerGroup = consumerGroup;
             return this;
         }
 
+        /**
+         * @param eventHubName Event Hub name to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable String eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param fullyQualifiedEventHubNamespace Fully qualified namespace of the Event Hub to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
             $.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;

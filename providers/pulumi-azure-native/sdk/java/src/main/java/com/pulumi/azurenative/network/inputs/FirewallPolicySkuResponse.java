@@ -25,6 +25,10 @@ public final class FirewallPolicySkuResponse extends com.pulumi.resources.Invoke
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Tier of Firewall Policy.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -53,6 +57,12 @@ public final class FirewallPolicySkuResponse extends com.pulumi.resources.Invoke
             $ = new FirewallPolicySkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tier Tier of Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

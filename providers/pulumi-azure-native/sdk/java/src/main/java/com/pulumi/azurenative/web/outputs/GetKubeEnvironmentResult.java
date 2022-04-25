@@ -18,76 +18,76 @@ import javax.annotation.Nullable;
 public final class GetKubeEnvironmentResult {
     private final @Nullable String aksResourceID;
     /**
-     * Cluster configuration which enables the log daemon to export
+     * @return Cluster configuration which enables the log daemon to export
      * app logs to a destination. Currently only &#34;log-analytics&#34; is
      * supported
      * 
      */
     private final @Nullable AppLogsConfigurationResponse appLogsConfiguration;
     /**
-     * Cluster configuration which determines the ARC cluster
+     * @return Cluster configuration which determines the ARC cluster
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
      * 
      */
     private final @Nullable ArcConfigurationResponse arcConfiguration;
     /**
-     * Default Domain Name for the cluster
+     * @return Default Domain Name for the cluster
      * 
      */
     private final String defaultDomain;
     /**
-     * Any errors that occurred during deployment or deployment validation
+     * @return Any errors that occurred during deployment or deployment validation
      * 
      */
     private final String deploymentErrors;
     /**
-     * Extended Location.
+     * @return Extended Location.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Only visible within Vnet/Subnet
+     * @return Only visible within Vnet/Subnet
      * 
      */
     private final @Nullable Boolean internalLoadBalancerEnabled;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
      */
     private final String location;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the Kubernetes Environment.
+     * @return Provisioning state of the Kubernetes Environment.
      * 
      */
     private final String provisioningState;
     /**
-     * Static IP of the KubeEnvironment
+     * @return Static IP of the KubeEnvironment
      * 
      */
     private final @Nullable String staticIp;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -130,104 +130,104 @@ public final class GetKubeEnvironmentResult {
         return Optional.ofNullable(this.aksResourceID);
     }
     /**
-     * Cluster configuration which enables the log daemon to export
+     * @return Cluster configuration which enables the log daemon to export
      * app logs to a destination. Currently only &#34;log-analytics&#34; is
      * supported
      * 
-    */
+     */
     public Optional<AppLogsConfigurationResponse> appLogsConfiguration() {
         return Optional.ofNullable(this.appLogsConfiguration);
     }
     /**
-     * Cluster configuration which determines the ARC cluster
+     * @return Cluster configuration which determines the ARC cluster
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
      * 
-    */
+     */
     public Optional<ArcConfigurationResponse> arcConfiguration() {
         return Optional.ofNullable(this.arcConfiguration);
     }
     /**
-     * Default Domain Name for the cluster
+     * @return Default Domain Name for the cluster
      * 
-    */
+     */
     public String defaultDomain() {
         return this.defaultDomain;
     }
     /**
-     * Any errors that occurred during deployment or deployment validation
+     * @return Any errors that occurred during deployment or deployment validation
      * 
-    */
+     */
     public String deploymentErrors() {
         return this.deploymentErrors;
     }
     /**
-     * Extended Location.
+     * @return Extended Location.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Only visible within Vnet/Subnet
+     * @return Only visible within Vnet/Subnet
      * 
-    */
+     */
     public Optional<Boolean> internalLoadBalancerEnabled() {
         return Optional.ofNullable(this.internalLoadBalancerEnabled);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the Kubernetes Environment.
+     * @return Provisioning state of the Kubernetes Environment.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Static IP of the KubeEnvironment
+     * @return Static IP of the KubeEnvironment
      * 
-    */
+     */
     public Optional<String> staticIp() {
         return Optional.ofNullable(this.staticIp);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

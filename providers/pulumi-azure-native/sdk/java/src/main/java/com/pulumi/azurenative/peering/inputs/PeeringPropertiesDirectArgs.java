@@ -31,6 +31,10 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="connections")
     private @Nullable Output<List<DirectConnectionArgs>> connections;
 
+    /**
+     * @return The set of connections that constitute a direct peering.
+     * 
+     */
     public Optional<Output<List<DirectConnectionArgs>>> connections() {
         return Optional.ofNullable(this.connections);
     }
@@ -42,6 +46,10 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="directPeeringType")
     private @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
 
+    /**
+     * @return The type of direct peering.
+     * 
+     */
     public Optional<Output<Either<String,DirectPeeringType>>> directPeeringType() {
         return Optional.ofNullable(this.directPeeringType);
     }
@@ -53,6 +61,10 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="peerAsn")
     private @Nullable Output<SubResourceArgs> peerAsn;
 
+    /**
+     * @return The reference of the peer ASN.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
@@ -83,41 +95,95 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
             $ = new PeeringPropertiesDirectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connections The set of connections that constitute a direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(@Nullable Output<List<DirectConnectionArgs>> connections) {
             $.connections = connections;
             return this;
         }
 
+        /**
+         * @param connections The set of connections that constitute a direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(List<DirectConnectionArgs> connections) {
             return connections(Output.of(connections));
         }
 
+        /**
+         * @param connections The set of connections that constitute a direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connections(DirectConnectionArgs... connections) {
             return connections(List.of(connections));
         }
 
+        /**
+         * @param directPeeringType The type of direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directPeeringType(@Nullable Output<Either<String,DirectPeeringType>> directPeeringType) {
             $.directPeeringType = directPeeringType;
             return this;
         }
 
+        /**
+         * @param directPeeringType The type of direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directPeeringType(Either<String,DirectPeeringType> directPeeringType) {
             return directPeeringType(Output.of(directPeeringType));
         }
 
+        /**
+         * @param directPeeringType The type of direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directPeeringType(String directPeeringType) {
             return directPeeringType(Either.ofLeft(directPeeringType));
         }
 
+        /**
+         * @param directPeeringType The type of direct peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directPeeringType(DirectPeeringType directPeeringType) {
             return directPeeringType(Either.ofRight(directPeeringType));
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
             $.peerAsn = peerAsn;
             return this;
         }
 
+        /**
+         * @param peerAsn The reference of the peer ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAsn(SubResourceArgs peerAsn) {
             return peerAsn(Output.of(peerAsn));
         }

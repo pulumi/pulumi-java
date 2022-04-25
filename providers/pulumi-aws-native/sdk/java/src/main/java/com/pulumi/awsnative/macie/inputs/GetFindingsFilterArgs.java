@@ -19,6 +19,10 @@ public final class GetFindingsFilterArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Findings filter ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetFindingsFilterArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetFindingsFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Findings filter ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

@@ -31,6 +31,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -53,6 +61,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="connectionString", required=true)
     private Object connectionString;
 
+    /**
+     * @return The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Object connectionString() {
         return this.connectionString;
     }
@@ -64,6 +76,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="database", required=true)
     private Object database;
 
+    /**
+     * @return The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object database() {
         return this.database;
     }
@@ -75,6 +91,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -86,6 +106,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="isServerVersionAbove32")
     private @Nullable Object isServerVersionAbove32;
 
+    /**
+     * @return Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> isServerVersionAbove32() {
         return Optional.ofNullable(this.isServerVersionAbove32);
     }
@@ -97,6 +121,10 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -109,6 +137,11 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;CosmosDbMongoDbApi&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -144,45 +177,100 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
             $ = new CosmosDbMongoDbApiLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectionString The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Object connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param database The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Object database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param isServerVersionAbove32 Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isServerVersionAbove32(@Nullable Object isServerVersionAbove32) {
             $.isServerVersionAbove32 = isServerVersionAbove32;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;CosmosDbMongoDbApi&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

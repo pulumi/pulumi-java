@@ -22,6 +22,10 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -33,6 +37,10 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -44,6 +52,10 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SKU. Ex - P3. It is typically a letter+number code
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -55,6 +67,10 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -66,6 +82,10 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -98,26 +118,56 @@ public final class ResourceModelWithAllowedPropertySetResponseSku extends com.pu
             $ = new ResourceModelWithAllowedPropertySetResponseSku(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family If the service has different generations of hardware, for the same SKU, then that can be captured here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU. Ex - P3. It is typically a letter+number code
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

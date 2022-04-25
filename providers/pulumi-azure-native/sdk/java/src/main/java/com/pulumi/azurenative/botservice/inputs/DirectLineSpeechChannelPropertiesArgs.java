@@ -27,6 +27,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="cognitiveServiceRegion", required=true)
     private Output<String> cognitiveServiceRegion;
 
+    /**
+     * @return The cognitive service region with this channel registration.
+     * 
+     */
     public Output<String> cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
@@ -38,6 +42,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
     private Output<String> cognitiveServiceSubscriptionKey;
 
+    /**
+     * @return The cognitive service subscription key to use with this channel registration.
+     * 
+     */
     public Output<String> cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
@@ -49,6 +57,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="customSpeechModelId")
     private @Nullable Output<String> customSpeechModelId;
 
+    /**
+     * @return Custom voice deployment id (optional).
+     * 
+     */
     public Optional<Output<String>> customSpeechModelId() {
         return Optional.ofNullable(this.customSpeechModelId);
     }
@@ -60,6 +72,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="customVoiceDeploymentId")
     private @Nullable Output<String> customVoiceDeploymentId;
 
+    /**
+     * @return Custom speech model id (optional).
+     * 
+     */
     public Optional<Output<String>> customVoiceDeploymentId() {
         return Optional.ofNullable(this.customVoiceDeploymentId);
     }
@@ -71,6 +87,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="isDefaultBotForCogSvcAccount")
     private @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
 
+    /**
+     * @return Make this a default bot for chosen cognitive service account.
+     * 
+     */
     public Optional<Output<Boolean>> isDefaultBotForCogSvcAccount() {
         return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
@@ -82,6 +102,10 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled or not.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -115,56 +139,128 @@ public final class DirectLineSpeechChannelPropertiesArgs extends com.pulumi.reso
             $ = new DirectLineSpeechChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cognitiveServiceRegion The cognitive service region with this channel registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitiveServiceRegion(Output<String> cognitiveServiceRegion) {
             $.cognitiveServiceRegion = cognitiveServiceRegion;
             return this;
         }
 
+        /**
+         * @param cognitiveServiceRegion The cognitive service region with this channel registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
             return cognitiveServiceRegion(Output.of(cognitiveServiceRegion));
         }
 
+        /**
+         * @param cognitiveServiceSubscriptionKey The cognitive service subscription key to use with this channel registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitiveServiceSubscriptionKey(Output<String> cognitiveServiceSubscriptionKey) {
             $.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
             return this;
         }
 
+        /**
+         * @param cognitiveServiceSubscriptionKey The cognitive service subscription key to use with this channel registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
             return cognitiveServiceSubscriptionKey(Output.of(cognitiveServiceSubscriptionKey));
         }
 
+        /**
+         * @param customSpeechModelId Custom voice deployment id (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSpeechModelId(@Nullable Output<String> customSpeechModelId) {
             $.customSpeechModelId = customSpeechModelId;
             return this;
         }
 
+        /**
+         * @param customSpeechModelId Custom voice deployment id (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSpeechModelId(String customSpeechModelId) {
             return customSpeechModelId(Output.of(customSpeechModelId));
         }
 
+        /**
+         * @param customVoiceDeploymentId Custom speech model id (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customVoiceDeploymentId(@Nullable Output<String> customVoiceDeploymentId) {
             $.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
 
+        /**
+         * @param customVoiceDeploymentId Custom speech model id (optional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customVoiceDeploymentId(String customVoiceDeploymentId) {
             return customVoiceDeploymentId(Output.of(customVoiceDeploymentId));
         }
 
+        /**
+         * @param isDefaultBotForCogSvcAccount Make this a default bot for chosen cognitive service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefaultBotForCogSvcAccount(@Nullable Output<Boolean> isDefaultBotForCogSvcAccount) {
             $.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
 
+        /**
+         * @param isDefaultBotForCogSvcAccount Make this a default bot for chosen cognitive service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefaultBotForCogSvcAccount(Boolean isDefaultBotForCogSvcAccount) {
             return isDefaultBotForCogSvcAccount(Output.of(isDefaultBotForCogSvcAccount));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }

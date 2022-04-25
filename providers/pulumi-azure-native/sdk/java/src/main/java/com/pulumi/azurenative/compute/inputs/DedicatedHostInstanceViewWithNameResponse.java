@@ -28,6 +28,10 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
     @Import(name="assetId", required=true)
     private String assetId;
 
+    /**
+     * @return Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
+     * 
+     */
     public String assetId() {
         return this.assetId;
     }
@@ -39,6 +43,10 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
     @Import(name="availableCapacity")
     private @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
+    /**
+     * @return Unutilized capacity of the dedicated host.
+     * 
+     */
     public Optional<DedicatedHostAvailableCapacityResponse> availableCapacity() {
         return Optional.ofNullable(this.availableCapacity);
     }
@@ -50,6 +58,10 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the dedicated host.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -92,26 +108,56 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
             $ = new DedicatedHostInstanceViewWithNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(String assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param availableCapacity Unutilized capacity of the dedicated host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
             $.availableCapacity = availableCapacity;
             return this;
         }
 
+        /**
+         * @param name The name of the dedicated host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }

@@ -26,6 +26,10 @@ public final class DeviceConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
     private @Nullable Output<String> binaryData;
 
+    /**
+     * @return The device configuration data.
+     * 
+     */
     public Optional<Output<String>> binaryData() {
         return Optional.ofNullable(this.binaryData);
     }
@@ -54,11 +58,23 @@ public final class DeviceConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binaryData The device configuration data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryData(@Nullable Output<String> binaryData) {
             $.binaryData = binaryData;
             return this;
         }
 
+        /**
+         * @param binaryData The device configuration data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryData(String binaryData) {
             return binaryData(Output.of(binaryData));
         }

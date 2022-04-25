@@ -24,6 +24,10 @@ public final class EndpointRangeDescriptionArgs extends com.pulumi.resources.Res
     @Import(name="endPort", required=true)
     private Output<Integer> endPort;
 
+    /**
+     * @return End port of a range of ports
+     * 
+     */
     public Output<Integer> endPort() {
         return this.endPort;
     }
@@ -35,6 +39,10 @@ public final class EndpointRangeDescriptionArgs extends com.pulumi.resources.Res
     @Import(name="startPort", required=true)
     private Output<Integer> startPort;
 
+    /**
+     * @return Starting port of a range of ports
+     * 
+     */
     public Output<Integer> startPort() {
         return this.startPort;
     }
@@ -64,20 +72,44 @@ public final class EndpointRangeDescriptionArgs extends com.pulumi.resources.Res
             $ = new EndpointRangeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endPort End port of a range of ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPort(Output<Integer> endPort) {
             $.endPort = endPort;
             return this;
         }
 
+        /**
+         * @param endPort End port of a range of ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder endPort(Integer endPort) {
             return endPort(Output.of(endPort));
         }
 
+        /**
+         * @param startPort Starting port of a range of ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder startPort(Output<Integer> startPort) {
             $.startPort = startPort;
             return this;
         }
 
+        /**
+         * @param startPort Starting port of a range of ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder startPort(Integer startPort) {
             return startPort(Output.of(startPort));
         }

@@ -26,6 +26,10 @@ public final class EnvelopeSignatureArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyid")
     private @Nullable Output<String> keyid;
 
+    /**
+     * @return A reference id to the key being used for signing
+     * 
+     */
     public Optional<Output<String>> keyid() {
         return Optional.ofNullable(this.keyid);
     }
@@ -37,6 +41,10 @@ public final class EnvelopeSignatureArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sig")
     private @Nullable Output<String> sig;
 
+    /**
+     * @return The signature itself
+     * 
+     */
     public Optional<Output<String>> sig() {
         return Optional.ofNullable(this.sig);
     }
@@ -66,20 +74,44 @@ public final class EnvelopeSignatureArgs extends com.pulumi.resources.ResourceAr
             $ = new EnvelopeSignatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyid A reference id to the key being used for signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyid(@Nullable Output<String> keyid) {
             $.keyid = keyid;
             return this;
         }
 
+        /**
+         * @param keyid A reference id to the key being used for signing
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyid(String keyid) {
             return keyid(Output.of(keyid));
         }
 
+        /**
+         * @param sig The signature itself
+         * 
+         * @return builder
+         * 
+         */
         public Builder sig(@Nullable Output<String> sig) {
             $.sig = sig;
             return this;
         }
 
+        /**
+         * @param sig The signature itself
+         * 
+         * @return builder
+         * 
+         */
         public Builder sig(String sig) {
             return sig(Output.of(sig));
         }

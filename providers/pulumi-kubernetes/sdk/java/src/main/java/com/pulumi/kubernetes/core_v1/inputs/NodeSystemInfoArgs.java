@@ -24,6 +24,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="architecture", required=true)
     private Output<String> architecture;
 
+    /**
+     * @return The Architecture reported by the node
+     * 
+     */
     public Output<String> architecture() {
         return this.architecture;
     }
@@ -35,6 +39,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bootID", required=true)
     private Output<String> bootID;
 
+    /**
+     * @return Boot ID reported by the node.
+     * 
+     */
     public Output<String> bootID() {
         return this.bootID;
     }
@@ -46,6 +54,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerRuntimeVersion", required=true)
     private Output<String> containerRuntimeVersion;
 
+    /**
+     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * 
+     */
     public Output<String> containerRuntimeVersion() {
         return this.containerRuntimeVersion;
     }
@@ -57,6 +69,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kernelVersion", required=true)
     private Output<String> kernelVersion;
 
+    /**
+     * @return Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
+     * 
+     */
     public Output<String> kernelVersion() {
         return this.kernelVersion;
     }
@@ -68,6 +84,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubeProxyVersion", required=true)
     private Output<String> kubeProxyVersion;
 
+    /**
+     * @return KubeProxy Version reported by the node.
+     * 
+     */
     public Output<String> kubeProxyVersion() {
         return this.kubeProxyVersion;
     }
@@ -79,6 +99,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubeletVersion", required=true)
     private Output<String> kubeletVersion;
 
+    /**
+     * @return Kubelet Version reported by the node.
+     * 
+     */
     public Output<String> kubeletVersion() {
         return this.kubeletVersion;
     }
@@ -90,6 +114,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="machineID", required=true)
     private Output<String> machineID;
 
+    /**
+     * @return MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+     * 
+     */
     public Output<String> machineID() {
         return this.machineID;
     }
@@ -101,6 +129,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operatingSystem", required=true)
     private Output<String> operatingSystem;
 
+    /**
+     * @return The Operating System reported by the node
+     * 
+     */
     public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
@@ -112,6 +144,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osImage", required=true)
     private Output<String> osImage;
 
+    /**
+     * @return OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+     * 
+     */
     public Output<String> osImage() {
         return this.osImage;
     }
@@ -123,6 +159,10 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="systemUUID", required=true)
     private Output<String> systemUUID;
 
+    /**
+     * @return SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+     * 
+     */
     public Output<String> systemUUID() {
         return this.systemUUID;
     }
@@ -160,92 +200,212 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NodeSystemInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param architecture The Architecture reported by the node
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(Output<String> architecture) {
             $.architecture = architecture;
             return this;
         }
 
+        /**
+         * @param architecture The Architecture reported by the node
+         * 
+         * @return builder
+         * 
+         */
         public Builder architecture(String architecture) {
             return architecture(Output.of(architecture));
         }
 
+        /**
+         * @param bootID Boot ID reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootID(Output<String> bootID) {
             $.bootID = bootID;
             return this;
         }
 
+        /**
+         * @param bootID Boot ID reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootID(String bootID) {
             return bootID(Output.of(bootID));
         }
 
+        /**
+         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRuntimeVersion(Output<String> containerRuntimeVersion) {
             $.containerRuntimeVersion = containerRuntimeVersion;
             return this;
         }
 
+        /**
+         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRuntimeVersion(String containerRuntimeVersion) {
             return containerRuntimeVersion(Output.of(containerRuntimeVersion));
         }
 
+        /**
+         * @param kernelVersion Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelVersion(Output<String> kernelVersion) {
             $.kernelVersion = kernelVersion;
             return this;
         }
 
+        /**
+         * @param kernelVersion Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernelVersion(String kernelVersion) {
             return kernelVersion(Output.of(kernelVersion));
         }
 
+        /**
+         * @param kubeProxyVersion KubeProxy Version reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeProxyVersion(Output<String> kubeProxyVersion) {
             $.kubeProxyVersion = kubeProxyVersion;
             return this;
         }
 
+        /**
+         * @param kubeProxyVersion KubeProxy Version reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeProxyVersion(String kubeProxyVersion) {
             return kubeProxyVersion(Output.of(kubeProxyVersion));
         }
 
+        /**
+         * @param kubeletVersion Kubelet Version reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletVersion(Output<String> kubeletVersion) {
             $.kubeletVersion = kubeletVersion;
             return this;
         }
 
+        /**
+         * @param kubeletVersion Kubelet Version reported by the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletVersion(String kubeletVersion) {
             return kubeletVersion(Output.of(kubeletVersion));
         }
 
+        /**
+         * @param machineID MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineID(Output<String> machineID) {
             $.machineID = machineID;
             return this;
         }
 
+        /**
+         * @param machineID MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineID(String machineID) {
             return machineID(Output.of(machineID));
         }
 
+        /**
+         * @param operatingSystem The Operating System reported by the node
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(Output<String> operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
 
+        /**
+         * @param operatingSystem The Operating System reported by the node
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(String operatingSystem) {
             return operatingSystem(Output.of(operatingSystem));
         }
 
+        /**
+         * @param osImage OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osImage(Output<String> osImage) {
             $.osImage = osImage;
             return this;
         }
 
+        /**
+         * @param osImage OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osImage(String osImage) {
             return osImage(Output.of(osImage));
         }
 
+        /**
+         * @param systemUUID SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemUUID(Output<String> systemUUID) {
             $.systemUUID = systemUUID;
             return this;
         }
 
+        /**
+         * @param systemUUID SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemUUID(String systemUUID) {
             return systemUUID(Output.of(systemUUID));
         }

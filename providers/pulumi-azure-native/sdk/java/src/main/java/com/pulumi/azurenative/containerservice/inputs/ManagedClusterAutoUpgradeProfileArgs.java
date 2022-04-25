@@ -28,6 +28,10 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends com.pulumi.resou
     @Import(name="upgradeChannel")
     private @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
+    /**
+     * @return upgrade channel for auto upgrade.
+     * 
+     */
     public Optional<Output<Either<String,UpgradeChannel>>> upgradeChannel() {
         return Optional.ofNullable(this.upgradeChannel);
     }
@@ -56,19 +60,43 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends com.pulumi.resou
             $ = new ManagedClusterAutoUpgradeProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param upgradeChannel upgrade channel for auto upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeChannel(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
             $.upgradeChannel = upgradeChannel;
             return this;
         }
 
+        /**
+         * @param upgradeChannel upgrade channel for auto upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeChannel(Either<String,UpgradeChannel> upgradeChannel) {
             return upgradeChannel(Output.of(upgradeChannel));
         }
 
+        /**
+         * @param upgradeChannel upgrade channel for auto upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeChannel(String upgradeChannel) {
             return upgradeChannel(Either.ofLeft(upgradeChannel));
         }
 
+        /**
+         * @param upgradeChannel upgrade channel for auto upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeChannel(UpgradeChannel upgradeChannel) {
             return upgradeChannel(Either.ofRight(upgradeChannel));
         }

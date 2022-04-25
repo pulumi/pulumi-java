@@ -23,6 +23,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
     @Import(name="dnsVerificationIp")
     private @Nullable Output<String> dnsVerificationIp;
 
+    /**
+     * @return The IPv4 address to be used for reverse DNS verification.
+     * 
+     */
     public Optional<Output<String>> dnsVerificationIp() {
         return Optional.ofNullable(this.dnsVerificationIp);
     }
@@ -45,6 +53,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
     @Import(name="ipCidrRange")
     private @Nullable Output<String> ipCidrRange;
 
+    /**
+     * @return The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+     * 
+     */
     public Optional<Output<String>> ipCidrRange() {
         return Optional.ofNullable(this.ipCidrRange);
     }
@@ -56,6 +68,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +97,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
     @Import(name="status")
     private @Nullable Output<PublicAdvertisedPrefixStatus> status;
 
+    /**
+     * @return The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+     * 
+     */
     public Optional<Output<PublicAdvertisedPrefixStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -115,38 +135,86 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
             $ = new PublicAdvertisedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dnsVerificationIp The IPv4 address to be used for reverse DNS verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsVerificationIp(@Nullable Output<String> dnsVerificationIp) {
             $.dnsVerificationIp = dnsVerificationIp;
             return this;
         }
 
+        /**
+         * @param dnsVerificationIp The IPv4 address to be used for reverse DNS verification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsVerificationIp(String dnsVerificationIp) {
             return dnsVerificationIp(Output.of(dnsVerificationIp));
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             return ipCidrRange(Output.of(ipCidrRange));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -169,11 +237,23 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param status The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<PublicAdvertisedPrefixStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PublicAdvertisedPrefixStatus status) {
             return status(Output.of(status));
         }

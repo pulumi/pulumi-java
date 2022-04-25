@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
     /**
-     * Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+     * @return Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
      * 
      */
     private final @Nullable String registryName;
     /**
-     * ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
+     * @return ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
      */
     private final @Nullable String schemaArn;
     /**
-     * Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
+     * @return Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
      */
     private final @Nullable String schemaName;
@@ -38,23 +38,23 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
     }
 
     /**
-     * Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
+     * @return Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
      * 
-    */
+     */
     public Optional<String> registryName() {
         return Optional.ofNullable(this.registryName);
     }
     /**
-     * ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
+     * @return ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
-    */
+     */
     public Optional<String> schemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
     /**
-     * Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
+     * @return Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
-    */
+     */
     public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }

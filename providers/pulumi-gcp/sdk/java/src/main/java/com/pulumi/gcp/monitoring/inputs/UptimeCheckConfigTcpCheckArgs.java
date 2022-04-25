@@ -20,6 +20,10 @@ public final class UptimeCheckConfigTcpCheckArgs extends com.pulumi.resources.Re
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -48,11 +52,23 @@ public final class UptimeCheckConfigTcpCheckArgs extends com.pulumi.resources.Re
             $ = new UptimeCheckConfigTcpCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

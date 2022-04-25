@@ -19,6 +19,10 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="labName", required=true)
     private String labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public String labName() {
         return this.labName;
     }
@@ -30,6 +34,10 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the service runner.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetServiceRunnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param name The name of the service runner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

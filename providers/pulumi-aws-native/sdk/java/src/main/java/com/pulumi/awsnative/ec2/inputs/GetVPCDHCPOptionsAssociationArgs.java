@@ -19,6 +19,10 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
     @Import(name="dhcpOptionsId", required=true)
     private String dhcpOptionsId;
 
+    /**
+     * @return The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+     * 
+     */
     public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
@@ -30,6 +34,10 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The ID of the VPC.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -59,11 +67,23 @@ public final class GetVPCDHCPOptionsAssociationArgs extends com.pulumi.resources
             $ = new GetVPCDHCPOptionsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhcpOptionsId The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptionsId(String dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

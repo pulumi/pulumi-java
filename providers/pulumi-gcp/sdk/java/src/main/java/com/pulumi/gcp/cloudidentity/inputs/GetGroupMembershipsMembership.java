@@ -30,6 +30,10 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
     @Import(name="group", required=true)
     private String group;
 
+    /**
+     * @return The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     public String group() {
         return this.group;
     }
@@ -48,6 +52,10 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,6 +74,10 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
     @Import(name="roles", required=true)
     private List<GetGroupMembershipsMembershipRole> roles;
 
+    /**
+     * @return The MembershipRoles that apply to the Membership. Structure is documented below.
+     * 
+     */
     public List<GetGroupMembershipsMembershipRole> roles() {
         return this.roles;
     }
@@ -120,6 +132,12 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
             return this;
         }
 
+        /**
+         * @param group The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             $.group = group;
             return this;
@@ -134,6 +152,12 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
             return memberKeys(List.of(memberKeys));
         }
 
+        /**
+         * @param name The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
@@ -148,11 +172,23 @@ public final class GetGroupMembershipsMembership extends com.pulumi.resources.In
             return preferredMemberKeys(List.of(preferredMemberKeys));
         }
 
+        /**
+         * @param roles The MembershipRoles that apply to the Membership. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<GetGroupMembershipsMembershipRole> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The MembershipRoles that apply to the Membership. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(GetGroupMembershipsMembershipRole... roles) {
             return roles(List.of(roles));
         }

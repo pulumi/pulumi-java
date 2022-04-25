@@ -22,6 +22,11 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -34,6 +39,11 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
     @Import(name="workloadIdentityPoolId", required=true)
     private String workloadIdentityPoolId;
 
+    /**
+     * @return The id of the pool which is the
+     * final component of the pool resource name.
+     * 
+     */
     public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
@@ -46,6 +56,11 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
     @Import(name="workloadIdentityPoolProviderId", required=true)
     private String workloadIdentityPoolProviderId;
 
+    /**
+     * @return The id of the provider which is the
+     * final component of the resource name.
+     * 
+     */
     public String workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
@@ -76,16 +91,37 @@ public final class GetWorkloadIdentityPoolProviderArgs extends com.pulumi.resour
             $ = new GetWorkloadIdentityPoolProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param workloadIdentityPoolId The id of the pool which is the
+         * final component of the pool resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
+        /**
+         * @param workloadIdentityPoolProviderId The id of the provider which is the
+         * final component of the resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
             $.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
             return this;

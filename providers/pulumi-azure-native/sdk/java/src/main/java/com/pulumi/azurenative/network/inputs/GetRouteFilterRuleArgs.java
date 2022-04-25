@@ -19,6 +19,10 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
     @Import(name="routeFilterName", required=true)
     private String routeFilterName;
 
+    /**
+     * @return The name of the route filter.
+     * 
+     */
     public String routeFilterName() {
         return this.routeFilterName;
     }
@@ -41,6 +49,10 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -71,16 +83,34 @@ public final class GetRouteFilterRuleArgs extends com.pulumi.resources.InvokeArg
             $ = new GetRouteFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeFilterName The name of the route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterName(String routeFilterName) {
             $.routeFilterName = routeFilterName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;

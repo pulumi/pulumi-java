@@ -26,6 +26,10 @@ public final class NetworkRoutingConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="routingMode")
     private @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
+    /**
+     * @return The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+     * 
+     */
     public Optional<Output<NetworkRoutingConfigRoutingMode>> routingMode() {
         return Optional.ofNullable(this.routingMode);
     }
@@ -54,11 +58,23 @@ public final class NetworkRoutingConfigArgs extends com.pulumi.resources.Resourc
             $ = new NetworkRoutingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routingMode The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingMode(@Nullable Output<NetworkRoutingConfigRoutingMode> routingMode) {
             $.routingMode = routingMode;
             return this;
         }
 
+        /**
+         * @param routingMode The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingMode(NetworkRoutingConfigRoutingMode routingMode) {
             return routingMode(Output.of(routingMode));
         }

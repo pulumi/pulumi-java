@@ -24,6 +24,10 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the maintenance window target.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the maintenance window target.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="ownerInformation")
     private @Nullable Output<String> ownerInformation;
 
+    /**
+     * @return User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
+     * 
+     */
     public Optional<Output<String>> ownerInformation() {
         return Optional.ofNullable(this.ownerInformation);
     }
@@ -57,6 +69,10 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
+    /**
+     * @return The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
+     * 
+     */
     public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -69,6 +85,11 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="targets")
     private @Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets;
 
+    /**
+     * @return The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+     * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
+     * 
+     */
     public Optional<Output<List<MaintenanceWindowTargetTargetGetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -80,6 +101,10 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="windowId")
     private @Nullable Output<String> windowId;
 
+    /**
+     * @return The Id of the maintenance window to register the target with.
+     * 
+     */
     public Optional<Output<String>> windowId() {
         return Optional.ofNullable(this.windowId);
     }
@@ -113,60 +138,141 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
             $ = new MaintenanceWindowTargetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the maintenance window target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the maintenance window target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the maintenance window target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the maintenance window target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerInformation User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerInformation(@Nullable Output<String> ownerInformation) {
             $.ownerInformation = ownerInformation;
             return this;
         }
 
+        /**
+         * @param ownerInformation User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerInformation(String ownerInformation) {
             return ownerInformation(Output.of(ownerInformation));
         }
 
+        /**
+         * @param resourceType The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param targets The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+         * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+         * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<MaintenanceWindowTargetTargetGetArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
+         * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(MaintenanceWindowTargetTargetGetArgs... targets) {
             return targets(List.of(targets));
         }
 
+        /**
+         * @param windowId The Id of the maintenance window to register the target with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowId(@Nullable Output<String> windowId) {
             $.windowId = windowId;
             return this;
         }
 
+        /**
+         * @param windowId The Id of the maintenance window to register the target with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowId(String windowId) {
             return windowId(Output.of(windowId));
         }

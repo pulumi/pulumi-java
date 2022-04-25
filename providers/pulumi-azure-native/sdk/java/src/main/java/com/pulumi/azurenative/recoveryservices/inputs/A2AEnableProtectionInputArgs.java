@@ -31,6 +31,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="diskEncryptionInfo")
     private @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
+    /**
+     * @return The recovery disk encryption information.
+     * 
+     */
     public Optional<Output<DiskEncryptionInfoArgs>> diskEncryptionInfo() {
         return Optional.ofNullable(this.diskEncryptionInfo);
     }
@@ -42,6 +46,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="fabricObjectId")
     private @Nullable Output<String> fabricObjectId;
 
+    /**
+     * @return The fabric specific object Id of the virtual machine.
+     * 
+     */
     public Optional<Output<String>> fabricObjectId() {
         return Optional.ofNullable(this.fabricObjectId);
     }
@@ -54,6 +62,11 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -65,6 +78,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="multiVmGroupName")
     private @Nullable Output<String> multiVmGroupName;
 
+    /**
+     * @return The multi vm group name.
+     * 
+     */
     public Optional<Output<String>> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
@@ -76,6 +93,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryAvailabilitySetId")
     private @Nullable Output<String> recoveryAvailabilitySetId;
 
+    /**
+     * @return The recovery availability set Id.
+     * 
+     */
     public Optional<Output<String>> recoveryAvailabilitySetId() {
         return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
@@ -87,6 +108,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryAvailabilityZone")
     private @Nullable Output<String> recoveryAvailabilityZone;
 
+    /**
+     * @return The recovery availability zone.
+     * 
+     */
     public Optional<Output<String>> recoveryAvailabilityZone() {
         return Optional.ofNullable(this.recoveryAvailabilityZone);
     }
@@ -98,6 +123,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryAzureNetworkId")
     private @Nullable Output<String> recoveryAzureNetworkId;
 
+    /**
+     * @return The recovery Azure virtual network ARM id.
+     * 
+     */
     public Optional<Output<String>> recoveryAzureNetworkId() {
         return Optional.ofNullable(this.recoveryAzureNetworkId);
     }
@@ -109,6 +138,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryBootDiagStorageAccountId")
     private @Nullable Output<String> recoveryBootDiagStorageAccountId;
 
+    /**
+     * @return The boot diagnostic storage account.
+     * 
+     */
     public Optional<Output<String>> recoveryBootDiagStorageAccountId() {
         return Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
@@ -120,6 +153,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryCloudServiceId")
     private @Nullable Output<String> recoveryCloudServiceId;
 
+    /**
+     * @return The recovery cloud service Id. Valid for V1 scenarios.
+     * 
+     */
     public Optional<Output<String>> recoveryCloudServiceId() {
         return Optional.ofNullable(this.recoveryCloudServiceId);
     }
@@ -131,6 +168,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryContainerId")
     private @Nullable Output<String> recoveryContainerId;
 
+    /**
+     * @return The recovery container Id.
+     * 
+     */
     public Optional<Output<String>> recoveryContainerId() {
         return Optional.ofNullable(this.recoveryContainerId);
     }
@@ -142,6 +183,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryProximityPlacementGroupId")
     private @Nullable Output<String> recoveryProximityPlacementGroupId;
 
+    /**
+     * @return The recovery proximity placement group Id.
+     * 
+     */
     public Optional<Output<String>> recoveryProximityPlacementGroupId() {
         return Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
@@ -153,6 +198,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoveryResourceGroupId")
     private @Nullable Output<String> recoveryResourceGroupId;
 
+    /**
+     * @return The recovery resource group Id. Valid for V2 scenarios.
+     * 
+     */
     public Optional<Output<String>> recoveryResourceGroupId() {
         return Optional.ofNullable(this.recoveryResourceGroupId);
     }
@@ -164,6 +213,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="recoverySubnetName")
     private @Nullable Output<String> recoverySubnetName;
 
+    /**
+     * @return The recovery subnet name.
+     * 
+     */
     public Optional<Output<String>> recoverySubnetName() {
         return Optional.ofNullable(this.recoverySubnetName);
     }
@@ -175,6 +228,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="vmDisks")
     private @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
+    /**
+     * @return The list of vm disk details.
+     * 
+     */
     public Optional<Output<List<A2AVmDiskInputDetailsArgs>>> vmDisks() {
         return Optional.ofNullable(this.vmDisks);
     }
@@ -186,6 +243,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
     @Import(name="vmManagedDisks")
     private @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 
+    /**
+     * @return The list of vm managed disk details.
+     * 
+     */
     public Optional<Output<List<A2AVmManagedDiskInputDetailsArgs>>> vmManagedDisks() {
         return Optional.ofNullable(this.vmManagedDisks);
     }
@@ -228,145 +289,339 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
             $ = new A2AEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionInfo The recovery disk encryption information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionInfo(@Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo) {
             $.diskEncryptionInfo = diskEncryptionInfo;
             return this;
         }
 
+        /**
+         * @param diskEncryptionInfo The recovery disk encryption information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionInfo(DiskEncryptionInfoArgs diskEncryptionInfo) {
             return diskEncryptionInfo(Output.of(diskEncryptionInfo));
         }
 
+        /**
+         * @param fabricObjectId The fabric specific object Id of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricObjectId(@Nullable Output<String> fabricObjectId) {
             $.fabricObjectId = fabricObjectId;
             return this;
         }
 
+        /**
+         * @param fabricObjectId The fabric specific object Id of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricObjectId(String fabricObjectId) {
             return fabricObjectId(Output.of(fabricObjectId));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(String multiVmGroupName) {
             return multiVmGroupName(Output.of(multiVmGroupName));
         }
 
+        /**
+         * @param recoveryAvailabilitySetId The recovery availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilitySetId(@Nullable Output<String> recoveryAvailabilitySetId) {
             $.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param recoveryAvailabilitySetId The recovery availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilitySetId(String recoveryAvailabilitySetId) {
             return recoveryAvailabilitySetId(Output.of(recoveryAvailabilitySetId));
         }
 
+        /**
+         * @param recoveryAvailabilityZone The recovery availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilityZone(@Nullable Output<String> recoveryAvailabilityZone) {
             $.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param recoveryAvailabilityZone The recovery availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilityZone(String recoveryAvailabilityZone) {
             return recoveryAvailabilityZone(Output.of(recoveryAvailabilityZone));
         }
 
+        /**
+         * @param recoveryAzureNetworkId The recovery Azure virtual network ARM id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureNetworkId(@Nullable Output<String> recoveryAzureNetworkId) {
             $.recoveryAzureNetworkId = recoveryAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureNetworkId The recovery Azure virtual network ARM id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureNetworkId(String recoveryAzureNetworkId) {
             return recoveryAzureNetworkId(Output.of(recoveryAzureNetworkId));
         }
 
+        /**
+         * @param recoveryBootDiagStorageAccountId The boot diagnostic storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryBootDiagStorageAccountId(@Nullable Output<String> recoveryBootDiagStorageAccountId) {
             $.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryBootDiagStorageAccountId The boot diagnostic storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryBootDiagStorageAccountId(String recoveryBootDiagStorageAccountId) {
             return recoveryBootDiagStorageAccountId(Output.of(recoveryBootDiagStorageAccountId));
         }
 
+        /**
+         * @param recoveryCloudServiceId The recovery cloud service Id. Valid for V1 scenarios.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryCloudServiceId(@Nullable Output<String> recoveryCloudServiceId) {
             $.recoveryCloudServiceId = recoveryCloudServiceId;
             return this;
         }
 
+        /**
+         * @param recoveryCloudServiceId The recovery cloud service Id. Valid for V1 scenarios.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryCloudServiceId(String recoveryCloudServiceId) {
             return recoveryCloudServiceId(Output.of(recoveryCloudServiceId));
         }
 
+        /**
+         * @param recoveryContainerId The recovery container Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryContainerId(@Nullable Output<String> recoveryContainerId) {
             $.recoveryContainerId = recoveryContainerId;
             return this;
         }
 
+        /**
+         * @param recoveryContainerId The recovery container Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryContainerId(String recoveryContainerId) {
             return recoveryContainerId(Output.of(recoveryContainerId));
         }
 
+        /**
+         * @param recoveryProximityPlacementGroupId The recovery proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProximityPlacementGroupId(@Nullable Output<String> recoveryProximityPlacementGroupId) {
             $.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryProximityPlacementGroupId The recovery proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProximityPlacementGroupId(String recoveryProximityPlacementGroupId) {
             return recoveryProximityPlacementGroupId(Output.of(recoveryProximityPlacementGroupId));
         }
 
+        /**
+         * @param recoveryResourceGroupId The recovery resource group Id. Valid for V2 scenarios.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryResourceGroupId(@Nullable Output<String> recoveryResourceGroupId) {
             $.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryResourceGroupId The recovery resource group Id. Valid for V2 scenarios.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryResourceGroupId(String recoveryResourceGroupId) {
             return recoveryResourceGroupId(Output.of(recoveryResourceGroupId));
         }
 
+        /**
+         * @param recoverySubnetName The recovery subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoverySubnetName(@Nullable Output<String> recoverySubnetName) {
             $.recoverySubnetName = recoverySubnetName;
             return this;
         }
 
+        /**
+         * @param recoverySubnetName The recovery subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoverySubnetName(String recoverySubnetName) {
             return recoverySubnetName(Output.of(recoverySubnetName));
         }
 
+        /**
+         * @param vmDisks The list of vm disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmDisks(@Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks) {
             $.vmDisks = vmDisks;
             return this;
         }
 
+        /**
+         * @param vmDisks The list of vm disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmDisks(List<A2AVmDiskInputDetailsArgs> vmDisks) {
             return vmDisks(Output.of(vmDisks));
         }
 
+        /**
+         * @param vmDisks The list of vm disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmDisks(A2AVmDiskInputDetailsArgs... vmDisks) {
             return vmDisks(List.of(vmDisks));
         }
 
+        /**
+         * @param vmManagedDisks The list of vm managed disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmManagedDisks(@Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
             $.vmManagedDisks = vmManagedDisks;
             return this;
         }
 
+        /**
+         * @param vmManagedDisks The list of vm managed disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmManagedDisks(List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
             return vmManagedDisks(Output.of(vmManagedDisks));
         }
 
+        /**
+         * @param vmManagedDisks The list of vm managed disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmManagedDisks(A2AVmManagedDiskInputDetailsArgs... vmManagedDisks) {
             return vmManagedDisks(List.of(vmManagedDisks));
         }

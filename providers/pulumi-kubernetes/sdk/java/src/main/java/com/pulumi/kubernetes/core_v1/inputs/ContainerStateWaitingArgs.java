@@ -26,6 +26,10 @@ public final class ContainerStateWaitingArgs extends com.pulumi.resources.Resour
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Message regarding why the container is not yet running.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -37,6 +41,10 @@ public final class ContainerStateWaitingArgs extends com.pulumi.resources.Resour
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return (brief) reason the container is not yet running.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -66,20 +74,44 @@ public final class ContainerStateWaitingArgs extends com.pulumi.resources.Resour
             $ = new ContainerStateWaitingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message Message regarding why the container is not yet running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Message regarding why the container is not yet running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param reason (brief) reason the container is not yet running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason (brief) reason the container is not yet running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }

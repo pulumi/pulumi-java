@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentPatchConfigPreStep {
     /**
-     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
      */
     private final @Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig;
     /**
-     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
      */
@@ -34,18 +34,18 @@ public final class PatchDeploymentPatchConfigPreStep {
     }
 
     /**
-     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigPreStepLinuxExecStepConfig> linuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
     /**
-     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+     * @return The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigPreStepWindowsExecStepConfig> windowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }

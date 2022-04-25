@@ -19,6 +19,10 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namedQueryId", required=true)
     private String namedQueryId;
 
+    /**
+     * @return The unique ID of the query.
+     * 
+     */
     public String namedQueryId() {
         return this.namedQueryId;
     }
@@ -47,6 +51,12 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNamedQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namedQueryId The unique ID of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedQueryId(String namedQueryId) {
             $.namedQueryId = namedQueryId;
             return this;

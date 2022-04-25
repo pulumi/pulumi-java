@@ -21,6 +21,10 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="configuration", required=true)
     private Output<String> configuration;
 
+    /**
+     * @return The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+     * 
+     */
     public Output<String> configuration() {
         return this.configuration;
     }
@@ -32,6 +36,10 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name specified to identify the patch source.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -43,6 +51,10 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="products", required=true)
     private Output<List<String>> products;
 
+    /**
+     * @return The specific operating system versions a patch repository applies to, such as `&#34;Ubuntu16.04&#34;`, `&#34;AmazonLinux2016.09&#34;`, `&#34;RedhatEnterpriseLinux7.2&#34;` or `&#34;Suse12.7&#34;`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+     * 
+     */
     public Output<List<String>> products() {
         return this.products;
     }
@@ -73,33 +85,75 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
             $ = new PatchBaselineSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Output<String> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(String configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param name The name specified to identify the patch source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name specified to identify the patch source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param products The specific operating system versions a patch repository applies to, such as `&#34;Ubuntu16.04&#34;`, `&#34;AmazonLinux2016.09&#34;`, `&#34;RedhatEnterpriseLinux7.2&#34;` or `&#34;Suse12.7&#34;`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(Output<List<String>> products) {
             $.products = products;
             return this;
         }
 
+        /**
+         * @param products The specific operating system versions a patch repository applies to, such as `&#34;Ubuntu16.04&#34;`, `&#34;AmazonLinux2016.09&#34;`, `&#34;RedhatEnterpriseLinux7.2&#34;` or `&#34;Suse12.7&#34;`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(List<String> products) {
             return products(Output.of(products));
         }
 
+        /**
+         * @param products The specific operating system versions a patch repository applies to, such as `&#34;Ubuntu16.04&#34;`, `&#34;AmazonLinux2016.09&#34;`, `&#34;RedhatEnterpriseLinux7.2&#34;` or `&#34;Suse12.7&#34;`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder products(String... products) {
             return products(List.of(products));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IdentitySelectorResponse {
     /**
-     * The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
+     * @return The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
      * 
      */
     private final String identity;
@@ -21,9 +21,9 @@ public final class IdentitySelectorResponse {
     }
 
     /**
-     * The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
+     * @return The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: &#34;user:mike@example.com&#34;, &#34;group:admins@example.com&#34;, &#34;domain:google.com&#34;, &#34;serviceAccount:my-project-id@appspot.gserviceaccount.com&#34;. Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
      * 
-    */
+     */
     public String identity() {
         return this.identity;
     }

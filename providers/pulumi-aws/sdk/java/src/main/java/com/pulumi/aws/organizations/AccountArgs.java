@@ -23,6 +23,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
     private Output<String> email;
 
+    /**
+     * @return The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
+     * 
+     */
     public Output<String> email() {
         return this.email;
     }
@@ -34,6 +38,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamUserAccessToBilling")
     private @Nullable Output<String> iamUserAccessToBilling;
 
+    /**
+     * @return If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
+     * 
+     */
     public Optional<Output<String>> iamUserAccessToBilling() {
         return Optional.ofNullable(this.iamUserAccessToBilling);
     }
@@ -45,6 +53,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name for the member account.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId")
     private @Nullable Output<String> parentId;
 
+    /**
+     * @return Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
+     * 
+     */
     public Optional<Output<String>> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -67,6 +83,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName")
     private @Nullable Output<String> roleName;
 
+    /**
+     * @return The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
+     * 
+     */
     public Optional<Output<String>> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -78,6 +98,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -111,56 +135,128 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param iamUserAccessToBilling If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamUserAccessToBilling(@Nullable Output<String> iamUserAccessToBilling) {
             $.iamUserAccessToBilling = iamUserAccessToBilling;
             return this;
         }
 
+        /**
+         * @param iamUserAccessToBilling If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamUserAccessToBilling(String iamUserAccessToBilling) {
             return iamUserAccessToBilling(Output.of(iamUserAccessToBilling));
         }
 
+        /**
+         * @param name A friendly name for the member account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name for the member account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parentId Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(@Nullable Output<String> parentId) {
             $.parentId = parentId;
             return this;
         }
 
+        /**
+         * @param parentId Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             return parentId(Output.of(parentId));
         }
 
+        /**
+         * @param roleName The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

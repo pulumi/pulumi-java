@@ -19,6 +19,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionId", required=true)
     private String extensionId;
 
+    /**
+     * @return Id of extension resource.
+     * 
+     */
     public String extensionId() {
         return this.extensionId;
     }
@@ -30,6 +34,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="farmBeatsResourceName", required=true)
     private String farmBeatsResourceName;
 
+    /**
+     * @return FarmBeats resource name.
+     * 
+     */
     public String farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionId Id of extension resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionId(String extensionId) {
             $.extensionId = extensionId;
             return this;
         }
 
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

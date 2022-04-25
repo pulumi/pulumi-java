@@ -26,6 +26,10 @@ public final class HealthAlertCriteriaResponse extends com.pulumi.resources.Invo
     @Import(name="allOf")
     private @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
+    /**
+     * @return The list of metric criteria for this &#39;all of&#39; operation.
+     * 
+     */
     public Optional<List<VmGuestHealthAlertCriterionResponse>> allOf() {
         return Optional.ofNullable(this.allOf);
     }
@@ -54,11 +58,23 @@ public final class HealthAlertCriteriaResponse extends com.pulumi.resources.Invo
             $ = new HealthAlertCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allOf The list of metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
             $.allOf = allOf;
             return this;
         }
 
+        /**
+         * @param allOf The list of metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(VmGuestHealthAlertCriterionResponse... allOf) {
             return allOf(List.of(allOf));
         }

@@ -23,6 +23,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateEndpointName")
     private @Nullable Output<String> privateEndpointName;
 
+    /**
+     * @return The name of the private endpoint.
+     * 
+     */
     public Optional<Output<String>> privateEndpointName() {
         return Optional.ofNullable(this.privateEndpointName);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
     private @Nullable Output<PrivateEndpointPropertiesArgs> properties;
 
+    /**
+     * @return The properties associated with a private endpoint.
+     * 
+     */
     public Optional<Output<PrivateEndpointPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
             $ = new PrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
             $.privateEndpointName = privateEndpointName;
             return this;
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(String privateEndpointName) {
             return privateEndpointName(Output.of(privateEndpointName));
         }
 
+        /**
+         * @param properties The properties associated with a private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<PrivateEndpointPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties associated with a private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

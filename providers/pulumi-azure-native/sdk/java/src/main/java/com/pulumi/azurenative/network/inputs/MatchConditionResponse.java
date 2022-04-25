@@ -28,6 +28,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchValues", required=true)
     private List<String> matchValues;
 
+    /**
+     * @return Match value.
+     * 
+     */
     public List<String> matchValues() {
         return this.matchValues;
     }
@@ -39,6 +43,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchVariables", required=true)
     private List<MatchVariableResponse> matchVariables;
 
+    /**
+     * @return List of match variables.
+     * 
+     */
     public List<MatchVariableResponse> matchVariables() {
         return this.matchVariables;
     }
@@ -50,6 +58,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="negationConditon")
     private @Nullable Boolean negationConditon;
 
+    /**
+     * @return Whether this is negate condition or not.
+     * 
+     */
     public Optional<Boolean> negationConditon() {
         return Optional.ofNullable(this.negationConditon);
     }
@@ -61,6 +73,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The operator to be matched.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -72,6 +88,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms.
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -104,39 +124,87 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
             $ = new MatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues Match value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(List<String> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues Match value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param matchVariables List of match variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariables(List<MatchVariableResponse> matchVariables) {
             $.matchVariables = matchVariables;
             return this;
         }
 
+        /**
+         * @param matchVariables List of match variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariables(MatchVariableResponse... matchVariables) {
             return matchVariables(List.of(matchVariables));
         }
 
+        /**
+         * @param negationConditon Whether this is negate condition or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negationConditon(@Nullable Boolean negationConditon) {
             $.negationConditon = negationConditon;
             return this;
         }
 
+        /**
+         * @param operator The operator to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

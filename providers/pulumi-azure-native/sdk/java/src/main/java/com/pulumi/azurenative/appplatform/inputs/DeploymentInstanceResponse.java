@@ -23,6 +23,10 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
     @Import(name="discoveryStatus", required=true)
     private String discoveryStatus;
 
+    /**
+     * @return Discovery status of the deployment instance
+     * 
+     */
     public String discoveryStatus() {
         return this.discoveryStatus;
     }
@@ -34,6 +38,10 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the deployment instance
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
     @Import(name="reason", required=true)
     private String reason;
 
+    /**
+     * @return Failed reason of the deployment instance
+     * 
+     */
     public String reason() {
         return this.reason;
     }
@@ -56,6 +68,10 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the deployment instance
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -67,6 +83,10 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the deployment instance
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -99,26 +119,56 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
             $ = new DeploymentInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param discoveryStatus Discovery status of the deployment instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryStatus(String discoveryStatus) {
             $.discoveryStatus = discoveryStatus;
             return this;
         }
 
+        /**
+         * @param name Name of the deployment instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param reason Failed reason of the deployment instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the deployment instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status Status of the deployment instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

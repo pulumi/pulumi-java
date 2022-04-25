@@ -22,6 +22,10 @@ public final class ApiKeyStageKeyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="restApiId")
     private @Nullable Output<String> restApiId;
 
+    /**
+     * @return The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+     * 
+     */
     public Optional<Output<String>> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
@@ -33,6 +37,10 @@ public final class ApiKeyStageKeyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="stageName")
     private @Nullable Output<String> stageName;
 
+    /**
+     * @return The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+     * 
+     */
     public Optional<Output<String>> stageName() {
         return Optional.ofNullable(this.stageName);
     }
@@ -62,20 +70,44 @@ public final class ApiKeyStageKeyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ApiKeyStageKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param restApiId The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(@Nullable Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param stageName The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(@Nullable Output<String> stageName) {
             $.stageName = stageName;
             return this;
         }
 
+        /**
+         * @param stageName The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             return stageName(Output.of(stageName));
         }

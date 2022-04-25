@@ -23,6 +23,11 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="callerReference")
     private @Nullable Output<String> callerReference;
 
+    /**
+     * @return Internal value used by CloudFront to allow future
+     * updates to the origin access identity.
+     * 
+     */
     public Optional<Output<String>> callerReference() {
         return Optional.ofNullable(this.callerReference);
     }
@@ -35,6 +40,11 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="cloudfrontAccessIdentityPath")
     private @Nullable Output<String> cloudfrontAccessIdentityPath;
 
+    /**
+     * @return A shortcut to the full path for the
+     * origin access identity to use in CloudFront, see below.
+     * 
+     */
     public Optional<Output<String>> cloudfrontAccessIdentityPath() {
         return Optional.ofNullable(this.cloudfrontAccessIdentityPath);
     }
@@ -46,6 +56,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return An optional comment for the origin access identity.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -58,6 +72,11 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The current version of the origin access identity&#39;s information.
+     * For example: `E2QWRUHAPOMQZL`.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -71,6 +90,12 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="iamArn")
     private @Nullable Output<String> iamArn;
 
+    /**
+     * @return A pre-generated ARN for use in S3 bucket policies (see below).
+     * Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+     * E2QWRUHAPOMQZL`.
+     * 
+     */
     public Optional<Output<String>> iamArn() {
         return Optional.ofNullable(this.iamArn);
     }
@@ -84,6 +109,12 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="s3CanonicalUserId")
     private @Nullable Output<String> s3CanonicalUserId;
 
+    /**
+     * @return The Amazon S3 canonical user ID for the origin
+     * access identity, which you use when giving the origin access identity read
+     * permission to an object in Amazon S3.
+     * 
+     */
     public Optional<Output<String>> s3CanonicalUserId() {
         return Optional.ofNullable(this.s3CanonicalUserId);
     }
@@ -117,56 +148,142 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
             $ = new OriginAccessIdentityState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callerReference Internal value used by CloudFront to allow future
+         * updates to the origin access identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callerReference(@Nullable Output<String> callerReference) {
             $.callerReference = callerReference;
             return this;
         }
 
+        /**
+         * @param callerReference Internal value used by CloudFront to allow future
+         * updates to the origin access identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callerReference(String callerReference) {
             return callerReference(Output.of(callerReference));
         }
 
+        /**
+         * @param cloudfrontAccessIdentityPath A shortcut to the full path for the
+         * origin access identity to use in CloudFront, see below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudfrontAccessIdentityPath(@Nullable Output<String> cloudfrontAccessIdentityPath) {
             $.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
             return this;
         }
 
+        /**
+         * @param cloudfrontAccessIdentityPath A shortcut to the full path for the
+         * origin access identity to use in CloudFront, see below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudfrontAccessIdentityPath(String cloudfrontAccessIdentityPath) {
             return cloudfrontAccessIdentityPath(Output.of(cloudfrontAccessIdentityPath));
         }
 
+        /**
+         * @param comment An optional comment for the origin access identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment An optional comment for the origin access identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param etag The current version of the origin access identity&#39;s information.
+         * For example: `E2QWRUHAPOMQZL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The current version of the origin access identity&#39;s information.
+         * For example: `E2QWRUHAPOMQZL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param iamArn A pre-generated ARN for use in S3 bucket policies (see below).
+         * Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+         * E2QWRUHAPOMQZL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamArn(@Nullable Output<String> iamArn) {
             $.iamArn = iamArn;
             return this;
         }
 
+        /**
+         * @param iamArn A pre-generated ARN for use in S3 bucket policies (see below).
+         * Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+         * E2QWRUHAPOMQZL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamArn(String iamArn) {
             return iamArn(Output.of(iamArn));
         }
 
+        /**
+         * @param s3CanonicalUserId The Amazon S3 canonical user ID for the origin
+         * access identity, which you use when giving the origin access identity read
+         * permission to an object in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3CanonicalUserId(@Nullable Output<String> s3CanonicalUserId) {
             $.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
 
+        /**
+         * @param s3CanonicalUserId The Amazon S3 canonical user ID for the origin
+         * access identity, which you use when giving the origin access identity read
+         * permission to an object in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3CanonicalUserId(String s3CanonicalUserId) {
             return s3CanonicalUserId(Output.of(s3CanonicalUserId));
         }

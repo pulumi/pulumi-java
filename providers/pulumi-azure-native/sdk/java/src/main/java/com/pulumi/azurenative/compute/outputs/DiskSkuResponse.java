@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiskSkuResponse {
     /**
-     * The sku name.
+     * @return The sku name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The sku tier.
+     * @return The sku tier.
      * 
      */
     private final String tier;
@@ -31,16 +31,16 @@ public final class DiskSkuResponse {
     }
 
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The sku tier.
+     * @return The sku tier.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

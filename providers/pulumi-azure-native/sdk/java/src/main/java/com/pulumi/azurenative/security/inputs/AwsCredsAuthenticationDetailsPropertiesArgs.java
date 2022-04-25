@@ -26,6 +26,11 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is &#39;awsCreds&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -37,6 +42,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="awsAccessKeyId", required=true)
     private Output<String> awsAccessKeyId;
 
+    /**
+     * @return Public key element of the AWS credential object (write only)
+     * 
+     */
     public Output<String> awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
@@ -48,6 +57,10 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="awsSecretAccessKey", required=true)
     private Output<String> awsSecretAccessKey;
 
+    /**
+     * @return Secret key element of the AWS credential object (write only)
+     * 
+     */
     public Output<String> awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
@@ -78,29 +91,67 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
             $ = new AwsCredsAuthenticationDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;awsCreds&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;awsCreds&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param awsAccessKeyId Public key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKeyId(Output<String> awsAccessKeyId) {
             $.awsAccessKeyId = awsAccessKeyId;
             return this;
         }
 
+        /**
+         * @param awsAccessKeyId Public key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccessKeyId(String awsAccessKeyId) {
             return awsAccessKeyId(Output.of(awsAccessKeyId));
         }
 
+        /**
+         * @param awsSecretAccessKey Secret key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsSecretAccessKey(Output<String> awsSecretAccessKey) {
             $.awsSecretAccessKey = awsSecretAccessKey;
             return this;
         }
 
+        /**
+         * @param awsSecretAccessKey Secret key element of the AWS credential object (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             return awsSecretAccessKey(Output.of(awsSecretAccessKey));
         }

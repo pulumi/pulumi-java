@@ -21,97 +21,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPublicIPPrefixResult {
     /**
-     * The customIpPrefix that this prefix is associated with.
+     * @return The customIpPrefix that this prefix is associated with.
      * 
      */
     private final @Nullable SubResourceResponse customIPPrefix;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * The extended location of the public ip address.
+     * @return The extended location of the public ip address.
      * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The allocated Prefix.
+     * @return The allocated Prefix.
      * 
      */
     private final String ipPrefix;
     /**
-     * The list of tags associated with the public IP prefix.
+     * @return The list of tags associated with the public IP prefix.
      * 
      */
     private final @Nullable List<IpTagResponse> ipTags;
     /**
-     * The reference to load balancer frontend IP configuration associated with the public IP prefix.
+     * @return The reference to load balancer frontend IP configuration associated with the public IP prefix.
      * 
      */
     private final SubResourceResponse loadBalancerFrontendIpConfiguration;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * NatGateway of Public IP Prefix.
+     * @return NatGateway of Public IP Prefix.
      * 
      */
     private final @Nullable NatGatewayResponse natGateway;
     /**
-     * The Length of the Public IP Prefix.
+     * @return The Length of the Public IP Prefix.
      * 
      */
     private final @Nullable Integer prefixLength;
     /**
-     * The provisioning state of the public IP prefix resource.
+     * @return The provisioning state of the public IP prefix resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The public IP address version.
+     * @return The public IP address version.
      * 
      */
     private final @Nullable String publicIPAddressVersion;
     /**
-     * The list of all referenced PublicIPAddresses.
+     * @return The list of all referenced PublicIPAddresses.
      * 
      */
     private final List<ReferencedPublicIpAddressResponse> publicIPAddresses;
     /**
-     * The resource GUID property of the public IP prefix resource.
+     * @return The resource GUID property of the public IP prefix resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * The public IP prefix SKU.
+     * @return The public IP prefix SKU.
      * 
      */
     private final @Nullable PublicIPPrefixSkuResponse sku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
     private final @Nullable List<String> zones;
@@ -159,135 +159,135 @@ public final class GetPublicIPPrefixResult {
     }
 
     /**
-     * The customIpPrefix that this prefix is associated with.
+     * @return The customIpPrefix that this prefix is associated with.
      * 
-    */
+     */
     public Optional<SubResourceResponse> customIPPrefix() {
         return Optional.ofNullable(this.customIPPrefix);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The extended location of the public ip address.
+     * @return The extended location of the public ip address.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The allocated Prefix.
+     * @return The allocated Prefix.
      * 
-    */
+     */
     public String ipPrefix() {
         return this.ipPrefix;
     }
     /**
-     * The list of tags associated with the public IP prefix.
+     * @return The list of tags associated with the public IP prefix.
      * 
-    */
+     */
     public List<IpTagResponse> ipTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
     /**
-     * The reference to load balancer frontend IP configuration associated with the public IP prefix.
+     * @return The reference to load balancer frontend IP configuration associated with the public IP prefix.
      * 
-    */
+     */
     public SubResourceResponse loadBalancerFrontendIpConfiguration() {
         return this.loadBalancerFrontendIpConfiguration;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * NatGateway of Public IP Prefix.
+     * @return NatGateway of Public IP Prefix.
      * 
-    */
+     */
     public Optional<NatGatewayResponse> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
-     * The Length of the Public IP Prefix.
+     * @return The Length of the Public IP Prefix.
      * 
-    */
+     */
     public Optional<Integer> prefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
     /**
-     * The provisioning state of the public IP prefix resource.
+     * @return The provisioning state of the public IP prefix resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The public IP address version.
+     * @return The public IP address version.
      * 
-    */
+     */
     public Optional<String> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
     /**
-     * The list of all referenced PublicIPAddresses.
+     * @return The list of all referenced PublicIPAddresses.
      * 
-    */
+     */
     public List<ReferencedPublicIpAddressResponse> publicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
-     * The resource GUID property of the public IP prefix resource.
+     * @return The resource GUID property of the public IP prefix resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The public IP prefix SKU.
+     * @return The public IP prefix SKU.
      * 
-    */
+     */
     public Optional<PublicIPPrefixSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

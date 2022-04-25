@@ -26,6 +26,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Wireless device description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="destinationName", required=true)
     private Output<String> destinationName;
 
+    /**
+     * @return Wireless device destination name
+     * 
+     */
     public Output<String> destinationName() {
         return this.destinationName;
     }
@@ -48,6 +56,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lastUplinkReceivedAt")
     private @Nullable Output<String> lastUplinkReceivedAt;
 
+    /**
+     * @return The date and time when the most recent uplink was received.
+     * 
+     */
     public Optional<Output<String>> lastUplinkReceivedAt() {
         return Optional.ofNullable(this.lastUplinkReceivedAt);
     }
@@ -59,6 +71,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loRaWAN")
     private @Nullable Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
 
+    /**
+     * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+     * 
+     */
     public Optional<Output<WirelessDeviceLoRaWANDeviceArgs>> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
@@ -70,6 +86,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Wireless device name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<WirelessDeviceTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+     * 
+     */
     public Optional<Output<List<WirelessDeviceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="thingArn")
     private @Nullable Output<String> thingArn;
 
+    /**
+     * @return Thing arn. Passed into update to associate Thing with Wireless device.
+     * 
+     */
     public Optional<Output<String>> thingArn() {
         return Optional.ofNullable(this.thingArn);
     }
@@ -103,6 +131,10 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<WirelessDeviceType> type;
 
+    /**
+     * @return Wireless device type, currently only Sidewalk and LoRa
+     * 
+     */
     public Output<WirelessDeviceType> type() {
         return this.type;
     }
@@ -138,78 +170,180 @@ public final class WirelessDeviceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WirelessDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Wireless device description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Wireless device description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationName Wireless device destination name
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(Output<String> destinationName) {
             $.destinationName = destinationName;
             return this;
         }
 
+        /**
+         * @param destinationName Wireless device destination name
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(String destinationName) {
             return destinationName(Output.of(destinationName));
         }
 
+        /**
+         * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUplinkReceivedAt(@Nullable Output<String> lastUplinkReceivedAt) {
             $.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
 
+        /**
+         * @param lastUplinkReceivedAt The date and time when the most recent uplink was received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUplinkReceivedAt(String lastUplinkReceivedAt) {
             return lastUplinkReceivedAt(Output.of(lastUplinkReceivedAt));
         }
 
+        /**
+         * @param loRaWAN The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(@Nullable Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN) {
             $.loRaWAN = loRaWAN;
             return this;
         }
 
+        /**
+         * @param loRaWAN The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loRaWAN(WirelessDeviceLoRaWANDeviceArgs loRaWAN) {
             return loRaWAN(Output.of(loRaWAN));
         }
 
+        /**
+         * @param name Wireless device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Wireless device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<WirelessDeviceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<WirelessDeviceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(WirelessDeviceTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param thingArn Thing arn. Passed into update to associate Thing with Wireless device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingArn(@Nullable Output<String> thingArn) {
             $.thingArn = thingArn;
             return this;
         }
 
+        /**
+         * @param thingArn Thing arn. Passed into update to associate Thing with Wireless device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingArn(String thingArn) {
             return thingArn(Output.of(thingArn));
         }
 
+        /**
+         * @param type Wireless device type, currently only Sidewalk and LoRa
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<WirelessDeviceType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Wireless device type, currently only Sidewalk and LoRa
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(WirelessDeviceType type) {
             return type(Output.of(type));
         }

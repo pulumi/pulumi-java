@@ -24,6 +24,11 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
+    /**
+     * @return Fully qualified domain name of network endpoint.
+     * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+     * 
+     */
     public Optional<Output<String>> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -35,6 +40,10 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
     @Import(name="globalNetworkEndpointGroup")
     private @Nullable Output<String> globalNetworkEndpointGroup;
 
+    /**
+     * @return The global network endpoint group this endpoint is part of.
+     * 
+     */
     public Optional<Output<String>> globalNetworkEndpointGroup() {
         return Optional.ofNullable(this.globalNetworkEndpointGroup);
     }
@@ -46,6 +55,10 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IPv4 address external endpoint.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -57,6 +70,10 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port number of the external endpoint.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -69,6 +86,11 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -101,47 +123,111 @@ public final class GlobalNetworkEndpointState extends com.pulumi.resources.Resou
             $ = new GlobalNetworkEndpointState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdn Fully qualified domain name of network endpoint.
+         * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn Fully qualified domain name of network endpoint.
+         * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param globalNetworkEndpointGroup The global network endpoint group this endpoint is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkEndpointGroup(@Nullable Output<String> globalNetworkEndpointGroup) {
             $.globalNetworkEndpointGroup = globalNetworkEndpointGroup;
             return this;
         }
 
+        /**
+         * @param globalNetworkEndpointGroup The global network endpoint group this endpoint is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkEndpointGroup(String globalNetworkEndpointGroup) {
             return globalNetworkEndpointGroup(Output.of(globalNetworkEndpointGroup));
         }
 
+        /**
+         * @param ipAddress IPv4 address external endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IPv4 address external endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param port Port number of the external endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port number of the external endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

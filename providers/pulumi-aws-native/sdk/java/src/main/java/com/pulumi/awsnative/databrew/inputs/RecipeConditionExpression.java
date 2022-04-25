@@ -25,6 +25,10 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="condition", required=true)
     private String condition;
 
+    /**
+     * @return Input condition to be applied to the target column
+     * 
+     */
     public String condition() {
         return this.condition;
     }
@@ -36,6 +40,10 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="targetColumn", required=true)
     private String targetColumn;
 
+    /**
+     * @return Name of the target column
+     * 
+     */
     public String targetColumn() {
         return this.targetColumn;
     }
@@ -47,6 +55,10 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the condition
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
             $ = new RecipeConditionExpression(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition Input condition to be applied to the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param targetColumn Name of the target column
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetColumn(String targetColumn) {
             $.targetColumn = targetColumn;
             return this;
         }
 
+        /**
+         * @param value Value of the condition
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -26,6 +26,10 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="auditLogStatus")
     private @Nullable String auditLogStatus;
 
+    /**
+     * @return Indicates whether audit logs are enabled on the connected registry.
+     * 
+     */
     public Optional<String> auditLogStatus() {
         return Optional.ofNullable(this.auditLogStatus);
     }
@@ -37,6 +41,10 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="logLevel")
     private @Nullable String logLevel;
 
+    /**
+     * @return The verbosity of logs persisted on the connected registry.
+     * 
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -66,11 +74,23 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new LoggingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auditLogStatus Indicates whether audit logs are enabled on the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auditLogStatus(@Nullable String auditLogStatus) {
             $.auditLogStatus = auditLogStatus;
             return this;
         }
 
+        /**
+         * @param logLevel The verbosity of logs persisted on the connected registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable String logLevel) {
             $.logLevel = logLevel;
             return this;

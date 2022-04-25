@@ -23,6 +23,10 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
     @Import(name="actionCondition")
     private @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
 
+    /**
+     * @return A single action condition.
+     * 
+     */
     public Optional<Output<LoggingConfigurationConditionActionConditionPropertiesArgs>> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
@@ -34,6 +38,10 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
     @Import(name="labelNameCondition")
     private @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;
 
+    /**
+     * @return A single label name condition.
+     * 
+     */
     public Optional<Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs>> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }
@@ -63,20 +71,44 @@ public final class LoggingConfigurationConditionArgs extends com.pulumi.resource
             $ = new LoggingConfigurationConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionCondition A single action condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionCondition(@Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition) {
             $.actionCondition = actionCondition;
             return this;
         }
 
+        /**
+         * @param actionCondition A single action condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionCondition(LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
             return actionCondition(Output.of(actionCondition));
         }
 
+        /**
+         * @param labelNameCondition A single label name condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelNameCondition(@Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
             $.labelNameCondition = labelNameCondition;
             return this;
         }
 
+        /**
+         * @param labelNameCondition A single label name condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelNameCondition(LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
             return labelNameCondition(Output.of(labelNameCondition));
         }

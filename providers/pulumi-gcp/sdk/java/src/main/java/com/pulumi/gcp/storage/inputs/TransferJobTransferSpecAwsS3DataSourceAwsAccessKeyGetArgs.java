@@ -20,6 +20,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
     @Import(name="accessKeyId", required=true)
     private Output<String> accessKeyId;
 
+    /**
+     * @return AWS Key ID.
+     * 
+     */
     public Output<String> accessKeyId() {
         return this.accessKeyId;
     }
@@ -31,6 +35,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
     @Import(name="secretAccessKey", required=true)
     private Output<String> secretAccessKey;
 
+    /**
+     * @return AWS Secret Access Key.
+     * 
+     */
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
@@ -60,20 +68,44 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
             $ = new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessKeyId AWS Key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(Output<String> accessKeyId) {
             $.accessKeyId = accessKeyId;
             return this;
         }
 
+        /**
+         * @param accessKeyId AWS Key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessKeyId(String accessKeyId) {
             return accessKeyId(Output.of(accessKeyId));
         }
 
+        /**
+         * @param secretAccessKey AWS Secret Access Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(Output<String> secretAccessKey) {
             $.secretAccessKey = secretAccessKey;
             return this;
         }
 
+        /**
+         * @param secretAccessKey AWS Secret Access Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretAccessKey(String secretAccessKey) {
             return secretAccessKey(Output.of(secretAccessKey));
         }

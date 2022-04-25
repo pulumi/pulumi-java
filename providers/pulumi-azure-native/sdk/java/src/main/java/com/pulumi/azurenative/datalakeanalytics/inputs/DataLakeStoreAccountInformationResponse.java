@@ -23,6 +23,10 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
     @Import(name="suffix", required=true)
     private String suffix;
 
+    /**
+     * @return The optional suffix for the Data Lake Store account.
+     * 
+     */
     public String suffix() {
         return this.suffix;
     }
@@ -56,6 +68,10 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -87,21 +103,45 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
             $ = new DataLakeStoreAccountInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param suffix The optional suffix for the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(String suffix) {
             $.suffix = suffix;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

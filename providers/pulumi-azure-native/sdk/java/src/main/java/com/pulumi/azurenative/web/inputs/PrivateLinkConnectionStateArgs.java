@@ -26,6 +26,10 @@ public final class PrivateLinkConnectionStateArgs extends com.pulumi.resources.R
     @Import(name="actionsRequired")
     private @Nullable Output<String> actionsRequired;
 
+    /**
+     * @return ActionsRequired for a private link connection
+     * 
+     */
     public Optional<Output<String>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -37,6 +41,10 @@ public final class PrivateLinkConnectionStateArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of a private link connection
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class PrivateLinkConnectionStateArgs extends com.pulumi.resources.R
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of a private link connection
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,29 +90,65 @@ public final class PrivateLinkConnectionStateArgs extends com.pulumi.resources.R
             $ = new PrivateLinkConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired ActionsRequired for a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired ActionsRequired for a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param description Description of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status Status of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

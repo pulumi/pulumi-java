@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class MonitoringConfigResponse {
     /**
-     * Monitoring components configuration
+     * @return Monitoring components configuration
      * 
      */
     private final MonitoringComponentConfigResponse componentConfig;
     /**
-     * Enable Google Cloud Managed Service for Prometheus in the cluster.
+     * @return Enable Google Cloud Managed Service for Prometheus in the cluster.
      * 
      */
     private final ManagedPrometheusConfigResponse managedPrometheusConfig;
@@ -30,16 +30,16 @@ public final class MonitoringConfigResponse {
     }
 
     /**
-     * Monitoring components configuration
+     * @return Monitoring components configuration
      * 
-    */
+     */
     public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
     /**
-     * Enable Google Cloud Managed Service for Prometheus in the cluster.
+     * @return Enable Google Cloud Managed Service for Prometheus in the cluster.
      * 
-    */
+     */
     public ManagedPrometheusConfigResponse managedPrometheusConfig() {
         return this.managedPrometheusConfig;
     }

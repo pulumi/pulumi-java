@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     @Import(name="additionalCases", required=true)
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
 
+    /**
+     * @return Additional cases to be evaluated.
+     * 
+     */
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases() {
         return this.additionalCases;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     @Import(name="message", required=true)
     private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
+    /**
+     * @return Returned message.
+     * 
+     */
     public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message() {
         return this.message;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             $ = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalCases Additional cases to be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases) {
             $.additionalCases = additionalCases;
             return this;
         }
 
+        /**
+         * @param message Returned message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
             $.message = message;
             return this;

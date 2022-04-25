@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
      */
     private final @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay;
     /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
      */
@@ -34,18 +34,18 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
     }
 
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay> fixedDelay() {
         return Optional.ofNullable(this.fixedDelay);
     }
     /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
-    */
+     */
     public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }

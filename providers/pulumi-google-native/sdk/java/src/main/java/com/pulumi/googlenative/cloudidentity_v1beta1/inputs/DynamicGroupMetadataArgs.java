@@ -27,6 +27,10 @@ public final class DynamicGroupMetadataArgs extends com.pulumi.resources.Resourc
     @Import(name="queries")
     private @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
+    /**
+     * @return Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+     * 
+     */
     public Optional<Output<List<DynamicGroupQueryArgs>>> queries() {
         return Optional.ofNullable(this.queries);
     }
@@ -55,15 +59,33 @@ public final class DynamicGroupMetadataArgs extends com.pulumi.resources.Resourc
             $ = new DynamicGroupMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queries Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
             $.queries = queries;
             return this;
         }
 
+        /**
+         * @param queries Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(List<DynamicGroupQueryArgs> queries) {
             return queries(Output.of(queries));
         }
 
+        /**
+         * @param queries Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queries(DynamicGroupQueryArgs... queries) {
             return queries(List.of(queries));
         }

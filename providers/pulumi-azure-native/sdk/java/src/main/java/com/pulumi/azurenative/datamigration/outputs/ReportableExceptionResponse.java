@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportableExceptionResponse {
     /**
-     * Actionable steps for this exception
+     * @return Actionable steps for this exception
      * 
      */
     private final @Nullable String actionableMessage;
     /**
-     * The path to the file where exception occurred
+     * @return The path to the file where exception occurred
      * 
      */
     private final String filePath;
     /**
-     * Coded numerical value that is assigned to a specific exception
+     * @return Coded numerical value that is assigned to a specific exception
      * 
      */
     private final Integer hResult;
     /**
-     * The line number where exception occurred
+     * @return The line number where exception occurred
      * 
      */
     private final String lineNumber;
     /**
-     * Error message
+     * @return Error message
      * 
      */
     private final String message;
     /**
-     * Stack trace
+     * @return Stack trace
      * 
      */
     private final String stackTrace;
@@ -60,44 +60,44 @@ public final class ReportableExceptionResponse {
     }
 
     /**
-     * Actionable steps for this exception
+     * @return Actionable steps for this exception
      * 
-    */
+     */
     public Optional<String> actionableMessage() {
         return Optional.ofNullable(this.actionableMessage);
     }
     /**
-     * The path to the file where exception occurred
+     * @return The path to the file where exception occurred
      * 
-    */
+     */
     public String filePath() {
         return this.filePath;
     }
     /**
-     * Coded numerical value that is assigned to a specific exception
+     * @return Coded numerical value that is assigned to a specific exception
      * 
-    */
+     */
     public Integer hResult() {
         return this.hResult;
     }
     /**
-     * The line number where exception occurred
+     * @return The line number where exception occurred
      * 
-    */
+     */
     public String lineNumber() {
         return this.lineNumber;
     }
     /**
-     * Error message
+     * @return Error message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Stack trace
+     * @return Stack trace
      * 
-    */
+     */
     public String stackTrace() {
         return this.stackTrace;
     }

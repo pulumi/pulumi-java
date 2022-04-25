@@ -23,6 +23,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
     private @Nullable Output<String> definition;
 
+    /**
+     * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
+     * 
+     */
     public Optional<Output<String>> definition() {
         return Optional.ofNullable(this.definition);
     }
@@ -34,6 +38,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +67,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<SchemaType> type;
 
+    /**
+     * @return The type of the schema definition.
+     * 
+     */
     public Optional<Output<SchemaType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -91,20 +103,44 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(@Nullable Output<String> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(String definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param name Name of the schema. Format is `projects/{project}/schemas/{schema}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the schema. Format is `projects/{project}/schemas/{schema}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -127,11 +163,23 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             return schemaId(Output.of(schemaId));
         }
 
+        /**
+         * @param type The type of the schema definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<SchemaType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the schema definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SchemaType type) {
             return type(Output.of(type));
         }

@@ -21,6 +21,10 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
     @Import(name="defaultKeySpecs", required=true)
     private List<DnsKeySpecResponse> defaultKeySpecs;
 
+    /**
+     * @return Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+     * 
+     */
     public List<DnsKeySpecResponse> defaultKeySpecs() {
         return this.defaultKeySpecs;
     }
@@ -39,6 +43,10 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
     @Import(name="nonExistence", required=true)
     private String nonExistence;
 
+    /**
+     * @return Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+     * 
+     */
     public String nonExistence() {
         return this.nonExistence;
     }
@@ -50,6 +58,10 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Specifies whether DNSSEC is enabled, and what mode it is in.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -81,11 +93,23 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
             $ = new ManagedZoneDnsSecConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(List<DnsKeySpecResponse> defaultKeySpecs) {
             $.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(DnsKeySpecResponse... defaultKeySpecs) {
             return defaultKeySpecs(List.of(defaultKeySpecs));
         }
@@ -95,11 +119,23 @@ public final class ManagedZoneDnsSecConfigResponse extends com.pulumi.resources.
             return this;
         }
 
+        /**
+         * @param nonExistence Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonExistence(String nonExistence) {
             $.nonExistence = nonExistence;
             return this;
         }
 
+        /**
+         * @param state Specifies whether DNSSEC is enabled, and what mode it is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

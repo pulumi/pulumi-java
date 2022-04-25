@@ -30,6 +30,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -41,6 +45,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return ID of the Azure Active Directory.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -52,6 +60,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
     private Output<Either<String,ManagedServiceIdentityType>> type;
 
+    /**
+     * @return Type of the managed identity.
+     * 
+     */
     public Output<Either<String,ManagedServiceIdentityType>> type() {
         return this.type;
     }
@@ -63,6 +75,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
+    /**
+     * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+     * 
+     */
     public Optional<Output<Map<String,UserAssignedIdentityArgs>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -94,46 +110,106 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
             $ = new ManagedServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId ID of the Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId ID of the Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ManagedServiceIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedServiceIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedServiceIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,UserAssignedIdentityArgs> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

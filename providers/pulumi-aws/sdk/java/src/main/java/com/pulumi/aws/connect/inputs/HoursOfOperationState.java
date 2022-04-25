@@ -25,6 +25,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="configs")
     private @Nullable Output<List<HoursOfOperationConfigGetArgs>> configs;
 
+    /**
+     * @return One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
+     * 
+     */
     public Optional<Output<List<HoursOfOperationConfigGetArgs>>> configs() {
         return Optional.ofNullable(this.configs);
     }
@@ -36,6 +40,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Specifies the description of the Hours of Operation.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="hoursOfOperationArn")
     private @Nullable Output<String> hoursOfOperationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
     public Optional<Output<String>> hoursOfOperationArn() {
         return Optional.ofNullable(this.hoursOfOperationArn);
     }
@@ -58,6 +70,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="hoursOfOperationId")
     private @Nullable Output<String> hoursOfOperationId;
 
+    /**
+     * @return The identifier for the hours of operation.
+     * 
+     */
     public Optional<Output<String>> hoursOfOperationId() {
         return Optional.ofNullable(this.hoursOfOperationId);
     }
@@ -69,6 +85,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -80,6 +100,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the Hours of Operation.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,6 +145,10 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return Specifies the time zone of the Hours of Operation.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -149,87 +185,201 @@ public final class HoursOfOperationState extends com.pulumi.resources.ResourceAr
             $ = new HoursOfOperationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configs One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(@Nullable Output<List<HoursOfOperationConfigGetArgs>> configs) {
             $.configs = configs;
             return this;
         }
 
+        /**
+         * @param configs One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(List<HoursOfOperationConfigGetArgs> configs) {
             return configs(Output.of(configs));
         }
 
+        /**
+         * @param configs One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configs(HoursOfOperationConfigGetArgs... configs) {
             return configs(List.of(configs));
         }
 
+        /**
+         * @param description Specifies the description of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Specifies the description of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param hoursOfOperationArn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationArn(@Nullable Output<String> hoursOfOperationArn) {
             $.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
 
+        /**
+         * @param hoursOfOperationArn The Amazon Resource Name (ARN) of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             return hoursOfOperationArn(Output.of(hoursOfOperationArn));
         }
 
+        /**
+         * @param hoursOfOperationId The identifier for the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationId(@Nullable Output<String> hoursOfOperationId) {
             $.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
 
+        /**
+         * @param hoursOfOperationId The identifier for the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hoursOfOperationId(String hoursOfOperationId) {
             return hoursOfOperationId(Output.of(hoursOfOperationId));
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name Specifies the name of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param timeZone Specifies the time zone of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Specifies the time zone of the Hours of Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

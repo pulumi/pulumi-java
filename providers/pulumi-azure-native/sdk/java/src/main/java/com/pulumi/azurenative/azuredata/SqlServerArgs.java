@@ -23,6 +23,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cores")
     private @Nullable Output<Integer> cores;
 
+    /**
+     * @return Cores of the Sql Server.
+     * 
+     */
     public Optional<Output<Integer>> cores() {
         return Optional.ofNullable(this.cores);
     }
@@ -34,6 +38,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edition")
     private @Nullable Output<String> edition;
 
+    /**
+     * @return Sql Server Edition.
+     * 
+     */
     public Optional<Output<String>> edition() {
         return Optional.ofNullable(this.edition);
     }
@@ -45,6 +53,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="propertyBag")
     private @Nullable Output<String> propertyBag;
 
+    /**
+     * @return Sql Server Json Property Bag.
+     * 
+     */
     public Optional<Output<String>> propertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
@@ -56,6 +68,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationID")
     private @Nullable Output<String> registrationID;
 
+    /**
+     * @return ID for Parent Sql Server Registration.
+     * 
+     */
     public Optional<Output<String>> registrationID() {
         return Optional.ofNullable(this.registrationID);
     }
@@ -67,6 +83,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerName")
     private @Nullable Output<String> sqlServerName;
 
+    /**
+     * @return Name of the SQL Server.
+     * 
+     */
     public Optional<Output<String>> sqlServerName() {
         return Optional.ofNullable(this.sqlServerName);
     }
@@ -89,6 +113,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerRegistrationName", required=true)
     private Output<String> sqlServerRegistrationName;
 
+    /**
+     * @return Name of the SQL Server registration.
+     * 
+     */
     public Output<String> sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
@@ -100,6 +128,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the Sql Server.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -135,74 +167,170 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SqlServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cores Cores of the Sql Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cores(@Nullable Output<Integer> cores) {
             $.cores = cores;
             return this;
         }
 
+        /**
+         * @param cores Cores of the Sql Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cores(Integer cores) {
             return cores(Output.of(cores));
         }
 
+        /**
+         * @param edition Sql Server Edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(@Nullable Output<String> edition) {
             $.edition = edition;
             return this;
         }
 
+        /**
+         * @param edition Sql Server Edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(String edition) {
             return edition(Output.of(edition));
         }
 
+        /**
+         * @param propertyBag Sql Server Json Property Bag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
             $.propertyBag = propertyBag;
             return this;
         }
 
+        /**
+         * @param propertyBag Sql Server Json Property Bag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyBag(String propertyBag) {
             return propertyBag(Output.of(propertyBag));
         }
 
+        /**
+         * @param registrationID ID for Parent Sql Server Registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationID(@Nullable Output<String> registrationID) {
             $.registrationID = registrationID;
             return this;
         }
 
+        /**
+         * @param registrationID ID for Parent Sql Server Registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationID(String registrationID) {
             return registrationID(Output.of(registrationID));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlServerName Name of the SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerName(@Nullable Output<String> sqlServerName) {
             $.sqlServerName = sqlServerName;
             return this;
         }
 
+        /**
+         * @param sqlServerName Name of the SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerName(String sqlServerName) {
             return sqlServerName(Output.of(sqlServerName));
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
             $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             return sqlServerRegistrationName(Output.of(sqlServerRegistrationName));
         }
 
+        /**
+         * @param version Version of the Sql Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the Sql Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

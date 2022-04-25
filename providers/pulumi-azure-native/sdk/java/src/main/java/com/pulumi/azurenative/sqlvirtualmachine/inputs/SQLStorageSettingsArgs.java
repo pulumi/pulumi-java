@@ -28,6 +28,10 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultFilePath")
     private @Nullable Output<String> defaultFilePath;
 
+    /**
+     * @return SQL Server default file path
+     * 
+     */
     public Optional<Output<String>> defaultFilePath() {
         return Optional.ofNullable(this.defaultFilePath);
     }
@@ -39,6 +43,10 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="luns")
     private @Nullable Output<List<Integer>> luns;
 
+    /**
+     * @return Logical Unit Numbers for the disks.
+     * 
+     */
     public Optional<Output<List<Integer>>> luns() {
         return Optional.ofNullable(this.luns);
     }
@@ -68,24 +76,54 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new SQLStorageSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultFilePath SQL Server default file path
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFilePath(@Nullable Output<String> defaultFilePath) {
             $.defaultFilePath = defaultFilePath;
             return this;
         }
 
+        /**
+         * @param defaultFilePath SQL Server default file path
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultFilePath(String defaultFilePath) {
             return defaultFilePath(Output.of(defaultFilePath));
         }
 
+        /**
+         * @param luns Logical Unit Numbers for the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(@Nullable Output<List<Integer>> luns) {
             $.luns = luns;
             return this;
         }
 
+        /**
+         * @param luns Logical Unit Numbers for the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(List<Integer> luns) {
             return luns(Output.of(luns));
         }
 
+        /**
+         * @param luns Logical Unit Numbers for the disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(Integer... luns) {
             return luns(List.of(luns));
         }

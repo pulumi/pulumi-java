@@ -30,6 +30,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="color")
     private @Nullable Output<ThresholdColor> color;
 
+    /**
+     * @return The state color for this threshold. Color is not allowed in a XyChart.
+     * 
+     */
     public Optional<Output<ThresholdColor>> color() {
         return Optional.ofNullable(this.color);
     }
@@ -41,6 +45,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="direction")
     private @Nullable Output<ThresholdDirection> direction;
 
+    /**
+     * @return The direction for the current threshold. Direction is not allowed in a XyChart.
+     * 
+     */
     public Optional<Output<ThresholdDirection>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -52,6 +60,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return A label for the threshold.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -63,6 +75,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetAxis")
     private @Nullable Output<ThresholdTargetAxis> targetAxis;
 
+    /**
+     * @return The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+     * 
+     */
     public Optional<Output<ThresholdTargetAxis>> targetAxis() {
         return Optional.ofNullable(this.targetAxis);
     }
@@ -74,6 +90,10 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<Double> value;
 
+    /**
+     * @return The value of the threshold. The value should be defined in the native scale of the metric.
+     * 
+     */
     public Optional<Output<Double>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -106,47 +126,107 @@ public final class ThresholdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ThresholdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param color The state color for this threshold. Color is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(@Nullable Output<ThresholdColor> color) {
             $.color = color;
             return this;
         }
 
+        /**
+         * @param color The state color for this threshold. Color is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder color(ThresholdColor color) {
             return color(Output.of(color));
         }
 
+        /**
+         * @param direction The direction for the current threshold. Direction is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<ThresholdDirection> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction The direction for the current threshold. Direction is not allowed in a XyChart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(ThresholdDirection direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param label A label for the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label A label for the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param targetAxis The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAxis(@Nullable Output<ThresholdTargetAxis> targetAxis) {
             $.targetAxis = targetAxis;
             return this;
         }
 
+        /**
+         * @param targetAxis The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAxis(ThresholdTargetAxis targetAxis) {
             return targetAxis(Output.of(targetAxis));
         }
 
+        /**
+         * @param value The value of the threshold. The value should be defined in the native scale of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Double> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the threshold. The value should be defined in the native scale of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             return value(Output.of(value));
         }

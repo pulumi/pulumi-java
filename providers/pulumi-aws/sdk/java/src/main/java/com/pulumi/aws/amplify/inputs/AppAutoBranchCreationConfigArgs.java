@@ -24,6 +24,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="basicAuthCredentials")
     private @Nullable Output<String> basicAuthCredentials;
 
+    /**
+     * @return The basic authorization credentials for the autocreated branch.
+     * 
+     */
     public Optional<Output<String>> basicAuthCredentials() {
         return Optional.ofNullable(this.basicAuthCredentials);
     }
@@ -35,6 +39,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="buildSpec")
     private @Nullable Output<String> buildSpec;
 
+    /**
+     * @return The build specification (build spec) for the autocreated branch.
+     * 
+     */
     public Optional<Output<String>> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
@@ -46,6 +54,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="enableAutoBuild")
     private @Nullable Output<Boolean> enableAutoBuild;
 
+    /**
+     * @return Enables auto building for the autocreated branch.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutoBuild() {
         return Optional.ofNullable(this.enableAutoBuild);
     }
@@ -57,6 +69,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="enableBasicAuth")
     private @Nullable Output<Boolean> enableBasicAuth;
 
+    /**
+     * @return Enables basic authorization for the autocreated branch.
+     * 
+     */
     public Optional<Output<Boolean>> enableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
@@ -68,6 +84,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="enablePerformanceMode")
     private @Nullable Output<Boolean> enablePerformanceMode;
 
+    /**
+     * @return Enables performance mode for the branch.
+     * 
+     */
     public Optional<Output<Boolean>> enablePerformanceMode() {
         return Optional.ofNullable(this.enablePerformanceMode);
     }
@@ -79,6 +99,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="enablePullRequestPreview")
     private @Nullable Output<Boolean> enablePullRequestPreview;
 
+    /**
+     * @return Enables pull request previews for the autocreated branch.
+     * 
+     */
     public Optional<Output<Boolean>> enablePullRequestPreview() {
         return Optional.ofNullable(this.enablePullRequestPreview);
     }
@@ -90,6 +114,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="environmentVariables")
     private @Nullable Output<Map<String,String>> environmentVariables;
 
+    /**
+     * @return The environment variables for the autocreated branch.
+     * 
+     */
     public Optional<Output<Map<String,String>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -101,6 +129,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="framework")
     private @Nullable Output<String> framework;
 
+    /**
+     * @return The framework for the autocreated branch.
+     * 
+     */
     public Optional<Output<String>> framework() {
         return Optional.ofNullable(this.framework);
     }
@@ -112,6 +144,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="pullRequestEnvironmentName")
     private @Nullable Output<String> pullRequestEnvironmentName;
 
+    /**
+     * @return The Amplify environment name for the pull request.
+     * 
+     */
     public Optional<Output<String>> pullRequestEnvironmentName() {
         return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
@@ -123,6 +159,10 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
     @Import(name="stage")
     private @Nullable Output<String> stage;
 
+    /**
+     * @return Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
+     * 
+     */
     public Optional<Output<String>> stage() {
         return Optional.ofNullable(this.stage);
     }
@@ -160,92 +200,212 @@ public final class AppAutoBranchCreationConfigArgs extends com.pulumi.resources.
             $ = new AppAutoBranchCreationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicAuthCredentials The basic authorization credentials for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             $.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
+        /**
+         * @param basicAuthCredentials The basic authorization credentials for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicAuthCredentials(String basicAuthCredentials) {
             return basicAuthCredentials(Output.of(basicAuthCredentials));
         }
 
+        /**
+         * @param buildSpec The build specification (build spec) for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
             $.buildSpec = buildSpec;
             return this;
         }
 
+        /**
+         * @param buildSpec The build specification (build spec) for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildSpec(String buildSpec) {
             return buildSpec(Output.of(buildSpec));
         }
 
+        /**
+         * @param enableAutoBuild Enables auto building for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
             $.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
+        /**
+         * @param enableAutoBuild Enables auto building for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoBuild(Boolean enableAutoBuild) {
             return enableAutoBuild(Output.of(enableAutoBuild));
         }
 
+        /**
+         * @param enableBasicAuth Enables basic authorization for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             $.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
+        /**
+         * @param enableBasicAuth Enables basic authorization for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBasicAuth(Boolean enableBasicAuth) {
             return enableBasicAuth(Output.of(enableBasicAuth));
         }
 
+        /**
+         * @param enablePerformanceMode Enables performance mode for the branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
             $.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
+        /**
+         * @param enablePerformanceMode Enables performance mode for the branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePerformanceMode(Boolean enablePerformanceMode) {
             return enablePerformanceMode(Output.of(enablePerformanceMode));
         }
 
+        /**
+         * @param enablePullRequestPreview Enables pull request previews for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
             $.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
+        /**
+         * @param enablePullRequestPreview Enables pull request previews for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePullRequestPreview(Boolean enablePullRequestPreview) {
             return enablePullRequestPreview(Output.of(enablePullRequestPreview));
         }
 
+        /**
+         * @param environmentVariables The environment variables for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param framework The framework for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(@Nullable Output<String> framework) {
             $.framework = framework;
             return this;
         }
 
+        /**
+         * @param framework The framework for the autocreated branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder framework(String framework) {
             return framework(Output.of(framework));
         }
 
+        /**
+         * @param pullRequestEnvironmentName The Amplify environment name for the pull request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequestEnvironmentName(@Nullable Output<String> pullRequestEnvironmentName) {
             $.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
+        /**
+         * @param pullRequestEnvironmentName The Amplify environment name for the pull request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullRequestEnvironmentName(String pullRequestEnvironmentName) {
             return pullRequestEnvironmentName(Output.of(pullRequestEnvironmentName));
         }
 
+        /**
+         * @param stage Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(@Nullable Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }

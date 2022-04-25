@@ -25,6 +25,10 @@ public final class ConfigurationServiceSettingsResponse extends com.pulumi.resou
     @Import(name="gitProperty")
     private @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
+    /**
+     * @return Property of git environment.
+     * 
+     */
     public Optional<ConfigurationServiceGitPropertyResponse> gitProperty() {
         return Optional.ofNullable(this.gitProperty);
     }
@@ -53,6 +57,12 @@ public final class ConfigurationServiceSettingsResponse extends com.pulumi.resou
             $ = new ConfigurationServiceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gitProperty Property of git environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
             $.gitProperty = gitProperty;
             return this;

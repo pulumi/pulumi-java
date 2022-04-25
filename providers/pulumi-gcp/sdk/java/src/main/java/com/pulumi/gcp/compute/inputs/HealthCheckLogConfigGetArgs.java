@@ -23,6 +23,11 @@ public final class HealthCheckLogConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Indicates whether or not to export logs. This is false by default,
+     * which means no health check logging will be done.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -51,11 +56,25 @@ public final class HealthCheckLogConfigGetArgs extends com.pulumi.resources.Reso
             $ = new HealthCheckLogConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default,
+         * which means no health check logging will be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Indicates whether or not to export logs. This is false by default,
+         * which means no health check logging will be done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }

@@ -25,6 +25,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password of admin account
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -36,6 +40,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
     @Import(name="privateKeyData")
     private @Nullable String privateKeyData;
 
+    /**
+     * @return Private key data
+     * 
+     */
     public Optional<String> privateKeyData() {
         return Optional.ofNullable(this.privateKeyData);
     }
@@ -47,6 +55,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
     @Import(name="publicKeyData")
     private @Nullable String publicKeyData;
 
+    /**
+     * @return Public key data
+     * 
+     */
     public Optional<String> publicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
@@ -58,6 +70,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Username of admin account
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -89,21 +105,45 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
             $ = new VirtualMachineSshCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param privateKeyData Private key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyData(@Nullable String privateKeyData) {
             $.privateKeyData = privateKeyData;
             return this;
         }
 
+        /**
+         * @param publicKeyData Public key data
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyData(@Nullable String publicKeyData) {
             $.publicKeyData = publicKeyData;
             return this;
         }
 
+        /**
+         * @param username Username of admin account
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

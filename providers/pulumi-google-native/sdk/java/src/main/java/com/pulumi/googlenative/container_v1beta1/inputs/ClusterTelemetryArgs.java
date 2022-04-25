@@ -26,6 +26,10 @@ public final class ClusterTelemetryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<ClusterTelemetryType> type;
 
+    /**
+     * @return Type of the integration.
+     * 
+     */
     public Optional<Output<ClusterTelemetryType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class ClusterTelemetryArgs extends com.pulumi.resources.ResourceArg
             $ = new ClusterTelemetryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ClusterTelemetryType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ClusterTelemetryType type) {
             return type(Output.of(type));
         }

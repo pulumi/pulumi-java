@@ -26,6 +26,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="binaryName")
     private @Nullable Output<String> binaryName;
 
+    /**
+     * @return The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+     * 
+     */
     public Optional<Output<String>> binaryName() {
         return Optional.ofNullable(this.binaryName);
     }
@@ -37,6 +41,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productName")
     private @Nullable Output<String> productName;
 
+    /**
+     * @return The product name taken from the file&#39;s version resource
+     * 
+     */
     public Optional<Output<String>> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -48,6 +56,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publisherName")
     private @Nullable Output<String> publisherName;
 
+    /**
+     * @return The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+     * 
+     */
     public Optional<Output<String>> publisherName() {
         return Optional.ofNullable(this.publisherName);
     }
@@ -59,6 +71,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The binary file version taken from the file&#39;s version resource
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -90,38 +106,86 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PublisherInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binaryName The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryName(@Nullable Output<String> binaryName) {
             $.binaryName = binaryName;
             return this;
         }
 
+        /**
+         * @param binaryName The &#34;OriginalName&#34; field taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryName(String binaryName) {
             return binaryName(Output.of(binaryName));
         }
 
+        /**
+         * @param productName The product name taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable Output<String> productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param productName The product name taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             return productName(Output.of(productName));
         }
 
+        /**
+         * @param publisherName The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherName(@Nullable Output<String> publisherName) {
             $.publisherName = publisherName;
             return this;
         }
 
+        /**
+         * @param publisherName The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherName(String publisherName) {
             return publisherName(Output.of(publisherName));
         }
 
+        /**
+         * @param version The binary file version taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The binary file version taken from the file&#39;s version resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

@@ -22,6 +22,10 @@ public final class DSSEAttestationNoteArgs extends com.pulumi.resources.Resource
     @Import(name="hint")
     private @Nullable Output<DSSEHintArgs> hint;
 
+    /**
+     * @return DSSEHint hints at the purpose of the attestation authority.
+     * 
+     */
     public Optional<Output<DSSEHintArgs>> hint() {
         return Optional.ofNullable(this.hint);
     }
@@ -50,11 +54,23 @@ public final class DSSEAttestationNoteArgs extends com.pulumi.resources.Resource
             $ = new DSSEAttestationNoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hint DSSEHint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(@Nullable Output<DSSEHintArgs> hint) {
             $.hint = hint;
             return this;
         }
 
+        /**
+         * @param hint DSSEHint hints at the purpose of the attestation authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hint(DSSEHintArgs hint) {
             return hint(Output.of(hint));
         }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class V2AndroidKeyRestrictionsResponse {
     /**
-     * A list of Android applications that are allowed to make API calls with this key.
+     * @return A list of Android applications that are allowed to make API calls with this key.
      * 
      */
     private final List<V2AndroidApplicationResponse> allowedApplications;
@@ -22,9 +22,9 @@ public final class V2AndroidKeyRestrictionsResponse {
     }
 
     /**
-     * A list of Android applications that are allowed to make API calls with this key.
+     * @return A list of Android applications that are allowed to make API calls with this key.
      * 
-    */
+     */
     public List<V2AndroidApplicationResponse> allowedApplications() {
         return this.allowedApplications;
     }

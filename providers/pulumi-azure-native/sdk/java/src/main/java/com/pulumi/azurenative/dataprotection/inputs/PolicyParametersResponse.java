@@ -26,6 +26,10 @@ public final class PolicyParametersResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataStoreParametersList")
     private @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
+    /**
+     * @return Gets or sets the DataStore Parameters
+     * 
+     */
     public Optional<List<AzureOperationalStoreParametersResponse>> dataStoreParametersList() {
         return Optional.ofNullable(this.dataStoreParametersList);
     }
@@ -54,11 +58,23 @@ public final class PolicyParametersResponse extends com.pulumi.resources.InvokeA
             $ = new PolicyParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStoreParametersList Gets or sets the DataStore Parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
             $.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
 
+        /**
+         * @param dataStoreParametersList Gets or sets the DataStore Parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreParametersList(AzureOperationalStoreParametersResponse... dataStoreParametersList) {
             return dataStoreParametersList(List.of(dataStoreParametersList));
         }

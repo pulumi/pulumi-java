@@ -23,6 +23,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
     @Import(name="exact")
     private @Nullable Output<String> exact;
 
+    /**
+     * @return The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> exact() {
         return Optional.ofNullable(this.exact);
     }
@@ -35,6 +39,11 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+     * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -46,6 +55,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
     @Import(name="range")
     private @Nullable Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> range;
 
+    /**
+     * @return The object that specifies the range of numbers that the value sent by the client must be included in.
+     * 
+     */
     public Optional<Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs>> range() {
         return Optional.ofNullable(this.range);
     }
@@ -57,6 +70,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
     @Import(name="regex")
     private @Nullable Output<String> regex;
 
+    /**
+     * @return The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -68,6 +85,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
     @Import(name="suffix")
     private @Nullable Output<String> suffix;
 
+    /**
+     * @return The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Optional<Output<String>> suffix() {
         return Optional.ofNullable(this.suffix);
     }
@@ -100,47 +121,109 @@ public final class RouteSpecHttpRouteMatchHeaderMatchArgs extends com.pulumi.res
             $ = new RouteSpecHttpRouteMatchHeaderMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exact The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exact(@Nullable Output<String> exact) {
             $.exact = exact;
             return this;
         }
 
+        /**
+         * @param exact The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exact(String exact) {
             return exact(Output.of(exact));
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+         * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param range The object that specifies the range of numbers that the value sent by the client must be included in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable Output<RouteSpecHttpRouteMatchHeaderMatchRangeArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range The object that specifies the range of numbers that the value sent by the client must be included in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(RouteSpecHttpRouteMatchHeaderMatchRangeArgs range) {
             return range(Output.of(range));
         }
 
+        /**
+         * @param regex The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<String> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(String regex) {
             return regex(Output.of(regex));
         }
 
+        /**
+         * @param suffix The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(@Nullable Output<String> suffix) {
             $.suffix = suffix;
             return this;
         }
 
+        /**
+         * @param suffix The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suffix(String suffix) {
             return suffix(Output.of(suffix));
         }

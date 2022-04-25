@@ -19,6 +19,10 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="awsAccountId", required=true)
     private String awsAccountId;
 
+    /**
+     * @return AWS account ID of customer
+     * 
+     */
     public String awsAccountId() {
         return this.awsAccountId;
     }
@@ -47,6 +51,12 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSessionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param awsAccountId AWS account ID of customer
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAccountId(String awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;

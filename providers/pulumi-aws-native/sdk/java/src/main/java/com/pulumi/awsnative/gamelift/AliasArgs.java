@@ -23,6 +23,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description of the alias.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A descriptive label that is associated with an alias. Alias names do not need to be unique.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingStrategy", required=true)
     private Output<AliasRoutingStrategyArgs> routingStrategy;
 
+    /**
+     * @return A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+     * 
+     */
     public Output<AliasRoutingStrategyArgs> routingStrategy() {
         return this.routingStrategy;
     }
@@ -75,29 +87,65 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A human-readable description of the alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description of the alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name A descriptive label that is associated with an alias. Alias names do not need to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A descriptive label that is associated with an alias. Alias names do not need to be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routingStrategy A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingStrategy(Output<AliasRoutingStrategyArgs> routingStrategy) {
             $.routingStrategy = routingStrategy;
             return this;
         }
 
+        /**
+         * @param routingStrategy A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingStrategy(AliasRoutingStrategyArgs routingStrategy) {
             return routingStrategy(Output.of(routingStrategy));
         }

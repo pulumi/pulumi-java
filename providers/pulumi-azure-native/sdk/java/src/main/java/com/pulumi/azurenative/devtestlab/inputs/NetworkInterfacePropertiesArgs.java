@@ -27,6 +27,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -38,6 +42,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return The private IP address.
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -49,6 +57,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="publicIpAddress")
     private @Nullable Output<String> publicIpAddress;
 
+    /**
+     * @return The public IP address.
+     * 
+     */
     public Optional<Output<String>> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
@@ -60,6 +72,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="publicIpAddressId")
     private @Nullable Output<String> publicIpAddressId;
 
+    /**
+     * @return The resource ID of the public IP address.
+     * 
+     */
     public Optional<Output<String>> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
@@ -71,6 +87,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="rdpAuthority")
     private @Nullable Output<String> rdpAuthority;
 
+    /**
+     * @return The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+     * 
+     */
     public Optional<Output<String>> rdpAuthority() {
         return Optional.ofNullable(this.rdpAuthority);
     }
@@ -82,6 +102,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="sharedPublicIpAddressConfiguration")
     private @Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
+    /**
+     * @return The configuration for sharing a public IP address across multiple virtual machines.
+     * 
+     */
     public Optional<Output<SharedPublicIpAddressConfigurationArgs>> sharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
@@ -93,6 +117,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="sshAuthority")
     private @Nullable Output<String> sshAuthority;
 
+    /**
+     * @return The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+     * 
+     */
     public Optional<Output<String>> sshAuthority() {
         return Optional.ofNullable(this.sshAuthority);
     }
@@ -104,6 +132,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The resource ID of the sub net.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -115,6 +147,10 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="virtualNetworkId")
     private @Nullable Output<String> virtualNetworkId;
 
+    /**
+     * @return The resource ID of the virtual network.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
@@ -151,83 +187,191 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
             $ = new NetworkInterfacePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param privateIpAddress The private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress The private IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param publicIpAddress The public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param publicIpAddress The public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             return publicIpAddress(Output.of(publicIpAddress));
         }
 
+        /**
+         * @param publicIpAddressId The resource ID of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressId(@Nullable Output<String> publicIpAddressId) {
             $.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
+        /**
+         * @param publicIpAddressId The resource ID of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressId(String publicIpAddressId) {
             return publicIpAddressId(Output.of(publicIpAddressId));
         }
 
+        /**
+         * @param rdpAuthority The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(@Nullable Output<String> rdpAuthority) {
             $.rdpAuthority = rdpAuthority;
             return this;
         }
 
+        /**
+         * @param rdpAuthority The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(String rdpAuthority) {
             return rdpAuthority(Output.of(rdpAuthority));
         }
 
+        /**
+         * @param sharedPublicIpAddressConfiguration The configuration for sharing a public IP address across multiple virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPublicIpAddressConfiguration(@Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             $.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
+        /**
+         * @param sharedPublicIpAddressConfiguration The configuration for sharing a public IP address across multiple virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPublicIpAddressConfiguration(SharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
             return sharedPublicIpAddressConfiguration(Output.of(sharedPublicIpAddressConfiguration));
         }
 
+        /**
+         * @param sshAuthority The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(@Nullable Output<String> sshAuthority) {
             $.sshAuthority = sshAuthority;
             return this;
         }
 
+        /**
+         * @param sshAuthority The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(String sshAuthority) {
             return sshAuthority(Output.of(sshAuthority));
         }
 
+        /**
+         * @param subnetId The resource ID of the sub net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The resource ID of the sub net.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param virtualNetworkId The resource ID of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(@Nullable Output<String> virtualNetworkId) {
             $.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkId The resource ID of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(String virtualNetworkId) {
             return virtualNetworkId(Output.of(virtualNetworkId));
         }

@@ -28,6 +28,10 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="baseImageTrigger")
     private @Nullable BaseImageTriggerResponse baseImageTrigger;
 
+    /**
+     * @return The trigger based on base image dependencies.
+     * 
+     */
     public Optional<BaseImageTriggerResponse> baseImageTrigger() {
         return Optional.ofNullable(this.baseImageTrigger);
     }
@@ -39,6 +43,10 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="sourceTriggers")
     private @Nullable List<SourceTriggerResponse> sourceTriggers;
 
+    /**
+     * @return The collection of triggers based on source code repository.
+     * 
+     */
     public Optional<List<SourceTriggerResponse>> sourceTriggers() {
         return Optional.ofNullable(this.sourceTriggers);
     }
@@ -50,6 +58,10 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="timerTriggers")
     private @Nullable List<TimerTriggerResponse> timerTriggers;
 
+    /**
+     * @return The collection of timer triggers.
+     * 
+     */
     public Optional<List<TimerTriggerResponse>> timerTriggers() {
         return Optional.ofNullable(this.timerTriggers);
     }
@@ -80,25 +92,55 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new TriggerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageTrigger The trigger based on base image dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTrigger(@Nullable BaseImageTriggerResponse baseImageTrigger) {
             $.baseImageTrigger = baseImageTrigger;
             return this;
         }
 
+        /**
+         * @param sourceTriggers The collection of triggers based on source code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggers(@Nullable List<SourceTriggerResponse> sourceTriggers) {
             $.sourceTriggers = sourceTriggers;
             return this;
         }
 
+        /**
+         * @param sourceTriggers The collection of triggers based on source code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTriggers(SourceTriggerResponse... sourceTriggers) {
             return sourceTriggers(List.of(sourceTriggers));
         }
 
+        /**
+         * @param timerTriggers The collection of timer triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggers(@Nullable List<TimerTriggerResponse> timerTriggers) {
             $.timerTriggers = timerTriggers;
             return this;
         }
 
+        /**
+         * @param timerTriggers The collection of timer triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggers(TimerTriggerResponse... timerTriggers) {
             return timerTriggers(List.of(timerTriggers));
         }

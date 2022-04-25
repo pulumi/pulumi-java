@@ -25,6 +25,10 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="aggregation", required=true)
     private AggregationResponse aggregation;
 
+    /**
+     * @return By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+     * 
+     */
     public AggregationResponse aggregation() {
         return this.aggregation;
     }
@@ -36,6 +40,10 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="filter", required=true)
     private String filter;
 
+    /**
+     * @return The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+     * 
+     */
     public String filter() {
         return this.filter;
     }
@@ -47,6 +55,10 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="pickTimeSeriesFilter", required=true)
     private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
+    /**
+     * @return Ranking based time series filter.
+     * 
+     */
     public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
@@ -58,6 +70,10 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="secondaryAggregation", required=true)
     private AggregationResponse secondaryAggregation;
 
+    /**
+     * @return Apply a second aggregation after aggregation is applied.
+     * 
+     */
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
@@ -89,21 +105,45 @@ public final class TimeSeriesFilterResponse extends com.pulumi.resources.InvokeA
             $ = new TimeSeriesFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(AggregationResponse aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param filter The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param pickTimeSeriesFilter Ranking based time series filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
 
+        /**
+         * @param secondaryAggregation Apply a second aggregation after aggregation is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             $.secondaryAggregation = secondaryAggregation;
             return this;

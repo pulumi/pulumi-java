@@ -26,6 +26,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowlist")
     private @Nullable Output<OracleRdbmsArgs> allowlist;
 
+    /**
+     * @return Oracle objects to include in the stream.
+     * 
+     */
     public Optional<Output<OracleRdbmsArgs>> allowlist() {
         return Optional.ofNullable(this.allowlist);
     }
@@ -37,6 +41,10 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="rejectlist")
     private @Nullable Output<OracleRdbmsArgs> rejectlist;
 
+    /**
+     * @return Oracle objects to exclude from the stream.
+     * 
+     */
     public Optional<Output<OracleRdbmsArgs>> rejectlist() {
         return Optional.ofNullable(this.rejectlist);
     }
@@ -66,20 +74,44 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
             $ = new OracleSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlist Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(@Nullable Output<OracleRdbmsArgs> allowlist) {
             $.allowlist = allowlist;
             return this;
         }
 
+        /**
+         * @param allowlist Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(OracleRdbmsArgs allowlist) {
             return allowlist(Output.of(allowlist));
         }
 
+        /**
+         * @param rejectlist Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(@Nullable Output<OracleRdbmsArgs> rejectlist) {
             $.rejectlist = rejectlist;
             return this;
         }
 
+        /**
+         * @param rejectlist Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(OracleRdbmsArgs rejectlist) {
             return rejectlist(Output.of(rejectlist));
         }

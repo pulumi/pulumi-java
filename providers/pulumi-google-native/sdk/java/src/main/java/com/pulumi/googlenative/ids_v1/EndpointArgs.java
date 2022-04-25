@@ -25,6 +25,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-provided description of the endpoint
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels of the endpoint.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -61,6 +69,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return The fully qualified URL of the network to which the IDS Endpoint is attached.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -86,6 +98,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
     private Output<EndpointSeverity> severity;
 
+    /**
+     * @return Lowest threat severity that this endpoint will alert on.
+     * 
+     */
     public Output<EndpointSeverity> severity() {
         return this.severity;
     }
@@ -97,6 +113,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficLogs")
     private @Nullable Output<Boolean> trafficLogs;
 
+    /**
+     * @return Whether the endpoint should report traffic logs in addition to threat logs.
+     * 
+     */
     public Optional<Output<Boolean>> trafficLogs() {
         return Optional.ofNullable(this.trafficLogs);
     }
@@ -133,11 +153,23 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-provided description of the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-provided description of the endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
@@ -151,11 +183,23 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return endpointId(Output.of(endpointId));
         }
 
+        /**
+         * @param labels The labels of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -169,11 +213,23 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param network The fully qualified URL of the network to which the IDS Endpoint is attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The fully qualified URL of the network to which the IDS Endpoint is attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
@@ -196,20 +252,44 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param severity Lowest threat severity that this endpoint will alert on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<EndpointSeverity> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity Lowest threat severity that this endpoint will alert on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(EndpointSeverity severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param trafficLogs Whether the endpoint should report traffic logs in addition to threat logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficLogs(@Nullable Output<Boolean> trafficLogs) {
             $.trafficLogs = trafficLogs;
             return this;
         }
 
+        /**
+         * @param trafficLogs Whether the endpoint should report traffic logs in addition to threat logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficLogs(Boolean trafficLogs) {
             return trafficLogs(Output.of(trafficLogs));
         }

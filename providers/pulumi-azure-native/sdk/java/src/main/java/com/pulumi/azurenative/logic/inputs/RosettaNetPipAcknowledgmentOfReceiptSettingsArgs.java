@@ -25,6 +25,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.
     @Import(name="isNonRepudiationRequired", required=true)
     private Output<Boolean> isNonRepudiationRequired;
 
+    /**
+     * @return The non-repudiation is required or not.
+     * 
+     */
     public Output<Boolean> isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
@@ -36,6 +40,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.
     @Import(name="timeToAcknowledgeInSeconds", required=true)
     private Output<Integer> timeToAcknowledgeInSeconds;
 
+    /**
+     * @return The time to acknowledge in seconds.
+     * 
+     */
     public Output<Integer> timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
@@ -65,20 +73,44 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsArgs extends com.
             $ = new RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isNonRepudiationRequired The non-repudiation is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isNonRepudiationRequired(Output<Boolean> isNonRepudiationRequired) {
             $.isNonRepudiationRequired = isNonRepudiationRequired;
             return this;
         }
 
+        /**
+         * @param isNonRepudiationRequired The non-repudiation is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
             return isNonRepudiationRequired(Output.of(isNonRepudiationRequired));
         }
 
+        /**
+         * @param timeToAcknowledgeInSeconds The time to acknowledge in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToAcknowledgeInSeconds(Output<Integer> timeToAcknowledgeInSeconds) {
             $.timeToAcknowledgeInSeconds = timeToAcknowledgeInSeconds;
             return this;
         }
 
+        /**
+         * @param timeToAcknowledgeInSeconds The time to acknowledge in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
             return timeToAcknowledgeInSeconds(Output.of(timeToAcknowledgeInSeconds));
         }

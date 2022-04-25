@@ -25,6 +25,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="options")
     private @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
+    /**
+     * @return Options for transit gateway peering attachment
+     * 
+     */
     public Optional<Output<TransitGatewayPeeringAttachmentOptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -36,6 +40,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="peerAccountId", required=true)
     private Output<String> peerAccountId;
 
+    /**
+     * @return The ID of the peer account
+     * 
+     */
     public Output<String> peerAccountId() {
         return this.peerAccountId;
     }
@@ -47,6 +55,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="peerRegion", required=true)
     private Output<String> peerRegion;
 
+    /**
+     * @return Peer Region
+     * 
+     */
     public Output<String> peerRegion() {
         return this.peerRegion;
     }
@@ -58,6 +70,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="peerTransitGatewayId", required=true)
     private Output<String> peerTransitGatewayId;
 
+    /**
+     * @return The ID of the peer transit gateway.
+     * 
+     */
     public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
@@ -69,6 +85,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="tags")
     private @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
+    /**
+     * @return The tags for the transit gateway peering attachment.
+     * 
+     */
     public Optional<Output<List<TransitGatewayPeeringAttachmentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
     @Import(name="transitGatewayId", required=true)
     private Output<String> transitGatewayId;
 
+    /**
+     * @return The ID of the transit gateway.
+     * 
+     */
     public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
@@ -113,60 +137,138 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
             $ = new TransitGatewayPeeringAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param options Options for transit gateway peering attachment
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Options for transit gateway peering attachment
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(TransitGatewayPeeringAttachmentOptionsArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param peerAccountId The ID of the peer account
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAccountId(Output<String> peerAccountId) {
             $.peerAccountId = peerAccountId;
             return this;
         }
 
+        /**
+         * @param peerAccountId The ID of the peer account
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerAccountId(String peerAccountId) {
             return peerAccountId(Output.of(peerAccountId));
         }
 
+        /**
+         * @param peerRegion Peer Region
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerRegion(Output<String> peerRegion) {
             $.peerRegion = peerRegion;
             return this;
         }
 
+        /**
+         * @param peerRegion Peer Region
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerRegion(String peerRegion) {
             return peerRegion(Output.of(peerRegion));
         }
 
+        /**
+         * @param peerTransitGatewayId The ID of the peer transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerTransitGatewayId(Output<String> peerTransitGatewayId) {
             $.peerTransitGatewayId = peerTransitGatewayId;
             return this;
         }
 
+        /**
+         * @param peerTransitGatewayId The ID of the peer transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             return peerTransitGatewayId(Output.of(peerTransitGatewayId));
         }
 
+        /**
+         * @param tags The tags for the transit gateway peering attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the transit gateway peering attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TransitGatewayPeeringAttachmentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the transit gateway peering attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TransitGatewayPeeringAttachmentTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param transitGatewayId The ID of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
 
+        /**
+         * @param transitGatewayId The ID of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }

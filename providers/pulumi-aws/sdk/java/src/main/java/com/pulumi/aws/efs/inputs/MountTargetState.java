@@ -23,6 +23,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneId")
     private @Nullable Output<String> availabilityZoneId;
 
+    /**
+     * @return The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+     * 
+     */
     public Optional<Output<String>> availabilityZoneId() {
         return Optional.ofNullable(this.availabilityZoneId);
     }
@@ -34,6 +38,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
     private @Nullable Output<String> availabilityZoneName;
 
+    /**
+     * @return The name of the Availability Zone (AZ) that the mount target resides in.
+     * 
+     */
     public Optional<Output<String>> availabilityZoneName() {
         return Optional.ofNullable(this.availabilityZoneName);
     }
@@ -45,6 +53,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
     private @Nullable Output<String> dnsName;
 
+    /**
+     * @return The DNS name for the EFS file system.
+     * 
+     */
     public Optional<Output<String>> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
@@ -56,6 +68,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemArn")
     private @Nullable Output<String> fileSystemArn;
 
+    /**
+     * @return Amazon Resource Name of the file system.
+     * 
+     */
     public Optional<Output<String>> fileSystemArn() {
         return Optional.ofNullable(this.fileSystemArn);
     }
@@ -67,6 +83,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
     private @Nullable Output<String> fileSystemId;
 
+    /**
+     * @return The ID of the file system for which the mount target is intended.
+     * 
+     */
     public Optional<Output<String>> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -79,6 +99,11 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The address (within the address range of the specified subnet) at
+     * which the file system may be mounted via the mount target.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -90,6 +115,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mountTargetDnsName")
     private @Nullable Output<String> mountTargetDnsName;
 
+    /**
+     * @return The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+     * 
+     */
     public Optional<Output<String>> mountTargetDnsName() {
         return Optional.ofNullable(this.mountTargetDnsName);
     }
@@ -101,6 +130,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaceId")
     private @Nullable Output<String> networkInterfaceId;
 
+    /**
+     * @return The ID of the network interface that Amazon EFS created when it created the mount target.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
@@ -112,6 +145,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return AWS account ID that owns the resource.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -124,6 +161,11 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of up to 5 VPC security group IDs (that must
+     * be for the same VPC as subnet specified) in effect for the mount target.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -135,6 +177,10 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet to add the mount target in.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -173,105 +219,248 @@ public final class MountTargetState extends com.pulumi.resources.ResourceArgs {
             $ = new MountTargetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZoneId The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             $.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
+        /**
+         * @param availabilityZoneId The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneId(String availabilityZoneId) {
             return availabilityZoneId(Output.of(availabilityZoneId));
         }
 
+        /**
+         * @param availabilityZoneName The name of the Availability Zone (AZ) that the mount target resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
             $.availabilityZoneName = availabilityZoneName;
             return this;
         }
 
+        /**
+         * @param availabilityZoneName The name of the Availability Zone (AZ) that the mount target resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneName(String availabilityZoneName) {
             return availabilityZoneName(Output.of(availabilityZoneName));
         }
 
+        /**
+         * @param dnsName The DNS name for the EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(@Nullable Output<String> dnsName) {
             $.dnsName = dnsName;
             return this;
         }
 
+        /**
+         * @param dnsName The DNS name for the EFS file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsName(String dnsName) {
             return dnsName(Output.of(dnsName));
         }
 
+        /**
+         * @param fileSystemArn Amazon Resource Name of the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
             $.fileSystemArn = fileSystemArn;
             return this;
         }
 
+        /**
+         * @param fileSystemArn Amazon Resource Name of the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemArn(String fileSystemArn) {
             return fileSystemArn(Output.of(fileSystemArn));
         }
 
+        /**
+         * @param fileSystemId The ID of the file system for which the mount target is intended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param fileSystemId The ID of the file system for which the mount target is intended.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
+        /**
+         * @param ipAddress The address (within the address range of the specified subnet) at
+         * which the file system may be mounted via the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The address (within the address range of the specified subnet) at
+         * which the file system may be mounted via the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param mountTargetDnsName The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountTargetDnsName(@Nullable Output<String> mountTargetDnsName) {
             $.mountTargetDnsName = mountTargetDnsName;
             return this;
         }
 
+        /**
+         * @param mountTargetDnsName The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountTargetDnsName(String mountTargetDnsName) {
             return mountTargetDnsName(Output.of(mountTargetDnsName));
         }
 
+        /**
+         * @param networkInterfaceId The ID of the network interface that Amazon EFS created when it created the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId The ID of the network interface that Amazon EFS created when it created the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
+        /**
+         * @param ownerId AWS account ID that owns the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId AWS account ID that owns the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param securityGroups A list of up to 5 VPC security group IDs (that must
+         * be for the same VPC as subnet specified) in effect for the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of up to 5 VPC security group IDs (that must
+         * be for the same VPC as subnet specified) in effect for the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of up to 5 VPC security group IDs (that must
+         * be for the same VPC as subnet specified) in effect for the mount target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnetId The ID of the subnet to add the mount target in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet to add the mount target in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

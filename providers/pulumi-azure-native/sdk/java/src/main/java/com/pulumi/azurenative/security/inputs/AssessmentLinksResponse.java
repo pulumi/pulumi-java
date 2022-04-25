@@ -23,6 +23,10 @@ public final class AssessmentLinksResponse extends com.pulumi.resources.InvokeAr
     @Import(name="azurePortalUri", required=true)
     private String azurePortalUri;
 
+    /**
+     * @return Link to assessment in Azure Portal
+     * 
+     */
     public String azurePortalUri() {
         return this.azurePortalUri;
     }
@@ -51,6 +55,12 @@ public final class AssessmentLinksResponse extends com.pulumi.resources.InvokeAr
             $ = new AssessmentLinksResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azurePortalUri Link to assessment in Azure Portal
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePortalUri(String azurePortalUri) {
             $.azurePortalUri = azurePortalUri;
             return this;

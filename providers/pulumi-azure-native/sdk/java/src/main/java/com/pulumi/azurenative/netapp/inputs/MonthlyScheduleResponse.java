@@ -27,6 +27,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="daysOfMonth")
     private @Nullable String daysOfMonth;
 
+    /**
+     * @return Indicates which days of the month snapshot should be taken. A comma delimited string.
+     * 
+     */
     public Optional<String> daysOfMonth() {
         return Optional.ofNullable(this.daysOfMonth);
     }
@@ -38,6 +42,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hour")
     private @Nullable Integer hour;
 
+    /**
+     * @return Indicates which hour in UTC timezone a snapshot should be taken
+     * 
+     */
     public Optional<Integer> hour() {
         return Optional.ofNullable(this.hour);
     }
@@ -49,6 +57,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minute")
     private @Nullable Integer minute;
 
+    /**
+     * @return Indicates which minute snapshot should be taken
+     * 
+     */
     public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -60,6 +72,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="snapshotsToKeep")
     private @Nullable Integer snapshotsToKeep;
 
+    /**
+     * @return Monthly snapshot count to keep
+     * 
+     */
     public Optional<Integer> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
@@ -71,6 +87,10 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="usedBytes")
     private @Nullable Double usedBytes;
 
+    /**
+     * @return Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     public Optional<Double> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -103,26 +123,56 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
             $ = new MonthlyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfMonth Indicates which days of the month snapshot should be taken. A comma delimited string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfMonth(@Nullable String daysOfMonth) {
             $.daysOfMonth = daysOfMonth;
             return this;
         }
 
+        /**
+         * @param hour Indicates which hour in UTC timezone a snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(@Nullable Integer hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Integer minute) {
             $.minute = minute;
             return this;
         }
 
+        /**
+         * @param snapshotsToKeep Monthly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(@Nullable Double usedBytes) {
             $.usedBytes = usedBytes;
             return this;

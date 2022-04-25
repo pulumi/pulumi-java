@@ -29,6 +29,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="group")
     private @Nullable Output<GroupSubjectArgs> group;
 
+    /**
+     * @return `group` matches based on user group name.
+     * 
+     */
     public Optional<Output<GroupSubjectArgs>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -40,6 +44,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return `kind` indicates which one of the other fields is non-empty. Required
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -51,6 +59,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
+    /**
+     * @return `serviceAccount` matches ServiceAccounts.
+     * 
+     */
     public Optional<Output<ServiceAccountSubjectArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -62,6 +74,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="user")
     private @Nullable Output<UserSubjectArgs> user;
 
+    /**
+     * @return `user` matches based on username.
+     * 
+     */
     public Optional<Output<UserSubjectArgs>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -93,38 +109,86 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group `group` matches based on user group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<GroupSubjectArgs> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group `group` matches based on user group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(GroupSubjectArgs group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param kind `kind` indicates which one of the other fields is non-empty. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind `kind` indicates which one of the other fields is non-empty. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param serviceAccount `serviceAccount` matches ServiceAccounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<ServiceAccountSubjectArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount `serviceAccount` matches ServiceAccounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(ServiceAccountSubjectArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param user `user` matches based on username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<UserSubjectArgs> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user `user` matches based on username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(UserSubjectArgs user) {
             return user(Output.of(user));
         }

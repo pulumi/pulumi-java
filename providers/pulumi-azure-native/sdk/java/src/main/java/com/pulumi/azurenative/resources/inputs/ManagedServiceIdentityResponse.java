@@ -27,6 +27,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return ID of the Azure Active Directory.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -38,6 +42,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the managed identity.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -49,6 +57,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -79,16 +91,34 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
             $ = new ManagedServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tenantId ID of the Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

@@ -24,6 +24,10 @@ public final class VolumeDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="devicePath", required=true)
     private Output<String> devicePath;
 
+    /**
+     * @return devicePath is the path inside of the container that the device will be mapped to.
+     * 
+     */
     public Output<String> devicePath() {
         return this.devicePath;
     }
@@ -35,6 +39,10 @@ public final class VolumeDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name must match the name of a persistentVolumeClaim in the pod
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,20 +72,44 @@ public final class VolumeDeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param devicePath devicePath is the path inside of the container that the device will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(Output<String> devicePath) {
             $.devicePath = devicePath;
             return this;
         }
 
+        /**
+         * @param devicePath devicePath is the path inside of the container that the device will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devicePath(String devicePath) {
             return devicePath(Output.of(devicePath));
         }
 
+        /**
+         * @param name name must match the name of a persistentVolumeClaim in the pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name must match the name of a persistentVolumeClaim in the pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

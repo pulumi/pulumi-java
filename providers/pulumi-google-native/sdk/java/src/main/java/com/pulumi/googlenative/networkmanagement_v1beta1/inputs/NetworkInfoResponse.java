@@ -23,6 +23,10 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Name of a Compute Engine network.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -34,6 +38,10 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="matchedIpRange", required=true)
     private String matchedIpRange;
 
+    /**
+     * @return The IP range that matches the test.
+     * 
+     */
     public String matchedIpRange() {
         return this.matchedIpRange;
     }
@@ -45,6 +53,10 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return URI of a Compute Engine network.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -75,16 +87,34 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NetworkInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Name of a Compute Engine network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param matchedIpRange The IP range that matches the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchedIpRange(String matchedIpRange) {
             $.matchedIpRange = matchedIpRange;
             return this;
         }
 
+        /**
+         * @param uri URI of a Compute Engine network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

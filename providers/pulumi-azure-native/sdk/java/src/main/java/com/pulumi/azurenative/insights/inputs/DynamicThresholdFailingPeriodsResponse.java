@@ -23,6 +23,10 @@ public final class DynamicThresholdFailingPeriodsResponse extends com.pulumi.res
     @Import(name="minFailingPeriodsToAlert", required=true)
     private Double minFailingPeriodsToAlert;
 
+    /**
+     * @return The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+     * 
+     */
     public Double minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
     }
@@ -34,6 +38,10 @@ public final class DynamicThresholdFailingPeriodsResponse extends com.pulumi.res
     @Import(name="numberOfEvaluationPeriods", required=true)
     private Double numberOfEvaluationPeriods;
 
+    /**
+     * @return The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+     * 
+     */
     public Double numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
@@ -63,11 +71,23 @@ public final class DynamicThresholdFailingPeriodsResponse extends com.pulumi.res
             $ = new DynamicThresholdFailingPeriodsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minFailingPeriodsToAlert The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
             $.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
             return this;
         }
 
+        /**
+         * @param numberOfEvaluationPeriods The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
             $.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
             return this;

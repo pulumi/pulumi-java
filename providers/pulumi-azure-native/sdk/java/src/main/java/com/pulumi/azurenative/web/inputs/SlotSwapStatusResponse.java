@@ -23,6 +23,10 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="destinationSlotName", required=true)
     private String destinationSlotName;
 
+    /**
+     * @return The destination slot of the last swap operation.
+     * 
+     */
     public String destinationSlotName() {
         return this.destinationSlotName;
     }
@@ -34,6 +38,10 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sourceSlotName", required=true)
     private String sourceSlotName;
 
+    /**
+     * @return The source slot of the last swap operation.
+     * 
+     */
     public String sourceSlotName() {
         return this.sourceSlotName;
     }
@@ -45,6 +53,10 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timestampUtc", required=true)
     private String timestampUtc;
 
+    /**
+     * @return The time the last successful slot swap completed.
+     * 
+     */
     public String timestampUtc() {
         return this.timestampUtc;
     }
@@ -75,16 +87,34 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
             $ = new SlotSwapStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationSlotName The destination slot of the last swap operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationSlotName(String destinationSlotName) {
             $.destinationSlotName = destinationSlotName;
             return this;
         }
 
+        /**
+         * @param sourceSlotName The source slot of the last swap operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSlotName(String sourceSlotName) {
             $.sourceSlotName = sourceSlotName;
             return this;
         }
 
+        /**
+         * @param timestampUtc The time the last successful slot swap completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampUtc(String timestampUtc) {
             $.timestampUtc = timestampUtc;
             return this;

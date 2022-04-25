@@ -29,6 +29,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="activeDeploymentName")
     private @Nullable String activeDeploymentName;
 
+    /**
+     * @return Name of the active deployment of the App
+     * 
+     */
     public Optional<String> activeDeploymentName() {
         return Optional.ofNullable(this.activeDeploymentName);
     }
@@ -40,6 +44,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return Date time when the resource is created
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -51,6 +59,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="fqdn")
     private @Nullable String fqdn;
 
+    /**
+     * @return Fully qualified dns Name.
+     * 
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
@@ -62,6 +74,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="httpsOnly")
     private @Nullable Boolean httpsOnly;
 
+    /**
+     * @return Indicate if only https is allowed.
+     * 
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
@@ -73,6 +89,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="persistentDisk")
     private @Nullable PersistentDiskResponse persistentDisk;
 
+    /**
+     * @return Persistent disk settings
+     * 
+     */
     public Optional<PersistentDiskResponse> persistentDisk() {
         return Optional.ofNullable(this.persistentDisk);
     }
@@ -84,6 +104,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the App
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -95,6 +119,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="public")
     private @Nullable Boolean public_;
 
+    /**
+     * @return Indicates whether the App exposes public endpoint
+     * 
+     */
     public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -106,6 +134,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="temporaryDisk")
     private @Nullable TemporaryDiskResponse temporaryDisk;
 
+    /**
+     * @return Temporary disk settings
+     * 
+     */
     public Optional<TemporaryDiskResponse> temporaryDisk() {
         return Optional.ofNullable(this.temporaryDisk);
     }
@@ -117,6 +149,10 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL of the App
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -153,46 +189,100 @@ public final class AppResourcePropertiesResponse extends com.pulumi.resources.In
             $ = new AppResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeDeploymentName Name of the active deployment of the App
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
             $.activeDeploymentName = activeDeploymentName;
             return this;
         }
 
+        /**
+         * @param createdTime Date time when the resource is created
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param fqdn Fully qualified dns Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(@Nullable String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
 
+        /**
+         * @param persistentDisk Persistent disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
             $.persistentDisk = persistentDisk;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the App
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the App exposes public endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Boolean public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param temporaryDisk Temporary disk settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
             $.temporaryDisk = temporaryDisk;
             return this;
         }
 
+        /**
+         * @param url URL of the App
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

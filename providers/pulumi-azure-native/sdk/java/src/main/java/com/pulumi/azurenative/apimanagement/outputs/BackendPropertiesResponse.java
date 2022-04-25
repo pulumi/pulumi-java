@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BackendPropertiesResponse {
     /**
-     * Backend Service Fabric Cluster Properties
+     * @return Backend Service Fabric Cluster Properties
      * 
      */
     private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
@@ -23,9 +23,9 @@ public final class BackendPropertiesResponse {
     }
 
     /**
-     * Backend Service Fabric Cluster Properties
+     * @return Backend Service Fabric Cluster Properties
      * 
-    */
+     */
     public Optional<BackendServiceFabricClusterPropertiesResponse> serviceFabricCluster() {
         return Optional.ofNullable(this.serviceFabricCluster);
     }

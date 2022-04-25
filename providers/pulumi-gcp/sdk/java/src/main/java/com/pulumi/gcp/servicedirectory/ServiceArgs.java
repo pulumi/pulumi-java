@@ -26,6 +26,13 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata for the service. This data can be consumed
+     * by service clients. The entire metadata dictionary may contain
+     * up to 2000 characters, spread across all key-value pairs.
+     * Metadata that goes beyond any these limits will be rejected.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -37,6 +44,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return The resource name of the namespace this service will belong to.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -49,6 +60,11 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceId", required=true)
     private Output<String> serviceId;
 
+    /**
+     * @return The Resource ID must be 1-63 characters long, including digits,
+     * lowercase letters or the hyphen character.
+     * 
+     */
     public Output<String> serviceId() {
         return this.serviceId;
     }
@@ -79,29 +95,73 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Metadata for the service. This data can be consumed
+         * by service clients. The entire metadata dictionary may contain
+         * up to 2000 characters, spread across all key-value pairs.
+         * Metadata that goes beyond any these limits will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata for the service. This data can be consumed
+         * by service clients. The entire metadata dictionary may contain
+         * up to 2000 characters, spread across all key-value pairs.
+         * Metadata that goes beyond any these limits will be rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param namespace The resource name of the namespace this service will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The resource name of the namespace this service will belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param serviceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId The Resource ID must be 1-63 characters long, including digits,
+         * lowercase letters or the hyphen character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }

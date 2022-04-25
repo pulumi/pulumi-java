@@ -25,6 +25,10 @@ public final class ManagedIdentityPropertiesResponse extends com.pulumi.resource
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return Principal Id
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -36,6 +40,10 @@ public final class ManagedIdentityPropertiesResponse extends com.pulumi.resource
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant Id
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -47,6 +55,10 @@ public final class ManagedIdentityPropertiesResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the managed identity
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class ManagedIdentityPropertiesResponse extends com.pulumi.resource
             $ = new ManagedIdentityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Principal Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

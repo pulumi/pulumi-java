@@ -27,6 +27,10 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="notebookOutputOption")
     private @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
 
+    /**
+     * @return Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+     * 
+     */
     public Optional<Output<DomainSharingSettingsNotebookOutputOption>> notebookOutputOption() {
         return Optional.ofNullable(this.notebookOutputOption);
     }
@@ -38,6 +42,10 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="s3KmsKeyId")
     private @Nullable Output<String> s3KmsKeyId;
 
+    /**
+     * @return When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+     * 
+     */
     public Optional<Output<String>> s3KmsKeyId() {
         return Optional.ofNullable(this.s3KmsKeyId);
     }
@@ -49,6 +57,10 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="s3OutputPath")
     private @Nullable Output<String> s3OutputPath;
 
+    /**
+     * @return When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+     * 
+     */
     public Optional<Output<String>> s3OutputPath() {
         return Optional.ofNullable(this.s3OutputPath);
     }
@@ -79,29 +91,65 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
             $ = new DomainSharingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notebookOutputOption Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookOutputOption(@Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption) {
             $.notebookOutputOption = notebookOutputOption;
             return this;
         }
 
+        /**
+         * @param notebookOutputOption Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookOutputOption(DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
             return notebookOutputOption(Output.of(notebookOutputOption));
         }
 
+        /**
+         * @param s3KmsKeyId When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
             $.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
 
+        /**
+         * @param s3KmsKeyId When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3KmsKeyId(String s3KmsKeyId) {
             return s3KmsKeyId(Output.of(s3KmsKeyId));
         }
 
+        /**
+         * @param s3OutputPath When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
             $.s3OutputPath = s3OutputPath;
             return this;
         }
 
+        /**
+         * @param s3OutputPath When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputPath(String s3OutputPath) {
             return s3OutputPath(Output.of(s3OutputPath));
         }

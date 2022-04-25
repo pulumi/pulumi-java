@@ -30,6 +30,10 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     @Import(name="details", required=true)
     private Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
+    /**
+     * @return A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+     * 
+     */
     public Output<MultiRegionAccessPointPolicyDetailsArgs> details() {
         return this.details;
     }
@@ -68,11 +72,23 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param details A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(MultiRegionAccessPointPolicyDetailsArgs details) {
             return details(Output.of(details));
         }

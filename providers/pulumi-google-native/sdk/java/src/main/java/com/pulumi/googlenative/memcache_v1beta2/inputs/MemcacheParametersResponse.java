@@ -20,6 +20,10 @@ public final class MemcacheParametersResponse extends com.pulumi.resources.Invok
     @Import(name="params", required=true)
     private Map<String,String> params;
 
+    /**
+     * @return User defined set of parameters to use in the memcached process.
+     * 
+     */
     public Map<String,String> params() {
         return this.params;
     }
@@ -48,6 +52,12 @@ public final class MemcacheParametersResponse extends com.pulumi.resources.Invok
             $ = new MemcacheParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param params User defined set of parameters to use in the memcached process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(Map<String,String> params) {
             $.params = params;
             return this;

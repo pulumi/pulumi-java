@@ -19,58 +19,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFleetResult {
     /**
-     * A human-readable description of a fleet.
+     * @return A human-readable description of a fleet.
      * 
      */
     private final @Nullable String description;
     /**
-     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
      */
     private final @Nullable Integer desiredEC2Instances;
     /**
-     * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
+     * @return A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
      * 
      */
     private final @Nullable List<FleetIpPermission> eC2InboundPermissions;
     /**
-     * Unique fleet ID
+     * @return Unique fleet ID
      * 
      */
     private final @Nullable String fleetId;
     private final @Nullable List<FleetLocationConfiguration> locations;
     /**
-     * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
+     * @return [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
      */
     private final @Nullable Integer maxSize;
     /**
-     * The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
+     * @return The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
      * 
      */
     private final @Nullable List<String> metricGroups;
     /**
-     * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
+     * @return [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
      */
     private final @Nullable Integer minSize;
     /**
-     * A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
+     * @return A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
      * 
      */
     private final @Nullable String name;
     /**
-     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
      */
     private final @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy;
     /**
-     * A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
+     * @return A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
      * 
      */
     private final @Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy;
     /**
-     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom game build executable or a Realtime script. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception.
+     * @return Instructions for launching server processes on each instance in the fleet. Server processes run either a custom game build executable or a Realtime script. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception.
      * 
      * This parameter is required unless the parameters ServerLaunchPath and ServerLaunchParameters are defined. Runtime configuration has replaced these parameters, but fleets that use them will continue to work.
      * 
@@ -106,30 +106,30 @@ public final class GetFleetResult {
     }
 
     /**
-     * A human-readable description of a fleet.
+     * @return A human-readable description of a fleet.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
+     * @return [DEPRECATED] The number of EC2 instances that you want this fleet to host. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34; and initiates a single instance. Once the fleet is active, update this value to trigger GameLift to add or remove instances from the fleet.
      * 
-    */
+     */
     public Optional<Integer> desiredEC2Instances() {
         return Optional.ofNullable(this.desiredEC2Instances);
     }
     /**
-     * A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
+     * @return A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server.
      * 
-    */
+     */
     public List<FleetIpPermission> eC2InboundPermissions() {
         return this.eC2InboundPermissions == null ? List.of() : this.eC2InboundPermissions;
     }
     /**
-     * Unique fleet ID
+     * @return Unique fleet ID
      * 
-    */
+     */
     public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
@@ -137,53 +137,53 @@ public final class GetFleetResult {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
+     * @return [DEPRECATED] The maximum value that is allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;1&#34;. Once the fleet is active, you can change this value.
      * 
-    */
+     */
     public Optional<Integer> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
     /**
-     * The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
+     * @return The name of an Amazon CloudWatch metric group. A metric group aggregates the metrics for all fleets in the group. Specify a string containing the metric group name. You can use an existing name or use a new name to create a new metric group. Currently, this parameter can have only one string.
      * 
-    */
+     */
     public List<String> metricGroups() {
         return this.metricGroups == null ? List.of() : this.metricGroups;
     }
     /**
-     * [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
+     * @return [DEPRECATED] The minimum value allowed for the fleet&#39;s instance count. When creating a new fleet, GameLift automatically sets this value to &#34;0&#34;. After the fleet is active, you can change this value.
      * 
-    */
+     */
     public Optional<Integer> minSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
-     * A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
+     * @return A descriptive label that is associated with a fleet. Fleet names do not need to be unique.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
+     * @return A game session protection policy to apply to all game sessions hosted on instances in this fleet. When protected, active game sessions cannot be terminated during a scale-down event. If this parameter is not set, instances in this fleet default to no protection. You can change a fleet&#39;s protection policy to affect future game sessions on the fleet. You can also set protection for individual game sessions.
      * 
-    */
+     */
     public Optional<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {
         return Optional.ofNullable(this.newGameSessionProtectionPolicy);
     }
     /**
-     * A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
+     * @return A policy that limits the number of game sessions an individual player can create over a span of time for this fleet.
      * 
-    */
+     */
     public Optional<FleetResourceCreationLimitPolicy> resourceCreationLimitPolicy() {
         return Optional.ofNullable(this.resourceCreationLimitPolicy);
     }
     /**
-     * Instructions for launching server processes on each instance in the fleet. Server processes run either a custom game build executable or a Realtime script. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception.
+     * @return Instructions for launching server processes on each instance in the fleet. Server processes run either a custom game build executable or a Realtime script. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception.
      * 
      * This parameter is required unless the parameters ServerLaunchPath and ServerLaunchParameters are defined. Runtime configuration has replaced these parameters, but fleets that use them will continue to work.
      * 
-    */
+     */
     public Optional<FleetRuntimeConfiguration> runtimeConfiguration() {
         return Optional.ofNullable(this.runtimeConfiguration);
     }

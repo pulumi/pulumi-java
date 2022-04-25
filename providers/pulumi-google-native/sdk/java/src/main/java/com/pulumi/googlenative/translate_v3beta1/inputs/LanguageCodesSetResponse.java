@@ -24,6 +24,10 @@ public final class LanguageCodesSetResponse extends com.pulumi.resources.InvokeA
     @Import(name="languageCodes", required=true)
     private List<String> languageCodes;
 
+    /**
+     * @return The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public List<String> languageCodes() {
         return this.languageCodes;
     }
@@ -52,11 +56,23 @@ public final class LanguageCodesSetResponse extends com.pulumi.resources.InvokeA
             $ = new LanguageCodesSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param languageCodes The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodes(List<String> languageCodes) {
             $.languageCodes = languageCodes;
             return this;
         }
 
+        /**
+         * @param languageCodes The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodes(String... languageCodes) {
             return languageCodes(List.of(languageCodes));
         }

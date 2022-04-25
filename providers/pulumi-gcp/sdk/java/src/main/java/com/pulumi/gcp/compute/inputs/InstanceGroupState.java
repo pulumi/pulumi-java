@@ -26,6 +26,11 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional textual description of the instance
+     * group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +44,12 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instances")
     private @Nullable Output<List<String>> instances;
 
+    /**
+     * @return List of instances in the group. They should be given
+     * as either self_link or id. When adding instances they must all be in the same
+     * network and zone as the instance group.
+     * 
+     */
     public Optional<Output<List<String>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -50,6 +61,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name which the port will be mapped to.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,6 +77,11 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="namedPorts")
     private @Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts;
 
+    /**
+     * @return The named port configuration. See the section below
+     * for details on configuration. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceGroupNamedPortGetArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
@@ -76,6 +96,13 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return The URL of the network the instance group is in. If
+     * this is different from the network where the instances are in, the creation
+     * fails. Defaults to the network where the instances are in (if neither
+     * `network` nor `instances` is specified, this field will be blank).
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -88,6 +115,11 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -99,6 +131,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -110,6 +146,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="size")
     private @Nullable Output<Integer> size;
 
+    /**
+     * @return The number of instances in the group.
+     * 
+     */
     public Optional<Output<Integer>> size() {
         return Optional.ofNullable(this.size);
     }
@@ -121,6 +161,10 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone that this instance group should be created in.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -157,91 +201,230 @@ public final class InstanceGroupState extends com.pulumi.resources.ResourceArgs 
             $ = new InstanceGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional textual description of the instance
+         * group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional textual description of the instance
+         * group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instances List of instances in the group. They should be given
+         * as either self_link or id. When adding instances they must all be in the same
+         * network and zone as the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<String>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances List of instances in the group. They should be given
+         * as either self_link or id. When adding instances they must all be in the same
+         * network and zone as the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<String> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances List of instances in the group. They should be given
+         * as either self_link or id. When adding instances they must all be in the same
+         * network and zone as the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param name The name which the port will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name which the port will be mapped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(@Nullable Output<List<InstanceGroupNamedPortGetArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(List<InstanceGroupNamedPortGetArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
+        /**
+         * @param namedPorts The named port configuration. See the section below
+         * for details on configuration. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(InstanceGroupNamedPortGetArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
 
+        /**
+         * @param network The URL of the network the instance group is in. If
+         * this is different from the network where the instances are in, the creation
+         * fails. Defaults to the network where the instances are in (if neither
+         * `network` nor `instances` is specified, this field will be blank).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The URL of the network the instance group is in. If
+         * this is different from the network where the instances are in, the creation
+         * fails. Defaults to the network where the instances are in (if neither
+         * `network` nor `instances` is specified, this field will be blank).
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param size The number of instances in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable Output<Integer> size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param size The number of instances in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(Integer size) {
             return size(Output.of(size));
         }
 
+        /**
+         * @param zone The zone that this instance group should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone that this instance group should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

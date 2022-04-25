@@ -65,6 +65,10 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<WebACLRuleArgs>> rules;
 
+    /**
+     * @return Collection of Rules.
+     * 
+     */
     public Optional<Output<List<WebACLRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -167,15 +171,33 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<WebACLRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<WebACLRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Collection of Rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(WebACLRuleArgs... rules) {
             return rules(List.of(rules));
         }

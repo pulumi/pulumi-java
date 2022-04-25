@@ -28,6 +28,10 @@ public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.R
     @Import(name="containers")
     private @Nullable Output<List<ContainerArgs>> containers;
 
+    /**
+     * @return An object that describes the configuration for the containers of the deployment.
+     * 
+     */
     public Optional<Output<List<ContainerArgs>>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -39,6 +43,10 @@ public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.R
     @Import(name="publicEndpoint")
     private @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
+    /**
+     * @return An object that describes the endpoint of the deployment.
+     * 
+     */
     public Optional<Output<ContainerPublicEndpointArgs>> publicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }
@@ -68,24 +76,54 @@ public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.R
             $ = new ContainerServiceDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containers An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers An object that describes the configuration for the containers of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param publicEndpoint An object that describes the endpoint of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicEndpoint(@Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
             $.publicEndpoint = publicEndpoint;
             return this;
         }
 
+        /**
+         * @param publicEndpoint An object that describes the endpoint of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicEndpoint(ContainerPublicEndpointArgs publicEndpoint) {
             return publicEndpoint(Output.of(publicEndpoint));
         }

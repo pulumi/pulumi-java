@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OpenIdConnectRegistrationResponse {
     /**
-     * The authentication credentials of the custom Open ID Connect provider.
+     * @return The authentication credentials of the custom Open ID Connect provider.
      * 
      */
     private final @Nullable OpenIdConnectClientCredentialResponse clientCredential;
     /**
-     * The client id of the custom Open ID Connect provider.
+     * @return The client id of the custom Open ID Connect provider.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The configuration settings of the endpoints used for the custom Open ID Connect provider.
+     * @return The configuration settings of the endpoints used for the custom Open ID Connect provider.
      * 
      */
     private final @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration;
@@ -40,23 +40,23 @@ public final class OpenIdConnectRegistrationResponse {
     }
 
     /**
-     * The authentication credentials of the custom Open ID Connect provider.
+     * @return The authentication credentials of the custom Open ID Connect provider.
      * 
-    */
+     */
     public Optional<OpenIdConnectClientCredentialResponse> clientCredential() {
         return Optional.ofNullable(this.clientCredential);
     }
     /**
-     * The client id of the custom Open ID Connect provider.
+     * @return The client id of the custom Open ID Connect provider.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The configuration settings of the endpoints used for the custom Open ID Connect provider.
+     * @return The configuration settings of the endpoints used for the custom Open ID Connect provider.
      * 
-    */
+     */
     public Optional<OpenIdConnectConfigResponse> openIdConnectConfiguration() {
         return Optional.ofNullable(this.openIdConnectConfiguration);
     }

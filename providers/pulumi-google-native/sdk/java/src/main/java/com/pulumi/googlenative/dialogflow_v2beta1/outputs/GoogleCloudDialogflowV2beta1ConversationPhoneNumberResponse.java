@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse {
     /**
-     * The phone number to connect to this conversation.
+     * @return The phone number to connect to this conversation.
      * 
      */
     private final String phoneNumber;
@@ -21,9 +21,9 @@ public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse {
     }
 
     /**
-     * The phone number to connect to this conversation.
+     * @return The phone number to connect to this conversation.
      * 
-    */
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }

@@ -22,6 +22,10 @@ public final class ImageBuilderAccessEndpointGetArgs extends com.pulumi.resource
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of interface endpoint.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -33,6 +37,10 @@ public final class ImageBuilderAccessEndpointGetArgs extends com.pulumi.resource
     @Import(name="vpceId")
     private @Nullable Output<String> vpceId;
 
+    /**
+     * @return Identifier (ID) of the VPC in which the interface endpoint is used.
+     * 
+     */
     public Optional<Output<String>> vpceId() {
         return Optional.ofNullable(this.vpceId);
     }
@@ -62,20 +70,44 @@ public final class ImageBuilderAccessEndpointGetArgs extends com.pulumi.resource
             $ = new ImageBuilderAccessEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Type of interface endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of interface endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param vpceId Identifier (ID) of the VPC in which the interface endpoint is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpceId(@Nullable Output<String> vpceId) {
             $.vpceId = vpceId;
             return this;
         }
 
+        /**
+         * @param vpceId Identifier (ID) of the VPC in which the interface endpoint is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpceId(String vpceId) {
             return vpceId(Output.of(vpceId));
         }

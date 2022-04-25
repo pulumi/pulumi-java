@@ -26,6 +26,10 @@ public final class CacheIdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<CacheIdentityType> type;
 
+    /**
+     * @return The type of identity used for the cache
+     * 
+     */
     public Optional<Output<CacheIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class CacheIdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CacheIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the cache
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<CacheIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the cache
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(CacheIdentityType type) {
             return type(Output.of(type));
         }

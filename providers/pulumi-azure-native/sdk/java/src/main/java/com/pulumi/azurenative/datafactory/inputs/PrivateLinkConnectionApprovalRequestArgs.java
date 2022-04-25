@@ -26,6 +26,10 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.r
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return The state of a private link connection
+     * 
+     */
     public Optional<Output<PrivateLinkConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -54,11 +58,23 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.r
             $ = new PrivateLinkConnectionApprovalRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The state of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState The state of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }

@@ -13,57 +13,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExpressRouteLinkResponse {
     /**
-     * Administrative state of the physical port.
+     * @return Administrative state of the physical port.
      * 
      */
     private final @Nullable String adminState;
     /**
-     * Physical fiber port type.
+     * @return Physical fiber port type.
      * 
      */
     private final String connectorType;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of Azure router interface.
+     * @return Name of Azure router interface.
      * 
      */
     private final String interfaceName;
     /**
-     * MacSec configuration.
+     * @return MacSec configuration.
      * 
      */
     private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
     /**
-     * Name of child port resource that is unique among child port resources of the parent.
+     * @return Name of child port resource that is unique among child port resources of the parent.
      * 
      */
     private final @Nullable String name;
     /**
-     * Mapping between physical port to patch panel port.
+     * @return Mapping between physical port to patch panel port.
      * 
      */
     private final String patchPanelId;
     /**
-     * The provisioning state of the express route link resource.
+     * @return The provisioning state of the express route link resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Mapping of physical patch panel to rack.
+     * @return Mapping of physical patch panel to rack.
      * 
      */
     private final String rackId;
     /**
-     * Name of Azure router associated with physical port.
+     * @return Name of Azure router associated with physical port.
      * 
      */
     private final String routerName;
@@ -95,79 +95,79 @@ public final class ExpressRouteLinkResponse {
     }
 
     /**
-     * Administrative state of the physical port.
+     * @return Administrative state of the physical port.
      * 
-    */
+     */
     public Optional<String> adminState() {
         return Optional.ofNullable(this.adminState);
     }
     /**
-     * Physical fiber port type.
+     * @return Physical fiber port type.
      * 
-    */
+     */
     public String connectorType() {
         return this.connectorType;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of Azure router interface.
+     * @return Name of Azure router interface.
      * 
-    */
+     */
     public String interfaceName() {
         return this.interfaceName;
     }
     /**
-     * MacSec configuration.
+     * @return MacSec configuration.
      * 
-    */
+     */
     public Optional<ExpressRouteLinkMacSecConfigResponse> macSecConfig() {
         return Optional.ofNullable(this.macSecConfig);
     }
     /**
-     * Name of child port resource that is unique among child port resources of the parent.
+     * @return Name of child port resource that is unique among child port resources of the parent.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Mapping between physical port to patch panel port.
+     * @return Mapping between physical port to patch panel port.
      * 
-    */
+     */
     public String patchPanelId() {
         return this.patchPanelId;
     }
     /**
-     * The provisioning state of the express route link resource.
+     * @return The provisioning state of the express route link resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Mapping of physical patch panel to rack.
+     * @return Mapping of physical patch panel to rack.
      * 
-    */
+     */
     public String rackId() {
         return this.rackId;
     }
     /**
-     * Name of Azure router associated with physical port.
+     * @return Name of Azure router associated with physical port.
      * 
-    */
+     */
     public String routerName() {
         return this.routerName;
     }

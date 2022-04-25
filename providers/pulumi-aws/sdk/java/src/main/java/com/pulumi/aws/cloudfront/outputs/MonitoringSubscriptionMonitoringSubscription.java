@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MonitoringSubscriptionMonitoringSubscription {
     /**
-     * A subscription configuration for additional CloudWatch metrics. See below.
+     * @return A subscription configuration for additional CloudWatch metrics. See below.
      * 
      */
     private final MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig;
@@ -21,9 +21,9 @@ public final class MonitoringSubscriptionMonitoringSubscription {
     }
 
     /**
-     * A subscription configuration for additional CloudWatch metrics. See below.
+     * @return A subscription configuration for additional CloudWatch metrics. See below.
      * 
-    */
+     */
     public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }

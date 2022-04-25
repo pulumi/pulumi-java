@@ -20,6 +20,10 @@ public final class GCPolicyMaxVersionGetArgs extends com.pulumi.resources.Resour
     @Import(name="number", required=true)
     private Output<Integer> number;
 
+    /**
+     * @return Number of version before applying the GC policy.
+     * 
+     */
     public Output<Integer> number() {
         return this.number;
     }
@@ -48,11 +52,23 @@ public final class GCPolicyMaxVersionGetArgs extends com.pulumi.resources.Resour
             $ = new GCPolicyMaxVersionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param number Number of version before applying the GC policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Output<Integer> number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param number Number of version before applying the GC policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(Integer number) {
             return number(Output.of(number));
         }

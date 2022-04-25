@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OnlineRequestSettingsResponse {
     /**
-     * The number of requests allowed to queue at once for this deployment.
+     * @return The number of requests allowed to queue at once for this deployment.
      * 
      */
     private final @Nullable Integer maxConcurrentRequestsPerInstance;
     /**
-     * The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+     * @return The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
      * 
      */
     private final @Nullable String maxQueueWait;
     /**
-     * The request timeout in ISO 8601 format. Supports millisecond precision.
+     * @return The request timeout in ISO 8601 format. Supports millisecond precision.
      * 
      */
     private final @Nullable String requestTimeout;
@@ -39,23 +39,23 @@ public final class OnlineRequestSettingsResponse {
     }
 
     /**
-     * The number of requests allowed to queue at once for this deployment.
+     * @return The number of requests allowed to queue at once for this deployment.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentRequestsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
     /**
-     * The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+     * @return The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
      * 
-    */
+     */
     public Optional<String> maxQueueWait() {
         return Optional.ofNullable(this.maxQueueWait);
     }
     /**
-     * The request timeout in ISO 8601 format. Supports millisecond precision.
+     * @return The request timeout in ISO 8601 format. Supports millisecond precision.
      * 
-    */
+     */
     public Optional<String> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }

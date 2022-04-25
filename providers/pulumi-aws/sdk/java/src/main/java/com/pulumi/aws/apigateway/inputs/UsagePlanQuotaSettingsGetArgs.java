@@ -23,6 +23,10 @@ public final class UsagePlanQuotaSettingsGetArgs extends com.pulumi.resources.Re
     @Import(name="limit", required=true)
     private Output<Integer> limit;
 
+    /**
+     * @return The maximum number of requests that can be made in a given time period.
+     * 
+     */
     public Output<Integer> limit() {
         return this.limit;
     }
@@ -34,6 +38,10 @@ public final class UsagePlanQuotaSettingsGetArgs extends com.pulumi.resources.Re
     @Import(name="offset")
     private @Nullable Output<Integer> offset;
 
+    /**
+     * @return The number of requests subtracted from the given limit in the initial time period.
+     * 
+     */
     public Optional<Output<Integer>> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -45,6 +53,10 @@ public final class UsagePlanQuotaSettingsGetArgs extends com.pulumi.resources.Re
     @Import(name="period", required=true)
     private Output<String> period;
 
+    /**
+     * @return The time period in which the limit applies. Valid values are &#34;DAY&#34;, &#34;WEEK&#34; or &#34;MONTH&#34;.
+     * 
+     */
     public Output<String> period() {
         return this.period;
     }
@@ -75,29 +87,65 @@ public final class UsagePlanQuotaSettingsGetArgs extends com.pulumi.resources.Re
             $ = new UsagePlanQuotaSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limit The maximum number of requests that can be made in a given time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(Output<Integer> limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param limit The maximum number of requests that can be made in a given time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(Integer limit) {
             return limit(Output.of(limit));
         }
 
+        /**
+         * @param offset The number of requests subtracted from the given limit in the initial time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable Output<Integer> offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param offset The number of requests subtracted from the given limit in the initial time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(Integer offset) {
             return offset(Output.of(offset));
         }
 
+        /**
+         * @param period The time period in which the limit applies. Valid values are &#34;DAY&#34;, &#34;WEEK&#34; or &#34;MONTH&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(Output<String> period) {
             $.period = period;
             return this;
         }
 
+        /**
+         * @param period The time period in which the limit applies. Valid values are &#34;DAY&#34;, &#34;WEEK&#34; or &#34;MONTH&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             return period(Output.of(period));
         }

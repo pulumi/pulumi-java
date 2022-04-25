@@ -24,6 +24,10 @@ public final class EnvironmentStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="ingress", required=true)
     private IngressEnvironmentStatusResponse ingress;
 
+    /**
+     * @return An object that represents the status of ingress on an environment.
+     * 
+     */
     public IngressEnvironmentStatusResponse ingress() {
         return this.ingress;
     }
@@ -35,6 +39,10 @@ public final class EnvironmentStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="warmStorage", required=true)
     private WarmStorageEnvironmentStatusResponse warmStorage;
 
+    /**
+     * @return An object that represents the status of warm storage on an environment.
+     * 
+     */
     public WarmStorageEnvironmentStatusResponse warmStorage() {
         return this.warmStorage;
     }
@@ -64,11 +72,23 @@ public final class EnvironmentStatusResponse extends com.pulumi.resources.Invoke
             $ = new EnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingress An object that represents the status of ingress on an environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingress(IngressEnvironmentStatusResponse ingress) {
             $.ingress = ingress;
             return this;
         }
 
+        /**
+         * @param warmStorage An object that represents the status of warm storage on an environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
             $.warmStorage = warmStorage;
             return this;

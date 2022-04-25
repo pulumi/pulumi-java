@@ -25,6 +25,10 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
     @Import(name="httpErrorCodeReturnedEquals")
     private @Nullable String httpErrorCodeReturnedEquals;
 
+    /**
+     * @return The HTTP error code when the redirect is applied.
+     * 
+     */
     public Optional<String> httpErrorCodeReturnedEquals() {
         return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
@@ -36,6 +40,10 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
     @Import(name="keyPrefixEquals")
     private @Nullable String keyPrefixEquals;
 
+    /**
+     * @return The object key name prefix when the redirect is applied.
+     * 
+     */
     public Optional<String> keyPrefixEquals() {
         return Optional.ofNullable(this.keyPrefixEquals);
     }
@@ -65,11 +73,23 @@ public final class BucketRoutingRuleCondition extends com.pulumi.resources.Invok
             $ = new BucketRoutingRuleCondition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpErrorCodeReturnedEquals The HTTP error code when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
             $.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
 
+        /**
+         * @param keyPrefixEquals The object key name prefix when the redirect is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
             $.keyPrefixEquals = keyPrefixEquals;
             return this;

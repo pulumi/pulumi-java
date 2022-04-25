@@ -19,6 +19,10 @@ public final class LicenseValidityDateFormat extends com.pulumi.resources.Invoke
     @Import(name="begin", required=true)
     private String begin;
 
+    /**
+     * @return Validity begin date for the license.
+     * 
+     */
     public String begin() {
         return this.begin;
     }
@@ -30,6 +34,10 @@ public final class LicenseValidityDateFormat extends com.pulumi.resources.Invoke
     @Import(name="end", required=true)
     private String end;
 
+    /**
+     * @return Validity begin date for the license.
+     * 
+     */
     public String end() {
         return this.end;
     }
@@ -59,11 +67,23 @@ public final class LicenseValidityDateFormat extends com.pulumi.resources.Invoke
             $ = new LicenseValidityDateFormat(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param begin Validity begin date for the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder begin(String begin) {
             $.begin = begin;
             return this;
         }
 
+        /**
+         * @param end Validity begin date for the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(String end) {
             $.end = end;
             return this;

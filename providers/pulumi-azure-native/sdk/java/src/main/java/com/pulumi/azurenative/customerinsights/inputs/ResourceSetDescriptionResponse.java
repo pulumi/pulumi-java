@@ -26,6 +26,10 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
     @Import(name="elements")
     private @Nullable List<String> elements;
 
+    /**
+     * @return The elements included in the set.
+     * 
+     */
     public Optional<List<String>> elements() {
         return Optional.ofNullable(this.elements);
     }
@@ -37,6 +41,10 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
     @Import(name="exceptions")
     private @Nullable List<String> exceptions;
 
+    /**
+     * @return The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+     * 
+     */
     public Optional<List<String>> exceptions() {
         return Optional.ofNullable(this.exceptions);
     }
@@ -66,20 +74,44 @@ public final class ResourceSetDescriptionResponse extends com.pulumi.resources.I
             $ = new ResourceSetDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elements The elements included in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(@Nullable List<String> elements) {
             $.elements = elements;
             return this;
         }
 
+        /**
+         * @param elements The elements included in the set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elements(String... elements) {
             return elements(List.of(elements));
         }
 
+        /**
+         * @param exceptions The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptions(@Nullable List<String> exceptions) {
             $.exceptions = exceptions;
             return this;
         }
 
+        /**
+         * @param exceptions The elements that are not included in the set, in case elements contains &#39;*&#39; indicating &#39;all&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptions(String... exceptions) {
             return exceptions(List.of(exceptions));
         }

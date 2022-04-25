@@ -25,6 +25,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     @Import(name="s3Configuration")
     private @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
 
+    /**
+     * @return S3 configuration for location to store rejections from magnetic store writes
+     * 
+     */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties> s3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }
@@ -53,6 +57,12 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
             $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Configuration S3 configuration for location to store rejections from magnetic store writes
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
             $.s3Configuration = s3Configuration;
             return this;

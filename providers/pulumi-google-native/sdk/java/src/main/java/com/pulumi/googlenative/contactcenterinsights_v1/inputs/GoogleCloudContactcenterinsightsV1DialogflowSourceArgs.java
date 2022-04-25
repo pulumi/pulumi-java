@@ -26,6 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     @Import(name="audioUri")
     private @Nullable Output<String> audioUri;
 
+    /**
+     * @return Cloud Storage URI that points to a file that contains the conversation audio.
+     * 
+     */
     public Optional<Output<String>> audioUri() {
         return Optional.ofNullable(this.audioUri);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
             $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(@Nullable Output<String> audioUri) {
             $.audioUri = audioUri;
             return this;
         }
 
+        /**
+         * @param audioUri Cloud Storage URI that points to a file that contains the conversation audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioUri(String audioUri) {
             return audioUri(Output.of(audioUri));
         }

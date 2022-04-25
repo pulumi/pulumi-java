@@ -27,6 +27,10 @@ public final class ConnectionMonitorSourceArgs extends com.pulumi.resources.Reso
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The source port used by connection monitor.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorSourceArgs extends com.pulumi.resources.Reso
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The ID of the resource used as the source by connection monitor.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -67,20 +75,44 @@ public final class ConnectionMonitorSourceArgs extends com.pulumi.resources.Reso
             $ = new ConnectionMonitorSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The source port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The source port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the source by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the source by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

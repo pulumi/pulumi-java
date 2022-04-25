@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ComponentTransformResponse {
     /**
-     * Dataflow service generated name for this source.
+     * @return Dataflow service generated name for this source.
      * 
      */
     private final String name;
     /**
-     * User name for the original user transform with which this transform is most closely associated.
+     * @return User name for the original user transform with which this transform is most closely associated.
      * 
      */
     private final String originalTransform;
     /**
-     * Human-readable name for this transform; may be user or system generated.
+     * @return Human-readable name for this transform; may be user or system generated.
      * 
      */
     private final String userName;
@@ -36,23 +36,23 @@ public final class ComponentTransformResponse {
     }
 
     /**
-     * Dataflow service generated name for this source.
+     * @return Dataflow service generated name for this source.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User name for the original user transform with which this transform is most closely associated.
+     * @return User name for the original user transform with which this transform is most closely associated.
      * 
-    */
+     */
     public String originalTransform() {
         return this.originalTransform;
     }
     /**
-     * Human-readable name for this transform; may be user or system generated.
+     * @return Human-readable name for this transform; may be user or system generated.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

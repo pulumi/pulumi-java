@@ -19,6 +19,10 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="migrateProjectName", required=true)
     private String migrateProjectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public String migrateProjectName() {
         return this.migrateProjectName;
     }
@@ -30,6 +34,10 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that migrate project is part of.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="solutionName", required=true)
     private String solutionName;
 
+    /**
+     * @return Unique name of a migration solution within a migrate project.
+     * 
+     */
     public String solutionName() {
         return this.solutionName;
     }
@@ -71,16 +83,34 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSolutionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrateProjectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateProjectName(String migrateProjectName) {
             $.migrateProjectName = migrateProjectName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that migrate project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param solutionName Unique name of a migration solution within a migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(String solutionName) {
             $.solutionName = solutionName;
             return this;

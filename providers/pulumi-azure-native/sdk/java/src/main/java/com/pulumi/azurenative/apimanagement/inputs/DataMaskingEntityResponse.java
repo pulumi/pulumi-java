@@ -21,6 +21,10 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Data masking mode.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -32,6 +36,10 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The name of an entity to mask (e.g. a name of a header or a query parameter).
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -61,11 +69,23 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
             $ = new DataMaskingEntityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Data masking mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param value The name of an entity to mask (e.g. a name of a header or a query parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

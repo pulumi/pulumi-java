@@ -26,6 +26,10 @@ public final class GkeClusterConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="namespacedGkeDeploymentTarget")
     private @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
+    /**
+     * @return Optional. A target for the deployment.
+     * 
+     */
     public Optional<Output<NamespacedGkeDeploymentTargetArgs>> namespacedGkeDeploymentTarget() {
         return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }
@@ -54,11 +58,23 @@ public final class GkeClusterConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new GkeClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespacedGkeDeploymentTarget Optional. A target for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedGkeDeploymentTarget(@Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
             $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
 
+        /**
+         * @param namespacedGkeDeploymentTarget Optional. A target for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
             return namespacedGkeDeploymentTarget(Output.of(namespacedGkeDeploymentTarget));
         }

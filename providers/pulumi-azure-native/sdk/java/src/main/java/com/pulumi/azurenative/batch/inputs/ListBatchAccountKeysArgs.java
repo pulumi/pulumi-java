@@ -19,6 +19,10 @@ public final class ListBatchAccountKeysArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListBatchAccountKeysArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListBatchAccountKeysArgs extends com.pulumi.resources.InvokeA
             $ = new ListBatchAccountKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

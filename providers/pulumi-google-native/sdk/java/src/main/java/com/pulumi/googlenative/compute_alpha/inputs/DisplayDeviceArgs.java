@@ -26,6 +26,10 @@ public final class DisplayDeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDisplay")
     private @Nullable Output<Boolean> enableDisplay;
 
+    /**
+     * @return Defines whether the instance has Display enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableDisplay() {
         return Optional.ofNullable(this.enableDisplay);
     }
@@ -54,11 +58,23 @@ public final class DisplayDeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DisplayDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableDisplay Defines whether the instance has Display enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
             $.enableDisplay = enableDisplay;
             return this;
         }
 
+        /**
+         * @param enableDisplay Defines whether the instance has Display enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDisplay(Boolean enableDisplay) {
             return enableDisplay(Output.of(enableDisplay));
         }

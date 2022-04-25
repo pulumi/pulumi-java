@@ -28,6 +28,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="access", required=true)
     private String access;
 
+    /**
+     * @return The network traffic is allowed or denied.
+     * 
+     */
     public String access() {
         return this.access;
     }
@@ -39,6 +43,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description for this rule. Restricted to 140 chars.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationAddressPrefix")
     private @Nullable String destinationAddressPrefix;
 
+    /**
+     * @return The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
+     * 
+     */
     public Optional<String> destinationAddressPrefix() {
         return Optional.ofNullable(this.destinationAddressPrefix);
     }
@@ -61,6 +73,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationAddressPrefixes")
     private @Nullable List<String> destinationAddressPrefixes;
 
+    /**
+     * @return The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     public Optional<List<String>> destinationAddressPrefixes() {
         return Optional.ofNullable(this.destinationAddressPrefixes);
     }
@@ -72,6 +88,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationApplicationSecurityGroups")
     private @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
 
+    /**
+     * @return The application security group specified as destination.
+     * 
+     */
     public Optional<List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups() {
         return Optional.ofNullable(this.destinationApplicationSecurityGroups);
     }
@@ -83,6 +103,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationPortRange")
     private @Nullable String destinationPortRange;
 
+    /**
+     * @return The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * 
+     */
     public Optional<String> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
@@ -94,6 +118,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationPortRanges")
     private @Nullable List<String> destinationPortRanges;
 
+    /**
+     * @return The destination port ranges.
+     * 
+     */
     public Optional<List<String>> destinationPortRanges() {
         return Optional.ofNullable(this.destinationPortRanges);
     }
@@ -105,6 +133,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -116,6 +148,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -127,6 +163,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -138,6 +178,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -149,6 +193,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -160,6 +208,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return Network protocol this rule applies to.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -171,6 +223,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the security rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -182,6 +238,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceAddressPrefix")
     private @Nullable String sourceAddressPrefix;
 
+    /**
+     * @return The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * 
+     */
     public Optional<String> sourceAddressPrefix() {
         return Optional.ofNullable(this.sourceAddressPrefix);
     }
@@ -193,6 +253,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceAddressPrefixes")
     private @Nullable List<String> sourceAddressPrefixes;
 
+    /**
+     * @return The CIDR or source IP ranges.
+     * 
+     */
     public Optional<List<String>> sourceAddressPrefixes() {
         return Optional.ofNullable(this.sourceAddressPrefixes);
     }
@@ -204,6 +268,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceApplicationSecurityGroups")
     private @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
 
+    /**
+     * @return The application security group specified as source.
+     * 
+     */
     public Optional<List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups() {
         return Optional.ofNullable(this.sourceApplicationSecurityGroups);
     }
@@ -215,6 +283,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourcePortRange")
     private @Nullable String sourcePortRange;
 
+    /**
+     * @return The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * 
+     */
     public Optional<String> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
@@ -226,6 +298,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourcePortRanges")
     private @Nullable List<String> sourcePortRanges;
 
+    /**
+     * @return The source port ranges.
+     * 
+     */
     public Optional<List<String>> sourcePortRanges() {
         return Optional.ofNullable(this.sourcePortRanges);
     }
@@ -237,6 +313,10 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -284,125 +364,281 @@ public final class SecurityRuleResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SecurityRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access The network traffic is allowed or denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param description A description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationAddressPrefix The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             $.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
+        /**
+         * @param destinationAddressPrefixes The destination address prefixes. CIDR or destination IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
             $.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
 
+        /**
+         * @param destinationAddressPrefixes The destination address prefixes. CIDR or destination IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddressPrefixes(String... destinationAddressPrefixes) {
             return destinationAddressPrefixes(List.of(destinationAddressPrefixes));
         }
 
+        /**
+         * @param destinationApplicationSecurityGroups The application security group specified as destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups) {
             $.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
 
+        /**
+         * @param destinationApplicationSecurityGroups The application security group specified as destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationApplicationSecurityGroups(ApplicationSecurityGroupResponse... destinationApplicationSecurityGroups) {
             return destinationApplicationSecurityGroups(List.of(destinationApplicationSecurityGroups));
         }
 
+        /**
+         * @param destinationPortRange The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
             $.destinationPortRange = destinationPortRange;
             return this;
         }
 
+        /**
+         * @param destinationPortRanges The destination port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             $.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
+        /**
+         * @param destinationPortRanges The destination port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRanges(String... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
 
+        /**
+         * @param direction The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param protocol Network protocol this rule applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the security rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sourceAddressPrefix The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
+        /**
+         * @param sourceAddressPrefixes The CIDR or source IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
             $.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
 
+        /**
+         * @param sourceAddressPrefixes The CIDR or source IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddressPrefixes(String... sourceAddressPrefixes) {
             return sourceAddressPrefixes(List.of(sourceAddressPrefixes));
         }
 
+        /**
+         * @param sourceApplicationSecurityGroups The application security group specified as source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups) {
             $.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
 
+        /**
+         * @param sourceApplicationSecurityGroups The application security group specified as source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceApplicationSecurityGroups(ApplicationSecurityGroupResponse... sourceApplicationSecurityGroups) {
             return sourceApplicationSecurityGroups(List.of(sourceApplicationSecurityGroups));
         }
 
+        /**
+         * @param sourcePortRange The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
             $.sourcePortRange = sourcePortRange;
             return this;
         }
 
+        /**
+         * @param sourcePortRanges The source port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             $.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
+        /**
+         * @param sourcePortRanges The source port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

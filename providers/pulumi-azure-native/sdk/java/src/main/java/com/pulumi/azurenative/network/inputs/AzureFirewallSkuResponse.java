@@ -25,6 +25,10 @@ public final class AzureFirewallSkuResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of an Azure Firewall SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class AzureFirewallSkuResponse extends com.pulumi.resources.InvokeA
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Tier of an Azure Firewall.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -65,11 +73,23 @@ public final class AzureFirewallSkuResponse extends com.pulumi.resources.InvokeA
             $ = new AzureFirewallSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of an Azure Firewall SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Tier of an Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

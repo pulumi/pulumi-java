@@ -27,6 +27,10 @@ public final class FailoverSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eligibilityResult")
     private @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
+    /**
+     * @return The eligibility result of the failover set, for failover.
+     * 
+     */
     public Optional<FailoverSetEligibilityResultResponse> eligibilityResult() {
         return Optional.ofNullable(this.eligibilityResult);
     }
@@ -38,6 +42,10 @@ public final class FailoverSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="volumeContainers")
     private @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
+    /**
+     * @return The list of meta data of volume containers, which are part of the failover set.
+     * 
+     */
     public Optional<List<VolumeContainerFailoverMetadataResponse>> volumeContainers() {
         return Optional.ofNullable(this.volumeContainers);
     }
@@ -67,16 +75,34 @@ public final class FailoverSetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FailoverSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eligibilityResult The eligibility result of the failover set, for failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eligibilityResult(@Nullable FailoverSetEligibilityResultResponse eligibilityResult) {
             $.eligibilityResult = eligibilityResult;
             return this;
         }
 
+        /**
+         * @param volumeContainers The list of meta data of volume containers, which are part of the failover set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainers(@Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
             $.volumeContainers = volumeContainers;
             return this;
         }
 
+        /**
+         * @param volumeContainers The list of meta data of volume containers, which are part of the failover set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainers(VolumeContainerFailoverMetadataResponse... volumeContainers) {
             return volumeContainers(List.of(volumeContainers));
         }

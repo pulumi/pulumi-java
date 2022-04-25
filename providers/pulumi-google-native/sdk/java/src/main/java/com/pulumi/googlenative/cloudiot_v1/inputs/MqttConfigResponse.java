@@ -23,6 +23,10 @@ public final class MqttConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mqttEnabledState", required=true)
     private String mqttEnabledState;
 
+    /**
+     * @return If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+     * 
+     */
     public String mqttEnabledState() {
         return this.mqttEnabledState;
     }
@@ -51,6 +55,12 @@ public final class MqttConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MqttConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mqttEnabledState If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mqttEnabledState(String mqttEnabledState) {
             $.mqttEnabledState = mqttEnabledState;
             return this;

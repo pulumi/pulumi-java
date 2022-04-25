@@ -18,108 +18,108 @@ import javax.annotation.Nullable;
 public final class GetDomainResult {
     private final @Nullable String authCode;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean autoRenew;
     /**
-     * Domain creation timestamp.
+     * @return Domain creation timestamp.
      * 
      */
     private final String createdTime;
     /**
-     * Current DNS type
+     * @return Current DNS type
      * 
      */
     private final @Nullable String dnsType;
     /**
-     * Azure DNS Zone to use
+     * @return Azure DNS Zone to use
      * 
      */
     private final @Nullable String dnsZoneId;
     /**
-     * Reasons why domain is not renewable.
+     * @return Reasons why domain is not renewable.
      * 
      */
     private final List<String> domainNotRenewableReasons;
     /**
-     * Domain expiration timestamp.
+     * @return Domain expiration timestamp.
      * 
      */
     private final String expirationTime;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Timestamp when the domain was renewed last time.
+     * @return Timestamp when the domain was renewed last time.
      * 
      */
     private final String lastRenewedTime;
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
      */
     private final String location;
     /**
-     * All hostnames derived from the domain and assigned to Azure resources.
+     * @return All hostnames derived from the domain and assigned to Azure resources.
      * 
      */
     private final List<HostNameResponse> managedHostNames;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Name servers.
+     * @return Name servers.
      * 
      */
     private final List<String> nameServers;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean privacy;
     /**
-     * Domain provisioning state.
+     * @return Domain provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
+     * @return &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */
     private final Boolean readyForDnsRecordManagement;
     /**
-     * Domain registration status.
+     * @return Domain registration status.
      * 
      */
     private final String registrationStatus;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Target DNS type (would be used for migration)
+     * @return Target DNS type (would be used for migration)
      * 
      */
     private final @Nullable String targetDnsType;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -176,150 +176,150 @@ public final class GetDomainResult {
         return Optional.ofNullable(this.authCode);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> autoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
-     * Domain creation timestamp.
+     * @return Domain creation timestamp.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Current DNS type
+     * @return Current DNS type
      * 
-    */
+     */
     public Optional<String> dnsType() {
         return Optional.ofNullable(this.dnsType);
     }
     /**
-     * Azure DNS Zone to use
+     * @return Azure DNS Zone to use
      * 
-    */
+     */
     public Optional<String> dnsZoneId() {
         return Optional.ofNullable(this.dnsZoneId);
     }
     /**
-     * Reasons why domain is not renewable.
+     * @return Reasons why domain is not renewable.
      * 
-    */
+     */
     public List<String> domainNotRenewableReasons() {
         return this.domainNotRenewableReasons;
     }
     /**
-     * Domain expiration timestamp.
+     * @return Domain expiration timestamp.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Timestamp when the domain was renewed last time.
+     * @return Timestamp when the domain was renewed last time.
      * 
-    */
+     */
     public String lastRenewedTime() {
         return this.lastRenewedTime;
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * All hostnames derived from the domain and assigned to Azure resources.
+     * @return All hostnames derived from the domain and assigned to Azure resources.
      * 
-    */
+     */
     public List<HostNameResponse> managedHostNames() {
         return this.managedHostNames;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name servers.
+     * @return Name servers.
      * 
-    */
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> privacy() {
         return Optional.ofNullable(this.privacy);
     }
     /**
-     * Domain provisioning state.
+     * @return Domain provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
+     * @return &lt;code&gt;true&lt;/code&gt; if Azure can assign this domain to App Service apps; otherwise, &lt;code&gt;false&lt;/code&gt;. This value will be &lt;code&gt;true&lt;/code&gt; if domain registration status is active and
      *  it is hosted on name servers Azure has programmatic access to.
      * 
-    */
+     */
     public Boolean readyForDnsRecordManagement() {
         return this.readyForDnsRecordManagement;
     }
     /**
-     * Domain registration status.
+     * @return Domain registration status.
      * 
-    */
+     */
     public String registrationStatus() {
         return this.registrationStatus;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Target DNS type (would be used for migration)
+     * @return Target DNS type (would be used for migration)
      * 
-    */
+     */
     public Optional<String> targetDnsType() {
         return Optional.ofNullable(this.targetDnsType);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

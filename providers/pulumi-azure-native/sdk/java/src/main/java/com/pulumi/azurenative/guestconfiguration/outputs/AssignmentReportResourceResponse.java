@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AssignmentReportResourceResponse {
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
     private final String complianceStatus;
     /**
-     * Properties of a guest configuration assignment resource.
+     * @return Properties of a guest configuration assignment resource.
      * 
      */
     private final Object properties;
     /**
-     * Compliance reason and reason code for a resource.
+     * @return Compliance reason and reason code for a resource.
      * 
      */
     private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
     /**
-     * Name of the guest configuration assignment resource setting.
+     * @return Name of the guest configuration assignment resource setting.
      * 
      */
     private final String resourceId;
@@ -47,30 +47,30 @@ public final class AssignmentReportResourceResponse {
     }
 
     /**
-     * A value indicating compliance status of the machine for the assigned guest configuration.
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
      * 
-    */
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
     /**
-     * Properties of a guest configuration assignment resource.
+     * @return Properties of a guest configuration assignment resource.
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * Compliance reason and reason code for a resource.
+     * @return Compliance reason and reason code for a resource.
      * 
-    */
+     */
     public List<AssignmentReportResourceComplianceReasonResponse> reasons() {
         return this.reasons == null ? List.of() : this.reasons;
     }
     /**
-     * Name of the guest configuration assignment resource setting.
+     * @return Name of the guest configuration assignment resource setting.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }

@@ -25,6 +25,10 @@ public final class ExportRecurrencePeriodResponse extends com.pulumi.resources.I
     @Import(name="from", required=true)
     private String from;
 
+    /**
+     * @return The start date of recurrence.
+     * 
+     */
     public String from() {
         return this.from;
     }
@@ -36,6 +40,10 @@ public final class ExportRecurrencePeriodResponse extends com.pulumi.resources.I
     @Import(name="to")
     private @Nullable String to;
 
+    /**
+     * @return The end date of recurrence.
+     * 
+     */
     public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
@@ -65,11 +73,23 @@ public final class ExportRecurrencePeriodResponse extends com.pulumi.resources.I
             $ = new ExportRecurrencePeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param from The start date of recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder from(String from) {
             $.from = from;
             return this;
         }
 
+        /**
+         * @param to The end date of recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder to(@Nullable String to) {
             $.to = to;
             return this;

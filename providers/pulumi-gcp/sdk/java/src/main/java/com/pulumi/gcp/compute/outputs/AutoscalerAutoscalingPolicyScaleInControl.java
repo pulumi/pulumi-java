@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscalerAutoscalingPolicyScaleInControl {
     /**
-     * A nested object resource
+     * @return A nested object resource
      * Structure is documented below.
      * 
      */
     private final @Nullable AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas;
     /**
-     * How long back autoscaling should look when computing recommendations
+     * @return How long back autoscaling should look when computing recommendations
      * to include directives regarding slower scale down, as described above.
      * 
      */
@@ -34,18 +34,18 @@ public final class AutoscalerAutoscalingPolicyScaleInControl {
     }
 
     /**
-     * A nested object resource
+     * @return A nested object resource
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas> maxScaledInReplicas() {
         return Optional.ofNullable(this.maxScaledInReplicas);
     }
     /**
-     * How long back autoscaling should look when computing recommendations
+     * @return How long back autoscaling should look when computing recommendations
      * to include directives regarding slower scale down, as described above.
      * 
-    */
+     */
     public Optional<Integer> timeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }

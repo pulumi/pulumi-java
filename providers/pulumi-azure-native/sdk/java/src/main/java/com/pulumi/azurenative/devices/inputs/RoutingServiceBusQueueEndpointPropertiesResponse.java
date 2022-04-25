@@ -25,6 +25,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return Method used to authenticate against the service bus queue endpoint
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -36,6 +40,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return The connection string of the service bus queue endpoint.
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -47,6 +55,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="endpointUri")
     private @Nullable String endpointUri;
 
+    /**
+     * @return The url of the service bus queue endpoint. It must include the protocol sb://
+     * 
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -58,6 +70,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="entityPath")
     private @Nullable String entityPath;
 
+    /**
+     * @return Queue name on the service bus namespace
+     * 
+     */
     public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
@@ -69,6 +85,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of the service bus queue endpoint
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -80,6 +100,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -91,6 +115,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="resourceGroup")
     private @Nullable String resourceGroup;
 
+    /**
+     * @return The name of the resource group of the service bus queue endpoint.
+     * 
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -102,6 +130,10 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return The subscription identifier of the service bus queue endpoint.
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -137,41 +169,89 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends com.
             $ = new RoutingServiceBusQueueEndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the service bus queue endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string of the service bus queue endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param endpointUri The url of the service bus queue endpoint. It must include the protocol sb://
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable String endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param entityPath Queue name on the service bus namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityPath(@Nullable String entityPath) {
             $.entityPath = entityPath;
             return this;
         }
 
+        /**
+         * @param id Id of the service bus queue endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroup The name of the resource group of the service bus queue endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription identifier of the service bus queue endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

@@ -26,6 +26,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
     @Import(name="assetId")
     private @Nullable String assetId;
 
+    /**
+     * @return The ID of the asset that has the specified property. You can specify an expression.
+     * 
+     */
     public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
@@ -37,6 +41,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
     @Import(name="entryId")
     private @Nullable String entryId;
 
+    /**
+     * @return A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
+     * 
+     */
     public Optional<String> entryId() {
         return Optional.ofNullable(this.entryId);
     }
@@ -48,6 +56,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
     @Import(name="propertyAlias")
     private @Nullable String propertyAlias;
 
+    /**
+     * @return The alias of the asset property. You can also specify an expression.
+     * 
+     */
     public Optional<String> propertyAlias() {
         return Optional.ofNullable(this.propertyAlias);
     }
@@ -59,6 +71,10 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
     @Import(name="propertyId")
     private @Nullable String propertyId;
 
+    /**
+     * @return The ID of the asset property. You can specify an expression.
+     * 
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -98,21 +114,45 @@ public final class DetectorModelIotSiteWise extends com.pulumi.resources.InvokeA
             $ = new DetectorModelIotSiteWise(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId The ID of the asset that has the specified property. You can specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(@Nullable String assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param entryId A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryId(@Nullable String entryId) {
             $.entryId = entryId;
             return this;
         }
 
+        /**
+         * @param propertyAlias The alias of the asset property. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyAlias(@Nullable String propertyAlias) {
             $.propertyAlias = propertyAlias;
             return this;
         }
 
+        /**
+         * @param propertyId The ID of the asset property. You can specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyId(@Nullable String propertyId) {
             $.propertyId = propertyId;
             return this;

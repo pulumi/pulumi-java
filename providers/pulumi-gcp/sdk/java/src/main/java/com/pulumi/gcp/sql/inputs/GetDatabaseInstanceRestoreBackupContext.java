@@ -34,6 +34,10 @@ public final class GetDatabaseInstanceRestoreBackupContext extends com.pulumi.re
     @Import(name="project", required=true)
     private String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * 
+     */
     public String project() {
         return this.project;
     }
@@ -74,6 +78,12 @@ public final class GetDatabaseInstanceRestoreBackupContext extends com.pulumi.re
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             $.project = project;
             return this;

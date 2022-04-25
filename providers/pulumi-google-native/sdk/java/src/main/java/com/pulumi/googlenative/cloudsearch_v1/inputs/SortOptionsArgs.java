@@ -23,6 +23,10 @@ public final class SortOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
     private @Nullable Output<String> operatorName;
 
+    /**
+     * @return Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+     * 
+     */
     public Optional<Output<String>> operatorName() {
         return Optional.ofNullable(this.operatorName);
     }
@@ -34,6 +38,10 @@ public final class SortOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
     private @Nullable Output<SortOptionsSortOrder> sortOrder;
 
+    /**
+     * @return Ascending is the default sort order
+     * 
+     */
     public Optional<Output<SortOptionsSortOrder>> sortOrder() {
         return Optional.ofNullable(this.sortOrder);
     }
@@ -63,20 +71,44 @@ public final class SortOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SortOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatorName Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(@Nullable Output<String> operatorName) {
             $.operatorName = operatorName;
             return this;
         }
 
+        /**
+         * @param operatorName Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(String operatorName) {
             return operatorName(Output.of(operatorName));
         }
 
+        /**
+         * @param sortOrder Ascending is the default sort order
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortOrder(@Nullable Output<SortOptionsSortOrder> sortOrder) {
             $.sortOrder = sortOrder;
             return this;
         }
 
+        /**
+         * @param sortOrder Ascending is the default sort order
+         * 
+         * @return builder
+         * 
+         */
         public Builder sortOrder(SortOptionsSortOrder sortOrder) {
             return sortOrder(Output.of(sortOrder));
         }

@@ -25,6 +25,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="actionsRequired")
     private @Nullable String actionsRequired;
 
+    /**
+     * @return Actions required for a private endpoint connection
+     * 
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -36,6 +40,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The description for the current state of a private endpoint connection
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -47,6 +55,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of a private endpoint connection
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -77,16 +89,34 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
             $ = new PrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Actions required for a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description The description for the current state of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status The status of a private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

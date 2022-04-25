@@ -26,6 +26,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User friendly Name to be displayed in the portal.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -37,6 +41,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolName", required=true)
     private Output<String> hostPoolName;
 
+    /**
+     * @return The name of the host pool within the specified resource group
+     * 
+     */
     public Output<String> hostPoolName() {
         return this.hostPoolName;
     }
@@ -48,6 +56,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imagePath")
     private @Nullable Output<String> imagePath;
 
+    /**
+     * @return VHD/CIM image path on Network Share.
+     * 
+     */
     public Optional<Output<String>> imagePath() {
         return Optional.ofNullable(this.imagePath);
     }
@@ -59,6 +71,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isActive")
     private @Nullable Output<Boolean> isActive;
 
+    /**
+     * @return Make this version of the package the active one across the hostpool.
+     * 
+     */
     public Optional<Output<Boolean>> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -70,6 +86,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isRegularRegistration")
     private @Nullable Output<Boolean> isRegularRegistration;
 
+    /**
+     * @return Specifies how to register Package in feed.
+     * 
+     */
     public Optional<Output<Boolean>> isRegularRegistration() {
         return Optional.ofNullable(this.isRegularRegistration);
     }
@@ -81,6 +101,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdated")
     private @Nullable Output<String> lastUpdated;
 
+    /**
+     * @return Date Package was last updated, found in the appxmanifest.xml.
+     * 
+     */
     public Optional<Output<String>> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
@@ -92,6 +116,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageFullName")
     private @Nullable Output<String> msixPackageFullName;
 
+    /**
+     * @return The version specific package full name of the MSIX package within specified hostpool
+     * 
+     */
     public Optional<Output<String>> msixPackageFullName() {
         return Optional.ofNullable(this.msixPackageFullName);
     }
@@ -103,6 +131,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageApplications")
     private @Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications;
 
+    /**
+     * @return List of package applications.
+     * 
+     */
     public Optional<Output<List<MsixPackageApplicationsArgs>>> packageApplications() {
         return Optional.ofNullable(this.packageApplications);
     }
@@ -114,6 +146,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageDependencies")
     private @Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies;
 
+    /**
+     * @return List of package dependencies.
+     * 
+     */
     public Optional<Output<List<MsixPackageDependenciesArgs>>> packageDependencies() {
         return Optional.ofNullable(this.packageDependencies);
     }
@@ -125,6 +161,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageFamilyName")
     private @Nullable Output<String> packageFamilyName;
 
+    /**
+     * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+     * 
+     */
     public Optional<Output<String>> packageFamilyName() {
         return Optional.ofNullable(this.packageFamilyName);
     }
@@ -136,6 +176,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
     private @Nullable Output<String> packageName;
 
+    /**
+     * @return Package Name from appxmanifest.xml.
+     * 
+     */
     public Optional<Output<String>> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -147,6 +191,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageRelativePath")
     private @Nullable Output<String> packageRelativePath;
 
+    /**
+     * @return Relative Path to the package inside the image.
+     * 
+     */
     public Optional<Output<String>> packageRelativePath() {
         return Optional.ofNullable(this.packageRelativePath);
     }
@@ -158,6 +206,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -169,6 +221,10 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Package Version found in the appxmanifest.xml.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -210,136 +266,316 @@ public final class MSIXPackageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MSIXPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName User friendly Name to be displayed in the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User friendly Name to be displayed in the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(Output<String> hostPoolName) {
             $.hostPoolName = hostPoolName;
             return this;
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(String hostPoolName) {
             return hostPoolName(Output.of(hostPoolName));
         }
 
+        /**
+         * @param imagePath VHD/CIM image path on Network Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePath(@Nullable Output<String> imagePath) {
             $.imagePath = imagePath;
             return this;
         }
 
+        /**
+         * @param imagePath VHD/CIM image path on Network Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePath(String imagePath) {
             return imagePath(Output.of(imagePath));
         }
 
+        /**
+         * @param isActive Make this version of the package the active one across the hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             $.isActive = isActive;
             return this;
         }
 
+        /**
+         * @param isActive Make this version of the package the active one across the hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(Boolean isActive) {
             return isActive(Output.of(isActive));
         }
 
+        /**
+         * @param isRegularRegistration Specifies how to register Package in feed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRegularRegistration(@Nullable Output<Boolean> isRegularRegistration) {
             $.isRegularRegistration = isRegularRegistration;
             return this;
         }
 
+        /**
+         * @param isRegularRegistration Specifies how to register Package in feed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRegularRegistration(Boolean isRegularRegistration) {
             return isRegularRegistration(Output.of(isRegularRegistration));
         }
 
+        /**
+         * @param lastUpdated Date Package was last updated, found in the appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdated(@Nullable Output<String> lastUpdated) {
             $.lastUpdated = lastUpdated;
             return this;
         }
 
+        /**
+         * @param lastUpdated Date Package was last updated, found in the appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdated(String lastUpdated) {
             return lastUpdated(Output.of(lastUpdated));
         }
 
+        /**
+         * @param msixPackageFullName The version specific package full name of the MSIX package within specified hostpool
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageFullName(@Nullable Output<String> msixPackageFullName) {
             $.msixPackageFullName = msixPackageFullName;
             return this;
         }
 
+        /**
+         * @param msixPackageFullName The version specific package full name of the MSIX package within specified hostpool
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageFullName(String msixPackageFullName) {
             return msixPackageFullName(Output.of(msixPackageFullName));
         }
 
+        /**
+         * @param packageApplications List of package applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageApplications(@Nullable Output<List<MsixPackageApplicationsArgs>> packageApplications) {
             $.packageApplications = packageApplications;
             return this;
         }
 
+        /**
+         * @param packageApplications List of package applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageApplications(List<MsixPackageApplicationsArgs> packageApplications) {
             return packageApplications(Output.of(packageApplications));
         }
 
+        /**
+         * @param packageApplications List of package applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageApplications(MsixPackageApplicationsArgs... packageApplications) {
             return packageApplications(List.of(packageApplications));
         }
 
+        /**
+         * @param packageDependencies List of package dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageDependencies(@Nullable Output<List<MsixPackageDependenciesArgs>> packageDependencies) {
             $.packageDependencies = packageDependencies;
             return this;
         }
 
+        /**
+         * @param packageDependencies List of package dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageDependencies(List<MsixPackageDependenciesArgs> packageDependencies) {
             return packageDependencies(Output.of(packageDependencies));
         }
 
+        /**
+         * @param packageDependencies List of package dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageDependencies(MsixPackageDependenciesArgs... packageDependencies) {
             return packageDependencies(List.of(packageDependencies));
         }
 
+        /**
+         * @param packageFamilyName Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageFamilyName(@Nullable Output<String> packageFamilyName) {
             $.packageFamilyName = packageFamilyName;
             return this;
         }
 
+        /**
+         * @param packageFamilyName Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageFamilyName(String packageFamilyName) {
             return packageFamilyName(Output.of(packageFamilyName));
         }
 
+        /**
+         * @param packageName Package Name from appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName Package Name from appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param packageRelativePath Relative Path to the package inside the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRelativePath(@Nullable Output<String> packageRelativePath) {
             $.packageRelativePath = packageRelativePath;
             return this;
         }
 
+        /**
+         * @param packageRelativePath Relative Path to the package inside the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRelativePath(String packageRelativePath) {
             return packageRelativePath(Output.of(packageRelativePath));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param version Package Version found in the appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Package Version found in the appxmanifest.xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

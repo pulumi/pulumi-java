@@ -27,6 +27,10 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
     @Import(name="armTemplateId")
     private @Nullable String armTemplateId;
 
+    /**
+     * @return The Azure Resource Manager template&#39;s identifier.
+     * 
+     */
     public Optional<String> armTemplateId() {
         return Optional.ofNullable(this.armTemplateId);
     }
@@ -38,6 +42,10 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
     @Import(name="parameters")
     private @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
 
+    /**
+     * @return The parameters of the Azure Resource Manager template.
+     * 
+     */
     public Optional<List<ArmTemplateParameterPropertiesResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -67,16 +75,34 @@ public final class EnvironmentDeploymentPropertiesResponse extends com.pulumi.re
             $ = new EnvironmentDeploymentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param armTemplateId The Azure Resource Manager template&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder armTemplateId(@Nullable String armTemplateId) {
             $.armTemplateId = armTemplateId;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the Azure Resource Manager template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ArmTemplateParameterPropertiesResponse... parameters) {
             return parameters(List.of(parameters));
         }

@@ -23,6 +23,10 @@ public final class GoogleMonitoringV3RangeResponse extends com.pulumi.resources.
     @Import(name="max", required=true)
     private Double max;
 
+    /**
+     * @return Range maximum.
+     * 
+     */
     public Double max() {
         return this.max;
     }
@@ -34,6 +38,10 @@ public final class GoogleMonitoringV3RangeResponse extends com.pulumi.resources.
     @Import(name="min", required=true)
     private Double min;
 
+    /**
+     * @return Range minimum.
+     * 
+     */
     public Double min() {
         return this.min;
     }
@@ -63,11 +71,23 @@ public final class GoogleMonitoringV3RangeResponse extends com.pulumi.resources.
             $ = new GoogleMonitoringV3RangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Range maximum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Double max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param min Range minimum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Double min) {
             $.min = min;
             return this;

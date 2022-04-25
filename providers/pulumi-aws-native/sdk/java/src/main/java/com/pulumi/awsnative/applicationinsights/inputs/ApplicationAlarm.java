@@ -26,6 +26,10 @@ public final class ApplicationAlarm extends com.pulumi.resources.InvokeArgs {
     @Import(name="alarmName", required=true)
     private String alarmName;
 
+    /**
+     * @return The name of the CloudWatch alarm to be monitored for the component.
+     * 
+     */
     public String alarmName() {
         return this.alarmName;
     }
@@ -37,6 +41,10 @@ public final class ApplicationAlarm extends com.pulumi.resources.InvokeArgs {
     @Import(name="severity")
     private @Nullable ApplicationAlarmSeverity severity;
 
+    /**
+     * @return Indicates the degree of outage when the alarm goes off.
+     * 
+     */
     public Optional<ApplicationAlarmSeverity> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -66,11 +74,23 @@ public final class ApplicationAlarm extends com.pulumi.resources.InvokeArgs {
             $ = new ApplicationAlarm(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmName The name of the CloudWatch alarm to be monitored for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmName(String alarmName) {
             $.alarmName = alarmName;
             return this;
         }
 
+        /**
+         * @param severity Indicates the degree of outage when the alarm goes off.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
             $.severity = severity;
             return this;

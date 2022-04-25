@@ -25,6 +25,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="advertisePeerSubnetsViaRouters", required=true)
     private Boolean advertisePeerSubnetsViaRouters;
 
+    /**
+     * @return Whether Cloud Routers in this network can automatically advertise subnets from the peer network.
+     * 
+     */
     public Boolean advertisePeerSubnetsViaRouters() {
         return this.advertisePeerSubnetsViaRouters;
     }
@@ -36,6 +40,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="autoCreateRoutes", required=true)
     private Boolean autoCreateRoutes;
 
+    /**
+     * @return This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
+     * 
+     */
     public Boolean autoCreateRoutes() {
         return this.autoCreateRoutes;
     }
@@ -47,6 +55,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exchangeSubnetRoutes", required=true)
     private Boolean exchangeSubnetRoutes;
 
+    /**
+     * @return Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
+     * 
+     */
     public Boolean exchangeSubnetRoutes() {
         return this.exchangeSubnetRoutes;
     }
@@ -58,6 +70,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exportCustomRoutes", required=true)
     private Boolean exportCustomRoutes;
 
+    /**
+     * @return Whether to export the custom routes to peer network. The default value is false.
+     * 
+     */
     public Boolean exportCustomRoutes() {
         return this.exportCustomRoutes;
     }
@@ -69,6 +85,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exportSubnetRoutesWithPublicIp", required=true)
     private Boolean exportSubnetRoutesWithPublicIp;
 
+    /**
+     * @return Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.
+     * 
+     */
     public Boolean exportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp;
     }
@@ -80,6 +100,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="importCustomRoutes", required=true)
     private Boolean importCustomRoutes;
 
+    /**
+     * @return Whether to import the custom routes from peer network. The default value is false.
+     * 
+     */
     public Boolean importCustomRoutes() {
         return this.importCustomRoutes;
     }
@@ -91,6 +115,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="importSubnetRoutesWithPublicIp", required=true)
     private Boolean importSubnetRoutesWithPublicIp;
 
+    /**
+     * @return Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.
+     * 
+     */
     public Boolean importSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp;
     }
@@ -102,6 +130,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -113,6 +145,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -124,6 +160,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="peerMtu", required=true)
     private Integer peerMtu;
 
+    /**
+     * @return Maximum Transmission Unit in bytes.
+     * 
+     */
     public Integer peerMtu() {
         return this.peerMtu;
     }
@@ -135,6 +175,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -146,6 +190,10 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
     @Import(name="stateDetails", required=true)
     private String stateDetails;
 
+    /**
+     * @return Details about the current state of the peering.
+     * 
+     */
     public String stateDetails() {
         return this.stateDetails;
     }
@@ -185,61 +233,133 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkPeeringResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertisePeerSubnetsViaRouters Whether Cloud Routers in this network can automatically advertise subnets from the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisePeerSubnetsViaRouters(Boolean advertisePeerSubnetsViaRouters) {
             $.advertisePeerSubnetsViaRouters = advertisePeerSubnetsViaRouters;
             return this;
         }
 
+        /**
+         * @param autoCreateRoutes This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoCreateRoutes(Boolean autoCreateRoutes) {
             $.autoCreateRoutes = autoCreateRoutes;
             return this;
         }
 
+        /**
+         * @param exchangeSubnetRoutes Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
             $.exchangeSubnetRoutes = exchangeSubnetRoutes;
             return this;
         }
 
+        /**
+         * @param exportCustomRoutes Whether to export the custom routes to peer network. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
             $.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
 
+        /**
+         * @param exportSubnetRoutesWithPublicIp Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
             $.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
             return this;
         }
 
+        /**
+         * @param importCustomRoutes Whether to import the custom routes from peer network. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importCustomRoutes(Boolean importCustomRoutes) {
             $.importCustomRoutes = importCustomRoutes;
             return this;
         }
 
+        /**
+         * @param importSubnetRoutesWithPublicIp Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
             $.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
             return this;
         }
 
+        /**
+         * @param name Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param peerMtu Maximum Transmission Unit in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerMtu(Integer peerMtu) {
             $.peerMtu = peerMtu;
             return this;
         }
 
+        /**
+         * @param state State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateDetails Details about the current state of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateDetails(String stateDetails) {
             $.stateDetails = stateDetails;
             return this;

@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionInstanceGroupInstanceNamedPort {
     /**
-     * The name of the instance group.  One of `name` or `self_link` must be provided.
+     * @return The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
     private final String name;
     /**
-     * Integer port number
+     * @return Integer port number
      * 
      */
     private final Integer port;
@@ -30,16 +30,16 @@ public final class GetRegionInstanceGroupInstanceNamedPort {
     }
 
     /**
-     * The name of the instance group.  One of `name` or `self_link` must be provided.
+     * @return The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Integer port number
+     * @return Integer port number
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

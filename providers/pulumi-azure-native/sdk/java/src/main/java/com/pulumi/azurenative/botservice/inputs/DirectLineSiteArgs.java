@@ -28,6 +28,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isBlockUserUploadEnabled")
     private @Nullable Output<Boolean> isBlockUserUploadEnabled;
 
+    /**
+     * @return Whether this site is enabled for block user upload.
+     * 
+     */
     public Optional<Output<Boolean>> isBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
@@ -39,6 +43,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this site is enabled for DirectLine channel.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -50,6 +58,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isSecureSiteEnabled")
     private @Nullable Output<Boolean> isSecureSiteEnabled;
 
+    /**
+     * @return Whether this site is enabled for authentication with Bot Framework.
+     * 
+     */
     public Optional<Output<Boolean>> isSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
@@ -61,6 +73,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isV1Enabled", required=true)
     private Output<Boolean> isV1Enabled;
 
+    /**
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     public Output<Boolean> isV1Enabled() {
         return this.isV1Enabled;
     }
@@ -72,6 +88,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isV3Enabled", required=true)
     private Output<Boolean> isV3Enabled;
 
+    /**
+     * @return Whether this site is enabled for Bot Framework V1 protocol.
+     * 
+     */
     public Output<Boolean> isV3Enabled() {
         return this.isV3Enabled;
     }
@@ -83,6 +103,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="siteName", required=true)
     private Output<String> siteName;
 
+    /**
+     * @return Site name
+     * 
+     */
     public Output<String> siteName() {
         return this.siteName;
     }
@@ -94,6 +118,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trustedOrigins")
     private @Nullable Output<List<String>> trustedOrigins;
 
+    /**
+     * @return List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+     * 
+     */
     public Optional<Output<List<String>>> trustedOrigins() {
         return Optional.ofNullable(this.trustedOrigins);
     }
@@ -128,69 +156,159 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DirectLineSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isBlockUserUploadEnabled Whether this site is enabled for block user upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBlockUserUploadEnabled(@Nullable Output<Boolean> isBlockUserUploadEnabled) {
             $.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
+        /**
+         * @param isBlockUserUploadEnabled Whether this site is enabled for block user upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isBlockUserUploadEnabled(Boolean isBlockUserUploadEnabled) {
             return isBlockUserUploadEnabled(Output.of(isBlockUserUploadEnabled));
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isSecureSiteEnabled Whether this site is enabled for authentication with Bot Framework.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecureSiteEnabled(@Nullable Output<Boolean> isSecureSiteEnabled) {
             $.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
+        /**
+         * @param isSecureSiteEnabled Whether this site is enabled for authentication with Bot Framework.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecureSiteEnabled(Boolean isSecureSiteEnabled) {
             return isSecureSiteEnabled(Output.of(isSecureSiteEnabled));
         }
 
+        /**
+         * @param isV1Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV1Enabled(Output<Boolean> isV1Enabled) {
             $.isV1Enabled = isV1Enabled;
             return this;
         }
 
+        /**
+         * @param isV1Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV1Enabled(Boolean isV1Enabled) {
             return isV1Enabled(Output.of(isV1Enabled));
         }
 
+        /**
+         * @param isV3Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV3Enabled(Output<Boolean> isV3Enabled) {
             $.isV3Enabled = isV3Enabled;
             return this;
         }
 
+        /**
+         * @param isV3Enabled Whether this site is enabled for Bot Framework V1 protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isV3Enabled(Boolean isV3Enabled) {
             return isV3Enabled(Output.of(isV3Enabled));
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }
 
+        /**
+         * @param trustedOrigins List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedOrigins(@Nullable Output<List<String>> trustedOrigins) {
             $.trustedOrigins = trustedOrigins;
             return this;
         }
 
+        /**
+         * @param trustedOrigins List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedOrigins(List<String> trustedOrigins) {
             return trustedOrigins(Output.of(trustedOrigins));
         }
 
+        /**
+         * @param trustedOrigins List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedOrigins(String... trustedOrigins) {
             return trustedOrigins(List.of(trustedOrigins));
         }

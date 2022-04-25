@@ -24,6 +24,11 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
     @Import(name="maxScaledDownReplicas")
     private @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> maxScaledDownReplicas;
 
+    /**
+     * @return A nested object resource
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs>> maxScaledDownReplicas() {
         return Optional.ofNullable(this.maxScaledDownReplicas);
     }
@@ -36,6 +41,11 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
     @Import(name="timeWindowSec")
     private @Nullable Output<Integer> timeWindowSec;
 
+    /**
+     * @return How long back autoscaling should look when computing recommendations
+     * to include directives regarding slower scale down, as described above.
+     * 
+     */
     public Optional<Output<Integer>> timeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }
@@ -65,20 +75,48 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs exte
             $ = new RegionAutoscalerAutoscalingPolicyScaleDownControlGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxScaledDownReplicas A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScaledDownReplicas(@Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs> maxScaledDownReplicas) {
             $.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
 
+        /**
+         * @param maxScaledDownReplicas A nested object resource
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScaledDownReplicas(RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasGetArgs maxScaledDownReplicas) {
             return maxScaledDownReplicas(Output.of(maxScaledDownReplicas));
         }
 
+        /**
+         * @param timeWindowSec How long back autoscaling should look when computing recommendations
+         * to include directives regarding slower scale down, as described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             $.timeWindowSec = timeWindowSec;
             return this;
         }
 
+        /**
+         * @param timeWindowSec How long back autoscaling should look when computing recommendations
+         * to include directives regarding slower scale down, as described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowSec(Integer timeWindowSec) {
             return timeWindowSec(Output.of(timeWindowSec));
         }

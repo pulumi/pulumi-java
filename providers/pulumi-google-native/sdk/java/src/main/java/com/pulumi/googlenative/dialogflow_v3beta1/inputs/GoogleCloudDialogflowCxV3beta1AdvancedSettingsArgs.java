@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends co
     @Import(name="loggingSettings")
     private @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
+    /**
+     * @return Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs>> loggingSettings() {
         return Optional.ofNullable(this.loggingSettings);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends co
             $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loggingSettings Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
             $.loggingSettings = loggingSettings;
             return this;
         }
 
+        /**
+         * @param loggingSettings Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs loggingSettings) {
             return loggingSettings(Output.of(loggingSettings));
         }

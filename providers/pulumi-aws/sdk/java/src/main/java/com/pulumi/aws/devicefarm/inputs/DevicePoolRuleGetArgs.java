@@ -22,6 +22,10 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="attribute")
     private @Nullable Output<String> attribute;
 
+    /**
+     * @return The rule&#39;s stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
+     * 
+     */
     public Optional<Output<String>> attribute() {
         return Optional.ofNullable(this.attribute);
     }
@@ -33,6 +37,10 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="operator")
     private @Nullable Output<String> operator;
 
+    /**
+     * @return Specifies how Device Farm compares the rule&#39;s attribute to the value. For the operators that are supported by each attribute. Valid values are: `EQUALS`, `NOT_IN`, `IN`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`, `CONTAINS`.
+     * 
+     */
     public Optional<Output<String>> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -44,6 +52,10 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The rule&#39;s value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -74,29 +86,65 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
             $ = new DevicePoolRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute The rule&#39;s stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(@Nullable Output<String> attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param attribute The rule&#39;s stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(String attribute) {
             return attribute(Output.of(attribute));
         }
 
+        /**
+         * @param operator Specifies how Device Farm compares the rule&#39;s attribute to the value. For the operators that are supported by each attribute. Valid values are: `EQUALS`, `NOT_IN`, `IN`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`, `CONTAINS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable Output<String> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator Specifies how Device Farm compares the rule&#39;s attribute to the value. For the operators that are supported by each attribute. Valid values are: `EQUALS`, `NOT_IN`, `IN`, `GREATER_THAN`, `GREATER_THAN_OR_EQUALS`, `LESS_THAN`, `LESS_THAN_OR_EQUALS`, `CONTAINS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param value The rule&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The rule&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -34,6 +34,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="allowSelfSignedServerCert")
     private @Nullable Object allowSelfSignedServerCert;
 
+    /**
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
@@ -45,6 +49,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -56,6 +64,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="authSource")
     private @Nullable Object authSource;
 
+    /**
+     * @return Database to verify the username and password. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> authSource() {
         return Optional.ofNullable(this.authSource);
     }
@@ -67,6 +79,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return The authentication type to be used to connect to the MongoDB database.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -78,6 +94,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -89,6 +109,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="databaseName", required=true)
     private Object databaseName;
 
+    /**
+     * @return The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object databaseName() {
         return this.databaseName;
     }
@@ -100,6 +124,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -111,6 +139,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="enableSsl")
     private @Nullable Object enableSsl;
 
+    /**
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
@@ -122,6 +154,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -133,6 +169,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -144,6 +184,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password for authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -155,6 +199,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="port")
     private @Nullable Object port;
 
+    /**
+     * @return The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
@@ -166,6 +214,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="server", required=true)
     private Object server;
 
+    /**
+     * @return The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object server() {
         return this.server;
     }
@@ -178,6 +230,11 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;MongoDb&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -189,6 +246,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="username")
     private @Nullable Object username;
 
+    /**
+     * @return Username for authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
@@ -231,88 +292,197 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
             $ = new MongoDbLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSelfSignedServerCert Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authSource Database to verify the username and password. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authSource(@Nullable Object authSource) {
             $.authSource = authSource;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the MongoDB database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Object databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param enableSsl Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(@Nullable Object enableSsl) {
             $.enableSsl = enableSsl;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param port The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param server The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Object server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;MongoDb&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username Username for authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Object username) {
             $.username = username;
             return this;

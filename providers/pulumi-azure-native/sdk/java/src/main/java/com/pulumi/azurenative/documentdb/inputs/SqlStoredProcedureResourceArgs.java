@@ -26,6 +26,10 @@ public final class SqlStoredProcedureResourceArgs extends com.pulumi.resources.R
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return Body of the Stored Procedure
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -37,6 +41,10 @@ public final class SqlStoredProcedureResourceArgs extends com.pulumi.resources.R
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Name of the Cosmos DB SQL storedProcedure
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -66,20 +74,44 @@ public final class SqlStoredProcedureResourceArgs extends com.pulumi.resources.R
             $ = new SqlStoredProcedureResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body of the Stored Procedure
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Body of the Stored Procedure
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL storedProcedure
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB SQL storedProcedure
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

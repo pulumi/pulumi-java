@@ -23,6 +23,10 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="operation", required=true)
     private String operation;
 
+    /**
+     * @return The track property condition operation.
+     * 
+     */
     public String operation() {
         return this.operation;
     }
@@ -34,6 +38,10 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="property", required=true)
     private String property;
 
+    /**
+     * @return The track property type.
+     * 
+     */
     public String property() {
         return this.property;
     }
@@ -45,6 +53,10 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The track property value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -75,16 +87,34 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
             $ = new FilterTrackPropertyConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation The track property condition operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param property The track property type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param value The track property value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

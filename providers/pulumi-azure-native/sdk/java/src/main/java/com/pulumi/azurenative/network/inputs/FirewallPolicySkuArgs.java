@@ -28,6 +28,10 @@ public final class FirewallPolicySkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
     private @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
+    /**
+     * @return Tier of Firewall Policy.
+     * 
+     */
     public Optional<Output<Either<String,FirewallPolicySkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -56,19 +60,43 @@ public final class FirewallPolicySkuArgs extends com.pulumi.resources.ResourceAr
             $ = new FirewallPolicySkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tier Tier of Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,FirewallPolicySkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,FirewallPolicySkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(FirewallPolicySkuTier tier) {
             return tier(Either.ofRight(tier));
         }

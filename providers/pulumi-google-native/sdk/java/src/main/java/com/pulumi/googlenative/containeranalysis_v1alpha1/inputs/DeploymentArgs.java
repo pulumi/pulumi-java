@@ -27,6 +27,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Address of the runtime element hosting this deployment.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -38,6 +42,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config")
     private @Nullable Output<String> config;
 
+    /**
+     * @return Configuration used to create this deployment.
+     * 
+     */
     public Optional<Output<String>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -49,6 +57,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deployTime")
     private @Nullable Output<String> deployTime;
 
+    /**
+     * @return Beginning of the lifetime of this deployment.
+     * 
+     */
     public Optional<Output<String>> deployTime() {
         return Optional.ofNullable(this.deployTime);
     }
@@ -60,6 +72,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
     private @Nullable Output<DeploymentPlatform> platform;
 
+    /**
+     * @return Platform hosting this deployment.
+     * 
+     */
     public Optional<Output<DeploymentPlatform>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -71,6 +87,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="undeployTime")
     private @Nullable Output<String> undeployTime;
 
+    /**
+     * @return End of the lifetime of this deployment.
+     * 
+     */
     public Optional<Output<String>> undeployTime() {
         return Optional.ofNullable(this.undeployTime);
     }
@@ -82,6 +102,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userEmail")
     private @Nullable Output<String> userEmail;
 
+    /**
+     * @return Identity of the user that triggered this deployment.
+     * 
+     */
     public Optional<Output<String>> userEmail() {
         return Optional.ofNullable(this.userEmail);
     }
@@ -115,56 +139,128 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the runtime element hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Address of the runtime element hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param config Configuration used to create this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<String> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Configuration used to create this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(String config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param deployTime Beginning of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployTime(@Nullable Output<String> deployTime) {
             $.deployTime = deployTime;
             return this;
         }
 
+        /**
+         * @param deployTime Beginning of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployTime(String deployTime) {
             return deployTime(Output.of(deployTime));
         }
 
+        /**
+         * @param platform Platform hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<DeploymentPlatform> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform Platform hosting this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(DeploymentPlatform platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param undeployTime End of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeployTime(@Nullable Output<String> undeployTime) {
             $.undeployTime = undeployTime;
             return this;
         }
 
+        /**
+         * @param undeployTime End of the lifetime of this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeployTime(String undeployTime) {
             return undeployTime(Output.of(undeployTime));
         }
 
+        /**
+         * @param userEmail Identity of the user that triggered this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmail(@Nullable Output<String> userEmail) {
             $.userEmail = userEmail;
             return this;
         }
 
+        /**
+         * @param userEmail Identity of the user that triggered this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmail(String userEmail) {
             return userEmail(Output.of(userEmail));
         }

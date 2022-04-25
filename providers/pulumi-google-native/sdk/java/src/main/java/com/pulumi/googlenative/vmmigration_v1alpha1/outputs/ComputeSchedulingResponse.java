@@ -15,22 +15,22 @@ import java.util.Objects;
 public final class ComputeSchedulingResponse {
     private final Boolean automaticRestart;
     /**
-     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
      * 
      */
     private final Integer minNodeCpus;
     /**
-     * A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * @return A set of node affinity and anti-affinity configurations for sole tenant nodes.
      * 
      */
     private final List<SchedulingNodeAffinityResponse> nodeAffinities;
     /**
-     * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * @return How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
      * 
      */
     private final String onHostMaintenance;
     /**
-     * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * @return Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
      * 
      */
     private final String restartType;
@@ -53,30 +53,30 @@ public final class ComputeSchedulingResponse {
         return this.automaticRestart;
     }
     /**
-     * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
+     * @return The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
      * 
-    */
+     */
     public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
     /**
-     * A set of node affinity and anti-affinity configurations for sole tenant nodes.
+     * @return A set of node affinity and anti-affinity configurations for sole tenant nodes.
      * 
-    */
+     */
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
     /**
-     * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
+     * @return How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
      * 
-    */
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
-     * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
+     * @return Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
      * 
-    */
+     */
     public String restartType() {
         return this.restartType;
     }

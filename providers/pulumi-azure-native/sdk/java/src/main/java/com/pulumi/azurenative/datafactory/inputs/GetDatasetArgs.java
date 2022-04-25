@@ -19,6 +19,10 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="datasetName", required=true)
     private String datasetName;
 
+    /**
+     * @return The dataset name.
+     * 
+     */
     public String datasetName() {
         return this.datasetName;
     }
@@ -30,6 +34,10 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -41,6 +49,10 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetName The dataset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

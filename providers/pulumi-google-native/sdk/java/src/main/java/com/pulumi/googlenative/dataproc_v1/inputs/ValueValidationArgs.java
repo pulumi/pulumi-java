@@ -25,6 +25,10 @@ public final class ValueValidationArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return List of allowed values for the parameter.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -53,15 +57,33 @@ public final class ValueValidationArgs extends com.pulumi.resources.ResourceArgs
             $ = new ValueValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param values List of allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values List of allowed values for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -27,6 +27,10 @@ public final class HashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<HashType> type;
 
+    /**
+     * @return The type of hash that was performed.
+     * 
+     */
     public Optional<Output<HashType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -38,6 +42,10 @@ public final class HashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The hash value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class HashArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HashArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of hash that was performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<HashType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of hash that was performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(HashType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value The hash value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The hash value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

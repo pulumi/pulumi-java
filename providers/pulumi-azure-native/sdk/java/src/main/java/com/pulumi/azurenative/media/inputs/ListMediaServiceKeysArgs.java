@@ -19,6 +19,10 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
     @Import(name="mediaServiceName", required=true)
     private String mediaServiceName;
 
+    /**
+     * @return Name of the Media Service.
+     * 
+     */
     public String mediaServiceName() {
         return this.mediaServiceName;
     }
@@ -30,6 +34,10 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
             $ = new ListMediaServiceKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mediaServiceName Name of the Media Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaServiceName(String mediaServiceName) {
             $.mediaServiceName = mediaServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

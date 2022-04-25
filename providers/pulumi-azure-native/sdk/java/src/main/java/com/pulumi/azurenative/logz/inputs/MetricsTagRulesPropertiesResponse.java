@@ -36,6 +36,10 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Flag specifying if the resource provisioning state as tracked by ARM.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -47,6 +51,10 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="sendMetrics")
     private @Nullable Boolean sendMetrics;
 
+    /**
+     * @return Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Boolean> sendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
@@ -58,6 +66,10 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     @Import(name="systemData", required=true)
     private SystemDataResponse systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
@@ -98,16 +110,34 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
             return metricRules(List.of(metricRules));
         }
 
+        /**
+         * @param provisioningState Flag specifying if the resource provisioning state as tracked by ARM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sendMetrics Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendMetrics(@Nullable Boolean sendMetrics) {
             $.sendMetrics = sendMetrics;
             return this;
         }
 
+        /**
+         * @param systemData Metadata pertaining to creation and last modification of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(SystemDataResponse systemData) {
             $.systemData = systemData;
             return this;

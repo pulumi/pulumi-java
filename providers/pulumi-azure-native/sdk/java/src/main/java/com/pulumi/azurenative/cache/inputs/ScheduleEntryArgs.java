@@ -28,6 +28,10 @@ public final class ScheduleEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dayOfWeek", required=true)
     private Output<DayOfWeek> dayOfWeek;
 
+    /**
+     * @return Day of the week when a cache can be patched.
+     * 
+     */
     public Output<DayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -39,6 +43,10 @@ public final class ScheduleEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
     private @Nullable Output<String> maintenanceWindow;
 
+    /**
+     * @return ISO8601 timespan specifying how much time cache patching can take.
+     * 
+     */
     public Optional<Output<String>> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -50,6 +58,10 @@ public final class ScheduleEntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startHourUtc", required=true)
     private Output<Integer> startHourUtc;
 
+    /**
+     * @return Start hour after which cache patching can start.
+     * 
+     */
     public Output<Integer> startHourUtc() {
         return this.startHourUtc;
     }
@@ -80,29 +92,65 @@ public final class ScheduleEntryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleEntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of the week when a cache can be patched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<DayOfWeek> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek Day of the week when a cache can be patched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(DayOfWeek dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param maintenanceWindow ISO8601 timespan specifying how much time cache patching can take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow ISO8601 timespan specifying how much time cache patching can take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(String maintenanceWindow) {
             return maintenanceWindow(Output.of(maintenanceWindow));
         }
 
+        /**
+         * @param startHourUtc Start hour after which cache patching can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startHourUtc(Output<Integer> startHourUtc) {
             $.startHourUtc = startHourUtc;
             return this;
         }
 
+        /**
+         * @param startHourUtc Start hour after which cache patching can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startHourUtc(Integer startHourUtc) {
             return startHourUtc(Output.of(startHourUtc));
         }

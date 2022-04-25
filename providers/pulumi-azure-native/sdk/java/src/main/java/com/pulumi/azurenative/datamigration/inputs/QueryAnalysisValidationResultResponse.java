@@ -24,6 +24,10 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
     @Import(name="queryResults", required=true)
     private QueryExecutionResultResponse queryResults;
 
+    /**
+     * @return List of queries executed and it&#39;s execution results in source and target
+     * 
+     */
     public QueryExecutionResultResponse queryResults() {
         return this.queryResults;
     }
@@ -35,6 +39,10 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
     @Import(name="validationErrors", required=true)
     private ValidationErrorResponse validationErrors;
 
+    /**
+     * @return Errors that are part of the execution
+     * 
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
@@ -64,11 +72,23 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
             $ = new QueryAnalysisValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryResults List of queries executed and it&#39;s execution results in source and target
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryResults(QueryExecutionResultResponse queryResults) {
             $.queryResults = queryResults;
             return this;
         }
 
+        /**
+         * @param validationErrors Errors that are part of the execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             $.validationErrors = validationErrors;
             return this;

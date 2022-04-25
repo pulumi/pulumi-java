@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FeatureResourceStateResponse {
     /**
-     * The current state of the Feature resource in the Hub API.
+     * @return The current state of the Feature resource in the Hub API.
      * 
      */
     private final String state;
@@ -21,9 +21,9 @@ public final class FeatureResourceStateResponse {
     }
 
     /**
-     * The current state of the Feature resource in the Hub API.
+     * @return The current state of the Feature resource in the Hub API.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

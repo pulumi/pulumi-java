@@ -24,6 +24,10 @@ public final class DataSourceConfigurationResponse extends com.pulumi.resources.
     @Import(name="eventLogs")
     private @Nullable List<EventLogConfigurationResponse> eventLogs;
 
+    /**
+     * @return Windows event logs configuration.
+     * 
+     */
     public Optional<List<EventLogConfigurationResponse>> eventLogs() {
         return Optional.ofNullable(this.eventLogs);
     }
@@ -35,6 +39,10 @@ public final class DataSourceConfigurationResponse extends com.pulumi.resources.
     @Import(name="perfCounters")
     private @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
 
+    /**
+     * @return Performance counter configuration
+     * 
+     */
     public Optional<List<PerformanceCounterConfigurationResponse>> perfCounters() {
         return Optional.ofNullable(this.perfCounters);
     }
@@ -46,6 +54,10 @@ public final class DataSourceConfigurationResponse extends com.pulumi.resources.
     @Import(name="providers")
     private @Nullable List<EtwProviderConfigurationResponse> providers;
 
+    /**
+     * @return ETW providers configuration
+     * 
+     */
     public Optional<List<EtwProviderConfigurationResponse>> providers() {
         return Optional.ofNullable(this.providers);
     }
@@ -76,29 +88,65 @@ public final class DataSourceConfigurationResponse extends com.pulumi.resources.
             $ = new DataSourceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventLogs Windows event logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLogs(@Nullable List<EventLogConfigurationResponse> eventLogs) {
             $.eventLogs = eventLogs;
             return this;
         }
 
+        /**
+         * @param eventLogs Windows event logs configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLogs(EventLogConfigurationResponse... eventLogs) {
             return eventLogs(List.of(eventLogs));
         }
 
+        /**
+         * @param perfCounters Performance counter configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationResponse> perfCounters) {
             $.perfCounters = perfCounters;
             return this;
         }
 
+        /**
+         * @param perfCounters Performance counter configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfCounters(PerformanceCounterConfigurationResponse... perfCounters) {
             return perfCounters(List.of(perfCounters));
         }
 
+        /**
+         * @param providers ETW providers configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(@Nullable List<EtwProviderConfigurationResponse> providers) {
             $.providers = providers;
             return this;
         }
 
+        /**
+         * @param providers ETW providers configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder providers(EtwProviderConfigurationResponse... providers) {
             return providers(List.of(providers));
         }

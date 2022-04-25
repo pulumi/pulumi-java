@@ -26,6 +26,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -54,11 +58,23 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }

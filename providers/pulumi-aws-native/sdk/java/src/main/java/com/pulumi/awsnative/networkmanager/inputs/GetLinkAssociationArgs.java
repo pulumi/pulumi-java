@@ -19,6 +19,10 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
     @Import(name="deviceId", required=true)
     private String deviceId;
 
+    /**
+     * @return The ID of the device
+     * 
+     */
     public String deviceId() {
         return this.deviceId;
     }
@@ -30,6 +34,10 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -41,6 +49,10 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
     @Import(name="linkId", required=true)
     private String linkId;
 
+    /**
+     * @return The ID of the link
+     * 
+     */
     public String linkId() {
         return this.linkId;
     }
@@ -71,16 +83,34 @@ public final class GetLinkAssociationArgs extends com.pulumi.resources.InvokeArg
             $ = new GetLinkAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceId The ID of the device
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param linkId The ID of the link
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkId(String linkId) {
             $.linkId = linkId;
             return this;

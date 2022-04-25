@@ -25,6 +25,10 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The AAD security group id.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -36,6 +40,10 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupName")
     private @Nullable String groupName;
 
+    /**
+     * @return The AAD security group name.
+     * 
+     */
     public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -65,11 +73,23 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new ClientGroupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The AAD security group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupName The AAD security group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable String groupName) {
             $.groupName = groupName;
             return this;

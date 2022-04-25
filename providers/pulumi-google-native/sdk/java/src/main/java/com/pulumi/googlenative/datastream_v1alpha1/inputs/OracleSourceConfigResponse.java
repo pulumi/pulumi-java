@@ -23,6 +23,10 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
     @Import(name="allowlist", required=true)
     private OracleRdbmsResponse allowlist;
 
+    /**
+     * @return Oracle objects to include in the stream.
+     * 
+     */
     public OracleRdbmsResponse allowlist() {
         return this.allowlist;
     }
@@ -34,6 +38,10 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
     @Import(name="rejectlist", required=true)
     private OracleRdbmsResponse rejectlist;
 
+    /**
+     * @return Oracle objects to exclude from the stream.
+     * 
+     */
     public OracleRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
@@ -63,11 +71,23 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
             $ = new OracleSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowlist Oracle objects to include in the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowlist(OracleRdbmsResponse allowlist) {
             $.allowlist = allowlist;
             return this;
         }
 
+        /**
+         * @param rejectlist Oracle objects to exclude from the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rejectlist(OracleRdbmsResponse rejectlist) {
             $.rejectlist = rejectlist;
             return this;

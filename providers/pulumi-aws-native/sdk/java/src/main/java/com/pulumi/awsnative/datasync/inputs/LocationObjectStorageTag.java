@@ -23,6 +23,10 @@ public final class LocationObjectStorageTag extends com.pulumi.resources.InvokeA
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key for an AWS resource tag.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class LocationObjectStorageTag extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value for an AWS resource tag.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class LocationObjectStorageTag extends com.pulumi.resources.InvokeA
             $ = new LocationObjectStorageTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key for an AWS resource tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value for an AWS resource tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

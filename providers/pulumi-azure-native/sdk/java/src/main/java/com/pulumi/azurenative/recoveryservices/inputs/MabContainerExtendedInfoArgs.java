@@ -29,6 +29,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="backupItemType")
     private @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
+    /**
+     * @return Type of backup items associated with this container.
+     * 
+     */
     public Optional<Output<Either<String,BackupItemType>>> backupItemType() {
         return Optional.ofNullable(this.backupItemType);
     }
@@ -40,6 +44,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="backupItems")
     private @Nullable Output<List<String>> backupItems;
 
+    /**
+     * @return List of backup items associated with this container.
+     * 
+     */
     public Optional<Output<List<String>>> backupItems() {
         return Optional.ofNullable(this.backupItems);
     }
@@ -51,6 +59,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="lastBackupStatus")
     private @Nullable Output<String> lastBackupStatus;
 
+    /**
+     * @return Latest backup status of this container.
+     * 
+     */
     public Optional<Output<String>> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
@@ -62,6 +74,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="lastRefreshedAt")
     private @Nullable Output<String> lastRefreshedAt;
 
+    /**
+     * @return Time stamp when this container was refreshed.
+     * 
+     */
     public Optional<Output<String>> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -73,6 +89,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Backup policy associated with this container.
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -105,59 +125,137 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
             $ = new MabContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupItemType Type of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItemType(@Nullable Output<Either<String,BackupItemType>> backupItemType) {
             $.backupItemType = backupItemType;
             return this;
         }
 
+        /**
+         * @param backupItemType Type of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItemType(Either<String,BackupItemType> backupItemType) {
             return backupItemType(Output.of(backupItemType));
         }
 
+        /**
+         * @param backupItemType Type of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItemType(String backupItemType) {
             return backupItemType(Either.ofLeft(backupItemType));
         }
 
+        /**
+         * @param backupItemType Type of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItemType(BackupItemType backupItemType) {
             return backupItemType(Either.ofRight(backupItemType));
         }
 
+        /**
+         * @param backupItems List of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItems(@Nullable Output<List<String>> backupItems) {
             $.backupItems = backupItems;
             return this;
         }
 
+        /**
+         * @param backupItems List of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItems(List<String> backupItems) {
             return backupItems(Output.of(backupItems));
         }
 
+        /**
+         * @param backupItems List of backup items associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupItems(String... backupItems) {
             return backupItems(List.of(backupItems));
         }
 
+        /**
+         * @param lastBackupStatus Latest backup status of this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             $.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
+        /**
+         * @param lastBackupStatus Latest backup status of this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(String lastBackupStatus) {
             return lastBackupStatus(Output.of(lastBackupStatus));
         }
 
+        /**
+         * @param lastRefreshedAt Time stamp when this container was refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
+        /**
+         * @param lastRefreshedAt Time stamp when this container was refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(String lastRefreshedAt) {
             return lastRefreshedAt(Output.of(lastRefreshedAt));
         }
 
+        /**
+         * @param policyName Backup policy associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Backup policy associated with this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }

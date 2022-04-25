@@ -22,6 +22,10 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the argument or property.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
     @Import(name="param")
     private @Nullable Boolean param;
 
+    /**
+     * @return Boolean if the value is used as a parameter. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> param() {
         return Optional.ofNullable(this.param);
     }
@@ -44,6 +52,10 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the argument or property.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -74,16 +86,34 @@ public final class GetScriptDagNodeArg extends com.pulumi.resources.InvokeArgs {
             $ = new GetScriptDagNodeArg(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the argument or property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param param Boolean if the value is used as a parameter. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder param(@Nullable Boolean param) {
             $.param = param;
             return this;
         }
 
+        /**
+         * @param value The value of the argument or property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

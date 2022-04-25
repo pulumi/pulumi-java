@@ -24,6 +24,10 @@ public final class AutoscalingPolicyScaleInControlResponse extends com.pulumi.re
     @Import(name="maxScaledInReplicas", required=true)
     private FixedOrPercentResponse maxScaledInReplicas;
 
+    /**
+     * @return Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
+     * 
+     */
     public FixedOrPercentResponse maxScaledInReplicas() {
         return this.maxScaledInReplicas;
     }
@@ -35,6 +39,10 @@ public final class AutoscalingPolicyScaleInControlResponse extends com.pulumi.re
     @Import(name="timeWindowSec", required=true)
     private Integer timeWindowSec;
 
+    /**
+     * @return How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
+     * 
+     */
     public Integer timeWindowSec() {
         return this.timeWindowSec;
     }
@@ -64,11 +72,23 @@ public final class AutoscalingPolicyScaleInControlResponse extends com.pulumi.re
             $ = new AutoscalingPolicyScaleInControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxScaledInReplicas Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScaledInReplicas(FixedOrPercentResponse maxScaledInReplicas) {
             $.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
+        /**
+         * @param timeWindowSec How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowSec(Integer timeWindowSec) {
             $.timeWindowSec = timeWindowSec;
             return this;

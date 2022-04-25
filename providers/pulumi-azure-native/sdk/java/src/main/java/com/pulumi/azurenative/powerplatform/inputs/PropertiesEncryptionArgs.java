@@ -29,6 +29,10 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="keyVault")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVault;
 
+    /**
+     * @return Key vault properties.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -40,6 +44,10 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return The state of onboarding, which only appears in the response.
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -69,28 +77,64 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
             $ = new PropertiesEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVault Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable Output<KeyVaultPropertiesArgs> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault Key vault properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultPropertiesArgs keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param state The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state of onboarding, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }

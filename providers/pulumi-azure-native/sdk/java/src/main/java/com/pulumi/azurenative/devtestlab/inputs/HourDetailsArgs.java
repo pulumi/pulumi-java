@@ -26,6 +26,10 @@ public final class HourDetailsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minute")
     private @Nullable Output<Integer> minute;
 
+    /**
+     * @return Minutes of the hour the schedule will run.
+     * 
+     */
     public Optional<Output<Integer>> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -54,11 +58,23 @@ public final class HourDetailsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HourDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minute Minutes of the hour the schedule will run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Output<Integer> minute) {
             $.minute = minute;
             return this;
         }
 
+        /**
+         * @param minute Minutes of the hour the schedule will run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(Integer minute) {
             return minute(Output.of(minute));
         }

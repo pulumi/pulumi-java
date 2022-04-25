@@ -24,6 +24,10 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
     @Import(name="onewayTerms", required=true)
     private List<String> onewayTerms;
 
+    /**
+     * @return Will be [deprecated = true] post migration;
+     * 
+     */
     public List<String> onewayTerms() {
         return this.onewayTerms;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
     @Import(name="queryTerms", required=true)
     private List<String> queryTerms;
 
+    /**
+     * @return Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+     * 
+     */
     public List<String> queryTerms() {
         return this.queryTerms;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
     @Import(name="synonyms", required=true)
     private List<String> synonyms;
 
+    /**
+     * @return Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+     * 
+     */
     public List<String> synonyms() {
         return this.synonyms;
     }
@@ -76,29 +88,65 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
             $ = new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onewayTerms Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder onewayTerms(List<String> onewayTerms) {
             $.onewayTerms = onewayTerms;
             return this;
         }
 
+        /**
+         * @param onewayTerms Will be [deprecated = true] post migration;
+         * 
+         * @return builder
+         * 
+         */
         public Builder onewayTerms(String... onewayTerms) {
             return onewayTerms(List.of(onewayTerms));
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(List<String> queryTerms) {
             $.queryTerms = queryTerms;
             return this;
         }
 
+        /**
+         * @param queryTerms Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(List<String> synonyms) {
             $.synonyms = synonyms;
             return this;
         }
 
+        /**
+         * @param synonyms Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }

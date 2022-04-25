@@ -27,6 +27,10 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -38,6 +42,10 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="paths")
     private @Nullable Output<List<String>> paths;
 
+    /**
+     * @return Path globs used to match files in the build&#39;s workspace.
+     * 
+     */
     public Optional<Output<List<String>>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -67,24 +75,54 @@ public final class ArtifactObjectsArgs extends com.pulumi.resources.ResourceArgs
             $ = new ArtifactObjectsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param paths Path globs used to match files in the build&#39;s workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable Output<List<String>> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths Path globs used to match files in the build&#39;s workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             return paths(Output.of(paths));
         }
 
+        /**
+         * @param paths Path globs used to match files in the build&#39;s workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }

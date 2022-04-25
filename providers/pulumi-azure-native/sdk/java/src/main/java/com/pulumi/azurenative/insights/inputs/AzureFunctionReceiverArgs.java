@@ -28,6 +28,10 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="functionAppResourceId", required=true)
     private Output<String> functionAppResourceId;
 
+    /**
+     * @return The azure resource id of the function app.
+     * 
+     */
     public Output<String> functionAppResourceId() {
         return this.functionAppResourceId;
     }
@@ -39,6 +43,10 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="functionName", required=true)
     private Output<String> functionName;
 
+    /**
+     * @return The function name in the function app.
+     * 
+     */
     public Output<String> functionName() {
         return this.functionName;
     }
@@ -50,6 +58,10 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="httpTriggerUrl", required=true)
     private Output<String> httpTriggerUrl;
 
+    /**
+     * @return The http trigger url where http request sent to.
+     * 
+     */
     public Output<String> httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
@@ -61,6 +73,10 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the azure function receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="useCommonAlertSchema")
     private @Nullable Output<Boolean> useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Output<Boolean>> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -104,47 +124,107 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
             $ = new AzureFunctionReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAppResourceId The azure resource id of the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(Output<String> functionAppResourceId) {
             $.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
+        /**
+         * @param functionAppResourceId The azure resource id of the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(String functionAppResourceId) {
             return functionAppResourceId(Output.of(functionAppResourceId));
         }
 
+        /**
+         * @param functionName The function name in the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName The function name in the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param httpTriggerUrl The http trigger url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTriggerUrl(Output<String> httpTriggerUrl) {
             $.httpTriggerUrl = httpTriggerUrl;
             return this;
         }
 
+        /**
+         * @param httpTriggerUrl The http trigger url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTriggerUrl(String httpTriggerUrl) {
             return httpTriggerUrl(Output.of(httpTriggerUrl));
         }
 
+        /**
+         * @param name The name of the azure function receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the azure function receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
             return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }

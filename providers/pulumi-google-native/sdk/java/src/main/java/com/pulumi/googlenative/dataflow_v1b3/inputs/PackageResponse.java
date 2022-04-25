@@ -23,6 +23,10 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -34,6 +38,10 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the package.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

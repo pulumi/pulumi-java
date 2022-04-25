@@ -19,6 +19,10 @@ public final class GetReplicationConfigurationArgs extends com.pulumi.resources.
     @Import(name="registryId", required=true)
     private String registryId;
 
+    /**
+     * @return The RegistryId associated with the aws account.
+     * 
+     */
     public String registryId() {
         return this.registryId;
     }
@@ -47,6 +51,12 @@ public final class GetReplicationConfigurationArgs extends com.pulumi.resources.
             $ = new GetReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registryId The RegistryId associated with the aws account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             $.registryId = registryId;
             return this;

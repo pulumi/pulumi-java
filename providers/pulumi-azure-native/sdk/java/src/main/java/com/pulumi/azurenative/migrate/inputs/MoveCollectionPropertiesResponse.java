@@ -24,6 +24,10 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
     @Import(name="errors", required=true)
     private MoveCollectionPropertiesResponseErrors errors;
 
+    /**
+     * @return Defines the move collection errors.
+     * 
+     */
     public MoveCollectionPropertiesResponseErrors errors() {
         return this.errors;
     }
@@ -35,6 +39,10 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Defines the provisioning states.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -46,6 +54,10 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
     @Import(name="sourceRegion", required=true)
     private String sourceRegion;
 
+    /**
+     * @return Gets or sets the source region.
+     * 
+     */
     public String sourceRegion() {
         return this.sourceRegion;
     }
@@ -57,6 +69,10 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
     @Import(name="targetRegion", required=true)
     private String targetRegion;
 
+    /**
+     * @return Gets or sets the target region.
+     * 
+     */
     public String targetRegion() {
         return this.targetRegion;
     }
@@ -88,21 +104,45 @@ public final class MoveCollectionPropertiesResponse extends com.pulumi.resources
             $ = new MoveCollectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors Defines the move collection errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(MoveCollectionPropertiesResponseErrors errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param provisioningState Defines the provisioning states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sourceRegion Gets or sets the source region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(String sourceRegion) {
             $.sourceRegion = sourceRegion;
             return this;
         }
 
+        /**
+         * @param targetRegion Gets or sets the target region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegion(String targetRegion) {
             $.targetRegion = targetRegion;
             return this;

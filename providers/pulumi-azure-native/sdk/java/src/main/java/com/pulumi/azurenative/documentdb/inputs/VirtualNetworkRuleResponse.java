@@ -26,6 +26,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="ignoreMissingVNetServiceEndpoint")
     private @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
+    /**
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * 
+     */
     public Optional<Boolean> ignoreMissingVNetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
@@ -66,11 +74,23 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
             $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ignoreMissingVNetServiceEndpoint Create firewall rule before the virtual network has vnet service endpoint enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
             $.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;

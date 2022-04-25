@@ -24,6 +24,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="botName")
     private @Nullable Output<String> botName;
 
+    /**
+     * @return The name of the Bot resource.
+     * 
+     */
     public Optional<Output<String>> botName() {
         return Optional.ofNullable(this.botName);
     }
@@ -35,6 +39,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Bot resource group in the user subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return SKU of the HealthBot.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -68,6 +84,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param botName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botName(@Nullable Output<String> botName) {
             $.botName = botName;
             return this;
         }
 
+        /**
+         * @param botName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botName(String botName) {
             return botName(Output.of(botName));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU of the HealthBot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU of the HealthBot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

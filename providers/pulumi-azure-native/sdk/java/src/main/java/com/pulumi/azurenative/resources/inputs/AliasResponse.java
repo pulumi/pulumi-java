@@ -29,6 +29,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultMetadata", required=true)
     private AliasPathMetadataResponse defaultMetadata;
 
+    /**
+     * @return The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
+     * 
+     */
     public AliasPathMetadataResponse defaultMetadata() {
         return this.defaultMetadata;
     }
@@ -40,6 +44,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultPath")
     private @Nullable String defaultPath;
 
+    /**
+     * @return The default path for an alias.
+     * 
+     */
     public Optional<String> defaultPath() {
         return Optional.ofNullable(this.defaultPath);
     }
@@ -51,6 +59,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="defaultPattern")
     private @Nullable AliasPatternResponse defaultPattern;
 
+    /**
+     * @return The default pattern for an alias.
+     * 
+     */
     public Optional<AliasPatternResponse> defaultPattern() {
         return Optional.ofNullable(this.defaultPattern);
     }
@@ -62,6 +74,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The alias name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="paths")
     private @Nullable List<AliasPathResponse> paths;
 
+    /**
+     * @return The paths for an alias.
+     * 
+     */
     public Optional<List<AliasPathResponse>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -84,6 +104,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the alias.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -117,35 +141,77 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AliasResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultMetadata The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMetadata(AliasPathMetadataResponse defaultMetadata) {
             $.defaultMetadata = defaultMetadata;
             return this;
         }
 
+        /**
+         * @param defaultPath The default path for an alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPath(@Nullable String defaultPath) {
             $.defaultPath = defaultPath;
             return this;
         }
 
+        /**
+         * @param defaultPattern The default pattern for an alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPattern(@Nullable AliasPatternResponse defaultPattern) {
             $.defaultPattern = defaultPattern;
             return this;
         }
 
+        /**
+         * @param name The alias name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param paths The paths for an alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable List<AliasPathResponse> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths The paths for an alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(AliasPathResponse... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param type The type of the alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

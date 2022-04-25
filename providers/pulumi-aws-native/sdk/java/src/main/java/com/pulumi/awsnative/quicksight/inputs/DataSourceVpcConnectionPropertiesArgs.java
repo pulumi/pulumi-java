@@ -24,6 +24,10 @@ public final class DataSourceVpcConnectionPropertiesArgs extends com.pulumi.reso
     @Import(name="vpcConnectionArn", required=true)
     private Output<String> vpcConnectionArn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) for the VPC connection.&lt;/p&gt;
+     * 
+     */
     public Output<String> vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
@@ -52,11 +56,23 @@ public final class DataSourceVpcConnectionPropertiesArgs extends com.pulumi.reso
             $ = new DataSourceVpcConnectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcConnectionArn &lt;p&gt;The Amazon Resource Name (ARN) for the VPC connection.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectionArn(Output<String> vpcConnectionArn) {
             $.vpcConnectionArn = vpcConnectionArn;
             return this;
         }
 
+        /**
+         * @param vpcConnectionArn &lt;p&gt;The Amazon Resource Name (ARN) for the VPC connection.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectionArn(String vpcConnectionArn) {
             return vpcConnectionArn(Output.of(vpcConnectionArn));
         }

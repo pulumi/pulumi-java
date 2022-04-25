@@ -23,6 +23,10 @@ public final class WorkspaceCustomStringParameterResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of variable that this is
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -34,6 +38,10 @@ public final class WorkspaceCustomStringParameterResponse extends com.pulumi.res
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class WorkspaceCustomStringParameterResponse extends com.pulumi.res
             $ = new WorkspaceCustomStringParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of variable that this is
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -19,6 +19,10 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of Cognitive Services account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name of the deployment associated with the Cognitive Services Account
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -41,6 +49,10 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param deploymentName The name of the deployment associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

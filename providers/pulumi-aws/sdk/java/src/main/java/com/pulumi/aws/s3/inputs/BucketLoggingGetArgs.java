@@ -22,6 +22,10 @@ public final class BucketLoggingGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetBucket", required=true)
     private Output<String> targetBucket;
 
+    /**
+     * @return The name of the bucket that will receive the log objects.
+     * 
+     */
     public Output<String> targetBucket() {
         return this.targetBucket;
     }
@@ -33,6 +37,10 @@ public final class BucketLoggingGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targetPrefix")
     private @Nullable Output<String> targetPrefix;
 
+    /**
+     * @return To specify a key prefix for log objects.
+     * 
+     */
     public Optional<Output<String>> targetPrefix() {
         return Optional.ofNullable(this.targetPrefix);
     }
@@ -62,20 +70,44 @@ public final class BucketLoggingGetArgs extends com.pulumi.resources.ResourceArg
             $ = new BucketLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetBucket The name of the bucket that will receive the log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBucket(Output<String> targetBucket) {
             $.targetBucket = targetBucket;
             return this;
         }
 
+        /**
+         * @param targetBucket The name of the bucket that will receive the log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBucket(String targetBucket) {
             return targetBucket(Output.of(targetBucket));
         }
 
+        /**
+         * @param targetPrefix To specify a key prefix for log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPrefix(@Nullable Output<String> targetPrefix) {
             $.targetPrefix = targetPrefix;
             return this;
         }
 
+        /**
+         * @param targetPrefix To specify a key prefix for log objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPrefix(String targetPrefix) {
             return targetPrefix(Output.of(targetPrefix));
         }

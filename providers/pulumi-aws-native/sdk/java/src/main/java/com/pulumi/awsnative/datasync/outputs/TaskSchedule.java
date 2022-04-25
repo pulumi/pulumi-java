@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TaskSchedule {
     /**
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
+     * @return A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
      * 
      */
     private final String scheduleExpression;
@@ -21,9 +21,9 @@ public final class TaskSchedule {
     }
 
     /**
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
+     * @return A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
      * 
-    */
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }

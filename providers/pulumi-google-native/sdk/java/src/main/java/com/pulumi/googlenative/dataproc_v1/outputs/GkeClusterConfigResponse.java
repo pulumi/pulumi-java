@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GkeClusterConfigResponse {
     /**
-     * Optional. A target for the deployment.
+     * @return Optional. A target for the deployment.
      * 
      */
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
@@ -21,9 +21,9 @@ public final class GkeClusterConfigResponse {
     }
 
     /**
-     * Optional. A target for the deployment.
+     * @return Optional. A target for the deployment.
      * 
-    */
+     */
     public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }

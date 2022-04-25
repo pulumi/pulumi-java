@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PlanRule {
     /**
-     * The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
+     * @return The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
      * 
      */
     private final @Nullable Integer completionWindow;
     /**
-     * Configuration block(s) with copy operation settings. Detailed below.
+     * @return Configuration block(s) with copy operation settings. Detailed below.
      * 
      */
     private final @Nullable List<PlanRuleCopyAction> copyActions;
     /**
-     * Enable continuous backups for supported resources.
+     * @return Enable continuous backups for supported resources.
      * 
      */
     private final @Nullable Boolean enableContinuousBackup;
     /**
-     * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
+     * @return The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
      */
     private final @Nullable PlanRuleLifecycle lifecycle;
     /**
-     * Metadata that you can assign to help organize the resources that you create.
+     * @return Metadata that you can assign to help organize the resources that you create.
      * 
      */
     private final @Nullable Map<String,String> recoveryPointTags;
     /**
-     * An display name for a backup rule.
+     * @return An display name for a backup rule.
      * 
      */
     private final String ruleName;
     /**
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * @return A CRON expression specifying when AWS Backup initiates a backup job.
      * 
      */
     private final @Nullable String schedule;
     /**
-     * The amount of time in minutes before beginning a backup.
+     * @return The amount of time in minutes before beginning a backup.
      * 
      */
     private final @Nullable Integer startWindow;
     /**
-     * The name of a logical container where backups are stored.
+     * @return The name of a logical container where backups are stored.
      * 
      */
     private final String targetVaultName;
@@ -86,65 +86,65 @@ public final class PlanRule {
     }
 
     /**
-     * The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
+     * @return The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
      * 
-    */
+     */
     public Optional<Integer> completionWindow() {
         return Optional.ofNullable(this.completionWindow);
     }
     /**
-     * Configuration block(s) with copy operation settings. Detailed below.
+     * @return Configuration block(s) with copy operation settings. Detailed below.
      * 
-    */
+     */
     public List<PlanRuleCopyAction> copyActions() {
         return this.copyActions == null ? List.of() : this.copyActions;
     }
     /**
-     * Enable continuous backups for supported resources.
+     * @return Enable continuous backups for supported resources.
      * 
-    */
+     */
     public Optional<Boolean> enableContinuousBackup() {
         return Optional.ofNullable(this.enableContinuousBackup);
     }
     /**
-     * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
+     * @return The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
-    */
+     */
     public Optional<PlanRuleLifecycle> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
     /**
-     * Metadata that you can assign to help organize the resources that you create.
+     * @return Metadata that you can assign to help organize the resources that you create.
      * 
-    */
+     */
     public Map<String,String> recoveryPointTags() {
         return this.recoveryPointTags == null ? Map.of() : this.recoveryPointTags;
     }
     /**
-     * An display name for a backup rule.
+     * @return An display name for a backup rule.
      * 
-    */
+     */
     public String ruleName() {
         return this.ruleName;
     }
     /**
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * @return A CRON expression specifying when AWS Backup initiates a backup job.
      * 
-    */
+     */
     public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * The amount of time in minutes before beginning a backup.
+     * @return The amount of time in minutes before beginning a backup.
      * 
-    */
+     */
     public Optional<Integer> startWindow() {
         return Optional.ofNullable(this.startWindow);
     }
     /**
-     * The name of a logical container where backups are stored.
+     * @return The name of a logical container where backups are stored.
      * 
-    */
+     */
     public String targetVaultName() {
         return this.targetVaultName;
     }

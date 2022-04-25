@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AssignmentPrincipalResponse {
     /**
-     * The principal id being assigned to.
+     * @return The principal id being assigned to.
      * 
      */
     private final String principalId;
     /**
-     * Other metadata for the principal.
+     * @return Other metadata for the principal.
      * 
      */
     private final @Nullable Map<String,String> principalMetadata;
     /**
-     * The Type of the principal ID.
+     * @return The Type of the principal ID.
      * 
      */
     private final String principalType;
@@ -38,23 +38,23 @@ public final class AssignmentPrincipalResponse {
     }
 
     /**
-     * The principal id being assigned to.
+     * @return The principal id being assigned to.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Other metadata for the principal.
+     * @return Other metadata for the principal.
      * 
-    */
+     */
     public Map<String,String> principalMetadata() {
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
     }
     /**
-     * The Type of the principal ID.
+     * @return The Type of the principal ID.
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }

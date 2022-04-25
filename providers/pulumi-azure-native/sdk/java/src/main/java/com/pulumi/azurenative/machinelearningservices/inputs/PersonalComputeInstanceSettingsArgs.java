@@ -26,6 +26,10 @@ public final class PersonalComputeInstanceSettingsArgs extends com.pulumi.resour
     @Import(name="assignedUser")
     private @Nullable Output<AssignedUserArgs> assignedUser;
 
+    /**
+     * @return A user explicitly assigned to a personal compute instance.
+     * 
+     */
     public Optional<Output<AssignedUserArgs>> assignedUser() {
         return Optional.ofNullable(this.assignedUser);
     }
@@ -54,11 +58,23 @@ public final class PersonalComputeInstanceSettingsArgs extends com.pulumi.resour
             $ = new PersonalComputeInstanceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedUser A user explicitly assigned to a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedUser(@Nullable Output<AssignedUserArgs> assignedUser) {
             $.assignedUser = assignedUser;
             return this;
         }
 
+        /**
+         * @param assignedUser A user explicitly assigned to a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedUser(AssignedUserArgs assignedUser) {
             return assignedUser(Output.of(assignedUser));
         }

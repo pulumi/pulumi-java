@@ -19,6 +19,10 @@ public final class GetAppServiceEnvironmentArgs extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the App Service Environment.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetAppServiceEnvironmentArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAppServiceEnvironmentArgs extends com.pulumi.resources.Inv
             $ = new GetAppServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the App Service Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

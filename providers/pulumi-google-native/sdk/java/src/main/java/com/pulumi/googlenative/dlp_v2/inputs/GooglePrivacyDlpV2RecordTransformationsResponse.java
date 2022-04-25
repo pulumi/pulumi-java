@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends com.p
     @Import(name="fieldTransformations", required=true)
     private List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
 
+    /**
+     * @return Transform the record by applying various field transformations.
+     * 
+     */
     public List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations() {
         return this.fieldTransformations;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends com.p
     @Import(name="recordSuppressions", required=true)
     private List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
+    /**
+     * @return Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+     * 
+     */
     public List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions() {
         return this.recordSuppressions;
     }
@@ -65,20 +73,44 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends com.p
             $ = new GooglePrivacyDlpV2RecordTransformationsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fieldTransformations Transform the record by applying various field transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldTransformations(List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations) {
             $.fieldTransformations = fieldTransformations;
             return this;
         }
 
+        /**
+         * @param fieldTransformations Transform the record by applying various field transformations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationResponse... fieldTransformations) {
             return fieldTransformations(List.of(fieldTransformations));
         }
 
+        /**
+         * @param recordSuppressions Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
             $.recordSuppressions = recordSuppressions;
             return this;
         }
 
+        /**
+         * @param recordSuppressions Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionResponse... recordSuppressions) {
             return recordSuppressions(List.of(recordSuppressions));
         }

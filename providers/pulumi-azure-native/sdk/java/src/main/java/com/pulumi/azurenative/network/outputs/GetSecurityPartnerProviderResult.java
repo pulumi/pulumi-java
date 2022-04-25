@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityPartnerProviderResult {
     /**
-     * The connection status with the Security Partner Provider.
+     * @return The connection status with the Security Partner Provider.
      * 
      */
     private final String connectionStatus;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the Security Partner Provider resource.
+     * @return The provisioning state of the Security Partner Provider resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The security provider name.
+     * @return The security provider name.
      * 
      */
     private final @Nullable String securityProviderName;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The virtualHub to which the Security Partner Provider belongs.
+     * @return The virtualHub to which the Security Partner Provider belongs.
      * 
      */
     private final @Nullable SubResourceResponse virtualHub;
@@ -89,72 +89,72 @@ public final class GetSecurityPartnerProviderResult {
     }
 
     /**
-     * The connection status with the Security Partner Provider.
+     * @return The connection status with the Security Partner Provider.
      * 
-    */
+     */
     public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the Security Partner Provider resource.
+     * @return The provisioning state of the Security Partner Provider resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The security provider name.
+     * @return The security provider name.
      * 
-    */
+     */
     public Optional<String> securityProviderName() {
         return Optional.ofNullable(this.securityProviderName);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The virtualHub to which the Security Partner Provider belongs.
+     * @return The virtualHub to which the Security Partner Provider belongs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }

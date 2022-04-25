@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     @Import(name="urlTypeHint", required=true)
     private String urlTypeHint;
 
+    /**
+     * @return Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+     * 
+     */
     public String urlTypeHint() {
         return this.urlTypeHint;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
             $ = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param url URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param urlTypeHint Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlTypeHint(String urlTypeHint) {
             $.urlTypeHint = urlTypeHint;
             return this;

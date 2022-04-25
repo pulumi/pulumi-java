@@ -25,6 +25,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="captureDescription")
     private @Nullable Output<CaptureDescriptionArgs> captureDescription;
 
+    /**
+     * @return Properties of capture description
+     * 
+     */
     public Optional<Output<CaptureDescriptionArgs>> captureDescription() {
         return Optional.ofNullable(this.captureDescription);
     }
@@ -36,6 +40,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName")
     private @Nullable Output<String> eventHubName;
 
+    /**
+     * @return The Event Hub name
+     * 
+     */
     public Optional<Output<String>> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
@@ -47,6 +55,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionInDays")
     private @Nullable Output<Double> messageRetentionInDays;
 
+    /**
+     * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+     * 
+     */
     public Optional<Output<Double>> messageRetentionInDays() {
         return Optional.ofNullable(this.messageRetentionInDays);
     }
@@ -58,6 +70,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -69,6 +85,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionCount")
     private @Nullable Output<Double> partitionCount;
 
+    /**
+     * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+     * 
+     */
     public Optional<Output<Double>> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
@@ -80,6 +100,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<EntityStatus> status;
 
+    /**
+     * @return Enumerates the possible values for the status of the Event Hub.
+     * 
+     */
     public Optional<Output<EntityStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -125,65 +153,149 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param captureDescription Properties of capture description
+         * 
+         * @return builder
+         * 
+         */
         public Builder captureDescription(@Nullable Output<CaptureDescriptionArgs> captureDescription) {
             $.captureDescription = captureDescription;
             return this;
         }
 
+        /**
+         * @param captureDescription Properties of capture description
+         * 
+         * @return builder
+         * 
+         */
         public Builder captureDescription(CaptureDescriptionArgs captureDescription) {
             return captureDescription(Output.of(captureDescription));
         }
 
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             return eventHubName(Output.of(eventHubName));
         }
 
+        /**
+         * @param messageRetentionInDays Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionInDays(@Nullable Output<Double> messageRetentionInDays) {
             $.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
 
+        /**
+         * @param messageRetentionInDays Number of days to retain the events for this Event Hub, value should be 1 to 7 days
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRetentionInDays(Double messageRetentionInDays) {
             return messageRetentionInDays(Output.of(messageRetentionInDays));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param partitionCount Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(@Nullable Output<Double> partitionCount) {
             $.partitionCount = partitionCount;
             return this;
         }
 
+        /**
+         * @param partitionCount Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(Double partitionCount) {
             return partitionCount(Output.of(partitionCount));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of the Event Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<EntityStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of the Event Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(EntityStatus status) {
             return status(Output.of(status));
         }

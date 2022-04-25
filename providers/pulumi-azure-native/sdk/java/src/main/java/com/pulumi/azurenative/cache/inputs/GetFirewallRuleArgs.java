@@ -19,6 +19,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheName", required=true)
     private String cacheName;
 
+    /**
+     * @return The name of the Redis cache.
+     * 
+     */
     public String cacheName() {
         return this.cacheName;
     }
@@ -30,6 +34,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleName", required=true)
     private String ruleName;
 
+    /**
+     * @return The name of the firewall rule.
+     * 
+     */
     public String ruleName() {
         return this.ruleName;
     }
@@ -71,16 +83,34 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheName The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheName(String cacheName) {
             $.cacheName = cacheName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             $.ruleName = ruleName;
             return this;

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState {
     /**
-     * A description of any extra actions that may be required.
+     * @return A description of any extra actions that may be required.
      * 
      */
     private final @Nullable String actionsRequired;
     /**
-     * The description for the private link service connection state.
+     * @return The description for the private link service connection state.
      * 
      */
     private final @Nullable String description;
     /**
-     * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
+     * @return Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
      * 
      */
     private final @Nullable String status;
@@ -38,23 +38,23 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
     }
 
     /**
-     * A description of any extra actions that may be required.
+     * @return A description of any extra actions that may be required.
      * 
-    */
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
-     * The description for the private link service connection state.
+     * @return The description for the private link service connection state.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
+     * @return Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

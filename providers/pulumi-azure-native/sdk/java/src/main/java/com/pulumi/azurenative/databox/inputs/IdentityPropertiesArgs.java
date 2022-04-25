@@ -27,6 +27,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Managed service identity type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -38,6 +42,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="userAssigned")
     private @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
+    /**
+     * @return User assigned identity properties.
+     * 
+     */
     public Optional<Output<UserAssignedPropertiesArgs>> userAssigned() {
         return Optional.ofNullable(this.userAssigned);
     }
@@ -67,20 +75,44 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Managed service identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Managed service identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userAssigned User assigned identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssigned(@Nullable Output<UserAssignedPropertiesArgs> userAssigned) {
             $.userAssigned = userAssigned;
             return this;
         }
 
+        /**
+         * @param userAssigned User assigned identity properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssigned(UserAssignedPropertiesArgs userAssigned) {
             return userAssigned(Output.of(userAssigned));
         }

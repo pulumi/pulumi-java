@@ -28,6 +28,10 @@ public final class DomainMappingSpecArgs extends com.pulumi.resources.ResourceAr
     @Import(name="certificateMode")
     private @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
 
+    /**
+     * @return The mode of the certificate.
+     * 
+     */
     public Optional<Output<DomainMappingSpecCertificateMode>> certificateMode() {
         return Optional.ofNullable(this.certificateMode);
     }
@@ -39,6 +43,10 @@ public final class DomainMappingSpecArgs extends com.pulumi.resources.ResourceAr
     @Import(name="forceOverride")
     private @Nullable Output<Boolean> forceOverride;
 
+    /**
+     * @return If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
+     * 
+     */
     public Optional<Output<Boolean>> forceOverride() {
         return Optional.ofNullable(this.forceOverride);
     }
@@ -50,6 +58,10 @@ public final class DomainMappingSpecArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routeName")
     private @Nullable Output<String> routeName;
 
+    /**
+     * @return The name of the Knative Route that this DomainMapping applies to. The route must exist.
+     * 
+     */
     public Optional<Output<String>> routeName() {
         return Optional.ofNullable(this.routeName);
     }
@@ -80,29 +92,65 @@ public final class DomainMappingSpecArgs extends com.pulumi.resources.ResourceAr
             $ = new DomainMappingSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateMode The mode of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateMode(@Nullable Output<DomainMappingSpecCertificateMode> certificateMode) {
             $.certificateMode = certificateMode;
             return this;
         }
 
+        /**
+         * @param certificateMode The mode of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateMode(DomainMappingSpecCertificateMode certificateMode) {
             return certificateMode(Output.of(certificateMode));
         }
 
+        /**
+         * @param forceOverride If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceOverride(@Nullable Output<Boolean> forceOverride) {
             $.forceOverride = forceOverride;
             return this;
         }
 
+        /**
+         * @param forceOverride If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceOverride(Boolean forceOverride) {
             return forceOverride(Output.of(forceOverride));
         }
 
+        /**
+         * @param routeName The name of the Knative Route that this DomainMapping applies to. The route must exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(@Nullable Output<String> routeName) {
             $.routeName = routeName;
             return this;
         }
 
+        /**
+         * @param routeName The name of the Knative Route that this DomainMapping applies to. The route must exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             return routeName(Output.of(routeName));
         }

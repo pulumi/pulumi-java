@@ -25,6 +25,10 @@ public final class DetectorModelAssetPropertyTimestamp extends com.pulumi.resour
     @Import(name="offsetInNanos")
     private @Nullable String offsetInNanos;
 
+    /**
+     * @return The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+     * 
+     */
     public Optional<String> offsetInNanos() {
         return Optional.ofNullable(this.offsetInNanos);
     }
@@ -36,6 +40,10 @@ public final class DetectorModelAssetPropertyTimestamp extends com.pulumi.resour
     @Import(name="timeInSeconds", required=true)
     private String timeInSeconds;
 
+    /**
+     * @return The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+     * 
+     */
     public String timeInSeconds() {
         return this.timeInSeconds;
     }
@@ -65,11 +73,23 @@ public final class DetectorModelAssetPropertyTimestamp extends com.pulumi.resour
             $ = new DetectorModelAssetPropertyTimestamp(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param offsetInNanos The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offsetInNanos(@Nullable String offsetInNanos) {
             $.offsetInNanos = offsetInNanos;
             return this;
         }
 
+        /**
+         * @param timeInSeconds The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInSeconds(String timeInSeconds) {
             $.timeInSeconds = timeInSeconds;
             return this;

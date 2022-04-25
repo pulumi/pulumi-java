@@ -14,17 +14,17 @@ import java.util.Objects;
 @CustomType
 public final class GetUserTablesSqlTaskOutputResponse {
     /**
-     * Mapping from database name to list of tables
+     * @return Mapping from database name to list of tables
      * 
      */
     private final Map<String,List<DatabaseTableResponse>> databasesToTables;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Validation errors
+     * @return Validation errors
      * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
@@ -40,23 +40,23 @@ public final class GetUserTablesSqlTaskOutputResponse {
     }
 
     /**
-     * Mapping from database name to list of tables
+     * @return Mapping from database name to list of tables
      * 
-    */
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToTables() {
         return this.databasesToTables;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

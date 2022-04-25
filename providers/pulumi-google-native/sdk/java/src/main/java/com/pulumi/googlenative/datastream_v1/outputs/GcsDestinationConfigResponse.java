@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GcsDestinationConfigResponse {
     /**
-     * AVRO file format configuration.
+     * @return AVRO file format configuration.
      * 
      */
     private final AvroFileFormatResponse avroFileFormat;
     /**
-     * The maximum duration for which new events are added before a file is closed and a new file is created.
+     * @return The maximum duration for which new events are added before a file is closed and a new file is created.
      * 
      */
     private final String fileRotationInterval;
     /**
-     * The maximum file size to be saved in the bucket.
+     * @return The maximum file size to be saved in the bucket.
      * 
      */
     private final Integer fileRotationMb;
     /**
-     * JSON file format configuration.
+     * @return JSON file format configuration.
      * 
      */
     private final JsonFileFormatResponse jsonFileFormat;
     /**
-     * Path inside the Cloud Storage bucket to write data to.
+     * @return Path inside the Cloud Storage bucket to write data to.
      * 
      */
     private final String path;
@@ -53,37 +53,37 @@ public final class GcsDestinationConfigResponse {
     }
 
     /**
-     * AVRO file format configuration.
+     * @return AVRO file format configuration.
      * 
-    */
+     */
     public AvroFileFormatResponse avroFileFormat() {
         return this.avroFileFormat;
     }
     /**
-     * The maximum duration for which new events are added before a file is closed and a new file is created.
+     * @return The maximum duration for which new events are added before a file is closed and a new file is created.
      * 
-    */
+     */
     public String fileRotationInterval() {
         return this.fileRotationInterval;
     }
     /**
-     * The maximum file size to be saved in the bucket.
+     * @return The maximum file size to be saved in the bucket.
      * 
-    */
+     */
     public Integer fileRotationMb() {
         return this.fileRotationMb;
     }
     /**
-     * JSON file format configuration.
+     * @return JSON file format configuration.
      * 
-    */
+     */
     public JsonFileFormatResponse jsonFileFormat() {
         return this.jsonFileFormat;
     }
     /**
-     * Path inside the Cloud Storage bucket to write data to.
+     * @return Path inside the Cloud Storage bucket to write data to.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

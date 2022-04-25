@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     @Import(name="allowPlaybackInterruption", required=true)
     private Boolean allowPlaybackInterruption;
 
+    /**
+     * @return Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
+     * 
+     */
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     @Import(name="audio", required=true)
     private String audio;
 
+    /**
+     * @return Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
+     * 
+     */
     public String audio() {
         return this.audio;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
             $ = new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPlaybackInterruption Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
+        /**
+         * @param audio Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(String audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param uri Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

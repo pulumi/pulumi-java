@@ -24,6 +24,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
     @Import(name="isNonRepudiationRequired", required=true)
     private Boolean isNonRepudiationRequired;
 
+    /**
+     * @return The non-repudiation is required or not.
+     * 
+     */
     public Boolean isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
@@ -35,6 +39,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
     @Import(name="timeToAcknowledgeInSeconds", required=true)
     private Integer timeToAcknowledgeInSeconds;
 
+    /**
+     * @return The time to acknowledge in seconds.
+     * 
+     */
     public Integer timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
@@ -64,11 +72,23 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
             $ = new RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isNonRepudiationRequired The non-repudiation is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
             $.isNonRepudiationRequired = isNonRepudiationRequired;
             return this;
         }
 
+        /**
+         * @param timeToAcknowledgeInSeconds The time to acknowledge in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
             $.timeToAcknowledgeInSeconds = timeToAcknowledgeInSeconds;
             return this;

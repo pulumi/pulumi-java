@@ -23,6 +23,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     @Import(name="agentChannel", required=true)
     private Integer agentChannel;
 
+    /**
+     * @return The audio channel that contains the agent.
+     * 
+     */
     public Integer agentChannel() {
         return this.agentChannel;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     @Import(name="customerChannel", required=true)
     private Integer customerChannel;
 
+    /**
+     * @return The audio channel that contains the customer.
+     * 
+     */
     public Integer customerChannel() {
         return this.customerChannel;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
             $ = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentChannel The audio channel that contains the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentChannel(Integer agentChannel) {
             $.agentChannel = agentChannel;
             return this;
         }
 
+        /**
+         * @param customerChannel The audio channel that contains the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerChannel(Integer customerChannel) {
             $.customerChannel = customerChannel;
             return this;

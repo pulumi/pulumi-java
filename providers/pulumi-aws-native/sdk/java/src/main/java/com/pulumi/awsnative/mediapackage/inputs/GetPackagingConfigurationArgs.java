@@ -19,6 +19,10 @@ public final class GetPackagingConfigurationArgs extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the PackagingConfiguration.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetPackagingConfigurationArgs extends com.pulumi.resources.In
             $ = new GetPackagingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the PackagingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

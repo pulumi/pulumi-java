@@ -27,6 +27,10 @@ public final class SshProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKeys")
     private @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
+    /**
+     * @return The list of SSH public keys.
+     * 
+     */
     public Optional<Output<List<SshPublicKeyArgs>>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -55,15 +59,33 @@ public final class SshProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SshProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable Output<List<SshPublicKeyArgs>> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(List<SshPublicKeyArgs> publicKeys) {
             return publicKeys(Output.of(publicKeys));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(SshPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

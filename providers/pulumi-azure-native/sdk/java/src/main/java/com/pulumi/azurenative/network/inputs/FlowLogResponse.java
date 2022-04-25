@@ -30,6 +30,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Flag to enable/disable flow logging.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -41,6 +45,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -52,6 +60,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="flowAnalyticsConfiguration")
     private @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
 
+    /**
+     * @return Parameters that define the configuration of traffic analytics.
+     * 
+     */
     public Optional<TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
         return Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
@@ -63,6 +75,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="format")
     private @Nullable FlowLogFormatParametersResponse format;
 
+    /**
+     * @return Parameters that define the flow log format.
+     * 
+     */
     public Optional<FlowLogFormatParametersResponse> format() {
         return Optional.ofNullable(this.format);
     }
@@ -74,6 +90,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -85,6 +105,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -96,6 +120,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -107,6 +135,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the flow log.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -118,6 +150,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
     private @Nullable RetentionPolicyParametersResponse retentionPolicy;
 
+    /**
+     * @return Parameters that define the retention policy for flow log.
+     * 
+     */
     public Optional<RetentionPolicyParametersResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -129,6 +165,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageId", required=true)
     private String storageId;
 
+    /**
+     * @return ID of the storage account which is used to store the flow log.
+     * 
+     */
     public String storageId() {
         return this.storageId;
     }
@@ -140,6 +180,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -151,6 +195,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceGuid", required=true)
     private String targetResourceGuid;
 
+    /**
+     * @return Guid of network security group to which flow log will be applied.
+     * 
+     */
     public String targetResourceGuid() {
         return this.targetResourceGuid;
     }
@@ -162,6 +210,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceId", required=true)
     private String targetResourceId;
 
+    /**
+     * @return ID of network security group to which flow log will be applied.
+     * 
+     */
     public String targetResourceId() {
         return this.targetResourceId;
     }
@@ -173,6 +225,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -214,71 +270,155 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
             $ = new FlowLogResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Flag to enable/disable flow logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param flowAnalyticsConfiguration Parameters that define the configuration of traffic analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration) {
             $.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
 
+        /**
+         * @param format Parameters that define the flow log format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable FlowLogFormatParametersResponse format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Parameters that define the retention policy for flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersResponse retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param storageId ID of the storage account which is used to store the flow log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageId(String storageId) {
             $.storageId = storageId;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param targetResourceGuid Guid of network security group to which flow log will be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGuid(String targetResourceGuid) {
             $.targetResourceGuid = targetResourceGuid;
             return this;
         }
 
+        /**
+         * @param targetResourceId ID of network security group to which flow log will be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

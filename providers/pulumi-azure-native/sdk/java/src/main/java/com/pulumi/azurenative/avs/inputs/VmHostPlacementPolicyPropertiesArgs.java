@@ -31,6 +31,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="affinityType", required=true)
     private Output<Either<String,AffinityType>> affinityType;
 
+    /**
+     * @return placement policy affinity type
+     * 
+     */
     public Output<Either<String,AffinityType>> affinityType() {
         return this.affinityType;
     }
@@ -42,6 +46,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the placement policy
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -53,6 +61,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="hostMembers", required=true)
     private Output<List<String>> hostMembers;
 
+    /**
+     * @return Host members list
+     * 
+     */
     public Output<List<String>> hostMembers() {
         return this.hostMembers;
     }
@@ -64,6 +76,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="state")
     private @Nullable Output<Either<String,PlacementPolicyState>> state;
 
+    /**
+     * @return Whether the placement policy is enabled or disabled
+     * 
+     */
     public Optional<Output<Either<String,PlacementPolicyState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -76,6 +92,11 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return placement policy type
+     * Expected value is &#39;VmHost&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -87,6 +108,10 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
     @Import(name="vmMembers", required=true)
     private Output<List<String>> vmMembers;
 
+    /**
+     * @return Virtual machine members list
+     * 
+     */
     public Output<List<String>> vmMembers() {
         return this.vmMembers;
     }
@@ -120,80 +145,190 @@ public final class VmHostPlacementPolicyPropertiesArgs extends com.pulumi.resour
             $ = new VmHostPlacementPolicyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinityType placement policy affinity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityType(Output<Either<String,AffinityType>> affinityType) {
             $.affinityType = affinityType;
             return this;
         }
 
+        /**
+         * @param affinityType placement policy affinity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityType(Either<String,AffinityType> affinityType) {
             return affinityType(Output.of(affinityType));
         }
 
+        /**
+         * @param affinityType placement policy affinity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityType(String affinityType) {
             return affinityType(Either.ofLeft(affinityType));
         }
 
+        /**
+         * @param affinityType placement policy affinity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityType(AffinityType affinityType) {
             return affinityType(Either.ofRight(affinityType));
         }
 
+        /**
+         * @param displayName Display name of the placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hostMembers Host members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostMembers(Output<List<String>> hostMembers) {
             $.hostMembers = hostMembers;
             return this;
         }
 
+        /**
+         * @param hostMembers Host members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostMembers(List<String> hostMembers) {
             return hostMembers(Output.of(hostMembers));
         }
 
+        /**
+         * @param hostMembers Host members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostMembers(String... hostMembers) {
             return hostMembers(List.of(hostMembers));
         }
 
+        /**
+         * @param state Whether the placement policy is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,PlacementPolicyState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Whether the placement policy is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,PlacementPolicyState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Whether the placement policy is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Whether the placement policy is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(PlacementPolicyState state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param type placement policy type
+         * Expected value is &#39;VmHost&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type placement policy type
+         * Expected value is &#39;VmHost&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param vmMembers Virtual machine members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMembers(Output<List<String>> vmMembers) {
             $.vmMembers = vmMembers;
             return this;
         }
 
+        /**
+         * @param vmMembers Virtual machine members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMembers(List<String> vmMembers) {
             return vmMembers(Output.of(vmMembers));
         }
 
+        /**
+         * @param vmMembers Virtual machine members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMembers(String... vmMembers) {
             return vmMembers(List.of(vmMembers));
         }

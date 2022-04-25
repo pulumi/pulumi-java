@@ -20,142 +20,142 @@ import java.util.Objects;
 @CustomType
 public final class RecommendedActionResponse {
     /**
-     * Gets additional details specific to this recommended action.
+     * @return Gets additional details specific to this recommended action.
      * 
      */
     private final Map<String,Object> details;
     /**
-     * Gets the error details if and why this recommended action is put to error state.
+     * @return Gets the error details if and why this recommended action is put to error state.
      * 
      */
     private final RecommendedActionErrorInfoResponse errorDetails;
     /**
-     * Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+     * @return Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
      * 
      */
     private final List<RecommendedActionImpactRecordResponse> estimatedImpact;
     /**
-     * Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+     * @return Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
      * 
      */
     private final String executeActionDuration;
     /**
-     * Gets if approval for applying this recommended action was given by user/system.
+     * @return Gets if approval for applying this recommended action was given by user/system.
      * 
      */
     private final String executeActionInitiatedBy;
     /**
-     * Gets the time when this recommended action was approved for execution.
+     * @return Gets the time when this recommended action was approved for execution.
      * 
      */
     private final String executeActionInitiatedTime;
     /**
-     * Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+     * @return Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
      * 
      */
     private final String executeActionStartTime;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Gets the implementation details of this recommended action for user to apply it manually.
+     * @return Gets the implementation details of this recommended action for user to apply it manually.
      * 
      */
     private final RecommendedActionImplementationInfoResponse implementationDetails;
     /**
-     * Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+     * @return Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
      * 
      */
     private final Boolean isArchivedAction;
     /**
-     * Gets if this recommended action is actionable by user
+     * @return Gets if this recommended action is actionable by user
      * 
      */
     private final Boolean isExecutableAction;
     /**
-     * Gets if changes applied by this recommended action can be reverted by user
+     * @return Gets if changes applied by this recommended action can be reverted by user
      * 
      */
     private final Boolean isRevertableAction;
     /**
-     * Resource kind.
+     * @return Resource kind.
      * 
      */
     private final String kind;
     /**
-     * Gets time when this recommended action was last refreshed.
+     * @return Gets time when this recommended action was last refreshed.
      * 
      */
     private final String lastRefresh;
     /**
-     * Gets the linked objects, if any.
+     * @return Gets the linked objects, if any.
      * 
      */
     private final List<String> linkedObjects;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+     * @return Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
      * 
      */
     private final List<RecommendedActionImpactRecordResponse> observedImpact;
     /**
-     * Gets the reason for recommending this action. e.g., DuplicateIndex
+     * @return Gets the reason for recommending this action. e.g., DuplicateIndex
      * 
      */
     private final String recommendationReason;
     /**
-     * Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+     * @return Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
      * 
      */
     private final String revertActionDuration;
     /**
-     * Gets if approval for reverting this recommended action was given by user/system.
+     * @return Gets if approval for reverting this recommended action was given by user/system.
      * 
      */
     private final String revertActionInitiatedBy;
     /**
-     * Gets the time when this recommended action was approved for revert.
+     * @return Gets the time when this recommended action was approved for revert.
      * 
      */
     private final String revertActionInitiatedTime;
     /**
-     * Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+     * @return Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
      * 
      */
     private final String revertActionStartTime;
     /**
-     * Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+     * @return Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
      * 
      */
     private final Integer score;
     /**
-     * Gets the info of the current state the recommended action is in.
+     * @return Gets the info of the current state the recommended action is in.
      * 
      */
     private final RecommendedActionStateInfoResponse state;
     /**
-     * Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+     * @return Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
      * 
      */
     private final List<RecommendedActionMetricInfoResponse> timeSeries;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Gets the time since when this recommended action is valid.
+     * @return Gets the time since when this recommended action is valid.
      * 
      */
     private final String validSince;
@@ -221,198 +221,198 @@ public final class RecommendedActionResponse {
     }
 
     /**
-     * Gets additional details specific to this recommended action.
+     * @return Gets additional details specific to this recommended action.
      * 
-    */
+     */
     public Map<String,Object> details() {
         return this.details;
     }
     /**
-     * Gets the error details if and why this recommended action is put to error state.
+     * @return Gets the error details if and why this recommended action is put to error state.
      * 
-    */
+     */
     public RecommendedActionErrorInfoResponse errorDetails() {
         return this.errorDetails;
     }
     /**
-     * Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+     * @return Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
      * 
-    */
+     */
     public List<RecommendedActionImpactRecordResponse> estimatedImpact() {
         return this.estimatedImpact;
     }
     /**
-     * Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+     * @return Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
      * 
-    */
+     */
     public String executeActionDuration() {
         return this.executeActionDuration;
     }
     /**
-     * Gets if approval for applying this recommended action was given by user/system.
+     * @return Gets if approval for applying this recommended action was given by user/system.
      * 
-    */
+     */
     public String executeActionInitiatedBy() {
         return this.executeActionInitiatedBy;
     }
     /**
-     * Gets the time when this recommended action was approved for execution.
+     * @return Gets the time when this recommended action was approved for execution.
      * 
-    */
+     */
     public String executeActionInitiatedTime() {
         return this.executeActionInitiatedTime;
     }
     /**
-     * Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+     * @return Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
      * 
-    */
+     */
     public String executeActionStartTime() {
         return this.executeActionStartTime;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the implementation details of this recommended action for user to apply it manually.
+     * @return Gets the implementation details of this recommended action for user to apply it manually.
      * 
-    */
+     */
     public RecommendedActionImplementationInfoResponse implementationDetails() {
         return this.implementationDetails;
     }
     /**
-     * Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+     * @return Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
      * 
-    */
+     */
     public Boolean isArchivedAction() {
         return this.isArchivedAction;
     }
     /**
-     * Gets if this recommended action is actionable by user
+     * @return Gets if this recommended action is actionable by user
      * 
-    */
+     */
     public Boolean isExecutableAction() {
         return this.isExecutableAction;
     }
     /**
-     * Gets if changes applied by this recommended action can be reverted by user
+     * @return Gets if changes applied by this recommended action can be reverted by user
      * 
-    */
+     */
     public Boolean isRevertableAction() {
         return this.isRevertableAction;
     }
     /**
-     * Resource kind.
+     * @return Resource kind.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Gets time when this recommended action was last refreshed.
+     * @return Gets time when this recommended action was last refreshed.
      * 
-    */
+     */
     public String lastRefresh() {
         return this.lastRefresh;
     }
     /**
-     * Gets the linked objects, if any.
+     * @return Gets the linked objects, if any.
      * 
-    */
+     */
     public List<String> linkedObjects() {
         return this.linkedObjects;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+     * @return Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
      * 
-    */
+     */
     public List<RecommendedActionImpactRecordResponse> observedImpact() {
         return this.observedImpact;
     }
     /**
-     * Gets the reason for recommending this action. e.g., DuplicateIndex
+     * @return Gets the reason for recommending this action. e.g., DuplicateIndex
      * 
-    */
+     */
     public String recommendationReason() {
         return this.recommendationReason;
     }
     /**
-     * Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+     * @return Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
      * 
-    */
+     */
     public String revertActionDuration() {
         return this.revertActionDuration;
     }
     /**
-     * Gets if approval for reverting this recommended action was given by user/system.
+     * @return Gets if approval for reverting this recommended action was given by user/system.
      * 
-    */
+     */
     public String revertActionInitiatedBy() {
         return this.revertActionInitiatedBy;
     }
     /**
-     * Gets the time when this recommended action was approved for revert.
+     * @return Gets the time when this recommended action was approved for revert.
      * 
-    */
+     */
     public String revertActionInitiatedTime() {
         return this.revertActionInitiatedTime;
     }
     /**
-     * Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+     * @return Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
      * 
-    */
+     */
     public String revertActionStartTime() {
         return this.revertActionStartTime;
     }
     /**
-     * Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+     * @return Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
      * 
-    */
+     */
     public Integer score() {
         return this.score;
     }
     /**
-     * Gets the info of the current state the recommended action is in.
+     * @return Gets the info of the current state the recommended action is in.
      * 
-    */
+     */
     public RecommendedActionStateInfoResponse state() {
         return this.state;
     }
     /**
-     * Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+     * @return Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
      * 
-    */
+     */
     public List<RecommendedActionMetricInfoResponse> timeSeries() {
         return this.timeSeries;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets the time since when this recommended action is valid.
+     * @return Gets the time since when this recommended action is valid.
      * 
-    */
+     */
     public String validSince() {
         return this.validSince;
     }

@@ -23,6 +23,10 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the specification
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the specification
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
             $ = new SpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the specification
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Value of the specification
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

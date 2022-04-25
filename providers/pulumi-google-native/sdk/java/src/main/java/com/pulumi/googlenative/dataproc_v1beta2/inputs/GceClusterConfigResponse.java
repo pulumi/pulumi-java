@@ -29,6 +29,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="internalIpOnly", required=true)
     private Boolean internalIpOnly;
 
+    /**
+     * @return Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+     * 
+     */
     public Boolean internalIpOnly() {
         return this.internalIpOnly;
     }
@@ -40,6 +44,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -51,6 +59,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -62,6 +74,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="nodeGroupAffinity", required=true)
     private NodeGroupAffinityResponse nodeGroupAffinity;
 
+    /**
+     * @return Optional. Node Group Affinity for sole-tenant clusters.
+     * 
+     */
     public NodeGroupAffinityResponse nodeGroupAffinity() {
         return this.nodeGroupAffinity;
     }
@@ -73,6 +89,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateIpv6GoogleAccess", required=true)
     private String privateIpv6GoogleAccess;
 
+    /**
+     * @return Optional. The type of IPv6 access for a cluster.
+     * 
+     */
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
@@ -84,6 +104,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="reservationAffinity", required=true)
     private ReservationAffinityResponse reservationAffinity;
 
+    /**
+     * @return Optional. Reservation Affinity for consuming Zonal reservation.
+     * 
+     */
     public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
@@ -95,6 +119,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -106,6 +134,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="serviceAccountScopes", required=true)
     private List<String> serviceAccountScopes;
 
+    /**
+     * @return Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control
+     * 
+     */
     public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes;
     }
@@ -117,6 +149,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="shieldedInstanceConfig", required=true)
     private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
+    /**
+     * @return Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
+     * 
+     */
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
@@ -128,6 +164,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="subnetworkUri", required=true)
     private String subnetworkUri;
 
+    /**
+     * @return Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+     * 
+     */
     public String subnetworkUri() {
         return this.subnetworkUri;
     }
@@ -139,6 +179,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="tags", required=true)
     private List<String> tags;
 
+    /**
+     * @return The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     * 
+     */
     public List<String> tags() {
         return this.tags;
     }
@@ -150,6 +194,10 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="zoneUri", required=true)
     private String zoneUri;
 
+    /**
+     * @return Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f
+     * 
+     */
     public String zoneUri() {
         return this.zoneUri;
     }
@@ -189,69 +237,153 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
             $ = new GceClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param internalIpOnly Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIpOnly(Boolean internalIpOnly) {
             $.internalIpOnly = internalIpOnly;
             return this;
         }
 
+        /**
+         * @param metadata The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param networkUri Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the &#34;default&#34; network of the project is used, if it exists. Cannot be a &#34;Custom Subnet Network&#34; (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param nodeGroupAffinity Optional. Node Group Affinity for sole-tenant clusters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeGroupAffinity(NodeGroupAffinityResponse nodeGroupAffinity) {
             $.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
 
+        /**
+         * @param privateIpv6GoogleAccess Optional. The type of IPv6 access for a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
+        /**
+         * @param reservationAffinity Optional. Reservation Affinity for consuming Zonal reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             $.reservationAffinity = reservationAffinity;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccountScopes Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             $.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
+        /**
+         * @param serviceAccountScopes Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
             return serviceAccountScopes(List.of(serviceAccountScopes));
         }
 
+        /**
+         * @param shieldedInstanceConfig Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
+        /**
+         * @param subnetworkUri Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkUri(String subnetworkUri) {
             $.subnetworkUri = subnetworkUri;
             return this;
         }
 
+        /**
+         * @param tags The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param zoneUri Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the &#34;global&#34; region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneUri(String zoneUri) {
             $.zoneUri = zoneUri;
             return this;

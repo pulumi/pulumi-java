@@ -21,6 +21,10 @@ public final class DatasetFilterExpression extends com.pulumi.resources.InvokeAr
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return Filtering expression for a parameter
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -57,6 +61,12 @@ public final class DatasetFilterExpression extends com.pulumi.resources.InvokeAr
             $ = new DatasetFilterExpression(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression Filtering expression for a parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;

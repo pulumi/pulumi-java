@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DisplayInfoResponse {
     /**
-     * Configuration display name
+     * @return Configuration display name
      * 
      */
     private final String configurationDisplayName;
     /**
-     * Product family display name
+     * @return Product family display name
      * 
      */
     private final String productFamilyDisplayName;
@@ -29,16 +29,16 @@ public final class DisplayInfoResponse {
     }
 
     /**
-     * Configuration display name
+     * @return Configuration display name
      * 
-    */
+     */
     public String configurationDisplayName() {
         return this.configurationDisplayName;
     }
     /**
-     * Product family display name
+     * @return Product family display name
      * 
-    */
+     */
     public String productFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }

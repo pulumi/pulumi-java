@@ -27,6 +27,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -38,6 +42,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticStorageProperties")
     private @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
+    /**
+     * @return Customer-initiated diagnostic log collection storage properties
+     * 
+     */
     public Optional<Output<DiagnosticStoragePropertiesArgs>> diagnosticStorageProperties() {
         return Optional.ofNullable(this.diagnosticStorageProperties);
     }
@@ -49,6 +57,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDiagnostics")
     private @Nullable Output<Boolean> enableDiagnostics;
 
+    /**
+     * @return Enables or Disables the diagnostic logs collection
+     * 
+     */
     public Optional<Output<Boolean>> enableDiagnostics() {
         return Optional.ofNullable(this.enableDiagnostics);
     }
@@ -60,6 +72,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return Instance name.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -71,6 +87,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iotHubs")
     private @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
+    /**
+     * @return List of IoT Hubs associated with the account.
+     * 
+     */
     public Optional<Output<List<IotHubSettingsArgs>>> iotHubs() {
         return Optional.ofNullable(this.iotHubs);
     }
@@ -82,6 +102,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -93,6 +117,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +132,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,78 +171,180 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param diagnosticStorageProperties Customer-initiated diagnostic log collection storage properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticStorageProperties(@Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties) {
             $.diagnosticStorageProperties = diagnosticStorageProperties;
             return this;
         }
 
+        /**
+         * @param diagnosticStorageProperties Customer-initiated diagnostic log collection storage properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticStorageProperties(DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
             return diagnosticStorageProperties(Output.of(diagnosticStorageProperties));
         }
 
+        /**
+         * @param enableDiagnostics Enables or Disables the diagnostic logs collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDiagnostics(@Nullable Output<Boolean> enableDiagnostics) {
             $.enableDiagnostics = enableDiagnostics;
             return this;
         }
 
+        /**
+         * @param enableDiagnostics Enables or Disables the diagnostic logs collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDiagnostics(Boolean enableDiagnostics) {
             return enableDiagnostics(Output.of(enableDiagnostics));
         }
 
+        /**
+         * @param instanceName Instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName Instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param iotHubs List of IoT Hubs associated with the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(@Nullable Output<List<IotHubSettingsArgs>> iotHubs) {
             $.iotHubs = iotHubs;
             return this;
         }
 
+        /**
+         * @param iotHubs List of IoT Hubs associated with the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(List<IotHubSettingsArgs> iotHubs) {
             return iotHubs(Output.of(iotHubs));
         }
 
+        /**
+         * @param iotHubs List of IoT Hubs associated with the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(IotHubSettingsArgs... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

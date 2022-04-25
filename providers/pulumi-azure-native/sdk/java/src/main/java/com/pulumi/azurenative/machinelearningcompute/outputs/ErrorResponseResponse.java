@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ErrorResponseResponse {
     /**
-     * Error code.
+     * @return Error code.
      * 
      */
     private final String code;
     /**
-     * An array of error detail objects.
+     * @return An array of error detail objects.
      * 
      */
     private final @Nullable List<ErrorDetailResponse> details;
     /**
-     * Error message.
+     * @return Error message.
      * 
      */
     private final String message;
@@ -39,23 +39,23 @@ public final class ErrorResponseResponse {
     }
 
     /**
-     * Error code.
+     * @return Error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * An array of error detail objects.
+     * @return An array of error detail objects.
      * 
-    */
+     */
     public List<ErrorDetailResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * Error message.
+     * @return Error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

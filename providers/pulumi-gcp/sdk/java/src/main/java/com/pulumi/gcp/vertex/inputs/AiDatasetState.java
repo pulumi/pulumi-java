@@ -25,6 +25,11 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+     * fractional digits.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -36,6 +41,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +57,11 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSpec")
     private @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
+    /**
+     * @return Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiDatasetEncryptionSpecGetArgs>> encryptionSpec() {
         return Optional.ofNullable(this.encryptionSpec);
     }
@@ -59,6 +73,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -70,6 +88,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataSchemaUri")
     private @Nullable Output<String> metadataSchemaUri;
 
+    /**
+     * @return Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     public Optional<Output<String>> metadataSchemaUri() {
         return Optional.ofNullable(this.metadataSchemaUri);
     }
@@ -81,6 +103,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the Dataset. This value is set by Google.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +119,11 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -104,6 +135,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the dataset. eg us-central1
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -116,6 +151,11 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return The timestamp of when the dataset was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+     * nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -152,83 +192,199 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
             $ = new AiDatasetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+         * fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The timestamp of when the dataset was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
+         * fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param displayName The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
             $.encryptionSpec = encryptionSpec;
             return this;
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(AiDatasetEncryptionSpecGetArgs encryptionSpec) {
             return encryptionSpec(Output.of(encryptionSpec));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param metadataSchemaUri Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataSchemaUri(@Nullable Output<String> metadataSchemaUri) {
             $.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
 
+        /**
+         * @param metadataSchemaUri Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataSchemaUri(String metadataSchemaUri) {
             return metadataSchemaUri(Output.of(metadataSchemaUri));
         }
 
+        /**
+         * @param name The resource name of the Dataset. This value is set by Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the Dataset. This value is set by Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param updateTime The timestamp of when the dataset was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+         * nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime The timestamp of when the dataset was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
+         * nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

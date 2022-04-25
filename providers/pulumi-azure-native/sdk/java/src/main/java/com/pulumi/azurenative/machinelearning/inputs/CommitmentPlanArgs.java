@@ -24,6 +24,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CommitmentPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

@@ -23,6 +23,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) representing the target group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="connectionPoolConfig")
     private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
 
+    /**
+     * @return The settings that determine the size and behavior of the connection pool for the target group.
+     * 
+     */
     public Optional<Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs>> connectionPoolConfig() {
         return Optional.ofNullable(this.connectionPoolConfig);
     }
@@ -45,6 +53,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="dbProxyName")
     private @Nullable Output<String> dbProxyName;
 
+    /**
+     * @return Name of the RDS DB Proxy.
+     * 
+     */
     public Optional<Output<String>> dbProxyName() {
         return Optional.ofNullable(this.dbProxyName);
     }
@@ -56,6 +68,10 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the default target group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -87,38 +103,86 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
             $ = new ProxyDefaultTargetGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) representing the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) representing the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param connectionPoolConfig The settings that determine the size and behavior of the connection pool for the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig) {
             $.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
 
+        /**
+         * @param connectionPoolConfig The settings that determine the size and behavior of the connection pool for the target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfigGetArgs connectionPoolConfig) {
             return connectionPoolConfig(Output.of(connectionPoolConfig));
         }
 
+        /**
+         * @param dbProxyName Name of the RDS DB Proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             $.dbProxyName = dbProxyName;
             return this;
         }
 
+        /**
+         * @param dbProxyName Name of the RDS DB Proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbProxyName(String dbProxyName) {
             return dbProxyName(Output.of(dbProxyName));
         }
 
+        /**
+         * @param name The name of the default target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the default target group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

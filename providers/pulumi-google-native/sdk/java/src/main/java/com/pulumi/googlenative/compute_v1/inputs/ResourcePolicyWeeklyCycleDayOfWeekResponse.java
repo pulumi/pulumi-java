@@ -19,6 +19,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
     @Import(name="day", required=true)
     private String day;
 
+    /**
+     * @return Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+     * 
+     */
     public String day() {
         return this.day;
     }
@@ -30,6 +34,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
     @Import(name="duration", required=true)
     private String duration;
 
+    /**
+     * @return [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+     * 
+     */
     public String duration() {
         return this.duration;
     }
@@ -41,6 +49,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -71,16 +83,34 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
             $ = new ResourcePolicyWeeklyCycleDayOfWeekResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param duration [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param startTime Time within the window to start the operations. It must be in format &#34;HH:MM&#34;, where HH : [00-23] and MM : [00-00] GMT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

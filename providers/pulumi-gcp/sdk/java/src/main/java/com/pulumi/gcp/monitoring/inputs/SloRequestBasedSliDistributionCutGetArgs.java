@@ -24,6 +24,13 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends com.pulumi.r
     @Import(name="distributionFilter", required=true)
     private Output<String> distributionFilter;
 
+    /**
+     * @return A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+     * aggregating values to quantify the good service provided.
+     * Must have ValueType = DISTRIBUTION and
+     * MetricKind = DELTA or MetricKind = CUMULATIVE.
+     * 
+     */
     public Output<String> distributionFilter() {
         return this.distributionFilter;
     }
@@ -41,6 +48,16 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends com.pulumi.r
     @Import(name="range", required=true)
     private Output<SloRequestBasedSliDistributionCutRangeGetArgs> range;
 
+    /**
+     * @return Range of numerical values. The computed good_service
+     * will be the count of values x in the Distribution such
+     * that range.min &lt;= x &lt;= range.max. inclusive of min and
+     * max. Open ranges can be defined by setting
+     * just one of min or max. Summed value `X` should satisfy
+     * `range.min &lt;= X &lt;= range.max` for a good window.
+     * Structure is documented below.
+     * 
+     */
     public Output<SloRequestBasedSliDistributionCutRangeGetArgs> range() {
         return this.range;
     }
@@ -70,20 +87,62 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends com.pulumi.r
             $ = new SloRequestBasedSliDistributionCutGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionFilter A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+         * aggregating values to quantify the good service provided.
+         * Must have ValueType = DISTRIBUTION and
+         * MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionFilter(Output<String> distributionFilter) {
             $.distributionFilter = distributionFilter;
             return this;
         }
 
+        /**
+         * @param distributionFilter A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+         * aggregating values to quantify the good service provided.
+         * Must have ValueType = DISTRIBUTION and
+         * MetricKind = DELTA or MetricKind = CUMULATIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionFilter(String distributionFilter) {
             return distributionFilter(Output.of(distributionFilter));
         }
 
+        /**
+         * @param range Range of numerical values. The computed good_service
+         * will be the count of values x in the Distribution such
+         * that range.min &lt;= x &lt;= range.max. inclusive of min and
+         * max. Open ranges can be defined by setting
+         * just one of min or max. Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(Output<SloRequestBasedSliDistributionCutRangeGetArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Range of numerical values. The computed good_service
+         * will be the count of values x in the Distribution such
+         * that range.min &lt;= x &lt;= range.max. inclusive of min and
+         * max. Open ranges can be defined by setting
+         * just one of min or max. Summed value `X` should satisfy
+         * `range.min &lt;= X &lt;= range.max` for a good window.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(SloRequestBasedSliDistributionCutRangeGetArgs range) {
             return range(Output.of(range));
         }

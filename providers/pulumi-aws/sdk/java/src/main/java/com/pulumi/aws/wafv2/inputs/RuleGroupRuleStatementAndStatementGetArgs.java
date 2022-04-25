@@ -21,6 +21,10 @@ public final class RuleGroupRuleStatementAndStatementGetArgs extends com.pulumi.
     @Import(name="statements", required=true)
     private Output<List<RuleGroupRuleStatementAndStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<RuleGroupRuleStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class RuleGroupRuleStatementAndStatementGetArgs extends com.pulumi.
             $ = new RuleGroupRuleStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<RuleGroupRuleStatementAndStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<RuleGroupRuleStatementAndStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(RuleGroupRuleStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

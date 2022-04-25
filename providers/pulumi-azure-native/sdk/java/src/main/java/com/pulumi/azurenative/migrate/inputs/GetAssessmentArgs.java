@@ -19,6 +19,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assessmentName", required=true)
     private String assessmentName;
 
+    /**
+     * @return Unique name of an assessment within a project.
+     * 
+     */
     public String assessmentName() {
         return this.assessmentName;
     }
@@ -30,6 +34,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
     private String groupName;
 
+    /**
+     * @return Unique name of a group within a project.
+     * 
+     */
     public String groupName() {
         return this.groupName;
     }
@@ -41,6 +49,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
     private String projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public String projectName() {
         return this.projectName;
     }
@@ -52,6 +64,10 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentName Unique name of an assessment within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentName(String assessmentName) {
             $.assessmentName = assessmentName;
             return this;
         }
 
+        /**
+         * @param groupName Unique name of a group within a project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

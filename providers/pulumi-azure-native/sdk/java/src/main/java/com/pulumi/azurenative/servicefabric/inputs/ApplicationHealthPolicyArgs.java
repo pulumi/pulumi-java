@@ -28,6 +28,10 @@ public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="defaultServiceTypeHealthPolicy")
     private @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
+    /**
+     * @return The health policy used by default to evaluate the health of a service type.
+     * 
+     */
     public Optional<Output<ServiceTypeHealthPolicyArgs>> defaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
@@ -39,6 +43,10 @@ public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="serviceTypeHealthPolicies")
     private @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
+    /**
+     * @return The map with service type health policy per service type name. The map is empty by default.
+     * 
+     */
     public Optional<Output<Map<String,ServiceTypeHealthPolicyArgs>>> serviceTypeHealthPolicies() {
         return Optional.ofNullable(this.serviceTypeHealthPolicies);
     }
@@ -68,20 +76,44 @@ public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.Reso
             $ = new ApplicationHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultServiceTypeHealthPolicy The health policy used by default to evaluate the health of a service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeHealthPolicy(@Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
             $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
+        /**
+         * @param defaultServiceTypeHealthPolicy The health policy used by default to evaluate the health of a service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeHealthPolicy(ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
             return defaultServiceTypeHealthPolicy(Output.of(defaultServiceTypeHealthPolicy));
         }
 
+        /**
+         * @param serviceTypeHealthPolicies The map with service type health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeHealthPolicies(@Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
             $.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
 
+        /**
+         * @param serviceTypeHealthPolicies The map with service type health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeHealthPolicies(Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
             return serviceTypeHealthPolicies(Output.of(serviceTypeHealthPolicies));
         }

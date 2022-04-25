@@ -24,6 +24,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionString", required=true)
     private String connectionString;
 
+    /**
+     * @return A connection string that can be used by supporting clients for authentication.
+     * 
+     */
     public String connectionString() {
         return this.connectionString;
     }
@@ -35,6 +39,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The key ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -46,6 +54,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModified", required=true)
     private String lastModified;
 
+    /**
+     * @return The last time any of the key&#39;s properties were modified.
+     * 
+     */
     public String lastModified() {
         return this.lastModified;
     }
@@ -57,6 +69,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A name for the key describing its usage.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -68,6 +84,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
     private Boolean readOnly;
 
+    /**
+     * @return Whether this key can only be used for read operations.
+     * 
+     */
     public Boolean readOnly() {
         return this.readOnly;
     }
@@ -79,6 +99,10 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the key that is used for authentication purposes.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -112,31 +136,67 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString A connection string that can be used by supporting clients for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param id The key ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastModified The last time any of the key&#39;s properties were modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModified(String lastModified) {
             $.lastModified = lastModified;
             return this;
         }
 
+        /**
+         * @param name A name for the key describing its usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param readOnly Whether this key can only be used for read operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param value The value of the key that is used for authentication purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

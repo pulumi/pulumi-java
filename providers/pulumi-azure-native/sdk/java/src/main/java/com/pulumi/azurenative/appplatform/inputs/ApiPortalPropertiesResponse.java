@@ -30,6 +30,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="gatewayIds")
     private @Nullable List<String> gatewayIds;
 
+    /**
+     * @return The array of resource Ids of gateway to integrate with API portal.
+     * 
+     */
     public Optional<List<String>> gatewayIds() {
         return Optional.ofNullable(this.gatewayIds);
     }
@@ -41,6 +45,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="httpsOnly")
     private @Nullable Boolean httpsOnly;
 
+    /**
+     * @return Indicate if only https is allowed.
+     * 
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
@@ -52,6 +60,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="instances", required=true)
     private List<ApiPortalInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to API portal.
+     * 
+     */
     public List<ApiPortalInstanceResponse> instances() {
         return this.instances;
     }
@@ -63,6 +75,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the API portal.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -74,6 +90,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="public")
     private @Nullable Boolean public_;
 
+    /**
+     * @return Indicates whether the API portal exposes endpoint.
+     * 
+     */
     public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -85,6 +105,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="resourceRequests", required=true)
     private ApiPortalResourceRequestsResponse resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public ApiPortalResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
@@ -96,6 +120,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="sourceUrls")
     private @Nullable List<String> sourceUrls;
 
+    /**
+     * @return Collection of OpenAPI source URL locations.
+     * 
+     */
     public Optional<List<String>> sourceUrls() {
         return Optional.ofNullable(this.sourceUrls);
     }
@@ -107,6 +135,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="ssoProperties")
     private @Nullable SsoPropertiesResponse ssoProperties;
 
+    /**
+     * @return Single sign-on related configuration
+     * 
+     */
     public Optional<SsoPropertiesResponse> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
@@ -118,6 +150,10 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL of the API portal, exposed when &#39;public&#39; is true.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -154,58 +190,130 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
             $ = new ApiPortalPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayIds The array of resource Ids of gateway to integrate with API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIds(@Nullable List<String> gatewayIds) {
             $.gatewayIds = gatewayIds;
             return this;
         }
 
+        /**
+         * @param gatewayIds The array of resource Ids of gateway to integrate with API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayIds(String... gatewayIds) {
             return gatewayIds(List.of(gatewayIds));
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<ApiPortalInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(ApiPortalInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param provisioningState State of the API portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the API portal exposes endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Boolean public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(ApiPortalResourceRequestsResponse resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;
         }
 
+        /**
+         * @param sourceUrls Collection of OpenAPI source URL locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrls(@Nullable List<String> sourceUrls) {
             $.sourceUrls = sourceUrls;
             return this;
         }
 
+        /**
+         * @param sourceUrls Collection of OpenAPI source URL locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUrls(String... sourceUrls) {
             return sourceUrls(List.of(sourceUrls));
         }
 
+        /**
+         * @param ssoProperties Single sign-on related configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
             $.ssoProperties = ssoProperties;
             return this;
         }
 
+        /**
+         * @param url URL of the API portal, exposed when &#39;public&#39; is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

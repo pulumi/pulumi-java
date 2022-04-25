@@ -24,6 +24,10 @@ public final class RowLayoutResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rows", required=true)
     private List<RowResponse> rows;
 
+    /**
+     * @return The rows of content to display.
+     * 
+     */
     public List<RowResponse> rows() {
         return this.rows;
     }
@@ -52,11 +56,23 @@ public final class RowLayoutResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RowLayoutResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rows The rows of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(List<RowResponse> rows) {
             $.rows = rows;
             return this;
         }
 
+        /**
+         * @param rows The rows of content to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rows(RowResponse... rows) {
             return rows(List.of(rows));
         }

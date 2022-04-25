@@ -19,6 +19,10 @@ public final class GetIPAMScopeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipamScopeId", required=true)
     private String ipamScopeId;
 
+    /**
+     * @return Id of the IPAM scope.
+     * 
+     */
     public String ipamScopeId() {
         return this.ipamScopeId;
     }
@@ -47,6 +51,12 @@ public final class GetIPAMScopeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIPAMScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipamScopeId Id of the IPAM scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamScopeId(String ipamScopeId) {
             $.ipamScopeId = ipamScopeId;
             return this;

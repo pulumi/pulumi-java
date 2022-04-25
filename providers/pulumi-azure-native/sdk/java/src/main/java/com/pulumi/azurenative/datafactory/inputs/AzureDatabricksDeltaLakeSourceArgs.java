@@ -29,6 +29,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -40,6 +44,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="exportSettings")
     private @Nullable Output<AzureDatabricksDeltaLakeExportCommandArgs> exportSettings;
 
+    /**
+     * @return Azure Databricks Delta Lake export settings.
+     * 
+     */
     public Optional<Output<AzureDatabricksDeltaLakeExportCommandArgs>> exportSettings() {
         return Optional.ofNullable(this.exportSettings);
     }
@@ -51,6 +59,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -62,6 +74,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="query")
     private @Nullable Output<Object> query;
 
+    /**
+     * @return Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -73,6 +89,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="sourceRetryCount")
     private @Nullable Output<Object> sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -84,6 +104,10 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="sourceRetryWait")
     private @Nullable Output<Object> sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -96,6 +120,11 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -130,65 +159,151 @@ public final class AzureDatabricksDeltaLakeSourceArgs extends com.pulumi.resourc
             $ = new AzureDatabricksDeltaLakeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param exportSettings Azure Databricks Delta Lake export settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportSettings(@Nullable Output<AzureDatabricksDeltaLakeExportCommandArgs> exportSettings) {
             $.exportSettings = exportSettings;
             return this;
         }
 
+        /**
+         * @param exportSettings Azure Databricks Delta Lake export settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportSettings(AzureDatabricksDeltaLakeExportCommandArgs exportSettings) {
             return exportSettings(Output.of(exportSettings));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param query Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<Object> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Object query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(Object sourceRetryCount) {
             return sourceRetryCount(Output.of(sourceRetryCount));
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(Object sourceRetryWait) {
             return sourceRetryWait(Output.of(sourceRetryWait));
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

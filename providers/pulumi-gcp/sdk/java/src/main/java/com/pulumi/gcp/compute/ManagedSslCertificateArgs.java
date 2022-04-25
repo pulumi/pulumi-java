@@ -24,6 +24,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="certificateId")
     private @Nullable Output<Integer> certificateId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Optional<Output<Integer>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -35,6 +39,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,12 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="managed")
     private @Nullable Output<ManagedSslCertificateManagedArgs> managed;
 
+    /**
+     * @return Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ManagedSslCertificateManagedArgs>> managed() {
         return Optional.ofNullable(this.managed);
     }
@@ -65,6 +79,16 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +101,11 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -91,6 +120,13 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -124,56 +160,152 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
             $ = new ManagedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(Integer certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedArgs> managed) {
             $.managed = managed;
             return this;
         }
 
+        /**
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managed(ManagedSslCertificateManagedArgs managed) {
             return managed(Output.of(managed));
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

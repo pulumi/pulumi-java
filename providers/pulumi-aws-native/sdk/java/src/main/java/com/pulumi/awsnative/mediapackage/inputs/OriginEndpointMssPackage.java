@@ -34,6 +34,10 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
     @Import(name="manifestWindowSeconds")
     private @Nullable Integer manifestWindowSeconds;
 
+    /**
+     * @return The time window (in seconds) contained in each manifest.
+     * 
+     */
     public Optional<Integer> manifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
@@ -45,6 +49,10 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
     @Import(name="segmentDurationSeconds")
     private @Nullable Integer segmentDurationSeconds;
 
+    /**
+     * @return The duration (in seconds) of each segment.
+     * 
+     */
     public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
@@ -88,11 +96,23 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param manifestWindowSeconds The time window (in seconds) contained in each manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
+        /**
+         * @param segmentDurationSeconds The duration (in seconds) of each segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             $.segmentDurationSeconds = segmentDurationSeconds;
             return this;

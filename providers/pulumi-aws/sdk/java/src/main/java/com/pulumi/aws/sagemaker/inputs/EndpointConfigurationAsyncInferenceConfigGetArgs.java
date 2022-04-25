@@ -23,6 +23,10 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends com.
     @Import(name="clientConfig")
     private @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
 
+    /**
+     * @return Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+     * 
+     */
     public Optional<Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs>> clientConfig() {
         return Optional.ofNullable(this.clientConfig);
     }
@@ -34,6 +38,10 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends com.
     @Import(name="outputConfig", required=true)
     private Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
 
+    /**
+     * @return Specifies the configuration for asynchronous inference invocation outputs.
+     * 
+     */
     public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig() {
         return this.outputConfig;
     }
@@ -63,20 +71,44 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends com.
             $ = new EndpointConfigurationAsyncInferenceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientConfig Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig) {
             $.clientConfig = clientConfig;
             return this;
         }
 
+        /**
+         * @param clientConfig Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfig(EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs clientConfig) {
             return clientConfig(Output.of(clientConfig));
         }
 
+        /**
+         * @param outputConfig Specifies the configuration for asynchronous inference invocation outputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig) {
             $.outputConfig = outputConfig;
             return this;
         }
 
+        /**
+         * @param outputConfig Specifies the configuration for asynchronous inference invocation outputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs outputConfig) {
             return outputConfig(Output.of(outputConfig));
         }

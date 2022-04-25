@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2EntityIdArgs extends com.pulumi.resources.R
     @Import(name="field")
     private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
+    /**
+     * @return Composite key indicating which field contains the entity identifier.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
         return Optional.ofNullable(this.field);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2EntityIdArgs extends com.pulumi.resources.R
             $ = new GooglePrivacyDlpV2EntityIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param field Composite key indicating which field contains the entity identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Composite key indicating which field contains the entity identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             return field(Output.of(field));
         }

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagementPolicyFilterResponse {
     /**
-     * An array of blob index tag based filters, there can be at most 10 tag filters
+     * @return An array of blob index tag based filters, there can be at most 10 tag filters
      * 
      */
     private final @Nullable List<TagFilterResponse> blobIndexMatch;
     /**
-     * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * @return An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
      * 
      */
     private final List<String> blobTypes;
     /**
-     * An array of strings for prefixes to be match.
+     * @return An array of strings for prefixes to be match.
      * 
      */
     private final @Nullable List<String> prefixMatch;
@@ -39,23 +39,23 @@ public final class ManagementPolicyFilterResponse {
     }
 
     /**
-     * An array of blob index tag based filters, there can be at most 10 tag filters
+     * @return An array of blob index tag based filters, there can be at most 10 tag filters
      * 
-    */
+     */
     public List<TagFilterResponse> blobIndexMatch() {
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
     }
     /**
-     * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
+     * @return An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
      * 
-    */
+     */
     public List<String> blobTypes() {
         return this.blobTypes;
     }
     /**
-     * An array of strings for prefixes to be match.
+     * @return An array of strings for prefixes to be match.
      * 
-    */
+     */
     public List<String> prefixMatch() {
         return this.prefixMatch == null ? List.of() : this.prefixMatch;
     }

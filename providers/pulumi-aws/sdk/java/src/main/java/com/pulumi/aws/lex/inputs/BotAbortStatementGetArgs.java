@@ -26,6 +26,12 @@ public final class BotAbortStatementGetArgs extends com.pulumi.resources.Resourc
     @Import(name="messages", required=true)
     private Output<List<BotAbortStatementMessageGetArgs>> messages;
 
+    /**
+     * @return A set of messages, each of which provides a message string and its type. You
+     * can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
+     * are documented under message.
+     * 
+     */
     public Output<List<BotAbortStatementMessageGetArgs>> messages() {
         return this.messages;
     }
@@ -39,6 +45,12 @@ public final class BotAbortStatementGetArgs extends com.pulumi.resources.Resourc
     @Import(name="responseCard")
     private @Nullable Output<String> responseCard;
 
+    /**
+     * @return The response card. Amazon Lex will substitute session attributes and
+     * slot values into the response card. For more information, see
+     * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+     * 
+     */
     public Optional<Output<String>> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
@@ -68,24 +80,64 @@ public final class BotAbortStatementGetArgs extends com.pulumi.resources.Resourc
             $ = new BotAbortStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type. You
+         * can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
+         * are documented under message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(Output<List<BotAbortStatementMessageGetArgs>> messages) {
             $.messages = messages;
             return this;
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type. You
+         * can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
+         * are documented under message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(List<BotAbortStatementMessageGetArgs> messages) {
             return messages(Output.of(messages));
         }
 
+        /**
+         * @param messages A set of messages, each of which provides a message string and its type. You
+         * can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
+         * are documented under message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messages(BotAbortStatementMessageGetArgs... messages) {
             return messages(List.of(messages));
         }
 
+        /**
+         * @param responseCard The response card. Amazon Lex will substitute session attributes and
+         * slot values into the response card. For more information, see
+         * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCard(@Nullable Output<String> responseCard) {
             $.responseCard = responseCard;
             return this;
         }
 
+        /**
+         * @param responseCard The response card. Amazon Lex will substitute session attributes and
+         * slot values into the response card. For more information, see
+         * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseCard(String responseCard) {
             return responseCard(Output.of(responseCard));
         }

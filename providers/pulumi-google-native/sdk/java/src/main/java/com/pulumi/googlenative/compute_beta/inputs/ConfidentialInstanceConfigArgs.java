@@ -26,6 +26,10 @@ public final class ConfidentialInstanceConfigArgs extends com.pulumi.resources.R
     @Import(name="enableConfidentialCompute")
     private @Nullable Output<Boolean> enableConfidentialCompute;
 
+    /**
+     * @return Defines whether the instance should have confidential compute enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableConfidentialCompute() {
         return Optional.ofNullable(this.enableConfidentialCompute);
     }
@@ -54,11 +58,23 @@ public final class ConfidentialInstanceConfigArgs extends com.pulumi.resources.R
             $ = new ConfidentialInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableConfidentialCompute Defines whether the instance should have confidential compute enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConfidentialCompute(@Nullable Output<Boolean> enableConfidentialCompute) {
             $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
 
+        /**
+         * @param enableConfidentialCompute Defines whether the instance should have confidential compute enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             return enableConfidentialCompute(Output.of(enableConfidentialCompute));
         }

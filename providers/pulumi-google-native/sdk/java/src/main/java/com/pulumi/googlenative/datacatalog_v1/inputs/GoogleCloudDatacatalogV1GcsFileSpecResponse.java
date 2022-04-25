@@ -24,6 +24,10 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
     @Import(name="filePath", required=true)
     private String filePath;
 
+    /**
+     * @return Full file path. Example: `gs://bucket_name/a/b.txt`.
+     * 
+     */
     public String filePath() {
         return this.filePath;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
     @Import(name="gcsTimestamps", required=true)
     private GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
 
+    /**
+     * @return Creation, modification, and expiration timestamps of a Cloud Storage file.
+     * 
+     */
     public GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps() {
         return this.gcsTimestamps;
     }
@@ -46,6 +54,10 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
     @Import(name="sizeBytes", required=true)
     private String sizeBytes;
 
+    /**
+     * @return File size in bytes.
+     * 
+     */
     public String sizeBytes() {
         return this.sizeBytes;
     }
@@ -76,16 +88,34 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
             $ = new GoogleCloudDatacatalogV1GcsFileSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePath Full file path. Example: `gs://bucket_name/a/b.txt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param gcsTimestamps Creation, modification, and expiration timestamps of a Cloud Storage file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsTimestamps(GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps) {
             $.gcsTimestamps = gcsTimestamps;
             return this;
         }
 
+        /**
+         * @param sizeBytes File size in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(String sizeBytes) {
             $.sizeBytes = sizeBytes;
             return this;

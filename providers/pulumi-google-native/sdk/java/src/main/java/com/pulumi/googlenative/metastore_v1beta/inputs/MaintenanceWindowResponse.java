@@ -24,6 +24,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="dayOfWeek", required=true)
     private String dayOfWeek;
 
+    /**
+     * @return The day of week, when the window starts.
+     * 
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -35,6 +39,10 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
     @Import(name="hourOfDay", required=true)
     private Integer hourOfDay;
 
+    /**
+     * @return The hour of day (0-23) when the window starts.
+     * 
+     */
     public Integer hourOfDay() {
         return this.hourOfDay;
     }
@@ -64,11 +72,23 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
             $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek The day of week, when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param hourOfDay The hour of day (0-23) when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourOfDay(Integer hourOfDay) {
             $.hourOfDay = hourOfDay;
             return this;

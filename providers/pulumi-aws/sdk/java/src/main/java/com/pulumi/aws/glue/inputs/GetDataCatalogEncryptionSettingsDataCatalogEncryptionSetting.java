@@ -21,6 +21,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     @Import(name="connectionPasswordEncryptions", required=true)
     private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
 
+    /**
+     * @return When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
+     * 
+     */
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions() {
         return this.connectionPasswordEncryptions;
     }
@@ -32,6 +36,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     @Import(name="encryptionAtRests", required=true)
     private List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
+    /**
+     * @return Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
+     * 
+     */
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests() {
         return this.encryptionAtRests;
     }
@@ -61,20 +69,44 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
             $ = new GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionPasswordEncryptions When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPasswordEncryptions(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions) {
             $.connectionPasswordEncryptions = connectionPasswordEncryptions;
             return this;
         }
 
+        /**
+         * @param connectionPasswordEncryptions When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPasswordEncryptions(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption... connectionPasswordEncryptions) {
             return connectionPasswordEncryptions(List.of(connectionPasswordEncryptions));
         }
 
+        /**
+         * @param encryptionAtRests Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtRests(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
             $.encryptionAtRests = encryptionAtRests;
             return this;
         }
 
+        /**
+         * @param encryptionAtRests Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAtRests(GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest... encryptionAtRests) {
             return encryptionAtRests(List.of(encryptionAtRests));
         }

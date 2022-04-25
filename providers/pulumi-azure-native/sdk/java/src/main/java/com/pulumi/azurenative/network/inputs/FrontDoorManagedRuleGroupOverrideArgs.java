@@ -29,6 +29,10 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="exclusions")
     private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
+    /**
+     * @return Describes the exclusions that are applied to all rules in the group.
+     * 
+     */
     public Optional<Output<List<ManagedRuleExclusionArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -40,6 +44,10 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="ruleGroupName", required=true)
     private Output<String> ruleGroupName;
 
+    /**
+     * @return Describes the managed rule group to override.
+     * 
+     */
     public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -51,6 +59,10 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="rules")
     private @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
+    /**
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * 
+     */
     public Optional<Output<List<FrontDoorManagedRuleOverrideArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -81,37 +93,85 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
             $ = new FrontDoorManagedRuleGroupOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(List<ManagedRuleExclusionArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group to override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(Output<String> ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group to override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             return ruleGroupName(Output.of(ruleGroupName));
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<FrontDoorManagedRuleOverrideArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(FrontDoorManagedRuleOverrideArgs... rules) {
             return rules(List.of(rules));
         }

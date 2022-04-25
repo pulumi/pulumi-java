@@ -30,6 +30,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
     @Import(name="azureFileFilterDetails")
     private @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
 
+    /**
+     * @return Filter details to transfer Azure files.
+     * 
+     */
     public Optional<AzureFileFilterDetailsResponse> azureFileFilterDetails() {
         return Optional.ofNullable(this.azureFileFilterDetails);
     }
@@ -41,6 +45,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
     @Import(name="blobFilterDetails")
     private @Nullable BlobFilterDetailsResponse blobFilterDetails;
 
+    /**
+     * @return Filter details to transfer blobs.
+     * 
+     */
     public Optional<BlobFilterDetailsResponse> blobFilterDetails() {
         return Optional.ofNullable(this.blobFilterDetails);
     }
@@ -52,6 +60,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
     @Import(name="dataAccountType", required=true)
     private String dataAccountType;
 
+    /**
+     * @return Type of the account of data.
+     * 
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
@@ -63,6 +75,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
     @Import(name="filterFileDetails")
     private @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
+    /**
+     * @return Details of the filter files to be used for data transfer.
+     * 
+     */
     public Optional<List<FilterFileDetailsResponse>> filterFileDetails() {
         return Optional.ofNullable(this.filterFileDetails);
     }
@@ -94,26 +110,56 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
             $ = new TransferFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureFileFilterDetails Filter details to transfer Azure files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsResponse azureFileFilterDetails) {
             $.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
 
+        /**
+         * @param blobFilterDetails Filter details to transfer blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobFilterDetails(@Nullable BlobFilterDetailsResponse blobFilterDetails) {
             $.blobFilterDetails = blobFilterDetails;
             return this;
         }
 
+        /**
+         * @param dataAccountType Type of the account of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param filterFileDetails Details of the filter files to be used for data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileDetails(@Nullable List<FilterFileDetailsResponse> filterFileDetails) {
             $.filterFileDetails = filterFileDetails;
             return this;
         }
 
+        /**
+         * @param filterFileDetails Details of the filter files to be used for data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterFileDetails(FilterFileDetailsResponse... filterFileDetails) {
             return filterFileDetails(List.of(filterFileDetails));
         }

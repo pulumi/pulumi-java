@@ -19,6 +19,10 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="applicationGatewayName", required=true)
     private String applicationGatewayName;
 
+    /**
+     * @return The name of the application gateway.
+     * 
+     */
     public String applicationGatewayName() {
         return this.applicationGatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The name of the application gateway private endpoint connection.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -41,6 +49,10 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
             $ = new GetApplicationGatewayPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGatewayName The name of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayName(String applicationGatewayName) {
             $.applicationGatewayName = applicationGatewayName;
             return this;
         }
 
+        /**
+         * @param connectionName The name of the application gateway private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

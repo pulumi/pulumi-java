@@ -26,6 +26,10 @@ public final class CertificateSigningRequestListArgs extends com.pulumi.resource
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -37,6 +41,10 @@ public final class CertificateSigningRequestListArgs extends com.pulumi.resource
     @Import(name="items", required=true)
     private Output<List<CertificateSigningRequestArgs>> items;
 
+    /**
+     * @return items is a collection of CertificateSigningRequest objects
+     * 
+     */
     public Output<List<CertificateSigningRequestArgs>> items() {
         return this.items;
     }
@@ -48,6 +56,10 @@ public final class CertificateSigningRequestListArgs extends com.pulumi.resource
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -86,33 +98,75 @@ public final class CertificateSigningRequestListArgs extends com.pulumi.resource
             $ = new CertificateSigningRequestListArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param items items is a collection of CertificateSigningRequest objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Output<List<CertificateSigningRequestArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items items is a collection of CertificateSigningRequest objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<CertificateSigningRequestArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items items is a collection of CertificateSigningRequest objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(CertificateSigningRequestArgs... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

@@ -14,14 +14,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendService {
     /**
-     * The default RegionBackendService resource. Before
+     * @return The default RegionBackendService resource. Before
      * forwarding the request to backendService, the loadbalancer applies any relevant
      * headerActions specified as part of this backendServiceWeight.
      * 
      */
     private final String backendService;
     /**
-     * Specifies changes to request and response headers that need to take effect for
+     * @return Specifies changes to request and response headers that need to take effect for
      * the selected backendService. headerAction specified here take effect before
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
@@ -29,7 +29,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      */
     private final @Nullable RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction;
     /**
-     * Specifies the fraction of traffic sent to backendService, computed as weight /
+     * @return Specifies the fraction of traffic sent to backendService, computed as weight /
      * (sum of all weightedBackendService weights in routeAction) . The selection of a
      * backend service is determined only for new traffic. Once a user&#39;s request has
      * been directed to a backendService, subsequent requests will be sent to the same
@@ -50,33 +50,33 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
     }
 
     /**
-     * The default RegionBackendService resource. Before
+     * @return The default RegionBackendService resource. Before
      * forwarding the request to backendService, the loadbalancer applies any relevant
      * headerActions specified as part of this backendServiceWeight.
      * 
-    */
+     */
     public String backendService() {
         return this.backendService;
     }
     /**
-     * Specifies changes to request and response headers that need to take effect for
+     * @return Specifies changes to request and response headers that need to take effect for
      * the selected backendService. headerAction specified here take effect before
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
-     * Specifies the fraction of traffic sent to backendService, computed as weight /
+     * @return Specifies the fraction of traffic sent to backendService, computed as weight /
      * (sum of all weightedBackendService weights in routeAction) . The selection of a
      * backend service is determined only for new traffic. Once a user&#39;s request has
      * been directed to a backendService, subsequent requests will be sent to the same
      * backendService as determined by the BackendService&#39;s session affinity policy.
      * The value must be between 0 and 1000
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

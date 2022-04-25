@@ -26,6 +26,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="branch")
     private @Nullable Output<String> branch;
 
+    /**
+     * @return The git repository branch name to checkout.
+     * 
+     */
     public Optional<Output<String>> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -37,6 +41,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="commit")
     private @Nullable Output<String> commit;
 
+    /**
+     * @return The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+     * 
+     */
     public Optional<Output<String>> commit() {
         return Optional.ofNullable(this.commit);
     }
@@ -48,6 +56,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="semver")
     private @Nullable Output<String> semver;
 
+    /**
+     * @return The semver range used to match against git repository tags. This takes precedence over tag.
+     * 
+     */
     public Optional<Output<String>> semver() {
         return Optional.ofNullable(this.semver);
     }
@@ -59,6 +71,10 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
+    /**
+     * @return The git repository tag name to checkout. This takes precedence over branch.
+     * 
+     */
     public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -90,38 +106,86 @@ public final class RepositoryRefDefinitionArgs extends com.pulumi.resources.Reso
             $ = new RepositoryRefDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch The git repository branch name to checkout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch The git repository branch name to checkout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param commit The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commit(@Nullable Output<String> commit) {
             $.commit = commit;
             return this;
         }
 
+        /**
+         * @param commit The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commit(String commit) {
             return commit(Output.of(commit));
         }
 
+        /**
+         * @param semver The semver range used to match against git repository tags. This takes precedence over tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder semver(@Nullable Output<String> semver) {
             $.semver = semver;
             return this;
         }
 
+        /**
+         * @param semver The semver range used to match against git repository tags. This takes precedence over tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder semver(String semver) {
             return semver(Output.of(semver));
         }
 
+        /**
+         * @param tag The git repository tag name to checkout. This takes precedence over branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag The git repository tag name to checkout. This takes precedence over branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Output.of(tag));
         }

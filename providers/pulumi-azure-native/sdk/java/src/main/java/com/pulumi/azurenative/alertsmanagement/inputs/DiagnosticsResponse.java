@@ -28,6 +28,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions")
     private @Nullable ConditionsResponse conditions;
 
+    /**
+     * @return conditions on which alerts will be filtered
+     * 
+     */
     public Optional<ConditionsResponse> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -39,6 +43,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdAt", required=true)
     private String createdAt;
 
+    /**
+     * @return Creation time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     public String createdAt() {
         return this.createdAt;
     }
@@ -50,6 +58,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
     private String createdBy;
 
+    /**
+     * @return Created by user name.
+     * 
+     */
     public String createdBy() {
         return this.createdBy;
     }
@@ -61,6 +73,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of action rule
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -72,6 +88,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt", required=true)
     private String lastModifiedAt;
 
+    /**
+     * @return Last updated time of action rule. Date-Time in ISO-8601 format.
+     * 
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
@@ -83,6 +103,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy", required=true)
     private String lastModifiedBy;
 
+    /**
+     * @return Last modified by user name.
+     * 
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -94,6 +118,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope")
     private @Nullable ScopeResponse scope;
 
+    /**
+     * @return scope on which action rule will apply
+     * 
+     */
     public Optional<ScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -105,6 +133,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Indicates if the given action rule is enabled or disabled
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -117,6 +149,11 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates type of action rule
+     * Expected value is &#39;Diagnostics&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -153,46 +190,101 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions conditions on which alerts will be filtered
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable ConditionsResponse conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param createdAt Creation time of action rule. Date-Time in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdBy Created by user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(String createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param description Description of action rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt Last updated time of action rule. Date-Time in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(String lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy Last modified by user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(String lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param scope scope on which action rule will apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable ScopeResponse scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param status Indicates if the given action rule is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type Indicates type of action rule
+         * Expected value is &#39;Diagnostics&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -26,6 +26,10 @@ public final class SiteConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="netFrameworkVersion")
     private @Nullable String netFrameworkVersion;
 
+    /**
+     * @return .NET Framework version.
+     * 
+     */
     public Optional<String> netFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }
@@ -54,6 +58,12 @@ public final class SiteConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SiteConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param netFrameworkVersion .NET Framework version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             $.netFrameworkVersion = netFrameworkVersion;
             return this;

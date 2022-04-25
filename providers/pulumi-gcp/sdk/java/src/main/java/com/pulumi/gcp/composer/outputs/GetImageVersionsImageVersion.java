@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetImageVersionsImageVersion {
     /**
-     * The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
      * 
      */
     private final String imageVersionId;
     /**
-     * Supported python versions for this image version
+     * @return Supported python versions for this image version
      * 
      */
     private final List<String> supportedPythonVersions;
@@ -30,16 +30,16 @@ public final class GetImageVersionsImageVersion {
     }
 
     /**
-     * The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
+     * @return The string identifier of the image version, in the form: &#34;composer-x.y.z-airflow-a.b(.c)&#34;
      * 
-    */
+     */
     public String imageVersionId() {
         return this.imageVersionId;
     }
     /**
-     * Supported python versions for this image version
+     * @return Supported python versions for this image version
      * 
-    */
+     */
     public List<String> supportedPythonVersions() {
         return this.supportedPythonVersions;
     }

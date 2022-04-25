@@ -27,6 +27,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -49,6 +57,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the resource. The type &#39;SystemAssigned,UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -60,6 +72,10 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Map<String,ManagedServiceIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class ManagedServiceIdentityResponse extends com.pulumi.resources.I
             $ = new ManagedServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the resource. The type &#39;SystemAssigned,UserAssigned&#39; includes both an implicitly created identity and a set of user assigned identities. The type &#39;None&#39; will remove any identities from the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,ManagedServiceIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

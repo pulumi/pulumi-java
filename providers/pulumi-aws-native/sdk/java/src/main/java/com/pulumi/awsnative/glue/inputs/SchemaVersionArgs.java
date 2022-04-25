@@ -27,6 +27,10 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isLatest")
     private @Nullable Output<Boolean> isLatest;
 
+    /**
+     * @return Indicates if the latest version needs to be updated.
+     * 
+     */
     public Optional<Output<Boolean>> isLatest() {
         return Optional.ofNullable(this.isLatest);
     }
@@ -38,6 +42,10 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionNumber")
     private @Nullable Output<Integer> versionNumber;
 
+    /**
+     * @return Indicates the version number in the schema to update.
+     * 
+     */
     public Optional<Output<Integer>> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -67,20 +75,44 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isLatest Indicates if the latest version needs to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLatest(@Nullable Output<Boolean> isLatest) {
             $.isLatest = isLatest;
             return this;
         }
 
+        /**
+         * @param isLatest Indicates if the latest version needs to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLatest(Boolean isLatest) {
             return isLatest(Output.of(isLatest));
         }
 
+        /**
+         * @param versionNumber Indicates the version number in the schema to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
         }
 
+        /**
+         * @param versionNumber Indicates the version number in the schema to update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(Integer versionNumber) {
             return versionNumber(Output.of(versionNumber));
         }

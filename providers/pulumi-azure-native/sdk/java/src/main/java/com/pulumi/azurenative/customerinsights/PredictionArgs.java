@@ -27,6 +27,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoAnalyze", required=true)
     private Output<Boolean> autoAnalyze;
 
+    /**
+     * @return Whether do auto analyze.
+     * 
+     */
     public Output<Boolean> autoAnalyze() {
         return this.autoAnalyze;
     }
@@ -38,6 +42,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Description of the prediction.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Display name of the prediction.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -60,6 +72,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="grades")
     private @Nullable Output<List<PredictionGradesArgs>> grades;
 
+    /**
+     * @return The prediction grades.
+     * 
+     */
     public Optional<Output<List<PredictionGradesArgs>>> grades() {
         return Optional.ofNullable(this.grades);
     }
@@ -71,6 +87,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -82,6 +102,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedInteractionTypes")
     private @Nullable Output<List<String>> involvedInteractionTypes;
 
+    /**
+     * @return Interaction types involved in the prediction.
+     * 
+     */
     public Optional<Output<List<String>>> involvedInteractionTypes() {
         return Optional.ofNullable(this.involvedInteractionTypes);
     }
@@ -93,6 +117,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedKpiTypes")
     private @Nullable Output<List<String>> involvedKpiTypes;
 
+    /**
+     * @return KPI types involved in the prediction.
+     * 
+     */
     public Optional<Output<List<String>>> involvedKpiTypes() {
         return Optional.ofNullable(this.involvedKpiTypes);
     }
@@ -104,6 +132,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="involvedRelationships")
     private @Nullable Output<List<String>> involvedRelationships;
 
+    /**
+     * @return Relationships involved in the prediction.
+     * 
+     */
     public Optional<Output<List<String>>> involvedRelationships() {
         return Optional.ofNullable(this.involvedRelationships);
     }
@@ -115,6 +147,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mappings", required=true)
     private Output<PredictionMappingsArgs> mappings;
 
+    /**
+     * @return Definition of the link mapping of prediction.
+     * 
+     */
     public Output<PredictionMappingsArgs> mappings() {
         return this.mappings;
     }
@@ -126,6 +162,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="negativeOutcomeExpression", required=true)
     private Output<String> negativeOutcomeExpression;
 
+    /**
+     * @return Negative outcome expression.
+     * 
+     */
     public Output<String> negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
@@ -137,6 +177,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="positiveOutcomeExpression", required=true)
     private Output<String> positiveOutcomeExpression;
 
+    /**
+     * @return Positive outcome expression.
+     * 
+     */
     public Output<String> positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
@@ -148,6 +192,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="predictionName")
     private @Nullable Output<String> predictionName;
 
+    /**
+     * @return Name of the prediction.
+     * 
+     */
     public Optional<Output<String>> predictionName() {
         return Optional.ofNullable(this.predictionName);
     }
@@ -159,6 +207,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryProfileType", required=true)
     private Output<String> primaryProfileType;
 
+    /**
+     * @return Primary profile type.
+     * 
+     */
     public Output<String> primaryProfileType() {
         return this.primaryProfileType;
     }
@@ -170,6 +222,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -181,6 +237,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopeExpression", required=true)
     private Output<String> scopeExpression;
 
+    /**
+     * @return Scope expression.
+     * 
+     */
     public Output<String> scopeExpression() {
         return this.scopeExpression;
     }
@@ -192,6 +252,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scoreLabel", required=true)
     private Output<String> scoreLabel;
 
+    /**
+     * @return Score label.
+     * 
+     */
     public Output<String> scoreLabel() {
         return this.scoreLabel;
     }
@@ -235,162 +299,378 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PredictionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoAnalyze Whether do auto analyze.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoAnalyze(Output<Boolean> autoAnalyze) {
             $.autoAnalyze = autoAnalyze;
             return this;
         }
 
+        /**
+         * @param autoAnalyze Whether do auto analyze.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoAnalyze(Boolean autoAnalyze) {
             return autoAnalyze(Output.of(autoAnalyze));
         }
 
+        /**
+         * @param description Description of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param grades The prediction grades.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grades(@Nullable Output<List<PredictionGradesArgs>> grades) {
             $.grades = grades;
             return this;
         }
 
+        /**
+         * @param grades The prediction grades.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grades(List<PredictionGradesArgs> grades) {
             return grades(Output.of(grades));
         }
 
+        /**
+         * @param grades The prediction grades.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grades(PredictionGradesArgs... grades) {
             return grades(List.of(grades));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param involvedInteractionTypes Interaction types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedInteractionTypes(@Nullable Output<List<String>> involvedInteractionTypes) {
             $.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
 
+        /**
+         * @param involvedInteractionTypes Interaction types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedInteractionTypes(List<String> involvedInteractionTypes) {
             return involvedInteractionTypes(Output.of(involvedInteractionTypes));
         }
 
+        /**
+         * @param involvedInteractionTypes Interaction types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedInteractionTypes(String... involvedInteractionTypes) {
             return involvedInteractionTypes(List.of(involvedInteractionTypes));
         }
 
+        /**
+         * @param involvedKpiTypes KPI types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedKpiTypes(@Nullable Output<List<String>> involvedKpiTypes) {
             $.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
 
+        /**
+         * @param involvedKpiTypes KPI types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedKpiTypes(List<String> involvedKpiTypes) {
             return involvedKpiTypes(Output.of(involvedKpiTypes));
         }
 
+        /**
+         * @param involvedKpiTypes KPI types involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedKpiTypes(String... involvedKpiTypes) {
             return involvedKpiTypes(List.of(involvedKpiTypes));
         }
 
+        /**
+         * @param involvedRelationships Relationships involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedRelationships(@Nullable Output<List<String>> involvedRelationships) {
             $.involvedRelationships = involvedRelationships;
             return this;
         }
 
+        /**
+         * @param involvedRelationships Relationships involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedRelationships(List<String> involvedRelationships) {
             return involvedRelationships(Output.of(involvedRelationships));
         }
 
+        /**
+         * @param involvedRelationships Relationships involved in the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder involvedRelationships(String... involvedRelationships) {
             return involvedRelationships(List.of(involvedRelationships));
         }
 
+        /**
+         * @param mappings Definition of the link mapping of prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(Output<PredictionMappingsArgs> mappings) {
             $.mappings = mappings;
             return this;
         }
 
+        /**
+         * @param mappings Definition of the link mapping of prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(PredictionMappingsArgs mappings) {
             return mappings(Output.of(mappings));
         }
 
+        /**
+         * @param negativeOutcomeExpression Negative outcome expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negativeOutcomeExpression(Output<String> negativeOutcomeExpression) {
             $.negativeOutcomeExpression = negativeOutcomeExpression;
             return this;
         }
 
+        /**
+         * @param negativeOutcomeExpression Negative outcome expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
             return negativeOutcomeExpression(Output.of(negativeOutcomeExpression));
         }
 
+        /**
+         * @param positiveOutcomeExpression Positive outcome expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positiveOutcomeExpression(Output<String> positiveOutcomeExpression) {
             $.positiveOutcomeExpression = positiveOutcomeExpression;
             return this;
         }
 
+        /**
+         * @param positiveOutcomeExpression Positive outcome expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
             return positiveOutcomeExpression(Output.of(positiveOutcomeExpression));
         }
 
+        /**
+         * @param predictionName Name of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionName(@Nullable Output<String> predictionName) {
             $.predictionName = predictionName;
             return this;
         }
 
+        /**
+         * @param predictionName Name of the prediction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionName(String predictionName) {
             return predictionName(Output.of(predictionName));
         }
 
+        /**
+         * @param primaryProfileType Primary profile type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryProfileType(Output<String> primaryProfileType) {
             $.primaryProfileType = primaryProfileType;
             return this;
         }
 
+        /**
+         * @param primaryProfileType Primary profile type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryProfileType(String primaryProfileType) {
             return primaryProfileType(Output.of(primaryProfileType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scopeExpression Scope expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeExpression(Output<String> scopeExpression) {
             $.scopeExpression = scopeExpression;
             return this;
         }
 
+        /**
+         * @param scopeExpression Scope expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeExpression(String scopeExpression) {
             return scopeExpression(Output.of(scopeExpression));
         }
 
+        /**
+         * @param scoreLabel Score label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoreLabel(Output<String> scoreLabel) {
             $.scoreLabel = scoreLabel;
             return this;
         }
 
+        /**
+         * @param scoreLabel Score label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoreLabel(String scoreLabel) {
             return scoreLabel(Output.of(scoreLabel));
         }

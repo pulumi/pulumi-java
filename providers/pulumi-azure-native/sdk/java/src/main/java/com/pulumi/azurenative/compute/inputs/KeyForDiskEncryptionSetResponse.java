@@ -26,6 +26,10 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
     @Import(name="keyUrl", required=true)
     private String keyUrl;
 
+    /**
+     * @return Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+     * 
+     */
     public String keyUrl() {
         return this.keyUrl;
     }
@@ -37,6 +41,10 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
     @Import(name="sourceVault")
     private @Nullable SourceVaultResponse sourceVault;
 
+    /**
+     * @return Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
+     * 
+     */
     public Optional<SourceVaultResponse> sourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
@@ -66,11 +74,23 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
             $ = new KeyForDiskEncryptionSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUrl Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(String keyUrl) {
             $.keyUrl = keyUrl;
             return this;
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(@Nullable SourceVaultResponse sourceVault) {
             $.sourceVault = sourceVault;
             return this;

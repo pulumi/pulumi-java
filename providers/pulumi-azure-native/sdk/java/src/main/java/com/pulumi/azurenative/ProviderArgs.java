@@ -25,6 +25,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auxiliaryTenantIds", json=true)
     private @Nullable Output<List<String>> auxiliaryTenantIds;
 
+    /**
+     * @return Any additional Tenant IDs which should be used for authentication.
+     * 
+     */
     public Optional<Output<List<String>>> auxiliaryTenantIds() {
         return Optional.ofNullable(this.auxiliaryTenantIds);
     }
@@ -36,6 +40,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificatePassword")
     private @Nullable Output<String> clientCertificatePassword;
 
+    /**
+     * @return The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
+     * 
+     */
     public Optional<Output<String>> clientCertificatePassword() {
         return Optional.ofNullable(this.clientCertificatePassword);
     }
@@ -47,6 +55,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificatePath")
     private @Nullable Output<String> clientCertificatePath;
 
+    /**
+     * @return The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
+     * 
+     */
     public Optional<Output<String>> clientCertificatePath() {
         return Optional.ofNullable(this.clientCertificatePath);
     }
@@ -58,6 +70,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The Client ID which should be used.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -69,6 +85,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -80,6 +100,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disablePulumiPartnerId", json=true)
     private @Nullable Output<Boolean> disablePulumiPartnerId;
 
+    /**
+     * @return This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn&#39;t specified.
+     * 
+     */
     public Optional<Output<Boolean>> disablePulumiPartnerId() {
         return Optional.ofNullable(this.disablePulumiPartnerId);
     }
@@ -91,6 +115,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -102,6 +130,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msiEndpoint")
     private @Nullable Output<String> msiEndpoint;
 
+    /**
+     * @return The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
+     * 
+     */
     public Optional<Output<String>> msiEndpoint() {
         return Optional.ofNullable(this.msiEndpoint);
     }
@@ -113,6 +145,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerId")
     private @Nullable Output<String> partnerId;
 
+    /**
+     * @return A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+     * 
+     */
     public Optional<Output<String>> partnerId() {
         return Optional.ofNullable(this.partnerId);
     }
@@ -124,6 +160,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return The Subscription ID which should be used.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -135,6 +175,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The Tenant ID which should be used.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -146,6 +190,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useMsi", json=true)
     private @Nullable Output<Boolean> useMsi;
 
+    /**
+     * @return Allowed Managed Service Identity be used for Authentication.
+     * 
+     */
     public Optional<Output<Boolean>> useMsi() {
         return Optional.ofNullable(this.useMsi);
     }
@@ -185,114 +233,264 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auxiliaryTenantIds Any additional Tenant IDs which should be used for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTenantIds(@Nullable Output<List<String>> auxiliaryTenantIds) {
             $.auxiliaryTenantIds = auxiliaryTenantIds;
             return this;
         }
 
+        /**
+         * @param auxiliaryTenantIds Any additional Tenant IDs which should be used for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTenantIds(List<String> auxiliaryTenantIds) {
             return auxiliaryTenantIds(Output.of(auxiliaryTenantIds));
         }
 
+        /**
+         * @param auxiliaryTenantIds Any additional Tenant IDs which should be used for authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auxiliaryTenantIds(String... auxiliaryTenantIds) {
             return auxiliaryTenantIds(List.of(auxiliaryTenantIds));
         }
 
+        /**
+         * @param clientCertificatePassword The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePassword(@Nullable Output<String> clientCertificatePassword) {
             $.clientCertificatePassword = clientCertificatePassword;
             return this;
         }
 
+        /**
+         * @param clientCertificatePassword The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePassword(String clientCertificatePassword) {
             return clientCertificatePassword(Output.of(clientCertificatePassword));
         }
 
+        /**
+         * @param clientCertificatePath The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePath(@Nullable Output<String> clientCertificatePath) {
             $.clientCertificatePath = clientCertificatePath;
             return this;
         }
 
+        /**
+         * @param clientCertificatePath The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePath(String clientCertificatePath) {
             return clientCertificatePath(Output.of(clientCertificatePath));
         }
 
+        /**
+         * @param clientId The Client ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The Client ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param disablePulumiPartnerId This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePulumiPartnerId(@Nullable Output<Boolean> disablePulumiPartnerId) {
             $.disablePulumiPartnerId = disablePulumiPartnerId;
             return this;
         }
 
+        /**
+         * @param disablePulumiPartnerId This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn&#39;t specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePulumiPartnerId(Boolean disablePulumiPartnerId) {
             return disablePulumiPartnerId(Output.of(disablePulumiPartnerId));
         }
 
+        /**
+         * @param environment The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param msiEndpoint The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiEndpoint(@Nullable Output<String> msiEndpoint) {
             $.msiEndpoint = msiEndpoint;
             return this;
         }
 
+        /**
+         * @param msiEndpoint The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiEndpoint(String msiEndpoint) {
             return msiEndpoint(Output.of(msiEndpoint));
         }
 
+        /**
+         * @param partnerId A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(@Nullable Output<String> partnerId) {
             $.partnerId = partnerId;
             return this;
         }
 
+        /**
+         * @param partnerId A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(String partnerId) {
             return partnerId(Output.of(partnerId));
         }
 
+        /**
+         * @param subscriptionId The Subscription ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId The Subscription ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param tenantId The Tenant ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The Tenant ID which should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param useMsi Allowed Managed Service Identity be used for Authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useMsi(@Nullable Output<Boolean> useMsi) {
             $.useMsi = useMsi;
             return this;
         }
 
+        /**
+         * @param useMsi Allowed Managed Service Identity be used for Authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useMsi(Boolean useMsi) {
             return useMsi(Output.of(useMsi));
         }

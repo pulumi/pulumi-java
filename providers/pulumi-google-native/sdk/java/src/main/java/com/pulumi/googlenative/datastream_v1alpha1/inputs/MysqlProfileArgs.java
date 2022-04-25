@@ -28,6 +28,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return Hostname for the MySQL connection.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -39,6 +43,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Input only. Password for the MySQL connection.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -50,6 +58,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Port for the MySQL connection, default value is 3306.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -61,6 +73,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslConfig")
     private @Nullable Output<MysqlSslConfigArgs> sslConfig;
 
+    /**
+     * @return SSL configuration for the MySQL connection.
+     * 
+     */
     public Optional<Output<MysqlSslConfigArgs>> sslConfig() {
         return Optional.ofNullable(this.sslConfig);
     }
@@ -72,6 +88,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username for the MySQL connection.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -104,47 +124,107 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MysqlProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname Hostname for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param password Input only. Password for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Input only. Password for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param port Port for the MySQL connection, default value is 3306.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port for the MySQL connection, default value is 3306.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param sslConfig SSL configuration for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslConfig(@Nullable Output<MysqlSslConfigArgs> sslConfig) {
             $.sslConfig = sslConfig;
             return this;
         }
 
+        /**
+         * @param sslConfig SSL configuration for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslConfig(MysqlSslConfigArgs sslConfig) {
             return sslConfig(Output.of(sslConfig));
         }
 
+        /**
+         * @param username Username for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for the MySQL connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

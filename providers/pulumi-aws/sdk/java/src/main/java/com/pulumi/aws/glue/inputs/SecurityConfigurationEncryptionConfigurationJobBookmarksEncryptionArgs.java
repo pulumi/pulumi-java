@@ -22,6 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     @Import(name="jobBookmarksEncryptionMode")
     private @Nullable Output<String> jobBookmarksEncryptionMode;
 
+    /**
+     * @return Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
+     * 
+     */
     public Optional<Output<String>> jobBookmarksEncryptionMode() {
         return Optional.ofNullable(this.jobBookmarksEncryptionMode);
     }
@@ -33,6 +37,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -62,20 +70,44 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
             $ = new SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobBookmarksEncryptionMode Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobBookmarksEncryptionMode(@Nullable Output<String> jobBookmarksEncryptionMode) {
             $.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
             return this;
         }
 
+        /**
+         * @param jobBookmarksEncryptionMode Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobBookmarksEncryptionMode(String jobBookmarksEncryptionMode) {
             return jobBookmarksEncryptionMode(Output.of(jobBookmarksEncryptionMode));
         }
 
+        /**
+         * @param kmsKeyArn Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }

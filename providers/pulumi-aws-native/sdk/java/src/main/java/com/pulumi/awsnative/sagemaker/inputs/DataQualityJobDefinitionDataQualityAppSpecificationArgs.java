@@ -28,6 +28,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="containerArguments")
     private @Nullable Output<List<String>> containerArguments;
 
+    /**
+     * @return An array of arguments for the container used to run the monitoring job.
+     * 
+     */
     public Optional<Output<List<String>>> containerArguments() {
         return Optional.ofNullable(this.containerArguments);
     }
@@ -39,6 +43,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="containerEntrypoint")
     private @Nullable Output<List<String>> containerEntrypoint;
 
+    /**
+     * @return Specifies the entrypoint for a container used to run the monitoring job.
+     * 
+     */
     public Optional<Output<List<String>>> containerEntrypoint() {
         return Optional.ofNullable(this.containerEntrypoint);
     }
@@ -50,6 +58,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="environment")
     private @Nullable Output<Object> environment;
 
+    /**
+     * @return Sets the environment variables in the Docker container
+     * 
+     */
     public Optional<Output<Object>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -61,6 +73,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="imageUri", required=true)
     private Output<String> imageUri;
 
+    /**
+     * @return The container image to be run by the monitoring job.
+     * 
+     */
     public Output<String> imageUri() {
         return this.imageUri;
     }
@@ -72,6 +88,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="postAnalyticsProcessorSourceUri")
     private @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
+    /**
+     * @return An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+     * 
+     */
     public Optional<Output<String>> postAnalyticsProcessorSourceUri() {
         return Optional.ofNullable(this.postAnalyticsProcessorSourceUri);
     }
@@ -83,6 +103,10 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     @Import(name="recordPreprocessorSourceUri")
     private @Nullable Output<String> recordPreprocessorSourceUri;
 
+    /**
+     * @return An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+     * 
+     */
     public Optional<Output<String>> recordPreprocessorSourceUri() {
         return Optional.ofNullable(this.recordPreprocessorSourceUri);
     }
@@ -116,64 +140,148 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             $ = new DataQualityJobDefinitionDataQualityAppSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerArguments An array of arguments for the container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerArguments(@Nullable Output<List<String>> containerArguments) {
             $.containerArguments = containerArguments;
             return this;
         }
 
+        /**
+         * @param containerArguments An array of arguments for the container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerArguments(List<String> containerArguments) {
             return containerArguments(Output.of(containerArguments));
         }
 
+        /**
+         * @param containerArguments An array of arguments for the container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerArguments(String... containerArguments) {
             return containerArguments(List.of(containerArguments));
         }
 
+        /**
+         * @param containerEntrypoint Specifies the entrypoint for a container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerEntrypoint(@Nullable Output<List<String>> containerEntrypoint) {
             $.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
+        /**
+         * @param containerEntrypoint Specifies the entrypoint for a container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerEntrypoint(List<String> containerEntrypoint) {
             return containerEntrypoint(Output.of(containerEntrypoint));
         }
 
+        /**
+         * @param containerEntrypoint Specifies the entrypoint for a container used to run the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerEntrypoint(String... containerEntrypoint) {
             return containerEntrypoint(List.of(containerEntrypoint));
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<Object> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Sets the environment variables in the Docker container
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(Object environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param imageUri The container image to be run by the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(Output<String> imageUri) {
             $.imageUri = imageUri;
             return this;
         }
 
+        /**
+         * @param imageUri The container image to be run by the monitoring job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             return imageUri(Output.of(imageUri));
         }
 
+        /**
+         * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postAnalyticsProcessorSourceUri(@Nullable Output<String> postAnalyticsProcessorSourceUri) {
             $.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
+        /**
+         * @param postAnalyticsProcessorSourceUri An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postAnalyticsProcessorSourceUri(String postAnalyticsProcessorSourceUri) {
             return postAnalyticsProcessorSourceUri(Output.of(postAnalyticsProcessorSourceUri));
         }
 
+        /**
+         * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordPreprocessorSourceUri(@Nullable Output<String> recordPreprocessorSourceUri) {
             $.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }
 
+        /**
+         * @param recordPreprocessorSourceUri An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordPreprocessorSourceUri(String recordPreprocessorSourceUri) {
             return recordPreprocessorSourceUri(Output.of(recordPreprocessorSourceUri));
         }

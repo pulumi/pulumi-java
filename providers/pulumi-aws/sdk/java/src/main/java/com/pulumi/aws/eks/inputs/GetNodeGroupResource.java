@@ -21,6 +21,10 @@ public final class GetNodeGroupResource extends com.pulumi.resources.InvokeArgs 
     @Import(name="autoscalingGroups", required=true)
     private List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups;
 
+    /**
+     * @return List of objects containing information about AutoScaling Groups.
+     * 
+     */
     public List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups() {
         return this.autoscalingGroups;
     }
@@ -32,6 +36,10 @@ public final class GetNodeGroupResource extends com.pulumi.resources.InvokeArgs 
     @Import(name="remoteAccessSecurityGroupId", required=true)
     private String remoteAccessSecurityGroupId;
 
+    /**
+     * @return Identifier of the remote access EC2 Security Group.
+     * 
+     */
     public String remoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId;
     }
@@ -61,15 +69,33 @@ public final class GetNodeGroupResource extends com.pulumi.resources.InvokeArgs 
             $ = new GetNodeGroupResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingGroups List of objects containing information about AutoScaling Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroups(List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups) {
             $.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
+        /**
+         * @param autoscalingGroups List of objects containing information about AutoScaling Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroups(GetNodeGroupResourceAutoscalingGroup... autoscalingGroups) {
             return autoscalingGroups(List.of(autoscalingGroups));
         }
 
+        /**
+         * @param remoteAccessSecurityGroupId Identifier of the remote access EC2 Security Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAccessSecurityGroupId(String remoteAccessSecurityGroupId) {
             $.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;

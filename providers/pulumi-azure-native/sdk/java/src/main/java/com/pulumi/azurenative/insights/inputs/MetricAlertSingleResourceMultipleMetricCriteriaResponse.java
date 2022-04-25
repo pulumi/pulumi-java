@@ -28,6 +28,10 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
     @Import(name="allOf")
     private @Nullable List<MetricCriteriaResponse> allOf;
 
+    /**
+     * @return The list of metric criteria for this &#39;all of&#39; operation.
+     * 
+     */
     public Optional<List<MetricCriteriaResponse>> allOf() {
         return Optional.ofNullable(this.allOf);
     }
@@ -40,6 +44,11 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of the alert criteria.
+     * Expected value is &#39;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -69,15 +78,34 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
             $ = new MetricAlertSingleResourceMultipleMetricCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allOf The list of metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(@Nullable List<MetricCriteriaResponse> allOf) {
             $.allOf = allOf;
             return this;
         }
 
+        /**
+         * @param allOf The list of metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(MetricCriteriaResponse... allOf) {
             return allOf(List.of(allOf));
         }
 
+        /**
+         * @param odataType specifies the type of the alert criteria.
+         * Expected value is &#39;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

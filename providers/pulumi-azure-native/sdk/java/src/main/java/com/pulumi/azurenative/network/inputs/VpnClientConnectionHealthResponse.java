@@ -28,6 +28,10 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
     @Import(name="allocatedIpAddresses")
     private @Nullable List<String> allocatedIpAddresses;
 
+    /**
+     * @return List of allocated ip addresses to the connected p2s vpn clients.
+     * 
+     */
     public Optional<List<String>> allocatedIpAddresses() {
         return Optional.ofNullable(this.allocatedIpAddresses);
     }
@@ -39,6 +43,10 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
     @Import(name="totalEgressBytesTransferred", required=true)
     private Double totalEgressBytesTransferred;
 
+    /**
+     * @return Total of the Egress Bytes Transferred in this connection.
+     * 
+     */
     public Double totalEgressBytesTransferred() {
         return this.totalEgressBytesTransferred;
     }
@@ -50,6 +58,10 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
     @Import(name="totalIngressBytesTransferred", required=true)
     private Double totalIngressBytesTransferred;
 
+    /**
+     * @return Total of the Ingress Bytes Transferred in this P2S Vpn connection.
+     * 
+     */
     public Double totalIngressBytesTransferred() {
         return this.totalIngressBytesTransferred;
     }
@@ -61,6 +73,10 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
     @Import(name="vpnClientConnectionsCount")
     private @Nullable Integer vpnClientConnectionsCount;
 
+    /**
+     * @return The total of p2s vpn clients connected at this time to this P2SVpnGateway.
+     * 
+     */
     public Optional<Integer> vpnClientConnectionsCount() {
         return Optional.ofNullable(this.vpnClientConnectionsCount);
     }
@@ -92,25 +108,55 @@ public final class VpnClientConnectionHealthResponse extends com.pulumi.resource
             $ = new VpnClientConnectionHealthResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatedIpAddresses List of allocated ip addresses to the connected p2s vpn clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedIpAddresses(@Nullable List<String> allocatedIpAddresses) {
             $.allocatedIpAddresses = allocatedIpAddresses;
             return this;
         }
 
+        /**
+         * @param allocatedIpAddresses List of allocated ip addresses to the connected p2s vpn clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedIpAddresses(String... allocatedIpAddresses) {
             return allocatedIpAddresses(List.of(allocatedIpAddresses));
         }
 
+        /**
+         * @param totalEgressBytesTransferred Total of the Egress Bytes Transferred in this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalEgressBytesTransferred(Double totalEgressBytesTransferred) {
             $.totalEgressBytesTransferred = totalEgressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param totalIngressBytesTransferred Total of the Ingress Bytes Transferred in this P2S Vpn connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalIngressBytesTransferred(Double totalIngressBytesTransferred) {
             $.totalIngressBytesTransferred = totalIngressBytesTransferred;
             return this;
         }
 
+        /**
+         * @param vpnClientConnectionsCount The total of p2s vpn clients connected at this time to this P2SVpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientConnectionsCount(@Nullable Integer vpnClientConnectionsCount) {
             $.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;

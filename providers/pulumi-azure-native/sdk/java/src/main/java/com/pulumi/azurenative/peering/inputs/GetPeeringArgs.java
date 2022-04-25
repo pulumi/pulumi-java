@@ -19,6 +19,10 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="peeringName", required=true)
     private String peeringName;
 
+    /**
+     * @return The name of the peering.
+     * 
+     */
     public String peeringName() {
         return this.peeringName;
     }
@@ -30,6 +34,10 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

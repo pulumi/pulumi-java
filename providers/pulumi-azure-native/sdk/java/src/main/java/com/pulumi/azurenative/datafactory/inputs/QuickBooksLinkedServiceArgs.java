@@ -35,6 +35,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accessToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
+    /**
+     * @return The access token for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -46,6 +50,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accessTokenSecret")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
+    /**
+     * @return The access token secret for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessTokenSecret() {
         return Optional.ofNullable(this.accessTokenSecret);
     }
@@ -57,6 +65,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -68,6 +80,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="companyId")
     private @Nullable Output<Object> companyId;
 
+    /**
+     * @return The company ID of the QuickBooks company to authorize.
+     * 
+     */
     public Optional<Output<Object>> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -79,6 +95,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -90,6 +110,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectionProperties")
     private @Nullable Output<Object> connectionProperties;
 
+    /**
+     * @return Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Output<Object>> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
@@ -101,6 +125,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="consumerKey")
     private @Nullable Output<Object> consumerKey;
 
+    /**
+     * @return The consumer key for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Output<Object>> consumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
@@ -112,6 +140,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="consumerSecret")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
+    /**
+     * @return The consumer secret for OAuth 1.0 authentication.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> consumerSecret() {
         return Optional.ofNullable(this.consumerSecret);
     }
@@ -123,6 +155,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -134,6 +170,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -145,6 +185,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="endpoint")
     private @Nullable Output<Object> endpoint;
 
+    /**
+     * @return The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+     * 
+     */
     public Optional<Output<Object>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -156,6 +200,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -168,6 +216,11 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;QuickBooks&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -179,6 +232,10 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="useEncryptedEndpoints")
     private @Nullable Output<Object> useEncryptedEndpoints;
 
+    /**
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * 
+     */
     public Optional<Output<Object>> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
@@ -220,156 +277,368 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
             $ = new QuickBooksLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(AzureKeyVaultSecretReferenceArgs accessToken) {
             return accessToken(Either.ofLeft(accessToken));
         }
 
+        /**
+         * @param accessToken The access token for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(SecureStringArgs accessToken) {
             return accessToken(Either.ofRight(accessToken));
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
             $.accessTokenSecret = accessTokenSecret;
             return this;
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
             return accessTokenSecret(Output.of(accessTokenSecret));
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(AzureKeyVaultSecretReferenceArgs accessTokenSecret) {
             return accessTokenSecret(Either.ofLeft(accessTokenSecret));
         }
 
+        /**
+         * @param accessTokenSecret The access token secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenSecret(SecureStringArgs accessTokenSecret) {
             return accessTokenSecret(Either.ofRight(accessTokenSecret));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param companyId The company ID of the QuickBooks company to authorize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyId(@Nullable Output<Object> companyId) {
             $.companyId = companyId;
             return this;
         }
 
+        /**
+         * @param companyId The company ID of the QuickBooks company to authorize.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyId(Object companyId) {
             return companyId(Output.of(companyId));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
             $.connectionProperties = connectionProperties;
             return this;
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(Object connectionProperties) {
             return connectionProperties(Output.of(connectionProperties));
         }
 
+        /**
+         * @param consumerKey The consumer key for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(@Nullable Output<Object> consumerKey) {
             $.consumerKey = consumerKey;
             return this;
         }
 
+        /**
+         * @param consumerKey The consumer key for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerKey(Object consumerKey) {
             return consumerKey(Output.of(consumerKey));
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
             $.consumerSecret = consumerSecret;
             return this;
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
             return consumerSecret(Output.of(consumerSecret));
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(AzureKeyVaultSecretReferenceArgs consumerSecret) {
             return consumerSecret(Either.ofLeft(consumerSecret));
         }
 
+        /**
+         * @param consumerSecret The consumer secret for OAuth 1.0 authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerSecret(SecureStringArgs consumerSecret) {
             return consumerSecret(Either.ofRight(consumerSecret));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param endpoint The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<Object> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Object endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;QuickBooks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;QuickBooks&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
             $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
+        /**
+         * @param useEncryptedEndpoints Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
             return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
         }

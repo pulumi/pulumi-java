@@ -19,6 +19,10 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
     @Import(name="applicationGatewayName", required=true)
     private String applicationGatewayName;
 
+    /**
+     * @return The name of the application gateway.
+     * 
+     */
     public String applicationGatewayName() {
         return this.applicationGatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
             $ = new GetApplicationGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGatewayName The name of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayName(String applicationGatewayName) {
             $.applicationGatewayName = applicationGatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

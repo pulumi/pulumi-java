@@ -24,6 +24,10 @@ public final class HTTPHeaderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The header field name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class HTTPHeaderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The header field value
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class HTTPHeaderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HTTPHeaderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The header field name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The header field name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The header field value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The header field value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

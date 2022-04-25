@@ -26,6 +26,10 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
     @Import(name="gradeName")
     private @Nullable String gradeName;
 
+    /**
+     * @return Name of the grade.
+     * 
+     */
     public Optional<String> gradeName() {
         return Optional.ofNullable(this.gradeName);
     }
@@ -37,6 +41,10 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
     @Import(name="maxScoreThreshold")
     private @Nullable Integer maxScoreThreshold;
 
+    /**
+     * @return Maximum score threshold.
+     * 
+     */
     public Optional<Integer> maxScoreThreshold() {
         return Optional.ofNullable(this.maxScoreThreshold);
     }
@@ -48,6 +56,10 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
     @Import(name="minScoreThreshold")
     private @Nullable Integer minScoreThreshold;
 
+    /**
+     * @return Minimum score threshold.
+     * 
+     */
     public Optional<Integer> minScoreThreshold() {
         return Optional.ofNullable(this.minScoreThreshold);
     }
@@ -78,16 +90,34 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
             $ = new PredictionResponseGrades(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gradeName Name of the grade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gradeName(@Nullable String gradeName) {
             $.gradeName = gradeName;
             return this;
         }
 
+        /**
+         * @param maxScoreThreshold Maximum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
             $.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
 
+        /**
+         * @param minScoreThreshold Minimum score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
             $.minScoreThreshold = minScoreThreshold;
             return this;

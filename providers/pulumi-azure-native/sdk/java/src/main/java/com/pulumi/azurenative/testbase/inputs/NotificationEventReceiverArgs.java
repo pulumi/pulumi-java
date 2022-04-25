@@ -27,6 +27,10 @@ public final class NotificationEventReceiverArgs extends com.pulumi.resources.Re
     @Import(name="receiverType")
     private @Nullable Output<String> receiverType;
 
+    /**
+     * @return The type of the notification event receiver.
+     * 
+     */
     public Optional<Output<String>> receiverType() {
         return Optional.ofNullable(this.receiverType);
     }
@@ -38,6 +42,10 @@ public final class NotificationEventReceiverArgs extends com.pulumi.resources.Re
     @Import(name="receiverValue")
     private @Nullable Output<NotificationReceiverValueArgs> receiverValue;
 
+    /**
+     * @return The notification event receiver value.
+     * 
+     */
     public Optional<Output<NotificationReceiverValueArgs>> receiverValue() {
         return Optional.ofNullable(this.receiverValue);
     }
@@ -67,20 +75,44 @@ public final class NotificationEventReceiverArgs extends com.pulumi.resources.Re
             $ = new NotificationEventReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiverType The type of the notification event receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverType(@Nullable Output<String> receiverType) {
             $.receiverType = receiverType;
             return this;
         }
 
+        /**
+         * @param receiverType The type of the notification event receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverType(String receiverType) {
             return receiverType(Output.of(receiverType));
         }
 
+        /**
+         * @param receiverValue The notification event receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverValue(@Nullable Output<NotificationReceiverValueArgs> receiverValue) {
             $.receiverValue = receiverValue;
             return this;
         }
 
+        /**
+         * @param receiverValue The notification event receiver value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverValue(NotificationReceiverValueArgs receiverValue) {
             return receiverValue(Output.of(receiverValue));
         }

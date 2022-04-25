@@ -23,6 +23,10 @@ public final class I18nConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="root", required=true)
     private String root;
 
+    /**
+     * @return The user-supplied path where country and language specific content will be looked for within the public directory.
+     * 
+     */
     public String root() {
         return this.root;
     }
@@ -51,6 +55,12 @@ public final class I18nConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new I18nConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param root The user-supplied path where country and language specific content will be looked for within the public directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder root(String root) {
             $.root = root;
             return this;

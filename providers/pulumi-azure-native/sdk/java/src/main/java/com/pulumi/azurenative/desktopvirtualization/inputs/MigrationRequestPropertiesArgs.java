@@ -28,6 +28,10 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
     @Import(name="migrationPath")
     private @Nullable Output<String> migrationPath;
 
+    /**
+     * @return The path to the legacy object to migrate.
+     * 
+     */
     public Optional<Output<String>> migrationPath() {
         return Optional.ofNullable(this.migrationPath);
     }
@@ -39,6 +43,10 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
     @Import(name="operation")
     private @Nullable Output<Either<String,Operation>> operation;
 
+    /**
+     * @return The type of operation for migration.
+     * 
+     */
     public Optional<Output<Either<String,Operation>>> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -68,28 +76,64 @@ public final class MigrationRequestPropertiesArgs extends com.pulumi.resources.R
             $ = new MigrationRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrationPath The path to the legacy object to migrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPath(@Nullable Output<String> migrationPath) {
             $.migrationPath = migrationPath;
             return this;
         }
 
+        /**
+         * @param migrationPath The path to the legacy object to migrate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPath(String migrationPath) {
             return migrationPath(Output.of(migrationPath));
         }
 
+        /**
+         * @param operation The type of operation for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable Output<Either<String,Operation>> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation The type of operation for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Either<String,Operation> operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param operation The type of operation for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Either.ofLeft(operation));
         }
 
+        /**
+         * @param operation The type of operation for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Operation operation) {
             return operation(Either.ofRight(operation));
         }

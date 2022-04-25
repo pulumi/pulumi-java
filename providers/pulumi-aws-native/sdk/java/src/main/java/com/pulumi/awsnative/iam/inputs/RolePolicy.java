@@ -23,6 +23,10 @@ public final class RolePolicy extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyDocument", required=true)
     private String policyDocument;
 
+    /**
+     * @return The policy document.
+     * 
+     */
     public String policyDocument() {
         return this.policyDocument;
     }
@@ -34,6 +38,10 @@ public final class RolePolicy extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return The friendly name (not ARN) identifying the policy.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -63,11 +71,23 @@ public final class RolePolicy extends com.pulumi.resources.InvokeArgs {
             $ = new RolePolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyDocument The policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(String policyDocument) {
             $.policyDocument = policyDocument;
             return this;
         }
 
+        /**
+         * @param policyName The friendly name (not ARN) identifying the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;

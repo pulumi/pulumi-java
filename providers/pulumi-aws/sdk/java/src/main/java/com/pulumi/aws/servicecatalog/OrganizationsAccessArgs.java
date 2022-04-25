@@ -20,6 +20,10 @@ public final class OrganizationsAccessArgs extends com.pulumi.resources.Resource
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Whether to enable AWS Organizations access.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -48,11 +52,23 @@ public final class OrganizationsAccessArgs extends com.pulumi.resources.Resource
             $ = new OrganizationsAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to enable AWS Organizations access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether to enable AWS Organizations access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

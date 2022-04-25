@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GetDomainMappingResult {
     /**
-     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
+     * @return The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
      */
     private final String apiVersion;
     /**
-     * The kind of resource, in this case &#34;DomainMapping&#34;.
+     * @return The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
      */
     private final String kind;
     /**
-     * Metadata associated with this BuildTemplate.
+     * @return Metadata associated with this BuildTemplate.
      * 
      */
     private final ObjectMetaResponse metadata;
     /**
-     * The spec for this DomainMapping.
+     * @return The spec for this DomainMapping.
      * 
      */
     private final DomainMappingSpecResponse spec;
     /**
-     * The current status of the DomainMapping.
+     * @return The current status of the DomainMapping.
      * 
      */
     private final DomainMappingStatusResponse status;
@@ -53,37 +53,37 @@ public final class GetDomainMappingResult {
     }
 
     /**
-     * The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
+     * @return The API version for this call such as &#34;domains.cloudrun.com/v1&#34;.
      * 
-    */
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * The kind of resource, in this case &#34;DomainMapping&#34;.
+     * @return The kind of resource, in this case &#34;DomainMapping&#34;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Metadata associated with this BuildTemplate.
+     * @return Metadata associated with this BuildTemplate.
      * 
-    */
+     */
     public ObjectMetaResponse metadata() {
         return this.metadata;
     }
     /**
-     * The spec for this DomainMapping.
+     * @return The spec for this DomainMapping.
      * 
-    */
+     */
     public DomainMappingSpecResponse spec() {
         return this.spec;
     }
     /**
-     * The current status of the DomainMapping.
+     * @return The current status of the DomainMapping.
      * 
-    */
+     */
     public DomainMappingStatusResponse status() {
         return this.status;
     }

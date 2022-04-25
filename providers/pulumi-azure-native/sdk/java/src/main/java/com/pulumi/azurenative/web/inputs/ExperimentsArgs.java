@@ -27,6 +27,10 @@ public final class ExperimentsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rampUpRules")
     private @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
+    /**
+     * @return List of ramp-up rules.
+     * 
+     */
     public Optional<Output<List<RampUpRuleArgs>>> rampUpRules() {
         return Optional.ofNullable(this.rampUpRules);
     }
@@ -55,15 +59,33 @@ public final class ExperimentsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExperimentsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rampUpRules List of ramp-up rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpRules(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
             $.rampUpRules = rampUpRules;
             return this;
         }
 
+        /**
+         * @param rampUpRules List of ramp-up rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpRules(List<RampUpRuleArgs> rampUpRules) {
             return rampUpRules(Output.of(rampUpRules));
         }
 
+        /**
+         * @param rampUpRules List of ramp-up rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rampUpRules(RampUpRuleArgs... rampUpRules) {
             return rampUpRules(List.of(rampUpRules));
         }

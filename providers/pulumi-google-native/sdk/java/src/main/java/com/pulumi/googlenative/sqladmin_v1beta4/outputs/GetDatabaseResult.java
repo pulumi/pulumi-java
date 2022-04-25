@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GetDatabaseResult {
     /**
-     * The Cloud SQL charset value.
+     * @return The Cloud SQL charset value.
      * 
      */
     private final String charset;
     /**
-     * The Cloud SQL collation value.
+     * @return The Cloud SQL collation value.
      * 
      */
     private final String collation;
     /**
-     * The name of the Cloud SQL instance. This does not include the project ID.
+     * @return The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
     private final String instance;
     /**
-     * This is always `sql#database`.
+     * @return This is always `sql#database`.
      * 
      */
     private final String kind;
     /**
-     * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+     * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
      */
     private final String name;
     /**
-     * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+     * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
      */
     private final String project;
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
      */
     private final String selfLink;
@@ -68,51 +68,51 @@ public final class GetDatabaseResult {
     }
 
     /**
-     * The Cloud SQL charset value.
+     * @return The Cloud SQL charset value.
      * 
-    */
+     */
     public String charset() {
         return this.charset;
     }
     /**
-     * The Cloud SQL collation value.
+     * @return The Cloud SQL collation value.
      * 
-    */
+     */
     public String collation() {
         return this.collation;
     }
     /**
-     * The name of the Cloud SQL instance. This does not include the project ID.
+     * @return The name of the Cloud SQL instance. This does not include the project ID.
      * 
-    */
+     */
     public String instance() {
         return this.instance;
     }
     /**
-     * This is always `sql#database`.
+     * @return This is always `sql#database`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+     * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+     * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }
     /**
-     * The URI of this resource.
+     * @return The URI of this resource.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }

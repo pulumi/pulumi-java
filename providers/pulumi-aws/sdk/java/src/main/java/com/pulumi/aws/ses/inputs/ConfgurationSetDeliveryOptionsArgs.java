@@ -22,6 +22,10 @@ public final class ConfgurationSetDeliveryOptionsArgs extends com.pulumi.resourc
     @Import(name="tlsPolicy")
     private @Nullable Output<String> tlsPolicy;
 
+    /**
+     * @return Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is `Require`, messages are only delivered if a TLS connection can be established. If the value is `Optional`, messages can be delivered in plain text if a TLS connection can&#39;t be established. Valid values: `Require` or `Optional`. Defaults to `Optional`.
+     * 
+     */
     public Optional<Output<String>> tlsPolicy() {
         return Optional.ofNullable(this.tlsPolicy);
     }
@@ -50,11 +54,23 @@ public final class ConfgurationSetDeliveryOptionsArgs extends com.pulumi.resourc
             $ = new ConfgurationSetDeliveryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tlsPolicy Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is `Require`, messages are only delivered if a TLS connection can be established. If the value is `Optional`, messages can be delivered in plain text if a TLS connection can&#39;t be established. Valid values: `Require` or `Optional`. Defaults to `Optional`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsPolicy(@Nullable Output<String> tlsPolicy) {
             $.tlsPolicy = tlsPolicy;
             return this;
         }
 
+        /**
+         * @param tlsPolicy Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is `Require`, messages are only delivered if a TLS connection can be established. If the value is `Optional`, messages can be delivered in plain text if a TLS connection can&#39;t be established. Valid values: `Require` or `Optional`. Defaults to `Optional`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsPolicy(String tlsPolicy) {
             return tlsPolicy(Output.of(tlsPolicy));
         }

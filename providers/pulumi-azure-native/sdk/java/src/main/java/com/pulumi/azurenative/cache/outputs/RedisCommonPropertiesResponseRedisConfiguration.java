@@ -12,57 +12,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RedisCommonPropertiesResponseRedisConfiguration {
     /**
-     * First storage account connection string
+     * @return First storage account connection string
      * 
      */
     private final @Nullable String aofStorageConnectionString0;
     /**
-     * Second storage account connection string
+     * @return Second storage account connection string
      * 
      */
     private final @Nullable String aofStorageConnectionString1;
     /**
-     * The max clients config
+     * @return The max clients config
      * 
      */
     private final String maxclients;
     /**
-     * Value in megabytes reserved for fragmentation per shard
+     * @return Value in megabytes reserved for fragmentation per shard
      * 
      */
     private final @Nullable String maxfragmentationmemoryReserved;
     /**
-     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
     private final @Nullable String maxmemoryDelta;
     /**
-     * The eviction strategy used when your data won&#39;t fit within its memory limit.
+     * @return The eviction strategy used when your data won&#39;t fit within its memory limit.
      * 
      */
     private final @Nullable String maxmemoryPolicy;
     /**
-     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
     private final @Nullable String maxmemoryReserved;
     /**
-     * Specifies whether the rdb backup is enabled
+     * @return Specifies whether the rdb backup is enabled
      * 
      */
     private final @Nullable String rdbBackupEnabled;
     /**
-     * Specifies the frequency for creating rdb backup
+     * @return Specifies the frequency for creating rdb backup
      * 
      */
     private final @Nullable String rdbBackupFrequency;
     /**
-     * Specifies the maximum number of snapshots for rdb backup
+     * @return Specifies the maximum number of snapshots for rdb backup
      * 
      */
     private final @Nullable String rdbBackupMaxSnapshotCount;
     /**
-     * The storage account connection string for storing rdb file
+     * @return The storage account connection string for storing rdb file
      * 
      */
     private final @Nullable String rdbStorageConnectionString;
@@ -94,79 +94,79 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
     }
 
     /**
-     * First storage account connection string
+     * @return First storage account connection string
      * 
-    */
+     */
     public Optional<String> aofStorageConnectionString0() {
         return Optional.ofNullable(this.aofStorageConnectionString0);
     }
     /**
-     * Second storage account connection string
+     * @return Second storage account connection string
      * 
-    */
+     */
     public Optional<String> aofStorageConnectionString1() {
         return Optional.ofNullable(this.aofStorageConnectionString1);
     }
     /**
-     * The max clients config
+     * @return The max clients config
      * 
-    */
+     */
     public String maxclients() {
         return this.maxclients;
     }
     /**
-     * Value in megabytes reserved for fragmentation per shard
+     * @return Value in megabytes reserved for fragmentation per shard
      * 
-    */
+     */
     public Optional<String> maxfragmentationmemoryReserved() {
         return Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
     /**
-     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
-    */
+     */
     public Optional<String> maxmemoryDelta() {
         return Optional.ofNullable(this.maxmemoryDelta);
     }
     /**
-     * The eviction strategy used when your data won&#39;t fit within its memory limit.
+     * @return The eviction strategy used when your data won&#39;t fit within its memory limit.
      * 
-    */
+     */
     public Optional<String> maxmemoryPolicy() {
         return Optional.ofNullable(this.maxmemoryPolicy);
     }
     /**
-     * Value in megabytes reserved for non-cache usage per shard e.g. failover.
+     * @return Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
-    */
+     */
     public Optional<String> maxmemoryReserved() {
         return Optional.ofNullable(this.maxmemoryReserved);
     }
     /**
-     * Specifies whether the rdb backup is enabled
+     * @return Specifies whether the rdb backup is enabled
      * 
-    */
+     */
     public Optional<String> rdbBackupEnabled() {
         return Optional.ofNullable(this.rdbBackupEnabled);
     }
     /**
-     * Specifies the frequency for creating rdb backup
+     * @return Specifies the frequency for creating rdb backup
      * 
-    */
+     */
     public Optional<String> rdbBackupFrequency() {
         return Optional.ofNullable(this.rdbBackupFrequency);
     }
     /**
-     * Specifies the maximum number of snapshots for rdb backup
+     * @return Specifies the maximum number of snapshots for rdb backup
      * 
-    */
+     */
     public Optional<String> rdbBackupMaxSnapshotCount() {
         return Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
     /**
-     * The storage account connection string for storing rdb file
+     * @return The storage account connection string for storing rdb file
      * 
-    */
+     */
     public Optional<String> rdbStorageConnectionString() {
         return Optional.ofNullable(this.rdbStorageConnectionString);
     }

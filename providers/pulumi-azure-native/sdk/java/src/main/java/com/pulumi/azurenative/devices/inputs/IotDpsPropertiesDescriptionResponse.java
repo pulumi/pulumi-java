@@ -30,6 +30,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="allocationPolicy")
     private @Nullable String allocationPolicy;
 
+    /**
+     * @return Allocation policy to be used by this provisioning service.
+     * 
+     */
     public Optional<String> allocationPolicy() {
         return Optional.ofNullable(this.allocationPolicy);
     }
@@ -41,6 +45,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="authorizationPolicies")
     private @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
 
+    /**
+     * @return List of authorization keys for a provisioning service.
+     * 
+     */
     public Optional<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse>> authorizationPolicies() {
         return Optional.ofNullable(this.authorizationPolicies);
     }
@@ -52,6 +60,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="deviceProvisioningHostName", required=true)
     private String deviceProvisioningHostName;
 
+    /**
+     * @return Device endpoint for this provisioning service.
+     * 
+     */
     public String deviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
     }
@@ -63,6 +75,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="idScope", required=true)
     private String idScope;
 
+    /**
+     * @return Unique identifier of this provisioning service.
+     * 
+     */
     public String idScope() {
         return this.idScope;
     }
@@ -74,6 +90,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="iotHubs")
     private @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
 
+    /**
+     * @return List of IoT hubs associated with this provisioning service.
+     * 
+     */
     public Optional<List<IotHubDefinitionDescriptionResponse>> iotHubs() {
         return Optional.ofNullable(this.iotHubs);
     }
@@ -85,6 +105,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="ipFilterRules")
     private @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
 
+    /**
+     * @return The IP filter rules.
+     * 
+     */
     public Optional<List<TargetIpFilterRuleResponse>> ipFilterRules() {
         return Optional.ofNullable(this.ipFilterRules);
     }
@@ -96,6 +120,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="privateEndpointConnections")
     private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections created on this IotHub
+     * 
+     */
     public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -107,6 +135,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The ARM provisioning state of the provisioning service.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -118,6 +150,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Whether requests from Public Network are allowed
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -129,6 +165,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="serviceOperationsHostName", required=true)
     private String serviceOperationsHostName;
 
+    /**
+     * @return Service endpoint for provisioning service.
+     * 
+     */
     public String serviceOperationsHostName() {
         return this.serviceOperationsHostName;
     }
@@ -140,6 +180,10 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Current state of the provisioning service.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -178,72 +222,162 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
             $ = new IotDpsPropertiesDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationPolicy Allocation policy to be used by this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationPolicy(@Nullable String allocationPolicy) {
             $.allocationPolicy = allocationPolicy;
             return this;
         }
 
+        /**
+         * @param authorizationPolicies List of authorization keys for a provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
             $.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
+        /**
+         * @param authorizationPolicies List of authorization keys for a provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse... authorizationPolicies) {
             return authorizationPolicies(List.of(authorizationPolicies));
         }
 
+        /**
+         * @param deviceProvisioningHostName Device endpoint for this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceProvisioningHostName(String deviceProvisioningHostName) {
             $.deviceProvisioningHostName = deviceProvisioningHostName;
             return this;
         }
 
+        /**
+         * @param idScope Unique identifier of this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idScope(String idScope) {
             $.idScope = idScope;
             return this;
         }
 
+        /**
+         * @param iotHubs List of IoT hubs associated with this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
             $.iotHubs = iotHubs;
             return this;
         }
 
+        /**
+         * @param iotHubs List of IoT hubs associated with this provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubs(IotHubDefinitionDescriptionResponse... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
             $.ipFilterRules = ipFilterRules;
             return this;
         }
 
+        /**
+         * @param ipFilterRules The IP filter rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFilterRules(TargetIpFilterRuleResponse... ipFilterRules) {
             return ipFilterRules(List.of(ipFilterRules));
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Private endpoint connections created on this IotHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState The ARM provisioning state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether requests from Public Network are allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param serviceOperationsHostName Service endpoint for provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceOperationsHostName(String serviceOperationsHostName) {
             $.serviceOperationsHostName = serviceOperationsHostName;
             return this;
         }
 
+        /**
+         * @param state Current state of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

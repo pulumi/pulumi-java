@@ -31,6 +31,10 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="compressionProperties")
     private @Nullable Output<Object> compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Output<Object>> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -43,6 +47,11 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;BinaryReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -72,20 +81,46 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new BinaryReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(Object compressionProperties) {
             return compressionProperties(Output.of(compressionProperties));
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;BinaryReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;BinaryReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

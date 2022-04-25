@@ -26,6 +26,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,IdentityType>> type;
 
+    /**
+     * @return The type of managed service identity.
+     * 
+     */
     public Output<Either<String,IdentityType>> type() {
         return this.type;
     }
@@ -54,19 +58,43 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,IdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IdentityType type) {
             return type(Either.ofRight(type));
         }

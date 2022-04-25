@@ -21,6 +21,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -32,6 +36,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return Intended audience for the service principal.
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -43,6 +51,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
     @Import(name="authority")
     private @Nullable String authority;
 
+    /**
+     * @return AAD Authority URL which was used to request the token for the service principal.
+     * 
+     */
     public Optional<String> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -54,6 +66,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -65,6 +81,10 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -97,26 +117,56 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends com.pulumi.re
             $ = new CollectorBodyAgentSpnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param audience Intended audience for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param authority AAD Authority URL which was used to request the token for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable String authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param objectId Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

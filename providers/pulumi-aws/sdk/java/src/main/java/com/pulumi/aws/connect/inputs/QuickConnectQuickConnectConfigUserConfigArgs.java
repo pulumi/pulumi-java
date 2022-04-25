@@ -20,6 +20,10 @@ public final class QuickConnectQuickConnectConfigUserConfigArgs extends com.pulu
     @Import(name="contactFlowId", required=true)
     private Output<String> contactFlowId;
 
+    /**
+     * @return Specifies the identifier of the contact flow.
+     * 
+     */
     public Output<String> contactFlowId() {
         return this.contactFlowId;
     }
@@ -31,6 +35,10 @@ public final class QuickConnectQuickConnectConfigUserConfigArgs extends com.pulu
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return Specifies the identifier for the user.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -60,20 +68,44 @@ public final class QuickConnectQuickConnectConfigUserConfigArgs extends com.pulu
             $ = new QuickConnectQuickConnectConfigUserConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(Output<String> contactFlowId) {
             $.contactFlowId = contactFlowId;
             return this;
         }
 
+        /**
+         * @param contactFlowId Specifies the identifier of the contact flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowId(String contactFlowId) {
             return contactFlowId(Output.of(contactFlowId));
         }
 
+        /**
+         * @param userId Specifies the identifier for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId Specifies the identifier for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

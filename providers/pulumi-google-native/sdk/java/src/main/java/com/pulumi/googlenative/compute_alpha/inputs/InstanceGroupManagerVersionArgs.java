@@ -23,6 +23,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="instanceTemplate")
     private @Nullable Output<String> instanceTemplate;
 
+    /**
+     * @return The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
+     * 
+     */
     public Optional<Output<String>> instanceTemplate() {
         return Optional.ofNullable(this.instanceTemplate);
     }
@@ -34,6 +38,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the version. Unique among all versions in the scope of this managed instance group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
     @Import(name="targetSize")
     private @Nullable Output<FixedOrPercentArgs> targetSize;
 
+    /**
+     * @return Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
+     * 
+     */
     public Optional<Output<FixedOrPercentArgs>> targetSize() {
         return Optional.ofNullable(this.targetSize);
     }
@@ -75,29 +87,65 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
             $ = new InstanceGroupManagerVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceTemplate The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplate(@Nullable Output<String> instanceTemplate) {
             $.instanceTemplate = instanceTemplate;
             return this;
         }
 
+        /**
+         * @param instanceTemplate The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group&#39;s updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTemplate(String instanceTemplate) {
             return instanceTemplate(Output.of(instanceTemplate));
         }
 
+        /**
+         * @param name Name of the version. Unique among all versions in the scope of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the version. Unique among all versions in the scope of this managed instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetSize Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(@Nullable Output<FixedOrPercentArgs> targetSize) {
             $.targetSize = targetSize;
             return this;
         }
 
+        /**
+         * @param targetSize Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSize(FixedOrPercentArgs targetSize) {
             return targetSize(Output.of(targetSize));
         }

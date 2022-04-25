@@ -25,6 +25,10 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="preferredLocation", required=true)
     private String preferredLocation;
 
+    /**
+     * @return The preferred location of the cloud shell.
+     * 
+     */
     public String preferredLocation() {
         return this.preferredLocation;
     }
@@ -36,6 +40,10 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="preferredOsType", required=true)
     private String preferredOsType;
 
+    /**
+     * @return The operating system type of the cloud shell. Deprecated, use preferredShellType.
+     * 
+     */
     public String preferredOsType() {
         return this.preferredOsType;
     }
@@ -47,6 +55,10 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="preferredShellType", required=true)
     private String preferredShellType;
 
+    /**
+     * @return The shell type of the cloud shell.
+     * 
+     */
     public String preferredShellType() {
         return this.preferredShellType;
     }
@@ -58,6 +70,10 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageProfile", required=true)
     private StorageProfileResponse storageProfile;
 
+    /**
+     * @return The storage profile of the user settings.
+     * 
+     */
     public StorageProfileResponse storageProfile() {
         return this.storageProfile;
     }
@@ -69,6 +85,10 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="terminalSettings", required=true)
     private TerminalSettingsResponse terminalSettings;
 
+    /**
+     * @return Settings for terminal appearance.
+     * 
+     */
     public TerminalSettingsResponse terminalSettings() {
         return this.terminalSettings;
     }
@@ -101,26 +121,56 @@ public final class UserPropertiesResponse extends com.pulumi.resources.InvokeArg
             $ = new UserPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preferredLocation The preferred location of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredLocation(String preferredLocation) {
             $.preferredLocation = preferredLocation;
             return this;
         }
 
+        /**
+         * @param preferredOsType The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredOsType(String preferredOsType) {
             $.preferredOsType = preferredOsType;
             return this;
         }
 
+        /**
+         * @param preferredShellType The shell type of the cloud shell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredShellType(String preferredShellType) {
             $.preferredShellType = preferredShellType;
             return this;
         }
 
+        /**
+         * @param storageProfile The storage profile of the user settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(StorageProfileResponse storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param terminalSettings Settings for terminal appearance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminalSettings(TerminalSettingsResponse terminalSettings) {
             $.terminalSettings = terminalSettings;
             return this;

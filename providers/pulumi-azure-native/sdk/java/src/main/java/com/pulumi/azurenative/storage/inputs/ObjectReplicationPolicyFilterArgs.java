@@ -27,6 +27,10 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
     @Import(name="minCreationTime")
     private @Nullable Output<String> minCreationTime;
 
+    /**
+     * @return Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
+     * 
+     */
     public Optional<Output<String>> minCreationTime() {
         return Optional.ofNullable(this.minCreationTime);
     }
@@ -38,6 +42,10 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
     @Import(name="prefixMatch")
     private @Nullable Output<List<String>> prefixMatch;
 
+    /**
+     * @return Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+     * 
+     */
     public Optional<Output<List<String>>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -67,24 +75,54 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
             $ = new ObjectReplicationPolicyFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minCreationTime Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCreationTime(@Nullable Output<String> minCreationTime) {
             $.minCreationTime = minCreationTime;
             return this;
         }
 
+        /**
+         * @param minCreationTime Blobs created after the time will be replicated to the destination. It must be in datetime format &#39;yyyy-MM-ddTHH:mm:ssZ&#39;. Example: 2020-02-19T16:05:00Z
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCreationTime(String minCreationTime) {
             return minCreationTime(Output.of(minCreationTime));
         }
 
+        /**
+         * @param prefixMatch Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable Output<List<String>> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(List<String> prefixMatch) {
             return prefixMatch(Output.of(prefixMatch));
         }
 
+        /**
+         * @param prefixMatch Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
         }

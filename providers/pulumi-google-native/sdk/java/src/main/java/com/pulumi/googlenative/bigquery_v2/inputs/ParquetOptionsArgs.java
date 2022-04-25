@@ -22,6 +22,10 @@ public final class ParquetOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableListInference")
     private @Nullable Output<Boolean> enableListInference;
 
+    /**
+     * @return [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+     * 
+     */
     public Optional<Output<Boolean>> enableListInference() {
         return Optional.ofNullable(this.enableListInference);
     }
@@ -33,6 +37,10 @@ public final class ParquetOptionsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enumAsString")
     private @Nullable Output<Boolean> enumAsString;
 
+    /**
+     * @return [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+     * 
+     */
     public Optional<Output<Boolean>> enumAsString() {
         return Optional.ofNullable(this.enumAsString);
     }
@@ -62,20 +70,44 @@ public final class ParquetOptionsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ParquetOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableListInference [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableListInference(@Nullable Output<Boolean> enableListInference) {
             $.enableListInference = enableListInference;
             return this;
         }
 
+        /**
+         * @param enableListInference [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableListInference(Boolean enableListInference) {
             return enableListInference(Output.of(enableListInference));
         }
 
+        /**
+         * @param enumAsString [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumAsString(@Nullable Output<Boolean> enumAsString) {
             $.enumAsString = enumAsString;
             return this;
         }
 
+        /**
+         * @param enumAsString [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumAsString(Boolean enumAsString) {
             return enumAsString(Output.of(enumAsString));
         }

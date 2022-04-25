@@ -25,6 +25,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="incidentId")
     private @Nullable String incidentId;
 
+    /**
+     * @return Incident Id
+     * 
+     */
     public Optional<String> incidentId() {
         return Optional.ofNullable(this.incidentId);
     }
@@ -36,6 +40,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="relationName")
     private @Nullable String relationName;
 
+    /**
+     * @return Relation Name
+     * 
+     */
     public Optional<String> relationName() {
         return Optional.ofNullable(this.relationName);
     }
@@ -47,6 +55,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="severity")
     private @Nullable String severity;
 
+    /**
+     * @return The severity of the incident
+     * 
+     */
     public Optional<String> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -58,6 +70,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return The title of the incident
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -89,21 +105,45 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new IncidentInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentId Incident Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(@Nullable String incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(@Nullable String relationName) {
             $.relationName = relationName;
             return this;
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param title The title of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;

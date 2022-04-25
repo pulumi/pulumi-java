@@ -19,6 +19,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceId", required=true)
     private String deviceId;
 
+    /**
+     * @return The ID of the device.
+     * 
+     */
     public String deviceId() {
         return this.deviceId;
     }
@@ -30,6 +34,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -59,11 +67,23 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceId The ID of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;

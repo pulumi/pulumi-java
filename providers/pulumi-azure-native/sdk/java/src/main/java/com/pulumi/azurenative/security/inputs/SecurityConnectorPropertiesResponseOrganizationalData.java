@@ -26,6 +26,10 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
     @Import(name="excludedAccountIds")
     private @Nullable List<String> excludedAccountIds;
 
+    /**
+     * @return If the multi cloud account is of membership type organization, list of accounts excluded from offering
+     * 
+     */
     public Optional<List<String>> excludedAccountIds() {
         return Optional.ofNullable(this.excludedAccountIds);
     }
@@ -37,6 +41,10 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
     @Import(name="organizationMembershipType")
     private @Nullable String organizationMembershipType;
 
+    /**
+     * @return The multi cloud account&#39;s membership type in the organization
+     * 
+     */
     public Optional<String> organizationMembershipType() {
         return Optional.ofNullable(this.organizationMembershipType);
     }
@@ -48,6 +56,10 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
     @Import(name="parentHierarchyId")
     private @Nullable String parentHierarchyId;
 
+    /**
+     * @return If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
+     * 
+     */
     public Optional<String> parentHierarchyId() {
         return Optional.ofNullable(this.parentHierarchyId);
     }
@@ -59,6 +71,10 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
     @Import(name="stacksetName")
     private @Nullable String stacksetName;
 
+    /**
+     * @return If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
+     * 
+     */
     public Optional<String> stacksetName() {
         return Optional.ofNullable(this.stacksetName);
     }
@@ -90,25 +106,55 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
             $ = new SecurityConnectorPropertiesResponseOrganizationalData(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedAccountIds If the multi cloud account is of membership type organization, list of accounts excluded from offering
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
             $.excludedAccountIds = excludedAccountIds;
             return this;
         }
 
+        /**
+         * @param excludedAccountIds If the multi cloud account is of membership type organization, list of accounts excluded from offering
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedAccountIds(String... excludedAccountIds) {
             return excludedAccountIds(List.of(excludedAccountIds));
         }
 
+        /**
+         * @param organizationMembershipType The multi cloud account&#39;s membership type in the organization
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationMembershipType(@Nullable String organizationMembershipType) {
             $.organizationMembershipType = organizationMembershipType;
             return this;
         }
 
+        /**
+         * @param parentHierarchyId If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             $.parentHierarchyId = parentHierarchyId;
             return this;
         }
 
+        /**
+         * @param stacksetName If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
+         * 
+         * @return builder
+         * 
+         */
         public Builder stacksetName(@Nullable String stacksetName) {
             $.stacksetName = stacksetName;
             return this;

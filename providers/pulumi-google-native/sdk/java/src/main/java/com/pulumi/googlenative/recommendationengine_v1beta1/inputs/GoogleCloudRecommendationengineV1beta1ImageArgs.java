@@ -27,6 +27,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends com.p
     @Import(name="height")
     private @Nullable Output<Integer> height;
 
+    /**
+     * @return Optional. Height of the image in number of pixels.
+     * 
+     */
     public Optional<Output<Integer>> height() {
         return Optional.ofNullable(this.height);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends com.p
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return URL of the image with a length limit of 5 KiB.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends com.p
     @Import(name="width")
     private @Nullable Output<Integer> width;
 
+    /**
+     * @return Optional. Width of the image in number of pixels.
+     * 
+     */
     public Optional<Output<Integer>> width() {
         return Optional.ofNullable(this.width);
     }
@@ -79,29 +91,65 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends com.p
             $ = new GoogleCloudRecommendationengineV1beta1ImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param height Optional. Height of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(@Nullable Output<Integer> height) {
             $.height = height;
             return this;
         }
 
+        /**
+         * @param height Optional. Height of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder height(Integer height) {
             return height(Output.of(height));
         }
 
+        /**
+         * @param uri URL of the image with a length limit of 5 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URL of the image with a length limit of 5 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param width Optional. Width of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(@Nullable Output<Integer> width) {
             $.width = width;
             return this;
         }
 
+        /**
+         * @param width Optional. Width of the image in number of pixels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder width(Integer width) {
             return width(Output.of(width));
         }

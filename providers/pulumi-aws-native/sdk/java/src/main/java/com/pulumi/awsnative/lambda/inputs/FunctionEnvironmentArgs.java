@@ -26,6 +26,10 @@ public final class FunctionEnvironmentArgs extends com.pulumi.resources.Resource
     @Import(name="variables")
     private @Nullable Output<Object> variables;
 
+    /**
+     * @return Environment variable key-value pairs.
+     * 
+     */
     public Optional<Output<Object>> variables() {
         return Optional.ofNullable(this.variables);
     }
@@ -54,11 +58,23 @@ public final class FunctionEnvironmentArgs extends com.pulumi.resources.Resource
             $ = new FunctionEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param variables Environment variable key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(@Nullable Output<Object> variables) {
             $.variables = variables;
             return this;
         }
 
+        /**
+         * @param variables Environment variable key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variables(Object variables) {
             return variables(Output.of(variables));
         }

@@ -30,6 +30,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -41,6 +45,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="p2SVpnServerConfigRadiusClientRootCertificates")
     private @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
 
+    /**
+     * @return Radius client root certificate of P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>>> p2SVpnServerConfigRadiusClientRootCertificates() {
         return Optional.ofNullable(this.p2SVpnServerConfigRadiusClientRootCertificates);
     }
@@ -63,6 +75,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="p2SVpnServerConfigRadiusServerRootCertificates")
     private @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
 
+    /**
+     * @return Radius Server root certificate of P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>>> p2SVpnServerConfigRadiusServerRootCertificates() {
         return Optional.ofNullable(this.p2SVpnServerConfigRadiusServerRootCertificates);
     }
@@ -74,6 +90,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="p2SVpnServerConfigVpnClientRevokedCertificates")
     private @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
 
+    /**
+     * @return VPN client revoked certificate of P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>>> p2SVpnServerConfigVpnClientRevokedCertificates() {
         return Optional.ofNullable(this.p2SVpnServerConfigVpnClientRevokedCertificates);
     }
@@ -85,6 +105,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="p2SVpnServerConfigVpnClientRootCertificates")
     private @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
 
+    /**
+     * @return VPN client root certificate of P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>>> p2SVpnServerConfigVpnClientRootCertificates() {
         return Optional.ofNullable(this.p2SVpnServerConfigVpnClientRootCertificates);
     }
@@ -96,6 +120,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="p2SVpnServerConfigurationName")
     private @Nullable Output<String> p2SVpnServerConfigurationName;
 
+    /**
+     * @return The name of the P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<String>> p2SVpnServerConfigurationName() {
         return Optional.ofNullable(this.p2SVpnServerConfigurationName);
     }
@@ -107,6 +135,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="radiusServerAddress")
     private @Nullable Output<String> radiusServerAddress;
 
+    /**
+     * @return The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     public Optional<Output<String>> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
@@ -118,6 +150,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="radiusServerSecret")
     private @Nullable Output<String> radiusServerSecret;
 
+    /**
+     * @return The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
+     * 
+     */
     public Optional<Output<String>> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
@@ -129,6 +165,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualWan.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -140,6 +180,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="virtualWanName", required=true)
     private Output<String> virtualWanName;
 
+    /**
+     * @return The name of the VirtualWan.
+     * 
+     */
     public Output<String> virtualWanName() {
         return this.virtualWanName;
     }
@@ -151,6 +195,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="vpnClientIpsecPolicies")
     private @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
+    /**
+     * @return VpnClientIpsecPolicies for P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<IpsecPolicyArgs>>> vpnClientIpsecPolicies() {
         return Optional.ofNullable(this.vpnClientIpsecPolicies);
     }
@@ -162,6 +210,10 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="vpnProtocols")
     private @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 
+    /**
+     * @return VPN protocols for the P2SVpnServerConfiguration.
+     * 
+     */
     public Optional<Output<List<Either<String,VpnGatewayTunnelingProtocol>>>> vpnProtocols() {
         return Optional.ofNullable(this.vpnProtocols);
     }
@@ -202,143 +254,335 @@ public final class P2sVpnServerConfigurationArgs extends com.pulumi.resources.Re
             $ = new P2sVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusClientRootCertificates Radius client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(@Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates) {
             $.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
             return this;
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusClientRootCertificates Radius client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(List<P2SVpnServerConfigRadiusClientRootCertificateArgs> p2SVpnServerConfigRadiusClientRootCertificates) {
             return p2SVpnServerConfigRadiusClientRootCertificates(Output.of(p2SVpnServerConfigRadiusClientRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusClientRootCertificates Radius client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusClientRootCertificates(P2SVpnServerConfigRadiusClientRootCertificateArgs... p2SVpnServerConfigRadiusClientRootCertificates) {
             return p2SVpnServerConfigRadiusClientRootCertificates(List.of(p2SVpnServerConfigRadiusClientRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusServerRootCertificates Radius Server root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(@Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates) {
             $.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
             return this;
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusServerRootCertificates Radius Server root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(List<P2SVpnServerConfigRadiusServerRootCertificateArgs> p2SVpnServerConfigRadiusServerRootCertificates) {
             return p2SVpnServerConfigRadiusServerRootCertificates(Output.of(p2SVpnServerConfigRadiusServerRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigRadiusServerRootCertificates Radius Server root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigRadiusServerRootCertificates(P2SVpnServerConfigRadiusServerRootCertificateArgs... p2SVpnServerConfigRadiusServerRootCertificates) {
             return p2SVpnServerConfigRadiusServerRootCertificates(List.of(p2SVpnServerConfigRadiusServerRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRevokedCertificates VPN client revoked certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(@Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates) {
             $.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
             return this;
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRevokedCertificates VPN client revoked certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(List<P2SVpnServerConfigVpnClientRevokedCertificateArgs> p2SVpnServerConfigVpnClientRevokedCertificates) {
             return p2SVpnServerConfigVpnClientRevokedCertificates(Output.of(p2SVpnServerConfigVpnClientRevokedCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRevokedCertificates VPN client revoked certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRevokedCertificates(P2SVpnServerConfigVpnClientRevokedCertificateArgs... p2SVpnServerConfigVpnClientRevokedCertificates) {
             return p2SVpnServerConfigVpnClientRevokedCertificates(List.of(p2SVpnServerConfigVpnClientRevokedCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRootCertificates VPN client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRootCertificates(@Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates) {
             $.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
             return this;
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRootCertificates VPN client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRootCertificates(List<P2SVpnServerConfigVpnClientRootCertificateArgs> p2SVpnServerConfigVpnClientRootCertificates) {
             return p2SVpnServerConfigVpnClientRootCertificates(Output.of(p2SVpnServerConfigVpnClientRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigVpnClientRootCertificates VPN client root certificate of P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigVpnClientRootCertificates(P2SVpnServerConfigVpnClientRootCertificateArgs... p2SVpnServerConfigVpnClientRootCertificates) {
             return p2SVpnServerConfigVpnClientRootCertificates(List.of(p2SVpnServerConfigVpnClientRootCertificates));
         }
 
+        /**
+         * @param p2SVpnServerConfigurationName The name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigurationName(@Nullable Output<String> p2SVpnServerConfigurationName) {
             $.p2SVpnServerConfigurationName = p2SVpnServerConfigurationName;
             return this;
         }
 
+        /**
+         * @param p2SVpnServerConfigurationName The name of the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder p2SVpnServerConfigurationName(String p2SVpnServerConfigurationName) {
             return p2SVpnServerConfigurationName(Output.of(p2SVpnServerConfigurationName));
         }
 
+        /**
+         * @param radiusServerAddress The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(@Nullable Output<String> radiusServerAddress) {
             $.radiusServerAddress = radiusServerAddress;
             return this;
         }
 
+        /**
+         * @param radiusServerAddress The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(String radiusServerAddress) {
             return radiusServerAddress(Output.of(radiusServerAddress));
         }
 
+        /**
+         * @param radiusServerSecret The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
             $.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
+        /**
+         * @param radiusServerSecret The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(String radiusServerSecret) {
             return radiusServerSecret(Output.of(radiusServerSecret));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualWanName The name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWanName(Output<String> virtualWanName) {
             $.virtualWanName = virtualWanName;
             return this;
         }
 
+        /**
+         * @param virtualWanName The name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWanName(String virtualWanName) {
             return virtualWanName(Output.of(virtualWanName));
         }
 
+        /**
+         * @param vpnClientIpsecPolicies VpnClientIpsecPolicies for P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientIpsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies) {
             $.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
 
+        /**
+         * @param vpnClientIpsecPolicies VpnClientIpsecPolicies for P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientIpsecPolicies(List<IpsecPolicyArgs> vpnClientIpsecPolicies) {
             return vpnClientIpsecPolicies(Output.of(vpnClientIpsecPolicies));
         }
 
+        /**
+         * @param vpnClientIpsecPolicies VpnClientIpsecPolicies for P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnClientIpsecPolicies(IpsecPolicyArgs... vpnClientIpsecPolicies) {
             return vpnClientIpsecPolicies(List.of(vpnClientIpsecPolicies));
         }
 
+        /**
+         * @param vpnProtocols VPN protocols for the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnProtocols(@Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols) {
             $.vpnProtocols = vpnProtocols;
             return this;
         }
 
+        /**
+         * @param vpnProtocols VPN protocols for the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnProtocols(List<Either<String,VpnGatewayTunnelingProtocol>> vpnProtocols) {
             return vpnProtocols(Output.of(vpnProtocols));
         }
 
+        /**
+         * @param vpnProtocols VPN protocols for the P2SVpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnProtocols(Either<String,VpnGatewayTunnelingProtocol>... vpnProtocols) {
             return vpnProtocols(List.of(vpnProtocols));
         }

@@ -28,6 +28,10 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return The e-mail address of the contact.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -39,6 +43,10 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone")
     private @Nullable Output<String> phone;
 
+    /**
+     * @return The phone number of the contact.
+     * 
+     */
     public Optional<Output<String>> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -50,6 +58,10 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<Either<String,Role>> role;
 
+    /**
+     * @return The role of the contact.
+     * 
+     */
     public Optional<Output<Either<String,Role>>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -80,37 +92,85 @@ public final class ContactDetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The e-mail address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The e-mail address of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param phone The phone number of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone The phone number of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param role The role of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<Either<String,Role>> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Either<String,Role> role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param role The role of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Either.ofLeft(role));
         }
 
+        /**
+         * @param role The role of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Role role) {
             return role(Either.ofRight(role));
         }

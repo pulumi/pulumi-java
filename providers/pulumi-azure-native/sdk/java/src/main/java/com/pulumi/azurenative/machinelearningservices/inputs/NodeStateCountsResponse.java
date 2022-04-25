@@ -23,6 +23,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="idleNodeCount", required=true)
     private Integer idleNodeCount;
 
+    /**
+     * @return Number of compute nodes in idle state.
+     * 
+     */
     public Integer idleNodeCount() {
         return this.idleNodeCount;
     }
@@ -34,6 +38,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="leavingNodeCount", required=true)
     private Integer leavingNodeCount;
 
+    /**
+     * @return Number of compute nodes which are leaving the amlCompute.
+     * 
+     */
     public Integer leavingNodeCount() {
         return this.leavingNodeCount;
     }
@@ -45,6 +53,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="preemptedNodeCount", required=true)
     private Integer preemptedNodeCount;
 
+    /**
+     * @return Number of compute nodes which are in preempted state.
+     * 
+     */
     public Integer preemptedNodeCount() {
         return this.preemptedNodeCount;
     }
@@ -56,6 +68,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="preparingNodeCount", required=true)
     private Integer preparingNodeCount;
 
+    /**
+     * @return Number of compute nodes which are being prepared.
+     * 
+     */
     public Integer preparingNodeCount() {
         return this.preparingNodeCount;
     }
@@ -67,6 +83,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="runningNodeCount", required=true)
     private Integer runningNodeCount;
 
+    /**
+     * @return Number of compute nodes which are running jobs.
+     * 
+     */
     public Integer runningNodeCount() {
         return this.runningNodeCount;
     }
@@ -78,6 +98,10 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="unusableNodeCount", required=true)
     private Integer unusableNodeCount;
 
+    /**
+     * @return Number of compute nodes which are in unusable state.
+     * 
+     */
     public Integer unusableNodeCount() {
         return this.unusableNodeCount;
     }
@@ -111,31 +135,67 @@ public final class NodeStateCountsResponse extends com.pulumi.resources.InvokeAr
             $ = new NodeStateCountsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idleNodeCount Number of compute nodes in idle state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleNodeCount(Integer idleNodeCount) {
             $.idleNodeCount = idleNodeCount;
             return this;
         }
 
+        /**
+         * @param leavingNodeCount Number of compute nodes which are leaving the amlCompute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder leavingNodeCount(Integer leavingNodeCount) {
             $.leavingNodeCount = leavingNodeCount;
             return this;
         }
 
+        /**
+         * @param preemptedNodeCount Number of compute nodes which are in preempted state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptedNodeCount(Integer preemptedNodeCount) {
             $.preemptedNodeCount = preemptedNodeCount;
             return this;
         }
 
+        /**
+         * @param preparingNodeCount Number of compute nodes which are being prepared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preparingNodeCount(Integer preparingNodeCount) {
             $.preparingNodeCount = preparingNodeCount;
             return this;
         }
 
+        /**
+         * @param runningNodeCount Number of compute nodes which are running jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runningNodeCount(Integer runningNodeCount) {
             $.runningNodeCount = runningNodeCount;
             return this;
         }
 
+        /**
+         * @param unusableNodeCount Number of compute nodes which are in unusable state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unusableNodeCount(Integer unusableNodeCount) {
             $.unusableNodeCount = unusableNodeCount;
             return this;

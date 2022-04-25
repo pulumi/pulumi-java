@@ -27,6 +27,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizations")
     private @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
+    /**
+     * @return The workspace provider authorizations.
+     * 
+     */
     public Optional<Output<List<WorkspaceProviderAuthorizationArgs>>> authorizations() {
         return Optional.ofNullable(this.authorizations);
     }
@@ -38,6 +42,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceGroupId", required=true)
     private Output<String> managedResourceGroupId;
 
+    /**
+     * @return The managed resource group Id.
+     * 
+     */
     public Output<String> managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
@@ -60,6 +72,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<WorkspaceCustomParametersArgs> parameters;
 
+    /**
+     * @return The workspace&#39;s custom parameters.
+     * 
+     */
     public Optional<Output<WorkspaceCustomParametersArgs>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -71,6 +87,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -82,6 +102,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The SKU of the resource.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -93,6 +117,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uiDefinitionUri")
     private @Nullable Output<String> uiDefinitionUri;
 
+    /**
+     * @return The blob URI where the UI definition file is located.
+     * 
+     */
     public Optional<Output<String>> uiDefinitionUri() {
         return Optional.ofNullable(this.uiDefinitionUri);
     }
@@ -115,6 +147,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
     private @Nullable Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceName() {
         return Optional.ofNullable(this.workspaceName);
     }
@@ -151,87 +187,201 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizations The workspace provider authorizations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(@Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations) {
             $.authorizations = authorizations;
             return this;
         }
 
+        /**
+         * @param authorizations The workspace provider authorizations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(List<WorkspaceProviderAuthorizationArgs> authorizations) {
             return authorizations(Output.of(authorizations));
         }
 
+        /**
+         * @param authorizations The workspace provider authorizations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(WorkspaceProviderAuthorizationArgs... authorizations) {
             return authorizations(List.of(authorizations));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedResourceGroupId The managed resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceGroupId(Output<String> managedResourceGroupId) {
             $.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
 
+        /**
+         * @param managedResourceGroupId The managed resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceGroupId(String managedResourceGroupId) {
             return managedResourceGroupId(Output.of(managedResourceGroupId));
         }
 
+        /**
+         * @param parameters The workspace&#39;s custom parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<WorkspaceCustomParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The workspace&#39;s custom parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(WorkspaceCustomParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param uiDefinitionUri The blob URI where the UI definition file is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uiDefinitionUri(@Nullable Output<String> uiDefinitionUri) {
             $.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
 
+        /**
+         * @param uiDefinitionUri The blob URI where the UI definition file is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uiDefinitionUri(String uiDefinitionUri) {
             return uiDefinitionUri(Output.of(uiDefinitionUri));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

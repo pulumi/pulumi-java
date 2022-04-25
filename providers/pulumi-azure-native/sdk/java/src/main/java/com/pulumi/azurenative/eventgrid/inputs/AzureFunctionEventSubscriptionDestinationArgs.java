@@ -29,6 +29,11 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of the endpoint for the event subscription destination.
+     * Expected value is &#39;AzureFunction&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -40,6 +45,10 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
     @Import(name="maxEventsPerBatch")
     private @Nullable Output<Integer> maxEventsPerBatch;
 
+    /**
+     * @return Maximum number of events per batch.
+     * 
+     */
     public Optional<Output<Integer>> maxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
@@ -51,6 +60,10 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
     @Import(name="preferredBatchSizeInKilobytes")
     private @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
+    /**
+     * @return Preferred batch size in Kilobytes.
+     * 
+     */
     public Optional<Output<Integer>> preferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
@@ -62,6 +75,10 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -93,38 +110,88 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends com.pul
             $ = new AzureFunctionEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;AzureFunction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;AzureFunction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param maxEventsPerBatch Maximum number of events per batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEventsPerBatch(@Nullable Output<Integer> maxEventsPerBatch) {
             $.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
 
+        /**
+         * @param maxEventsPerBatch Maximum number of events per batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEventsPerBatch(Integer maxEventsPerBatch) {
             return maxEventsPerBatch(Output.of(maxEventsPerBatch));
         }
 
+        /**
+         * @param preferredBatchSizeInKilobytes Preferred batch size in Kilobytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBatchSizeInKilobytes(@Nullable Output<Integer> preferredBatchSizeInKilobytes) {
             $.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
 
+        /**
+         * @param preferredBatchSizeInKilobytes Preferred batch size in Kilobytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBatchSizeInKilobytes(Integer preferredBatchSizeInKilobytes) {
             return preferredBatchSizeInKilobytes(Output.of(preferredBatchSizeInKilobytes));
         }
 
+        /**
+         * @param resourceId The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

@@ -21,6 +21,10 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
     @Import(name="configStoreName", required=true)
     private String configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public String configStoreName() {
         return this.configStoreName;
     }
@@ -32,6 +36,10 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The key to retrieve.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -43,6 +51,10 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return The label of the key.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -54,6 +66,10 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
             $ = new ListConfigurationStoreKeyValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param key The key to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param label The label of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

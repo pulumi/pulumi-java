@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KubernetesClusterPropertiesResponse {
     /**
-     * The Azure Service Principal used by Kubernetes
+     * @return The Azure Service Principal used by Kubernetes
      * 
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
@@ -23,9 +23,9 @@ public final class KubernetesClusterPropertiesResponse {
     }
 
     /**
-     * The Azure Service Principal used by Kubernetes
+     * @return The Azure Service Principal used by Kubernetes
      * 
-    */
+     */
     public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }

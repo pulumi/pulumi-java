@@ -12,13 +12,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobHttpTargetOidcToken {
     /**
-     * Audience to be used when generating OIDC token. If not specified,
+     * @return Audience to be used when generating OIDC token. If not specified,
      * the URI specified in target will be used.
      * 
      */
     private final @Nullable String audience;
     /**
-     * Service account email to be used for generating OAuth token.
+     * @return Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
      */
@@ -33,18 +33,18 @@ public final class JobHttpTargetOidcToken {
     }
 
     /**
-     * Audience to be used when generating OIDC token. If not specified,
+     * @return Audience to be used when generating OIDC token. If not specified,
      * the URI specified in target will be used.
      * 
-    */
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
-     * Service account email to be used for generating OAuth token.
+     * @return Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
-    */
+     */
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }

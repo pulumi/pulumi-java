@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties {
     /**
-     * S3 configuration for location to store rejections from magnetic store writes
+     * @return S3 configuration for location to store rejections from magnetic store writes
      * 
      */
     private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
@@ -23,9 +23,9 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     }
 
     /**
-     * S3 configuration for location to store rejections from magnetic store writes
+     * @return S3 configuration for location to store rejections from magnetic store writes
      * 
-    */
+     */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties> s3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }

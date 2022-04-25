@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
     @Import(name="privateEndpointConnectionProxyId", required=true)
     private String privateEndpointConnectionProxyId;
 
+    /**
+     * @return The ID of the private endpoint connection proxy object.
+     * 
+     */
     public String privateEndpointConnectionProxyId() {
         return this.privateEndpointConnectionProxyId;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionProxyArgs extends com.pulumi.reso
             $ = new GetPrivateEndpointConnectionProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionProxyId The ID of the private endpoint connection proxy object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionProxyId(String privateEndpointConnectionProxyId) {
             $.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

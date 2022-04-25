@@ -26,6 +26,10 @@ public final class EnterpriseSkuResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class EnterpriseSkuResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -66,11 +74,23 @@ public final class EnterpriseSkuResponse extends com.pulumi.resources.InvokeArgs
             $ = new EnterpriseSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

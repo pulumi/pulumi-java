@@ -19,6 +19,10 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Data Lake Analytics account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return The name of the Azure storage container for which the SAS token is being requested.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -41,6 +49,10 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
     @Import(name="storageAccountName", required=true)
     private String storageAccountName;
 
+    /**
+     * @return The name of the Azure storage account for which the SAS token is being requested.
+     * 
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
@@ -83,21 +99,45 @@ public final class ListStorageAccountSasTokensArgs extends com.pulumi.resources.
             $ = new ListStorageAccountSasTokensArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the Azure storage container for which the SAS token is being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The name of the Azure storage account for which the SAS token is being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;

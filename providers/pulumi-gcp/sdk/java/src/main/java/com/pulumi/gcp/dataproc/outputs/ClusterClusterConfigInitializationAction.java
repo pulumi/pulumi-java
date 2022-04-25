@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterClusterConfigInitializationAction {
     /**
-     * The script to be executed during initialization of the cluster.
+     * @return The script to be executed during initialization of the cluster.
      * The script must be a GCS file with a gs:// prefix.
      * 
      */
     private final String script;
     /**
-     * The maximum duration (in seconds) which `script` is
+     * @return The maximum duration (in seconds) which `script` is
      * allowed to take to execute its action. GCP will default to a predetermined
      * computed value if not set (currently 300).
      * 
@@ -35,19 +35,19 @@ public final class ClusterClusterConfigInitializationAction {
     }
 
     /**
-     * The script to be executed during initialization of the cluster.
+     * @return The script to be executed during initialization of the cluster.
      * The script must be a GCS file with a gs:// prefix.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }
     /**
-     * The maximum duration (in seconds) which `script` is
+     * @return The maximum duration (in seconds) which `script` is
      * allowed to take to execute its action. GCP will default to a predetermined
      * computed value if not set (currently 300).
      * 
-    */
+     */
     public Optional<Integer> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }

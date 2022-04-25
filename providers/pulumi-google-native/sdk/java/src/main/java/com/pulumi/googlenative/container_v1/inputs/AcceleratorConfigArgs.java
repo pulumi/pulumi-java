@@ -26,6 +26,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorCount")
     private @Nullable Output<String> acceleratorCount;
 
+    /**
+     * @return The number of the accelerator cards exposed to an instance.
+     * 
+     */
     public Optional<Output<String>> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
@@ -37,6 +41,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorType")
     private @Nullable Output<String> acceleratorType;
 
+    /**
+     * @return The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+     * 
+     */
     public Optional<Output<String>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -48,6 +56,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gpuPartitionSize")
     private @Nullable Output<String> gpuPartitionSize;
 
+    /**
+     * @return Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     * 
+     */
     public Optional<Output<String>> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
@@ -78,29 +90,65 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards exposed to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards exposed to an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(String acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorType The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }
 
+        /**
+         * @param gpuPartitionSize Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             $.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
+        /**
+         * @param gpuPartitionSize Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuPartitionSize(String gpuPartitionSize) {
             return gpuPartitionSize(Output.of(gpuPartitionSize));
         }

@@ -21,6 +21,10 @@ public final class WebAclRuleActionAllowCustomRequestHandlingGetArgs extends com
     @Import(name="insertHeaders", required=true)
     private Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
+    /**
+     * @return The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+     * 
+     */
     public Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders() {
         return this.insertHeaders;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleActionAllowCustomRequestHandlingGetArgs extends com
             $ = new WebAclRuleActionAllowCustomRequestHandlingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
             $.insertHeaders = insertHeaders;
             return this;
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
             return insertHeaders(Output.of(insertHeaders));
         }
 
+        /**
+         * @param insertHeaders The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder insertHeaders(WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs... insertHeaders) {
             return insertHeaders(List.of(insertHeaders));
         }

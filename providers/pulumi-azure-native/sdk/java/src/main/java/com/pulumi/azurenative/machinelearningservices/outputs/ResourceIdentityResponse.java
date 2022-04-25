@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceIdentityResponse {
     /**
-     * Client ID that is used when authenticating.
+     * @return Client ID that is used when authenticating.
      * 
      */
     private final String principalId;
     /**
-     * AAD Tenant where this identity lives.
+     * @return AAD Tenant where this identity lives.
      * 
      */
     private final String tenantId;
     /**
-     * Defines values for a ResourceIdentity&#39;s type.
+     * @return Defines values for a ResourceIdentity&#39;s type.
      * 
      */
     private final @Nullable String type;
     /**
-     * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+     * @return Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
      * 
      */
     private final @Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities;
@@ -47,30 +47,30 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * Client ID that is used when authenticating.
+     * @return Client ID that is used when authenticating.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * AAD Tenant where this identity lives.
+     * @return AAD Tenant where this identity lives.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Defines values for a ResourceIdentity&#39;s type.
+     * @return Defines values for a ResourceIdentity&#39;s type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+     * @return Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

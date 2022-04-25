@@ -27,6 +27,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="bidPrice")
     private @Nullable Output<String> bidPrice;
 
+    /**
+     * @return The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+     * 
+     */
     public Optional<Output<String>> bidPrice() {
         return Optional.ofNullable(this.bidPrice);
     }
@@ -38,6 +42,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="bidPriceAsPercentageOfOnDemandPrice")
     private @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
+    /**
+     * @return The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+     * 
+     */
     public Optional<Output<Double>> bidPriceAsPercentageOfOnDemandPrice() {
         return Optional.ofNullable(this.bidPriceAsPercentageOfOnDemandPrice);
     }
@@ -49,6 +57,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="configurations")
     private @Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations;
 
+    /**
+     * @return A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+     * 
+     */
     public Optional<Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>>> configurations() {
         return Optional.ofNullable(this.configurations);
     }
@@ -60,6 +72,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="ebsConfigs")
     private @Nullable Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs;
 
+    /**
+     * @return Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+     * 
+     */
     public Optional<Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>>> ebsConfigs() {
         return Optional.ofNullable(this.ebsConfigs);
     }
@@ -71,6 +87,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="instanceType", required=true)
     private Output<String> instanceType;
 
+    /**
+     * @return An EC2 instance type, such as m4.xlarge.
+     * 
+     */
     public Output<String> instanceType() {
         return this.instanceType;
     }
@@ -82,6 +102,10 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
     @Import(name="weightedCapacity")
     private @Nullable Output<Integer> weightedCapacity;
 
+    /**
+     * @return The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+     * 
+     */
     public Optional<Output<Integer>> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
@@ -115,64 +139,148 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends com.pulumi.res
             $ = new InstanceFleetInstanceTypeConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bidPrice The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
             $.bidPrice = bidPrice;
             return this;
         }
 
+        /**
+         * @param bidPrice The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPrice(String bidPrice) {
             return bidPrice(Output.of(bidPrice));
         }
 
+        /**
+         * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
             $.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
 
+        /**
+         * @param bidPriceAsPercentageOfOnDemandPrice The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bidPriceAsPercentageOfOnDemandPrice(Double bidPriceAsPercentageOfOnDemandPrice) {
             return bidPriceAsPercentageOfOnDemandPrice(Output.of(bidPriceAsPercentageOfOnDemandPrice));
         }
 
+        /**
+         * @param configurations A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(@Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations) {
             $.configurations = configurations;
             return this;
         }
 
+        /**
+         * @param configurations A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(List<InstanceFleetInstanceTypeConfigConfigurationGetArgs> configurations) {
             return configurations(Output.of(configurations));
         }
 
+        /**
+         * @param configurations A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurations(InstanceFleetInstanceTypeConfigConfigurationGetArgs... configurations) {
             return configurations(List.of(configurations));
         }
 
+        /**
+         * @param ebsConfigs Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(@Nullable Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs) {
             $.ebsConfigs = ebsConfigs;
             return this;
         }
 
+        /**
+         * @param ebsConfigs Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs> ebsConfigs) {
             return ebsConfigs(Output.of(ebsConfigs));
         }
 
+        /**
+         * @param ebsConfigs Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfigGetArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
 
+        /**
+         * @param instanceType An EC2 instance type, such as m4.xlarge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType An EC2 instance type, such as m4.xlarge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param weightedCapacity The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(@Nullable Output<Integer> weightedCapacity) {
             $.weightedCapacity = weightedCapacity;
             return this;
         }
 
+        /**
+         * @param weightedCapacity The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(Integer weightedCapacity) {
             return weightedCapacity(Output.of(weightedCapacity));
         }

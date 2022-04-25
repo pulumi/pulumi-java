@@ -27,6 +27,10 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
     @Import(name="collection")
     private @Nullable Output<String> collection;
 
+    /**
+     * @return The collection that identifies this resource within its service.
+     * 
+     */
     public Optional<Output<String>> collection() {
         return Optional.ofNullable(this.collection);
     }
@@ -38,6 +42,10 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
     @Import(name="options")
     private @Nullable Output<OptionsArgs> options;
 
+    /**
+     * @return The options to apply to this resource-level override
+     * 
+     */
     public Optional<Output<OptionsArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -67,20 +75,44 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
             $ = new CollectionOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collection The collection that identifies this resource within its service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(@Nullable Output<String> collection) {
             $.collection = collection;
             return this;
         }
 
+        /**
+         * @param collection The collection that identifies this resource within its service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(String collection) {
             return collection(Output.of(collection));
         }
 
+        /**
+         * @param options The options to apply to this resource-level override
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<OptionsArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The options to apply to this resource-level override
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(OptionsArgs options) {
             return options(Output.of(options));
         }

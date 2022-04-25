@@ -25,6 +25,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The Azure Active Directory principal id.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The Azure Active Directory tenant id.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The Azure Active Directory principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The Azure Active Directory tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The identity type. Set this to &#39;SystemAssigned&#39; in order to automatically create and assign an Azure Active Directory principal for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

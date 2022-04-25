@@ -25,6 +25,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="archiveNameFormat")
     private @Nullable String archiveNameFormat;
 
+    /**
+     * @return Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
+     * 
+     */
     public Optional<String> archiveNameFormat() {
         return Optional.ofNullable(this.archiveNameFormat);
     }
@@ -36,6 +40,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blobContainer")
     private @Nullable String blobContainer;
 
+    /**
+     * @return Blob container Name
+     * 
+     */
     public Optional<String> blobContainer() {
         return Optional.ofNullable(this.blobContainer);
     }
@@ -47,6 +55,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name for capture destination
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +70,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountResourceId")
     private @Nullable String storageAccountResourceId;
 
+    /**
+     * @return Resource id of the storage account to be used to create the blobs
+     * 
+     */
     public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -89,21 +105,45 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveNameFormat Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
             $.archiveNameFormat = archiveNameFormat;
             return this;
         }
 
+        /**
+         * @param blobContainer Blob container Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainer(@Nullable String blobContainer) {
             $.blobContainer = blobContainer;
             return this;
         }
 
+        /**
+         * @param name Name for capture destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param storageAccountResourceId Resource id of the storage account to be used to create the blobs
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             $.storageAccountResourceId = storageAccountResourceId;
             return this;

@@ -27,6 +27,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
     @Import(name="errorCount")
     private @Nullable Output<String> errorCount;
 
+    /**
+     * @return The number of data instances which resulted in errors.
+     * 
+     */
     public Optional<Output<String>> errorCount() {
         return Optional.ofNullable(this.errorCount);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
     @Import(name="nodeHours")
     private @Nullable Output<Double> nodeHours;
 
+    /**
+     * @return Node hours used by the batch prediction job.
+     * 
+     */
     public Optional<Output<Double>> nodeHours() {
         return Optional.ofNullable(this.nodeHours);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
     @Import(name="outputPath")
     private @Nullable Output<String> outputPath;
 
+    /**
+     * @return The output Google Cloud Storage location provided at the job creation time.
+     * 
+     */
     public Optional<Output<String>> outputPath() {
         return Optional.ofNullable(this.outputPath);
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
     @Import(name="predictionCount")
     private @Nullable Output<String> predictionCount;
 
+    /**
+     * @return The number of generated predictions.
+     * 
+     */
     public Optional<Output<String>> predictionCount() {
         return Optional.ofNullable(this.predictionCount);
     }
@@ -91,38 +107,86 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends com.pulumi.reso
             $ = new GoogleCloudMlV1__PredictionOutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCount The number of data instances which resulted in errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(@Nullable Output<String> errorCount) {
             $.errorCount = errorCount;
             return this;
         }
 
+        /**
+         * @param errorCount The number of data instances which resulted in errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCount(String errorCount) {
             return errorCount(Output.of(errorCount));
         }
 
+        /**
+         * @param nodeHours Node hours used by the batch prediction job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeHours(@Nullable Output<Double> nodeHours) {
             $.nodeHours = nodeHours;
             return this;
         }
 
+        /**
+         * @param nodeHours Node hours used by the batch prediction job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeHours(Double nodeHours) {
             return nodeHours(Output.of(nodeHours));
         }
 
+        /**
+         * @param outputPath The output Google Cloud Storage location provided at the job creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(@Nullable Output<String> outputPath) {
             $.outputPath = outputPath;
             return this;
         }
 
+        /**
+         * @param outputPath The output Google Cloud Storage location provided at the job creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputPath(String outputPath) {
             return outputPath(Output.of(outputPath));
         }
 
+        /**
+         * @param predictionCount The number of generated predictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionCount(@Nullable Output<String> predictionCount) {
             $.predictionCount = predictionCount;
             return this;
         }
 
+        /**
+         * @param predictionCount The number of generated predictions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictionCount(String predictionCount) {
             return predictionCount(Output.of(predictionCount));
         }

@@ -27,6 +27,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorCount")
     private @Nullable Output<Integer> acceleratorCount;
 
+    /**
+     * @return The number of the accelerator cards of this type exposed to this instance.
+     * 
+     */
     public Optional<Output<Integer>> acceleratorCount() {
         return Optional.ofNullable(this.acceleratorCount);
     }
@@ -38,6 +42,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="acceleratorTypeUri")
     private @Nullable Output<String> acceleratorTypeUri;
 
+    /**
+     * @return Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes)Examples * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+     * 
+     */
     public Optional<Output<String>> acceleratorTypeUri() {
         return Optional.ofNullable(this.acceleratorTypeUri);
     }
@@ -67,20 +75,44 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards of this type exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
             $.acceleratorCount = acceleratorCount;
             return this;
         }
 
+        /**
+         * @param acceleratorCount The number of the accelerator cards of this type exposed to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorCount(Integer acceleratorCount) {
             return acceleratorCount(Output.of(acceleratorCount));
         }
 
+        /**
+         * @param acceleratorTypeUri Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes)Examples * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorTypeUri(@Nullable Output<String> acceleratorTypeUri) {
             $.acceleratorTypeUri = acceleratorTypeUri;
             return this;
         }
 
+        /**
+         * @param acceleratorTypeUri Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See Compute Engine AcceleratorTypes (https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes)Examples * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 * nvidia-tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, nvidia-tesla-k80.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorTypeUri(String acceleratorTypeUri) {
             return acceleratorTypeUri(Output.of(acceleratorTypeUri));
         }

@@ -28,6 +28,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="accelerators")
     private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs>> accelerators;
 
+    /**
+     * @return Optional. The Compute Engine accelerator configuration for these instances.
+     * 
+     */
     public Optional<Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs>>> accelerators() {
         return Optional.ofNullable(this.accelerators);
     }
@@ -39,6 +43,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="diskConfig")
     private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs> diskConfig;
 
+    /**
+     * @return Optional. Disk option config settings.
+     * 
+     */
     public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs>> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -50,6 +58,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -62,6 +74,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="instanceNames")
     private @Nullable Output<List<String>> instanceNames;
 
+    /**
+     * @return -
+     * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+     * 
+     */
     public Optional<Output<List<String>>> instanceNames() {
         return Optional.ofNullable(this.instanceNames);
     }
@@ -74,6 +91,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="isPreemptible")
     private @Nullable Output<Boolean> isPreemptible;
 
+    /**
+     * @return -
+     * Output only. Specifies that this instance group contains preemptible instances.
+     * 
+     */
     public Optional<Output<Boolean>> isPreemptible() {
         return Optional.ofNullable(this.isPreemptible);
     }
@@ -85,6 +107,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -97,6 +123,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="managedGroupConfigs")
     private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs>> managedGroupConfigs;
 
+    /**
+     * @return -
+     * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+     * 
+     */
     public Optional<Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs>>> managedGroupConfigs() {
         return Optional.ofNullable(this.managedGroupConfigs);
     }
@@ -108,6 +139,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -119,6 +154,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="numInstances")
     private @Nullable Output<Integer> numInstances;
 
+    /**
+     * @return Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+     * 
+     */
     public Optional<Output<Integer>> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
@@ -130,6 +169,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
     @Import(name="preemptibility")
     private @Nullable Output<String> preemptibility;
 
+    /**
+     * @return Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+     * 
+     */
     public Optional<Output<String>> preemptibility() {
         return Optional.ofNullable(this.preemptibility);
     }
@@ -167,104 +210,250 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetA
             $ = new WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerators Optional. The Compute Engine accelerator configuration for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs>> accelerators) {
             $.accelerators = accelerators;
             return this;
         }
 
+        /**
+         * @param accelerators Optional. The Compute Engine accelerator configuration for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs> accelerators) {
             return accelerators(Output.of(accelerators));
         }
 
+        /**
+         * @param accelerators Optional. The Compute Engine accelerator configuration for these instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerators(WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorGetArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
 
+        /**
+         * @param diskConfig Optional. Disk option config settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs> diskConfig) {
             $.diskConfig = diskConfig;
             return this;
         }
 
+        /**
+         * @param diskConfig Optional. Disk option config settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfig(WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfigGetArgs diskConfig) {
             return diskConfig(Output.of(diskConfig));
         }
 
+        /**
+         * @param image Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param instanceNames -
+         * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             $.instanceNames = instanceNames;
             return this;
         }
 
+        /**
+         * @param instanceNames -
+         * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNames(List<String> instanceNames) {
             return instanceNames(Output.of(instanceNames));
         }
 
+        /**
+         * @param instanceNames -
+         * Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceNames(String... instanceNames) {
             return instanceNames(List.of(instanceNames));
         }
 
+        /**
+         * @param isPreemptible -
+         * Output only. Specifies that this instance group contains preemptible instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPreemptible(@Nullable Output<Boolean> isPreemptible) {
             $.isPreemptible = isPreemptible;
             return this;
         }
 
+        /**
+         * @param isPreemptible -
+         * Output only. Specifies that this instance group contains preemptible instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPreemptible(Boolean isPreemptible) {
             return isPreemptible(Output.of(isPreemptible));
         }
 
+        /**
+         * @param machineType Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * ` https://www.googleapis.com/compute/v1/projects/(https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example,  `n1-standard-2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param managedGroupConfigs -
+         * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedGroupConfigs(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs>> managedGroupConfigs) {
             $.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
+        /**
+         * @param managedGroupConfigs -
+         * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedGroupConfigs(List<WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs> managedGroupConfigs) {
             return managedGroupConfigs(Output.of(managedGroupConfigs));
         }
 
+        /**
+         * @param managedGroupConfigs -
+         * Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedGroupConfigs(WorkflowTemplatePlacementManagedClusterConfigMasterConfigManagedGroupConfigGetArgs... managedGroupConfigs) {
             return managedGroupConfigs(List.of(managedGroupConfigs));
         }
 
+        /**
+         * @param minCpuPlatform Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform Optional. Specifies the minimum cpu platform for the Instance Group. See (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }
 
+        /**
+         * @param numInstances Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
             $.numInstances = numInstances;
             return this;
         }
 
+        /**
+         * @param numInstances Optional. The number of VM instances in the instance group. For master instance groups, must be set to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numInstances(Integer numInstances) {
             return numInstances(Output.of(numInstances));
         }
 
+        /**
+         * @param preemptibility Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptibility(@Nullable Output<String> preemptibility) {
             $.preemptibility = preemptibility;
             return this;
         }
 
+        /**
+         * @param preemptibility Optional. Specifies the preemptibility of the instance group. The default value for master and worker groups is `NON_PREEMPTIBLE`. This default cannot be changed. The default value for secondary instances is `PREEMPTIBLE`. Possible values: PREEMPTIBILITY_UNSPECIFIED, NON_PREEMPTIBLE, PREEMPTIBLE
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptibility(String preemptibility) {
             return preemptibility(Output.of(preemptibility));
         }

@@ -32,6 +32,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="family", required=true)
     private Output<String> family;
 
+    /**
+     * @return The engine version that the parameter group can be used with.
+     * 
+     */
     public Output<String> family() {
         return this.family;
     }
@@ -43,6 +47,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +62,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -65,6 +77,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
     private @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
+    /**
+     * @return Set of MemoryDB parameters to apply. Any parameters not specified will fall back to their family defaults. Detailed below.
+     * 
+     */
     public Optional<Output<List<ParameterGroupParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -76,6 +92,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,6 +107,10 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -130,60 +154,138 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
             return description(Output.of(description));
         }
 
+        /**
+         * @param family The engine version that the parameter group can be used with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The engine version that the parameter group can be used with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param name The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param parameters Set of MemoryDB parameters to apply. Any parameters not specified will fall back to their family defaults. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ParameterGroupParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Set of MemoryDB parameters to apply. Any parameters not specified will fall back to their family defaults. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ParameterGroupParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Set of MemoryDB parameters to apply. Any parameters not specified will fall back to their family defaults. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ParameterGroupParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

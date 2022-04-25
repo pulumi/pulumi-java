@@ -23,6 +23,10 @@ public final class AxisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label", required=true)
     private String label;
 
+    /**
+     * @return The label of the axis.
+     * 
+     */
     public String label() {
         return this.label;
     }
@@ -34,6 +38,10 @@ public final class AxisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scale", required=true)
     private String scale;
 
+    /**
+     * @return The axis scale. By default, a linear scale is used.
+     * 
+     */
     public String scale() {
         return this.scale;
     }
@@ -63,11 +71,23 @@ public final class AxisResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AxisResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label The label of the axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param scale The axis scale. By default, a linear scale is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(String scale) {
             $.scale = scale;
             return this;

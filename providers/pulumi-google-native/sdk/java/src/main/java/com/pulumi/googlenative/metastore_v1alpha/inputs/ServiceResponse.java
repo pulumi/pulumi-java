@@ -31,6 +31,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactGcsUri", required=true)
     private String artifactGcsUri;
 
+    /**
+     * @return A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+     * 
+     */
     public String artifactGcsUri() {
         return this.artifactGcsUri;
     }
@@ -42,6 +46,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time when the metastore service was created.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -53,6 +61,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseType", required=true)
     private String databaseType;
 
+    /**
+     * @return Immutable. The database type that the Metastore service stores its data.
+     * 
+     */
     public String databaseType() {
         return this.databaseType;
     }
@@ -64,6 +76,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionConfig", required=true)
     private EncryptionConfigResponse encryptionConfig;
 
+    /**
+     * @return Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
+     * 
+     */
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
@@ -75,6 +91,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointUri", required=true)
     private String endpointUri;
 
+    /**
+     * @return The URI of the endpoint used to access the metastore service.
+     * 
+     */
     public String endpointUri() {
         return this.endpointUri;
     }
@@ -86,6 +106,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hiveMetastoreConfig", required=true)
     private HiveMetastoreConfigResponse hiveMetastoreConfig;
 
+    /**
+     * @return Configuration information specific to running Hive metastore software as the metastore service.
+     * 
+     */
     public HiveMetastoreConfigResponse hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
@@ -97,6 +121,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private Map<String,String> labels;
 
+    /**
+     * @return User-defined labels for the metastore service.
+     * 
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -108,6 +136,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceWindow", required=true)
     private MaintenanceWindowResponse maintenanceWindow;
 
+    /**
+     * @return The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
+     * 
+     */
     public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
@@ -119,6 +151,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadataIntegration", required=true)
     private MetadataIntegrationResponse metadataIntegration;
 
+    /**
+     * @return The setting that defines how metastore metadata should be integrated with external services and systems.
+     * 
+     */
     public MetadataIntegrationResponse metadataIntegration() {
         return this.metadataIntegration;
     }
@@ -130,6 +166,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="metadataManagementActivity", required=true)
     private MetadataManagementActivityResponse metadataManagementActivity;
 
+    /**
+     * @return The metadata management activities of the metastore service.
+     * 
+     */
     public MetadataManagementActivityResponse metadataManagementActivity() {
         return this.metadataManagementActivity;
     }
@@ -141,6 +181,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -152,6 +196,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -163,6 +211,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkConfig", required=true)
     private NetworkConfigResponse networkConfig;
 
+    /**
+     * @return Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
+     * 
+     */
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
@@ -174,6 +226,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The TCP port at which the metastore service is reached. Default: 9083.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -185,6 +241,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="releaseChannel", required=true)
     private String releaseChannel;
 
+    /**
+     * @return Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+     * 
+     */
     public String releaseChannel() {
         return this.releaseChannel;
     }
@@ -196,6 +256,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the metastore service.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -207,6 +271,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stateMessage", required=true)
     private String stateMessage;
 
+    /**
+     * @return Additional information about the current state of the metastore service, if available.
+     * 
+     */
     public String stateMessage() {
         return this.stateMessage;
     }
@@ -218,6 +286,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return The tier of the service.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -229,6 +301,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
     private String uid;
 
+    /**
+     * @return The globally unique resource identifier of the metastore service.
+     * 
+     */
     public String uid() {
         return this.uid;
     }
@@ -240,6 +316,10 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
     private String updateTime;
 
+    /**
+     * @return The time when the metastore service was last updated.
+     * 
+     */
     public String updateTime() {
         return this.updateTime;
     }
@@ -287,101 +367,221 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactGcsUri A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactGcsUri(String artifactGcsUri) {
             $.artifactGcsUri = artifactGcsUri;
             return this;
         }
 
+        /**
+         * @param createTime The time when the metastore service was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param databaseType Immutable. The database type that the Metastore service stores its data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(String databaseType) {
             $.databaseType = databaseType;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param endpointUri The URI of the endpoint used to access the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(String endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param hiveMetastoreConfig Configuration information specific to running Hive metastore software as the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveMetastoreConfig(HiveMetastoreConfigResponse hiveMetastoreConfig) {
             $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
+        /**
+         * @param labels User-defined labels for the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param metadataIntegration The setting that defines how metastore metadata should be integrated with external services and systems.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataIntegration(MetadataIntegrationResponse metadataIntegration) {
             $.metadataIntegration = metadataIntegration;
             return this;
         }
 
+        /**
+         * @param metadataManagementActivity The metadata management activities of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataManagementActivity(MetadataManagementActivityResponse metadataManagementActivity) {
             $.metadataManagementActivity = metadataManagementActivity;
             return this;
         }
 
+        /**
+         * @param name Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param network Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param networkConfig Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param port The TCP port at which the metastore service is reached. Default: 9083.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param releaseChannel Immutable. The release channel of the service. If unspecified, defaults to STABLE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseChannel(String releaseChannel) {
             $.releaseChannel = releaseChannel;
             return this;
         }
 
+        /**
+         * @param state The current state of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateMessage Additional information about the current state of the metastore service, if available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMessage(String stateMessage) {
             $.stateMessage = stateMessage;
             return this;
         }
 
+        /**
+         * @param tier The tier of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param uid The globally unique resource identifier of the metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param updateTime The time when the metastore service was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             $.updateTime = updateTime;
             return this;

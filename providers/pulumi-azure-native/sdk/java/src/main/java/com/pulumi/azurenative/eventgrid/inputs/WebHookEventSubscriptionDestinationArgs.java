@@ -28,6 +28,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
     private @Nullable Output<String> azureActiveDirectoryApplicationIdOrUri;
 
+    /**
+     * @return The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+     * 
+     */
     public Optional<Output<String>> azureActiveDirectoryApplicationIdOrUri() {
         return Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
@@ -39,6 +43,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="azureActiveDirectoryTenantId")
     private @Nullable Output<String> azureActiveDirectoryTenantId;
 
+    /**
+     * @return The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+     * 
+     */
     public Optional<Output<String>> azureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
@@ -51,6 +59,11 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of the endpoint for the event subscription destination.
+     * Expected value is &#39;WebHook&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -62,6 +75,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="endpointUrl")
     private @Nullable Output<String> endpointUrl;
 
+    /**
+     * @return The URL that represents the endpoint of the destination of an event subscription.
+     * 
+     */
     public Optional<Output<String>> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
@@ -73,6 +90,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="maxEventsPerBatch")
     private @Nullable Output<Integer> maxEventsPerBatch;
 
+    /**
+     * @return Maximum number of events per batch.
+     * 
+     */
     public Optional<Output<Integer>> maxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
@@ -84,6 +105,10 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
     @Import(name="preferredBatchSizeInKilobytes")
     private @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
+    /**
+     * @return Preferred batch size in Kilobytes.
+     * 
+     */
     public Optional<Output<Integer>> preferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
@@ -117,56 +142,130 @@ public final class WebHookEventSubscriptionDestinationArgs extends com.pulumi.re
             $ = new WebHookEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureActiveDirectoryApplicationIdOrUri The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureActiveDirectoryApplicationIdOrUri(@Nullable Output<String> azureActiveDirectoryApplicationIdOrUri) {
             $.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
             return this;
         }
 
+        /**
+         * @param azureActiveDirectoryApplicationIdOrUri The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureActiveDirectoryApplicationIdOrUri(String azureActiveDirectoryApplicationIdOrUri) {
             return azureActiveDirectoryApplicationIdOrUri(Output.of(azureActiveDirectoryApplicationIdOrUri));
         }
 
+        /**
+         * @param azureActiveDirectoryTenantId The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureActiveDirectoryTenantId(@Nullable Output<String> azureActiveDirectoryTenantId) {
             $.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
         }
 
+        /**
+         * @param azureActiveDirectoryTenantId The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureActiveDirectoryTenantId(String azureActiveDirectoryTenantId) {
             return azureActiveDirectoryTenantId(Output.of(azureActiveDirectoryTenantId));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;WebHook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;WebHook&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param endpointUrl The URL that represents the endpoint of the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUrl(@Nullable Output<String> endpointUrl) {
             $.endpointUrl = endpointUrl;
             return this;
         }
 
+        /**
+         * @param endpointUrl The URL that represents the endpoint of the destination of an event subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUrl(String endpointUrl) {
             return endpointUrl(Output.of(endpointUrl));
         }
 
+        /**
+         * @param maxEventsPerBatch Maximum number of events per batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEventsPerBatch(@Nullable Output<Integer> maxEventsPerBatch) {
             $.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
 
+        /**
+         * @param maxEventsPerBatch Maximum number of events per batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxEventsPerBatch(Integer maxEventsPerBatch) {
             return maxEventsPerBatch(Output.of(maxEventsPerBatch));
         }
 
+        /**
+         * @param preferredBatchSizeInKilobytes Preferred batch size in Kilobytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBatchSizeInKilobytes(@Nullable Output<Integer> preferredBatchSizeInKilobytes) {
             $.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }
 
+        /**
+         * @param preferredBatchSizeInKilobytes Preferred batch size in Kilobytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredBatchSizeInKilobytes(Integer preferredBatchSizeInKilobytes) {
             return preferredBatchSizeInKilobytes(Output.of(preferredBatchSizeInKilobytes));
         }

@@ -20,6 +20,10 @@ public final class GatewayRouteSpecHttp2RouteActionGetArgs extends com.pulumi.re
     @Import(name="target", required=true)
     private Output<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target;
 
+    /**
+     * @return The target that traffic is routed to when a request matches the gateway route.
+     * 
+     */
     public Output<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target() {
         return this.target;
     }
@@ -48,11 +52,23 @@ public final class GatewayRouteSpecHttp2RouteActionGetArgs extends com.pulumi.re
             $ = new GatewayRouteSpecHttp2RouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target The target that traffic is routed to when a request matches the gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The target that traffic is routed to when a request matches the gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(GatewayRouteSpecHttp2RouteActionTargetGetArgs target) {
             return target(Output.of(target));
         }

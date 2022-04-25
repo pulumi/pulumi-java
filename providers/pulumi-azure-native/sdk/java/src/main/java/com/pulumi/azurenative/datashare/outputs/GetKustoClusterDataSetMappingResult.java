@@ -11,53 +11,53 @@ import java.util.Objects;
 @CustomType
 public final class GetKustoClusterDataSetMappingResult {
     /**
-     * The id of the source data set.
+     * @return The id of the source data set.
      * 
      */
     private final String dataSetId;
     /**
-     * Gets the status of the data set mapping.
+     * @return Gets the status of the data set mapping.
      * 
      */
     private final String dataSetMappingStatus;
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
      */
     private final String id;
     /**
-     * Kind of data set mapping.
+     * @return Kind of data set mapping.
      * Expected value is &#39;KustoCluster&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource id of the sink kusto cluster.
+     * @return Resource id of the sink kusto cluster.
      * 
      */
     private final String kustoClusterResourceId;
     /**
-     * Location of the sink kusto cluster.
+     * @return Location of the sink kusto cluster.
      * 
      */
     private final String location;
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the data set mapping.
+     * @return Provisioning state of the data set mapping.
      * 
      */
     private final String provisioningState;
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
      */
     private final String type;
@@ -87,73 +87,73 @@ public final class GetKustoClusterDataSetMappingResult {
     }
 
     /**
-     * The id of the source data set.
+     * @return The id of the source data set.
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * Gets the status of the data set mapping.
+     * @return Gets the status of the data set mapping.
      * 
-    */
+     */
     public String dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set mapping.
+     * @return Kind of data set mapping.
      * Expected value is &#39;KustoCluster&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource id of the sink kusto cluster.
+     * @return Resource id of the sink kusto cluster.
      * 
-    */
+     */
     public String kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
-     * Location of the sink kusto cluster.
+     * @return Location of the sink kusto cluster.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the data set mapping.
+     * @return Provisioning state of the data set mapping.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

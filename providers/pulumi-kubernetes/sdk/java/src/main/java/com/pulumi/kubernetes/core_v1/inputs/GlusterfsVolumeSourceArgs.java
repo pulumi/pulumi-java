@@ -27,6 +27,10 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="endpoints", required=true)
     private Output<String> endpoints;
 
+    /**
+     * @return EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * 
+     */
     public Output<String> endpoints() {
         return this.endpoints;
     }
@@ -38,6 +42,10 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="path", required=true)
     private Output<String> path;
 
+    /**
+     * @return Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * 
+     */
     public Output<String> path() {
         return this.path;
     }
@@ -49,6 +57,10 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -79,29 +91,65 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
             $ = new GlusterfsVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(Output<String> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(String endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param path Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }

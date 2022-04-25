@@ -26,6 +26,10 @@ public final class AdditionalCapabilitiesArgs extends com.pulumi.resources.Resou
     @Import(name="ultraSSDEnabled")
     private @Nullable Output<Boolean> ultraSSDEnabled;
 
+    /**
+     * @return The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> ultraSSDEnabled() {
         return Optional.ofNullable(this.ultraSSDEnabled);
     }
@@ -54,11 +58,23 @@ public final class AdditionalCapabilitiesArgs extends com.pulumi.resources.Resou
             $ = new AdditionalCapabilitiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ultraSSDEnabled The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ultraSSDEnabled(@Nullable Output<Boolean> ultraSSDEnabled) {
             $.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
 
+        /**
+         * @param ultraSSDEnabled The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the VM or VMSS. Managed disks with storage account type UltraSSD_LRS can be added to a virtual machine or virtual machine scale set only if this property is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ultraSSDEnabled(Boolean ultraSSDEnabled) {
             return ultraSSDEnabled(Output.of(ultraSSDEnabled));
         }

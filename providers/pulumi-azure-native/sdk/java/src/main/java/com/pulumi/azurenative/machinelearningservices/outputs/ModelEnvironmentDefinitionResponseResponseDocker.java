@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModelEnvironmentDefinitionResponseResponseDocker {
     /**
-     * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+     * @return Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
      * 
      */
     private final @Nullable String baseDockerfile;
     /**
-     * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+     * @return Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
      * 
      */
     private final @Nullable String baseImage;
     /**
-     * Image registry that contains the base image.
+     * @return Image registry that contains the base image.
      * 
      */
     private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
@@ -39,23 +39,23 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
     }
 
     /**
-     * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
+     * @return Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
      * 
-    */
+     */
     public Optional<String> baseDockerfile() {
         return Optional.ofNullable(this.baseDockerfile);
     }
     /**
-     * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
+     * @return Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
      * 
-    */
+     */
     public Optional<String> baseImage() {
         return Optional.ofNullable(this.baseImage);
     }
     /**
-     * Image registry that contains the base image.
+     * @return Image registry that contains the base image.
      * 
-    */
+     */
     public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> baseImageRegistry() {
         return Optional.ofNullable(this.baseImageRegistry);
     }

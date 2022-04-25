@@ -26,6 +26,10 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends com.pulumi.re
     @Import(name="condition")
     private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
+    /**
+     * @return A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+     * 
+     */
     public Optional<Output<GooglePrivacyDlpV2RecordConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -54,11 +58,23 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends com.pulumi.re
             $ = new GooglePrivacyDlpV2RecordSuppressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(GooglePrivacyDlpV2RecordConditionArgs condition) {
             return condition(Output.of(condition));
         }

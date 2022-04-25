@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class CustomerSecretResponse {
     /**
-     * The encryption algorithm used to encrypt data.
+     * @return The encryption algorithm used to encrypt data.
      * 
      */
     private final String algorithm;
     /**
-     * The identifier to the data service input object which this secret corresponds to.
+     * @return The identifier to the data service input object which this secret corresponds to.
      * 
      */
     private final String keyIdentifier;
     /**
-     * It contains the encrypted customer secret.
+     * @return It contains the encrypted customer secret.
      * 
      */
     private final String keyValue;
@@ -36,23 +36,23 @@ public final class CustomerSecretResponse {
     }
 
     /**
-     * The encryption algorithm used to encrypt data.
+     * @return The encryption algorithm used to encrypt data.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * The identifier to the data service input object which this secret corresponds to.
+     * @return The identifier to the data service input object which this secret corresponds to.
      * 
-    */
+     */
     public String keyIdentifier() {
         return this.keyIdentifier;
     }
     /**
-     * It contains the encrypted customer secret.
+     * @return It contains the encrypted customer secret.
      * 
-    */
+     */
     public String keyValue() {
         return this.keyValue;
     }

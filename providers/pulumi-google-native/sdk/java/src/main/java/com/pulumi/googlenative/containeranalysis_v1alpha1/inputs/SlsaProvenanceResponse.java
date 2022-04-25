@@ -27,6 +27,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="builder", required=true)
     private SlsaBuilderResponse builder;
 
+    /**
+     * @return builder is the builder of this provenance
+     * 
+     */
     public SlsaBuilderResponse builder_() {
         return this.builder;
     }
@@ -38,6 +42,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="materials", required=true)
     private List<MaterialResponse> materials;
 
+    /**
+     * @return The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+     * 
+     */
     public List<MaterialResponse> materials() {
         return this.materials;
     }
@@ -49,6 +57,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metadata", required=true)
     private SlsaMetadataResponse metadata;
 
+    /**
+     * @return metadata is the metadata of the provenance
+     * 
+     */
     public SlsaMetadataResponse metadata() {
         return this.metadata;
     }
@@ -60,6 +72,10 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recipe", required=true)
     private SlsaRecipeResponse recipe;
 
+    /**
+     * @return Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible).
+     * 
+     */
     public SlsaRecipeResponse recipe() {
         return this.recipe;
     }
@@ -91,25 +107,55 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
             $ = new SlsaProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param builder builder is the builder of this provenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder builder_(SlsaBuilderResponse builder) {
             $.builder = builder;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(List<MaterialResponse> materials) {
             $.materials = materials;
             return this;
         }
 
+        /**
+         * @param materials The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder materials(MaterialResponse... materials) {
             return materials(List.of(materials));
         }
 
+        /**
+         * @param metadata metadata is the metadata of the provenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(SlsaMetadataResponse metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param recipe Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipe(SlsaRecipeResponse recipe) {
             $.recipe = recipe;
             return this;

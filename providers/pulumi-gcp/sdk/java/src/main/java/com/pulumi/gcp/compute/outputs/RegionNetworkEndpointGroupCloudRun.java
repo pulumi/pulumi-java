@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionNetworkEndpointGroupCloudRun {
     /**
-     * Optional serving service.
+     * @return Optional serving service.
      * The service name must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;default&#34;, &#34;my-service&#34;.
      * 
      */
     private final @Nullable String service;
     /**
-     * Cloud Run tag represents the &#34;named-revision&#34; to provide
+     * @return Cloud Run tag represents the &#34;named-revision&#34; to provide
      * additional fine-grained traffic routing information.
      * The tag must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;revision-0010&#34;.
@@ -27,7 +27,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      */
     private final @Nullable String tag;
     /**
-     * A template to parse function field from a request URL. URL mask allows
+     * @return A template to parse function field from a request URL. URL mask allows
      * for routing to multiple Cloud Functions without having to create
      * multiple Network Endpoint Groups and backend services.
      * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
@@ -48,33 +48,33 @@ public final class RegionNetworkEndpointGroupCloudRun {
     }
 
     /**
-     * Optional serving service.
+     * @return Optional serving service.
      * The service name must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;default&#34;, &#34;my-service&#34;.
      * 
-    */
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * Cloud Run tag represents the &#34;named-revision&#34; to provide
+     * @return Cloud Run tag represents the &#34;named-revision&#34; to provide
      * additional fine-grained traffic routing information.
      * The tag must be 1-63 characters long, and comply with RFC1035.
      * Example value: &#34;revision-0010&#34;.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * A template to parse function field from a request URL. URL mask allows
+     * @return A template to parse function field from a request URL. URL mask allows
      * for routing to multiple Cloud Functions without having to create
      * multiple Network Endpoint Groups and backend services.
      * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
      * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
      * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
      * 
-    */
+     */
     public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }

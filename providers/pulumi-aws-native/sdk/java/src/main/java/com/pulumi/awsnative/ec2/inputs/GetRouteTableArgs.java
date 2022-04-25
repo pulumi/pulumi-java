@@ -19,6 +19,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeTableId", required=true)
     private String routeTableId;
 
+    /**
+     * @return The route table ID.
+     * 
+     */
     public String routeTableId() {
         return this.routeTableId;
     }
@@ -47,6 +51,12 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param routeTableId The route table ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableId(String routeTableId) {
             $.routeTableId = routeTableId;
             return this;

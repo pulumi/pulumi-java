@@ -27,6 +27,10 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actionGroup")
     private @Nullable Output<List<String>> actionGroup;
 
+    /**
+     * @return Azure Action Group reference.
+     * 
+     */
     public Optional<Output<List<String>>> actionGroup() {
         return Optional.ofNullable(this.actionGroup);
     }
@@ -38,6 +42,10 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customWebhookPayload")
     private @Nullable Output<String> customWebhookPayload;
 
+    /**
+     * @return Custom payload to be sent for all webhook URI in Azure action group
+     * 
+     */
     public Optional<Output<String>> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
@@ -49,6 +57,10 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="emailSubject")
     private @Nullable Output<String> emailSubject;
 
+    /**
+     * @return Custom subject override for all email ids in Azure action group
+     * 
+     */
     public Optional<Output<String>> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
@@ -79,33 +91,75 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
             $ = new AzNsActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroup Azure Action Group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroup(@Nullable Output<List<String>> actionGroup) {
             $.actionGroup = actionGroup;
             return this;
         }
 
+        /**
+         * @param actionGroup Azure Action Group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroup(List<String> actionGroup) {
             return actionGroup(Output.of(actionGroup));
         }
 
+        /**
+         * @param actionGroup Azure Action Group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroup(String... actionGroup) {
             return actionGroup(List.of(actionGroup));
         }
 
+        /**
+         * @param customWebhookPayload Custom payload to be sent for all webhook URI in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder customWebhookPayload(@Nullable Output<String> customWebhookPayload) {
             $.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
+        /**
+         * @param customWebhookPayload Custom payload to be sent for all webhook URI in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder customWebhookPayload(String customWebhookPayload) {
             return customWebhookPayload(Output.of(customWebhookPayload));
         }
 
+        /**
+         * @param emailSubject Custom subject override for all email ids in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
             $.emailSubject = emailSubject;
             return this;
         }
 
+        /**
+         * @param emailSubject Custom subject override for all email ids in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(String emailSubject) {
             return emailSubject(Output.of(emailSubject));
         }

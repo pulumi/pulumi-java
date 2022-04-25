@@ -23,6 +23,10 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
     @Import(name="failedDeployments", required=true)
     private Integer failedDeployments;
 
+    /**
+     * @return The number of deployments required by the remediation that have failed.
+     * 
+     */
     public Integer failedDeployments() {
         return this.failedDeployments;
     }
@@ -34,6 +38,10 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
     @Import(name="successfulDeployments", required=true)
     private Integer successfulDeployments;
 
+    /**
+     * @return The number of deployments required by the remediation that have succeeded.
+     * 
+     */
     public Integer successfulDeployments() {
         return this.successfulDeployments;
     }
@@ -45,6 +53,10 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
     @Import(name="totalDeployments", required=true)
     private Integer totalDeployments;
 
+    /**
+     * @return The number of deployments required by the remediation.
+     * 
+     */
     public Integer totalDeployments() {
         return this.totalDeployments;
     }
@@ -75,16 +87,34 @@ public final class RemediationDeploymentSummaryResponse extends com.pulumi.resou
             $ = new RemediationDeploymentSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failedDeployments The number of deployments required by the remediation that have failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failedDeployments(Integer failedDeployments) {
             $.failedDeployments = failedDeployments;
             return this;
         }
 
+        /**
+         * @param successfulDeployments The number of deployments required by the remediation that have succeeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulDeployments(Integer successfulDeployments) {
             $.successfulDeployments = successfulDeployments;
             return this;
         }
 
+        /**
+         * @param totalDeployments The number of deployments required by the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalDeployments(Integer totalDeployments) {
             $.totalDeployments = totalDeployments;
             return this;

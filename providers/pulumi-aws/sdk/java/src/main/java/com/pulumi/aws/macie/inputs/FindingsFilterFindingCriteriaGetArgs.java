@@ -23,6 +23,10 @@ public final class FindingsFilterFindingCriteriaGetArgs extends com.pulumi.resou
     @Import(name="criterions")
     private @Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
 
+    /**
+     * @return A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+     * 
+     */
     public Optional<Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>>> criterions() {
         return Optional.ofNullable(this.criterions);
     }
@@ -51,15 +55,33 @@ public final class FindingsFilterFindingCriteriaGetArgs extends com.pulumi.resou
             $ = new FindingsFilterFindingCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param criterions A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterions(@Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions) {
             $.criterions = criterions;
             return this;
         }
 
+        /**
+         * @param criterions A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterions(List<FindingsFilterFindingCriteriaCriterionGetArgs> criterions) {
             return criterions(Output.of(criterions));
         }
 
+        /**
+         * @param criterions A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterions(FindingsFilterFindingCriteriaCriterionGetArgs... criterions) {
             return criterions(List.of(criterions));
         }

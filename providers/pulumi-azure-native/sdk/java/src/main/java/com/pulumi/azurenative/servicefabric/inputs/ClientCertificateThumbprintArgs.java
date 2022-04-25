@@ -25,6 +25,10 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
     @Import(name="certificateThumbprint", required=true)
     private Output<String> certificateThumbprint;
 
+    /**
+     * @return The thumbprint of the client certificate.
+     * 
+     */
     public Output<String> certificateThumbprint() {
         return this.certificateThumbprint;
     }
@@ -36,6 +40,10 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
     @Import(name="isAdmin", required=true)
     private Output<Boolean> isAdmin;
 
+    /**
+     * @return Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+     * 
+     */
     public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
@@ -65,20 +73,44 @@ public final class ClientCertificateThumbprintArgs extends com.pulumi.resources.
             $ = new ClientCertificateThumbprintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateThumbprint The thumbprint of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(Output<String> certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param certificateThumbprint The thumbprint of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(String certificateThumbprint) {
             return certificateThumbprint(Output.of(certificateThumbprint));
         }
 
+        /**
+         * @param isAdmin Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Output<Boolean> isAdmin) {
             $.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * @param isAdmin Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Boolean isAdmin) {
             return isAdmin(Output.of(isAdmin));
         }

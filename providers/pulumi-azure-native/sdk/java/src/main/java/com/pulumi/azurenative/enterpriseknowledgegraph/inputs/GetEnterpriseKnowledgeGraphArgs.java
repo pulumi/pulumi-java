@@ -19,6 +19,10 @@ public final class GetEnterpriseKnowledgeGraphArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetEnterpriseKnowledgeGraphArgs extends com.pulumi.resources.
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the EnterpriseKnowledgeGraph resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class GetEnterpriseKnowledgeGraphArgs extends com.pulumi.resources.
             $ = new GetEnterpriseKnowledgeGraphArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the EnterpriseKnowledgeGraph resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

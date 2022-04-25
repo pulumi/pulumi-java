@@ -27,6 +27,10 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="aS2")
     private @Nullable AS2AgreementContentResponse aS2;
 
+    /**
+     * @return The AS2 agreement content.
+     * 
+     */
     public Optional<AS2AgreementContentResponse> aS2() {
         return Optional.ofNullable(this.aS2);
     }
@@ -38,6 +42,10 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="edifact")
     private @Nullable EdifactAgreementContentResponse edifact;
 
+    /**
+     * @return The EDIFACT agreement content.
+     * 
+     */
     public Optional<EdifactAgreementContentResponse> edifact() {
         return Optional.ofNullable(this.edifact);
     }
@@ -49,6 +57,10 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
     @Import(name="x12")
     private @Nullable X12AgreementContentResponse x12;
 
+    /**
+     * @return The X12 agreement content.
+     * 
+     */
     public Optional<X12AgreementContentResponse> x12() {
         return Optional.ofNullable(this.x12);
     }
@@ -79,16 +91,34 @@ public final class AgreementContentResponse extends com.pulumi.resources.InvokeA
             $ = new AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aS2 The AS2 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aS2(@Nullable AS2AgreementContentResponse aS2) {
             $.aS2 = aS2;
             return this;
         }
 
+        /**
+         * @param edifact The EDIFACT agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifact(@Nullable EdifactAgreementContentResponse edifact) {
             $.edifact = edifact;
             return this;
         }
 
+        /**
+         * @param x12 The X12 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x12(@Nullable X12AgreementContentResponse x12) {
             $.x12 = x12;
             return this;

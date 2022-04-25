@@ -30,6 +30,10 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
     @Import(name="aggregation")
     private @Nullable ManagementEventAggregationConditionResponse aggregation;
 
+    /**
+     * @return How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
+     * 
+     */
     public Optional<ManagementEventAggregationConditionResponse> aggregation() {
         return Optional.ofNullable(this.aggregation);
     }
@@ -41,6 +45,10 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
     @Import(name="dataSource")
     private @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
+    /**
+     * @return the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * 
+     */
     public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -53,6 +61,11 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -83,24 +96,55 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
             $ = new ManagementEventRuleConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aggregation How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
             $.aggregation = aggregation;
             return this;
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleManagementEventDataSourceResponse dataSource) {
             return dataSource(Either.ofLeft(dataSource));
         }
 
+        /**
+         * @param dataSource the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(RuleMetricDataSourceResponse dataSource) {
             return dataSource(Either.ofRight(dataSource));
         }
 
+        /**
+         * @param odataType specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

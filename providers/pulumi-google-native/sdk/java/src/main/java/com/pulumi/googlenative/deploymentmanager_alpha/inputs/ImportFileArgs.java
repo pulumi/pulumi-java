@@ -22,6 +22,10 @@ public final class ImportFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The contents of the file.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -33,6 +37,10 @@ public final class ImportFileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the file.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,20 +70,44 @@ public final class ImportFileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImportFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The contents of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param name The name of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

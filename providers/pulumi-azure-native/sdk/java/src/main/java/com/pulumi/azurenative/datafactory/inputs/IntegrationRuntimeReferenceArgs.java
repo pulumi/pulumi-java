@@ -28,6 +28,10 @@ public final class IntegrationRuntimeReferenceArgs extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Output<Map<String,Object>> parameters;
 
+    /**
+     * @return Arguments for integration runtime.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -39,6 +43,10 @@ public final class IntegrationRuntimeReferenceArgs extends com.pulumi.resources.
     @Import(name="referenceName", required=true)
     private Output<String> referenceName;
 
+    /**
+     * @return Reference integration runtime name.
+     * 
+     */
     public Output<String> referenceName() {
         return this.referenceName;
     }
@@ -50,6 +58,10 @@ public final class IntegrationRuntimeReferenceArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of integration runtime.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -80,29 +92,65 @@ public final class IntegrationRuntimeReferenceArgs extends com.pulumi.resources.
             $ = new IntegrationRuntimeReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Arguments for integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Arguments for integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param referenceName Reference integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(Output<String> referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param referenceName Reference integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             return referenceName(Output.of(referenceName));
         }
 
+        /**
+         * @param type Type of integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

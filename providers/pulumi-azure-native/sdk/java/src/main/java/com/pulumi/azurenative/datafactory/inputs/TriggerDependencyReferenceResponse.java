@@ -25,6 +25,10 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
     @Import(name="referenceTrigger", required=true)
     private TriggerReferenceResponse referenceTrigger;
 
+    /**
+     * @return Referenced trigger.
+     * 
+     */
     public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
@@ -37,6 +41,11 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of dependency reference.
+     * Expected value is &#39;TriggerDependencyReference&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -66,11 +75,24 @@ public final class TriggerDependencyReferenceResponse extends com.pulumi.resourc
             $ = new TriggerDependencyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceTrigger Referenced trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
             $.referenceTrigger = referenceTrigger;
             return this;
         }
 
+        /**
+         * @param type The type of dependency reference.
+         * Expected value is &#39;TriggerDependencyReference&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

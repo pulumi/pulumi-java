@@ -23,6 +23,10 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
     @Import(name="instituteSize", required=true)
     private String instituteSize;
 
+    /**
+     * @return Size of the institute.
+     * 
+     */
     public String instituteSize() {
         return this.instituteSize;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
     @Import(name="instituteType", required=true)
     private String instituteType;
 
+    /**
+     * @return Designated institute type of customer.
+     * 
+     */
     public String instituteType() {
         return this.instituteType;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
     @Import(name="website", required=true)
     private String website;
 
+    /**
+     * @return Web address for the edu customer&#39;s institution.
+     * 
+     */
     public String website() {
         return this.website;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
             $ = new GoogleCloudChannelV1EduDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instituteSize Size of the institute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instituteSize(String instituteSize) {
             $.instituteSize = instituteSize;
             return this;
         }
 
+        /**
+         * @param instituteType Designated institute type of customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instituteType(String instituteType) {
             $.instituteType = instituteType;
             return this;
         }
 
+        /**
+         * @param website Web address for the edu customer&#39;s institution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder website(String website) {
             $.website = website;
             return this;

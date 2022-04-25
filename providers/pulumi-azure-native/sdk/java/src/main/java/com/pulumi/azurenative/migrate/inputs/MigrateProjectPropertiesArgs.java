@@ -29,6 +29,10 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
+    /**
+     * @return Provisioning state of the migrate project.
+     * 
+     */
     public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -40,6 +44,10 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="registeredTools")
     private @Nullable Output<List<String>> registeredTools;
 
+    /**
+     * @return Gets or sets the list of tools registered with the migrate project.
+     * 
+     */
     public Optional<Output<List<String>>> registeredTools() {
         return Optional.ofNullable(this.registeredTools);
     }
@@ -69,32 +77,74 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
             $ = new MigrateProjectPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(ProvisioningState provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param registeredTools Gets or sets the list of tools registered with the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredTools(@Nullable Output<List<String>> registeredTools) {
             $.registeredTools = registeredTools;
             return this;
         }
 
+        /**
+         * @param registeredTools Gets or sets the list of tools registered with the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredTools(List<String> registeredTools) {
             return registeredTools(Output.of(registeredTools));
         }
 
+        /**
+         * @param registeredTools Gets or sets the list of tools registered with the migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredTools(String... registeredTools) {
             return registeredTools(List.of(registeredTools));
         }

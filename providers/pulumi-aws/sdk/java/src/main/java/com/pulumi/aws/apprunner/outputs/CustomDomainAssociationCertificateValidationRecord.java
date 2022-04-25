@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomDomainAssociationCertificateValidationRecord {
     /**
-     * The certificate CNAME record name.
+     * @return The certificate CNAME record name.
      * 
      */
     private final @Nullable String name;
     /**
-     * The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
+     * @return The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
      * 
      */
     private final @Nullable String status;
     /**
-     * The record type, always `CNAME`.
+     * @return The record type, always `CNAME`.
      * 
      */
     private final @Nullable String type;
     /**
-     * The certificate CNAME record value.
+     * @return The certificate CNAME record value.
      * 
      */
     private final @Nullable String value;
@@ -45,30 +45,30 @@ public final class CustomDomainAssociationCertificateValidationRecord {
     }
 
     /**
-     * The certificate CNAME record name.
+     * @return The certificate CNAME record name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
+     * @return The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The record type, always `CNAME`.
+     * @return The record type, always `CNAME`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The certificate CNAME record value.
+     * @return The certificate CNAME record value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -37,6 +37,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingSettings")
     private @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
 
+    /**
+     * @return Settings for autoscaling of this WorkerPool.
+     * 
+     */
     public Optional<Output<AutoscalingSettingsArgs>> autoscalingSettings() {
         return Optional.ofNullable(this.autoscalingSettings);
     }
@@ -48,6 +52,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDisks")
     private @Nullable Output<List<DiskArgs>> dataDisks;
 
+    /**
+     * @return Data disks that are used by a VM in this workflow.
+     * 
+     */
     public Optional<Output<List<DiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -59,6 +67,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultPackageSet")
     private @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
 
+    /**
+     * @return The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
+     * 
+     */
     public Optional<Output<WorkerPoolDefaultPackageSet>> defaultPackageSet() {
         return Optional.ofNullable(this.defaultPackageSet);
     }
@@ -70,6 +82,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
     private @Nullable Output<Integer> diskSizeGb;
 
+    /**
+     * @return Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -81,6 +97,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSourceImage")
     private @Nullable Output<String> diskSourceImage;
 
+    /**
+     * @return Fully qualified source image for disks.
+     * 
+     */
     public Optional<Output<String>> diskSourceImage() {
         return Optional.ofNullable(this.diskSourceImage);
     }
@@ -92,6 +112,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
     private @Nullable Output<String> diskType;
 
+    /**
+     * @return Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<String>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -103,6 +127,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipConfiguration")
     private @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
 
+    /**
+     * @return Configuration for VM IPs.
+     * 
+     */
     public Optional<Output<WorkerPoolIpConfiguration>> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
@@ -114,6 +142,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of the worker pool; currently only `harness` and `shuffle` are supported.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -125,6 +157,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
     private @Nullable Output<String> machineType;
 
+    /**
+     * @return Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<String>> machineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -136,6 +172,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata to set on the Google Compute Engine VMs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -147,6 +187,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -158,6 +202,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numThreadsPerWorker")
     private @Nullable Output<Integer> numThreadsPerWorker;
 
+    /**
+     * @return The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
+     * 
+     */
     public Optional<Output<Integer>> numThreadsPerWorker() {
         return Optional.ofNullable(this.numThreadsPerWorker);
     }
@@ -169,6 +217,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="numWorkers")
     private @Nullable Output<Integer> numWorkers;
 
+    /**
+     * @return Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<Integer>> numWorkers() {
         return Optional.ofNullable(this.numWorkers);
     }
@@ -180,6 +232,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onHostMaintenance")
     private @Nullable Output<String> onHostMaintenance;
 
+    /**
+     * @return The action to take on host maintenance, as defined by the Google Compute Engine API.
+     * 
+     */
     public Optional<Output<String>> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -191,6 +247,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packages")
     private @Nullable Output<List<PackageArgs>> packages;
 
+    /**
+     * @return Packages to be installed on workers.
+     * 
+     */
     public Optional<Output<List<PackageArgs>>> packages() {
         return Optional.ofNullable(this.packages);
     }
@@ -202,6 +262,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolArgs")
     private @Nullable Output<Map<String,String>> poolArgs;
 
+    /**
+     * @return Extra arguments for this worker pool.
+     * 
+     */
     public Optional<Output<Map<String,String>>> poolArgs() {
         return Optional.ofNullable(this.poolArgs);
     }
@@ -213,6 +277,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sdkHarnessContainerImages")
     private @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
 
+    /**
+     * @return Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+     * 
+     */
     public Optional<Output<List<SdkHarnessContainerImageArgs>>> sdkHarnessContainerImages() {
         return Optional.ofNullable(this.sdkHarnessContainerImages);
     }
@@ -224,6 +292,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -235,6 +307,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskrunnerSettings")
     private @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
 
+    /**
+     * @return Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
+     * 
+     */
     public Optional<Output<TaskRunnerSettingsArgs>> taskrunnerSettings() {
         return Optional.ofNullable(this.taskrunnerSettings);
     }
@@ -246,6 +322,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="teardownPolicy")
     private @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
 
+    /**
+     * @return Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<WorkerPoolTeardownPolicy>> teardownPolicy() {
         return Optional.ofNullable(this.teardownPolicy);
     }
@@ -257,6 +337,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -305,203 +389,473 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingSettings Settings for autoscaling of this WorkerPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingSettings(@Nullable Output<AutoscalingSettingsArgs> autoscalingSettings) {
             $.autoscalingSettings = autoscalingSettings;
             return this;
         }
 
+        /**
+         * @param autoscalingSettings Settings for autoscaling of this WorkerPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingSettings(AutoscalingSettingsArgs autoscalingSettings) {
             return autoscalingSettings(Output.of(autoscalingSettings));
         }
 
+        /**
+         * @param dataDisks Data disks that are used by a VM in this workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<DiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Data disks that are used by a VM in this workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<DiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks Data disks that are used by a VM in this workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param defaultPackageSet The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPackageSet(@Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet) {
             $.defaultPackageSet = defaultPackageSet;
             return this;
         }
 
+        /**
+         * @param defaultPackageSet The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPackageSet(WorkerPoolDefaultPackageSet defaultPackageSet) {
             return defaultPackageSet(Output.of(defaultPackageSet));
         }
 
+        /**
+         * @param diskSizeGb Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param diskSourceImage Fully qualified source image for disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSourceImage(@Nullable Output<String> diskSourceImage) {
             $.diskSourceImage = diskSourceImage;
             return this;
         }
 
+        /**
+         * @param diskSourceImage Fully qualified source image for disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSourceImage(String diskSourceImage) {
             return diskSourceImage(Output.of(diskSourceImage));
         }
 
+        /**
+         * @param diskType Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<String> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param ipConfiguration Configuration for VM IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(@Nullable Output<WorkerPoolIpConfiguration> ipConfiguration) {
             $.ipConfiguration = ipConfiguration;
             return this;
         }
 
+        /**
+         * @param ipConfiguration Configuration for VM IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(WorkerPoolIpConfiguration ipConfiguration) {
             return ipConfiguration(Output.of(ipConfiguration));
         }
 
+        /**
+         * @param kind The kind of the worker pool; currently only `harness` and `shuffle` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the worker pool; currently only `harness` and `shuffle` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param machineType Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(@Nullable Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType Machine type (e.g. &#34;n1-standard-1&#34;). If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param metadata Metadata to set on the Google Compute Engine VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata to set on the Google Compute Engine VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param network Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param numThreadsPerWorker The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
+         * 
+         * @return builder
+         * 
+         */
         public Builder numThreadsPerWorker(@Nullable Output<Integer> numThreadsPerWorker) {
             $.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
 
+        /**
+         * @param numThreadsPerWorker The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
+         * 
+         * @return builder
+         * 
+         */
         public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
             return numThreadsPerWorker(Output.of(numThreadsPerWorker));
         }
 
+        /**
+         * @param numWorkers Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
             $.numWorkers = numWorkers;
             return this;
         }
 
+        /**
+         * @param numWorkers Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numWorkers(Integer numWorkers) {
             return numWorkers(Output.of(numWorkers));
         }
 
+        /**
+         * @param onHostMaintenance The action to take on host maintenance, as defined by the Google Compute Engine API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param onHostMaintenance The action to take on host maintenance, as defined by the Google Compute Engine API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             return onHostMaintenance(Output.of(onHostMaintenance));
         }
 
+        /**
+         * @param packages Packages to be installed on workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             $.packages = packages;
             return this;
         }
 
+        /**
+         * @param packages Packages to be installed on workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(List<PackageArgs> packages) {
             return packages(Output.of(packages));
         }
 
+        /**
+         * @param packages Packages to be installed on workers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(PackageArgs... packages) {
             return packages(List.of(packages));
         }
 
+        /**
+         * @param poolArgs Extra arguments for this worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolArgs(@Nullable Output<Map<String,String>> poolArgs) {
             $.poolArgs = poolArgs;
             return this;
         }
 
+        /**
+         * @param poolArgs Extra arguments for this worker pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolArgs(Map<String,String> poolArgs) {
             return poolArgs(Output.of(poolArgs));
         }
 
+        /**
+         * @param sdkHarnessContainerImages Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkHarnessContainerImages(@Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
             $.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
 
+        /**
+         * @param sdkHarnessContainerImages Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
             return sdkHarnessContainerImages(Output.of(sdkHarnessContainerImages));
         }
 
+        /**
+         * @param sdkHarnessContainerImages Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sdkHarnessContainerImages(SdkHarnessContainerImageArgs... sdkHarnessContainerImages) {
             return sdkHarnessContainerImages(List.of(sdkHarnessContainerImages));
         }
 
+        /**
+         * @param subnetwork Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork Subnetwork to which VMs will be assigned, if desired. Expected to be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }
 
+        /**
+         * @param taskrunnerSettings Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskrunnerSettings(@Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings) {
             $.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
 
+        /**
+         * @param taskrunnerSettings Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskrunnerSettings(TaskRunnerSettingsArgs taskrunnerSettings) {
             return taskrunnerSettings(Output.of(taskrunnerSettings));
         }
 
+        /**
+         * @param teardownPolicy Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teardownPolicy(@Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy) {
             $.teardownPolicy = teardownPolicy;
             return this;
         }
 
+        /**
+         * @param teardownPolicy Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user&#39;s project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teardownPolicy(WorkerPoolTeardownPolicy teardownPolicy) {
             return teardownPolicy(Output.of(teardownPolicy));
         }
 
+        /**
+         * @param zone Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

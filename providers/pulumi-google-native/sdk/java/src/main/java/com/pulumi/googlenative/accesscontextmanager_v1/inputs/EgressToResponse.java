@@ -25,6 +25,10 @@ public final class EgressToResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operations", required=true)
     private List<ApiOperationResponse> operations;
 
+    /**
+     * @return A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
+     * 
+     */
     public List<ApiOperationResponse> operations() {
         return this.operations;
     }
@@ -36,6 +40,10 @@ public final class EgressToResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
     private List<String> resources;
 
+    /**
+     * @return A list of resources, currently only projects in the form `projects/`, that are allowed to be accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is specified for `resources`, then this EgressTo rule will authorize access to all resources outside the perimeter.
+     * 
+     */
     public List<String> resources() {
         return this.resources;
     }
@@ -65,20 +73,44 @@ public final class EgressToResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EgressToResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operations A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(List<ApiOperationResponse> operations) {
             $.operations = operations;
             return this;
         }
 
+        /**
+         * @param operations A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operations(ApiOperationResponse... operations) {
             return operations(List.of(operations));
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form `projects/`, that are allowed to be accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is specified for `resources`, then this EgressTo rule will authorize access to all resources outside the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(List<String> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources A list of resources, currently only projects in the form `projects/`, that are allowed to be accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is specified for `resources`, then this EgressTo rule will authorize access to all resources outside the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }

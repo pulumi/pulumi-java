@@ -20,97 +20,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlVirtualMachineResult {
     /**
-     * Auto backup settings for SQL Server.
+     * @return Auto backup settings for SQL Server.
      * 
      */
     private final @Nullable AutoBackupSettingsResponse autoBackupSettings;
     /**
-     * Auto patching settings for applying critical security updates to SQL virtual machine.
+     * @return Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
      */
     private final @Nullable AutoPatchingSettingsResponse autoPatchingSettings;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Azure Active Directory identity of the server.
+     * @return Azure Active Directory identity of the server.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * Key vault credential settings.
+     * @return Key vault credential settings.
      * 
      */
     private final @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Provisioning state to track the async operation status.
+     * @return Provisioning state to track the async operation status.
      * 
      */
     private final String provisioningState;
     /**
-     * SQL Server configuration management settings.
+     * @return SQL Server configuration management settings.
      * 
      */
     private final @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings;
     /**
-     * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
+     * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
     private final @Nullable String sqlImageOffer;
     /**
-     * SQL Server edition type.
+     * @return SQL Server edition type.
      * 
      */
     private final @Nullable String sqlImageSku;
     /**
-     * SQL Server Management type.
+     * @return SQL Server Management type.
      * 
      */
     private final @Nullable String sqlManagement;
     /**
-     * SQL Server license type.
+     * @return SQL Server license type.
      * 
      */
     private final @Nullable String sqlServerLicenseType;
     /**
-     * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+     * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
      */
     private final @Nullable String sqlVirtualMachineGroupResourceId;
     /**
-     * Storage Configuration Settings.
+     * @return Storage Configuration Settings.
      * 
      */
     private final @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * ARM Resource id of underlying virtual machine created from SQL marketplace image.
+     * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
      */
     private final @Nullable String virtualMachineResourceId;
     /**
-     * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+     * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
      */
     private final @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials;
@@ -158,135 +158,135 @@ public final class GetSqlVirtualMachineResult {
     }
 
     /**
-     * Auto backup settings for SQL Server.
+     * @return Auto backup settings for SQL Server.
      * 
-    */
+     */
     public Optional<AutoBackupSettingsResponse> autoBackupSettings() {
         return Optional.ofNullable(this.autoBackupSettings);
     }
     /**
-     * Auto patching settings for applying critical security updates to SQL virtual machine.
+     * @return Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
-    */
+     */
     public Optional<AutoPatchingSettingsResponse> autoPatchingSettings() {
         return Optional.ofNullable(this.autoPatchingSettings);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure Active Directory identity of the server.
+     * @return Azure Active Directory identity of the server.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Key vault credential settings.
+     * @return Key vault credential settings.
      * 
-    */
+     */
     public Optional<KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings() {
         return Optional.ofNullable(this.keyVaultCredentialSettings);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state to track the async operation status.
+     * @return Provisioning state to track the async operation status.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * SQL Server configuration management settings.
+     * @return SQL Server configuration management settings.
      * 
-    */
+     */
     public Optional<ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings() {
         return Optional.ofNullable(this.serverConfigurationsManagementSettings);
     }
     /**
-     * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
+     * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
-    */
+     */
     public Optional<String> sqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
     /**
-     * SQL Server edition type.
+     * @return SQL Server edition type.
      * 
-    */
+     */
     public Optional<String> sqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
     /**
-     * SQL Server Management type.
+     * @return SQL Server Management type.
      * 
-    */
+     */
     public Optional<String> sqlManagement() {
         return Optional.ofNullable(this.sqlManagement);
     }
     /**
-     * SQL Server license type.
+     * @return SQL Server license type.
      * 
-    */
+     */
     public Optional<String> sqlServerLicenseType() {
         return Optional.ofNullable(this.sqlServerLicenseType);
     }
     /**
-     * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+     * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
-    */
+     */
     public Optional<String> sqlVirtualMachineGroupResourceId() {
         return Optional.ofNullable(this.sqlVirtualMachineGroupResourceId);
     }
     /**
-     * Storage Configuration Settings.
+     * @return Storage Configuration Settings.
      * 
-    */
+     */
     public Optional<StorageConfigurationSettingsResponse> storageConfigurationSettings() {
         return Optional.ofNullable(this.storageConfigurationSettings);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * ARM Resource id of underlying virtual machine created from SQL marketplace image.
+     * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
-    */
+     */
     public Optional<String> virtualMachineResourceId() {
         return Optional.ofNullable(this.virtualMachineResourceId);
     }
     /**
-     * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+     * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
-    */
+     */
     public Optional<WsfcDomainCredentialsResponse> wsfcDomainCredentials() {
         return Optional.ofNullable(this.wsfcDomainCredentials);
     }

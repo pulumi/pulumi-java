@@ -23,6 +23,11 @@ public final class ConnectorSubnetGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+     * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +39,10 @@ public final class ConnectorSubnetGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -63,20 +72,46 @@ public final class ConnectorSubnetGetArgs extends com.pulumi.resources.ResourceA
             $ = new ConnectorSubnetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+         * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+         * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param projectId Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

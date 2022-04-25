@@ -39,6 +39,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acl")
     private @Nullable Output<List<BucketAccessControlArgs>> acl;
 
+    /**
+     * @return Access controls on the bucket.
+     * 
+     */
     public Optional<Output<List<BucketAccessControlArgs>>> acl() {
         return Optional.ofNullable(this.acl);
     }
@@ -50,6 +54,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoclass")
     private @Nullable Output<BucketAutoclassArgs> autoclass;
 
+    /**
+     * @return The bucket&#39;s Autoclass configuration.
+     * 
+     */
     public Optional<Output<BucketAutoclassArgs>> autoclass() {
         return Optional.ofNullable(this.autoclass);
     }
@@ -61,6 +69,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="billing")
     private @Nullable Output<BucketBillingArgs> billing;
 
+    /**
+     * @return The bucket&#39;s billing configuration.
+     * 
+     */
     public Optional<Output<BucketBillingArgs>> billing() {
         return Optional.ofNullable(this.billing);
     }
@@ -72,6 +84,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cors")
     private @Nullable Output<List<BucketCorsItemArgs>> cors;
 
+    /**
+     * @return The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration.
+     * 
+     */
     public Optional<Output<List<BucketCorsItemArgs>>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -83,6 +99,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customPlacementConfig")
     private @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
+    /**
+     * @return The bucket&#39;s custom placement configuration for Custom Dual Regions.
+     * 
+     */
     public Optional<Output<BucketCustomPlacementConfigArgs>> customPlacementConfig() {
         return Optional.ofNullable(this.customPlacementConfig);
     }
@@ -94,6 +114,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultEventBasedHold")
     private @Nullable Output<Boolean> defaultEventBasedHold;
 
+    /**
+     * @return The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
+     * 
+     */
     public Optional<Output<Boolean>> defaultEventBasedHold() {
         return Optional.ofNullable(this.defaultEventBasedHold);
     }
@@ -105,6 +129,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultObjectAcl")
     private @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
+    /**
+     * @return Default access controls to apply to new objects when no ACL is provided.
+     * 
+     */
     public Optional<Output<List<ObjectAccessControlArgs>>> defaultObjectAcl() {
         return Optional.ofNullable(this.defaultObjectAcl);
     }
@@ -116,6 +144,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<BucketEncryptionArgs> encryption;
 
+    /**
+     * @return Encryption configuration for a bucket.
+     * 
+     */
     public Optional<Output<BucketEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -127,6 +159,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for the bucket.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -138,6 +174,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamConfiguration")
     private @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
 
+    /**
+     * @return The bucket&#39;s IAM configuration.
+     * 
+     */
     public Optional<Output<BucketIamConfigurationArgs>> iamConfiguration() {
         return Optional.ofNullable(this.iamConfiguration);
     }
@@ -149,6 +189,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the bucket. For buckets, the id and name properties are the same.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -160,6 +204,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For buckets, this is always storage#bucket.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -171,6 +219,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-provided labels, in key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -182,6 +234,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycle")
     private @Nullable Output<BucketLifecycleArgs> lifecycle;
 
+    /**
+     * @return The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
+     * 
+     */
     public Optional<Output<BucketLifecycleArgs>> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
@@ -193,6 +249,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer&#39;s guide for the authoritative list.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -204,6 +264,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationType")
     private @Nullable Output<String> locationType;
 
+    /**
+     * @return The type of the bucket location.
+     * 
+     */
     public Optional<Output<String>> locationType() {
         return Optional.ofNullable(this.locationType);
     }
@@ -215,6 +279,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logging")
     private @Nullable Output<BucketLoggingArgs> logging;
 
+    /**
+     * @return The bucket&#39;s logging configuration, which defines the destination bucket and optional name prefix for the current bucket&#39;s logs.
+     * 
+     */
     public Optional<Output<BucketLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
@@ -226,6 +294,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metageneration")
     private @Nullable Output<String> metageneration;
 
+    /**
+     * @return The metadata generation of this bucket.
+     * 
+     */
     public Optional<Output<String>> metageneration() {
         return Optional.ofNullable(this.metageneration);
     }
@@ -237,6 +309,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the bucket.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -248,6 +324,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
     private @Nullable Output<BucketOwnerArgs> owner;
 
+    /**
+     * @return The owner of the bucket. This is always the project team&#39;s owner group.
+     * 
+     */
     public Optional<Output<BucketOwnerArgs>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -280,6 +360,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
     private @Nullable Output<String> projectNumber;
 
+    /**
+     * @return The project number of the project the bucket belongs to.
+     * 
+     */
     public Optional<Output<String>> projectNumber() {
         return Optional.ofNullable(this.projectNumber);
     }
@@ -305,6 +389,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
     private @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return The bucket&#39;s retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
+     * 
+     */
     public Optional<Output<BucketRetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -316,6 +404,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rpo")
     private @Nullable Output<String> rpo;
 
+    /**
+     * @return The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
+     * 
+     */
     public Optional<Output<String>> rpo() {
         return Optional.ofNullable(this.rpo);
     }
@@ -327,6 +419,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPZS")
     private @Nullable Output<Boolean> satisfiesPZS;
 
+    /**
+     * @return Reserved for future use.
+     * 
+     */
     public Optional<Output<Boolean>> satisfiesPZS() {
         return Optional.ofNullable(this.satisfiesPZS);
     }
@@ -338,6 +434,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of this bucket.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -349,6 +449,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return The bucket&#39;s default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -360,6 +464,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
     private @Nullable Output<String> timeCreated;
 
+    /**
+     * @return The creation time of the bucket in RFC 3339 format.
+     * 
+     */
     public Optional<Output<String>> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
@@ -371,6 +479,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
     private @Nullable Output<String> updated;
 
+    /**
+     * @return The modification time of the bucket in RFC 3339 format.
+     * 
+     */
     public Optional<Output<String>> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -389,6 +501,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versioning")
     private @Nullable Output<BucketVersioningArgs> versioning;
 
+    /**
+     * @return The bucket&#39;s versioning configuration.
+     * 
+     */
     public Optional<Output<BucketVersioningArgs>> versioning() {
         return Optional.ofNullable(this.versioning);
     }
@@ -400,6 +516,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="website")
     private @Nullable Output<BucketWebsiteArgs> website;
 
+    /**
+     * @return The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+     * 
+     */
     public Optional<Output<BucketWebsiteArgs>> website() {
         return Optional.ofNullable(this.website);
     }
@@ -463,194 +583,452 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acl Access controls on the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(@Nullable Output<List<BucketAccessControlArgs>> acl) {
             $.acl = acl;
             return this;
         }
 
+        /**
+         * @param acl Access controls on the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(List<BucketAccessControlArgs> acl) {
             return acl(Output.of(acl));
         }
 
+        /**
+         * @param acl Access controls on the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acl(BucketAccessControlArgs... acl) {
             return acl(List.of(acl));
         }
 
+        /**
+         * @param autoclass The bucket&#39;s Autoclass configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoclass(@Nullable Output<BucketAutoclassArgs> autoclass) {
             $.autoclass = autoclass;
             return this;
         }
 
+        /**
+         * @param autoclass The bucket&#39;s Autoclass configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoclass(BucketAutoclassArgs autoclass) {
             return autoclass(Output.of(autoclass));
         }
 
+        /**
+         * @param billing The bucket&#39;s billing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billing(@Nullable Output<BucketBillingArgs> billing) {
             $.billing = billing;
             return this;
         }
 
+        /**
+         * @param billing The bucket&#39;s billing configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billing(BucketBillingArgs billing) {
             return billing(Output.of(billing));
         }
 
+        /**
+         * @param cors The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<List<BucketCorsItemArgs>> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(List<BucketCorsItemArgs> cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param cors The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(BucketCorsItemArgs... cors) {
             return cors(List.of(cors));
         }
 
+        /**
+         * @param customPlacementConfig The bucket&#39;s custom placement configuration for Custom Dual Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPlacementConfig(@Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig) {
             $.customPlacementConfig = customPlacementConfig;
             return this;
         }
 
+        /**
+         * @param customPlacementConfig The bucket&#39;s custom placement configuration for Custom Dual Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPlacementConfig(BucketCustomPlacementConfigArgs customPlacementConfig) {
             return customPlacementConfig(Output.of(customPlacementConfig));
         }
 
+        /**
+         * @param defaultEventBasedHold The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEventBasedHold(@Nullable Output<Boolean> defaultEventBasedHold) {
             $.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
+        /**
+         * @param defaultEventBasedHold The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             return defaultEventBasedHold(Output.of(defaultEventBasedHold));
         }
 
+        /**
+         * @param defaultObjectAcl Default access controls to apply to new objects when no ACL is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultObjectAcl(@Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl) {
             $.defaultObjectAcl = defaultObjectAcl;
             return this;
         }
 
+        /**
+         * @param defaultObjectAcl Default access controls to apply to new objects when no ACL is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultObjectAcl(List<ObjectAccessControlArgs> defaultObjectAcl) {
             return defaultObjectAcl(Output.of(defaultObjectAcl));
         }
 
+        /**
+         * @param defaultObjectAcl Default access controls to apply to new objects when no ACL is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultObjectAcl(ObjectAccessControlArgs... defaultObjectAcl) {
             return defaultObjectAcl(List.of(defaultObjectAcl));
         }
 
+        /**
+         * @param encryption Encryption configuration for a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<BucketEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Encryption configuration for a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(BucketEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag HTTP 1.1 Entity tag for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param iamConfiguration The bucket&#39;s IAM configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamConfiguration(@Nullable Output<BucketIamConfigurationArgs> iamConfiguration) {
             $.iamConfiguration = iamConfiguration;
             return this;
         }
 
+        /**
+         * @param iamConfiguration The bucket&#39;s IAM configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamConfiguration(BucketIamConfigurationArgs iamConfiguration) {
             return iamConfiguration(Output.of(iamConfiguration));
         }
 
+        /**
+         * @param id The ID of the bucket. For buckets, the id and name properties are the same.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the bucket. For buckets, the id and name properties are the same.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kind The kind of item this is. For buckets, this is always storage#bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of item this is. For buckets, this is always storage#bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param labels User-provided labels, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-provided labels, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param lifecycle The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycle(@Nullable Output<BucketLifecycleArgs> lifecycle) {
             $.lifecycle = lifecycle;
             return this;
         }
 
+        /**
+         * @param lifecycle The bucket&#39;s lifecycle configuration. See lifecycle management for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycle(BucketLifecycleArgs lifecycle) {
             return lifecycle(Output.of(lifecycle));
         }
 
+        /**
+         * @param location The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer&#39;s guide for the authoritative list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer&#39;s guide for the authoritative list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param locationType The type of the bucket location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationType(@Nullable Output<String> locationType) {
             $.locationType = locationType;
             return this;
         }
 
+        /**
+         * @param locationType The type of the bucket location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationType(String locationType) {
             return locationType(Output.of(locationType));
         }
 
+        /**
+         * @param logging The bucket&#39;s logging configuration, which defines the destination bucket and optional name prefix for the current bucket&#39;s logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(@Nullable Output<BucketLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param logging The bucket&#39;s logging configuration, which defines the destination bucket and optional name prefix for the current bucket&#39;s logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(BucketLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 
+        /**
+         * @param metageneration The metadata generation of this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metageneration(@Nullable Output<String> metageneration) {
             $.metageneration = metageneration;
             return this;
         }
 
+        /**
+         * @param metageneration The metadata generation of this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metageneration(String metageneration) {
             return metageneration(Output.of(metageneration));
         }
 
+        /**
+         * @param name The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param owner The owner of the bucket. This is always the project team&#39;s owner group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<BucketOwnerArgs> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner The owner of the bucket. This is always the project team&#39;s owner group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(BucketOwnerArgs owner) {
             return owner(Output.of(owner));
         }
@@ -682,11 +1060,23 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param projectNumber The project number of the project the bucket belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
             $.projectNumber = projectNumber;
             return this;
         }
 
+        /**
+         * @param projectNumber The project number of the project the bucket belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectNumber(String projectNumber) {
             return projectNumber(Output.of(projectNumber));
         }
@@ -709,65 +1099,149 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
+        /**
+         * @param retentionPolicy The bucket&#39;s retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<BucketRetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy The bucket&#39;s retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(BucketRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param rpo The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpo(@Nullable Output<String> rpo) {
             $.rpo = rpo;
             return this;
         }
 
+        /**
+         * @param rpo The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpo(String rpo) {
             return rpo(Output.of(rpo));
         }
 
+        /**
+         * @param satisfiesPZS Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPZS(@Nullable Output<Boolean> satisfiesPZS) {
             $.satisfiesPZS = satisfiesPZS;
             return this;
         }
 
+        /**
+         * @param satisfiesPZS Reserved for future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPZS(Boolean satisfiesPZS) {
             return satisfiesPZS(Output.of(satisfiesPZS));
         }
 
+        /**
+         * @param selfLink The URI of this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param storageClass The bucket&#39;s default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The bucket&#39;s default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param timeCreated The creation time of the bucket in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param timeCreated The creation time of the bucket in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             return timeCreated(Output.of(timeCreated));
         }
 
+        /**
+         * @param updated The modification time of the bucket in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Output<String> updated) {
             $.updated = updated;
             return this;
         }
 
+        /**
+         * @param updated The modification time of the bucket in RFC 3339 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             return updated(Output.of(updated));
         }
@@ -781,20 +1255,44 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return userProject(Output.of(userProject));
         }
 
+        /**
+         * @param versioning The bucket&#39;s versioning configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioning(@Nullable Output<BucketVersioningArgs> versioning) {
             $.versioning = versioning;
             return this;
         }
 
+        /**
+         * @param versioning The bucket&#39;s versioning configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versioning(BucketVersioningArgs versioning) {
             return versioning(Output.of(versioning));
         }
 
+        /**
+         * @param website The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder website(@Nullable Output<BucketWebsiteArgs> website) {
             $.website = website;
             return this;
         }
 
+        /**
+         * @param website The bucket&#39;s website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder website(BucketWebsiteArgs website) {
             return website(Output.of(website));
         }

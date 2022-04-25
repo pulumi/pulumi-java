@@ -25,6 +25,10 @@ public final class AssignedStandardItemResponse extends com.pulumi.resources.Inv
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return full resourceId of the Microsoft.Security/standard object
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class AssignedStandardItemResponse extends com.pulumi.resources.Inv
             $ = new AssignedStandardItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id full resourceId of the Microsoft.Security/standard object
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

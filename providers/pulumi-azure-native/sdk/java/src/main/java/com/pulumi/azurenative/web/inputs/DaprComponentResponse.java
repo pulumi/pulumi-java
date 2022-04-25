@@ -27,6 +27,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadata")
     private @Nullable List<DaprMetadataResponse> metadata;
 
+    /**
+     * @return Component metadata
+     * 
+     */
     public Optional<List<DaprMetadataResponse>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -38,6 +42,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Component name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Component type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -60,6 +72,10 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Component version
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -91,25 +107,55 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
             $ = new DaprComponentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Component metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable List<DaprMetadataResponse> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Component metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(DaprMetadataResponse... metadata) {
             return metadata(List.of(metadata));
         }
 
+        /**
+         * @param name Component name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Component type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version Component version
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

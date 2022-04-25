@@ -30,6 +30,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the backed up item.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -41,6 +45,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="backupSetName")
     private @Nullable String backupSetName;
 
+    /**
+     * @return Name of the backup set the backup item belongs to
+     * 
+     */
     public Optional<String> backupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
@@ -52,6 +60,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return Unique name of container
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -63,6 +75,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="createMode")
     private @Nullable String createMode;
 
+    /**
+     * @return Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * 
+     */
     public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
@@ -74,6 +90,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="deferredDeleteTimeInUTC")
     private @Nullable String deferredDeleteTimeInUTC;
 
+    /**
+     * @return Time for deferred deletion in UTC
+     * 
+     */
     public Optional<String> deferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
@@ -85,6 +105,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="deferredDeleteTimeRemaining")
     private @Nullable String deferredDeleteTimeRemaining;
 
+    /**
+     * @return Time remaining before the DS marked for deferred delete is permanently deleted
+     * 
+     */
     public Optional<String> deferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
@@ -96,6 +120,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="extendedInfo")
     private @Nullable AzureFileshareProtectedItemExtendedInfoResponse extendedInfo;
 
+    /**
+     * @return Additional information with this backup item.
+     * 
+     */
     public Optional<AzureFileshareProtectedItemExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -107,6 +135,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the fileshare represented by this backup item.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -118,6 +150,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="isDeferredDeleteScheduleUpcoming")
     private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
+    /**
+     * @return Flag to identify whether the deferred deleted DS is to be purged soon
+     * 
+     */
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
@@ -129,6 +165,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="isRehydrate")
     private @Nullable Boolean isRehydrate;
 
+    /**
+     * @return Flag to identify that deferred deleted DS is to be moved into Pause state
+     * 
+     */
     public Optional<Boolean> isRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
@@ -140,6 +180,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="isScheduledForDeferredDelete")
     private @Nullable Boolean isScheduledForDeferredDelete;
 
+    /**
+     * @return Flag to identify whether the DS is scheduled for deferred delete
+     * 
+     */
     public Optional<Boolean> isScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
@@ -151,6 +195,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="kpisHealths")
     private @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
+    /**
+     * @return Health details of different KPIs
+     * 
+     */
     public Optional<Map<String,KPIResourceHealthDetailsResponse>> kpisHealths() {
         return Optional.ofNullable(this.kpisHealths);
     }
@@ -162,6 +210,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="lastBackupStatus")
     private @Nullable String lastBackupStatus;
 
+    /**
+     * @return Last backup operation status. Possible values: Healthy, Unhealthy.
+     * 
+     */
     public Optional<String> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
@@ -173,6 +225,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="lastBackupTime")
     private @Nullable String lastBackupTime;
 
+    /**
+     * @return Timestamp of the last backup operation on this backup item.
+     * 
+     */
     public Optional<String> lastBackupTime() {
         return Optional.ofNullable(this.lastBackupTime);
     }
@@ -184,6 +240,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="lastRecoveryPoint")
     private @Nullable String lastRecoveryPoint;
 
+    /**
+     * @return Timestamp when the last (latest) backup copy was created for this backup item.
+     * 
+     */
     public Optional<String> lastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
@@ -195,6 +255,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return ID of the backup policy with which this item is backed up.
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -207,6 +271,11 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="protectedItemType", required=true)
     private String protectedItemType;
 
+    /**
+     * @return backup item type.
+     * Expected value is &#39;AzureFileShareProtectedItem&#39;.
+     * 
+     */
     public String protectedItemType() {
         return this.protectedItemType;
     }
@@ -218,6 +287,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="protectionState")
     private @Nullable String protectionState;
 
+    /**
+     * @return Backup state of this backup item.
+     * 
+     */
     public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
@@ -229,6 +302,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="protectionStatus")
     private @Nullable String protectionStatus;
 
+    /**
+     * @return Backup status of this backup item.
+     * 
+     */
     public Optional<String> protectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
@@ -240,6 +317,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="sourceResourceId")
     private @Nullable String sourceResourceId;
 
+    /**
+     * @return ARM ID of the resource to be backed up.
+     * 
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -251,6 +332,10 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
     @Import(name="workloadType")
     private @Nullable String workloadType;
 
+    /**
+     * @return Type of workload this item represents.
+     * 
+     */
     public Optional<String> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -299,106 +384,233 @@ public final class AzureFileshareProtectedItemResponse extends com.pulumi.resour
             $ = new AzureFileshareProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupSetName Name of the backup set the backup item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSetName(@Nullable String backupSetName) {
             $.backupSetName = backupSetName;
             return this;
         }
 
+        /**
+         * @param containerName Unique name of container
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(@Nullable String createMode) {
             $.createMode = createMode;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeInUTC Time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeRemaining Time remaining before the DS marked for deferred delete is permanently deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
+        /**
+         * @param extendedInfo Additional information with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable AzureFileshareProtectedItemExtendedInfoResponse extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the fileshare represented by this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param isDeferredDeleteScheduleUpcoming Flag to identify whether the deferred deleted DS is to be purged soon
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
+        /**
+         * @param isRehydrate Flag to identify that deferred deleted DS is to be moved into Pause state
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             $.isRehydrate = isRehydrate;
             return this;
         }
 
+        /**
+         * @param isScheduledForDeferredDelete Flag to identify whether the DS is scheduled for deferred delete
+         * 
+         * @return builder
+         * 
+         */
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
+        /**
+         * @param kpisHealths Health details of different KPIs
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
             $.kpisHealths = kpisHealths;
             return this;
         }
 
+        /**
+         * @param lastBackupStatus Last backup operation status. Possible values: Healthy, Unhealthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             $.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
+        /**
+         * @param lastBackupTime Timestamp of the last backup operation on this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
             $.lastBackupTime = lastBackupTime;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPoint Timestamp when the last (latest) backup copy was created for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param protectedItemType backup item type.
+         * Expected value is &#39;AzureFileShareProtectedItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemType(String protectedItemType) {
             $.protectedItemType = protectedItemType;
             return this;
         }
 
+        /**
+         * @param protectionState Backup state of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(@Nullable String protectionState) {
             $.protectionState = protectionState;
             return this;
         }
 
+        /**
+         * @param protectionStatus Backup status of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStatus(@Nullable String protectionStatus) {
             $.protectionStatus = protectionStatus;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(@Nullable String workloadType) {
             $.workloadType = workloadType;
             return this;

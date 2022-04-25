@@ -19,6 +19,10 @@ public final class GetMoveCollectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="moveCollectionName", required=true)
     private String moveCollectionName;
 
+    /**
+     * @return The Move Collection Name.
+     * 
+     */
     public String moveCollectionName() {
         return this.moveCollectionName;
     }
@@ -30,6 +34,10 @@ public final class GetMoveCollectionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetMoveCollectionArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetMoveCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(String moveCollectionName) {
             $.moveCollectionName = moveCollectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

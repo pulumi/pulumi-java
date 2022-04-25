@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends com.pulumi.r
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends com.pulumi.r
             $ = new GooglePrivacyDlpV2TransientCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

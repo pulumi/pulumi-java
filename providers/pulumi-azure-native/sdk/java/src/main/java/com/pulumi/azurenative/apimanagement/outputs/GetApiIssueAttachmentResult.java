@@ -10,32 +10,32 @@ import java.util.Objects;
 @CustomType
 public final class GetApiIssueAttachmentResult {
     /**
-     * An HTTP link or Base64-encoded binary data.
+     * @return An HTTP link or Base64-encoded binary data.
      * 
      */
     private final String content;
     /**
-     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
+     * @return Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
      */
     private final String contentFormat;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Filename by which the binary data will be saved.
+     * @return Filename by which the binary data will be saved.
      * 
      */
     private final String title;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
@@ -57,44 +57,44 @@ public final class GetApiIssueAttachmentResult {
     }
 
     /**
-     * An HTTP link or Base64-encoded binary data.
+     * @return An HTTP link or Base64-encoded binary data.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
+     * @return Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
-    */
+     */
     public String contentFormat() {
         return this.contentFormat;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Filename by which the binary data will be saved.
+     * @return Filename by which the binary data will be saved.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

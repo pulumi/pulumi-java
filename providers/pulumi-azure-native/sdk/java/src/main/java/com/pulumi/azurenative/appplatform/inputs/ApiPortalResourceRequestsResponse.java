@@ -23,6 +23,10 @@ public final class ApiPortalResourceRequestsResponse extends com.pulumi.resource
     @Import(name="cpu", required=true)
     private String cpu;
 
+    /**
+     * @return Cpu allocated to each API portal instance
+     * 
+     */
     public String cpu() {
         return this.cpu;
     }
@@ -34,6 +38,10 @@ public final class ApiPortalResourceRequestsResponse extends com.pulumi.resource
     @Import(name="memory", required=true)
     private String memory;
 
+    /**
+     * @return Memory allocated to each API portal instance
+     * 
+     */
     public String memory() {
         return this.memory;
     }
@@ -63,11 +71,23 @@ public final class ApiPortalResourceRequestsResponse extends com.pulumi.resource
             $ = new ApiPortalResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Cpu allocated to each API portal instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(String cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memory Memory allocated to each API portal instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             $.memory = memory;
             return this;

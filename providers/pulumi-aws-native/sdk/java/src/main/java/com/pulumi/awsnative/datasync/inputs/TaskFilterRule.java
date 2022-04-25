@@ -26,6 +26,10 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="filterType")
     private @Nullable TaskFilterRuleFilterType filterType;
 
+    /**
+     * @return The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * 
+     */
     public Optional<TaskFilterRuleFilterType> filterType() {
         return Optional.ofNullable(this.filterType);
     }
@@ -37,6 +41,10 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,11 +74,23 @@ public final class TaskFilterRule extends com.pulumi.resources.InvokeArgs {
             $ = new TaskFilterRule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterType The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
             $.filterType = filterType;
             return this;
         }
 
+        /**
+         * @param value A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

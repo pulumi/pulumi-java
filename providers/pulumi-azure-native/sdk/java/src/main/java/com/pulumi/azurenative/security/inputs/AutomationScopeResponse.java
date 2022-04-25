@@ -25,6 +25,10 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The resources scope description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scopePath")
     private @Nullable String scopePath;
 
+    /**
+     * @return The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+     * 
+     */
     public Optional<String> scopePath() {
         return Optional.ofNullable(this.scopePath);
     }
@@ -65,11 +73,23 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
             $ = new AutomationScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The resources scope description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param scopePath The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(@Nullable String scopePath) {
             $.scopePath = scopePath;
             return this;

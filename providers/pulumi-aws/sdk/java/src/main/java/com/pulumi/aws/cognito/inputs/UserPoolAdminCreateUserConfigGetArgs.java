@@ -23,6 +23,10 @@ public final class UserPoolAdminCreateUserConfigGetArgs extends com.pulumi.resou
     @Import(name="allowAdminCreateUserOnly")
     private @Nullable Output<Boolean> allowAdminCreateUserOnly;
 
+    /**
+     * @return Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
+     * 
+     */
     public Optional<Output<Boolean>> allowAdminCreateUserOnly() {
         return Optional.ofNullable(this.allowAdminCreateUserOnly);
     }
@@ -34,6 +38,10 @@ public final class UserPoolAdminCreateUserConfigGetArgs extends com.pulumi.resou
     @Import(name="inviteMessageTemplate")
     private @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs> inviteMessageTemplate;
 
+    /**
+     * @return Invite message template structure. Detailed below.
+     * 
+     */
     public Optional<Output<UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs>> inviteMessageTemplate() {
         return Optional.ofNullable(this.inviteMessageTemplate);
     }
@@ -63,20 +71,44 @@ public final class UserPoolAdminCreateUserConfigGetArgs extends com.pulumi.resou
             $ = new UserPoolAdminCreateUserConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowAdminCreateUserOnly Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAdminCreateUserOnly(@Nullable Output<Boolean> allowAdminCreateUserOnly) {
             $.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
             return this;
         }
 
+        /**
+         * @param allowAdminCreateUserOnly Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowAdminCreateUserOnly(Boolean allowAdminCreateUserOnly) {
             return allowAdminCreateUserOnly(Output.of(allowAdminCreateUserOnly));
         }
 
+        /**
+         * @param inviteMessageTemplate Invite message template structure. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inviteMessageTemplate(@Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs> inviteMessageTemplate) {
             $.inviteMessageTemplate = inviteMessageTemplate;
             return this;
         }
 
+        /**
+         * @param inviteMessageTemplate Invite message template structure. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inviteMessageTemplate(UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs inviteMessageTemplate) {
             return inviteMessageTemplate(Output.of(inviteMessageTemplate));
         }

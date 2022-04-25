@@ -23,6 +23,10 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The identifier for this object. Format specified above.
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -35,6 +39,11 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
     @Import(name="enforcementMode", required=true)
     private Output<String> enforcementMode;
 
+    /**
+     * @return The action when a pod creation is denied by the admission rule.
+     * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
+     * 
+     */
     public Output<String> enforcementMode() {
         return this.enforcementMode;
     }
@@ -47,6 +56,11 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
     @Import(name="evaluationMode", required=true)
     private Output<String> evaluationMode;
 
+    /**
+     * @return How this admission rule will be evaluated.
+     * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
+     * 
+     */
     public Output<String> evaluationMode() {
         return this.evaluationMode;
     }
@@ -65,6 +79,17 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
     @Import(name="requireAttestationsBies")
     private @Nullable Output<List<String>> requireAttestationsBies;
 
+    /**
+     * @return The resource names of the attestors that must attest to a
+     * container image. If the attestor is in a different project from the
+     * policy, it should be specified in the format `projects/*{@literal /}attestors/*`.
+     * Each attestor must exist before a policy can reference it. To add an
+     * attestor to a policy the principal issuing the policy change
+     * request must be able to read the attestor resource.
+     * Note: this field must be non-empty when the evaluation_mode field
+     * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+     * 
+     */
     public Optional<Output<List<String>>> requireAttestationsBies() {
         return Optional.ofNullable(this.requireAttestationsBies);
     }
@@ -96,42 +121,121 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
             $ = new PolicyClusterAdmissionRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cluster The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param enforcementMode The action when a pod creation is denied by the admission rule.
+         * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementMode(Output<String> enforcementMode) {
             $.enforcementMode = enforcementMode;
             return this;
         }
 
+        /**
+         * @param enforcementMode The action when a pod creation is denied by the admission rule.
+         * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementMode(String enforcementMode) {
             return enforcementMode(Output.of(enforcementMode));
         }
 
+        /**
+         * @param evaluationMode How this admission rule will be evaluated.
+         * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationMode(Output<String> evaluationMode) {
             $.evaluationMode = evaluationMode;
             return this;
         }
 
+        /**
+         * @param evaluationMode How this admission rule will be evaluated.
+         * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationMode(String evaluationMode) {
             return evaluationMode(Output.of(evaluationMode));
         }
 
+        /**
+         * @param requireAttestationsBies The resource names of the attestors that must attest to a
+         * container image. If the attestor is in a different project from the
+         * policy, it should be specified in the format `projects/*{@literal /}attestors/*`.
+         * Each attestor must exist before a policy can reference it. To add an
+         * attestor to a policy the principal issuing the policy change
+         * request must be able to read the attestor resource.
+         * Note: this field must be non-empty when the evaluation_mode field
+         * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAttestationsBies(@Nullable Output<List<String>> requireAttestationsBies) {
             $.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
 
+        /**
+         * @param requireAttestationsBies The resource names of the attestors that must attest to a
+         * container image. If the attestor is in a different project from the
+         * policy, it should be specified in the format `projects/*{@literal /}attestors/*`.
+         * Each attestor must exist before a policy can reference it. To add an
+         * attestor to a policy the principal issuing the policy change
+         * request must be able to read the attestor resource.
+         * Note: this field must be non-empty when the evaluation_mode field
+         * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAttestationsBies(List<String> requireAttestationsBies) {
             return requireAttestationsBies(Output.of(requireAttestationsBies));
         }
 
+        /**
+         * @param requireAttestationsBies The resource names of the attestors that must attest to a
+         * container image. If the attestor is in a different project from the
+         * policy, it should be specified in the format `projects/*{@literal /}attestors/*`.
+         * Each attestor must exist before a policy can reference it. To add an
+         * attestor to a policy the principal issuing the policy change
+         * request must be able to read the attestor resource.
+         * Note: this field must be non-empty when the evaluation_mode field
+         * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAttestationsBies(String... requireAttestationsBies) {
             return requireAttestationsBies(List.of(requireAttestationsBies));
         }

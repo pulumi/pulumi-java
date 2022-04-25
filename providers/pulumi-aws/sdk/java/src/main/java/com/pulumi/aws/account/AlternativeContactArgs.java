@@ -22,6 +22,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -33,6 +37,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="alternateContactType", required=true)
     private Output<String> alternateContactType;
 
+    /**
+     * @return The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
+     * 
+     */
     public Output<String> alternateContactType() {
         return this.alternateContactType;
     }
@@ -44,6 +52,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="emailAddress", required=true)
     private Output<String> emailAddress;
 
+    /**
+     * @return An email address for the alternate contact.
+     * 
+     */
     public Output<String> emailAddress() {
         return this.emailAddress;
     }
@@ -55,6 +67,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the alternate contact.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +82,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="phoneNumber", required=true)
     private Output<String> phoneNumber;
 
+    /**
+     * @return A phone number for the alternate contact.
+     * 
+     */
     public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
@@ -77,6 +97,10 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return A title for the alternate contact.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -110,56 +134,128 @@ public final class AlternativeContactArgs extends com.pulumi.resources.ResourceA
             $ = new AlternativeContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param alternateContactType The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateContactType(Output<String> alternateContactType) {
             $.alternateContactType = alternateContactType;
             return this;
         }
 
+        /**
+         * @param alternateContactType The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateContactType(String alternateContactType) {
             return alternateContactType(Output.of(alternateContactType));
         }
 
+        /**
+         * @param emailAddress An email address for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress An email address for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param name The name of the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param phoneNumber A phone number for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber A phone number for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }
 
+        /**
+         * @param title A title for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title A title for the alternate contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

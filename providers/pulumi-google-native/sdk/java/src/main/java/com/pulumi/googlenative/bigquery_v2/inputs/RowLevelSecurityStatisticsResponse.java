@@ -19,6 +19,10 @@ public final class RowLevelSecurityStatisticsResponse extends com.pulumi.resourc
     @Import(name="rowLevelSecurityApplied", required=true)
     private Boolean rowLevelSecurityApplied;
 
+    /**
+     * @return [Preview] Whether any accessed data was protected by row access policies.
+     * 
+     */
     public Boolean rowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }
@@ -47,6 +51,12 @@ public final class RowLevelSecurityStatisticsResponse extends com.pulumi.resourc
             $ = new RowLevelSecurityStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rowLevelSecurityApplied [Preview] Whether any accessed data was protected by row access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
             $.rowLevelSecurityApplied = rowLevelSecurityApplied;
             return this;

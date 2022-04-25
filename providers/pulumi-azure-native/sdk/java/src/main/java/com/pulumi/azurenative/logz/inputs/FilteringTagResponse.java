@@ -25,6 +25,10 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -36,6 +40,10 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name (also known as the key) of the tag.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the tag.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class FilteringTagResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FilteringTagResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Valid actions for a filtering tag. Exclusion takes priority over inclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param name The name (also known as the key) of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

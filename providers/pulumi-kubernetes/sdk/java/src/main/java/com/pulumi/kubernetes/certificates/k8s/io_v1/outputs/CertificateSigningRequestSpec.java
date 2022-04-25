@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateSigningRequestSpec {
     /**
-     * expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+     * @return expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
      * 
      * The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
      * 
@@ -33,22 +33,22 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable Integer expirationSeconds;
     /**
-     * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
-     * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
     private final @Nullable List<String> groups;
     /**
-     * request contains an x509 certificate signing request encoded in a &#34;CERTIFICATE REQUEST&#34; PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
+     * @return request contains an x509 certificate signing request encoded in a &#34;CERTIFICATE REQUEST&#34; PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
      */
     private final String request;
     /**
-     * signerName indicates the requested signer, and is a qualified name.
+     * @return signerName indicates the requested signer, and is a qualified name.
      * 
      * List/watch requests for CertificateSigningRequests can filter on this field using a &#34;spec.signerName=NAME&#34; fieldSelector.
      * 
@@ -73,12 +73,12 @@ public final class CertificateSigningRequestSpec {
      */
     private final String signerName;
     /**
-     * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
     private final @Nullable String uid;
     /**
-     * usages specifies a set of key usages requested in the issued certificate.
+     * @return usages specifies a set of key usages requested in the issued certificate.
      * 
      * Requests for TLS client certificates typically request: &#34;digital signature&#34;, &#34;key encipherment&#34;, &#34;client auth&#34;.
      * 
@@ -96,7 +96,7 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable List<String> usages;
     /**
-     * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
     private final @Nullable String username;
@@ -122,7 +122,7 @@ public final class CertificateSigningRequestSpec {
     }
 
     /**
-     * expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+     * @return expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
      * 
      * The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
      * 
@@ -137,33 +137,33 @@ public final class CertificateSigningRequestSpec {
      * 
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
      * 
-    */
+     */
     public Optional<Integer> expirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }
     /**
-     * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-    */
+     */
     public Map<String,List<String>> extra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
-     * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-    */
+     */
     public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
-     * request contains an x509 certificate signing request encoded in a &#34;CERTIFICATE REQUEST&#34; PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
+     * @return request contains an x509 certificate signing request encoded in a &#34;CERTIFICATE REQUEST&#34; PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
-    */
+     */
     public String request() {
         return this.request;
     }
     /**
-     * signerName indicates the requested signer, and is a qualified name.
+     * @return signerName indicates the requested signer, and is a qualified name.
      * 
      * List/watch requests for CertificateSigningRequests can filter on this field using a &#34;spec.signerName=NAME&#34; fieldSelector.
      * 
@@ -185,19 +185,19 @@ public final class CertificateSigningRequestSpec {
      *  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
      *  6. Whether or not requests for CA certificates are allowed.
      * 
-    */
+     */
     public String signerName() {
         return this.signerName;
     }
     /**
-     * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-    */
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
-     * usages specifies a set of key usages requested in the issued certificate.
+     * @return usages specifies a set of key usages requested in the issued certificate.
      * 
      * Requests for TLS client certificates typically request: &#34;digital signature&#34;, &#34;key encipherment&#34;, &#34;client auth&#34;.
      * 
@@ -212,14 +212,14 @@ public final class CertificateSigningRequestSpec {
      *  &#34;ipsec end system&#34;, &#34;ipsec tunnel&#34;, &#34;ipsec user&#34;,
      *  &#34;timestamping&#34;, &#34;ocsp signing&#34;, &#34;microsoft sgc&#34;, &#34;netscape sgc&#34;
      * 
-    */
+     */
     public List<String> usages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
-     * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
+     * @return username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

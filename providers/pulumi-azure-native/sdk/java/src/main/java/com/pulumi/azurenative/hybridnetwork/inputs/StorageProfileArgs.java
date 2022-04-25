@@ -29,6 +29,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataDisks")
     private @Nullable Output<List<DataDiskArgs>> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine.
+     * 
+     */
     public Optional<Output<List<DataDiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -40,6 +44,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageReference")
     private @Nullable Output<ImageReferenceArgs> imageReference;
 
+    /**
+     * @return The image reference properties.
+     * 
+     */
     public Optional<Output<ImageReferenceArgs>> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -51,6 +59,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osDisk")
     private @Nullable Output<OsDiskArgs> osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine.
+     * 
+     */
     public Optional<Output<OsDiskArgs>> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -81,33 +93,75 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<DataDiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param imageReference The image reference properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param imageReference The image reference properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(ImageReferenceArgs imageReference) {
             return imageReference(Output.of(imageReference));
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable Output<OsDiskArgs> osDisk) {
             $.osDisk = osDisk;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(OsDiskArgs osDisk) {
             return osDisk(Output.of(osDisk));
         }

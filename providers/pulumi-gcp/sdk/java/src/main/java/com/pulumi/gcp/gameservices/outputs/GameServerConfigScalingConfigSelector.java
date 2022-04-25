@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GameServerConfigScalingConfigSelector {
     /**
-     * Set of labels to group by.
+     * @return Set of labels to group by.
      * 
      */
     private final @Nullable Map<String,String> labels;
@@ -23,9 +23,9 @@ public final class GameServerConfigScalingConfigSelector {
     }
 
     /**
-     * Set of labels to group by.
+     * @return Set of labels to group by.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }

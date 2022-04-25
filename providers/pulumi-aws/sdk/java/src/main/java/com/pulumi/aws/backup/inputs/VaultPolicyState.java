@@ -22,6 +22,10 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupVaultArn")
     private @Nullable Output<String> backupVaultArn;
 
+    /**
+     * @return The ARN of the vault.
+     * 
+     */
     public Optional<Output<String>> backupVaultArn() {
         return Optional.ofNullable(this.backupVaultArn);
     }
@@ -33,6 +37,10 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="backupVaultName")
     private @Nullable Output<String> backupVaultName;
 
+    /**
+     * @return Name of the backup vault to add policy for.
+     * 
+     */
     public Optional<Output<String>> backupVaultName() {
         return Optional.ofNullable(this.backupVaultName);
     }
@@ -44,6 +52,10 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return The backup vault access policy document in JSON format.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -74,29 +86,65 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new VaultPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupVaultArn The ARN of the vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
             $.backupVaultArn = backupVaultArn;
             return this;
         }
 
+        /**
+         * @param backupVaultArn The ARN of the vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultArn(String backupVaultArn) {
             return backupVaultArn(Output.of(backupVaultArn));
         }
 
+        /**
+         * @param backupVaultName Name of the backup vault to add policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             $.backupVaultName = backupVaultName;
             return this;
         }
 
+        /**
+         * @param backupVaultName Name of the backup vault to add policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupVaultName(String backupVaultName) {
             return backupVaultName(Output.of(backupVaultName));
         }
 
+        /**
+         * @param policy The backup vault access policy document in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The backup vault access policy document in JSON format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

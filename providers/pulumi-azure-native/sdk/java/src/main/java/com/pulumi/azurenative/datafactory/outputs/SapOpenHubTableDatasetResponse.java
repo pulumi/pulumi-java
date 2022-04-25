@@ -18,57 +18,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SapOpenHubTableDatasetResponse {
     /**
-     * List of tags that can be used for describing the Dataset.
+     * @return List of tags that can be used for describing the Dataset.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+     * @return The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
      * 
      */
     private final @Nullable Object baseRequestId;
     /**
-     * Dataset description.
+     * @return Dataset description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object excludeLastRequest;
     /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
     private final @Nullable DatasetResponseFolder folder;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
+     * @return The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
      * 
      */
     private final Object openHubDestinationName;
     /**
-     * Parameters for dataset.
+     * @return Parameters for dataset.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
     private final @Nullable Object schema;
     /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
     private final @Nullable Object structure;
     /**
-     * Type of dataset.
+     * @return Type of dataset.
      * Expected value is &#39;SapOpenHubTable&#39;.
      * 
      */
@@ -101,80 +101,80 @@ public final class SapOpenHubTableDatasetResponse {
     }
 
     /**
-     * List of tags that can be used for describing the Dataset.
+     * @return List of tags that can be used for describing the Dataset.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+     * @return The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
      * 
-    */
+     */
     public Optional<Object> baseRequestId() {
         return Optional.ofNullable(this.baseRequestId);
     }
     /**
-     * Dataset description.
+     * @return Dataset description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> excludeLastRequest() {
         return Optional.ofNullable(this.excludeLastRequest);
     }
     /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-    */
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
+     * @return The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object openHubDestinationName() {
         return this.openHubDestinationName;
     }
     /**
-     * Parameters for dataset.
+     * @return Parameters for dataset.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-    */
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-    */
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
-     * Type of dataset.
+     * @return Type of dataset.
      * Expected value is &#39;SapOpenHubTable&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

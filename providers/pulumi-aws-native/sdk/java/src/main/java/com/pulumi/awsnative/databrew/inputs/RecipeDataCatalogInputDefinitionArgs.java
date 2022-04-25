@@ -23,6 +23,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return Catalog id
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -34,6 +38,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return Database name
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -45,6 +53,10 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return Table name
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -83,29 +95,65 @@ public final class RecipeDataCatalogInputDefinitionArgs extends com.pulumi.resou
             $ = new RecipeDataCatalogInputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Catalog id
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId Catalog id
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param databaseName Database name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Database name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param tableName Table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName Table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }

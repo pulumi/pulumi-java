@@ -24,6 +24,10 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="caCertificateAccessUrl", required=true)
     private String caCertificateAccessUrl;
 
+    /**
+     * @return The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
+     * 
+     */
     public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
@@ -35,6 +39,10 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="crlAccessUrls", required=true)
     private List<String> crlAccessUrls;
 
+    /**
+     * @return The URLs where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
+     * 
+     */
     public List<String> crlAccessUrls() {
         return this.crlAccessUrls;
     }
@@ -64,16 +72,34 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AccessUrlsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caCertificateAccessUrl The URL where this CertificateAuthority&#39;s CA certificate is published. This will only be set for CAs that have been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
             $.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
 
+        /**
+         * @param crlAccessUrls The URLs where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlAccessUrls(List<String> crlAccessUrls) {
             $.crlAccessUrls = crlAccessUrls;
             return this;
         }
 
+        /**
+         * @param crlAccessUrls The URLs where this CertificateAuthority&#39;s CRLs are published. This will only be set for CAs that have been activated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crlAccessUrls(String... crlAccessUrls) {
             return crlAccessUrls(List.of(crlAccessUrls));
         }

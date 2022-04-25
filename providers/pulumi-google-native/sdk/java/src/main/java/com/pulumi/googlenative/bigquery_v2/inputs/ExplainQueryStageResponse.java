@@ -22,6 +22,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="completedParallelInputs", required=true)
     private String completedParallelInputs;
 
+    /**
+     * @return Number of parallel input segments completed.
+     * 
+     */
     public String completedParallelInputs() {
         return this.completedParallelInputs;
     }
@@ -33,6 +37,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="computeMsAvg", required=true)
     private String computeMsAvg;
 
+    /**
+     * @return Milliseconds the average shard spent on CPU-bound tasks.
+     * 
+     */
     public String computeMsAvg() {
         return this.computeMsAvg;
     }
@@ -44,6 +52,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="computeMsMax", required=true)
     private String computeMsMax;
 
+    /**
+     * @return Milliseconds the slowest shard spent on CPU-bound tasks.
+     * 
+     */
     public String computeMsMax() {
         return this.computeMsMax;
     }
@@ -55,6 +67,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="computeRatioAvg", required=true)
     private Double computeRatioAvg;
 
+    /**
+     * @return Relative amount of time the average shard spent on CPU-bound tasks.
+     * 
+     */
     public Double computeRatioAvg() {
         return this.computeRatioAvg;
     }
@@ -66,6 +82,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="computeRatioMax", required=true)
     private Double computeRatioMax;
 
+    /**
+     * @return Relative amount of time the slowest shard spent on CPU-bound tasks.
+     * 
+     */
     public Double computeRatioMax() {
         return this.computeRatioMax;
     }
@@ -77,6 +97,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="endMs", required=true)
     private String endMs;
 
+    /**
+     * @return Stage end time represented as milliseconds since epoch.
+     * 
+     */
     public String endMs() {
         return this.endMs;
     }
@@ -88,6 +112,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="inputStages", required=true)
     private List<String> inputStages;
 
+    /**
+     * @return IDs for stages that are inputs to this stage.
+     * 
+     */
     public List<String> inputStages() {
         return this.inputStages;
     }
@@ -99,6 +127,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Human-readable name for stage.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -110,6 +142,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="parallelInputs", required=true)
     private String parallelInputs;
 
+    /**
+     * @return Number of parallel input segments to be processed.
+     * 
+     */
     public String parallelInputs() {
         return this.parallelInputs;
     }
@@ -121,6 +157,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="readMsAvg", required=true)
     private String readMsAvg;
 
+    /**
+     * @return Milliseconds the average shard spent reading input.
+     * 
+     */
     public String readMsAvg() {
         return this.readMsAvg;
     }
@@ -132,6 +172,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="readMsMax", required=true)
     private String readMsMax;
 
+    /**
+     * @return Milliseconds the slowest shard spent reading input.
+     * 
+     */
     public String readMsMax() {
         return this.readMsMax;
     }
@@ -143,6 +187,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="readRatioAvg", required=true)
     private Double readRatioAvg;
 
+    /**
+     * @return Relative amount of time the average shard spent reading input.
+     * 
+     */
     public Double readRatioAvg() {
         return this.readRatioAvg;
     }
@@ -154,6 +202,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="readRatioMax", required=true)
     private Double readRatioMax;
 
+    /**
+     * @return Relative amount of time the slowest shard spent reading input.
+     * 
+     */
     public Double readRatioMax() {
         return this.readRatioMax;
     }
@@ -165,6 +217,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="recordsRead", required=true)
     private String recordsRead;
 
+    /**
+     * @return Number of records read into the stage.
+     * 
+     */
     public String recordsRead() {
         return this.recordsRead;
     }
@@ -176,6 +232,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="recordsWritten", required=true)
     private String recordsWritten;
 
+    /**
+     * @return Number of records written by the stage.
+     * 
+     */
     public String recordsWritten() {
         return this.recordsWritten;
     }
@@ -187,6 +247,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="shuffleOutputBytes", required=true)
     private String shuffleOutputBytes;
 
+    /**
+     * @return Total number of bytes written to shuffle.
+     * 
+     */
     public String shuffleOutputBytes() {
         return this.shuffleOutputBytes;
     }
@@ -198,6 +262,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="shuffleOutputBytesSpilled", required=true)
     private String shuffleOutputBytesSpilled;
 
+    /**
+     * @return Total number of bytes written to shuffle and spilled to disk.
+     * 
+     */
     public String shuffleOutputBytesSpilled() {
         return this.shuffleOutputBytesSpilled;
     }
@@ -209,6 +277,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="slotMs", required=true)
     private String slotMs;
 
+    /**
+     * @return Slot-milliseconds used by the stage.
+     * 
+     */
     public String slotMs() {
         return this.slotMs;
     }
@@ -220,6 +292,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="startMs", required=true)
     private String startMs;
 
+    /**
+     * @return Stage start time represented as milliseconds since epoch.
+     * 
+     */
     public String startMs() {
         return this.startMs;
     }
@@ -231,6 +307,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Current status for the stage.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -242,6 +322,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="steps", required=true)
     private List<ExplainQueryStepResponse> steps;
 
+    /**
+     * @return List of operations within the stage in dependency order (approximately chronological).
+     * 
+     */
     public List<ExplainQueryStepResponse> steps() {
         return this.steps;
     }
@@ -253,6 +337,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="waitMsAvg", required=true)
     private String waitMsAvg;
 
+    /**
+     * @return Milliseconds the average shard spent waiting to be scheduled.
+     * 
+     */
     public String waitMsAvg() {
         return this.waitMsAvg;
     }
@@ -264,6 +352,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="waitMsMax", required=true)
     private String waitMsMax;
 
+    /**
+     * @return Milliseconds the slowest shard spent waiting to be scheduled.
+     * 
+     */
     public String waitMsMax() {
         return this.waitMsMax;
     }
@@ -275,6 +367,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="waitRatioAvg", required=true)
     private Double waitRatioAvg;
 
+    /**
+     * @return Relative amount of time the average shard spent waiting to be scheduled.
+     * 
+     */
     public Double waitRatioAvg() {
         return this.waitRatioAvg;
     }
@@ -286,6 +382,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="waitRatioMax", required=true)
     private Double waitRatioMax;
 
+    /**
+     * @return Relative amount of time the slowest shard spent waiting to be scheduled.
+     * 
+     */
     public Double waitRatioMax() {
         return this.waitRatioMax;
     }
@@ -297,6 +397,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="writeMsAvg", required=true)
     private String writeMsAvg;
 
+    /**
+     * @return Milliseconds the average shard spent on writing output.
+     * 
+     */
     public String writeMsAvg() {
         return this.writeMsAvg;
     }
@@ -308,6 +412,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="writeMsMax", required=true)
     private String writeMsMax;
 
+    /**
+     * @return Milliseconds the slowest shard spent on writing output.
+     * 
+     */
     public String writeMsMax() {
         return this.writeMsMax;
     }
@@ -319,6 +427,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="writeRatioAvg", required=true)
     private Double writeRatioAvg;
 
+    /**
+     * @return Relative amount of time the average shard spent on writing output.
+     * 
+     */
     public Double writeRatioAvg() {
         return this.writeRatioAvg;
     }
@@ -330,6 +442,10 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
     @Import(name="writeRatioMax", required=true)
     private Double writeRatioMax;
 
+    /**
+     * @return Relative amount of time the slowest shard spent on writing output.
+     * 
+     */
     public Double writeRatioMax() {
         return this.writeRatioMax;
     }
@@ -386,154 +502,340 @@ public final class ExplainQueryStageResponse extends com.pulumi.resources.Invoke
             $ = new ExplainQueryStageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param completedParallelInputs Number of parallel input segments completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder completedParallelInputs(String completedParallelInputs) {
             $.completedParallelInputs = completedParallelInputs;
             return this;
         }
 
+        /**
+         * @param computeMsAvg Milliseconds the average shard spent on CPU-bound tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeMsAvg(String computeMsAvg) {
             $.computeMsAvg = computeMsAvg;
             return this;
         }
 
+        /**
+         * @param computeMsMax Milliseconds the slowest shard spent on CPU-bound tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeMsMax(String computeMsMax) {
             $.computeMsMax = computeMsMax;
             return this;
         }
 
+        /**
+         * @param computeRatioAvg Relative amount of time the average shard spent on CPU-bound tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeRatioAvg(Double computeRatioAvg) {
             $.computeRatioAvg = computeRatioAvg;
             return this;
         }
 
+        /**
+         * @param computeRatioMax Relative amount of time the slowest shard spent on CPU-bound tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeRatioMax(Double computeRatioMax) {
             $.computeRatioMax = computeRatioMax;
             return this;
         }
 
+        /**
+         * @param endMs Stage end time represented as milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endMs(String endMs) {
             $.endMs = endMs;
             return this;
         }
 
+        /**
+         * @param inputStages IDs for stages that are inputs to this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStages(List<String> inputStages) {
             $.inputStages = inputStages;
             return this;
         }
 
+        /**
+         * @param inputStages IDs for stages that are inputs to this stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputStages(String... inputStages) {
             return inputStages(List.of(inputStages));
         }
 
+        /**
+         * @param name Human-readable name for stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parallelInputs Number of parallel input segments to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parallelInputs(String parallelInputs) {
             $.parallelInputs = parallelInputs;
             return this;
         }
 
+        /**
+         * @param readMsAvg Milliseconds the average shard spent reading input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readMsAvg(String readMsAvg) {
             $.readMsAvg = readMsAvg;
             return this;
         }
 
+        /**
+         * @param readMsMax Milliseconds the slowest shard spent reading input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readMsMax(String readMsMax) {
             $.readMsMax = readMsMax;
             return this;
         }
 
+        /**
+         * @param readRatioAvg Relative amount of time the average shard spent reading input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readRatioAvg(Double readRatioAvg) {
             $.readRatioAvg = readRatioAvg;
             return this;
         }
 
+        /**
+         * @param readRatioMax Relative amount of time the slowest shard spent reading input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readRatioMax(Double readRatioMax) {
             $.readRatioMax = readRatioMax;
             return this;
         }
 
+        /**
+         * @param recordsRead Number of records read into the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordsRead(String recordsRead) {
             $.recordsRead = recordsRead;
             return this;
         }
 
+        /**
+         * @param recordsWritten Number of records written by the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordsWritten(String recordsWritten) {
             $.recordsWritten = recordsWritten;
             return this;
         }
 
+        /**
+         * @param shuffleOutputBytes Total number of bytes written to shuffle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shuffleOutputBytes(String shuffleOutputBytes) {
             $.shuffleOutputBytes = shuffleOutputBytes;
             return this;
         }
 
+        /**
+         * @param shuffleOutputBytesSpilled Total number of bytes written to shuffle and spilled to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
             $.shuffleOutputBytesSpilled = shuffleOutputBytesSpilled;
             return this;
         }
 
+        /**
+         * @param slotMs Slot-milliseconds used by the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotMs(String slotMs) {
             $.slotMs = slotMs;
             return this;
         }
 
+        /**
+         * @param startMs Stage start time represented as milliseconds since epoch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startMs(String startMs) {
             $.startMs = startMs;
             return this;
         }
 
+        /**
+         * @param status Current status for the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param steps List of operations within the stage in dependency order (approximately chronological).
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<ExplainQueryStepResponse> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps List of operations within the stage in dependency order (approximately chronological).
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(ExplainQueryStepResponse... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param waitMsAvg Milliseconds the average shard spent waiting to be scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitMsAvg(String waitMsAvg) {
             $.waitMsAvg = waitMsAvg;
             return this;
         }
 
+        /**
+         * @param waitMsMax Milliseconds the slowest shard spent waiting to be scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitMsMax(String waitMsMax) {
             $.waitMsMax = waitMsMax;
             return this;
         }
 
+        /**
+         * @param waitRatioAvg Relative amount of time the average shard spent waiting to be scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitRatioAvg(Double waitRatioAvg) {
             $.waitRatioAvg = waitRatioAvg;
             return this;
         }
 
+        /**
+         * @param waitRatioMax Relative amount of time the slowest shard spent waiting to be scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitRatioMax(Double waitRatioMax) {
             $.waitRatioMax = waitRatioMax;
             return this;
         }
 
+        /**
+         * @param writeMsAvg Milliseconds the average shard spent on writing output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeMsAvg(String writeMsAvg) {
             $.writeMsAvg = writeMsAvg;
             return this;
         }
 
+        /**
+         * @param writeMsMax Milliseconds the slowest shard spent on writing output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeMsMax(String writeMsMax) {
             $.writeMsMax = writeMsMax;
             return this;
         }
 
+        /**
+         * @param writeRatioAvg Relative amount of time the average shard spent on writing output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeRatioAvg(Double writeRatioAvg) {
             $.writeRatioAvg = writeRatioAvg;
             return this;
         }
 
+        /**
+         * @param writeRatioMax Relative amount of time the slowest shard spent on writing output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeRatioMax(Double writeRatioMax) {
             $.writeRatioMax = writeRatioMax;
             return this;

@@ -15,28 +15,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLoadBalancerResult {
     /**
-     * The names of the instances attached to the load balancer.
+     * @return The names of the instances attached to the load balancer.
      * 
      */
     private final @Nullable List<String> attachedInstances;
     /**
-     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
+     * @return The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
     private final @Nullable String healthCheckPath;
     private final @Nullable String loadBalancerArn;
     /**
-     * Configuration option to enable session stickiness.
+     * @return Configuration option to enable session stickiness.
      * 
      */
     private final @Nullable Boolean sessionStickinessEnabled;
     /**
-     * Configuration option to adjust session stickiness cookie duration parameter.
+     * @return Configuration option to adjust session stickiness cookie duration parameter.
      * 
      */
     private final @Nullable String sessionStickinessLBCookieDurationSeconds;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<LoadBalancerTag> tags;
@@ -58,16 +58,16 @@ public final class GetLoadBalancerResult {
     }
 
     /**
-     * The names of the instances attached to the load balancer.
+     * @return The names of the instances attached to the load balancer.
      * 
-    */
+     */
     public List<String> attachedInstances() {
         return this.attachedInstances == null ? List.of() : this.attachedInstances;
     }
     /**
-     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
+     * @return The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
-    */
+     */
     public Optional<String> healthCheckPath() {
         return Optional.ofNullable(this.healthCheckPath);
     }
@@ -75,23 +75,23 @@ public final class GetLoadBalancerResult {
         return Optional.ofNullable(this.loadBalancerArn);
     }
     /**
-     * Configuration option to enable session stickiness.
+     * @return Configuration option to enable session stickiness.
      * 
-    */
+     */
     public Optional<Boolean> sessionStickinessEnabled() {
         return Optional.ofNullable(this.sessionStickinessEnabled);
     }
     /**
-     * Configuration option to adjust session stickiness cookie duration parameter.
+     * @return Configuration option to adjust session stickiness cookie duration parameter.
      * 
-    */
+     */
     public Optional<String> sessionStickinessLBCookieDurationSeconds() {
         return Optional.ofNullable(this.sessionStickinessLBCookieDurationSeconds);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LoadBalancerTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

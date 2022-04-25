@@ -28,6 +28,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="base64EncodedCassandraYamlFragment")
     private @Nullable String base64EncodedCassandraYamlFragment;
 
+    /**
+     * @return A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+     * 
+     */
     public Optional<String> base64EncodedCassandraYamlFragment() {
         return Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
     }
@@ -39,6 +43,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="dataCenterLocation")
     private @Nullable String dataCenterLocation;
 
+    /**
+     * @return The region this data center should be created in.
+     * 
+     */
     public Optional<String> dataCenterLocation() {
         return Optional.ofNullable(this.dataCenterLocation);
     }
@@ -50,6 +58,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="delegatedSubnetId")
     private @Nullable String delegatedSubnetId;
 
+    /**
+     * @return Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
+     * 
+     */
     public Optional<String> delegatedSubnetId() {
         return Optional.ofNullable(this.delegatedSubnetId);
     }
@@ -61,6 +73,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="nodeCount")
     private @Nullable Integer nodeCount;
 
+    /**
+     * @return The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+     * 
+     */
     public Optional<Integer> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -72,6 +88,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The status of the resource at the time the operation was called.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -83,6 +103,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
     @Import(name="seedNodes", required=true)
     private List<SeedNodeResponse> seedNodes;
 
+    /**
+     * @return IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
+     * 
+     */
     public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
@@ -116,36 +140,78 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
             $ = new DataCenterResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param base64EncodedCassandraYamlFragment A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
             $.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
 
+        /**
+         * @param dataCenterLocation The region this data center should be created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
             $.dataCenterLocation = dataCenterLocation;
             return this;
         }
 
+        /**
+         * @param delegatedSubnetId Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
             $.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
 
+        /**
+         * @param nodeCount The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Integer nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param provisioningState The status of the resource at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param seedNodes IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             $.seedNodes = seedNodes;
             return this;
         }
 
+        /**
+         * @param seedNodes IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedNodes(SeedNodeResponse... seedNodes) {
             return seedNodes(List.of(seedNodes));
         }

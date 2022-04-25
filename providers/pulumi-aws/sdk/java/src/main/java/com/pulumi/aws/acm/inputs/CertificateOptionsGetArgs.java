@@ -22,6 +22,10 @@ public final class CertificateOptionsGetArgs extends com.pulumi.resources.Resour
     @Import(name="certificateTransparencyLoggingPreference")
     private @Nullable Output<String> certificateTransparencyLoggingPreference;
 
+    /**
+     * @return Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+     * 
+     */
     public Optional<Output<String>> certificateTransparencyLoggingPreference() {
         return Optional.ofNullable(this.certificateTransparencyLoggingPreference);
     }
@@ -50,11 +54,23 @@ public final class CertificateOptionsGetArgs extends com.pulumi.resources.Resour
             $ = new CertificateOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateTransparencyLoggingPreference Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTransparencyLoggingPreference(@Nullable Output<String> certificateTransparencyLoggingPreference) {
             $.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }
 
+        /**
+         * @param certificateTransparencyLoggingPreference Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTransparencyLoggingPreference(String certificateTransparencyLoggingPreference) {
             return certificateTransparencyLoggingPreference(Output.of(certificateTransparencyLoggingPreference));
         }

@@ -27,6 +27,10 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hosts", required=true)
     private Output<List<HttpHostConfigArgs>> hosts;
 
+    /**
+     * @return description for routing.
+     * 
+     */
     public Output<List<HttpHostConfigArgs>> hosts() {
         return this.hosts;
     }
@@ -38,6 +42,10 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return http gateway config name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return Specifies the port at which the service endpoint below needs to be exposed.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -79,33 +91,75 @@ public final class HttpConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hosts description for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(Output<List<HttpHostConfigArgs>> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts description for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<HttpHostConfigArgs> hosts) {
             return hosts(Output.of(hosts));
         }
 
+        /**
+         * @param hosts description for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(HttpHostConfigArgs... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param name http gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name http gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

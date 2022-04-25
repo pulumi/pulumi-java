@@ -26,6 +26,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appName")
     private @Nullable Output<String> appName;
 
+    /**
+     * @return The name of the app.
+     * 
+     */
     public Optional<Output<String>> appName() {
         return Optional.ofNullable(this.appName);
     }
@@ -37,6 +41,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appType", required=true)
     private Output<AppType> appType;
 
+    /**
+     * @return The type of app.
+     * 
+     */
     public Output<AppType> appType() {
         return this.appType;
     }
@@ -48,6 +56,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainId", required=true)
     private Output<String> domainId;
 
+    /**
+     * @return The domain ID.
+     * 
+     */
     public Output<String> domainId() {
         return this.domainId;
     }
@@ -59,6 +71,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceSpec")
     private @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
+    /**
+     * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+     * 
+     */
     public Optional<Output<AppResourceSpecArgs>> resourceSpec() {
         return Optional.ofNullable(this.resourceSpec);
     }
@@ -70,6 +86,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AppTagArgs>> tags;
 
+    /**
+     * @return A list of tags to apply to the app.
+     * 
+     */
     public Optional<Output<List<AppTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,6 +101,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName", required=true)
     private Output<String> userProfileName;
 
+    /**
+     * @return The user profile name.
+     * 
+     */
     public Output<String> userProfileName() {
         return this.userProfileName;
     }
@@ -114,60 +138,138 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(@Nullable Output<String> appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             return appName(Output.of(appName));
         }
 
+        /**
+         * @param appType The type of app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(Output<AppType> appType) {
             $.appType = appType;
             return this;
         }
 
+        /**
+         * @param appType The type of app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(AppType appType) {
             return appType(Output.of(appType));
         }
 
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainId(String domainId) {
             return domainId(Output.of(domainId));
         }
 
+        /**
+         * @param resourceSpec The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSpec(@Nullable Output<AppResourceSpecArgs> resourceSpec) {
             $.resourceSpec = resourceSpec;
             return this;
         }
 
+        /**
+         * @param resourceSpec The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSpec(AppResourceSpecArgs resourceSpec) {
             return resourceSpec(Output.of(resourceSpec));
         }
 
+        /**
+         * @param tags A list of tags to apply to the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AppTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AppTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags to apply to the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AppTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(Output<String> userProfileName) {
             $.userProfileName = userProfileName;
             return this;
         }
 
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProfileName(String userProfileName) {
             return userProfileName(Output.of(userProfileName));
         }

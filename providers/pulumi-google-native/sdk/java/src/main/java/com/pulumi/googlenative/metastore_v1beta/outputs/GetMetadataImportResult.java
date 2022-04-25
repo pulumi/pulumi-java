@@ -11,37 +11,37 @@ import java.util.Objects;
 @CustomType
 public final class GetMetadataImportResult {
     /**
-     * The time when the metadata import was started.
+     * @return The time when the metadata import was started.
      * 
      */
     private final String createTime;
     /**
-     * Immutable. A database dump from a pre-existing metastore&#39;s database.
+     * @return Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
      */
     private final DatabaseDumpResponse databaseDump;
     /**
-     * The description of the metadata import.
+     * @return The description of the metadata import.
      * 
      */
     private final String description;
     /**
-     * The time when the metadata import finished.
+     * @return The time when the metadata import finished.
      * 
      */
     private final String endTime;
     /**
-     * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+     * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
      */
     private final String name;
     /**
-     * The current state of the metadata import.
+     * @return The current state of the metadata import.
      * 
      */
     private final String state;
     /**
-     * The time when the metadata import was last updated.
+     * @return The time when the metadata import was last updated.
      * 
      */
     private final String updateTime;
@@ -65,51 +65,51 @@ public final class GetMetadataImportResult {
     }
 
     /**
-     * The time when the metadata import was started.
+     * @return The time when the metadata import was started.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Immutable. A database dump from a pre-existing metastore&#39;s database.
+     * @return Immutable. A database dump from a pre-existing metastore&#39;s database.
      * 
-    */
+     */
     public DatabaseDumpResponse databaseDump() {
         return this.databaseDump;
     }
     /**
-     * The description of the metadata import.
+     * @return The description of the metadata import.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The time when the metadata import finished.
+     * @return The time when the metadata import finished.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+     * @return Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of the metadata import.
+     * @return The current state of the metadata import.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The time when the metadata import was last updated.
+     * @return The time when the metadata import was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

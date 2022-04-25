@@ -27,6 +27,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryDateShardedSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
 
+    /**
+     * @return Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs>> bigqueryDateShardedSpec() {
         return Optional.ofNullable(this.bigqueryDateShardedSpec);
     }
@@ -38,6 +42,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryTableSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
 
+    /**
+     * @return Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs>> bigqueryTableSpec() {
         return Optional.ofNullable(this.bigqueryTableSpec);
     }
@@ -49,6 +57,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -85,6 +101,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcsFilesetSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
 
+    /**
+     * @return Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs>> gcsFilesetSpec() {
         return Optional.ofNullable(this.gcsFilesetSpec);
     }
@@ -96,6 +116,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedResource")
     private @Nullable Output<String> linkedResource;
 
+    /**
+     * @return The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
+     * 
+     */
     public Optional<Output<String>> linkedResource() {
         return Optional.ofNullable(this.linkedResource);
     }
@@ -121,6 +145,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
     private @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
 
+    /**
+     * @return Schema of the entry. An entry might not have any schema attached to it.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1beta1SchemaArgs>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -132,6 +160,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<EntryType> type;
 
+    /**
+     * @return The type of the entry. Only used for Entries with types in the EntryType enum.
+     * 
+     */
     public Optional<Output<EntryType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -143,6 +175,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedSystem")
     private @Nullable Output<String> userSpecifiedSystem;
 
+    /**
+     * @return This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+     * 
+     */
     public Optional<Output<String>> userSpecifiedSystem() {
         return Optional.ofNullable(this.userSpecifiedSystem);
     }
@@ -154,6 +190,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedType")
     private @Nullable Output<String> userSpecifiedType;
 
+    /**
+     * @return Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+     * 
+     */
     public Optional<Output<String>> userSpecifiedType() {
         return Optional.ofNullable(this.userSpecifiedType);
     }
@@ -195,38 +235,86 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EntryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryDateShardedSpec Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDateShardedSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec) {
             $.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
             return this;
         }
 
+        /**
+         * @param bigqueryDateShardedSpec Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDateShardedSpec(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
             return bigqueryDateShardedSpec(Output.of(bigqueryDateShardedSpec));
         }
 
+        /**
+         * @param bigqueryTableSpec Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryTableSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec) {
             $.bigqueryTableSpec = bigqueryTableSpec;
             return this;
         }
 
+        /**
+         * @param bigqueryTableSpec Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryTableSpec(GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs bigqueryTableSpec) {
             return bigqueryTableSpec(Output.of(bigqueryTableSpec));
         }
 
+        /**
+         * @param description Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display information such as title and description. A short name to identify the entry, for example, &#34;Analytics Data - Jan 2011&#34;. Default value is an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -249,20 +337,44 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
             return entryId(Output.of(entryId));
         }
 
+        /**
+         * @param gcsFilesetSpec Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsFilesetSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec) {
             $.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
 
+        /**
+         * @param gcsFilesetSpec Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsFilesetSpec(GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs gcsFilesetSpec) {
             return gcsFilesetSpec(Output.of(gcsFilesetSpec));
         }
 
+        /**
+         * @param linkedResource The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
             $.linkedResource = linkedResource;
             return this;
         }
 
+        /**
+         * @param linkedResource The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedResource(String linkedResource) {
             return linkedResource(Output.of(linkedResource));
         }
@@ -285,38 +397,86 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param schema Schema of the entry. An entry might not have any schema attached to it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema Schema of the entry. An entry might not have any schema attached to it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(GoogleCloudDatacatalogV1beta1SchemaArgs schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param type The type of the entry. Only used for Entries with types in the EntryType enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<EntryType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the entry. Only used for Entries with types in the EntryType enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EntryType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userSpecifiedSystem This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
             $.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
 
+        /**
+         * @param userSpecifiedSystem This field indicates the entry&#39;s source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSpecifiedSystem(String userSpecifiedSystem) {
             return userSpecifiedSystem(Output.of(userSpecifiedSystem));
         }
 
+        /**
+         * @param userSpecifiedType Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
             $.userSpecifiedType = userSpecifiedType;
             return this;
         }
 
+        /**
+         * @param userSpecifiedType Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example &#34;my_special_type&#34;. `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSpecifiedType(String userSpecifiedType) {
             return userSpecifiedType(Output.of(userSpecifiedType));
         }

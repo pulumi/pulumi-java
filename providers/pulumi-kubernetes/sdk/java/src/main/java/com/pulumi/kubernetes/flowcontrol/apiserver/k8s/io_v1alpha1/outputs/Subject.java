@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class Subject {
     private final @Nullable GroupSubject group;
     /**
-     * Required
+     * @return Required
      * 
      */
     private final String kind;
@@ -39,9 +39,9 @@ public final class Subject {
         return Optional.ofNullable(this.group);
     }
     /**
-     * Required
+     * @return Required
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }

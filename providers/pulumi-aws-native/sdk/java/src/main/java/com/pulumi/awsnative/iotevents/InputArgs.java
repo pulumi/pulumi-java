@@ -32,6 +32,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputDescription")
     private @Nullable Output<String> inputDescription;
 
+    /**
+     * @return A brief description of the input.
+     * 
+     */
     public Optional<Output<String>> inputDescription() {
         return Optional.ofNullable(this.inputDescription);
     }
@@ -43,6 +47,10 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputName")
     private @Nullable Output<String> inputName;
 
+    /**
+     * @return The name of the input.
+     * 
+     */
     public Optional<Output<String>> inputName() {
         return Optional.ofNullable(this.inputName);
     }
@@ -56,6 +64,12 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<InputTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+     * 
+     */
     public Optional<Output<List<InputTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,33 +110,81 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
             return inputDefinition(Output.of(inputDefinition));
         }
 
+        /**
+         * @param inputDescription A brief description of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDescription(@Nullable Output<String> inputDescription) {
             $.inputDescription = inputDescription;
             return this;
         }
 
+        /**
+         * @param inputDescription A brief description of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDescription(String inputDescription) {
             return inputDescription(Output.of(inputDescription));
         }
 
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(@Nullable Output<String> inputName) {
             $.inputName = inputName;
             return this;
         }
 
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputName(String inputName) {
             return inputName(Output.of(inputName));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<InputTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<InputTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(InputTagArgs... tags) {
             return tags(List.of(tags));
         }

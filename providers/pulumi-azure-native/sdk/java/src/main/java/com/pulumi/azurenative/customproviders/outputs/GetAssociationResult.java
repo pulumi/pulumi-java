@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAssociationResult {
     /**
-     * The association id.
+     * @return The association id.
      * 
      */
     private final String id;
     /**
-     * The association name.
+     * @return The association name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the association.
+     * @return The provisioning state of the association.
      * 
      */
     private final String provisioningState;
     /**
-     * The REST resource instance of the target resource for this association.
+     * @return The REST resource instance of the target resource for this association.
      * 
      */
     private final @Nullable String targetResourceId;
     /**
-     * The association type.
+     * @return The association type.
      * 
      */
     private final String type;
@@ -52,37 +52,37 @@ public final class GetAssociationResult {
     }
 
     /**
-     * The association id.
+     * @return The association id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The association name.
+     * @return The association name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the association.
+     * @return The provisioning state of the association.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The REST resource instance of the target resource for this association.
+     * @return The REST resource instance of the target resource for this association.
      * 
-    */
+     */
     public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
-     * The association type.
+     * @return The association type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -21,6 +21,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return The ARN of the application.
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -32,6 +36,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="semanticVersion")
     private @Nullable String semanticVersion;
 
+    /**
+     * @return The requested version of the application. By default, retrieves the latest version.
+     * 
+     */
     public Optional<String> semanticVersion() {
         return Optional.ofNullable(this.semanticVersion);
     }
@@ -61,11 +69,23 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The ARN of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param semanticVersion The requested version of the application. By default, retrieves the latest version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder semanticVersion(@Nullable String semanticVersion) {
             $.semanticVersion = semanticVersion;
             return this;

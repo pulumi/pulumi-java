@@ -23,6 +23,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Managed Cassandra cluster name.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -34,6 +38,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="dataCenterName")
     private @Nullable Output<String> dataCenterName;
 
+    /**
+     * @return Data center name in a managed Cassandra cluster.
+     * 
+     */
     public Optional<Output<String>> dataCenterName() {
         return Optional.ofNullable(this.dataCenterName);
     }
@@ -45,6 +53,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
     private @Nullable Output<DataCenterResourcePropertiesArgs> properties;
 
+    /**
+     * @return Properties of a managed Cassandra data center.
+     * 
+     */
     public Optional<Output<DataCenterResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
             $ = new CassandraDataCenterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName Managed Cassandra cluster name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Managed Cassandra cluster name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param dataCenterName Data center name in a managed Cassandra cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterName(@Nullable Output<String> dataCenterName) {
             $.dataCenterName = dataCenterName;
             return this;
         }
 
+        /**
+         * @param dataCenterName Data center name in a managed Cassandra cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCenterName(String dataCenterName) {
             return dataCenterName(Output.of(dataCenterName));
         }
 
+        /**
+         * @param properties Properties of a managed Cassandra data center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<DataCenterResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of a managed Cassandra data center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DataCenterResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

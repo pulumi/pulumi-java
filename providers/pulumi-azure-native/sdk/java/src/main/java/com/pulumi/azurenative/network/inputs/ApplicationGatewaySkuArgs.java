@@ -30,6 +30,10 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Capacity (instance count) of an application gateway.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
 
+    /**
+     * @return Name of an application gateway SKU.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewaySkuName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
     @Import(name="tier")
     private @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
 
+    /**
+     * @return Tier of an application gateway.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewayTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -82,45 +94,105 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
             $ = new ApplicationGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Capacity (instance count) of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Capacity (instance count) of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Name of an application gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,ApplicationGatewaySkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of an application gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ApplicationGatewaySkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of an application gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of an application gateway SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ApplicationGatewaySkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Tier of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,ApplicationGatewayTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(ApplicationGatewayTier tier) {
             return tier(Either.ofRight(tier));
         }

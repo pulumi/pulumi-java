@@ -25,6 +25,10 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="destination", required=true)
     private GatewayDestinationResponse destination;
 
+    /**
+     * @return Describes destination endpoint for routing traffic.
+     * 
+     */
     public GatewayDestinationResponse destination() {
         return this.destination;
     }
@@ -36,6 +40,10 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return tcp gateway config name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return Specifies the port at which the service endpoint below needs to be exposed.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -77,16 +89,34 @@ public final class TcpConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TcpConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(GatewayDestinationResponse destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param name tcp gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;

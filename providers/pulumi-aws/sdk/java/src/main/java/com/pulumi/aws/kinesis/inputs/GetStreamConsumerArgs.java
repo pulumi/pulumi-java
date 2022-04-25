@@ -21,6 +21,10 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the stream consumer.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -32,6 +36,10 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the stream consumer.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +51,10 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="streamArn", required=true)
     private String streamArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+     * 
+     */
     public String streamArn() {
         return this.streamArn;
     }
@@ -73,16 +85,34 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetStreamConsumerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             $.streamArn = streamArn;
             return this;

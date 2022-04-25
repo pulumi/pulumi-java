@@ -20,6 +20,10 @@ public final class CatalogTableTargetTableGetArgs extends com.pulumi.resources.R
     @Import(name="catalogId", required=true)
     private Output<String> catalogId;
 
+    /**
+     * @return ID of the Data Catalog in which the table resides.
+     * 
+     */
     public Output<String> catalogId() {
         return this.catalogId;
     }
@@ -31,6 +35,10 @@ public final class CatalogTableTargetTableGetArgs extends com.pulumi.resources.R
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return Name of the catalog database that contains the target table.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -42,6 +50,10 @@ public final class CatalogTableTargetTableGetArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the target table.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -72,29 +84,65 @@ public final class CatalogTableTargetTableGetArgs extends com.pulumi.resources.R
             $ = new CatalogTableTargetTableGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the table resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId ID of the Data Catalog in which the table resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param databaseName Name of the catalog database that contains the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the catalog database that contains the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param name Name of the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the target table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -28,6 +28,11 @@ public final class LaunchProfileStreamConfigurationSessionStorage extends com.pu
     @Import(name="mode")
     private @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
 
+    /**
+     * @return &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+     *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+     * 
+     */
     public Optional<List<LaunchProfileStreamingSessionStorageMode>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -64,11 +69,25 @@ public final class LaunchProfileStreamConfigurationSessionStorage extends com.pu
             $ = new LaunchProfileStreamConfigurationSessionStorage(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+         *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+         *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(LaunchProfileStreamingSessionStorageMode... mode) {
             return mode(List.of(mode));
         }

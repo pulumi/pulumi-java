@@ -34,6 +34,19 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthority", required=true)
     private Output<NoteAttestationAuthorityArgs> attestationAuthority;
 
+    /**
+     * @return Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
+     * For example, an organization might have one AttestationAuthority for
+     * &#34;QA&#34; and one for &#34;build&#34;. This Note is intended to act strictly as a
+     * grouping mechanism for the attached Occurrences (Attestations). This
+     * grouping mechanism also provides a security boundary, since IAM ACLs
+     * gate the ability for a principle to attach an Occurrence to a given
+     * Note. It also provides a single point of lookup to find all attached
+     * Attestation Occurrences, even if they don&#39;t all live in the same
+     * project.
+     * Structure is documented below.
+     * 
+     */
     public Output<NoteAttestationAuthorityArgs> attestationAuthority() {
         return this.attestationAuthority;
     }
@@ -45,6 +58,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return Time of expiration for this note. Leave empty if note does not expire.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -56,6 +73,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="longDescription")
     private @Nullable Output<String> longDescription;
 
+    /**
+     * @return A detailed description of the note
+     * 
+     */
     public Optional<Output<String>> longDescription() {
         return Optional.ofNullable(this.longDescription);
     }
@@ -67,6 +88,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the note.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +104,11 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -90,6 +120,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedNoteNames")
     private @Nullable Output<List<String>> relatedNoteNames;
 
+    /**
+     * @return Names of other notes related to this note.
+     * 
+     */
     public Optional<Output<List<String>>> relatedNoteNames() {
         return Optional.ofNullable(this.relatedNoteNames);
     }
@@ -102,6 +136,11 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedUrls")
     private @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls;
 
+    /**
+     * @return URLs associated with this note and related metadata.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<NoteRelatedUrlArgs>>> relatedUrls() {
         return Optional.ofNullable(this.relatedUrls);
     }
@@ -113,6 +152,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortDescription")
     private @Nullable Output<String> shortDescription;
 
+    /**
+     * @return A one sentence description of the note.
+     * 
+     */
     public Optional<Output<String>> shortDescription() {
         return Optional.ofNullable(this.shortDescription);
     }
@@ -148,82 +191,213 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationAuthority Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
+         * For example, an organization might have one AttestationAuthority for
+         * &#34;QA&#34; and one for &#34;build&#34;. This Note is intended to act strictly as a
+         * grouping mechanism for the attached Occurrences (Attestations). This
+         * grouping mechanism also provides a security boundary, since IAM ACLs
+         * gate the ability for a principle to attach an Occurrence to a given
+         * Note. It also provides a single point of lookup to find all attached
+         * Attestation Occurrences, even if they don&#39;t all live in the same
+         * project.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthority(Output<NoteAttestationAuthorityArgs> attestationAuthority) {
             $.attestationAuthority = attestationAuthority;
             return this;
         }
 
+        /**
+         * @param attestationAuthority Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
+         * For example, an organization might have one AttestationAuthority for
+         * &#34;QA&#34; and one for &#34;build&#34;. This Note is intended to act strictly as a
+         * grouping mechanism for the attached Occurrences (Attestations). This
+         * grouping mechanism also provides a security boundary, since IAM ACLs
+         * gate the ability for a principle to attach an Occurrence to a given
+         * Note. It also provides a single point of lookup to find all attached
+         * Attestation Occurrences, even if they don&#39;t all live in the same
+         * project.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthority(NoteAttestationAuthorityArgs attestationAuthority) {
             return attestationAuthority(Output.of(attestationAuthority));
         }
 
+        /**
+         * @param expirationTime Time of expiration for this note. Leave empty if note does not expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime Time of expiration for this note. Leave empty if note does not expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param longDescription A detailed description of the note
+         * 
+         * @return builder
+         * 
+         */
         public Builder longDescription(@Nullable Output<String> longDescription) {
             $.longDescription = longDescription;
             return this;
         }
 
+        /**
+         * @param longDescription A detailed description of the note
+         * 
+         * @return builder
+         * 
+         */
         public Builder longDescription(String longDescription) {
             return longDescription(Output.of(longDescription));
         }
 
+        /**
+         * @param name The name of the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param relatedNoteNames Names of other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             $.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
+        /**
+         * @param relatedNoteNames Names of other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(List<String> relatedNoteNames) {
             return relatedNoteNames(Output.of(relatedNoteNames));
         }
 
+        /**
+         * @param relatedNoteNames Names of other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(String... relatedNoteNames) {
             return relatedNoteNames(List.of(relatedNoteNames));
         }
 
+        /**
+         * @param relatedUrls URLs associated with this note and related metadata.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrls(@Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls) {
             $.relatedUrls = relatedUrls;
             return this;
         }
 
+        /**
+         * @param relatedUrls URLs associated with this note and related metadata.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrls(List<NoteRelatedUrlArgs> relatedUrls) {
             return relatedUrls(Output.of(relatedUrls));
         }
 
+        /**
+         * @param relatedUrls URLs associated with this note and related metadata.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrls(NoteRelatedUrlArgs... relatedUrls) {
             return relatedUrls(List.of(relatedUrls));
         }
 
+        /**
+         * @param shortDescription A one sentence description of the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             $.shortDescription = shortDescription;
             return this;
         }
 
+        /**
+         * @param shortDescription A one sentence description of the note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortDescription(String shortDescription) {
             return shortDescription(Output.of(shortDescription));
         }

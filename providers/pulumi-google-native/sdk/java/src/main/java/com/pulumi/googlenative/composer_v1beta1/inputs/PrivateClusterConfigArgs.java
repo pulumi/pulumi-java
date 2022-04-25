@@ -27,6 +27,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePrivateEndpoint")
     private @Nullable Output<Boolean> enablePrivateEndpoint;
 
+    /**
+     * @return Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+     * 
+     */
     public Optional<Output<Boolean>> enablePrivateEndpoint() {
         return Optional.ofNullable(this.enablePrivateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="masterIpv4CidrBlock")
     private @Nullable Output<String> masterIpv4CidrBlock;
 
+    /**
+     * @return Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
+     * 
+     */
     public Optional<Output<String>> masterIpv4CidrBlock() {
         return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
@@ -67,20 +75,44 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
             $ = new PrivateClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enablePrivateEndpoint Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEndpoint(@Nullable Output<Boolean> enablePrivateEndpoint) {
             $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
+        /**
+         * @param enablePrivateEndpoint Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             return enablePrivateEndpoint(Output.of(enablePrivateEndpoint));
         }
 
+        /**
+         * @param masterIpv4CidrBlock Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param masterIpv4CidrBlock Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of &#39;172.16.0.0/23&#39; is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             return masterIpv4CidrBlock(Output.of(masterIpv4CidrBlock));
         }

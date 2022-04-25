@@ -20,6 +20,10 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
     @Import(name="adminAccountId", required=true)
     private Output<String> adminAccountId;
 
+    /**
+     * @return The AWS account ID for the account to designate as the delegated Amazon Macie administrator account for the organization.
+     * 
+     */
     public Output<String> adminAccountId() {
         return this.adminAccountId;
     }
@@ -48,11 +52,23 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
             $ = new OrganizationAdminAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminAccountId The AWS account ID for the account to designate as the delegated Amazon Macie administrator account for the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccountId(Output<String> adminAccountId) {
             $.adminAccountId = adminAccountId;
             return this;
         }
 
+        /**
+         * @param adminAccountId The AWS account ID for the account to designate as the delegated Amazon Macie administrator account for the organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminAccountId(String adminAccountId) {
             return adminAccountId(Output.of(adminAccountId));
         }

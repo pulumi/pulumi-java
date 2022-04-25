@@ -25,6 +25,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mysqlSourceConfig", required=true)
     private MysqlSourceConfigResponse mysqlSourceConfig;
 
+    /**
+     * @return MySQL data source configuration
+     * 
+     */
     public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
@@ -36,6 +40,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="oracleSourceConfig", required=true)
     private OracleSourceConfigResponse oracleSourceConfig;
 
+    /**
+     * @return Oracle data source configuration
+     * 
+     */
     public OracleSourceConfigResponse oracleSourceConfig() {
         return this.oracleSourceConfig;
     }
@@ -47,6 +55,10 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceConnectionProfileName", required=true)
     private String sourceConnectionProfileName;
 
+    /**
+     * @return Source connection profile identifier.
+     * 
+     */
     public String sourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }
@@ -77,16 +89,34 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new SourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mysqlSourceConfig MySQL data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder mysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
             $.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
 
+        /**
+         * @param oracleSourceConfig Oracle data source configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
             $.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
 
+        /**
+         * @param sourceConnectionProfileName Source connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
             $.sourceConnectionProfileName = sourceConnectionProfileName;
             return this;

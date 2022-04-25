@@ -27,6 +27,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revision")
     private @Nullable Output<Integer> revision;
 
+    /**
+     * @return The revision number of the update.
+     * 
+     */
     public Optional<Output<Integer>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -38,6 +42,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updateId")
     private @Nullable Output<String> updateId;
 
+    /**
+     * @return The revision independent identifier of the update.
+     * 
+     */
     public Optional<Output<String>> updateId() {
         return Optional.ofNullable(this.updateId);
     }
@@ -67,20 +75,44 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param revision The revision number of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Integer> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision The revision number of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param updateId The revision independent identifier of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateId(@Nullable Output<String> updateId) {
             $.updateId = updateId;
             return this;
         }
 
+        /**
+         * @param updateId The revision independent identifier of the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateId(String updateId) {
             return updateId(Output.of(updateId));
         }

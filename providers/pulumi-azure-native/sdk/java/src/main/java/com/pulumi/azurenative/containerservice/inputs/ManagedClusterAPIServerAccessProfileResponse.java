@@ -27,6 +27,10 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="authorizedIPRanges")
     private @Nullable List<String> authorizedIPRanges;
 
+    /**
+     * @return Authorized IP Ranges to kubernetes API server.
+     * 
+     */
     public Optional<List<String>> authorizedIPRanges() {
         return Optional.ofNullable(this.authorizedIPRanges);
     }
@@ -38,6 +42,10 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="enablePrivateCluster")
     private @Nullable Boolean enablePrivateCluster;
 
+    /**
+     * @return Whether to create the cluster as a private cluster or not.
+     * 
+     */
     public Optional<Boolean> enablePrivateCluster() {
         return Optional.ofNullable(this.enablePrivateCluster);
     }
@@ -49,6 +57,10 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="privateDNSZone")
     private @Nullable String privateDNSZone;
 
+    /**
+     * @return Private dns zone mode for private cluster.
+     * 
+     */
     public Optional<String> privateDNSZone() {
         return Optional.ofNullable(this.privateDNSZone);
     }
@@ -79,20 +91,44 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
             $ = new ManagedClusterAPIServerAccessProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedIPRanges Authorized IP Ranges to kubernetes API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
             $.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
+        /**
+         * @param authorizedIPRanges Authorized IP Ranges to kubernetes API server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedIPRanges(String... authorizedIPRanges) {
             return authorizedIPRanges(List.of(authorizedIPRanges));
         }
 
+        /**
+         * @param enablePrivateCluster Whether to create the cluster as a private cluster or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             $.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
+        /**
+         * @param privateDNSZone Private dns zone mode for private cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
             $.privateDNSZone = privateDNSZone;
             return this;

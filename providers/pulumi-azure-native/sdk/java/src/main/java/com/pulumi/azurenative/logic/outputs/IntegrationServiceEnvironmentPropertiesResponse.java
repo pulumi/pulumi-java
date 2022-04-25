@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntegrationServiceEnvironmentPropertiesResponse {
     /**
-     * The encryption configuration.
+     * @return The encryption configuration.
      * 
      */
     private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
     /**
-     * The endpoints configuration.
+     * @return The endpoints configuration.
      * 
      */
     private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
     /**
-     * Gets the tracking id.
+     * @return Gets the tracking id.
      * 
      */
     private final @Nullable String integrationServiceEnvironmentId;
     /**
-     * The network configuration.
+     * @return The network configuration.
      * 
      */
     private final @Nullable NetworkConfigurationResponse networkConfiguration;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * The integration service environment state.
+     * @return The integration service environment state.
      * 
      */
     private final @Nullable String state;
@@ -62,44 +62,44 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
     }
 
     /**
-     * The encryption configuration.
+     * @return The encryption configuration.
      * 
-    */
+     */
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
-     * The endpoints configuration.
+     * @return The endpoints configuration.
      * 
-    */
+     */
     public Optional<FlowEndpointsConfigurationResponse> endpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
     /**
-     * Gets the tracking id.
+     * @return Gets the tracking id.
      * 
-    */
+     */
     public Optional<String> integrationServiceEnvironmentId() {
         return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
     /**
-     * The network configuration.
+     * @return The network configuration.
      * 
-    */
+     */
     public Optional<NetworkConfigurationResponse> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The integration service environment state.
+     * @return The integration service environment state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

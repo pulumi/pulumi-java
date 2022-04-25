@@ -25,6 +25,10 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
     @Import(name="interactionFieldName", required=true)
     private String interactionFieldName;
 
+    /**
+     * @return The field name on the Interaction Type.
+     * 
+     */
     public String interactionFieldName() {
         return this.interactionFieldName;
     }
@@ -36,6 +40,10 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
     @Import(name="linkType")
     private @Nullable String linkType;
 
+    /**
+     * @return Link type.
+     * 
+     */
     public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -47,6 +55,10 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
     @Import(name="relationshipFieldName", required=true)
     private String relationshipFieldName;
 
+    /**
+     * @return The field name on the Relationship metadata.
+     * 
+     */
     public String relationshipFieldName() {
         return this.relationshipFieldName;
     }
@@ -77,16 +89,34 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
             $ = new RelationshipLinkFieldMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interactionFieldName The field name on the Interaction Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionFieldName(String interactionFieldName) {
             $.interactionFieldName = interactionFieldName;
             return this;
         }
 
+        /**
+         * @param linkType Link type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable String linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param relationshipFieldName The field name on the Relationship metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipFieldName(String relationshipFieldName) {
             $.relationshipFieldName = relationshipFieldName;
             return this;

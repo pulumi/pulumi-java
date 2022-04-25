@@ -26,6 +26,10 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends com.pulumi.reso
     @Import(name="maxInstanceCount")
     private @Nullable Output<Integer> maxInstanceCount;
 
+    /**
+     * @return Maximum number of serving instances that this resource should have.
+     * 
+     */
     public Optional<Output<Integer>> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends com.pulumi.reso
     @Import(name="minInstanceCount")
     private @Nullable Output<Integer> minInstanceCount;
 
+    /**
+     * @return Minimum number of serving instances that this resource should have.
+     * 
+     */
     public Optional<Output<Integer>> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends com.pulumi.reso
             $ = new GoogleCloudRunOpV2RevisionScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstanceCount Maximum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
             $.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
+        /**
+         * @param maxInstanceCount Maximum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(Integer maxInstanceCount) {
             return maxInstanceCount(Output.of(maxInstanceCount));
         }
 
+        /**
+         * @param minInstanceCount Minimum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount Minimum number of serving instances that this resource should have.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(Integer minInstanceCount) {
             return minInstanceCount(Output.of(minInstanceCount));
         }

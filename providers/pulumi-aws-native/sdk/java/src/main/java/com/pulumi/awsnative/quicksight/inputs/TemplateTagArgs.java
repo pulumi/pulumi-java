@@ -25,6 +25,10 @@ public final class TemplateTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return &lt;p&gt;Tag key.&lt;/p&gt;
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -36,6 +40,10 @@ public final class TemplateTagArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return &lt;p&gt;Tag value.&lt;/p&gt;
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -65,20 +73,44 @@ public final class TemplateTagArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TemplateTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key &lt;p&gt;Tag key.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key &lt;p&gt;Tag key.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value &lt;p&gt;Tag value.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value &lt;p&gt;Tag value.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

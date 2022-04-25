@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     /**
-     * Last status code for sync and refresh of secret from key vault.
+     * @return Last status code for sync and refresh of secret from key vault.
      * 
      */
     private final @Nullable String code;
     /**
-     * Details of the error else empty.
+     * @return Details of the error else empty.
      * 
      */
     private final @Nullable String message;
     /**
-     * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
     private final @Nullable String timeStampUtc;
@@ -38,23 +38,23 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     }
 
     /**
-     * Last status code for sync and refresh of secret from key vault.
+     * @return Last status code for sync and refresh of secret from key vault.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Details of the error else empty.
+     * @return Details of the error else empty.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> timeStampUtc() {
         return Optional.ofNullable(this.timeStampUtc);
     }

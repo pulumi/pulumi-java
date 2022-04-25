@@ -28,6 +28,10 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actionType")
     private @Nullable Output<AutoHealActionType> actionType;
 
+    /**
+     * @return Predefined action to be taken.
+     * 
+     */
     public Optional<Output<AutoHealActionType>> actionType() {
         return Optional.ofNullable(this.actionType);
     }
@@ -39,6 +43,10 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customAction")
     private @Nullable Output<AutoHealCustomActionArgs> customAction;
 
+    /**
+     * @return Custom action to be taken.
+     * 
+     */
     public Optional<Output<AutoHealCustomActionArgs>> customAction() {
         return Optional.ofNullable(this.customAction);
     }
@@ -51,6 +59,11 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minProcessExecutionTime")
     private @Nullable Output<String> minProcessExecutionTime;
 
+    /**
+     * @return Minimum time the process must execute
+     * before taking the action
+     * 
+     */
     public Optional<Output<String>> minProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }
@@ -81,29 +94,67 @@ public final class AutoHealActionsArgs extends com.pulumi.resources.ResourceArgs
             $ = new AutoHealActionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType Predefined action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(@Nullable Output<AutoHealActionType> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType Predefined action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(AutoHealActionType actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param customAction Custom action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAction(@Nullable Output<AutoHealCustomActionArgs> customAction) {
             $.customAction = customAction;
             return this;
         }
 
+        /**
+         * @param customAction Custom action to be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customAction(AutoHealCustomActionArgs customAction) {
             return customAction(Output.of(customAction));
         }
 
+        /**
+         * @param minProcessExecutionTime Minimum time the process must execute
+         * before taking the action
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProcessExecutionTime(@Nullable Output<String> minProcessExecutionTime) {
             $.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }
 
+        /**
+         * @param minProcessExecutionTime Minimum time the process must execute
+         * before taking the action
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProcessExecutionTime(String minProcessExecutionTime) {
             return minProcessExecutionTime(Output.of(minProcessExecutionTime));
         }

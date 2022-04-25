@@ -24,6 +24,10 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -52,11 +56,23 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RandomUuidArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }

@@ -129,6 +129,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataset", required=true)
     private Output<DatasetReferenceArgs> dataset;
 
+    /**
+     * @return Lookup activity dataset reference.
+     * 
+     */
     public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
     }
@@ -140,6 +144,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -151,6 +159,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -162,6 +174,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="firstRowOnly")
     private @Nullable Output<Object> firstRowOnly;
 
+    /**
+     * @return Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> firstRowOnly() {
         return Optional.ofNullable(this.firstRowOnly);
     }
@@ -173,6 +189,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -184,6 +204,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -195,6 +219,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -206,6 +234,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="source", required=true)
     private Output<Object> source;
 
+    /**
+     * @return Dataset-specific source properties, same as copy activity source.
+     * 
+     */
     public Output<Object> source() {
         return this.source;
     }
@@ -218,6 +250,11 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Lookup&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -229,6 +266,10 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -266,100 +307,234 @@ public final class LookupActivityArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LookupActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Lookup activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(Output<DatasetReferenceArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Lookup activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceArgs dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param firstRowOnly Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstRowOnly(@Nullable Output<Object> firstRowOnly) {
             $.firstRowOnly = firstRowOnly;
             return this;
         }
 
+        /**
+         * @param firstRowOnly Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstRowOnly(Object firstRowOnly) {
             return firstRowOnly(Output.of(firstRowOnly));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param source Dataset-specific source properties, same as copy activity source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<Object> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Dataset-specific source properties, same as copy activity source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Object source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Lookup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Lookup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

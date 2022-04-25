@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,6 +61,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -84,11 +96,23 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
             $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
@@ -99,6 +123,12 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

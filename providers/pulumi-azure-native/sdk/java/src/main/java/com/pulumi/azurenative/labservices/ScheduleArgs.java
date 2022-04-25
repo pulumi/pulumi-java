@@ -23,6 +23,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -34,6 +38,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return Notes for this schedule.
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -45,6 +53,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recurrencePattern")
     private @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
+    /**
+     * @return The recurrence pattern of the scheduled actions.
+     * 
+     */
     public Optional<Output<RecurrencePatternArgs>> recurrencePattern() {
         return Optional.ofNullable(this.recurrencePattern);
     }
@@ -56,6 +68,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleName")
     private @Nullable Output<String> scheduleName;
 
+    /**
+     * @return The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+     * 
+     */
     public Optional<Output<String>> scheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }
@@ -78,6 +98,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startAt")
     private @Nullable Output<String> startAt;
 
+    /**
+     * @return When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
+     * 
+     */
     public Optional<Output<String>> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -89,6 +113,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stopAt", required=true)
     private Output<String> stopAt;
 
+    /**
+     * @return When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
+     * 
+     */
     public Output<String> stopAt() {
         return this.stopAt;
     }
@@ -100,6 +128,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZoneId", required=true)
     private Output<String> timeZoneId;
 
+    /**
+     * @return The IANA timezone id for the schedule.
+     * 
+     */
     public Output<String> timeZoneId() {
         return this.timeZoneId;
     }
@@ -135,74 +167,170 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labName The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param notes Notes for this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes Notes for this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param recurrencePattern The recurrence pattern of the scheduled actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePattern(@Nullable Output<RecurrencePatternArgs> recurrencePattern) {
             $.recurrencePattern = recurrencePattern;
             return this;
         }
 
+        /**
+         * @param recurrencePattern The recurrence pattern of the scheduled actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePattern(RecurrencePatternArgs recurrencePattern) {
             return recurrencePattern(Output.of(recurrencePattern));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scheduleName The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
             $.scheduleName = scheduleName;
             return this;
         }
 
+        /**
+         * @param scheduleName The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleName(String scheduleName) {
             return scheduleName(Output.of(scheduleName));
         }
 
+        /**
+         * @param startAt When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAt(@Nullable Output<String> startAt) {
             $.startAt = startAt;
             return this;
         }
 
+        /**
+         * @param startAt When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAt(String startAt) {
             return startAt(Output.of(startAt));
         }
 
+        /**
+         * @param stopAt When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopAt(Output<String> stopAt) {
             $.stopAt = stopAt;
             return this;
         }
 
+        /**
+         * @param stopAt When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopAt(String stopAt) {
             return stopAt(Output.of(stopAt));
         }
 
+        /**
+         * @param timeZoneId The IANA timezone id for the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneId(Output<String> timeZoneId) {
             $.timeZoneId = timeZoneId;
             return this;
         }
 
+        /**
+         * @param timeZoneId The IANA timezone id for the schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneId(String timeZoneId) {
             return timeZoneId(Output.of(timeZoneId));
         }

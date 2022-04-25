@@ -26,6 +26,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Unique identifier for database
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="migrationSetting")
     private @Nullable Map<String,String> migrationSetting;
 
+    /**
+     * @return Migration settings which tune the migration behavior
+     * 
+     */
     public Optional<Map<String,String>> migrationSetting() {
         return Optional.ofNullable(this.migrationSetting);
     }
@@ -48,6 +56,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of database
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="schemaName")
     private @Nullable String schemaName;
 
+    /**
+     * @return Schema name to be migrated
+     * 
+     */
     public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
@@ -70,6 +86,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="sourceSetting")
     private @Nullable Map<String,String> sourceSetting;
 
+    /**
+     * @return Source settings to tune source endpoint migration behavior
+     * 
+     */
     public Optional<Map<String,String>> sourceSetting() {
         return Optional.ofNullable(this.sourceSetting);
     }
@@ -81,6 +101,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="tableMap")
     private @Nullable Map<String,String> tableMap;
 
+    /**
+     * @return Mapping of source to target tables
+     * 
+     */
     public Optional<Map<String,String>> tableMap() {
         return Optional.ofNullable(this.tableMap);
     }
@@ -92,6 +116,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="targetDatabaseName")
     private @Nullable String targetDatabaseName;
 
+    /**
+     * @return Target database name
+     * 
+     */
     public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -103,6 +131,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
     @Import(name="targetSetting")
     private @Nullable Map<String,String> targetSetting;
 
+    /**
+     * @return Target settings to tune target endpoint migration behavior
+     * 
+     */
     public Optional<Map<String,String>> targetSetting() {
         return Optional.ofNullable(this.targetSetting);
     }
@@ -138,41 +170,89 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
             $ = new MigrateSqlServerSqlDbSyncDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Unique identifier for database
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param migrationSetting Migration settings which tune the migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             $.migrationSetting = migrationSetting;
             return this;
         }
 
+        /**
+         * @param name Name of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param schemaName Schema name to be migrated
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(@Nullable String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param sourceSetting Source settings to tune source endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             $.sourceSetting = sourceSetting;
             return this;
         }
 
+        /**
+         * @param tableMap Mapping of source to target tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
             $.tableMap = tableMap;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Target database name
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
+        /**
+         * @param targetSetting Target settings to tune target endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             $.targetSetting = targetSetting;
             return this;

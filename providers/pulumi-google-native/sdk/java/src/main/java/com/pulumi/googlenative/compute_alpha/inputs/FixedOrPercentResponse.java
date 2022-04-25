@@ -23,6 +23,10 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="calculated", required=true)
     private Integer calculated;
 
+    /**
+     * @return Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
+     * 
+     */
     public Integer calculated() {
         return this.calculated;
     }
@@ -34,6 +38,10 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fixed", required=true)
     private Integer fixed;
 
+    /**
+     * @return Specifies a fixed number of VM instances. This must be a positive integer.
+     * 
+     */
     public Integer fixed() {
         return this.fixed;
     }
@@ -45,6 +53,10 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
     @Import(name="percent", required=true)
     private Integer percent;
 
+    /**
+     * @return Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
+     * 
+     */
     public Integer percent() {
         return this.percent;
     }
@@ -75,16 +87,34 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
             $ = new FixedOrPercentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param calculated Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calculated(Integer calculated) {
             $.calculated = calculated;
             return this;
         }
 
+        /**
+         * @param fixed Specifies a fixed number of VM instances. This must be a positive integer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixed(Integer fixed) {
             $.fixed = fixed;
             return this;
         }
 
+        /**
+         * @param percent Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percent(Integer percent) {
             $.percent = percent;
             return this;

@@ -26,6 +26,10 @@ public final class DiskAutoSnapshotAddOnArgs extends com.pulumi.resources.Resour
     @Import(name="snapshotTimeOfDay")
     private @Nullable Output<String> snapshotTimeOfDay;
 
+    /**
+     * @return The daily time when an automatic snapshot will be created.
+     * 
+     */
     public Optional<Output<String>> snapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }
@@ -54,11 +58,23 @@ public final class DiskAutoSnapshotAddOnArgs extends com.pulumi.resources.Resour
             $ = new DiskAutoSnapshotAddOnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotTimeOfDay(@Nullable Output<String> snapshotTimeOfDay) {
             $.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
 
+        /**
+         * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotTimeOfDay(String snapshotTimeOfDay) {
             return snapshotTimeOfDay(Output.of(snapshotTimeOfDay));
         }

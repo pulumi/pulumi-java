@@ -27,6 +27,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoRepair")
     private @Nullable Output<Boolean> autoRepair;
 
+    /**
+     * @return A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+     * 
+     */
     public Optional<Output<Boolean>> autoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
@@ -38,6 +42,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUpgrade")
     private @Nullable Output<Boolean> autoUpgrade;
 
+    /**
+     * @return A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+     * 
+     */
     public Optional<Output<Boolean>> autoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }
@@ -49,6 +57,10 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="upgradeOptions")
     private @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
+    /**
+     * @return Specifies the Auto Upgrade knobs for the node pool.
+     * 
+     */
     public Optional<Output<AutoUpgradeOptionsArgs>> upgradeOptions() {
         return Optional.ofNullable(this.upgradeOptions);
     }
@@ -79,29 +91,65 @@ public final class NodeManagementArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NodeManagementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoRepair A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(@Nullable Output<Boolean> autoRepair) {
             $.autoRepair = autoRepair;
             return this;
         }
 
+        /**
+         * @param autoRepair A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoRepair(Boolean autoRepair) {
             return autoRepair(Output.of(autoRepair));
         }
 
+        /**
+         * @param autoUpgrade A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
             $.autoUpgrade = autoUpgrade;
             return this;
         }
 
+        /**
+         * @param autoUpgrade A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpgrade(Boolean autoUpgrade) {
             return autoUpgrade(Output.of(autoUpgrade));
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(@Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions) {
             $.upgradeOptions = upgradeOptions;
             return this;
         }
 
+        /**
+         * @param upgradeOptions Specifies the Auto Upgrade knobs for the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeOptions(AutoUpgradeOptionsArgs upgradeOptions) {
             return upgradeOptions(Output.of(upgradeOptions));
         }

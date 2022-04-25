@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReplicationConfigurationReplicationRule {
     /**
-     * An array of objects representing the details of a replication destination.
+     * @return An array of objects representing the details of a replication destination.
      * 
      */
     private final List<ReplicationConfigurationReplicationDestination> destinations;
     /**
-     * An array of objects representing the details of a repository filter.
+     * @return An array of objects representing the details of a repository filter.
      * 
      */
     private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
@@ -32,16 +32,16 @@ public final class ReplicationConfigurationReplicationRule {
     }
 
     /**
-     * An array of objects representing the details of a replication destination.
+     * @return An array of objects representing the details of a replication destination.
      * 
-    */
+     */
     public List<ReplicationConfigurationReplicationDestination> destinations() {
         return this.destinations;
     }
     /**
-     * An array of objects representing the details of a repository filter.
+     * @return An array of objects representing the details of a repository filter.
      * 
-    */
+     */
     public List<ReplicationConfigurationRepositoryFilter> repositoryFilters() {
         return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
     }

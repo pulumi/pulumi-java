@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends co
     @Import(name="livePersonConfig")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
 
+    /**
+     * @return Uses LivePerson (https://www.liveperson.com).
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs>> livePersonConfig() {
         return Optional.ofNullable(this.livePersonConfig);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends co
     @Import(name="salesforceLiveAgentConfig")
     private @Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
 
+    /**
+     * @return Uses Salesforce Live Agent.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs>> salesforceLiveAgentConfig() {
         return Optional.ofNullable(this.salesforceLiveAgentConfig);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends co
             $ = new GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param livePersonConfig Uses LivePerson (https://www.liveperson.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePersonConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig) {
             $.livePersonConfig = livePersonConfig;
             return this;
         }
 
+        /**
+         * @param livePersonConfig Uses LivePerson (https://www.liveperson.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs livePersonConfig) {
             return livePersonConfig(Output.of(livePersonConfig));
         }
 
+        /**
+         * @param salesforceLiveAgentConfig Uses Salesforce Live Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder salesforceLiveAgentConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig) {
             $.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;
         }
 
+        /**
+         * @param salesforceLiveAgentConfig Uses Salesforce Live Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs salesforceLiveAgentConfig) {
             return salesforceLiveAgentConfig(Output.of(salesforceLiveAgentConfig));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HaVpnGatewayVpnInterface {
     /**
-     * The numeric ID of this VPN gateway interface.
+     * @return The numeric ID of this VPN gateway interface.
      * 
      */
     private final @Nullable Integer id;
     /**
-     * URL of the interconnect attachment resource. When the value
+     * @return URL of the interconnect attachment resource. When the value
      * of this field is present, the VPN Gateway will be used for
      * IPsec-encrypted Cloud Interconnect; all Egress or Ingress
      * traffic for this VPN Gateway interface will go through the
@@ -28,7 +28,7 @@ public final class HaVpnGatewayVpnInterface {
      */
     private final @Nullable String interconnectAttachment;
     /**
-     * - 
+     * @return -
      * The external IP address for this VPN gateway interface.
      * 
      */
@@ -45,29 +45,29 @@ public final class HaVpnGatewayVpnInterface {
     }
 
     /**
-     * The numeric ID of this VPN gateway interface.
+     * @return The numeric ID of this VPN gateway interface.
      * 
-    */
+     */
     public Optional<Integer> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * URL of the interconnect attachment resource. When the value
+     * @return URL of the interconnect attachment resource. When the value
      * of this field is present, the VPN Gateway will be used for
      * IPsec-encrypted Cloud Interconnect; all Egress or Ingress
      * traffic for this VPN Gateway interface will go through the
      * specified interconnect attachment resource.
      * Not currently available publicly.
      * 
-    */
+     */
     public Optional<String> interconnectAttachment() {
         return Optional.ofNullable(this.interconnectAttachment);
     }
     /**
-     * - 
+     * @return -
      * The external IP address for this VPN gateway interface.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

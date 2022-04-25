@@ -26,6 +26,10 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="additionalLatencyInMilliseconds")
     private @Nullable Output<Integer> additionalLatencyInMilliseconds;
 
+    /**
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     public Optional<Output<Integer>> additionalLatencyInMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyInMilliseconds);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="sampleSize")
     private @Nullable Output<Integer> sampleSize;
 
+    /**
+     * @return The number of samples to consider for load balancing decisions
+     * 
+     */
     public Optional<Output<Integer>> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
@@ -48,6 +56,10 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="successfulSamplesRequired")
     private @Nullable Output<Integer> successfulSamplesRequired;
 
+    /**
+     * @return The number of samples within the sample period that must succeed
+     * 
+     */
     public Optional<Output<Integer>> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
@@ -78,29 +90,65 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
             $ = new LoadBalancingSettingsParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLatencyInMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyInMilliseconds(@Nullable Output<Integer> additionalLatencyInMilliseconds) {
             $.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
+        /**
+         * @param additionalLatencyInMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyInMilliseconds(Integer additionalLatencyInMilliseconds) {
             return additionalLatencyInMilliseconds(Output.of(additionalLatencyInMilliseconds));
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             $.sampleSize = sampleSize;
             return this;
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(Integer sampleSize) {
             return sampleSize(Output.of(sampleSize));
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
             $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(Integer successfulSamplesRequired) {
             return successfulSamplesRequired(Output.of(successfulSamplesRequired));
         }

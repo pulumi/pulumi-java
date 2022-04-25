@@ -23,6 +23,10 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="eventText", required=true)
     private String eventText;
 
+    /**
+     * @return Event text.
+     * 
+     */
     public String eventText() {
         return this.eventText;
     }
@@ -34,6 +38,10 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="eventTypeString", required=true)
     private String eventTypeString;
 
+    /**
+     * @return Event type.
+     * 
+     */
     public String eventTypeString() {
         return this.eventTypeString;
     }
@@ -45,6 +53,10 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
     @Import(name="timestampString", required=true)
     private String timestampString;
 
+    /**
+     * @return String value of timestamp.
+     * 
+     */
     public String timestampString() {
         return this.timestampString;
     }
@@ -75,16 +87,34 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
             $ = new SyncMigrationDatabaseErrorEventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventText Event text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventText(String eventText) {
             $.eventText = eventText;
             return this;
         }
 
+        /**
+         * @param eventTypeString Event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTypeString(String eventTypeString) {
             $.eventTypeString = eventTypeString;
             return this;
         }
 
+        /**
+         * @param timestampString String value of timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampString(String timestampString) {
             $.timestampString = timestampString;
             return this;

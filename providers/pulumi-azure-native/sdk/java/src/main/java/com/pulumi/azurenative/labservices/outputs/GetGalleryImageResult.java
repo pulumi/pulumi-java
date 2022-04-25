@@ -16,87 +16,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGalleryImageResult {
     /**
-     * The author of the gallery image.
+     * @return The author of the gallery image.
      * 
      */
     private final String author;
     /**
-     * The creation date of the gallery image.
+     * @return The creation date of the gallery image.
      * 
      */
     private final String createdDate;
     /**
-     * The description of the gallery image.
+     * @return The description of the gallery image.
      * 
      */
     private final String description;
     /**
-     * The icon of the gallery image.
+     * @return The icon of the gallery image.
      * 
      */
     private final String icon;
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * The image reference of the gallery image.
+     * @return The image reference of the gallery image.
      * 
      */
     private final GalleryImageReferenceResponse imageReference;
     /**
-     * Indicates whether this gallery image is enabled.
+     * @return Indicates whether this gallery image is enabled.
      * 
      */
     private final @Nullable Boolean isEnabled;
     /**
-     * Indicates whether this gallery has been overridden for this lab account
+     * @return Indicates whether this gallery has been overridden for this lab account
      * 
      */
     private final @Nullable Boolean isOverride;
     /**
-     * Indicates if the plan has been authorized for programmatic deployment.
+     * @return Indicates if the plan has been authorized for programmatic deployment.
      * 
      */
     private final @Nullable Boolean isPlanAuthorized;
     /**
-     * The details of the latest operation. ex: status, error
+     * @return The details of the latest operation. ex: status, error
      * 
      */
     private final LatestOperationResultResponse latestOperationResult;
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The third party plan that applies to this image
+     * @return The third party plan that applies to this image
      * 
      */
     private final String planId;
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
      */
     private final @Nullable String uniqueIdentifier;
@@ -140,121 +140,121 @@ public final class GetGalleryImageResult {
     }
 
     /**
-     * The author of the gallery image.
+     * @return The author of the gallery image.
      * 
-    */
+     */
     public String author() {
         return this.author;
     }
     /**
-     * The creation date of the gallery image.
+     * @return The creation date of the gallery image.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The description of the gallery image.
+     * @return The description of the gallery image.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The icon of the gallery image.
+     * @return The icon of the gallery image.
      * 
-    */
+     */
     public String icon() {
         return this.icon;
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The image reference of the gallery image.
+     * @return The image reference of the gallery image.
      * 
-    */
+     */
     public GalleryImageReferenceResponse imageReference() {
         return this.imageReference;
     }
     /**
-     * Indicates whether this gallery image is enabled.
+     * @return Indicates whether this gallery image is enabled.
      * 
-    */
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * Indicates whether this gallery has been overridden for this lab account
+     * @return Indicates whether this gallery has been overridden for this lab account
      * 
-    */
+     */
     public Optional<Boolean> isOverride() {
         return Optional.ofNullable(this.isOverride);
     }
     /**
-     * Indicates if the plan has been authorized for programmatic deployment.
+     * @return Indicates if the plan has been authorized for programmatic deployment.
      * 
-    */
+     */
     public Optional<Boolean> isPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
     /**
-     * The details of the latest operation. ex: status, error
+     * @return The details of the latest operation. ex: status, error
      * 
-    */
+     */
     public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The third party plan that applies to this image
+     * @return The third party plan that applies to this image
      * 
-    */
+     */
     public String planId() {
         return this.planId;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }

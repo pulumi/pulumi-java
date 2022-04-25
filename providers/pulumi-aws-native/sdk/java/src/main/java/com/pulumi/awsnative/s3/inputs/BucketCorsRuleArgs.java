@@ -29,6 +29,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedHeaders")
     private @Nullable Output<List<String>> allowedHeaders;
 
+    /**
+     * @return Headers that are specified in the Access-Control-Request-Headers header.
+     * 
+     */
     public Optional<Output<List<String>>> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
@@ -40,6 +44,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedMethods", required=true)
     private Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
 
+    /**
+     * @return An HTTP method that you allow the origin to execute.
+     * 
+     */
     public Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods() {
         return this.allowedMethods;
     }
@@ -51,6 +59,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedOrigins", required=true)
     private Output<List<String>> allowedOrigins;
 
+    /**
+     * @return One or more origins you want customers to be able to access the bucket from.
+     * 
+     */
     public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins;
     }
@@ -62,6 +74,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exposedHeaders")
     private @Nullable Output<List<String>> exposedHeaders;
 
+    /**
+     * @return One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+     * 
+     */
     public Optional<Output<List<String>>> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
@@ -73,6 +89,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return A unique identifier for this rule.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -84,6 +104,10 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxAge")
     private @Nullable Output<Integer> maxAge;
 
+    /**
+     * @return The time in seconds that your browser is to cache the preflight response for the specified resource.
+     * 
+     */
     public Optional<Output<Integer>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -117,72 +141,168 @@ public final class BucketCorsRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BucketCorsRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedHeaders Headers that are specified in the Access-Control-Request-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(@Nullable Output<List<String>> allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedHeaders Headers that are specified in the Access-Control-Request-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(List<String> allowedHeaders) {
             return allowedHeaders(Output.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedHeaders Headers that are specified in the Access-Control-Request-Headers header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedMethods An HTTP method that you allow the origin to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(Output<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedMethods An HTTP method that you allow the origin to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
             return allowedMethods(Output.of(allowedMethods));
         }
 
+        /**
+         * @param allowedMethods An HTTP method that you allow the origin to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(BucketCorsRuleAllowedMethodsItem... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
 
+        /**
+         * @param allowedOrigins One or more origins you want customers to be able to access the bucket from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins One or more origins you want customers to be able to access the bucket from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             return allowedOrigins(Output.of(allowedOrigins));
         }
 
+        /**
+         * @param allowedOrigins One or more origins you want customers to be able to access the bucket from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
 
+        /**
+         * @param exposedHeaders One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(@Nullable Output<List<String>> exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param exposedHeaders One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(List<String> exposedHeaders) {
             return exposedHeaders(Output.of(exposedHeaders));
         }
 
+        /**
+         * @param exposedHeaders One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
 
+        /**
+         * @param id A unique identifier for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id A unique identifier for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param maxAge The time in seconds that your browser is to cache the preflight response for the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Output<Integer> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param maxAge The time in seconds that your browser is to cache the preflight response for the specified resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Integer maxAge) {
             return maxAge(Output.of(maxAge));
         }

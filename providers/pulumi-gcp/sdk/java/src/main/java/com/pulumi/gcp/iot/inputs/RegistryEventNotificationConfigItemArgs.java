@@ -22,6 +22,10 @@ public final class RegistryEventNotificationConfigItemArgs extends com.pulumi.re
     @Import(name="pubsubTopicName", required=true)
     private Output<String> pubsubTopicName;
 
+    /**
+     * @return PubSub topic name to publish device events.
+     * 
+     */
     public Output<String> pubsubTopicName() {
         return this.pubsubTopicName;
     }
@@ -37,6 +41,14 @@ public final class RegistryEventNotificationConfigItemArgs extends com.pulumi.re
     @Import(name="subfolderMatches")
     private @Nullable Output<String> subfolderMatches;
 
+    /**
+     * @return If the subfolder name matches this string exactly, this
+     * configuration will be used. The string must not include the
+     * leading &#39;/&#39; character. If empty, all strings are matched. Empty
+     * value can only be used for the last `event_notification_configs`
+     * item.
+     * 
+     */
     public Optional<Output<String>> subfolderMatches() {
         return Optional.ofNullable(this.subfolderMatches);
     }
@@ -66,20 +78,52 @@ public final class RegistryEventNotificationConfigItemArgs extends com.pulumi.re
             $ = new RegistryEventNotificationConfigItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubTopicName PubSub topic name to publish device events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(Output<String> pubsubTopicName) {
             $.pubsubTopicName = pubsubTopicName;
             return this;
         }
 
+        /**
+         * @param pubsubTopicName PubSub topic name to publish device events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubTopicName(String pubsubTopicName) {
             return pubsubTopicName(Output.of(pubsubTopicName));
         }
 
+        /**
+         * @param subfolderMatches If the subfolder name matches this string exactly, this
+         * configuration will be used. The string must not include the
+         * leading &#39;/&#39; character. If empty, all strings are matched. Empty
+         * value can only be used for the last `event_notification_configs`
+         * item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
             $.subfolderMatches = subfolderMatches;
             return this;
         }
 
+        /**
+         * @param subfolderMatches If the subfolder name matches this string exactly, this
+         * configuration will be used. The string must not include the
+         * leading &#39;/&#39; character. If empty, all strings are matched. Empty
+         * value can only be used for the last `event_notification_configs`
+         * item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subfolderMatches(String subfolderMatches) {
             return subfolderMatches(Output.of(subfolderMatches));
         }

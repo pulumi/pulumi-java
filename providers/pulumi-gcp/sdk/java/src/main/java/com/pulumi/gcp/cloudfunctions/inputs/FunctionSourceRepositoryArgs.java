@@ -29,6 +29,10 @@ public final class FunctionSourceRepositoryArgs extends com.pulumi.resources.Res
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -67,11 +71,23 @@ public final class FunctionSourceRepositoryArgs extends com.pulumi.resources.Res
             return deployedUrl(Output.of(deployedUrl));
         }
 
+        /**
+         * @param url The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

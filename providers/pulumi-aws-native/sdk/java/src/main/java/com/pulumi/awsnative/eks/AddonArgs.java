@@ -25,6 +25,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
     private @Nullable Output<String> addonName;
 
+    /**
+     * @return Name of Addon
+     * 
+     */
     public Optional<Output<String>> addonName() {
         return Optional.ofNullable(this.addonName);
     }
@@ -36,6 +40,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonVersion")
     private @Nullable Output<String> addonVersion;
 
+    /**
+     * @return Version of Addon
+     * 
+     */
     public Optional<Output<String>> addonVersion() {
         return Optional.ofNullable(this.addonVersion);
     }
@@ -47,6 +55,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return Name of Cluster
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -58,6 +70,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resolveConflicts")
     private @Nullable Output<AddonResolveConflicts> resolveConflicts;
 
+    /**
+     * @return Resolve parameter value conflicts
+     * 
+     */
     public Optional<Output<AddonResolveConflicts>> resolveConflicts() {
         return Optional.ofNullable(this.resolveConflicts);
     }
@@ -69,6 +85,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountRoleArn")
     private @Nullable Output<String> serviceAccountRoleArn;
 
+    /**
+     * @return IAM role to bind to the add-on&#39;s service account
+     * 
+     */
     public Optional<Output<String>> serviceAccountRoleArn() {
         return Optional.ofNullable(this.serviceAccountRoleArn);
     }
@@ -80,6 +100,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AddonTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<AddonTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName Name of Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(@Nullable Output<String> addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param addonName Name of Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             return addonName(Output.of(addonName));
         }
 
+        /**
+         * @param addonVersion Version of Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
             $.addonVersion = addonVersion;
             return this;
         }
 
+        /**
+         * @param addonVersion Version of Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonVersion(String addonVersion) {
             return addonVersion(Output.of(addonVersion));
         }
 
+        /**
+         * @param clusterName Name of Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param resolveConflicts Resolve parameter value conflicts
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolveConflicts(@Nullable Output<AddonResolveConflicts> resolveConflicts) {
             $.resolveConflicts = resolveConflicts;
             return this;
         }
 
+        /**
+         * @param resolveConflicts Resolve parameter value conflicts
+         * 
+         * @return builder
+         * 
+         */
         public Builder resolveConflicts(AddonResolveConflicts resolveConflicts) {
             return resolveConflicts(Output.of(resolveConflicts));
         }
 
+        /**
+         * @param serviceAccountRoleArn IAM role to bind to the add-on&#39;s service account
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
             $.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceAccountRoleArn IAM role to bind to the add-on&#39;s service account
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountRoleArn(String serviceAccountRoleArn) {
             return serviceAccountRoleArn(Output.of(serviceAccountRoleArn));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AddonTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AddonTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AddonTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -21,6 +21,10 @@ public final class DistributionPolicyResponse extends com.pulumi.resources.Invok
     @Import(name="targetShape", required=true)
     private String targetShape;
 
+    /**
+     * @return The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+     * 
+     */
     public String targetShape() {
         return this.targetShape;
     }
@@ -32,6 +36,10 @@ public final class DistributionPolicyResponse extends com.pulumi.resources.Invok
     @Import(name="zones", required=true)
     private List<DistributionPolicyZoneConfigurationResponse> zones;
 
+    /**
+     * @return Zones where the regional managed instance group will create and manage its instances.
+     * 
+     */
     public List<DistributionPolicyZoneConfigurationResponse> zones() {
         return this.zones;
     }
@@ -61,16 +69,34 @@ public final class DistributionPolicyResponse extends com.pulumi.resources.Invok
             $ = new DistributionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetShape The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetShape(String targetShape) {
             $.targetShape = targetShape;
             return this;
         }
 
+        /**
+         * @param zones Zones where the regional managed instance group will create and manage its instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<DistributionPolicyZoneConfigurationResponse> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Zones where the regional managed instance group will create and manage its instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(DistributionPolicyZoneConfigurationResponse... zones) {
             return zones(List.of(zones));
         }

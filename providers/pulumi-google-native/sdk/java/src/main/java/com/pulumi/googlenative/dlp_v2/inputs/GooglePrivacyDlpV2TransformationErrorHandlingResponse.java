@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
     @Import(name="leaveUntransformed", required=true)
     private GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
 
+    /**
+     * @return Ignore errors
+     * 
+     */
     public GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed() {
         return this.leaveUntransformed;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
     @Import(name="throwError", required=true)
     private GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
+    /**
+     * @return Throw an error
+     * 
+     */
     public GooglePrivacyDlpV2ThrowErrorResponse throwError() {
         return this.throwError;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
             $ = new GooglePrivacyDlpV2TransformationErrorHandlingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param leaveUntransformed Ignore errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
             $.leaveUntransformed = leaveUntransformed;
             return this;
         }
 
+        /**
+         * @param throwError Throw an error
+         * 
+         * @return builder
+         * 
+         */
         public Builder throwError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
             $.throwError = throwError;
             return this;

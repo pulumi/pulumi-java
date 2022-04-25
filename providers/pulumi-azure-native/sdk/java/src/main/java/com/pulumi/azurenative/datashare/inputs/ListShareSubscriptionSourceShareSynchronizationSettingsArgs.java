@@ -21,6 +21,10 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -32,6 +36,10 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="shareSubscriptionName", required=true)
     private String shareSubscriptionName;
 
+    /**
+     * @return The name of the shareSubscription.
+     * 
+     */
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -54,6 +66,10 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return Continuation token
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -85,21 +101,45 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
             $ = new ListShareSubscriptionSourceShareSynchronizationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

@@ -23,6 +23,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
     @Import(name="assetName", required=true)
     private String assetName;
 
+    /**
+     * @return The Asset name.
+     * 
+     */
     public String assetName() {
         return this.assetName;
     }
@@ -45,6 +53,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
     @Import(name="expiryTime")
     private @Nullable String expiryTime;
 
+    /**
+     * @return The SAS URL expiration time.  This must be less than 24 hours from the current time.
+     * 
+     */
     public Optional<String> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
@@ -56,6 +68,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
     @Import(name="permissions")
     private @Nullable Either<String,AssetContainerPermission> permissions;
 
+    /**
+     * @return The permissions to set on the SAS URL.
+     * 
+     */
     public Optional<Either<String,AssetContainerPermission>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -67,6 +83,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,34 +119,76 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
             $ = new ListAssetContainerSasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param expiryTime The SAS URL expiration time.  This must be less than 24 hours from the current time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(@Nullable String expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param permissions The permissions to set on the SAS URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Either<String,AssetContainerPermission> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions The permissions to set on the SAS URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             return permissions(Either.ofLeft(permissions));
         }
 
+        /**
+         * @param permissions The permissions to set on the SAS URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(AssetContainerPermission permissions) {
             return permissions(Either.ofRight(permissions));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

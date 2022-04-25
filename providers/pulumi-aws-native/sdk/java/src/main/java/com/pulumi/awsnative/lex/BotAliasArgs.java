@@ -41,6 +41,10 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="botAliasTags")
     private @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
 
+    /**
+     * @return A list of tags to add to the bot alias.
+     * 
+     */
     public Optional<Output<List<BotAliasTagArgs>>> botAliasTags() {
         return Optional.ofNullable(this.botAliasTags);
     }
@@ -80,6 +84,10 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sentimentAnalysisSettings")
     private @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
+    /**
+     * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * 
+     */
     public Optional<Output<SentimentAnalysisSettingsPropertiesArgs>> sentimentAnalysisSettings() {
         return Optional.ofNullable(this.sentimentAnalysisSettings);
     }
@@ -137,15 +145,33 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
             return botAliasName(Output.of(botAliasName));
         }
 
+        /**
+         * @param botAliasTags A list of tags to add to the bot alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botAliasTags(@Nullable Output<List<BotAliasTagArgs>> botAliasTags) {
             $.botAliasTags = botAliasTags;
             return this;
         }
 
+        /**
+         * @param botAliasTags A list of tags to add to the bot alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botAliasTags(List<BotAliasTagArgs> botAliasTags) {
             return botAliasTags(Output.of(botAliasTags));
         }
 
+        /**
+         * @param botAliasTags A list of tags to add to the bot alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botAliasTags(BotAliasTagArgs... botAliasTags) {
             return botAliasTags(List.of(botAliasTags));
         }
@@ -186,11 +212,23 @@ public final class BotAliasArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param sentimentAnalysisSettings Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentAnalysisSettings(@Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings) {
             $.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
 
+        /**
+         * @param sentimentAnalysisSettings Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentAnalysisSettings(SentimentAnalysisSettingsPropertiesArgs sentimentAnalysisSettings) {
             return sentimentAnalysisSettings(Output.of(sentimentAnalysisSettings));
         }

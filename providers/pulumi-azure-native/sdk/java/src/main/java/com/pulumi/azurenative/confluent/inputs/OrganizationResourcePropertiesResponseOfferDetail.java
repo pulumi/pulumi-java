@@ -25,6 +25,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Offer Id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="planId")
     private @Nullable String planId;
 
+    /**
+     * @return Offer Plan Id
+     * 
+     */
     public Optional<String> planId() {
         return Optional.ofNullable(this.planId);
     }
@@ -47,6 +55,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="planName")
     private @Nullable String planName;
 
+    /**
+     * @return Offer Plan Name
+     * 
+     */
     public Optional<String> planName() {
         return Optional.ofNullable(this.planName);
     }
@@ -58,6 +70,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="publisherId")
     private @Nullable String publisherId;
 
+    /**
+     * @return Publisher Id
+     * 
+     */
     public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
@@ -69,6 +85,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return SaaS Offer Status
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -80,6 +100,10 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
     @Import(name="termUnit")
     private @Nullable String termUnit;
 
+    /**
+     * @return Offer Plan Term unit
+     * 
+     */
     public Optional<String> termUnit() {
         return Optional.ofNullable(this.termUnit);
     }
@@ -113,31 +137,67 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends com
             $ = new OrganizationResourcePropertiesResponseOfferDetail(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Offer Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param planId Offer Plan Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(@Nullable String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param planName Offer Plan Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder planName(@Nullable String planName) {
             $.planName = planName;
             return this;
         }
 
+        /**
+         * @param publisherId Publisher Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(@Nullable String publisherId) {
             $.publisherId = publisherId;
             return this;
         }
 
+        /**
+         * @param status SaaS Offer Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param termUnit Offer Plan Term unit
+         * 
+         * @return builder
+         * 
+         */
         public Builder termUnit(@Nullable String termUnit) {
             $.termUnit = termUnit;
             return this;

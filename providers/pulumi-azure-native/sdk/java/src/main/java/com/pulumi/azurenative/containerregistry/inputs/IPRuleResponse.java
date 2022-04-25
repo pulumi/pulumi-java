@@ -26,6 +26,10 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return The action of IP ACL rule.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -37,6 +41,10 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="iPAddressOrRange", required=true)
     private String iPAddressOrRange;
 
+    /**
+     * @return Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+     * 
+     */
     public String iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
@@ -66,11 +74,23 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IPRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action of IP ACL rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param iPAddressOrRange Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iPAddressOrRange(String iPAddressOrRange) {
             $.iPAddressOrRange = iPAddressOrRange;
             return this;

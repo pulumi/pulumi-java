@@ -25,6 +25,10 @@ public final class JobDerivedInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="jobCategories", required=true)
     private List<String> jobCategories;
 
+    /**
+     * @return Job categories derived from Job.title and Job.description.
+     * 
+     */
     public List<String> jobCategories() {
         return this.jobCategories;
     }
@@ -36,6 +40,10 @@ public final class JobDerivedInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="locations", required=true)
     private List<LocationResponse> locations;
 
+    /**
+     * @return Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+     * 
+     */
     public List<LocationResponse> locations() {
         return this.locations;
     }
@@ -65,20 +73,44 @@ public final class JobDerivedInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new JobDerivedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobCategories Job categories derived from Job.title and Job.description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCategories(List<String> jobCategories) {
             $.jobCategories = jobCategories;
             return this;
         }
 
+        /**
+         * @param jobCategories Job categories derived from Job.title and Job.description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCategories(String... jobCategories) {
             return jobCategories(List.of(jobCategories));
         }
 
+        /**
+         * @param locations Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<LocationResponse> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(LocationResponse... locations) {
             return locations(List.of(locations));
         }

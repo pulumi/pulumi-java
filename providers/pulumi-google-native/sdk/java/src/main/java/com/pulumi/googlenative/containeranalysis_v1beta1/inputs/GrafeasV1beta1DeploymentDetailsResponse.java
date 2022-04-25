@@ -23,6 +23,10 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends com.pulumi.re
     @Import(name="deployment", required=true)
     private DeploymentResponse deployment;
 
+    /**
+     * @return Deployment history for the resource.
+     * 
+     */
     public DeploymentResponse deployment() {
         return this.deployment;
     }
@@ -51,6 +55,12 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends com.pulumi.re
             $ = new GrafeasV1beta1DeploymentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deployment Deployment history for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployment(DeploymentResponse deployment) {
             $.deployment = deployment;
             return this;

@@ -27,6 +27,10 @@ public final class StandardSqlFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Optional. The name of this field. Can be absent for struct fields.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class StandardSqlFieldArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<StandardSqlDataTypeArgs> type;
 
+    /**
+     * @return Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+     * 
+     */
     public Optional<Output<StandardSqlDataTypeArgs>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,20 +75,44 @@ public final class StandardSqlFieldArgs extends com.pulumi.resources.ResourceArg
             $ = new StandardSqlFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Optional. The name of this field. Can be absent for struct fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Optional. The name of this field. Can be absent for struct fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<StandardSqlDataTypeArgs> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(StandardSqlDataTypeArgs type) {
             return type(Output.of(type));
         }

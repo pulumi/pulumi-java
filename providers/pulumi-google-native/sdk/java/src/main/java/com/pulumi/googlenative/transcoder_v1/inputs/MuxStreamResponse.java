@@ -25,6 +25,10 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="container", required=true)
     private String container;
 
+    /**
+     * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * 
+     */
     public String container() {
         return this.container;
     }
@@ -36,6 +40,10 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elementaryStreams", required=true)
     private List<String> elementaryStreams;
 
+    /**
+     * @return List of `ElementaryStream.key`s multiplexed in this stream.
+     * 
+     */
     public List<String> elementaryStreams() {
         return this.elementaryStreams;
     }
@@ -47,6 +55,10 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
     private String fileName;
 
+    /**
+     * @return The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+     * 
+     */
     public String fileName() {
         return this.fileName;
     }
@@ -58,6 +70,10 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -69,6 +85,10 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="segmentSettings", required=true)
     private SegmentSettingsResponse segmentSettings;
 
+    /**
+     * @return Segment settings for `ts`, `fmp4` and `vtt`.
+     * 
+     */
     public SegmentSettingsResponse segmentSettings() {
         return this.segmentSettings;
     }
@@ -101,30 +121,66 @@ public final class MuxStreamResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MuxStreamResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param elementaryStreams List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(List<String> elementaryStreams) {
             $.elementaryStreams = elementaryStreams;
             return this;
         }
 
+        /**
+         * @param elementaryStreams List of `ElementaryStream.key`s multiplexed in this stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elementaryStreams(String... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
 
+        /**
+         * @param fileName The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param key A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param segmentSettings Segment settings for `ts`, `fmp4` and `vtt`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentSettings(SegmentSettingsResponse segmentSettings) {
             $.segmentSettings = segmentSettings;
             return this;

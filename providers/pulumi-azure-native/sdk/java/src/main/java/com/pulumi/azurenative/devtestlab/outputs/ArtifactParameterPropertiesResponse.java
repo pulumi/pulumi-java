@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ArtifactParameterPropertiesResponse {
     /**
-     * The name of the artifact parameter.
+     * @return The name of the artifact parameter.
      * 
      */
     private final @Nullable String name;
     /**
-     * The value of the artifact parameter.
+     * @return The value of the artifact parameter.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class ArtifactParameterPropertiesResponse {
     }
 
     /**
-     * The name of the artifact parameter.
+     * @return The name of the artifact parameter.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value of the artifact parameter.
+     * @return The value of the artifact parameter.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ListAssetStreamingLocatorsResult {
     /**
-     * The list of Streaming Locators.
+     * @return The list of Streaming Locators.
      * 
      */
     private final List<AssetStreamingLocatorResponse> streamingLocators;
@@ -22,9 +22,9 @@ public final class ListAssetStreamingLocatorsResult {
     }
 
     /**
-     * The list of Streaming Locators.
+     * @return The list of Streaming Locators.
      * 
-    */
+     */
     public List<AssetStreamingLocatorResponse> streamingLocators() {
         return this.streamingLocators;
     }

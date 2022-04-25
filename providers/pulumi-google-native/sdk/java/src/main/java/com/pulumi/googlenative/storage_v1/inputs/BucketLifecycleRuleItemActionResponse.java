@@ -23,6 +23,10 @@ public final class BucketLifecycleRuleItemActionResponse extends com.pulumi.reso
     @Import(name="storageClass", required=true)
     private String storageClass;
 
+    /**
+     * @return Target storage class. Required iff the type of the action is SetStorageClass.
+     * 
+     */
     public String storageClass() {
         return this.storageClass;
     }
@@ -34,6 +38,10 @@ public final class BucketLifecycleRuleItemActionResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the action. Currently, only Delete and SetStorageClass are supported.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class BucketLifecycleRuleItemActionResponse extends com.pulumi.reso
             $ = new BucketLifecycleRuleItemActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageClass Target storage class. Required iff the type of the action is SetStorageClass.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param type Type of the action. Currently, only Delete and SetStorageClass are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

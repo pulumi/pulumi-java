@@ -26,6 +26,10 @@ public final class ExpiryDetailArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
     private @Nullable Output<String> expireTime;
 
+    /**
+     * @return The time at which the `MembershipRole` will expire.
+     * 
+     */
     public Optional<Output<String>> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -54,11 +58,23 @@ public final class ExpiryDetailArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExpiryDetailArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expireTime The time at which the `MembershipRole` will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The time at which the `MembershipRole` will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }

@@ -24,6 +24,11 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return The device name to expose to the instance (for
+     * example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -38,6 +43,13 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="forceDetach")
     private @Nullable Output<Boolean> forceDetach;
 
+    /**
+     * @return Set to `true` if you want to force the
+     * volume to detach. Useful if previous attempts failed, but use this option only
+     * as a last resort, as this can result in **data loss**. See
+     * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
+     * 
+     */
     public Optional<Output<Boolean>> forceDetach() {
         return Optional.ofNullable(this.forceDetach);
     }
@@ -49,6 +61,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return ID of the Instance to attach to
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -64,6 +80,14 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="skipDestroy")
     private @Nullable Output<Boolean> skipDestroy;
 
+    /**
+     * @return Set this to true if you do not wish
+     * to detach the volume from the instance to which it is attached at destroy
+     * time, and instead just remove the attachment from this provider state. This is
+     * useful when destroying an instance which has volumes created by some other
+     * means attached.
+     * 
+     */
     public Optional<Output<Boolean>> skipDestroy() {
         return Optional.ofNullable(this.skipDestroy);
     }
@@ -76,6 +100,11 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="stopInstanceBeforeDetaching")
     private @Nullable Output<Boolean> stopInstanceBeforeDetaching;
 
+    /**
+     * @return Set this to true to ensure that the target instance is stopped
+     * before trying to detach the volume. Stops the instance, if it is not already stopped.
+     * 
+     */
     public Optional<Output<Boolean>> stopInstanceBeforeDetaching() {
         return Optional.ofNullable(this.stopInstanceBeforeDetaching);
     }
@@ -87,6 +116,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
     @Import(name="volumeId")
     private @Nullable Output<String> volumeId;
 
+    /**
+     * @return ID of the Volume to be attached
+     * 
+     */
     public Optional<Output<String>> volumeId() {
         return Optional.ofNullable(this.volumeId);
     }
@@ -120,56 +153,146 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
             $ = new VolumeAttachmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name to expose to the instance (for
+         * example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name to expose to the instance (for
+         * example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param forceDetach Set to `true` if you want to force the
+         * volume to detach. Useful if previous attempts failed, but use this option only
+         * as a last resort, as this can result in **data loss**. See
+         * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDetach(@Nullable Output<Boolean> forceDetach) {
             $.forceDetach = forceDetach;
             return this;
         }
 
+        /**
+         * @param forceDetach Set to `true` if you want to force the
+         * volume to detach. Useful if previous attempts failed, but use this option only
+         * as a last resort, as this can result in **data loss**. See
+         * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDetach(Boolean forceDetach) {
             return forceDetach(Output.of(forceDetach));
         }
 
+        /**
+         * @param instanceId ID of the Instance to attach to
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId ID of the Instance to attach to
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param skipDestroy Set this to true if you do not wish
+         * to detach the volume from the instance to which it is attached at destroy
+         * time, and instead just remove the attachment from this provider state. This is
+         * useful when destroying an instance which has volumes created by some other
+         * means attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
             $.skipDestroy = skipDestroy;
             return this;
         }
 
+        /**
+         * @param skipDestroy Set this to true if you do not wish
+         * to detach the volume from the instance to which it is attached at destroy
+         * time, and instead just remove the attachment from this provider state. This is
+         * useful when destroying an instance which has volumes created by some other
+         * means attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipDestroy(Boolean skipDestroy) {
             return skipDestroy(Output.of(skipDestroy));
         }
 
+        /**
+         * @param stopInstanceBeforeDetaching Set this to true to ensure that the target instance is stopped
+         * before trying to detach the volume. Stops the instance, if it is not already stopped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopInstanceBeforeDetaching(@Nullable Output<Boolean> stopInstanceBeforeDetaching) {
             $.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
             return this;
         }
 
+        /**
+         * @param stopInstanceBeforeDetaching Set this to true to ensure that the target instance is stopped
+         * before trying to detach the volume. Stops the instance, if it is not already stopped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopInstanceBeforeDetaching(Boolean stopInstanceBeforeDetaching) {
             return stopInstanceBeforeDetaching(Output.of(stopInstanceBeforeDetaching));
         }
 
+        /**
+         * @param volumeId ID of the Volume to be attached
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeId(@Nullable Output<String> volumeId) {
             $.volumeId = volumeId;
             return this;
         }
 
+        /**
+         * @param volumeId ID of the Volume to be attached
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeId(String volumeId) {
             return volumeId(Output.of(volumeId));
         }

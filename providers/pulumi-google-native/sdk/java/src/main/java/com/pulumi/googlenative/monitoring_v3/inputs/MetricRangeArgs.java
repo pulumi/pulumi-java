@@ -27,6 +27,10 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="range")
     private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
+    /**
+     * @return Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+     * 
+     */
     public Optional<Output<GoogleMonitoringV3RangeArgs>> range() {
         return Optional.ofNullable(this.range);
     }
@@ -38,6 +42,10 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeSeries")
     private @Nullable Output<String> timeSeries;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+     * 
+     */
     public Optional<Output<String>> timeSeries() {
         return Optional.ofNullable(this.timeSeries);
     }
@@ -67,20 +75,44 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param range Range of values considered &#34;good.&#34; For a one-sided range, set one bound to an infinite value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(GoogleMonitoringV3RangeArgs range) {
             return range(Output.of(range));
         }
 
+        /**
+         * @param timeSeries A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(@Nullable Output<String> timeSeries) {
             $.timeSeries = timeSeries;
             return this;
         }
 
+        /**
+         * @param timeSeries A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(String timeSeries) {
             return timeSeries(Output.of(timeSeries));
         }

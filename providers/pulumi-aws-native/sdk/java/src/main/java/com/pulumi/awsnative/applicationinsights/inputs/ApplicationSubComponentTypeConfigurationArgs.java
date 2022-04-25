@@ -25,6 +25,10 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
     @Import(name="subComponentConfigurationDetails", required=true)
     private Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
+    /**
+     * @return The configuration settings of sub components.
+     * 
+     */
     public Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
@@ -36,6 +40,10 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
     @Import(name="subComponentType", required=true)
     private Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
+    /**
+     * @return The sub component type.
+     * 
+     */
     public Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType() {
         return this.subComponentType;
     }
@@ -65,20 +73,44 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
             $ = new ApplicationSubComponentTypeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subComponentConfigurationDetails The configuration settings of sub components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentConfigurationDetails(Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails) {
             $.subComponentConfigurationDetails = subComponentConfigurationDetails;
             return this;
         }
 
+        /**
+         * @param subComponentConfigurationDetails The configuration settings of sub components.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetailsArgs subComponentConfigurationDetails) {
             return subComponentConfigurationDetails(Output.of(subComponentConfigurationDetails));
         }
 
+        /**
+         * @param subComponentType The sub component type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentType(Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
             $.subComponentType = subComponentType;
             return this;
         }
 
+        /**
+         * @param subComponentType The sub component type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             return subComponentType(Output.of(subComponentType));
         }

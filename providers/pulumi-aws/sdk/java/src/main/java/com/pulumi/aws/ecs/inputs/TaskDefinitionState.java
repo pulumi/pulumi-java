@@ -32,6 +32,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Full ARN of the Task Definition (including both `family` and `revision`).
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -43,6 +47,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="containerDefinitions")
     private @Nullable Output<String> containerDefinitions;
 
+    /**
+     * @return A list of valid [container definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+     * 
+     */
     public Optional<Output<String>> containerDefinitions() {
         return Optional.ofNullable(this.containerDefinitions);
     }
@@ -54,6 +62,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="cpu")
     private @Nullable Output<String> cpu;
 
+    /**
+     * @return Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+     * 
+     */
     public Optional<Output<String>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -65,6 +77,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="ephemeralStorage")
     private @Nullable Output<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage;
 
+    /**
+     * @return The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+     * 
+     */
     public Optional<Output<TaskDefinitionEphemeralStorageGetArgs>> ephemeralStorage() {
         return Optional.ofNullable(this.ephemeralStorage);
     }
@@ -76,6 +92,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="executionRoleArn")
     private @Nullable Output<String> executionRoleArn;
 
+    /**
+     * @return ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
+     * 
+     */
     public Optional<Output<String>> executionRoleArn() {
         return Optional.ofNullable(this.executionRoleArn);
     }
@@ -87,6 +107,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return A unique name for your task definition.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -98,6 +122,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="inferenceAccelerators")
     private @Nullable Output<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators;
 
+    /**
+     * @return Configuration block(s) with Inference Accelerators settings. Detailed below.
+     * 
+     */
     public Optional<Output<List<TaskDefinitionInferenceAcceleratorGetArgs>>> inferenceAccelerators() {
         return Optional.ofNullable(this.inferenceAccelerators);
     }
@@ -109,6 +137,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="ipcMode")
     private @Nullable Output<String> ipcMode;
 
+    /**
+     * @return IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
+     * 
+     */
     public Optional<Output<String>> ipcMode() {
         return Optional.ofNullable(this.ipcMode);
     }
@@ -120,6 +152,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="memory")
     private @Nullable Output<String> memory;
 
+    /**
+     * @return Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+     * 
+     */
     public Optional<Output<String>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -131,6 +167,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="networkMode")
     private @Nullable Output<String> networkMode;
 
+    /**
+     * @return Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
+     * 
+     */
     public Optional<Output<String>> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
@@ -142,6 +182,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="pidMode")
     private @Nullable Output<String> pidMode;
 
+    /**
+     * @return Process namespace to use for the containers in the task. The valid values are `host` and `task`.
+     * 
+     */
     public Optional<Output<String>> pidMode() {
         return Optional.ofNullable(this.pidMode);
     }
@@ -153,6 +197,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="placementConstraints")
     private @Nullable Output<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints;
 
+    /**
+     * @return Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
+     * 
+     */
     public Optional<Output<List<TaskDefinitionPlacementConstraintGetArgs>>> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
@@ -164,6 +212,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="proxyConfiguration")
     private @Nullable Output<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration;
 
+    /**
+     * @return Configuration block for the App Mesh proxy. Detailed below.
+     * 
+     */
     public Optional<Output<TaskDefinitionProxyConfigurationGetArgs>> proxyConfiguration() {
         return Optional.ofNullable(this.proxyConfiguration);
     }
@@ -175,6 +227,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="requiresCompatibilities")
     private @Nullable Output<List<String>> requiresCompatibilities;
 
+    /**
+     * @return Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
+     * 
+     */
     public Optional<Output<List<String>>> requiresCompatibilities() {
         return Optional.ofNullable(this.requiresCompatibilities);
     }
@@ -186,6 +242,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="revision")
     private @Nullable Output<Integer> revision;
 
+    /**
+     * @return Revision of the task in a particular family.
+     * 
+     */
     public Optional<Output<Integer>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -197,6 +257,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="runtimePlatform")
     private @Nullable Output<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform;
 
+    /**
+     * @return Configuration block for runtime_platform that containers in your task may use.
+     * 
+     */
     public Optional<Output<TaskDefinitionRuntimePlatformGetArgs>> runtimePlatform() {
         return Optional.ofNullable(this.runtimePlatform);
     }
@@ -215,6 +279,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -226,6 +294,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return Map of tags assigned to the resource, including those inherited from the provider.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -237,6 +309,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="taskRoleArn")
     private @Nullable Output<String> taskRoleArn;
 
+    /**
+     * @return ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
+     * 
+     */
     public Optional<Output<String>> taskRoleArn() {
         return Optional.ofNullable(this.taskRoleArn);
     }
@@ -248,6 +324,10 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
     @Import(name="volumes")
     private @Nullable Output<List<TaskDefinitionVolumeGetArgs>> volumes;
 
+    /**
+     * @return Configuration block for volumes that containers in your task may use. Detailed below.
+     * 
+     */
     public Optional<Output<List<TaskDefinitionVolumeGetArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -296,158 +376,368 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
             $ = new TaskDefinitionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Full ARN of the Task Definition (including both `family` and `revision`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Full ARN of the Task Definition (including both `family` and `revision`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param containerDefinitions A list of valid [container definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDefinitions(@Nullable Output<String> containerDefinitions) {
             $.containerDefinitions = containerDefinitions;
             return this;
         }
 
+        /**
+         * @param containerDefinitions A list of valid [container definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDefinitions(String containerDefinitions) {
             return containerDefinitions(Output.of(containerDefinitions));
         }
 
+        /**
+         * @param cpu Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<String> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(String cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param ephemeralStorage The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralStorage(@Nullable Output<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage) {
             $.ephemeralStorage = ephemeralStorage;
             return this;
         }
 
+        /**
+         * @param ephemeralStorage The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ephemeralStorage(TaskDefinitionEphemeralStorageGetArgs ephemeralStorage) {
             return ephemeralStorage(Output.of(ephemeralStorage));
         }
 
+        /**
+         * @param executionRoleArn ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             $.executionRoleArn = executionRoleArn;
             return this;
         }
 
+        /**
+         * @param executionRoleArn ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionRoleArn(String executionRoleArn) {
             return executionRoleArn(Output.of(executionRoleArn));
         }
 
+        /**
+         * @param family A unique name for your task definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family A unique name for your task definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param inferenceAccelerators Configuration block(s) with Inference Accelerators settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceAccelerators(@Nullable Output<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators) {
             $.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
 
+        /**
+         * @param inferenceAccelerators Configuration block(s) with Inference Accelerators settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceAccelerators(List<TaskDefinitionInferenceAcceleratorGetArgs> inferenceAccelerators) {
             return inferenceAccelerators(Output.of(inferenceAccelerators));
         }
 
+        /**
+         * @param inferenceAccelerators Configuration block(s) with Inference Accelerators settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceAccelerators(TaskDefinitionInferenceAcceleratorGetArgs... inferenceAccelerators) {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
 
+        /**
+         * @param ipcMode IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
             $.ipcMode = ipcMode;
             return this;
         }
 
+        /**
+         * @param ipcMode IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipcMode(String ipcMode) {
             return ipcMode(Output.of(ipcMode));
         }
 
+        /**
+         * @param memory Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<String> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             return memory(Output.of(memory));
         }
 
+        /**
+         * @param networkMode Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(@Nullable Output<String> networkMode) {
             $.networkMode = networkMode;
             return this;
         }
 
+        /**
+         * @param networkMode Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(String networkMode) {
             return networkMode(Output.of(networkMode));
         }
 
+        /**
+         * @param pidMode Process namespace to use for the containers in the task. The valid values are `host` and `task`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pidMode(@Nullable Output<String> pidMode) {
             $.pidMode = pidMode;
             return this;
         }
 
+        /**
+         * @param pidMode Process namespace to use for the containers in the task. The valid values are `host` and `task`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pidMode(String pidMode) {
             return pidMode(Output.of(pidMode));
         }
 
+        /**
+         * @param placementConstraints Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(@Nullable Output<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints) {
             $.placementConstraints = placementConstraints;
             return this;
         }
 
+        /**
+         * @param placementConstraints Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(List<TaskDefinitionPlacementConstraintGetArgs> placementConstraints) {
             return placementConstraints(Output.of(placementConstraints));
         }
 
+        /**
+         * @param placementConstraints Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(TaskDefinitionPlacementConstraintGetArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
 
+        /**
+         * @param proxyConfiguration Configuration block for the App Mesh proxy. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfiguration(@Nullable Output<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration) {
             $.proxyConfiguration = proxyConfiguration;
             return this;
         }
 
+        /**
+         * @param proxyConfiguration Configuration block for the App Mesh proxy. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyConfiguration(TaskDefinitionProxyConfigurationGetArgs proxyConfiguration) {
             return proxyConfiguration(Output.of(proxyConfiguration));
         }
 
+        /**
+         * @param requiresCompatibilities Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresCompatibilities(@Nullable Output<List<String>> requiresCompatibilities) {
             $.requiresCompatibilities = requiresCompatibilities;
             return this;
         }
 
+        /**
+         * @param requiresCompatibilities Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresCompatibilities(List<String> requiresCompatibilities) {
             return requiresCompatibilities(Output.of(requiresCompatibilities));
         }
 
+        /**
+         * @param requiresCompatibilities Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresCompatibilities(String... requiresCompatibilities) {
             return requiresCompatibilities(List.of(requiresCompatibilities));
         }
 
+        /**
+         * @param revision Revision of the task in a particular family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Integer> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision Revision of the task in a particular family.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Integer revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param runtimePlatform Configuration block for runtime_platform that containers in your task may use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimePlatform(@Nullable Output<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform) {
             $.runtimePlatform = runtimePlatform;
             return this;
         }
 
+        /**
+         * @param runtimePlatform Configuration block for runtime_platform that containers in your task may use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimePlatform(TaskDefinitionRuntimePlatformGetArgs runtimePlatform) {
             return runtimePlatform(Output.of(runtimePlatform));
         }
@@ -461,42 +751,96 @@ public final class TaskDefinitionState extends com.pulumi.resources.ResourceArgs
             return skipDestroy(Output.of(skipDestroy));
         }
 
+        /**
+         * @param tags Key-value map of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param taskRoleArn ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskRoleArn(@Nullable Output<String> taskRoleArn) {
             $.taskRoleArn = taskRoleArn;
             return this;
         }
 
+        /**
+         * @param taskRoleArn ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskRoleArn(String taskRoleArn) {
             return taskRoleArn(Output.of(taskRoleArn));
         }
 
+        /**
+         * @param volumes Configuration block for volumes that containers in your task may use. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<TaskDefinitionVolumeGetArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes Configuration block for volumes that containers in your task may use. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<TaskDefinitionVolumeGetArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes Configuration block for volumes that containers in your task may use. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(TaskDefinitionVolumeGetArgs... volumes) {
             return volumes(List.of(volumes));
         }

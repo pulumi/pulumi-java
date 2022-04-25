@@ -26,6 +26,10 @@ public final class FilterCriteriaProperties extends com.pulumi.resources.InvokeA
     @Import(name="filters")
     private @Nullable List<EventSourceMappingFilter> filters;
 
+    /**
+     * @return List of filters of this FilterCriteria
+     * 
+     */
     public Optional<List<EventSourceMappingFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -54,11 +58,23 @@ public final class FilterCriteriaProperties extends com.pulumi.resources.InvokeA
             $ = new FilterCriteriaProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters List of filters of this FilterCriteria
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<EventSourceMappingFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters List of filters of this FilterCriteria
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(EventSourceMappingFilter... filters) {
             return filters(List.of(filters));
         }

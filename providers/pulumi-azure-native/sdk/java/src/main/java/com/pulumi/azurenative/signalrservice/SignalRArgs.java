@@ -31,6 +31,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cors")
     private @Nullable Output<SignalRCorsSettingsArgs> cors;
 
+    /**
+     * @return Cross-Origin Resource Sharing (CORS) settings.
+     * 
+     */
     public Optional<Output<SignalRCorsSettingsArgs>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -47,6 +51,15 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="features")
     private @Nullable Output<List<SignalRFeatureArgs>> features;
 
+    /**
+     * @return List of SignalR featureFlags. e.g. ServiceMode.
+     * 
+     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+     * And the response will only include featureFlags that are explicitly set.
+     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+     * 
+     */
     public Optional<Output<List<SignalRFeatureArgs>>> features() {
         return Optional.ofNullable(this.features);
     }
@@ -58,6 +71,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<Either<String,ServiceKind>> kind;
 
+    /**
+     * @return The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+     * 
+     */
     public Optional<Output<Either<String,ServiceKind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -69,6 +86,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +101,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkACLs")
     private @Nullable Output<SignalRNetworkACLsArgs> networkACLs;
 
+    /**
+     * @return Network ACLs
+     * 
+     */
     public Optional<Output<SignalRNetworkACLsArgs>> networkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
@@ -91,6 +116,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +131,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the SignalR resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -113,6 +146,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<ResourceSkuArgs> sku;
 
+    /**
+     * @return The billing information of the resource.(e.g. Free, Standard)
+     * 
+     */
     public Optional<Output<ResourceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -124,6 +161,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -135,6 +176,10 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upstream")
     private @Nullable Output<ServerlessUpstreamSettingsArgs> upstream;
 
+    /**
+     * @return Upstream settings when the Azure SignalR is in server-less mode.
+     * 
+     */
     public Optional<Output<ServerlessUpstreamSettingsArgs>> upstream() {
         return Optional.ofNullable(this.upstream);
     }
@@ -172,104 +217,257 @@ public final class SignalRArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SignalRArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cors Cross-Origin Resource Sharing (CORS) settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<SignalRCorsSettingsArgs> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors Cross-Origin Resource Sharing (CORS) settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(SignalRCorsSettingsArgs cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param features List of SignalR featureFlags. e.g. ServiceMode.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable Output<List<SignalRFeatureArgs>> features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param features List of SignalR featureFlags. e.g. ServiceMode.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(List<SignalRFeatureArgs> features) {
             return features(Output.of(features));
         }
 
+        /**
+         * @param features List of SignalR featureFlags. e.g. ServiceMode.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(SignalRFeatureArgs... features) {
             return features(List.of(features));
         }
 
+        /**
+         * @param kind The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,ServiceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,ServiceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(ServiceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkACLs Network ACLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkACLs(@Nullable Output<SignalRNetworkACLsArgs> networkACLs) {
             $.networkACLs = networkACLs;
             return this;
         }
 
+        /**
+         * @param networkACLs Network ACLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkACLs(SignalRNetworkACLsArgs networkACLs) {
             return networkACLs(Output.of(networkACLs));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the SignalR resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the SignalR resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku The billing information of the resource.(e.g. Free, Standard)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The billing information of the resource.(e.g. Free, Standard)
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ResourceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param upstream Upstream settings when the Azure SignalR is in server-less mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstream(@Nullable Output<ServerlessUpstreamSettingsArgs> upstream) {
             $.upstream = upstream;
             return this;
         }
 
+        /**
+         * @param upstream Upstream settings when the Azure SignalR is in server-less mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstream(ServerlessUpstreamSettingsArgs upstream) {
             return upstream(Output.of(upstream));
         }

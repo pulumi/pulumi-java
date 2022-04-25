@@ -24,6 +24,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name for this template. Defaults to an empty string. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum length is 200 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -35,6 +39,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
     private Output<Map<String,String>> fields;
 
+    /**
+     * @return Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. The map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. The IDs have the following limitations: * Can contain uppercase and lowercase letters, numbers (0-9) and underscores (_). * Must be at least 1 character and at most 64 characters long. * Must start with a letter or underscore.
+     * 
+     */
     public Output<Map<String,String>> fields() {
         return this.fields;
     }
@@ -46,6 +54,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPubliclyReadable")
     private @Nullable Output<Boolean> isPubliclyReadable;
 
+    /**
+     * @return Indicates whether this is a public tag template. Every user has view access to a *public* tag template by default. This means that: * Every user can use this tag template to tag an entry. * If an entry is tagged using the tag template, the tag is always shown in the response to ``ListTags`` called on the entry. * To get the template using the GetTagTemplate method, you need view access either on the project or the organization the tag template resides in but no other permission is needed. * Operations on the tag template other than viewing (for example, editing IAM policies) follow standard IAM structures. Tags created with a public tag template are referred to as public tags. You can search for a public tag by value with a simple search query instead of using a ``tag:`` predicate. Public tag templates may not appear in search results depending on scope, see: include_public_tag_templates Note: If an [IAM domain restriction](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains) is configured in the tag template&#39;s location, the public access will not be enabled but the simple search for tag values will still work.
+     * 
+     */
     public Optional<Output<Boolean>> isPubliclyReadable() {
         return Optional.ofNullable(this.isPubliclyReadable);
     }
@@ -64,6 +76,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the tag template in URL format. Note: The tag template itself and its child resources might not be stored in the location specified in its name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -112,29 +128,65 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name for this template. Defaults to an empty string. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum length is 200 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name for this template. Defaults to an empty string. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can&#39;t start or end with spaces. The maximum length is 200 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param fields Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. The map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. The IDs have the following limitations: * Can contain uppercase and lowercase letters, numbers (0-9) and underscores (_). * Must be at least 1 character and at most 64 characters long. * Must start with a letter or underscore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Output<Map<String,String>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. The map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. The IDs have the following limitations: * Can contain uppercase and lowercase letters, numbers (0-9) and underscores (_). * Must be at least 1 character and at most 64 characters long. * Must start with a letter or underscore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(Map<String,String> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param isPubliclyReadable Indicates whether this is a public tag template. Every user has view access to a *public* tag template by default. This means that: * Every user can use this tag template to tag an entry. * If an entry is tagged using the tag template, the tag is always shown in the response to ``ListTags`` called on the entry. * To get the template using the GetTagTemplate method, you need view access either on the project or the organization the tag template resides in but no other permission is needed. * Operations on the tag template other than viewing (for example, editing IAM policies) follow standard IAM structures. Tags created with a public tag template are referred to as public tags. You can search for a public tag by value with a simple search query instead of using a ``tag:`` predicate. Public tag templates may not appear in search results depending on scope, see: include_public_tag_templates Note: If an [IAM domain restriction](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains) is configured in the tag template&#39;s location, the public access will not be enabled but the simple search for tag values will still work.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPubliclyReadable(@Nullable Output<Boolean> isPubliclyReadable) {
             $.isPubliclyReadable = isPubliclyReadable;
             return this;
         }
 
+        /**
+         * @param isPubliclyReadable Indicates whether this is a public tag template. Every user has view access to a *public* tag template by default. This means that: * Every user can use this tag template to tag an entry. * If an entry is tagged using the tag template, the tag is always shown in the response to ``ListTags`` called on the entry. * To get the template using the GetTagTemplate method, you need view access either on the project or the organization the tag template resides in but no other permission is needed. * Operations on the tag template other than viewing (for example, editing IAM policies) follow standard IAM structures. Tags created with a public tag template are referred to as public tags. You can search for a public tag by value with a simple search query instead of using a ``tag:`` predicate. Public tag templates may not appear in search results depending on scope, see: include_public_tag_templates Note: If an [IAM domain restriction](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains) is configured in the tag template&#39;s location, the public access will not be enabled but the simple search for tag values will still work.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPubliclyReadable(Boolean isPubliclyReadable) {
             return isPubliclyReadable(Output.of(isPubliclyReadable));
         }
@@ -148,11 +200,23 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the tag template in URL format. Note: The tag template itself and its child resources might not be stored in the location specified in its name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the tag template in URL format. Note: The tag template itself and its child resources might not be stored in the location specified in its name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

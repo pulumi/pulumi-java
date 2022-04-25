@@ -26,6 +26,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -37,6 +41,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
     @Import(name="repoName")
     private @Nullable Output<String> repoName;
 
+    /**
+     * @return The name of the repo. Leave empty for the default repo.
+     * 
+     */
     public Optional<Output<String>> repoName() {
         return Optional.ofNullable(this.repoName);
     }
@@ -66,20 +74,44 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
             $ = new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param repoName The name of the repo. Leave empty for the default repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(@Nullable Output<String> repoName) {
             $.repoName = repoName;
             return this;
         }
 
+        /**
+         * @param repoName The name of the repo. Leave empty for the default repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoName(String repoName) {
             return repoName(Output.of(repoName));
         }

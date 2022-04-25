@@ -20,6 +20,10 @@ public final class AssetModelExpressionVariable extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The friendly name of the variable to be used in the expression.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class AssetModelExpressionVariable extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
     private AssetModelVariableValue value;
 
+    /**
+     * @return The variable that identifies an asset property from which to use values.
+     * 
+     */
     public AssetModelVariableValue value() {
         return this.value;
     }
@@ -60,11 +68,23 @@ public final class AssetModelExpressionVariable extends com.pulumi.resources.Inv
             $ = new AssetModelExpressionVariable(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly name of the variable to be used in the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The variable that identifies an asset property from which to use values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(AssetModelVariableValue value) {
             $.value = value;
             return this;

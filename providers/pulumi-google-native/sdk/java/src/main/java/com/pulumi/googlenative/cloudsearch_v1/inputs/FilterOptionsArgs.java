@@ -27,6 +27,10 @@ public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<FilterArgs> filter;
 
+    /**
+     * @return Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
+     * 
+     */
     public Optional<Output<FilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -38,6 +42,10 @@ public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
     private @Nullable Output<String> objectType;
 
+    /**
+     * @return If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
+     * 
+     */
     public Optional<Output<String>> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -67,20 +75,44 @@ public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FilterOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<FilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(FilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param objectType If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(@Nullable Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType If object_type is set, only objects of that type are returned. This should correspond to the name of the object that was registered within the definition of schema. The maximum length is 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }

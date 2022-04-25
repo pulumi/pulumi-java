@@ -28,6 +28,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePrivateEndpoint")
     private @Nullable Output<Boolean> enablePrivateEndpoint;
 
+    /**
+     * @return Whether the master&#39;s internal IP address is used as the cluster endpoint.
+     * 
+     */
     public Optional<Output<Boolean>> enablePrivateEndpoint() {
         return Optional.ofNullable(this.enablePrivateEndpoint);
     }
@@ -39,6 +43,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="enablePrivateNodes")
     private @Nullable Output<Boolean> enablePrivateNodes;
 
+    /**
+     * @return Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+     * 
+     */
     public Optional<Output<Boolean>> enablePrivateNodes() {
         return Optional.ofNullable(this.enablePrivateNodes);
     }
@@ -50,6 +58,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="masterGlobalAccessConfig")
     private @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
 
+    /**
+     * @return Controls master global access settings.
+     * 
+     */
     public Optional<Output<PrivateClusterMasterGlobalAccessConfigArgs>> masterGlobalAccessConfig() {
         return Optional.ofNullable(this.masterGlobalAccessConfig);
     }
@@ -61,6 +73,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="masterIpv4CidrBlock")
     private @Nullable Output<String> masterIpv4CidrBlock;
 
+    /**
+     * @return The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+     * 
+     */
     public Optional<Output<String>> masterIpv4CidrBlock() {
         return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
@@ -92,38 +108,86 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
             $ = new PrivateClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enablePrivateEndpoint Whether the master&#39;s internal IP address is used as the cluster endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEndpoint(@Nullable Output<Boolean> enablePrivateEndpoint) {
             $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
+        /**
+         * @param enablePrivateEndpoint Whether the master&#39;s internal IP address is used as the cluster endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             return enablePrivateEndpoint(Output.of(enablePrivateEndpoint));
         }
 
+        /**
+         * @param enablePrivateNodes Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateNodes(@Nullable Output<Boolean> enablePrivateNodes) {
             $.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
 
+        /**
+         * @param enablePrivateNodes Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePrivateNodes(Boolean enablePrivateNodes) {
             return enablePrivateNodes(Output.of(enablePrivateNodes));
         }
 
+        /**
+         * @param masterGlobalAccessConfig Controls master global access settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterGlobalAccessConfig(@Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
             $.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
 
+        /**
+         * @param masterGlobalAccessConfig Controls master global access settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
             return masterGlobalAccessConfig(Output.of(masterGlobalAccessConfig));
         }
 
+        /**
+         * @param masterIpv4CidrBlock The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
             $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param masterIpv4CidrBlock The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             return masterIpv4CidrBlock(Output.of(masterIpv4CidrBlock));
         }

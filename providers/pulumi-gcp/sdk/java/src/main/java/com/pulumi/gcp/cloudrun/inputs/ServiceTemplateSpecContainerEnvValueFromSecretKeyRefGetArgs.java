@@ -21,6 +21,11 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return The Cloud Secret Manager secret version.
+     * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -32,6 +37,10 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,20 +70,46 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs e
             $ = new ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The Cloud Secret Manager secret version.
+         * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The Cloud Secret Manager secret version.
+         * Can be &#39;latest&#39; for the latest value or an integer for a specific version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

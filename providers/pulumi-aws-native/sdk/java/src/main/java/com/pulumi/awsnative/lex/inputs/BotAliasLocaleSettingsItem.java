@@ -31,6 +31,10 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
     @Import(name="localeId", required=true)
     private String localeId;
 
+    /**
+     * @return A string used to identify the locale
+     * 
+     */
     public String localeId() {
         return this.localeId;
     }
@@ -65,6 +69,12 @@ public final class BotAliasLocaleSettingsItem extends com.pulumi.resources.Invok
             return this;
         }
 
+        /**
+         * @param localeId A string used to identify the locale
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeId(String localeId) {
             $.localeId = localeId;
             return this;

@@ -22,6 +22,10 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends com.pulumi
     @Import(name="dynamicRouting")
     private @Nullable Output<String> dynamicRouting;
 
+    /**
+     * @return Whether to enable dynamic routing. (enable/disable)
+     * 
+     */
     public Optional<Output<String>> dynamicRouting() {
         return Optional.ofNullable(this.dynamicRouting);
     }
@@ -50,11 +54,23 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends com.pulumi
             $ = new TransitGatewayPeeringAttachmentOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dynamicRouting Whether to enable dynamic routing. (enable/disable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicRouting(@Nullable Output<String> dynamicRouting) {
             $.dynamicRouting = dynamicRouting;
             return this;
         }
 
+        /**
+         * @param dynamicRouting Whether to enable dynamic routing. (enable/disable)
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicRouting(String dynamicRouting) {
             return dynamicRouting(Output.of(dynamicRouting));
         }

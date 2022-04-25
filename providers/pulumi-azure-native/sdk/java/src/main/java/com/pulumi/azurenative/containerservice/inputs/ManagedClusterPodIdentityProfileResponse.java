@@ -24,6 +24,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
     @Import(name="allowNetworkPluginKubenet")
     private @Nullable Boolean allowNetworkPluginKubenet;
 
+    /**
+     * @return Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
+     * 
+     */
     public Optional<Boolean> allowNetworkPluginKubenet() {
         return Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
@@ -35,6 +39,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether the pod identity addon is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -46,6 +54,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
     @Import(name="userAssignedIdentities")
     private @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return User assigned pod identity settings.
+     * 
+     */
     public Optional<List<ManagedClusterPodIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -57,6 +69,10 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
     @Import(name="userAssignedIdentityExceptions")
     private @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
+    /**
+     * @return User assigned pod identity exception settings.
+     * 
+     */
     public Optional<List<ManagedClusterPodIdentityExceptionResponse>> userAssignedIdentityExceptions() {
         return Optional.ofNullable(this.userAssignedIdentityExceptions);
     }
@@ -88,30 +104,66 @@ public final class ManagedClusterPodIdentityProfileResponse extends com.pulumi.r
             $ = new ManagedClusterPodIdentityProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowNetworkPluginKubenet Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
             $.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
 
+        /**
+         * @param enabled Whether the pod identity addon is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities User assigned pod identity settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities User assigned pod identity settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(ManagedClusterPodIdentityResponse... userAssignedIdentities) {
             return userAssignedIdentities(List.of(userAssignedIdentities));
         }
 
+        /**
+         * @param userAssignedIdentityExceptions User assigned pod identity exception settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
             $.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentityExceptions User assigned pod identity exception settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentityExceptions(ManagedClusterPodIdentityExceptionResponse... userAssignedIdentityExceptions) {
             return userAssignedIdentityExceptions(List.of(userAssignedIdentityExceptions));
         }

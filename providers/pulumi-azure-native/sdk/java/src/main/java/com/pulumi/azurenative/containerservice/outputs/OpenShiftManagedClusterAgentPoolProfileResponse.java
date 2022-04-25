@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OpenShiftManagedClusterAgentPoolProfileResponse {
     /**
-     * Number of agents (VMs) to host docker containers.
+     * @return Number of agents (VMs) to host docker containers.
      * 
      */
     private final Integer count;
     /**
-     * Unique name of the pool profile in the context of the subscription and resource group.
+     * @return Unique name of the pool profile in the context of the subscription and resource group.
      * 
      */
     private final String name;
     /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
     private final @Nullable String osType;
     /**
-     * Define the role of the AgentPoolProfile.
+     * @return Define the role of the AgentPoolProfile.
      * 
      */
     private final @Nullable String role;
     /**
-     * Subnet CIDR for the peering.
+     * @return Subnet CIDR for the peering.
      * 
      */
     private final @Nullable String subnetCidr;
     /**
-     * Size of agent VMs.
+     * @return Size of agent VMs.
      * 
      */
     private final String vmSize;
@@ -60,44 +60,44 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
     }
 
     /**
-     * Number of agents (VMs) to host docker containers.
+     * @return Number of agents (VMs) to host docker containers.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * Unique name of the pool profile in the context of the subscription and resource group.
+     * @return Unique name of the pool profile in the context of the subscription and resource group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Define the role of the AgentPoolProfile.
+     * @return Define the role of the AgentPoolProfile.
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
-     * Subnet CIDR for the peering.
+     * @return Subnet CIDR for the peering.
      * 
-    */
+     */
     public Optional<String> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
     /**
-     * Size of agent VMs.
+     * @return Size of agent VMs.
      * 
-    */
+     */
     public String vmSize() {
         return this.vmSize;
     }

@@ -27,6 +27,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the frontend IP configuration name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -39,6 +43,11 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="privateIpAddress")
     private @Nullable Output<String> privateIpAddress;
 
+    /**
+     * @return Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+     * private IP address shall be allocated from the subnet specified in subnetRef.
+     * 
+     */
     public Optional<Output<String>> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -50,6 +59,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="privateIpAllocationMethod")
     private @Nullable Output<String> privateIpAllocationMethod;
 
+    /**
+     * @return Gets or sets PrivateIP allocation method (Static/Dynamic).
+     * 
+     */
     public Optional<Output<String>> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
@@ -61,6 +74,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="subnet")
     private @Nullable Output<SubnetReferenceArgs> subnet;
 
+    /**
+     * @return Defines reference to subnet.
+     * 
+     */
     public Optional<Output<SubnetReferenceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -72,6 +89,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="zones")
     private @Nullable Output<String> zones;
 
+    /**
+     * @return Gets or sets the csv list of zones.
+     * 
+     */
     public Optional<Output<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -104,47 +125,109 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
             $ = new LBFrontendIPConfigurationResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the frontend IP configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the frontend IP configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateIpAddress Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+         * private IP address shall be allocated from the subnet specified in subnetRef.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+         * private IP address shall be allocated from the subnet specified in subnetRef.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             return privateIpAddress(Output.of(privateIpAddress));
         }
 
+        /**
+         * @param privateIpAllocationMethod Gets or sets PrivateIP allocation method (Static/Dynamic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
             $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateIpAllocationMethod Gets or sets PrivateIP allocation method (Static/Dynamic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAllocationMethod(String privateIpAllocationMethod) {
             return privateIpAllocationMethod(Output.of(privateIpAllocationMethod));
         }
 
+        /**
+         * @param subnet Defines reference to subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Defines reference to subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetReferenceArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String zones) {
             return zones(Output.of(zones));
         }

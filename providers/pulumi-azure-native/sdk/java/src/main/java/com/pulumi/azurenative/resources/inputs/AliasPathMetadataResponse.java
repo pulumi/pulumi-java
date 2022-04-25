@@ -19,6 +19,10 @@ public final class AliasPathMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="attributes", required=true)
     private String attributes;
 
+    /**
+     * @return The attributes of the token that the alias path is referring to.
+     * 
+     */
     public String attributes() {
         return this.attributes;
     }
@@ -30,6 +34,10 @@ public final class AliasPathMetadataResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the token that the alias path is referring to.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,11 +67,23 @@ public final class AliasPathMetadataResponse extends com.pulumi.resources.Invoke
             $ = new AliasPathMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the token that the alias path is referring to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(String attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param type The type of the token that the alias path is referring to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

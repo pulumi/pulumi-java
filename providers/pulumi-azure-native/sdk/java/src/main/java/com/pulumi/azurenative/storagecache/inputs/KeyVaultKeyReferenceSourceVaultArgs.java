@@ -26,6 +26,10 @@ public final class KeyVaultKeyReferenceSourceVaultArgs extends com.pulumi.resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class KeyVaultKeyReferenceSourceVaultArgs extends com.pulumi.resour
             $ = new KeyVaultKeyReferenceSourceVaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

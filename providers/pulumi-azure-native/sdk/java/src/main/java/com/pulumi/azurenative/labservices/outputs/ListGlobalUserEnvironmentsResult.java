@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListGlobalUserEnvironmentsResult {
     /**
-     * List of all the environments
+     * @return List of all the environments
      * 
      */
     private final @Nullable List<EnvironmentDetailsResponse> environments;
@@ -23,9 +23,9 @@ public final class ListGlobalUserEnvironmentsResult {
     }
 
     /**
-     * List of all the environments
+     * @return List of all the environments
      * 
-    */
+     */
     public List<EnvironmentDetailsResponse> environments() {
         return this.environments == null ? List.of() : this.environments;
     }

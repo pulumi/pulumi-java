@@ -28,6 +28,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingConfigurationArn")
     private @Nullable Output<String> autoScalingConfigurationArn;
 
+    /**
+     * @return Autoscaling configuration ARN
+     * 
+     */
     public Optional<Output<String>> autoScalingConfigurationArn() {
         return Optional.ofNullable(this.autoScalingConfigurationArn);
     }
@@ -60,6 +64,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The AppRunner Service Name.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -108,11 +116,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScalingConfigurationArn Autoscaling configuration ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingConfigurationArn(@Nullable Output<String> autoScalingConfigurationArn) {
             $.autoScalingConfigurationArn = autoScalingConfigurationArn;
             return this;
         }
 
+        /**
+         * @param autoScalingConfigurationArn Autoscaling configuration ARN
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingConfigurationArn(String autoScalingConfigurationArn) {
             return autoScalingConfigurationArn(Output.of(autoScalingConfigurationArn));
         }
@@ -144,11 +164,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceConfiguration(Output.of(instanceConfiguration));
         }
 
+        /**
+         * @param serviceName The AppRunner Service Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The AppRunner Service Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

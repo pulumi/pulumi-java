@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetDomainIdentityResult {
     /**
-     * The ARN of the domain identity.
+     * @return The ARN of the domain identity.
      * 
      */
     private final String arn;
     /**
-     * The name of the domain
+     * @return The name of the domain
      * 
      */
     private final String domain;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A code which when added to the domain as a TXT record will signal to SES that the owner of the domain has authorized SES to act on their behalf.
+     * @return A code which when added to the domain as a TXT record will signal to SES that the owner of the domain has authorized SES to act on their behalf.
      * 
      */
     private final String verificationToken;
@@ -43,30 +43,30 @@ public final class GetDomainIdentityResult {
     }
 
     /**
-     * The ARN of the domain identity.
+     * @return The ARN of the domain identity.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The name of the domain
+     * @return The name of the domain
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A code which when added to the domain as a TXT record will signal to SES that the owner of the domain has authorized SES to act on their behalf.
+     * @return A code which when added to the domain as a TXT record will signal to SES that the owner of the domain has authorized SES to act on their behalf.
      * 
-    */
+     */
     public String verificationToken() {
         return this.verificationToken;
     }

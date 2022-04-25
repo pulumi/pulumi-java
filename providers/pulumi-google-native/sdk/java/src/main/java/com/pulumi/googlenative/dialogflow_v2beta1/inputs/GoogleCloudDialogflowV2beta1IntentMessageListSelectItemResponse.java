@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. The main text describing the item.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
     @Import(name="image", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
+    /**
+     * @return Optional. The image to display.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
     @Import(name="info", required=true)
     private GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
 
+    /**
+     * @return Additional information about this option.
+     * 
+     */
     public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The title of the list item.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -89,21 +105,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
             $ = new GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. The main text describing the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param image Optional. The image to display.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param info Additional information about this option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param title The title of the list item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

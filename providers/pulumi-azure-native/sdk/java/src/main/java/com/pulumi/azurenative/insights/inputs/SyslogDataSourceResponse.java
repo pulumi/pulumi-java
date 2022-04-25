@@ -27,6 +27,10 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="facilityNames")
     private @Nullable List<String> facilityNames;
 
+    /**
+     * @return The list of facility names.
+     * 
+     */
     public Optional<List<String>> facilityNames() {
         return Optional.ofNullable(this.facilityNames);
     }
@@ -38,6 +42,10 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="logLevels")
     private @Nullable List<String> logLevels;
 
+    /**
+     * @return The log levels to collect.
+     * 
+     */
     public Optional<List<String>> logLevels() {
         return Optional.ofNullable(this.logLevels);
     }
@@ -50,6 +58,11 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,6 +75,11 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="streams")
     private @Nullable List<String> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<List<String>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -93,34 +111,79 @@ public final class SyslogDataSourceResponse extends com.pulumi.resources.InvokeA
             $ = new SyslogDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param facilityNames The list of facility names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facilityNames(@Nullable List<String> facilityNames) {
             $.facilityNames = facilityNames;
             return this;
         }
 
+        /**
+         * @param facilityNames The list of facility names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facilityNames(String... facilityNames) {
             return facilityNames(List.of(facilityNames));
         }
 
+        /**
+         * @param logLevels The log levels to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevels(@Nullable List<String> logLevels) {
             $.logLevels = logLevels;
             return this;
         }
 
+        /**
+         * @param logLevels The log levels to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevels(String... logLevels) {
             return logLevels(List.of(logLevels));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable List<String> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(String... streams) {
             return streams(List.of(streams));
         }

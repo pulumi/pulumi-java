@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerStatus {
     /**
-     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
+     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
      * 
      */
     private final @Nullable String containerID;
     /**
-     * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+     * @return The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
      * 
      */
     private final String image;
     /**
-     * ImageID of the container&#39;s image.
+     * @return ImageID of the container&#39;s image.
      * 
      */
     private final String imageID;
     /**
-     * Details about the container&#39;s last termination condition.
+     * @return Details about the container&#39;s last termination condition.
      * 
      */
     private final @Nullable ContainerState lastState;
     /**
-     * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+     * @return This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
      * 
      */
     private final String name;
     /**
-     * Specifies whether the container has passed its readiness probe.
+     * @return Specifies whether the container has passed its readiness probe.
      * 
      */
     private final Boolean ready;
     /**
-     * The number of times the container has been restarted.
+     * @return The number of times the container has been restarted.
      * 
      */
     private final Integer restartCount;
     /**
-     * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+     * @return Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
      * 
      */
     private final @Nullable Boolean started;
     /**
-     * Details about the container&#39;s current condition.
+     * @return Details about the container&#39;s current condition.
      * 
      */
     private final @Nullable ContainerState state;
@@ -83,65 +83,65 @@ public final class ContainerStatus {
     }
 
     /**
-     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
+     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
      * 
-    */
+     */
     public Optional<String> containerID() {
         return Optional.ofNullable(this.containerID);
     }
     /**
-     * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
+     * @return The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * ImageID of the container&#39;s image.
+     * @return ImageID of the container&#39;s image.
      * 
-    */
+     */
     public String imageID() {
         return this.imageID;
     }
     /**
-     * Details about the container&#39;s last termination condition.
+     * @return Details about the container&#39;s last termination condition.
      * 
-    */
+     */
     public Optional<ContainerState> lastState() {
         return Optional.ofNullable(this.lastState);
     }
     /**
-     * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
+     * @return This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies whether the container has passed its readiness probe.
+     * @return Specifies whether the container has passed its readiness probe.
      * 
-    */
+     */
     public Boolean ready() {
         return this.ready;
     }
     /**
-     * The number of times the container has been restarted.
+     * @return The number of times the container has been restarted.
      * 
-    */
+     */
     public Integer restartCount() {
         return this.restartCount;
     }
     /**
-     * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
+     * @return Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
      * 
-    */
+     */
     public Optional<Boolean> started() {
         return Optional.ofNullable(this.started);
     }
     /**
-     * Details about the container&#39;s current condition.
+     * @return Details about the container&#39;s current condition.
      * 
-    */
+     */
     public Optional<ContainerState> state() {
         return Optional.ofNullable(this.state);
     }

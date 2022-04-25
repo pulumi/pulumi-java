@@ -31,6 +31,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="audio")
     private @Nullable Output<GoogleCloudDialogflowCxV3AudioInputArgs> audio;
 
+    /**
+     * @return The natural language speech audio to be processed.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3AudioInputArgs>> audio() {
         return Optional.ofNullable(this.audio);
     }
@@ -42,6 +46,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="dtmf")
     private @Nullable Output<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf;
 
+    /**
+     * @return The DTMF event to be handled.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3DtmfInputArgs>> dtmf() {
         return Optional.ofNullable(this.dtmf);
     }
@@ -53,6 +61,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="event")
     private @Nullable Output<GoogleCloudDialogflowCxV3EventInputArgs> event;
 
+    /**
+     * @return The event to be triggered.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3EventInputArgs>> event() {
         return Optional.ofNullable(this.event);
     }
@@ -64,6 +76,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="intent")
     private @Nullable Output<GoogleCloudDialogflowCxV3IntentInputArgs> intent;
 
+    /**
+     * @return The intent to be triggered.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3IntentInputArgs>> intent() {
         return Optional.ofNullable(this.intent);
     }
@@ -75,6 +91,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="languageCode", required=true)
     private Output<String> languageCode;
 
+    /**
+     * @return The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     * 
+     */
     public Output<String> languageCode() {
         return this.languageCode;
     }
@@ -86,6 +106,10 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
     @Import(name="text")
     private @Nullable Output<GoogleCloudDialogflowCxV3TextInputArgs> text;
 
+    /**
+     * @return The natural language text to be processed.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3TextInputArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -119,56 +143,128 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends com.pulumi.re
             $ = new GoogleCloudDialogflowCxV3QueryInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audio The natural language speech audio to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(@Nullable Output<GoogleCloudDialogflowCxV3AudioInputArgs> audio) {
             $.audio = audio;
             return this;
         }
 
+        /**
+         * @param audio The natural language speech audio to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audio(GoogleCloudDialogflowCxV3AudioInputArgs audio) {
             return audio(Output.of(audio));
         }
 
+        /**
+         * @param dtmf The DTMF event to be handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dtmf(@Nullable Output<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf) {
             $.dtmf = dtmf;
             return this;
         }
 
+        /**
+         * @param dtmf The DTMF event to be handled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dtmf(GoogleCloudDialogflowCxV3DtmfInputArgs dtmf) {
             return dtmf(Output.of(dtmf));
         }
 
+        /**
+         * @param event The event to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(@Nullable Output<GoogleCloudDialogflowCxV3EventInputArgs> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The event to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(GoogleCloudDialogflowCxV3EventInputArgs event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param intent The intent to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(@Nullable Output<GoogleCloudDialogflowCxV3IntentInputArgs> intent) {
             $.intent = intent;
             return this;
         }
 
+        /**
+         * @param intent The intent to be triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intent(GoogleCloudDialogflowCxV3IntentInputArgs intent) {
             return intent(Output.of(intent));
         }
 
+        /**
+         * @param languageCode The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
 
+        /**
+         * @param text The natural language text to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<GoogleCloudDialogflowCxV3TextInputArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The natural language text to be processed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(GoogleCloudDialogflowCxV3TextInputArgs text) {
             return text(Output.of(text));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PriorityLevelConfigurationStatus {
     /**
-     * `conditions` is the current state of &#34;request-priority&#34;.
+     * @return `conditions` is the current state of &#34;request-priority&#34;.
      * 
      */
     private final @Nullable List<PriorityLevelConfigurationCondition> conditions;
@@ -23,9 +23,9 @@ public final class PriorityLevelConfigurationStatus {
     }
 
     /**
-     * `conditions` is the current state of &#34;request-priority&#34;.
+     * @return `conditions` is the current state of &#34;request-priority&#34;.
      * 
-    */
+     */
     public List<PriorityLevelConfigurationCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

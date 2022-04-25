@@ -24,6 +24,10 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectionArn", required=true)
     private Output<String> connectionArn;
 
+    /**
+     * @return The arn of the connection.
+     * 
+     */
     public Output<String> connectionArn() {
         return this.connectionArn;
     }
@@ -49,6 +53,10 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="invocationEndpoint", required=true)
     private Output<String> invocationEndpoint;
 
+    /**
+     * @return Url endpoint to invoke.
+     * 
+     */
     public Output<String> invocationEndpoint() {
         return this.invocationEndpoint;
     }
@@ -67,6 +75,10 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the apiDestination.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,11 +112,23 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ApiDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionArn The arn of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(Output<String> connectionArn) {
             $.connectionArn = connectionArn;
             return this;
         }
 
+        /**
+         * @param connectionArn The arn of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(String connectionArn) {
             return connectionArn(Output.of(connectionArn));
         }
@@ -127,11 +151,23 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
             return httpMethod(Output.of(httpMethod));
         }
 
+        /**
+         * @param invocationEndpoint Url endpoint to invoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invocationEndpoint(Output<String> invocationEndpoint) {
             $.invocationEndpoint = invocationEndpoint;
             return this;
         }
 
+        /**
+         * @param invocationEndpoint Url endpoint to invoke.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invocationEndpoint(String invocationEndpoint) {
             return invocationEndpoint(Output.of(invocationEndpoint));
         }
@@ -145,11 +181,23 @@ public final class ApiDestinationArgs extends com.pulumi.resources.ResourceArgs 
             return invocationRateLimitPerSecond(Output.of(invocationRateLimitPerSecond));
         }
 
+        /**
+         * @param name Name of the apiDestination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the apiDestination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

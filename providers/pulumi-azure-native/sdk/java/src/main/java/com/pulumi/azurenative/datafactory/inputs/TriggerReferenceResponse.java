@@ -23,6 +23,10 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference trigger name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -34,6 +38,10 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Trigger reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class TriggerReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new TriggerReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceName Reference trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Trigger reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

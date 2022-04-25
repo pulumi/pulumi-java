@@ -26,6 +26,10 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizes")
     private @Nullable Output<Map<String,TreeSize>> sizes;
 
+    /**
+     * @return The sizes of trees available
+     * 
+     */
     public Optional<Output<Map<String,TreeSize>>> sizes() {
         return Optional.ofNullable(this.sizes);
     }
@@ -37,6 +41,10 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="varieties", required=true)
     private Output<List<RubberTreeVariety>> varieties;
 
+    /**
+     * @return The varieties available
+     * 
+     */
     public Output<List<RubberTreeVariety>> varieties() {
         return this.varieties;
     }
@@ -66,24 +74,54 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NurseryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sizes The sizes of trees available
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizes(@Nullable Output<Map<String,TreeSize>> sizes) {
             $.sizes = sizes;
             return this;
         }
 
+        /**
+         * @param sizes The sizes of trees available
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizes(Map<String,TreeSize> sizes) {
             return sizes(Output.of(sizes));
         }
 
+        /**
+         * @param varieties The varieties available
+         * 
+         * @return builder
+         * 
+         */
         public Builder varieties(Output<List<RubberTreeVariety>> varieties) {
             $.varieties = varieties;
             return this;
         }
 
+        /**
+         * @param varieties The varieties available
+         * 
+         * @return builder
+         * 
+         */
         public Builder varieties(List<RubberTreeVariety> varieties) {
             return varieties(Output.of(varieties));
         }
 
+        /**
+         * @param varieties The varieties available
+         * 
+         * @return builder
+         * 
+         */
         public Builder varieties(RubberTreeVariety... varieties) {
             return varieties(List.of(varieties));
         }

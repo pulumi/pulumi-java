@@ -24,6 +24,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
     @Import(name="cookieDuration")
     private @Nullable Output<Integer> cookieDuration;
 
+    /**
+     * @return Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+     * 
+     */
     public Optional<Output<Integer>> cookieDuration() {
         return Optional.ofNullable(this.cookieDuration);
     }
@@ -35,6 +39,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
     @Import(name="cookieName")
     private @Nullable Output<String> cookieName;
 
+    /**
+     * @return Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+     * 
+     */
     public Optional<Output<String>> cookieName() {
         return Optional.ofNullable(this.cookieName);
     }
@@ -46,6 +54,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Boolean to enable / disable `stickiness`. Default is `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -57,6 +69,10 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -88,38 +104,86 @@ public final class TargetGroupStickinessArgs extends com.pulumi.resources.Resour
             $ = new TargetGroupStickinessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cookieDuration Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieDuration(@Nullable Output<Integer> cookieDuration) {
             $.cookieDuration = cookieDuration;
             return this;
         }
 
+        /**
+         * @param cookieDuration Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieDuration(Integer cookieDuration) {
             return cookieDuration(Output.of(cookieDuration));
         }
 
+        /**
+         * @param cookieName Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieName(@Nullable Output<String> cookieName) {
             $.cookieName = cookieName;
             return this;
         }
 
+        /**
+         * @param cookieName Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieName(String cookieName) {
             return cookieName(Output.of(cookieName));
         }
 
+        /**
+         * @param enabled Boolean to enable / disable `stickiness`. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Boolean to enable / disable `stickiness`. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param type The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

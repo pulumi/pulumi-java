@@ -19,6 +19,10 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends com.pulumi.re
     @Import(name="ipCidrRange", required=true)
     private String ipCidrRange;
 
+    /**
+     * @return The IP CIDR range represented by this alias IP range.
+     * 
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -32,6 +36,12 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends com.pulumi.re
     @Import(name="subnetworkRangeName", required=true)
     private String subnetworkRangeName;
 
+    /**
+     * @return The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range.
+     * 
+     */
     public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
@@ -61,11 +71,25 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends com.pulumi.re
             $ = new GetInstanceNetworkInterfaceAliasIpRange(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipCidrRange The IP CIDR range represented by this alias IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param subnetworkRangeName The subnetwork secondary range name specifying
+         * the secondary range from which to allocate the IP CIDR range for this alias IP
+         * range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkRangeName(String subnetworkRangeName) {
             $.subnetworkRangeName = subnetworkRangeName;
             return this;

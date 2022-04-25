@@ -21,6 +21,11 @@ public final class ConnectionCloudSqlCredentialGetArgs extends com.pulumi.resour
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Password for database.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -32,6 +37,10 @@ public final class ConnectionCloudSqlCredentialGetArgs extends com.pulumi.resour
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username for database.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -61,20 +70,46 @@ public final class ConnectionCloudSqlCredentialGetArgs extends com.pulumi.resour
             $ = new ConnectionCloudSqlCredentialGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password for database.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for database.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Username for database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

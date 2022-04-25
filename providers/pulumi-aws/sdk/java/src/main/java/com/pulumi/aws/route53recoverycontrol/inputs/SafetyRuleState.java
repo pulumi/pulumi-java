@@ -25,6 +25,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the safety rule.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="assertedControls")
     private @Nullable Output<List<String>> assertedControls;
 
+    /**
+     * @return Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
+     * 
+     */
     public Optional<Output<List<String>>> assertedControls() {
         return Optional.ofNullable(this.assertedControls);
     }
@@ -47,6 +55,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn")
     private @Nullable Output<String> controlPanelArn;
 
+    /**
+     * @return ARN of the control panel in which this safety rule will reside.
+     * 
+     */
     public Optional<Output<String>> controlPanelArn() {
         return Optional.ofNullable(this.controlPanelArn);
     }
@@ -58,6 +70,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatingControls")
     private @Nullable Output<List<String>> gatingControls;
 
+    /**
+     * @return Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
+     * 
+     */
     public Optional<Output<List<String>>> gatingControls() {
         return Optional.ofNullable(this.gatingControls);
     }
@@ -69,6 +85,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name describing the safety rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleConfig")
     private @Nullable Output<SafetyRuleRuleConfigGetArgs> ruleConfig;
 
+    /**
+     * @return Configuration block for safety rule criteria. See below.
+     * 
+     */
     public Optional<Output<SafetyRuleRuleConfigGetArgs>> ruleConfig() {
         return Optional.ofNullable(this.ruleConfig);
     }
@@ -91,6 +115,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the safety rule. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -102,6 +130,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetControls")
     private @Nullable Output<List<String>> targetControls;
 
+    /**
+     * @return Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
+     * 
+     */
     public Optional<Output<List<String>>> targetControls() {
         return Optional.ofNullable(this.targetControls);
     }
@@ -113,6 +145,10 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitPeriodMs")
     private @Nullable Output<Integer> waitPeriodMs;
 
+    /**
+     * @return Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
+     * 
+     */
     public Optional<Output<Integer>> waitPeriodMs() {
         return Optional.ofNullable(this.waitPeriodMs);
     }
@@ -149,95 +185,221 @@ public final class SafetyRuleState extends com.pulumi.resources.ResourceArgs {
             $ = new SafetyRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the safety rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the safety rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param assertedControls Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assertedControls(@Nullable Output<List<String>> assertedControls) {
             $.assertedControls = assertedControls;
             return this;
         }
 
+        /**
+         * @param assertedControls Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assertedControls(List<String> assertedControls) {
             return assertedControls(Output.of(assertedControls));
         }
 
+        /**
+         * @param assertedControls Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assertedControls(String... assertedControls) {
             return assertedControls(List.of(assertedControls));
         }
 
+        /**
+         * @param controlPanelArn ARN of the control panel in which this safety rule will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;
         }
 
+        /**
+         * @param controlPanelArn ARN of the control panel in which this safety rule will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlPanelArn(String controlPanelArn) {
             return controlPanelArn(Output.of(controlPanelArn));
         }
 
+        /**
+         * @param gatingControls Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatingControls(@Nullable Output<List<String>> gatingControls) {
             $.gatingControls = gatingControls;
             return this;
         }
 
+        /**
+         * @param gatingControls Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatingControls(List<String> gatingControls) {
             return gatingControls(Output.of(gatingControls));
         }
 
+        /**
+         * @param gatingControls Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatingControls(String... gatingControls) {
             return gatingControls(List.of(gatingControls));
         }
 
+        /**
+         * @param name Name describing the safety rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name describing the safety rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ruleConfig Configuration block for safety rule criteria. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleConfig(@Nullable Output<SafetyRuleRuleConfigGetArgs> ruleConfig) {
             $.ruleConfig = ruleConfig;
             return this;
         }
 
+        /**
+         * @param ruleConfig Configuration block for safety rule criteria. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleConfig(SafetyRuleRuleConfigGetArgs ruleConfig) {
             return ruleConfig(Output.of(ruleConfig));
         }
 
+        /**
+         * @param status Status of the safety rule. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the safety rule. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param targetControls Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetControls(@Nullable Output<List<String>> targetControls) {
             $.targetControls = targetControls;
             return this;
         }
 
+        /**
+         * @param targetControls Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetControls(List<String> targetControls) {
             return targetControls(Output.of(targetControls));
         }
 
+        /**
+         * @param targetControls Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetControls(String... targetControls) {
             return targetControls(List.of(targetControls));
         }
 
+        /**
+         * @param waitPeriodMs Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitPeriodMs(@Nullable Output<Integer> waitPeriodMs) {
             $.waitPeriodMs = waitPeriodMs;
             return this;
         }
 
+        /**
+         * @param waitPeriodMs Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitPeriodMs(Integer waitPeriodMs) {
             return waitPeriodMs(Output.of(waitPeriodMs));
         }

@@ -28,6 +28,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -39,6 +43,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="privateLink")
     private @Nullable Output<ResourceReferenceArgs> privateLink;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
@@ -50,6 +58,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="privateLinkLocation")
     private @Nullable Output<String> privateLinkLocation;
 
+    /**
+     * @return The location of the shared private link resource
+     * 
+     */
     public Optional<Output<String>> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
@@ -61,6 +73,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -72,6 +88,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="status")
     private @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
+    /**
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+     * 
+     */
     public Optional<Output<SharedPrivateLinkResourceStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -104,47 +124,107 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
             $ = new SharedPrivateLinkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param privateLink The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(@Nullable Output<ResourceReferenceArgs> privateLink) {
             $.privateLink = privateLink;
             return this;
         }
 
+        /**
+         * @param privateLink The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(ResourceReferenceArgs privateLink) {
             return privateLink(Output.of(privateLink));
         }
 
+        /**
+         * @param privateLinkLocation The location of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             $.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
+        /**
+         * @param privateLinkLocation The location of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(String privateLinkLocation) {
             return privateLinkLocation(Output.of(privateLinkLocation));
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(SharedPrivateLinkResourceStatus status) {
             return status(Output.of(status));
         }

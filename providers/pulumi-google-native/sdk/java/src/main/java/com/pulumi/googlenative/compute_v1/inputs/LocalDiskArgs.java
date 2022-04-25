@@ -23,6 +23,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskCount")
     private @Nullable Output<Integer> diskCount;
 
+    /**
+     * @return Specifies the number of such disks.
+     * 
+     */
     public Optional<Output<Integer>> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
@@ -34,6 +38,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
     private @Nullable Output<Integer> diskSizeGb;
 
+    /**
+     * @return Specifies the size of the disk in base-2 GB.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -45,6 +53,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
     private @Nullable Output<String> diskType;
 
+    /**
+     * @return Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+     * 
+     */
     public Optional<Output<String>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -75,29 +87,65 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LocalDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskCount Specifies the number of such disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param diskCount Specifies the number of such disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(Integer diskCount) {
             return diskCount(Output.of(diskCount));
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Specifies the size of the disk in base-2 GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(Integer diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param diskType Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<String> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Output.of(diskType));
         }

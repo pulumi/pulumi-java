@@ -24,6 +24,10 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedPublishers", required=true)
     private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
+    /**
+     * @return When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
+     * 
+     */
     public Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers() {
         return this.allowedPublishers;
     }
@@ -35,6 +39,10 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="codeSigningPolicies")
     private @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
+    /**
+     * @return Policies to control how to act if a signature is invalid
+     * 
+     */
     public Optional<Output<CodeSigningConfigCodeSigningPoliciesArgs>> codeSigningPolicies() {
         return Optional.ofNullable(this.codeSigningPolicies);
     }
@@ -46,6 +54,10 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the CodeSigningConfig
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -76,29 +88,65 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
             $ = new CodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPublishers When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPublishers(Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
             $.allowedPublishers = allowedPublishers;
             return this;
         }
 
+        /**
+         * @param allowedPublishers When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
             return allowedPublishers(Output.of(allowedPublishers));
         }
 
+        /**
+         * @param codeSigningPolicies Policies to control how to act if a signature is invalid
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigningPolicies(@Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies) {
             $.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
 
+        /**
+         * @param codeSigningPolicies Policies to control how to act if a signature is invalid
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigningPolicies(CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
             return codeSigningPolicies(Output.of(codeSigningPolicies));
         }
 
+        /**
+         * @param description A description of the CodeSigningConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the CodeSigningConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }

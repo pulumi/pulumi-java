@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GuestAgentProfileResponse {
     /**
-     * The hybrid machine agent full version.
+     * @return The hybrid machine agent full version.
      * 
      */
     private final String agentVersion;
     /**
-     * Details about the error state.
+     * @return Details about the error state.
      * 
      */
     private final List<ErrorDetailResponse> errorDetails;
     /**
-     * The time of the last status change.
+     * @return The time of the last status change.
      * 
      */
     private final String lastStatusChange;
     /**
-     * The status of the hybrid machine agent.
+     * @return The status of the hybrid machine agent.
      * 
      */
     private final String status;
     /**
-     * Specifies the VM&#39;s unique SMBIOS ID.
+     * @return Specifies the VM&#39;s unique SMBIOS ID.
      * 
      */
     private final String vmUuid;
@@ -52,37 +52,37 @@ public final class GuestAgentProfileResponse {
     }
 
     /**
-     * The hybrid machine agent full version.
+     * @return The hybrid machine agent full version.
      * 
-    */
+     */
     public String agentVersion() {
         return this.agentVersion;
     }
     /**
-     * Details about the error state.
+     * @return Details about the error state.
      * 
-    */
+     */
     public List<ErrorDetailResponse> errorDetails() {
         return this.errorDetails;
     }
     /**
-     * The time of the last status change.
+     * @return The time of the last status change.
      * 
-    */
+     */
     public String lastStatusChange() {
         return this.lastStatusChange;
     }
     /**
-     * The status of the hybrid machine agent.
+     * @return The status of the hybrid machine agent.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Specifies the VM&#39;s unique SMBIOS ID.
+     * @return Specifies the VM&#39;s unique SMBIOS ID.
      * 
-    */
+     */
     public String vmUuid() {
         return this.vmUuid;
     }

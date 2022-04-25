@@ -26,6 +26,10 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
     @Import(name="logRules")
     private @Nullable Output<LogRulesArgs> logRules;
 
+    /**
+     * @return Set of rules for sending logs for the Monitor resource.
+     * 
+     */
     public Optional<Output<LogRulesArgs>> logRules() {
         return Optional.ofNullable(this.logRules);
     }
@@ -54,11 +58,23 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
             $ = new MonitoringTagRulesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logRules Set of rules for sending logs for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
             $.logRules = logRules;
             return this;
         }
 
+        /**
+         * @param logRules Set of rules for sending logs for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRules(LogRulesArgs logRules) {
             return logRules(Output.of(logRules));
         }

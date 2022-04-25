@@ -23,6 +23,10 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -45,6 +53,10 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return An optional string indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -56,6 +68,10 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return An optional title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -87,21 +103,45 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExprResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param location An optional string indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param title An optional title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

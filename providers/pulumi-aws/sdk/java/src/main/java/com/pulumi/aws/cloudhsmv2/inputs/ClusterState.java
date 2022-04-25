@@ -30,6 +30,15 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterCertificates")
     private @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
 
+    /**
+     * @return The list of cluster certificates.
+     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
+     * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
+     * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
+     * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
+     * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
+     * 
+     */
     public Optional<Output<List<ClusterClusterCertificateGetArgs>>> clusterCertificates() {
         return Optional.ofNullable(this.clusterCertificates);
     }
@@ -41,6 +50,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return The id of the CloudHSM cluster.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -52,6 +65,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterState")
     private @Nullable Output<String> clusterState;
 
+    /**
+     * @return The state of the CloudHSM cluster.
+     * 
+     */
     public Optional<Output<String>> clusterState() {
         return Optional.ofNullable(this.clusterState);
     }
@@ -63,6 +80,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hsmType")
     private @Nullable Output<String> hsmType;
 
+    /**
+     * @return The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+     * 
+     */
     public Optional<Output<String>> hsmType() {
         return Optional.ofNullable(this.hsmType);
     }
@@ -74,6 +95,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId")
     private @Nullable Output<String> securityGroupId;
 
+    /**
+     * @return The ID of the security group associated with the CloudHSM cluster.
+     * 
+     */
     public Optional<Output<String>> securityGroupId() {
         return Optional.ofNullable(this.securityGroupId);
     }
@@ -85,6 +110,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceBackupIdentifier")
     private @Nullable Output<String> sourceBackupIdentifier;
 
+    /**
+     * @return The id of Cloud HSM v2 cluster backup to be restored.
+     * 
+     */
     public Optional<Output<String>> sourceBackupIdentifier() {
         return Optional.ofNullable(this.sourceBackupIdentifier);
     }
@@ -96,6 +125,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return The IDs of subnets in which cluster will operate.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -107,6 +140,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -118,6 +155,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -129,6 +170,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
+    /**
+     * @return The id of the VPC that the CloudHSM cluster resides in.
+     * 
+     */
     public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
@@ -166,100 +211,247 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterCertificates The list of cluster certificates.
+         * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
+         * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
+         * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
+         * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
+         * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterCertificates(@Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates) {
             $.clusterCertificates = clusterCertificates;
             return this;
         }
 
+        /**
+         * @param clusterCertificates The list of cluster certificates.
+         * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
+         * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
+         * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
+         * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
+         * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterCertificates(List<ClusterClusterCertificateGetArgs> clusterCertificates) {
             return clusterCertificates(Output.of(clusterCertificates));
         }
 
+        /**
+         * @param clusterCertificates The list of cluster certificates.
+         * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
+         * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
+         * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
+         * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
+         * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterCertificates(ClusterClusterCertificateGetArgs... clusterCertificates) {
             return clusterCertificates(List.of(clusterCertificates));
         }
 
+        /**
+         * @param clusterId The id of the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId The id of the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param clusterState The state of the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterState(@Nullable Output<String> clusterState) {
             $.clusterState = clusterState;
             return this;
         }
 
+        /**
+         * @param clusterState The state of the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterState(String clusterState) {
             return clusterState(Output.of(clusterState));
         }
 
+        /**
+         * @param hsmType The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmType(@Nullable Output<String> hsmType) {
             $.hsmType = hsmType;
             return this;
         }
 
+        /**
+         * @param hsmType The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hsmType(String hsmType) {
             return hsmType(Output.of(hsmType));
         }
 
+        /**
+         * @param securityGroupId The ID of the security group associated with the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
         }
 
+        /**
+         * @param securityGroupId The ID of the security group associated with the CloudHSM cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(String securityGroupId) {
             return securityGroupId(Output.of(securityGroupId));
         }
 
+        /**
+         * @param sourceBackupIdentifier The id of Cloud HSM v2 cluster backup to be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
             $.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
 
+        /**
+         * @param sourceBackupIdentifier The id of Cloud HSM v2 cluster backup to be restored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackupIdentifier(String sourceBackupIdentifier) {
             return sourceBackupIdentifier(Output.of(sourceBackupIdentifier));
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds The IDs of subnets in which cluster will operate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param vpcId The id of the VPC that the CloudHSM cluster resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The id of the VPC that the CloudHSM cluster resides in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }

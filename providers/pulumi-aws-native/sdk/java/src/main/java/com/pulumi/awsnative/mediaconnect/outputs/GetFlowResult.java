@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFlowResult {
     /**
-     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
     private final @Nullable String flowArn;
     /**
-     * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
+     * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
      */
     private final @Nullable String flowAvailabilityZone;
     /**
-     * The source of the flow.
+     * @return The source of the flow.
      * 
      */
     private final @Nullable FlowSource source;
     /**
-     * The source failover config of the flow.
+     * @return The source failover config of the flow.
      * 
      */
     private final @Nullable FlowFailoverConfig sourceFailoverConfig;
@@ -47,30 +47,30 @@ public final class GetFlowResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
-    */
+     */
     public Optional<String> flowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
-     * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
+     * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
-    */
+     */
     public Optional<String> flowAvailabilityZone() {
         return Optional.ofNullable(this.flowAvailabilityZone);
     }
     /**
-     * The source of the flow.
+     * @return The source of the flow.
      * 
-    */
+     */
     public Optional<FlowSource> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The source failover config of the flow.
+     * @return The source failover config of the flow.
      * 
-    */
+     */
     public Optional<FlowFailoverConfig> sourceFailoverConfig() {
         return Optional.ofNullable(this.sourceFailoverConfig);
     }

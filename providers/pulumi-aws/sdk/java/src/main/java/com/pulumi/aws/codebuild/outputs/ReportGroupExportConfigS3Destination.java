@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportGroupExportConfigS3Destination {
     /**
-     * The name of the S3 bucket where the raw data of a report are exported.
+     * @return The name of the S3 bucket where the raw data of a report are exported.
      * 
      */
     private final String bucket;
     /**
-     * A boolean value that specifies if the results of a report are encrypted.
+     * @return A boolean value that specifies if the results of a report are encrypted.
      * **Note: the API does not currently allow setting encryption as disabled**
      * 
      */
     private final @Nullable Boolean encryptionDisabled;
     /**
-     * The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
+     * @return The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
      * 
      */
     private final String encryptionKey;
     /**
-     * The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
+     * @return The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
      * 
      */
     private final @Nullable String packaging;
     /**
-     * The path to the exported report&#39;s raw data results.
+     * @return The path to the exported report&#39;s raw data results.
      * 
      */
     private final @Nullable String path;
@@ -54,38 +54,38 @@ public final class ReportGroupExportConfigS3Destination {
     }
 
     /**
-     * The name of the S3 bucket where the raw data of a report are exported.
+     * @return The name of the S3 bucket where the raw data of a report are exported.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * A boolean value that specifies if the results of a report are encrypted.
+     * @return A boolean value that specifies if the results of a report are encrypted.
      * **Note: the API does not currently allow setting encryption as disabled**
      * 
-    */
+     */
     public Optional<Boolean> encryptionDisabled() {
         return Optional.ofNullable(this.encryptionDisabled);
     }
     /**
-     * The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
+     * @return The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
      * 
-    */
+     */
     public String encryptionKey() {
         return this.encryptionKey;
     }
     /**
-     * The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
+     * @return The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
      * 
-    */
+     */
     public Optional<String> packaging() {
         return Optional.ofNullable(this.packaging);
     }
     /**
-     * The path to the exported report&#39;s raw data results.
+     * @return The path to the exported report&#39;s raw data results.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }

@@ -21,6 +21,10 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     @Import(name="mrapName", required=true)
     private Output<String> mrapName;
 
+    /**
+     * @return The name of the Multi Region Access Point to apply policy
+     * 
+     */
     public Output<String> mrapName() {
         return this.mrapName;
     }
@@ -32,6 +36,10 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     @Import(name="policy", required=true)
     private Output<Object> policy;
 
+    /**
+     * @return Policy document to apply to a Multi Region Access Point
+     * 
+     */
     public Output<Object> policy() {
         return this.policy;
     }
@@ -61,20 +69,44 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
             $ = new MultiRegionAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mrapName The name of the Multi Region Access Point to apply policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder mrapName(Output<String> mrapName) {
             $.mrapName = mrapName;
             return this;
         }
 
+        /**
+         * @param mrapName The name of the Multi Region Access Point to apply policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder mrapName(String mrapName) {
             return mrapName(Output.of(mrapName));
         }
 
+        /**
+         * @param policy Policy document to apply to a Multi Region Access Point
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<Object> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Policy document to apply to a Multi Region Access Point
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Object policy) {
             return policy(Output.of(policy));
         }

@@ -21,6 +21,10 @@ public final class VoiceConnectorGroupConnectorGetArgs extends com.pulumi.resour
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
+    /**
+     * @return The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
+     * 
+     */
     public Output<Integer> priority() {
         return this.priority;
     }
@@ -32,6 +36,10 @@ public final class VoiceConnectorGroupConnectorGetArgs extends com.pulumi.resour
     @Import(name="voiceConnectorId", required=true)
     private Output<String> voiceConnectorId;
 
+    /**
+     * @return The Amazon Chime Voice Connector ID.
+     * 
+     */
     public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
@@ -61,20 +69,44 @@ public final class VoiceConnectorGroupConnectorGetArgs extends com.pulumi.resour
             $ = new VoiceConnectorGroupConnectorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param priority The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
             $.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(String voiceConnectorId) {
             return voiceConnectorId(Output.of(voiceConnectorId));
         }

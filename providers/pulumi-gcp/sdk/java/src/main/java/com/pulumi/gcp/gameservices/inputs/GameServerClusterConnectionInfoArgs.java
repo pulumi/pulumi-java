@@ -22,6 +22,11 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
     @Import(name="gkeClusterReference", required=true)
     private Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
 
+    /**
+     * @return Reference of the GKE cluster where the game servers are installed.
+     * Structure is documented below.
+     * 
+     */
     public Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference() {
         return this.gkeClusterReference;
     }
@@ -35,6 +40,12 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return Namespace designated on the game server cluster where the game server
+     * instances will be created. The namespace existence will be validated
+     * during creation.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -64,20 +75,50 @@ public final class GameServerClusterConnectionInfoArgs extends com.pulumi.resour
             $ = new GameServerClusterConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gkeClusterReference Reference of the GKE cluster where the game servers are installed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterReference(Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference) {
             $.gkeClusterReference = gkeClusterReference;
             return this;
         }
 
+        /**
+         * @param gkeClusterReference Reference of the GKE cluster where the game servers are installed.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReferenceArgs gkeClusterReference) {
             return gkeClusterReference(Output.of(gkeClusterReference));
         }
 
+        /**
+         * @param namespace Namespace designated on the game server cluster where the game server
+         * instances will be created. The namespace existence will be validated
+         * during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace designated on the game server cluster where the game server
+         * instances will be created. The namespace existence will be validated
+         * during creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

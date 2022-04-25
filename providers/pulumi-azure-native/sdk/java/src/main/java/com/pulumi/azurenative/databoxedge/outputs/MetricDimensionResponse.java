@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class MetricDimensionResponse {
     /**
-     * The dimension value.
+     * @return The dimension value.
      * 
      */
     private final String sourceName;
     /**
-     * The dimension type.
+     * @return The dimension type.
      * 
      */
     private final String sourceType;
@@ -29,16 +29,16 @@ public final class MetricDimensionResponse {
     }
 
     /**
-     * The dimension value.
+     * @return The dimension value.
      * 
-    */
+     */
     public String sourceName() {
         return this.sourceName;
     }
     /**
-     * The dimension type.
+     * @return The dimension type.
      * 
-    */
+     */
     public String sourceType() {
         return this.sourceType;
     }

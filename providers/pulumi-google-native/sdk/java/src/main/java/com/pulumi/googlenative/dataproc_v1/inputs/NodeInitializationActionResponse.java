@@ -23,6 +23,10 @@ public final class NodeInitializationActionResponse extends com.pulumi.resources
     @Import(name="executableFile", required=true)
     private String executableFile;
 
+    /**
+     * @return Cloud Storage URI of executable file.
+     * 
+     */
     public String executableFile() {
         return this.executableFile;
     }
@@ -34,6 +38,10 @@ public final class NodeInitializationActionResponse extends com.pulumi.resources
     @Import(name="executionTimeout", required=true)
     private String executionTimeout;
 
+    /**
+     * @return Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+     * 
+     */
     public String executionTimeout() {
         return this.executionTimeout;
     }
@@ -63,11 +71,23 @@ public final class NodeInitializationActionResponse extends com.pulumi.resources
             $ = new NodeInitializationActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executableFile Cloud Storage URI of executable file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executableFile(String executableFile) {
             $.executableFile = executableFile;
             return this;
         }
 
+        /**
+         * @param executionTimeout Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionTimeout(String executionTimeout) {
             $.executionTimeout = executionTimeout;
             return this;

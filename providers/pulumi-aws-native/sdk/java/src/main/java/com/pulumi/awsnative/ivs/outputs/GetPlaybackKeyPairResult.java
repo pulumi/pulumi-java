@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPlaybackKeyPairResult {
     /**
-     * Key-pair identifier.
+     * @return Key-pair identifier.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Key-pair identifier.
+     * @return Key-pair identifier.
      * 
      */
     private final @Nullable String fingerprint;
     /**
-     * A list of key-value pairs that contain metadata for the asset model.
+     * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
     private final @Nullable List<PlaybackKeyPairTag> tags;
@@ -40,23 +40,23 @@ public final class GetPlaybackKeyPairResult {
     }
 
     /**
-     * Key-pair identifier.
+     * @return Key-pair identifier.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Key-pair identifier.
+     * @return Key-pair identifier.
      * 
-    */
+     */
     public Optional<String> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
     /**
-     * A list of key-value pairs that contain metadata for the asset model.
+     * @return A list of key-value pairs that contain metadata for the asset model.
      * 
-    */
+     */
     public List<PlaybackKeyPairTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

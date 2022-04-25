@@ -20,6 +20,10 @@ public final class GetInstanceServiceAccount extends com.pulumi.resources.Invoke
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The service account e-mail address.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -31,6 +35,10 @@ public final class GetInstanceServiceAccount extends com.pulumi.resources.Invoke
     @Import(name="scopes", required=true)
     private List<String> scopes;
 
+    /**
+     * @return A list of service scopes.
+     * 
+     */
     public List<String> scopes() {
         return this.scopes;
     }
@@ -60,16 +68,34 @@ public final class GetInstanceServiceAccount extends com.pulumi.resources.Invoke
             $ = new GetInstanceServiceAccount(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The service account e-mail address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param scopes A list of service scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of service scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

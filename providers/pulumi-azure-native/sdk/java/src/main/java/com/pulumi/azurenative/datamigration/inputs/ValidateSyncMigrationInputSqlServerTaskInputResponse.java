@@ -25,6 +25,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="selectedDatabases", required=true)
     private List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -36,6 +40,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="sourceConnectionInfo", required=true)
     private SqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source SQL server
+     * 
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -47,6 +55,10 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
     @Import(name="targetConnectionInfo", required=true)
     private SqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -77,20 +89,44 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
             $ = new ValidateSyncMigrationInputSqlServerTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source SQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

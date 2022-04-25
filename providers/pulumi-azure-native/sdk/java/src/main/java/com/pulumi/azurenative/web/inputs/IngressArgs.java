@@ -33,6 +33,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowInsecure")
     private @Nullable Output<Boolean> allowInsecure;
 
+    /**
+     * @return Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+     * 
+     */
     public Optional<Output<Boolean>> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
@@ -44,6 +48,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="external")
     private @Nullable Output<Boolean> external;
 
+    /**
+     * @return Bool indicating if app exposes an external http endpoint
+     * 
+     */
     public Optional<Output<Boolean>> external() {
         return Optional.ofNullable(this.external);
     }
@@ -55,6 +63,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPort")
     private @Nullable Output<Integer> targetPort;
 
+    /**
+     * @return Target Port in containers for traffic from ingress
+     * 
+     */
     public Optional<Output<Integer>> targetPort() {
         return Optional.ofNullable(this.targetPort);
     }
@@ -73,6 +85,10 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transport")
     private @Nullable Output<Either<String,IngressTransportMethod>> transport;
 
+    /**
+     * @return Ingress transport protocol
+     * 
+     */
     public Optional<Output<Either<String,IngressTransportMethod>>> transport() {
         return Optional.ofNullable(this.transport);
     }
@@ -105,29 +121,65 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInsecure Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
             $.allowInsecure = allowInsecure;
             return this;
         }
 
+        /**
+         * @param allowInsecure Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(Boolean allowInsecure) {
             return allowInsecure(Output.of(allowInsecure));
         }
 
+        /**
+         * @param external Bool indicating if app exposes an external http endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder external(@Nullable Output<Boolean> external) {
             $.external = external;
             return this;
         }
 
+        /**
+         * @param external Bool indicating if app exposes an external http endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder external(Boolean external) {
             return external(Output.of(external));
         }
 
+        /**
+         * @param targetPort Target Port in containers for traffic from ingress
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPort(@Nullable Output<Integer> targetPort) {
             $.targetPort = targetPort;
             return this;
         }
 
+        /**
+         * @param targetPort Target Port in containers for traffic from ingress
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPort(Integer targetPort) {
             return targetPort(Output.of(targetPort));
         }
@@ -145,19 +197,43 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
             return traffic(List.of(traffic));
         }
 
+        /**
+         * @param transport Ingress transport protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(@Nullable Output<Either<String,IngressTransportMethod>> transport) {
             $.transport = transport;
             return this;
         }
 
+        /**
+         * @param transport Ingress transport protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(Either<String,IngressTransportMethod> transport) {
             return transport(Output.of(transport));
         }
 
+        /**
+         * @param transport Ingress transport protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(String transport) {
             return transport(Either.ofLeft(transport));
         }
 
+        /**
+         * @param transport Ingress transport protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(IngressTransportMethod transport) {
             return transport(Either.ofRight(transport));
         }

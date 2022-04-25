@@ -23,6 +23,10 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends com.pu
     @Import(name="actionsRequired", required=true)
     private String actionsRequired;
 
+    /**
+     * @return Gets or sets actions required.
+     * 
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
@@ -34,6 +38,10 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends com.pu
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Gets or sets description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -45,6 +53,10 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends com.pu
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Gets or sets the status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -75,16 +87,34 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends com.pu
             $ = new VaultPrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Gets or sets actions required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description Gets or sets description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Gets or sets the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

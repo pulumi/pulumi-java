@@ -22,48 +22,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityProvidersResponse {
     /**
-     * The configuration settings of the Apple provider.
+     * @return The configuration settings of the Apple provider.
      * 
      */
     private final @Nullable AppleResponse apple;
     /**
-     * The configuration settings of the Azure Active directory provider.
+     * @return The configuration settings of the Azure Active directory provider.
      * 
      */
     private final @Nullable AzureActiveDirectoryResponse azureActiveDirectory;
     /**
-     * The configuration settings of the Azure Static Web Apps provider.
+     * @return The configuration settings of the Azure Static Web Apps provider.
      * 
      */
     private final @Nullable AzureStaticWebAppsResponse azureStaticWebApps;
     /**
-     * The map of the name of the alias of each custom Open ID Connect provider to the
+     * @return The map of the name of the alias of each custom Open ID Connect provider to the
      * configuration settings of the custom Open ID Connect provider.
      * 
      */
     private final @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders;
     /**
-     * The configuration settings of the Facebook provider.
+     * @return The configuration settings of the Facebook provider.
      * 
      */
     private final @Nullable FacebookResponse facebook;
     /**
-     * The configuration settings of the GitHub provider.
+     * @return The configuration settings of the GitHub provider.
      * 
      */
     private final @Nullable GitHubResponse gitHub;
     /**
-     * The configuration settings of the Google provider.
+     * @return The configuration settings of the Google provider.
      * 
      */
     private final @Nullable GoogleResponse google;
     /**
-     * The configuration settings of the legacy Microsoft Account provider.
+     * @return The configuration settings of the legacy Microsoft Account provider.
      * 
      */
     private final @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount;
     /**
-     * The configuration settings of the Twitter provider.
+     * @return The configuration settings of the Twitter provider.
      * 
      */
     private final @Nullable TwitterResponse twitter;
@@ -91,66 +91,66 @@ public final class IdentityProvidersResponse {
     }
 
     /**
-     * The configuration settings of the Apple provider.
+     * @return The configuration settings of the Apple provider.
      * 
-    */
+     */
     public Optional<AppleResponse> apple() {
         return Optional.ofNullable(this.apple);
     }
     /**
-     * The configuration settings of the Azure Active directory provider.
+     * @return The configuration settings of the Azure Active directory provider.
      * 
-    */
+     */
     public Optional<AzureActiveDirectoryResponse> azureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
-     * The configuration settings of the Azure Static Web Apps provider.
+     * @return The configuration settings of the Azure Static Web Apps provider.
      * 
-    */
+     */
     public Optional<AzureStaticWebAppsResponse> azureStaticWebApps() {
         return Optional.ofNullable(this.azureStaticWebApps);
     }
     /**
-     * The map of the name of the alias of each custom Open ID Connect provider to the
+     * @return The map of the name of the alias of each custom Open ID Connect provider to the
      * configuration settings of the custom Open ID Connect provider.
      * 
-    */
+     */
     public Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders() {
         return this.customOpenIdConnectProviders == null ? Map.of() : this.customOpenIdConnectProviders;
     }
     /**
-     * The configuration settings of the Facebook provider.
+     * @return The configuration settings of the Facebook provider.
      * 
-    */
+     */
     public Optional<FacebookResponse> facebook() {
         return Optional.ofNullable(this.facebook);
     }
     /**
-     * The configuration settings of the GitHub provider.
+     * @return The configuration settings of the GitHub provider.
      * 
-    */
+     */
     public Optional<GitHubResponse> gitHub() {
         return Optional.ofNullable(this.gitHub);
     }
     /**
-     * The configuration settings of the Google provider.
+     * @return The configuration settings of the Google provider.
      * 
-    */
+     */
     public Optional<GoogleResponse> google() {
         return Optional.ofNullable(this.google);
     }
     /**
-     * The configuration settings of the legacy Microsoft Account provider.
+     * @return The configuration settings of the legacy Microsoft Account provider.
      * 
-    */
+     */
     public Optional<LegacyMicrosoftAccountResponse> legacyMicrosoftAccount() {
         return Optional.ofNullable(this.legacyMicrosoftAccount);
     }
     /**
-     * The configuration settings of the Twitter provider.
+     * @return The configuration settings of the Twitter provider.
      * 
-    */
+     */
     public Optional<TwitterResponse> twitter() {
         return Optional.ofNullable(this.twitter);
     }

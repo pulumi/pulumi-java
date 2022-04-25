@@ -24,6 +24,10 @@ public final class DaemonEndpointArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="Port", required=true)
     private Output<Integer> Port;
 
+    /**
+     * @return Port number of the given endpoint.
+     * 
+     */
     public Output<Integer> Port() {
         return this.Port;
     }
@@ -52,11 +56,23 @@ public final class DaemonEndpointArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DaemonEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param Port Port number of the given endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder Port(Output<Integer> Port) {
             $.Port = Port;
             return this;
         }
 
+        /**
+         * @param Port Port number of the given endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder Port(Integer Port) {
             return Port(Output.of(Port));
         }

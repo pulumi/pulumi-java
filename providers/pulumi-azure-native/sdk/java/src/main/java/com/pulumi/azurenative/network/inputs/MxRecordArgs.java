@@ -27,6 +27,10 @@ public final class MxRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exchange")
     private @Nullable Output<String> exchange;
 
+    /**
+     * @return The domain name of the mail host for this MX record.
+     * 
+     */
     public Optional<Output<String>> exchange() {
         return Optional.ofNullable(this.exchange);
     }
@@ -38,6 +42,10 @@ public final class MxRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preference")
     private @Nullable Output<Integer> preference;
 
+    /**
+     * @return The preference value for this MX record.
+     * 
+     */
     public Optional<Output<Integer>> preference() {
         return Optional.ofNullable(this.preference);
     }
@@ -67,20 +75,44 @@ public final class MxRecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MxRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exchange The domain name of the mail host for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(@Nullable Output<String> exchange) {
             $.exchange = exchange;
             return this;
         }
 
+        /**
+         * @param exchange The domain name of the mail host for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(String exchange) {
             return exchange(Output.of(exchange));
         }
 
+        /**
+         * @param preference The preference value for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preference(@Nullable Output<Integer> preference) {
             $.preference = preference;
             return this;
         }
 
+        /**
+         * @param preference The preference value for this MX record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preference(Integer preference) {
             return preference(Output.of(preference));
         }

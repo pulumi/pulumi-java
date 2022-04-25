@@ -34,6 +34,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="autoScalingPolicies")
     private @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
+    /**
+     * @return Auto scaling policies
+     * 
+     */
     public Optional<Output<List<AutoScalingPolicyArgs>>> autoScalingPolicies() {
         return Optional.ofNullable(this.autoScalingPolicies);
     }
@@ -45,6 +49,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="codePackages", required=true)
     private Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
+    /**
+     * @return Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+     * 
+     */
     public Output<List<ContainerCodePackagePropertiesArgs>> codePackages() {
         return this.codePackages;
     }
@@ -56,6 +64,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User readable description of the service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -67,6 +79,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="diagnostics")
     private @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
+    /**
+     * @return Reference to sinks in DiagnosticsDescription.
+     * 
+     */
     public Optional<Output<DiagnosticsRefArgs>> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
@@ -78,6 +94,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -89,6 +109,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="networkRefs")
     private @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
+    /**
+     * @return The names of the private networks that this service needs to be part of.
+     * 
+     */
     public Optional<Output<List<NetworkRefArgs>>> networkRefs() {
         return Optional.ofNullable(this.networkRefs);
     }
@@ -100,6 +124,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="osType", required=true)
     private Output<Either<String,OperatingSystemType>> osType;
 
+    /**
+     * @return The operation system required by the code in service.
+     * 
+     */
     public Output<Either<String,OperatingSystemType>> osType() {
         return this.osType;
     }
@@ -111,6 +139,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
     @Import(name="replicaCount")
     private @Nullable Output<Integer> replicaCount;
 
+    /**
+     * @return The number of replicas of the service to create. Defaults to 1 if not specified.
+     * 
+     */
     public Optional<Output<Integer>> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
@@ -146,94 +178,220 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
             $ = new ServiceResourceDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScalingPolicies Auto scaling policies
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingPolicies(@Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
             $.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
 
+        /**
+         * @param autoScalingPolicies Auto scaling policies
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingPolicies(List<AutoScalingPolicyArgs> autoScalingPolicies) {
             return autoScalingPolicies(Output.of(autoScalingPolicies));
         }
 
+        /**
+         * @param autoScalingPolicies Auto scaling policies
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingPolicies(AutoScalingPolicyArgs... autoScalingPolicies) {
             return autoScalingPolicies(List.of(autoScalingPolicies));
         }
 
+        /**
+         * @param codePackages Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder codePackages(Output<List<ContainerCodePackagePropertiesArgs>> codePackages) {
             $.codePackages = codePackages;
             return this;
         }
 
+        /**
+         * @param codePackages Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder codePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
             return codePackages(Output.of(codePackages));
         }
 
+        /**
+         * @param codePackages Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+         * 
+         * @return builder
+         * 
+         */
         public Builder codePackages(ContainerCodePackagePropertiesArgs... codePackages) {
             return codePackages(List.of(codePackages));
         }
 
+        /**
+         * @param description User readable description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User readable description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param diagnostics Reference to sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
             $.diagnostics = diagnostics;
             return this;
         }
 
+        /**
+         * @param diagnostics Reference to sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(DiagnosticsRefArgs diagnostics) {
             return diagnostics(Output.of(diagnostics));
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkRefs The names of the private networks that this service needs to be part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRefs(@Nullable Output<List<NetworkRefArgs>> networkRefs) {
             $.networkRefs = networkRefs;
             return this;
         }
 
+        /**
+         * @param networkRefs The names of the private networks that this service needs to be part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRefs(List<NetworkRefArgs> networkRefs) {
             return networkRefs(Output.of(networkRefs));
         }
 
+        /**
+         * @param networkRefs The names of the private networks that this service needs to be part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRefs(NetworkRefArgs... networkRefs) {
             return networkRefs(List.of(networkRefs));
         }
 
+        /**
+         * @param osType The operation system required by the code in service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Output<Either<String,OperatingSystemType>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The operation system required by the code in service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OperatingSystemType> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType The operation system required by the code in service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType The operation system required by the code in service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OperatingSystemType osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param replicaCount The number of replicas of the service to create. Defaults to 1 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             $.replicaCount = replicaCount;
             return this;
         }
 
+        /**
+         * @param replicaCount The number of replicas of the service to create. Defaults to 1 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(Integer replicaCount) {
             return replicaCount(Output.of(replicaCount));
         }

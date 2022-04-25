@@ -21,6 +21,10 @@ public final class CosmosDbSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="collectionsThroughput")
     private @Nullable Integer collectionsThroughput;
 
+    /**
+     * @return The throughput of the collections in cosmosdb database
+     * 
+     */
     public Optional<Integer> collectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);
     }
@@ -49,6 +53,12 @@ public final class CosmosDbSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new CosmosDbSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collectionsThroughput The throughput of the collections in cosmosdb database
+         * 
+         * @return builder
+         * 
+         */
         public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
             $.collectionsThroughput = collectionsThroughput;
             return this;

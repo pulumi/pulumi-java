@@ -23,6 +23,10 @@ public final class GkeClusterConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="namespacedGkeDeploymentTarget", required=true)
     private NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
+    /**
+     * @return Optional. A target for the deployment.
+     * 
+     */
     public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }
@@ -51,6 +55,12 @@ public final class GkeClusterConfigResponse extends com.pulumi.resources.InvokeA
             $ = new GkeClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespacedGkeDeploymentTarget Optional. A target for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
             $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;

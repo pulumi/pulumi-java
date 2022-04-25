@@ -24,6 +24,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends com.pu
     @Import(name="sampler", required=true)
     private String sampler;
 
+    /**
+     * @return Sampler of distributed tracing. OFF is the default value.
+     * 
+     */
     public String sampler() {
         return this.sampler;
     }
@@ -35,6 +39,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends com.pu
     @Import(name="samplingRate", required=true)
     private Double samplingRate;
 
+    /**
+     * @return Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
+     * 
+     */
     public Double samplingRate() {
         return this.samplingRate;
     }
@@ -64,11 +72,23 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends com.pu
             $ = new GoogleCloudApigeeV1TraceSamplingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sampler Sampler of distributed tracing. OFF is the default value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampler(String sampler) {
             $.sampler = sampler;
             return this;
         }
 
+        /**
+         * @param samplingRate Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(Double samplingRate) {
             $.samplingRate = samplingRate;
             return this;

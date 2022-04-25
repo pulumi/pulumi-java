@@ -27,6 +27,10 @@ public final class DataDiskImageEncryptionArgs extends com.pulumi.resources.Reso
     @Import(name="diskEncryptionSetId")
     private @Nullable Output<String> diskEncryptionSetId;
 
+    /**
+     * @return A relative URI containing the resource ID of the disk encryption set.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -38,6 +42,10 @@ public final class DataDiskImageEncryptionArgs extends com.pulumi.resources.Reso
     @Import(name="lun", required=true)
     private Output<Integer> lun;
 
+    /**
+     * @return This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+     * 
+     */
     public Output<Integer> lun() {
         return this.lun;
     }
@@ -67,20 +75,44 @@ public final class DataDiskImageEncryptionArgs extends com.pulumi.resources.Reso
             $ = new DataDiskImageEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId A relative URI containing the resource ID of the disk encryption set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetId A relative URI containing the resource ID of the disk encryption set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
 
+        /**
+         * @param lun This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Output<Integer> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             return lun(Output.of(lun));
         }

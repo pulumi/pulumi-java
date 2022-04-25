@@ -25,6 +25,10 @@ public final class VpcAccessibleServicesResponse extends com.pulumi.resources.In
     @Import(name="allowedServices", required=true)
     private List<String> allowedServices;
 
+    /**
+     * @return The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
+     * 
+     */
     public List<String> allowedServices() {
         return this.allowedServices;
     }
@@ -36,6 +40,10 @@ public final class VpcAccessibleServicesResponse extends com.pulumi.resources.In
     @Import(name="enableRestriction", required=true)
     private Boolean enableRestriction;
 
+    /**
+     * @return Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
+     * 
+     */
     public Boolean enableRestriction() {
         return this.enableRestriction;
     }
@@ -65,15 +73,33 @@ public final class VpcAccessibleServicesResponse extends com.pulumi.resources.In
             $ = new VpcAccessibleServicesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedServices The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedServices(List<String> allowedServices) {
             $.allowedServices = allowedServices;
             return this;
         }
 
+        /**
+         * @param allowedServices The list of APIs usable within the Service Perimeter. Must be empty unless &#39;enable_restriction&#39; is True. You can specify a list of individual services, as well as include the &#39;RESTRICTED-SERVICES&#39; value, which automatically includes all of the services protected by the perimeter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedServices(String... allowedServices) {
             return allowedServices(List.of(allowedServices));
         }
 
+        /**
+         * @param enableRestriction Whether to restrict API calls within the Service Perimeter to the list of APIs specified in &#39;allowed_services&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRestriction(Boolean enableRestriction) {
             $.enableRestriction = enableRestriction;
             return this;

@@ -19,6 +19,10 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="policyAssignmentName", required=true)
     private String policyAssignmentName;
 
+    /**
+     * @return The name of the policy assignment to get.
+     * 
+     */
     public String policyAssignmentName() {
         return this.policyAssignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the policy assignment. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyAssignmentName The name of the policy assignment to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentName(String policyAssignmentName) {
             $.policyAssignmentName = policyAssignmentName;
             return this;
         }
 
+        /**
+         * @param scope The scope of the policy assignment. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

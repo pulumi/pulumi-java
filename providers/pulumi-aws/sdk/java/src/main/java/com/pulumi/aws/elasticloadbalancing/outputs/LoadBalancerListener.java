@@ -13,29 +13,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LoadBalancerListener {
     /**
-     * The port on the instance to route to
+     * @return The port on the instance to route to
      * 
      */
     private final Integer instancePort;
     /**
-     * The protocol to use to the instance. Valid
+     * @return The protocol to use to the instance. Valid
      * values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
      * 
      */
     private final String instanceProtocol;
     /**
-     * The port to listen on for the load balancer
+     * @return The port to listen on for the load balancer
      * 
      */
     private final Integer lbPort;
     /**
-     * The protocol to listen on. Valid values are `HTTP`,
+     * @return The protocol to listen on. Valid values are `HTTP`,
      * `HTTPS`, `TCP`, or `SSL`
      * 
      */
     private final String lbProtocol;
     /**
-     * The ARN of an SSL certificate you have
+     * @return The ARN of an SSL certificate you have
      * uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
      * 
      */
@@ -56,40 +56,40 @@ public final class LoadBalancerListener {
     }
 
     /**
-     * The port on the instance to route to
+     * @return The port on the instance to route to
      * 
-    */
+     */
     public Integer instancePort() {
         return this.instancePort;
     }
     /**
-     * The protocol to use to the instance. Valid
+     * @return The protocol to use to the instance. Valid
      * values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
      * 
-    */
+     */
     public String instanceProtocol() {
         return this.instanceProtocol;
     }
     /**
-     * The port to listen on for the load balancer
+     * @return The port to listen on for the load balancer
      * 
-    */
+     */
     public Integer lbPort() {
         return this.lbPort;
     }
     /**
-     * The protocol to listen on. Valid values are `HTTP`,
+     * @return The protocol to listen on. Valid values are `HTTP`,
      * `HTTPS`, `TCP`, or `SSL`
      * 
-    */
+     */
     public String lbProtocol() {
         return this.lbProtocol;
     }
     /**
-     * The ARN of an SSL certificate you have
+     * @return The ARN of an SSL certificate you have
      * uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
      * 
-    */
+     */
     public Optional<String> sslCertificateId() {
         return Optional.ofNullable(this.sslCertificateId);
     }

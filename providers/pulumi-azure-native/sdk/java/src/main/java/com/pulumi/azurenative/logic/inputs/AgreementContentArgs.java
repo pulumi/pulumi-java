@@ -28,6 +28,10 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="aS2")
     private @Nullable Output<AS2AgreementContentArgs> aS2;
 
+    /**
+     * @return The AS2 agreement content.
+     * 
+     */
     public Optional<Output<AS2AgreementContentArgs>> aS2() {
         return Optional.ofNullable(this.aS2);
     }
@@ -39,6 +43,10 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="edifact")
     private @Nullable Output<EdifactAgreementContentArgs> edifact;
 
+    /**
+     * @return The EDIFACT agreement content.
+     * 
+     */
     public Optional<Output<EdifactAgreementContentArgs>> edifact() {
         return Optional.ofNullable(this.edifact);
     }
@@ -50,6 +58,10 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="x12")
     private @Nullable Output<X12AgreementContentArgs> x12;
 
+    /**
+     * @return The X12 agreement content.
+     * 
+     */
     public Optional<Output<X12AgreementContentArgs>> x12() {
         return Optional.ofNullable(this.x12);
     }
@@ -80,29 +92,65 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
             $ = new AgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aS2 The AS2 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aS2(@Nullable Output<AS2AgreementContentArgs> aS2) {
             $.aS2 = aS2;
             return this;
         }
 
+        /**
+         * @param aS2 The AS2 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aS2(AS2AgreementContentArgs aS2) {
             return aS2(Output.of(aS2));
         }
 
+        /**
+         * @param edifact The EDIFACT agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifact(@Nullable Output<EdifactAgreementContentArgs> edifact) {
             $.edifact = edifact;
             return this;
         }
 
+        /**
+         * @param edifact The EDIFACT agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edifact(EdifactAgreementContentArgs edifact) {
             return edifact(Output.of(edifact));
         }
 
+        /**
+         * @param x12 The X12 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x12(@Nullable Output<X12AgreementContentArgs> x12) {
             $.x12 = x12;
             return this;
         }
 
+        /**
+         * @param x12 The X12 agreement content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x12(X12AgreementContentArgs x12) {
             return x12(Output.of(x12));
         }

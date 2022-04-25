@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CxPageTransitionRoute {
     /**
-     * The condition to evaluate against form parameters or session parameters.
+     * @return The condition to evaluate against form parameters or session parameters.
      * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
      */
     private final @Nullable String condition;
     /**
-     * The unique identifier of an Intent.
+     * @return The unique identifier of an Intent.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
      */
     private final @Nullable String intent;
     /**
-     * - 
+     * @return -
      * The unique identifier of this event handler.
      * 
      */
     private final @Nullable String name;
     /**
-     * The target flow to transition to.
+     * @return The target flow to transition to.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
      */
     private final @Nullable String targetFlow;
     /**
-     * The target page to transition to.
+     * @return The target page to transition to.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
      * 
      */
     private final @Nullable String targetPage;
     /**
-     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * Structure is documented below.
      * 
      */
@@ -66,50 +66,50 @@ public final class CxPageTransitionRoute {
     }
 
     /**
-     * The condition to evaluate against form parameters or session parameters.
+     * @return The condition to evaluate against form parameters or session parameters.
      * At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
-    */
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * The unique identifier of an Intent.
+     * @return The unique identifier of an Intent.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
      * 
-    */
+     */
     public Optional<String> intent() {
         return Optional.ofNullable(this.intent);
     }
     /**
-     * - 
+     * @return -
      * The unique identifier of this event handler.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The target flow to transition to.
+     * @return The target flow to transition to.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
      * 
-    */
+     */
     public Optional<String> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
     /**
-     * The target page to transition to.
+     * @return The target page to transition to.
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
      * 
-    */
+     */
     public Optional<String> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
     /**
-     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<CxPageTransitionRouteTriggerFulfillment> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }

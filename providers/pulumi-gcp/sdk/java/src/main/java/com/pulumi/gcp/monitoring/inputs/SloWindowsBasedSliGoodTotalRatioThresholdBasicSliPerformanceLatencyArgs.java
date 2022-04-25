@@ -22,6 +22,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
     @Import(name="threshold", required=true)
     private Output<String> threshold;
 
+    /**
+     * @return A duration string, e.g. 10s.
+     * Good service is defined to be the count of requests made to
+     * this service that return in no more than threshold.
+     * 
+     */
     public Output<String> threshold() {
         return this.threshold;
     }
@@ -50,11 +56,27 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
             $ = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param threshold A duration string, e.g. 10s.
+         * Good service is defined to be the count of requests made to
+         * this service that return in no more than threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<String> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold A duration string, e.g. 10s.
+         * Good service is defined to be the count of requests made to
+         * this service that return in no more than threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(String threshold) {
             return threshold(Output.of(threshold));
         }

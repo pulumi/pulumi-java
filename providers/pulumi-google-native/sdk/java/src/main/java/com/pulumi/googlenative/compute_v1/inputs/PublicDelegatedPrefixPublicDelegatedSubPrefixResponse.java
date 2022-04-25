@@ -24,6 +24,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="delegateeProject", required=true)
     private String delegateeProject;
 
+    /**
+     * @return Name of the project scoping this PublicDelegatedSubPrefix.
+     * 
+     */
     public String delegateeProject() {
         return this.delegateeProject;
     }
@@ -35,6 +39,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="ipCidrRange", required=true)
     private String ipCidrRange;
 
+    /**
+     * @return The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+     * 
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -57,6 +69,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="isAddress", required=true)
     private Boolean isAddress;
 
+    /**
+     * @return Whether the sub prefix is delegated to create Address resources in the delegatee project.
+     * 
+     */
     public Boolean isAddress() {
         return this.isAddress;
     }
@@ -68,6 +84,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the sub public delegated prefix.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -90,6 +114,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the sub public delegated prefix.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -124,36 +152,78 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
             $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegateeProject Name of the project scoping this PublicDelegatedSubPrefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegateeProject(String delegateeProject) {
             $.delegateeProject = delegateeProject;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param ipCidrRange The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param isAddress Whether the sub prefix is delegated to create Address resources in the delegatee project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAddress(Boolean isAddress) {
             $.isAddress = isAddress;
             return this;
         }
 
+        /**
+         * @param name The name of the sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param region The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param status The status of the sub public delegated prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

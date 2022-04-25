@@ -23,6 +23,10 @@ public final class MessageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The actual message text.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -34,6 +38,10 @@ public final class MessageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeStamp", required=true)
     private String timeStamp;
 
+    /**
+     * @return Time in UTC this message was provided.
+     * 
+     */
     public String timeStamp() {
         return this.timeStamp;
     }
@@ -63,11 +71,23 @@ public final class MessageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new MessageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message The actual message text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param timeStamp Time in UTC this message was provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStamp(String timeStamp) {
             $.timeStamp = timeStamp;
             return this;

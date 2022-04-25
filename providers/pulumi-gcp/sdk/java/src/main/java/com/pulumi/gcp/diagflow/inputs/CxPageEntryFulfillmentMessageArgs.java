@@ -22,6 +22,10 @@ public final class CxPageEntryFulfillmentMessageArgs extends com.pulumi.resource
     @Import(name="text")
     private @Nullable Output<CxPageEntryFulfillmentMessageTextArgs> text;
 
+    /**
+     * @return A collection of text responses.
+     * 
+     */
     public Optional<Output<CxPageEntryFulfillmentMessageTextArgs>> text() {
         return Optional.ofNullable(this.text);
     }
@@ -50,11 +54,23 @@ public final class CxPageEntryFulfillmentMessageArgs extends com.pulumi.resource
             $ = new CxPageEntryFulfillmentMessageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable Output<CxPageEntryFulfillmentMessageTextArgs> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text A collection of text responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(CxPageEntryFulfillmentMessageTextArgs text) {
             return text(Output.of(text));
         }

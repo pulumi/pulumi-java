@@ -28,6 +28,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return Script end time.
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="error")
     private @Nullable String error;
 
+    /**
+     * @return Script error stream.
+     * 
+     */
     public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
@@ -50,6 +58,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="executionMessage")
     private @Nullable String executionMessage;
 
+    /**
+     * @return Communicate script configuration errors or execution messages.
+     * 
+     */
     public Optional<String> executionMessage() {
         return Optional.ofNullable(this.executionMessage);
     }
@@ -61,6 +73,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="executionState")
     private @Nullable String executionState;
 
+    /**
+     * @return Script execution status.
+     * 
+     */
     public Optional<String> executionState() {
         return Optional.ofNullable(this.executionState);
     }
@@ -72,6 +88,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="exitCode")
     private @Nullable Integer exitCode;
 
+    /**
+     * @return Exit code returned from script execution.
+     * 
+     */
     public Optional<Integer> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
@@ -83,6 +103,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="output")
     private @Nullable String output;
 
+    /**
+     * @return Script output stream.
+     * 
+     */
     public Optional<String> output() {
         return Optional.ofNullable(this.output);
     }
@@ -94,6 +118,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Script start time.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -105,6 +133,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -140,46 +172,100 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
             $ = new VirtualMachineRunCommandInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime Script end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error Script error stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable String error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param executionMessage Communicate script configuration errors or execution messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionMessage(@Nullable String executionMessage) {
             $.executionMessage = executionMessage;
             return this;
         }
 
+        /**
+         * @param executionState Script execution status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionState(@Nullable String executionState) {
             $.executionState = executionState;
             return this;
         }
 
+        /**
+         * @param exitCode Exit code returned from script execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(@Nullable Integer exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param output Script output stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable String output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param startTime Script start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }

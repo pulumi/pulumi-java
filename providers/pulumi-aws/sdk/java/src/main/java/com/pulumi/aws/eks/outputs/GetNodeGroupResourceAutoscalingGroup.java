@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetNodeGroupResourceAutoscalingGroup {
     /**
-     * Name of the AutoScaling Group.
+     * @return Name of the AutoScaling Group.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class GetNodeGroupResourceAutoscalingGroup {
     }
 
     /**
-     * Name of the AutoScaling Group.
+     * @return Name of the AutoScaling Group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

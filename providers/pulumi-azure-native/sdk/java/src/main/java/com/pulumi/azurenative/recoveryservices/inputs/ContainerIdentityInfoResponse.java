@@ -25,6 +25,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="aadTenantId")
     private @Nullable String aadTenantId;
 
+    /**
+     * @return Protection container identity - AAD Tenant
+     * 
+     */
     public Optional<String> aadTenantId() {
         return Optional.ofNullable(this.aadTenantId);
     }
@@ -36,6 +40,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return Protection container identity - Audience
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -47,6 +55,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="servicePrincipalClientId")
     private @Nullable String servicePrincipalClientId;
 
+    /**
+     * @return Protection container identity - AAD Service Principal
+     * 
+     */
     public Optional<String> servicePrincipalClientId() {
         return Optional.ofNullable(this.servicePrincipalClientId);
     }
@@ -58,6 +70,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="uniqueName")
     private @Nullable String uniqueName;
 
+    /**
+     * @return Unique name of the container
+     * 
+     */
     public Optional<String> uniqueName() {
         return Optional.ofNullable(this.uniqueName);
     }
@@ -89,21 +105,45 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
             $ = new ContainerIdentityInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadTenantId Protection container identity - AAD Tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenantId(@Nullable String aadTenantId) {
             $.aadTenantId = aadTenantId;
             return this;
         }
 
+        /**
+         * @param audience Protection container identity - Audience
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param servicePrincipalClientId Protection container identity - AAD Service Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             $.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
+        /**
+         * @param uniqueName Unique name of the container
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueName(@Nullable String uniqueName) {
             $.uniqueName = uniqueName;
             return this;

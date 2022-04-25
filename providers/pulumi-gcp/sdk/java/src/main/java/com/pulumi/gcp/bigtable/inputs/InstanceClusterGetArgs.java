@@ -23,6 +23,10 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="clusterId", required=true)
     private Output<String> clusterId;
 
+    /**
+     * @return The ID of the Cloud Bigtable cluster.
+     * 
+     */
     public Output<String> clusterId() {
         return this.clusterId;
     }
@@ -34,6 +38,10 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -47,6 +55,12 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="numNodes")
     private @Nullable Output<Integer> numNodes;
 
+    /**
+     * @return The number of nodes in your Cloud Bigtable cluster.
+     * Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
+     * for a `DEVELOPMENT` instance.
+     * 
+     */
     public Optional<Output<Integer>> numNodes() {
         return Optional.ofNullable(this.numNodes);
     }
@@ -59,6 +73,11 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageType")
     private @Nullable Output<String> storageType;
 
+    /**
+     * @return The storage type to use. One of `&#34;SSD&#34;` or
+     * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
+     * 
+     */
     public Optional<Output<String>> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -72,6 +91,12 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="zone")
     private @Nullable Output<String> zone;
 
+    /**
+     * @return The zone to create the Cloud Bigtable cluster in. If it not
+     * specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+     * Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+     * 
+     */
     public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -104,47 +129,117 @@ public final class InstanceClusterGetArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceClusterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId The ID of the Cloud Bigtable cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId The ID of the Cloud Bigtable cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param numNodes The number of nodes in your Cloud Bigtable cluster.
+         * Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
+         * for a `DEVELOPMENT` instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
             $.numNodes = numNodes;
             return this;
         }
 
+        /**
+         * @param numNodes The number of nodes in your Cloud Bigtable cluster.
+         * Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
+         * for a `DEVELOPMENT` instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numNodes(Integer numNodes) {
             return numNodes(Output.of(numNodes));
         }
 
+        /**
+         * @param storageType The storage type to use. One of `&#34;SSD&#34;` or
+         * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable Output<String> storageType) {
             $.storageType = storageType;
             return this;
         }
 
+        /**
+         * @param storageType The storage type to use. One of `&#34;SSD&#34;` or
+         * `&#34;HDD&#34;`. Defaults to `&#34;SSD&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(String storageType) {
             return storageType(Output.of(storageType));
         }
 
+        /**
+         * @param zone The zone to create the Cloud Bigtable cluster in. If it not
+         * specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+         * Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
+        /**
+         * @param zone The zone to create the Cloud Bigtable cluster in. If it not
+         * specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
+         * Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             return zone(Output.of(zone));
         }

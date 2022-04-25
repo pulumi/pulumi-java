@@ -28,6 +28,10 @@ public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceA
     @Import(name="failOpen")
     private @Nullable Output<Boolean> failOpen;
 
+    /**
+     * @return If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
+     * 
+     */
     public Optional<Output<Boolean>> failOpen() {
         return Optional.ofNullable(this.failOpen);
     }
@@ -39,6 +43,10 @@ public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceA
     @Import(name="preSharedKeys", required=true)
     private Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
 
+    /**
+     * @return A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+     * 
+     */
     public Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys() {
         return this.preSharedKeys;
     }
@@ -68,24 +76,54 @@ public final class InterconnectMacsecArgs extends com.pulumi.resources.ResourceA
             $ = new InterconnectMacsecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failOpen If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failOpen(@Nullable Output<Boolean> failOpen) {
             $.failOpen = failOpen;
             return this;
         }
 
+        /**
+         * @param failOpen If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failOpen(Boolean failOpen) {
             return failOpen(Output.of(failOpen));
         }
 
+        /**
+         * @param preSharedKeys A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeys(Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {
             $.preSharedKeys = preSharedKeys;
             return this;
         }
 
+        /**
+         * @param preSharedKeys A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyArgs> preSharedKeys) {
             return preSharedKeys(Output.of(preSharedKeys));
         }
 
+        /**
+         * @param preSharedKeys A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preSharedKeys(InterconnectMacsecPreSharedKeyArgs... preSharedKeys) {
             return preSharedKeys(List.of(preSharedKeys));
         }

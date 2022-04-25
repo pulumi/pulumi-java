@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeGroupUpdateConfig {
     /**
-     * Desired max number of unavailable worker nodes during node group update.
+     * @return Desired max number of unavailable worker nodes during node group update.
      * 
      */
     private final @Nullable Integer maxUnavailable;
     /**
-     * Desired max percentage of unavailable worker nodes during node group update.
+     * @return Desired max percentage of unavailable worker nodes during node group update.
      * 
      */
     private final @Nullable Integer maxUnavailablePercentage;
@@ -31,16 +31,16 @@ public final class NodeGroupUpdateConfig {
     }
 
     /**
-     * Desired max number of unavailable worker nodes during node group update.
+     * @return Desired max number of unavailable worker nodes during node group update.
      * 
-    */
+     */
     public Optional<Integer> maxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
     /**
-     * Desired max percentage of unavailable worker nodes during node group update.
+     * @return Desired max percentage of unavailable worker nodes during node group update.
      * 
-    */
+     */
     public Optional<Integer> maxUnavailablePercentage() {
         return Optional.ofNullable(this.maxUnavailablePercentage);
     }

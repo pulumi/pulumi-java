@@ -13,14 +13,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout {
     /**
-     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations
+     * @return Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations
      * less than one second are represented with a 0 `seconds` field and a positive
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
      */
     private final @Nullable Integer nanos;
     /**
-     * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+     * @return Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
      * inclusive.
      * 
      */
@@ -35,19 +35,19 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
     }
 
     /**
-     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations
+     * @return Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations
      * less than one second are represented with a 0 `seconds` field and a positive
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
-    */
+     */
     public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
-     * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
+     * @return Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
      * inclusive.
      * 
-    */
+     */
     public String seconds() {
         return this.seconds;
     }

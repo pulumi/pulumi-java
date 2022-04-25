@@ -19,6 +19,10 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return The name of the connection.
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualHub.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
     @Import(name="virtualHubName", required=true)
     private String virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public String virtualHubName() {
         return this.virtualHubName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
             $ = new GetVirtualHubBgpConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;

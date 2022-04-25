@@ -24,6 +24,10 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="destinations", required=true)
     private List<String> destinations;
 
+    /**
+     * @return List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * 
+     */
     public List<String> destinations() {
         return this.destinations;
     }
@@ -35,6 +39,10 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The unique name for the routing policy.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="nextHop", required=true)
     private String nextHop;
 
+    /**
+     * @return The next hop resource id on which this routing policy is applicable to.
+     * 
+     */
     public String nextHop() {
         return this.nextHop;
     }
@@ -76,20 +88,44 @@ public final class RoutingPolicyResponse extends com.pulumi.resources.InvokeArgs
             $ = new RoutingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param name The unique name for the routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nextHop The next hop resource id on which this routing policy is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(String nextHop) {
             $.nextHop = nextHop;
             return this;

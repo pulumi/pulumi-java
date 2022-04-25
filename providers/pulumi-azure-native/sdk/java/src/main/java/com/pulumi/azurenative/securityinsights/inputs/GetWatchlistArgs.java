@@ -19,6 +19,10 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -30,6 +34,10 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="watchlistAlias", required=true)
     private String watchlistAlias;
 
+    /**
+     * @return Watchlist Alias
+     * 
+     */
     public String watchlistAlias() {
         return this.watchlistAlias;
     }
@@ -52,6 +64,10 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetWatchlistArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWatchlistArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param watchlistAlias Watchlist Alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistAlias(String watchlistAlias) {
             $.watchlistAlias = watchlistAlias;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

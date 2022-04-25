@@ -29,6 +29,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customFragment")
     private @Nullable Output<String> customFragment;
 
+    /**
+     * @return Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     * 
+     */
     public Optional<Output<String>> customFragment() {
         return Optional.ofNullable(this.customFragment);
     }
@@ -40,6 +44,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customHostname")
     private @Nullable Output<String> customHostname;
 
+    /**
+     * @return Host to redirect. Leave empty to use the incoming host as the destination host.
+     * 
+     */
     public Optional<Output<String>> customHostname() {
         return Optional.ofNullable(this.customHostname);
     }
@@ -51,6 +59,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customPath")
     private @Nullable Output<String> customPath;
 
+    /**
+     * @return The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     * 
+     */
     public Optional<Output<String>> customPath() {
         return Optional.ofNullable(this.customPath);
     }
@@ -62,6 +74,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customQueryString")
     private @Nullable Output<String> customQueryString;
 
+    /**
+     * @return The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
+     * 
+     */
     public Optional<Output<String>> customQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
@@ -73,6 +89,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="destinationProtocol")
     private @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
 
+    /**
+     * @return Protocol to use for the redirect. The default value is MatchRequest
+     * 
+     */
     public Optional<Output<Either<String,DestinationProtocol>>> destinationProtocol() {
         return Optional.ofNullable(this.destinationProtocol);
     }
@@ -91,6 +111,10 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="redirectType", required=true)
     private Output<Either<String,RedirectType>> redirectType;
 
+    /**
+     * @return The redirect type the rule will use when redirecting traffic.
+     * 
+     */
     public Output<Either<String,RedirectType>> redirectType() {
         return this.redirectType;
     }
@@ -125,55 +149,127 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
             $ = new UrlRedirectActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customFragment Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFragment(@Nullable Output<String> customFragment) {
             $.customFragment = customFragment;
             return this;
         }
 
+        /**
+         * @param customFragment Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFragment(String customFragment) {
             return customFragment(Output.of(customFragment));
         }
 
+        /**
+         * @param customHostname Host to redirect. Leave empty to use the incoming host as the destination host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostname(@Nullable Output<String> customHostname) {
             $.customHostname = customHostname;
             return this;
         }
 
+        /**
+         * @param customHostname Host to redirect. Leave empty to use the incoming host as the destination host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHostname(String customHostname) {
             return customHostname(Output.of(customHostname));
         }
 
+        /**
+         * @param customPath The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPath(@Nullable Output<String> customPath) {
             $.customPath = customPath;
             return this;
         }
 
+        /**
+         * @param customPath The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customPath(String customPath) {
             return customPath(Output.of(customPath));
         }
 
+        /**
+         * @param customQueryString The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customQueryString(@Nullable Output<String> customQueryString) {
             $.customQueryString = customQueryString;
             return this;
         }
 
+        /**
+         * @param customQueryString The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customQueryString(String customQueryString) {
             return customQueryString(Output.of(customQueryString));
         }
 
+        /**
+         * @param destinationProtocol Protocol to use for the redirect. The default value is MatchRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationProtocol(@Nullable Output<Either<String,DestinationProtocol>> destinationProtocol) {
             $.destinationProtocol = destinationProtocol;
             return this;
         }
 
+        /**
+         * @param destinationProtocol Protocol to use for the redirect. The default value is MatchRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationProtocol(Either<String,DestinationProtocol> destinationProtocol) {
             return destinationProtocol(Output.of(destinationProtocol));
         }
 
+        /**
+         * @param destinationProtocol Protocol to use for the redirect. The default value is MatchRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationProtocol(String destinationProtocol) {
             return destinationProtocol(Either.ofLeft(destinationProtocol));
         }
 
+        /**
+         * @param destinationProtocol Protocol to use for the redirect. The default value is MatchRequest
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationProtocol(DestinationProtocol destinationProtocol) {
             return destinationProtocol(Either.ofRight(destinationProtocol));
         }
@@ -187,19 +283,43 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(Output<Either<String,RedirectType>> redirectType) {
             $.redirectType = redirectType;
             return this;
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(Either<String,RedirectType> redirectType) {
             return redirectType(Output.of(redirectType));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(String redirectType) {
             return redirectType(Either.ofLeft(redirectType));
         }
 
+        /**
+         * @param redirectType The redirect type the rule will use when redirecting traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(RedirectType redirectType) {
             return redirectType(Either.ofRight(redirectType));
         }

@@ -27,6 +27,10 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="linkProviderName")
     private @Nullable Output<String> linkProviderName;
 
+    /**
+     * @return Name of the link provider.
+     * 
+     */
     public Optional<Output<String>> linkProviderName() {
         return Optional.ofNullable(this.linkProviderName);
     }
@@ -38,6 +42,10 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="linkSpeedInMbps")
     private @Nullable Output<Integer> linkSpeedInMbps;
 
+    /**
+     * @return Link speed.
+     * 
+     */
     public Optional<Output<Integer>> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
@@ -67,20 +75,44 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
             $ = new VpnLinkProviderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkProviderName Name of the link provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkProviderName(@Nullable Output<String> linkProviderName) {
             $.linkProviderName = linkProviderName;
             return this;
         }
 
+        /**
+         * @param linkProviderName Name of the link provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkProviderName(String linkProviderName) {
             return linkProviderName(Output.of(linkProviderName));
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
             $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
 
+        /**
+         * @param linkSpeedInMbps Link speed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkSpeedInMbps(Integer linkSpeedInMbps) {
             return linkSpeedInMbps(Output.of(linkSpeedInMbps));
         }

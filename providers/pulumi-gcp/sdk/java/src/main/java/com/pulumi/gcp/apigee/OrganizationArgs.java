@@ -22,6 +22,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion")
     private @Nullable Output<String> analyticsRegion;
 
+    /**
+     * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     */
     public Optional<Output<String>> analyticsRegion() {
         return Optional.ofNullable(this.analyticsRegion);
     }
@@ -35,6 +39,12 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
     private @Nullable Output<String> authorizedNetwork;
 
+    /**
+     * @return Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+     * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+     * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;.
+     * 
+     */
     public Optional<Output<String>> authorizedNetwork() {
         return Optional.ofNullable(this.authorizedNetwork);
     }
@@ -46,6 +56,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the Apigee organization.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +71,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the Apigee organization.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -68,6 +86,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return The project ID associated with the Apigee organization.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -82,6 +104,13 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
     private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
+    /**
+     * @return Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+     * Update is not allowed after the organization is created.
+     * If not specified, a Google-Managed encryption key will be used.
+     * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+     * 
+     */
     public Optional<Output<String>> runtimeDatabaseEncryptionKeyName() {
         return Optional.ofNullable(this.runtimeDatabaseEncryptionKeyName);
     }
@@ -95,6 +124,12 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType")
     private @Nullable Output<String> runtimeType;
 
+    /**
+     * @return Runtime type of the Apigee organization based on the Apigee subscription purchased.
+     * Default value is `CLOUD`.
+     * Possible values are `CLOUD` and `HYBRID`.
+     * 
+     */
     public Optional<Output<String>> runtimeType() {
         return Optional.ofNullable(this.runtimeType);
     }
@@ -129,65 +164,163 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyticsRegion Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticsRegion(@Nullable Output<String> analyticsRegion) {
             $.analyticsRegion = analyticsRegion;
             return this;
         }
 
+        /**
+         * @param analyticsRegion Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticsRegion(String analyticsRegion) {
             return analyticsRegion(Output.of(analyticsRegion));
         }
 
+        /**
+         * @param authorizedNetwork Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+         * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+         * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             $.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
+        /**
+         * @param authorizedNetwork Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
+         * See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+         * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedNetwork(String authorizedNetwork) {
             return authorizedNetwork(Output.of(authorizedNetwork));
         }
 
+        /**
+         * @param description Description of the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param projectId The project ID associated with the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId The project ID associated with the Apigee organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
+        /**
+         * @param runtimeDatabaseEncryptionKeyName Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+         * Update is not allowed after the organization is created.
+         * If not specified, a Google-Managed encryption key will be used.
+         * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
             $.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
+        /**
+         * @param runtimeDatabaseEncryptionKeyName Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
+         * Update is not allowed after the organization is created.
+         * If not specified, a Google-Managed encryption key will be used.
+         * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
             return runtimeDatabaseEncryptionKeyName(Output.of(runtimeDatabaseEncryptionKeyName));
         }
 
+        /**
+         * @param runtimeType Runtime type of the Apigee organization based on the Apigee subscription purchased.
+         * Default value is `CLOUD`.
+         * Possible values are `CLOUD` and `HYBRID`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
             $.runtimeType = runtimeType;
             return this;
         }
 
+        /**
+         * @param runtimeType Runtime type of the Apigee organization based on the Apigee subscription purchased.
+         * Default value is `CLOUD`.
+         * Possible values are `CLOUD` and `HYBRID`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeType(String runtimeType) {
             return runtimeType(Output.of(runtimeType));
         }

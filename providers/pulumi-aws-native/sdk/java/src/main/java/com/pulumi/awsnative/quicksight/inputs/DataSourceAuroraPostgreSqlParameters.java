@@ -24,6 +24,10 @@ public final class DataSourceAuroraPostgreSqlParameters extends com.pulumi.resou
     @Import(name="database", required=true)
     private String database;
 
+    /**
+     * @return &lt;p&gt;Database.&lt;/p&gt;
+     * 
+     */
     public String database() {
         return this.database;
     }
@@ -35,6 +39,10 @@ public final class DataSourceAuroraPostgreSqlParameters extends com.pulumi.resou
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return &lt;p&gt;Host.&lt;/p&gt;
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -46,6 +54,10 @@ public final class DataSourceAuroraPostgreSqlParameters extends com.pulumi.resou
     @Import(name="port", required=true)
     private Double port;
 
+    /**
+     * @return &lt;p&gt;Port.&lt;/p&gt;
+     * 
+     */
     public Double port() {
         return this.port;
     }
@@ -76,16 +88,34 @@ public final class DataSourceAuroraPostgreSqlParameters extends com.pulumi.resou
             $ = new DataSourceAuroraPostgreSqlParameters(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database &lt;p&gt;Database.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param host &lt;p&gt;Host.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param port &lt;p&gt;Port.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Double port) {
             $.port = port;
             return this;

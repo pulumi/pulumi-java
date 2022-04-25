@@ -27,6 +27,10 @@ public final class MetricRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricCosts")
     private @Nullable Output<Map<String,String>> metricCosts;
 
+    /**
+     * @return Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metricCosts() {
         return Optional.ofNullable(this.metricCosts);
     }
@@ -38,6 +42,10 @@ public final class MetricRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Selects the methods to which this rule applies. Refer to selector for syntax details.
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -67,20 +75,44 @@ public final class MetricRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MetricRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metricCosts Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricCosts(@Nullable Output<Map<String,String>> metricCosts) {
             $.metricCosts = metricCosts;
             return this;
         }
 
+        /**
+         * @param metricCosts Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricCosts(Map<String,String> metricCosts) {
             return metricCosts(Output.of(metricCosts));
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selects the methods to which this rule applies. Refer to selector for syntax details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }

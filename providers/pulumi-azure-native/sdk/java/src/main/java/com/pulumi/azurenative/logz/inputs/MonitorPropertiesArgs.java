@@ -39,6 +39,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="marketplaceSubscriptionStatus")
     private @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
+    /**
+     * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * 
+     */
     public Optional<Output<Either<String,MarketplaceSubscriptionStatus>>> marketplaceSubscriptionStatus() {
         return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
@@ -50,6 +54,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitoringStatus")
     private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
+    /**
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,MonitoringStatus>>> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -105,36 +113,84 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             return logzOrganizationProperties(Output.of(logzOrganizationProperties));
         }
 
+        /**
+         * @param marketplaceSubscriptionStatus Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceSubscriptionStatus(@Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
             $.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
+        /**
+         * @param marketplaceSubscriptionStatus Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceSubscriptionStatus(Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
             return marketplaceSubscriptionStatus(Output.of(marketplaceSubscriptionStatus));
         }
 
+        /**
+         * @param marketplaceSubscriptionStatus Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceSubscriptionStatus(String marketplaceSubscriptionStatus) {
             return marketplaceSubscriptionStatus(Either.ofLeft(marketplaceSubscriptionStatus));
         }
 
+        /**
+         * @param marketplaceSubscriptionStatus Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceSubscriptionStatus(MarketplaceSubscriptionStatus marketplaceSubscriptionStatus) {
             return marketplaceSubscriptionStatus(Either.ofRight(marketplaceSubscriptionStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(String monitoringStatus) {
             return monitoringStatus(Either.ofLeft(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             return monitoringStatus(Either.ofRight(monitoringStatus));
         }

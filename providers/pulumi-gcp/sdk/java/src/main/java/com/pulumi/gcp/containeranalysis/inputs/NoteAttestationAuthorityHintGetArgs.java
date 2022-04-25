@@ -21,6 +21,11 @@ public final class NoteAttestationAuthorityHintGetArgs extends com.pulumi.resour
     @Import(name="humanReadableName", required=true)
     private Output<String> humanReadableName;
 
+    /**
+     * @return The human readable name of this Attestation Authority, for
+     * example &#34;qa&#34;.
+     * 
+     */
     public Output<String> humanReadableName() {
         return this.humanReadableName;
     }
@@ -49,11 +54,25 @@ public final class NoteAttestationAuthorityHintGetArgs extends com.pulumi.resour
             $ = new NoteAttestationAuthorityHintGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param humanReadableName The human readable name of this Attestation Authority, for
+         * example &#34;qa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanReadableName(Output<String> humanReadableName) {
             $.humanReadableName = humanReadableName;
             return this;
         }
 
+        /**
+         * @param humanReadableName The human readable name of this Attestation Authority, for
+         * example &#34;qa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanReadableName(String humanReadableName) {
             return humanReadableName(Output.of(humanReadableName));
         }

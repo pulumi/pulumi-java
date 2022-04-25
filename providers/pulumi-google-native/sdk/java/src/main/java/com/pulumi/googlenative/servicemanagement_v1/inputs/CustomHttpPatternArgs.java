@@ -26,6 +26,10 @@ public final class CustomHttpPatternArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The name of this custom HTTP verb.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -37,6 +41,10 @@ public final class CustomHttpPatternArgs extends com.pulumi.resources.ResourceAr
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path matched by this custom verb.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -66,20 +74,44 @@ public final class CustomHttpPatternArgs extends com.pulumi.resources.ResourceAr
             $ = new CustomHttpPatternArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The name of this custom HTTP verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The name of this custom HTTP verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param path The path matched by this custom verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path matched by this custom verb.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

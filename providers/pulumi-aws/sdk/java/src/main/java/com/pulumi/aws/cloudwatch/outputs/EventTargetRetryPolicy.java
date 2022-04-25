@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EventTargetRetryPolicy {
     /**
-     * The age in seconds to continue to make retry attempts.
+     * @return The age in seconds to continue to make retry attempts.
      * 
      */
     private final @Nullable Integer maximumEventAgeInSeconds;
     /**
-     * maximum number of retry attempts to make before the request fails
+     * @return maximum number of retry attempts to make before the request fails
      * 
      */
     private final @Nullable Integer maximumRetryAttempts;
@@ -31,16 +31,16 @@ public final class EventTargetRetryPolicy {
     }
 
     /**
-     * The age in seconds to continue to make retry attempts.
+     * @return The age in seconds to continue to make retry attempts.
      * 
-    */
+     */
     public Optional<Integer> maximumEventAgeInSeconds() {
         return Optional.ofNullable(this.maximumEventAgeInSeconds);
     }
     /**
-     * maximum number of retry attempts to make before the request fails
+     * @return maximum number of retry attempts to make before the request fails
      * 
-    */
+     */
     public Optional<Integer> maximumRetryAttempts() {
         return Optional.ofNullable(this.maximumRetryAttempts);
     }

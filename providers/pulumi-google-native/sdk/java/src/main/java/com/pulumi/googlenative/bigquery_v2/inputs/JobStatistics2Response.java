@@ -35,6 +35,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="biEngineStatistics", required=true)
     private BiEngineStatisticsResponse biEngineStatistics;
 
+    /**
+     * @return BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+     * 
+     */
     public BiEngineStatisticsResponse biEngineStatistics() {
         return this.biEngineStatistics;
     }
@@ -46,6 +50,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="billingTier", required=true)
     private Integer billingTier;
 
+    /**
+     * @return Billing tier for the job.
+     * 
+     */
     public Integer billingTier() {
         return this.billingTier;
     }
@@ -57,6 +65,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="cacheHit", required=true)
     private Boolean cacheHit;
 
+    /**
+     * @return Whether the query result was fetched from the query cache.
+     * 
+     */
     public Boolean cacheHit() {
         return this.cacheHit;
     }
@@ -68,6 +80,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlAffectedRowAccessPolicyCount", required=true)
     private String ddlAffectedRowAccessPolicyCount;
 
+    /**
+     * @return [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
+     * 
+     */
     public String ddlAffectedRowAccessPolicyCount() {
         return this.ddlAffectedRowAccessPolicyCount;
     }
@@ -79,6 +95,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlDestinationTable", required=true)
     private TableReferenceResponse ddlDestinationTable;
 
+    /**
+     * @return The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
+     * 
+     */
     public TableReferenceResponse ddlDestinationTable() {
         return this.ddlDestinationTable;
     }
@@ -90,6 +110,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlOperationPerformed", required=true)
     private String ddlOperationPerformed;
 
+    /**
+     * @return The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
+     * 
+     */
     public String ddlOperationPerformed() {
         return this.ddlOperationPerformed;
     }
@@ -101,6 +125,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlTargetDataset", required=true)
     private DatasetReferenceResponse ddlTargetDataset;
 
+    /**
+     * @return The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+     * 
+     */
     public DatasetReferenceResponse ddlTargetDataset() {
         return this.ddlTargetDataset;
     }
@@ -112,6 +140,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlTargetRoutine", required=true)
     private RoutineReferenceResponse ddlTargetRoutine;
 
+    /**
+     * @return The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+     * 
+     */
     public RoutineReferenceResponse ddlTargetRoutine() {
         return this.ddlTargetRoutine;
     }
@@ -123,6 +155,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlTargetRowAccessPolicy", required=true)
     private RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy;
 
+    /**
+     * @return [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
+     * 
+     */
     public RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy() {
         return this.ddlTargetRowAccessPolicy;
     }
@@ -134,6 +170,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="ddlTargetTable", required=true)
     private TableReferenceResponse ddlTargetTable;
 
+    /**
+     * @return The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
+     * 
+     */
     public TableReferenceResponse ddlTargetTable() {
         return this.ddlTargetTable;
     }
@@ -145,6 +185,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="dmlStats", required=true)
     private DmlStatisticsResponse dmlStats;
 
+    /**
+     * @return Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
+     * 
+     */
     public DmlStatisticsResponse dmlStats() {
         return this.dmlStats;
     }
@@ -156,6 +200,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="estimatedBytesProcessed", required=true)
     private String estimatedBytesProcessed;
 
+    /**
+     * @return The original estimate of bytes processed for the job.
+     * 
+     */
     public String estimatedBytesProcessed() {
         return this.estimatedBytesProcessed;
     }
@@ -167,6 +215,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="mlStatistics", required=true)
     private MlStatisticsResponse mlStatistics;
 
+    /**
+     * @return Statistics of a BigQuery ML training job.
+     * 
+     */
     public MlStatisticsResponse mlStatistics() {
         return this.mlStatistics;
     }
@@ -178,6 +230,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="modelTraining", required=true)
     private BigQueryModelTrainingResponse modelTraining;
 
+    /**
+     * @return [Output-only, Beta] Information about create model query job progress.
+     * 
+     */
     public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
     }
@@ -189,6 +245,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="numDmlAffectedRows", required=true)
     private String numDmlAffectedRows;
 
+    /**
+     * @return The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
+     * 
+     */
     public String numDmlAffectedRows() {
         return this.numDmlAffectedRows;
     }
@@ -200,6 +260,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="queryPlan", required=true)
     private List<ExplainQueryStageResponse> queryPlan;
 
+    /**
+     * @return Describes execution plan for the query.
+     * 
+     */
     public List<ExplainQueryStageResponse> queryPlan() {
         return this.queryPlan;
     }
@@ -211,6 +275,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="referencedRoutines", required=true)
     private List<RoutineReferenceResponse> referencedRoutines;
 
+    /**
+     * @return Referenced routines (persistent user-defined functions and stored procedures) for the job.
+     * 
+     */
     public List<RoutineReferenceResponse> referencedRoutines() {
         return this.referencedRoutines;
     }
@@ -222,6 +290,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="referencedTables", required=true)
     private List<TableReferenceResponse> referencedTables;
 
+    /**
+     * @return Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
+     * 
+     */
     public List<TableReferenceResponse> referencedTables() {
         return this.referencedTables;
     }
@@ -233,6 +305,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="reservationUsage", required=true)
     private List<JobStatistics2ReservationUsageItemResponse> reservationUsage;
 
+    /**
+     * @return Job resource usage breakdown by reservation.
+     * 
+     */
     public List<JobStatistics2ReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
@@ -244,6 +320,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="schema", required=true)
     private TableSchemaResponse schema;
 
+    /**
+     * @return The schema of the results. Present only for successful dry run of non-legacy SQL queries.
+     * 
+     */
     public TableSchemaResponse schema() {
         return this.schema;
     }
@@ -255,6 +335,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="statementType", required=true)
     private String statementType;
 
+    /**
+     * @return The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
+     * 
+     */
     public String statementType() {
         return this.statementType;
     }
@@ -266,6 +350,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="timeline", required=true)
     private List<QueryTimelineSampleResponse> timeline;
 
+    /**
+     * @return [Beta] Describes a timeline of job execution.
+     * 
+     */
     public List<QueryTimelineSampleResponse> timeline() {
         return this.timeline;
     }
@@ -277,6 +365,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="totalBytesBilled", required=true)
     private String totalBytesBilled;
 
+    /**
+     * @return Total bytes billed for the job.
+     * 
+     */
     public String totalBytesBilled() {
         return this.totalBytesBilled;
     }
@@ -288,6 +380,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="totalBytesProcessed", required=true)
     private String totalBytesProcessed;
 
+    /**
+     * @return Total bytes processed for the job.
+     * 
+     */
     public String totalBytesProcessed() {
         return this.totalBytesProcessed;
     }
@@ -299,6 +395,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="totalBytesProcessedAccuracy", required=true)
     private String totalBytesProcessedAccuracy;
 
+    /**
+     * @return For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
+     * 
+     */
     public String totalBytesProcessedAccuracy() {
         return this.totalBytesProcessedAccuracy;
     }
@@ -310,6 +410,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="totalPartitionsProcessed", required=true)
     private String totalPartitionsProcessed;
 
+    /**
+     * @return Total number of partitions processed from all partitioned tables referenced in the job.
+     * 
+     */
     public String totalPartitionsProcessed() {
         return this.totalPartitionsProcessed;
     }
@@ -321,6 +425,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="totalSlotMs", required=true)
     private String totalSlotMs;
 
+    /**
+     * @return Slot-milliseconds for the job.
+     * 
+     */
     public String totalSlotMs() {
         return this.totalSlotMs;
     }
@@ -332,6 +440,10 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
     @Import(name="undeclaredQueryParameters", required=true)
     private List<QueryParameterResponse> undeclaredQueryParameters;
 
+    /**
+     * @return Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+     * 
+     */
     public List<QueryParameterResponse> undeclaredQueryParameters() {
         return this.undeclaredQueryParameters;
     }
@@ -387,166 +499,370 @@ public final class JobStatistics2Response extends com.pulumi.resources.InvokeArg
             $ = new JobStatistics2Response(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param biEngineStatistics BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder biEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
             $.biEngineStatistics = biEngineStatistics;
             return this;
         }
 
+        /**
+         * @param billingTier Billing tier for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingTier(Integer billingTier) {
             $.billingTier = billingTier;
             return this;
         }
 
+        /**
+         * @param cacheHit Whether the query result was fetched from the query cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheHit(Boolean cacheHit) {
             $.cacheHit = cacheHit;
             return this;
         }
 
+        /**
+         * @param ddlAffectedRowAccessPolicyCount [Preview] The number of row access policies affected by a DDL statement. Present only for DROP ALL ROW ACCESS POLICIES queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
             $.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
             return this;
         }
 
+        /**
+         * @param ddlDestinationTable The DDL destination table. Present only for ALTER TABLE RENAME TO queries. Note that ddl_target_table is used just for its type information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlDestinationTable(TableReferenceResponse ddlDestinationTable) {
             $.ddlDestinationTable = ddlDestinationTable;
             return this;
         }
 
+        /**
+         * @param ddlOperationPerformed The DDL operation performed, possibly dependent on the pre-existence of the DDL target. Possible values (new values might be added in the future): &#34;CREATE&#34;: The query created the DDL target. &#34;SKIP&#34;: No-op. Example cases: the query is CREATE TABLE IF NOT EXISTS while the table already exists, or the query is DROP TABLE IF EXISTS while the table does not exist. &#34;REPLACE&#34;: The query replaced the DDL target. Example case: the query is CREATE OR REPLACE TABLE, and the table already exists. &#34;DROP&#34;: The query deleted the DDL target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlOperationPerformed(String ddlOperationPerformed) {
             $.ddlOperationPerformed = ddlOperationPerformed;
             return this;
         }
 
+        /**
+         * @param ddlTargetDataset The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
             $.ddlTargetDataset = ddlTargetDataset;
             return this;
         }
 
+        /**
+         * @param ddlTargetRoutine The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
             $.ddlTargetRoutine = ddlTargetRoutine;
             return this;
         }
 
+        /**
+         * @param ddlTargetRowAccessPolicy [Preview] The DDL target row access policy. Present only for CREATE/DROP ROW ACCESS POLICY queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
             $.ddlTargetRowAccessPolicy = ddlTargetRowAccessPolicy;
             return this;
         }
 
+        /**
+         * @param ddlTargetTable The DDL target table. Present only for CREATE/DROP TABLE/VIEW and DROP ALL ROW ACCESS POLICIES queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddlTargetTable(TableReferenceResponse ddlTargetTable) {
             $.ddlTargetTable = ddlTargetTable;
             return this;
         }
 
+        /**
+         * @param dmlStats Detailed statistics for DML statements Present only for DML statements INSERT, UPDATE, DELETE or TRUNCATE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dmlStats(DmlStatisticsResponse dmlStats) {
             $.dmlStats = dmlStats;
             return this;
         }
 
+        /**
+         * @param estimatedBytesProcessed The original estimate of bytes processed for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedBytesProcessed(String estimatedBytesProcessed) {
             $.estimatedBytesProcessed = estimatedBytesProcessed;
             return this;
         }
 
+        /**
+         * @param mlStatistics Statistics of a BigQuery ML training job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlStatistics(MlStatisticsResponse mlStatistics) {
             $.mlStatistics = mlStatistics;
             return this;
         }
 
+        /**
+         * @param modelTraining [Output-only, Beta] Information about create model query job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
             $.modelTraining = modelTraining;
             return this;
         }
 
+        /**
+         * @param numDmlAffectedRows The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numDmlAffectedRows(String numDmlAffectedRows) {
             $.numDmlAffectedRows = numDmlAffectedRows;
             return this;
         }
 
+        /**
+         * @param queryPlan Describes execution plan for the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPlan(List<ExplainQueryStageResponse> queryPlan) {
             $.queryPlan = queryPlan;
             return this;
         }
 
+        /**
+         * @param queryPlan Describes execution plan for the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPlan(ExplainQueryStageResponse... queryPlan) {
             return queryPlan(List.of(queryPlan));
         }
 
+        /**
+         * @param referencedRoutines Referenced routines (persistent user-defined functions and stored procedures) for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
             $.referencedRoutines = referencedRoutines;
             return this;
         }
 
+        /**
+         * @param referencedRoutines Referenced routines (persistent user-defined functions and stored procedures) for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedRoutines(RoutineReferenceResponse... referencedRoutines) {
             return referencedRoutines(List.of(referencedRoutines));
         }
 
+        /**
+         * @param referencedTables Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedTables(List<TableReferenceResponse> referencedTables) {
             $.referencedTables = referencedTables;
             return this;
         }
 
+        /**
+         * @param referencedTables Referenced tables for the job. Queries that reference more than 50 tables will not have a complete list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referencedTables(TableReferenceResponse... referencedTables) {
             return referencedTables(List.of(referencedTables));
         }
 
+        /**
+         * @param reservationUsage Job resource usage breakdown by reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
             $.reservationUsage = reservationUsage;
             return this;
         }
 
+        /**
+         * @param reservationUsage Job resource usage breakdown by reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationUsage(JobStatistics2ReservationUsageItemResponse... reservationUsage) {
             return reservationUsage(List.of(reservationUsage));
         }
 
+        /**
+         * @param schema The schema of the results. Present only for successful dry run of non-legacy SQL queries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(TableSchemaResponse schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param statementType The type of query statement, if valid. Possible values (new values might be added in the future): &#34;SELECT&#34;: SELECT query. &#34;INSERT&#34;: INSERT query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;UPDATE&#34;: UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;DELETE&#34;: DELETE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;MERGE&#34;: MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language. &#34;ALTER_TABLE&#34;: ALTER TABLE query. &#34;ALTER_VIEW&#34;: ALTER VIEW query. &#34;ASSERT&#34;: ASSERT condition AS &#39;description&#39;. &#34;CREATE_FUNCTION&#34;: CREATE FUNCTION query. &#34;CREATE_MODEL&#34;: CREATE [OR REPLACE] MODEL ... AS SELECT ... . &#34;CREATE_PROCEDURE&#34;: CREATE PROCEDURE query. &#34;CREATE_TABLE&#34;: CREATE [OR REPLACE] TABLE without AS SELECT. &#34;CREATE_TABLE_AS_SELECT&#34;: CREATE [OR REPLACE] TABLE ... AS SELECT ... . &#34;CREATE_VIEW&#34;: CREATE [OR REPLACE] VIEW ... AS SELECT ... . &#34;DROP_FUNCTION&#34; : DROP FUNCTION query. &#34;DROP_PROCEDURE&#34;: DROP PROCEDURE query. &#34;DROP_TABLE&#34;: DROP TABLE query. &#34;DROP_VIEW&#34;: DROP VIEW query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statementType(String statementType) {
             $.statementType = statementType;
             return this;
         }
 
+        /**
+         * @param timeline [Beta] Describes a timeline of job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeline(List<QueryTimelineSampleResponse> timeline) {
             $.timeline = timeline;
             return this;
         }
 
+        /**
+         * @param timeline [Beta] Describes a timeline of job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeline(QueryTimelineSampleResponse... timeline) {
             return timeline(List.of(timeline));
         }
 
+        /**
+         * @param totalBytesBilled Total bytes billed for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesBilled(String totalBytesBilled) {
             $.totalBytesBilled = totalBytesBilled;
             return this;
         }
 
+        /**
+         * @param totalBytesProcessed Total bytes processed for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesProcessed(String totalBytesProcessed) {
             $.totalBytesProcessed = totalBytesProcessed;
             return this;
         }
 
+        /**
+         * @param totalBytesProcessedAccuracy For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown. PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
             $.totalBytesProcessedAccuracy = totalBytesProcessedAccuracy;
             return this;
         }
 
+        /**
+         * @param totalPartitionsProcessed Total number of partitions processed from all partitioned tables referenced in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalPartitionsProcessed(String totalPartitionsProcessed) {
             $.totalPartitionsProcessed = totalPartitionsProcessed;
             return this;
         }
 
+        /**
+         * @param totalSlotMs Slot-milliseconds for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSlotMs(String totalSlotMs) {
             $.totalSlotMs = totalSlotMs;
             return this;
         }
 
+        /**
+         * @param undeclaredQueryParameters Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
             $.undeclaredQueryParameters = undeclaredQueryParameters;
             return this;
         }
 
+        /**
+         * @param undeclaredQueryParameters Standard SQL only: list of undeclared query parameters detected during a dry run validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder undeclaredQueryParameters(QueryParameterResponse... undeclaredQueryParameters) {
             return undeclaredQueryParameters(List.of(undeclaredQueryParameters));
         }

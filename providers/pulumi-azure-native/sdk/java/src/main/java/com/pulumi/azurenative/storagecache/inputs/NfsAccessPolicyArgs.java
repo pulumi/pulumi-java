@@ -26,6 +26,10 @@ public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accessRules", required=true)
     private Output<List<NfsAccessRuleArgs>> accessRules;
 
+    /**
+     * @return The set of rules describing client accesses allowed under this policy.
+     * 
+     */
     public Output<List<NfsAccessRuleArgs>> accessRules() {
         return this.accessRules;
     }
@@ -37,6 +41,10 @@ public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name identifying this policy. Access Policy names are not case sensitive.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,24 +74,54 @@ public final class NfsAccessPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new NfsAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessRules The set of rules describing client accesses allowed under this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRules(Output<List<NfsAccessRuleArgs>> accessRules) {
             $.accessRules = accessRules;
             return this;
         }
 
+        /**
+         * @param accessRules The set of rules describing client accesses allowed under this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRules(List<NfsAccessRuleArgs> accessRules) {
             return accessRules(Output.of(accessRules));
         }
 
+        /**
+         * @param accessRules The set of rules describing client accesses allowed under this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessRules(NfsAccessRuleArgs... accessRules) {
             return accessRules(List.of(accessRules));
         }
 
+        /**
+         * @param name Name identifying this policy. Access Policy names are not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name identifying this policy. Access Policy names are not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -32,6 +32,10 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the scope you&#39;re creating.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +47,10 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamArn")
     private @Nullable Output<String> ipamArn;
 
+    /**
+     * @return The ARN of the IPAM for which you&#39;re creating this scope.
+     * 
+     */
     public Optional<Output<String>> ipamArn() {
         return Optional.ofNullable(this.ipamArn);
     }
@@ -54,6 +62,10 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipamId")
     private @Nullable Output<String> ipamId;
 
+    /**
+     * @return The ID of the IPAM for which you&#39;re creating this scope.
+     * 
+     */
     public Optional<Output<String>> ipamId() {
         return Optional.ofNullable(this.ipamId);
     }
@@ -72,6 +84,10 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDefault")
     private @Nullable Output<Boolean> isDefault;
 
+    /**
+     * @return Defines if the scope is the default scope or not.
+     * 
+     */
     public Optional<Output<Boolean>> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -83,6 +99,10 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolCount")
     private @Nullable Output<Integer> poolCount;
 
+    /**
+     * @return Count of pools under this scope
+     * 
+     */
     public Optional<Output<Integer>> poolCount() {
         return Optional.ofNullable(this.poolCount);
     }
@@ -142,29 +162,65 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description A description for the scope you&#39;re creating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the scope you&#39;re creating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipamArn The ARN of the IPAM for which you&#39;re creating this scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamArn(@Nullable Output<String> ipamArn) {
             $.ipamArn = ipamArn;
             return this;
         }
 
+        /**
+         * @param ipamArn The ARN of the IPAM for which you&#39;re creating this scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamArn(String ipamArn) {
             return ipamArn(Output.of(ipamArn));
         }
 
+        /**
+         * @param ipamId The ID of the IPAM for which you&#39;re creating this scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamId(@Nullable Output<String> ipamId) {
             $.ipamId = ipamId;
             return this;
         }
 
+        /**
+         * @param ipamId The ID of the IPAM for which you&#39;re creating this scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamId(String ipamId) {
             return ipamId(Output.of(ipamId));
         }
@@ -178,20 +234,44 @@ public final class VpcIpamScopeState extends com.pulumi.resources.ResourceArgs {
             return ipamScopeType(Output.of(ipamScopeType));
         }
 
+        /**
+         * @param isDefault Defines if the scope is the default scope or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param isDefault Defines if the scope is the default scope or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Boolean isDefault) {
             return isDefault(Output.of(isDefault));
         }
 
+        /**
+         * @param poolCount Count of pools under this scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolCount(@Nullable Output<Integer> poolCount) {
             $.poolCount = poolCount;
             return this;
         }
 
+        /**
+         * @param poolCount Count of pools under this scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolCount(Integer poolCount) {
             return poolCount(Output.of(poolCount));
         }

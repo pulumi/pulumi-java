@@ -28,6 +28,10 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="localObjectReference")
     private @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
+    /**
+     * @return This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+     * 
+     */
     public Optional<Output<LocalObjectReferenceArgs>> localObjectReference() {
         return Optional.ofNullable(this.localObjectReference);
     }
@@ -39,6 +43,10 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The ConfigMap to select from.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
+    /**
+     * @return (Optional) Specify whether the ConfigMap must be defined
+     * 
+     */
     public Optional<Output<Boolean>> optional() {
         return Optional.ofNullable(this.optional);
     }
@@ -80,29 +92,65 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
             $ = new ConfigMapEnvSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localObjectReference This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
             $.localObjectReference = localObjectReference;
             return this;
         }
 
+        /**
+         * @param localObjectReference This field should not be used directly as it is meant to be inlined directly into the message. Use the &#34;name&#34; field instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localObjectReference(LocalObjectReferenceArgs localObjectReference) {
             return localObjectReference(Output.of(localObjectReference));
         }
 
+        /**
+         * @param name The ConfigMap to select from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The ConfigMap to select from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param optional (Optional) Specify whether the ConfigMap must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(@Nullable Output<Boolean> optional) {
             $.optional = optional;
             return this;
         }
 
+        /**
+         * @param optional (Optional) Specify whether the ConfigMap must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             return optional(Output.of(optional));
         }

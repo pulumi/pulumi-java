@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument {
     /**
-     * The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
     }
 
     /**
-     * The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

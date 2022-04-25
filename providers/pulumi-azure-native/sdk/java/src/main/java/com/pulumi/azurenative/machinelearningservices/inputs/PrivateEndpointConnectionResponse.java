@@ -31,6 +31,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Specifies the resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -42,6 +46,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="identity")
     private @Nullable IdentityResponse identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -53,6 +61,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -64,6 +76,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Specifies the name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -75,6 +91,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return The resource of private end point.
+     * 
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -86,6 +106,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateLinkServiceConnectionState", required=true)
     private PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of information about the state of the connection between service consumer and provider.
+     * 
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
@@ -97,6 +121,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the private endpoint connection resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -108,6 +136,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="sku")
     private @Nullable SkuResponse sku;
 
+    /**
+     * @return The sku of the workspace.
+     * 
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -119,6 +151,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="systemData", required=true)
     private SystemDataResponse systemData;
 
+    /**
+     * @return Read only system data
+     * 
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
@@ -130,6 +166,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -141,6 +181,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -179,56 +223,122 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
             $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Specifies the resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable IdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateEndpoint The resource of private end point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the private endpoint connection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sku The sku of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable SkuResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param systemData Read only system data
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(SystemDataResponse systemData) {
             $.systemData = systemData;
             return this;
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

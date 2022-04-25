@@ -26,6 +26,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return Number of masters (VMs) to host docker containers. The default value is 3.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -37,6 +41,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Unique name of the master pool profile in the context of the subscription and resource group.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -59,6 +71,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
     @Import(name="subnetCidr")
     private @Nullable String subnetCidr;
 
+    /**
+     * @return Subnet CIDR for the peering.
+     * 
+     */
     public Optional<String> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
@@ -70,6 +86,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
     @Import(name="vmSize", required=true)
     private String vmSize;
 
+    /**
+     * @return Size of agent VMs.
+     * 
+     */
     public String vmSize() {
         return this.vmSize;
     }
@@ -102,26 +122,56 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
             $ = new OpenShiftManagedClusterMasterPoolProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of masters (VMs) to host docker containers. The default value is 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param name Unique name of the master pool profile in the context of the subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param subnetCidr Subnet CIDR for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetCidr(@Nullable String subnetCidr) {
             $.subnetCidr = subnetCidr;
             return this;
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             $.vmSize = vmSize;
             return this;

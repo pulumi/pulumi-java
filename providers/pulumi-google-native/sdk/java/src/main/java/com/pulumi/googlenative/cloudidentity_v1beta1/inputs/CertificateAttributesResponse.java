@@ -24,6 +24,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="certificateTemplate", required=true)
     private CertificateTemplateResponse certificateTemplate;
 
+    /**
+     * @return The X.509 extension for CertificateTemplate.
+     * 
+     */
     public CertificateTemplateResponse certificateTemplate() {
         return this.certificateTemplate;
     }
@@ -35,6 +39,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="fingerprint", required=true)
     private String fingerprint;
 
+    /**
+     * @return The encoded certificate fingerprint.
+     * 
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
@@ -46,6 +54,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return The name of the issuer of this certificate.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -57,6 +69,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return Serial number of the certificate, Example: &#34;123456789&#34;.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -68,6 +84,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return The subject name of this certificate.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -79,6 +99,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return The certificate thumbprint.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -90,6 +114,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="validationState", required=true)
     private String validationState;
 
+    /**
+     * @return Validation state of this certificate.
+     * 
+     */
     public String validationState() {
         return this.validationState;
     }
@@ -101,6 +129,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="validityExpirationTime", required=true)
     private String validityExpirationTime;
 
+    /**
+     * @return Certificate not valid at or after this timestamp.
+     * 
+     */
     public String validityExpirationTime() {
         return this.validityExpirationTime;
     }
@@ -112,6 +144,10 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     @Import(name="validityStartTime", required=true)
     private String validityStartTime;
 
+    /**
+     * @return Certificate not valid before this timestamp.
+     * 
+     */
     public String validityStartTime() {
         return this.validityStartTime;
     }
@@ -148,46 +184,100 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
             $ = new CertificateAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateTemplate The X.509 extension for CertificateTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTemplate(CertificateTemplateResponse certificateTemplate) {
             $.certificateTemplate = certificateTemplate;
             return this;
         }
 
+        /**
+         * @param fingerprint The encoded certificate fingerprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param issuer The name of the issuer of this certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param serialNumber Serial number of the certificate, Example: &#34;123456789&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param subject The subject name of this certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param thumbprint The certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param validationState Validation state of this certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationState(String validationState) {
             $.validationState = validationState;
             return this;
         }
 
+        /**
+         * @param validityExpirationTime Certificate not valid at or after this timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityExpirationTime(String validityExpirationTime) {
             $.validityExpirationTime = validityExpirationTime;
             return this;
         }
 
+        /**
+         * @param validityStartTime Certificate not valid before this timestamp.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validityStartTime(String validityStartTime) {
             $.validityStartTime = validityStartTime;
             return this;

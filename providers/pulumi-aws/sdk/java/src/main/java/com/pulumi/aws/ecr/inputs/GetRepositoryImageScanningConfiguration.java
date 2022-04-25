@@ -19,6 +19,10 @@ public final class GetRepositoryImageScanningConfiguration extends com.pulumi.re
     @Import(name="scanOnPush", required=true)
     private Boolean scanOnPush;
 
+    /**
+     * @return Indicates whether images are scanned after being pushed to the repository.
+     * 
+     */
     public Boolean scanOnPush() {
         return this.scanOnPush;
     }
@@ -47,6 +51,12 @@ public final class GetRepositoryImageScanningConfiguration extends com.pulumi.re
             $ = new GetRepositoryImageScanningConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scanOnPush Indicates whether images are scanned after being pushed to the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanOnPush(Boolean scanOnPush) {
             $.scanOnPush = scanOnPush;
             return this;

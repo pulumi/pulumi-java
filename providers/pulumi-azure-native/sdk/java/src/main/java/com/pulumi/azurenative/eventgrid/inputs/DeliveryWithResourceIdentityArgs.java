@@ -35,6 +35,11 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
     @Import(name="destination")
     private @Nullable Output<Object> destination;
 
+    /**
+     * @return Information about the destination where events have to be delivered for the event subscription.
+     * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+     * 
+     */
     public Optional<Output<Object>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -46,6 +51,10 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
     @Import(name="identity")
     private @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
+    /**
+     * @return The identity to use when delivering events.
+     * 
+     */
     public Optional<Output<EventSubscriptionIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -75,20 +84,46 @@ public final class DeliveryWithResourceIdentityArgs extends com.pulumi.resources
             $ = new DeliveryWithResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<Object> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Information about the destination where events have to be delivered for the event subscription.
+         * Uses Azure Event Grid&#39;s identity to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Object destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param identity The identity to use when delivering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity to use when delivering events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EventSubscriptionIdentityArgs identity) {
             return identity(Output.of(identity));
         }

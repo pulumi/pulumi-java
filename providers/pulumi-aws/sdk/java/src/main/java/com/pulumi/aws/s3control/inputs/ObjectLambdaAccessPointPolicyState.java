@@ -30,6 +30,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="hasPublicAccessPolicy")
     private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
+    /**
+     * @return Indicates whether this access point currently has a policy that allows public access.
+     * 
+     */
     public Optional<Output<Boolean>> hasPublicAccessPolicy() {
         return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
@@ -41,6 +45,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Object Lambda Access Point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return The Object Lambda Access Point resource policy document.
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -92,29 +104,65 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
             return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
 
+        /**
+         * @param name The name of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Object Lambda Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy The Object Lambda Access Point resource policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The Object Lambda Access Point resource policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

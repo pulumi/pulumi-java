@@ -24,6 +24,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
     private @Nullable Output<ContainerImageArgs> containerImage;
 
+    /**
+     * @return Use a container image to start the notebook instance.
+     * 
+     */
     public Optional<Output<ContainerImageArgs>> containerImage() {
         return Optional.ofNullable(this.containerImage);
     }
@@ -35,6 +39,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief description of this environment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of this environment for the UI.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -71,6 +83,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postStartupScript")
     private @Nullable Output<String> postStartupScript;
 
+    /**
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
+     * 
+     */
     public Optional<Output<String>> postStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }
@@ -89,6 +105,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
     private @Nullable Output<VmImageArgs> vmImage;
 
+    /**
+     * @return Use a Compute Engine VM image to start the notebook instance.
+     * 
+     */
     public Optional<Output<VmImageArgs>> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }
@@ -124,29 +144,65 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(@Nullable Output<ContainerImageArgs> containerImage) {
             $.containerImage = containerImage;
             return this;
         }
 
+        /**
+         * @param containerImage Use a container image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImage(ContainerImageArgs containerImage) {
             return containerImage(Output.of(containerImage));
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief description of this environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name of this environment for the UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of this environment for the UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -169,11 +225,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
             $.postStartupScript = postStartupScript;
             return this;
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `&#34;gs://path-to-file/file-name&#34;`
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(String postStartupScript) {
             return postStartupScript(Output.of(postStartupScript));
         }
@@ -187,11 +255,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(@Nullable Output<VmImageArgs> vmImage) {
             $.vmImage = vmImage;
             return this;
         }
 
+        /**
+         * @param vmImage Use a Compute Engine VM image to start the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmImage(VmImageArgs vmImage) {
             return vmImage(Output.of(vmImage));
         }

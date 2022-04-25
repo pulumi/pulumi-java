@@ -28,6 +28,10 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="counterSets", required=true)
     private Output<List<MetricCounterSetArgs>> counterSets;
 
+    /**
+     * @return Host name for the IoT hub associated to the device.
+     * 
+     */
     public Output<List<MetricCounterSetArgs>> counterSets() {
         return this.counterSets;
     }
@@ -39,6 +43,10 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="mdmAccount")
     private @Nullable Output<String> mdmAccount;
 
+    /**
+     * @return The MDM account to which the counters should be pushed.
+     * 
+     */
     public Optional<Output<String>> mdmAccount() {
         return Optional.ofNullable(this.mdmAccount);
     }
@@ -50,6 +58,10 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="metricNameSpace")
     private @Nullable Output<String> metricNameSpace;
 
+    /**
+     * @return The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+     * 
+     */
     public Optional<Output<String>> metricNameSpace() {
         return Optional.ofNullable(this.metricNameSpace);
     }
@@ -61,6 +73,10 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The Resource ID on which the metrics should be pushed.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -92,42 +108,96 @@ public final class MetricConfigurationArgs extends com.pulumi.resources.Resource
             $ = new MetricConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param counterSets Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSets(Output<List<MetricCounterSetArgs>> counterSets) {
             $.counterSets = counterSets;
             return this;
         }
 
+        /**
+         * @param counterSets Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSets(List<MetricCounterSetArgs> counterSets) {
             return counterSets(Output.of(counterSets));
         }
 
+        /**
+         * @param counterSets Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSets(MetricCounterSetArgs... counterSets) {
             return counterSets(List.of(counterSets));
         }
 
+        /**
+         * @param mdmAccount The MDM account to which the counters should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdmAccount(@Nullable Output<String> mdmAccount) {
             $.mdmAccount = mdmAccount;
             return this;
         }
 
+        /**
+         * @param mdmAccount The MDM account to which the counters should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdmAccount(String mdmAccount) {
             return mdmAccount(Output.of(mdmAccount));
         }
 
+        /**
+         * @param metricNameSpace The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNameSpace(@Nullable Output<String> metricNameSpace) {
             $.metricNameSpace = metricNameSpace;
             return this;
         }
 
+        /**
+         * @param metricNameSpace The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNameSpace(String metricNameSpace) {
             return metricNameSpace(Output.of(metricNameSpace));
         }
 
+        /**
+         * @param resourceId The Resource ID on which the metrics should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Resource ID on which the metrics should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

@@ -23,6 +23,10 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="deleted", required=true)
     private String deleted;
 
+    /**
+     * @return An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.
+     * 
+     */
     public String deleted() {
         return this.deleted;
     }
@@ -34,6 +38,10 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="deprecated", required=true)
     private String deprecated;
 
+    /**
+     * @return An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.
+     * 
+     */
     public String deprecated() {
         return this.deprecated;
     }
@@ -45,6 +53,10 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="obsolete", required=true)
     private String obsolete;
 
+    /**
+     * @return An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.
+     * 
+     */
     public String obsolete() {
         return this.obsolete;
     }
@@ -56,6 +68,10 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="replacement", required=true)
     private String replacement;
 
+    /**
+     * @return The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.
+     * 
+     */
     public String replacement() {
         return this.replacement;
     }
@@ -67,6 +83,10 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -99,26 +119,56 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
             $ = new DeprecationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleted An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleted(String deleted) {
             $.deleted = deleted;
             return this;
         }
 
+        /**
+         * @param deprecated An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(String deprecated) {
             $.deprecated = deprecated;
             return this;
         }
 
+        /**
+         * @param obsolete An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obsolete(String obsolete) {
             $.obsolete = obsolete;
             return this;
         }
 
+        /**
+         * @param replacement The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacement(String replacement) {
             $.replacement = replacement;
             return this;
         }
 
+        /**
+         * @param state The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

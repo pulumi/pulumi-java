@@ -21,6 +21,10 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends com.pulum
     @Import(name="labels", required=true)
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+     * 
+     */
     public Output<Map<String,String>> labels() {
         return this.labels;
     }
@@ -49,11 +53,23 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends com.pulum
             $ = new PatchDeploymentInstanceFilterGroupLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labels Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }

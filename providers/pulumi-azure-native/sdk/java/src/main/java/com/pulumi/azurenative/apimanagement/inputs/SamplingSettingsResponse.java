@@ -26,6 +26,10 @@ public final class SamplingSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="percentage")
     private @Nullable Double percentage;
 
+    /**
+     * @return Rate of sampling for fixed-rate sampling.
+     * 
+     */
     public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }
@@ -37,6 +41,10 @@ public final class SamplingSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="samplingType")
     private @Nullable String samplingType;
 
+    /**
+     * @return Sampling type.
+     * 
+     */
     public Optional<String> samplingType() {
         return Optional.ofNullable(this.samplingType);
     }
@@ -66,11 +74,23 @@ public final class SamplingSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new SamplingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param percentage Rate of sampling for fixed-rate sampling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentage(@Nullable Double percentage) {
             $.percentage = percentage;
             return this;
         }
 
+        /**
+         * @param samplingType Sampling type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingType(@Nullable String samplingType) {
             $.samplingType = samplingType;
             return this;

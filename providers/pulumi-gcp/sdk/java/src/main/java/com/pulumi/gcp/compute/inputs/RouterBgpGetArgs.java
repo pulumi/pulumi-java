@@ -27,6 +27,12 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertiseMode")
     private @Nullable Output<String> advertiseMode;
 
+    /**
+     * @return User-specified flag to indicate which mode to use for advertisement.
+     * Default value is `DEFAULT`.
+     * Possible values are `DEFAULT` and `CUSTOM`.
+     * 
+     */
     public Optional<Output<String>> advertiseMode() {
         return Optional.ofNullable(this.advertiseMode);
     }
@@ -43,6 +49,15 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedGroups")
     private @Nullable Output<List<String>> advertisedGroups;
 
+    /**
+     * @return User-specified list of prefix groups to advertise in custom mode.
+     * This field can only be populated if advertiseMode is CUSTOM and
+     * is advertised to all peers of the router. These groups will be
+     * advertised in addition to any specified prefixes. Leave this field
+     * blank to advertise no custom groups.
+     * This enum field has the one valid value: ALL_SUBNETS
+     * 
+     */
     public Optional<Output<List<String>>> advertisedGroups() {
         return Optional.ofNullable(this.advertisedGroups);
     }
@@ -59,6 +74,15 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advertisedIpRanges")
     private @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
+    /**
+     * @return User-specified list of individual IP ranges to advertise in
+     * custom mode. This field can only be populated if advertiseMode
+     * is CUSTOM and is advertised to all peers of the router. These IP
+     * ranges will be advertised in addition to any specified groups.
+     * Leave this field blank to advertise no custom IP ranges.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<RouterBgpAdvertisedIpRangeGetArgs>>> advertisedIpRanges() {
         return Optional.ofNullable(this.advertisedIpRanges);
     }
@@ -73,6 +97,13 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="asn", required=true)
     private Output<Integer> asn;
 
+    /**
+     * @return Local BGP Autonomous System Number (ASN). Must be an RFC6996
+     * private ASN, either 16-bit or 32-bit. The value will be fixed for
+     * this router resource. All VPN tunnels that link to this router
+     * will have the same local ASN.
+     * 
+     */
     public Output<Integer> asn() {
         return this.asn;
     }
@@ -104,46 +135,146 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouterBgpGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * Default value is `DEFAULT`.
+         * Possible values are `DEFAULT` and `CUSTOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(@Nullable Output<String> advertiseMode) {
             $.advertiseMode = advertiseMode;
             return this;
         }
 
+        /**
+         * @param advertiseMode User-specified flag to indicate which mode to use for advertisement.
+         * Default value is `DEFAULT`.
+         * Possible values are `DEFAULT` and `CUSTOM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertiseMode(String advertiseMode) {
             return advertiseMode(Output.of(advertiseMode));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode.
+         * This field can only be populated if advertiseMode is CUSTOM and
+         * is advertised to all peers of the router. These groups will be
+         * advertised in addition to any specified prefixes. Leave this field
+         * blank to advertise no custom groups.
+         * This enum field has the one valid value: ALL_SUBNETS
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
             $.advertisedGroups = advertisedGroups;
             return this;
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode.
+         * This field can only be populated if advertiseMode is CUSTOM and
+         * is advertised to all peers of the router. These groups will be
+         * advertised in addition to any specified prefixes. Leave this field
+         * blank to advertise no custom groups.
+         * This enum field has the one valid value: ALL_SUBNETS
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(List<String> advertisedGroups) {
             return advertisedGroups(Output.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedGroups User-specified list of prefix groups to advertise in custom mode.
+         * This field can only be populated if advertiseMode is CUSTOM and
+         * is advertised to all peers of the router. These groups will be
+         * advertised in addition to any specified prefixes. Leave this field
+         * blank to advertise no custom groups.
+         * This enum field has the one valid value: ALL_SUBNETS
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is CUSTOM and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(@Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
             $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is CUSTOM and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(List<RouterBgpAdvertisedIpRangeGetArgs> advertisedIpRanges) {
             return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
 
+        /**
+         * @param advertisedIpRanges User-specified list of individual IP ranges to advertise in
+         * custom mode. This field can only be populated if advertiseMode
+         * is CUSTOM and is advertised to all peers of the router. These IP
+         * ranges will be advertised in addition to any specified groups.
+         * Leave this field blank to advertise no custom IP ranges.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder advertisedIpRanges(RouterBgpAdvertisedIpRangeGetArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
 
+        /**
+         * @param asn Local BGP Autonomous System Number (ASN). Must be an RFC6996
+         * private ASN, either 16-bit or 32-bit. The value will be fixed for
+         * this router resource. All VPN tunnels that link to this router
+         * will have the same local ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(Output<Integer> asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param asn Local BGP Autonomous System Number (ASN). Must be an RFC6996
+         * private ASN, either 16-bit or 32-bit. The value will be fixed for
+         * this router resource. All VPN tunnels that link to this router
+         * will have the same local ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(Integer asn) {
             return asn(Output.of(asn));
         }

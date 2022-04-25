@@ -19,6 +19,10 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="attachmentId", required=true)
     private String attachmentId;
 
+    /**
+     * @return The resource that the security policy is attached to.
+     * 
+     */
     public String attachmentId() {
         return this.attachmentId;
     }
@@ -30,6 +34,10 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the security policy of the association.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -41,6 +49,10 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -52,6 +64,10 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
     @Import(name="securityPolicyId", required=true)
     private String securityPolicyId;
 
+    /**
+     * @return The security policy ID of the association.
+     * 
+     */
     public String securityPolicyId() {
         return this.securityPolicyId;
     }
@@ -83,21 +99,45 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
             $ = new SecurityPolicyAssociationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentId The resource that the security policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(String attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the security policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param securityPolicyId The security policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicyId(String securityPolicyId) {
             $.securityPolicyId = securityPolicyId;
             return this;

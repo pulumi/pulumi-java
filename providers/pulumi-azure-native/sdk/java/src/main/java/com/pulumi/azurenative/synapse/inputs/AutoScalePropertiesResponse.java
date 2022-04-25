@@ -26,6 +26,10 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether automatic scaling is enabled for the Big Data pool.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="maxNodeCount")
     private @Nullable Integer maxNodeCount;
 
+    /**
+     * @return The maximum number of nodes the Big Data pool can support.
+     * 
+     */
     public Optional<Integer> maxNodeCount() {
         return Optional.ofNullable(this.maxNodeCount);
     }
@@ -48,6 +56,10 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="minNodeCount")
     private @Nullable Integer minNodeCount;
 
+    /**
+     * @return The minimum number of nodes the Big Data pool can support.
+     * 
+     */
     public Optional<Integer> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
@@ -78,16 +90,34 @@ public final class AutoScalePropertiesResponse extends com.pulumi.resources.Invo
             $ = new AutoScalePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether automatic scaling is enabled for the Big Data pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param maxNodeCount The maximum number of nodes the Big Data pool can support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
             $.maxNodeCount = maxNodeCount;
             return this;
         }
 
+        /**
+         * @param minNodeCount The minimum number of nodes the Big Data pool can support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
             $.minNodeCount = minNodeCount;
             return this;

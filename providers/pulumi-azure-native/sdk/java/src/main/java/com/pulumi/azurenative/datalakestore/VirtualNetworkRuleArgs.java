@@ -22,6 +22,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Data Lake Store account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return The resource identifier for the subnet.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -55,6 +67,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualNetworkRuleName")
     private @Nullable Output<String> virtualNetworkRuleName;
 
+    /**
+     * @return The name of the virtual network rule to create or update.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkRuleName() {
         return Optional.ofNullable(this.virtualNetworkRuleName);
     }
@@ -86,38 +102,86 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param subnetId The resource identifier for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The resource identifier for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param virtualNetworkRuleName The name of the virtual network rule to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
             $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRuleName The name of the virtual network rule to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
         }

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class CodeSigningConfigAllowedPublishers {
     /**
-     * List of Signing profile version Arns
+     * @return List of Signing profile version Arns
      * 
      */
     private final List<String> signingProfileVersionArns;
@@ -22,9 +22,9 @@ public final class CodeSigningConfigAllowedPublishers {
     }
 
     /**
-     * List of Signing profile version Arns
+     * @return List of Signing profile version Arns
      * 
-    */
+     */
     public List<String> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }

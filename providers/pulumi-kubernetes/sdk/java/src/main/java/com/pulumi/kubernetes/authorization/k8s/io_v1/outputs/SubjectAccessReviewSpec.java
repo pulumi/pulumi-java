@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SubjectAccessReviewSpec {
     /**
-     * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+     * @return Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
      * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
-     * Groups is the groups you&#39;re testing for.
+     * @return Groups is the groups you&#39;re testing for.
      * 
      */
     private final @Nullable List<String> groups;
     /**
-     * NonResourceAttributes describes information for a non-resource access request
+     * @return NonResourceAttributes describes information for a non-resource access request
      * 
      */
     private final @Nullable NonResourceAttributes nonResourceAttributes;
     /**
-     * ResourceAuthorizationAttributes describes information for a resource access request
+     * @return ResourceAuthorizationAttributes describes information for a resource access request
      * 
      */
     private final @Nullable ResourceAttributes resourceAttributes;
     /**
-     * UID information about the requesting user.
+     * @return UID information about the requesting user.
      * 
      */
     private final @Nullable String uid;
     /**
-     * User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
+     * @return User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
      * 
      */
     private final @Nullable String user;
@@ -63,44 +63,44 @@ public final class SubjectAccessReviewSpec {
     }
 
     /**
-     * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+     * @return Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
      * 
-    */
+     */
     public Map<String,List<String>> extra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
-     * Groups is the groups you&#39;re testing for.
+     * @return Groups is the groups you&#39;re testing for.
      * 
-    */
+     */
     public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
-     * NonResourceAttributes describes information for a non-resource access request
+     * @return NonResourceAttributes describes information for a non-resource access request
      * 
-    */
+     */
     public Optional<NonResourceAttributes> nonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
     /**
-     * ResourceAuthorizationAttributes describes information for a resource access request
+     * @return ResourceAuthorizationAttributes describes information for a resource access request
      * 
-    */
+     */
     public Optional<ResourceAttributes> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
     /**
-     * UID information about the requesting user.
+     * @return UID information about the requesting user.
      * 
-    */
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
-     * User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
+     * @return User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Groups&#34;, then is it interpreted as &#34;What if User were not a member of any groups
      * 
-    */
+     */
     public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }

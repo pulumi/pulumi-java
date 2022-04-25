@@ -28,6 +28,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
     private @Nullable Output<String> applicationName;
 
+    /**
+     * @return The provider&#39;s marketplace application display name.
+     * 
+     */
     public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -39,6 +43,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceUri")
     private @Nullable Output<String> instanceUri;
 
+    /**
+     * @return A Uri identifying the specific instance of this provider.
+     * 
+     */
     public Optional<Output<String>> instanceUri() {
         return Optional.ofNullable(this.instanceUri);
     }
@@ -50,6 +58,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerId")
     private @Nullable Output<String> providerId;
 
+    /**
+     * @return Unique id of this provider.
+     * 
+     */
     public Optional<Output<String>> providerId() {
         return Optional.ofNullable(this.providerId);
     }
@@ -61,6 +73,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerSku")
     private @Nullable Output<String> providerSku;
 
+    /**
+     * @return The sku associated with pricing information for this provider.
+     * 
+     */
     public Optional<Output<String>> providerSku() {
         return Optional.ofNullable(this.providerSku);
     }
@@ -72,6 +88,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,Status>> provisioningState;
 
+    /**
+     * @return Provisioning status field
+     * 
+     */
     public Optional<Output<Either<String,Status>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -83,6 +103,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageId")
     private @Nullable Output<String> resourceUsageId;
 
+    /**
+     * @return Id to track resource usage for the provider.
+     * 
+     */
     public Optional<Output<String>> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }
@@ -116,64 +140,148 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName The provider&#39;s marketplace application display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The provider&#39;s marketplace application display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param instanceUri A Uri identifying the specific instance of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUri(@Nullable Output<String> instanceUri) {
             $.instanceUri = instanceUri;
             return this;
         }
 
+        /**
+         * @param instanceUri A Uri identifying the specific instance of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUri(String instanceUri) {
             return instanceUri(Output.of(instanceUri));
         }
 
+        /**
+         * @param providerId Unique id of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerId(@Nullable Output<String> providerId) {
             $.providerId = providerId;
             return this;
         }
 
+        /**
+         * @param providerId Unique id of this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerId(String providerId) {
             return providerId(Output.of(providerId));
         }
 
+        /**
+         * @param providerSku The sku associated with pricing information for this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSku(@Nullable Output<String> providerSku) {
             $.providerSku = providerSku;
             return this;
         }
 
+        /**
+         * @param providerSku The sku associated with pricing information for this provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSku(String providerSku) {
             return providerSku(Output.of(providerSku));
         }
 
+        /**
+         * @param provisioningState Provisioning status field
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,Status>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning status field
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,Status> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning status field
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState Provisioning status field
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Status provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param resourceUsageId Id to track resource usage for the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageId(@Nullable Output<String> resourceUsageId) {
             $.resourceUsageId = resourceUsageId;
             return this;
         }
 
+        /**
+         * @param resourceUsageId Id to track resource usage for the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageId(String resourceUsageId) {
             return resourceUsageId(Output.of(resourceUsageId));
         }

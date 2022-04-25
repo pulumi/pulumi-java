@@ -20,6 +20,10 @@ public final class GetInstanceGroupNamedPort extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the instance group. Either `name` or `self_link` must be provided.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +60,12 @@ public final class GetInstanceGroupNamedPort extends com.pulumi.resources.Invoke
             $ = new GetInstanceGroupNamedPort(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the instance group. Either `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SpotInstanceRequestEphemeralBlockDevice {
     /**
-     * The name of the block device to mount on the instance.
+     * @return The name of the block device to mount on the instance.
      * 
      */
     private final String deviceName;
     /**
-     * Suppresses the specified device included in the AMI&#39;s block device mapping.
+     * @return Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
      */
     private final @Nullable Boolean noDevice;
     /**
-     * [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
+     * @return [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
      * 
      */
     private final @Nullable String virtualName;
@@ -39,23 +39,23 @@ public final class SpotInstanceRequestEphemeralBlockDevice {
     }
 
     /**
-     * The name of the block device to mount on the instance.
+     * @return The name of the block device to mount on the instance.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Suppresses the specified device included in the AMI&#39;s block device mapping.
+     * @return Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
-    */
+     */
     public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
-     * [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
+     * @return [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
      * 
-    */
+     */
     public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }

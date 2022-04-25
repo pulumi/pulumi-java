@@ -25,6 +25,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name for the parent history definition.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="downloadUri", required=true)
     private String downloadUri;
 
+    /**
+     * @return Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
+     * 
+     */
     public String downloadUri() {
         return this.downloadUri;
     }
@@ -47,6 +55,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="expiration")
     private @Nullable String expiration;
 
+    /**
+     * @return Date time when history data report expires and the associated data is deleted.
+     * 
+     */
     public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -58,6 +70,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="fulfilledDateTime")
     private @Nullable String fulfilledDateTime;
 
+    /**
+     * @return Date time when the history data report is scheduled to be generated.
+     * 
+     */
     public Optional<String> fulfilledDateTime() {
         return Optional.ofNullable(this.fulfilledDateTime);
     }
@@ -69,6 +85,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The access review history definition instance id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -80,6 +100,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The access review history definition instance unique id.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -91,6 +115,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="reviewHistoryPeriodEndDateTime")
     private @Nullable String reviewHistoryPeriodEndDateTime;
 
+    /**
+     * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     public Optional<String> reviewHistoryPeriodEndDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
@@ -102,6 +130,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="reviewHistoryPeriodStartDateTime")
     private @Nullable String reviewHistoryPeriodStartDateTime;
 
+    /**
+     * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+     * 
+     */
     public Optional<String> reviewHistoryPeriodStartDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
@@ -113,6 +145,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="runDateTime")
     private @Nullable String runDateTime;
 
+    /**
+     * @return Date time when the history data report is scheduled to be generated.
+     * 
+     */
     public Optional<String> runDateTime() {
         return Optional.ofNullable(this.runDateTime);
     }
@@ -124,6 +160,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -135,6 +175,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -173,56 +217,122 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
             $ = new AccessReviewHistoryInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for the parent history definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param downloadUri Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadUri(String downloadUri) {
             $.downloadUri = downloadUri;
             return this;
         }
 
+        /**
+         * @param expiration Date time when history data report expires and the associated data is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable String expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param fulfilledDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             $.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
 
+        /**
+         * @param id The access review history definition instance id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The access review history definition instance unique id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param reviewHistoryPeriodEndDateTime Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             $.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
 
+        /**
+         * @param reviewHistoryPeriodStartDateTime Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             $.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
 
+        /**
+         * @param runDateTime Date time when the history data report is scheduled to be generated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runDateTime(@Nullable String runDateTime) {
             $.runDateTime = runDateTime;
             return this;
         }
 
+        /**
+         * @param status Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

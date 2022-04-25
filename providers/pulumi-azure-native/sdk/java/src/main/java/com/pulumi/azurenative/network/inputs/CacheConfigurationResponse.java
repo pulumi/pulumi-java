@@ -25,6 +25,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="cacheDuration")
     private @Nullable String cacheDuration;
 
+    /**
+     * @return The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
+     * 
+     */
     public Optional<String> cacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
@@ -36,6 +40,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="dynamicCompression")
     private @Nullable String dynamicCompression;
 
+    /**
+     * @return Whether to use dynamic compression for cached content
+     * 
+     */
     public Optional<String> dynamicCompression() {
         return Optional.ofNullable(this.dynamicCompression);
     }
@@ -47,6 +55,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="queryParameterStripDirective")
     private @Nullable String queryParameterStripDirective;
 
+    /**
+     * @return Treatment of URL query terms when forming the cache key.
+     * 
+     */
     public Optional<String> queryParameterStripDirective() {
         return Optional.ofNullable(this.queryParameterStripDirective);
     }
@@ -58,6 +70,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="queryParameters")
     private @Nullable String queryParameters;
 
+    /**
+     * @return query parameters to include or exclude (comma separated).
+     * 
+     */
     public Optional<String> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -89,21 +105,45 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
             $ = new CacheConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheDuration The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDuration(@Nullable String cacheDuration) {
             $.cacheDuration = cacheDuration;
             return this;
         }
 
+        /**
+         * @param dynamicCompression Whether to use dynamic compression for cached content
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicCompression(@Nullable String dynamicCompression) {
             $.dynamicCompression = dynamicCompression;
             return this;
         }
 
+        /**
+         * @param queryParameterStripDirective Treatment of URL query terms when forming the cache key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameterStripDirective(@Nullable String queryParameterStripDirective) {
             $.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
 
+        /**
+         * @param queryParameters query parameters to include or exclude (comma separated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(@Nullable String queryParameters) {
             $.queryParameters = queryParameters;
             return this;

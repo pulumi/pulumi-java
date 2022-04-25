@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NamespaceJunctionResponse {
     /**
-     * Namespace path on a Cache for a Storage Target.
+     * @return Namespace path on a Cache for a Storage Target.
      * 
      */
     private final @Nullable String namespacePath;
     /**
-     * Name of the access policy applied to this junction.
+     * @return Name of the access policy applied to this junction.
      * 
      */
     private final @Nullable String nfsAccessPolicy;
     /**
-     * NFS export where targetPath exists.
+     * @return NFS export where targetPath exists.
      * 
      */
     private final @Nullable String nfsExport;
     /**
-     * Path in Storage Target to which namespacePath points.
+     * @return Path in Storage Target to which namespacePath points.
      * 
      */
     private final @Nullable String targetPath;
@@ -45,30 +45,30 @@ public final class NamespaceJunctionResponse {
     }
 
     /**
-     * Namespace path on a Cache for a Storage Target.
+     * @return Namespace path on a Cache for a Storage Target.
      * 
-    */
+     */
     public Optional<String> namespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
     /**
-     * Name of the access policy applied to this junction.
+     * @return Name of the access policy applied to this junction.
      * 
-    */
+     */
     public Optional<String> nfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
     /**
-     * NFS export where targetPath exists.
+     * @return NFS export where targetPath exists.
      * 
-    */
+     */
     public Optional<String> nfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
     /**
-     * Path in Storage Target to which namespacePath points.
+     * @return Path in Storage Target to which namespacePath points.
      * 
-    */
+     */
     public Optional<String> targetPath() {
         return Optional.ofNullable(this.targetPath);
     }

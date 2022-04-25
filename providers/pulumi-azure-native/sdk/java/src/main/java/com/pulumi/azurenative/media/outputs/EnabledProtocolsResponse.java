@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class EnabledProtocolsResponse {
     /**
-     * Enable DASH protocol or not
+     * @return Enable DASH protocol or not
      * 
      */
     private final Boolean dash;
     /**
-     * Enable Download protocol or not
+     * @return Enable Download protocol or not
      * 
      */
     private final Boolean download;
     /**
-     * Enable HLS protocol or not
+     * @return Enable HLS protocol or not
      * 
      */
     private final Boolean hls;
     /**
-     * Enable SmoothStreaming protocol or not
+     * @return Enable SmoothStreaming protocol or not
      * 
      */
     private final Boolean smoothStreaming;
@@ -43,30 +43,30 @@ public final class EnabledProtocolsResponse {
     }
 
     /**
-     * Enable DASH protocol or not
+     * @return Enable DASH protocol or not
      * 
-    */
+     */
     public Boolean dash() {
         return this.dash;
     }
     /**
-     * Enable Download protocol or not
+     * @return Enable Download protocol or not
      * 
-    */
+     */
     public Boolean download() {
         return this.download;
     }
     /**
-     * Enable HLS protocol or not
+     * @return Enable HLS protocol or not
      * 
-    */
+     */
     public Boolean hls() {
         return this.hls;
     }
     /**
-     * Enable SmoothStreaming protocol or not
+     * @return Enable SmoothStreaming protocol or not
      * 
-    */
+     */
     public Boolean smoothStreaming() {
         return this.smoothStreaming;
     }

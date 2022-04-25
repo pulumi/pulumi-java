@@ -28,6 +28,10 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
     @Import(name="datasets")
     private @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
+    /**
+     * @return Dataset references.
+     * 
+     */
     public Optional<Output<List<DatasetReferenceArgs>>> datasets() {
         return Optional.ofNullable(this.datasets);
     }
@@ -39,6 +43,10 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
     @Import(name="linkedServices")
     private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
+    /**
+     * @return Linked service references.
+     * 
+     */
     public Optional<Output<List<LinkedServiceReferenceArgs>>> linkedServices() {
         return Optional.ofNullable(this.linkedServices);
     }
@@ -68,28 +76,64 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
             $ = new CustomActivityReferenceObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasets Dataset references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             $.datasets = datasets;
             return this;
         }
 
+        /**
+         * @param datasets Dataset references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(List<DatasetReferenceArgs> datasets) {
             return datasets(Output.of(datasets));
         }
 
+        /**
+         * @param datasets Dataset references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(DatasetReferenceArgs... datasets) {
             return datasets(List.of(datasets));
         }
 
+        /**
+         * @param linkedServices Linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
             $.linkedServices = linkedServices;
             return this;
         }
 
+        /**
+         * @param linkedServices Linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(List<LinkedServiceReferenceArgs> linkedServices) {
             return linkedServices(Output.of(linkedServices));
         }
 
+        /**
+         * @param linkedServices Linked service references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {
             return linkedServices(List.of(linkedServices));
         }

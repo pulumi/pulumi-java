@@ -26,6 +26,10 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
     @Import(name="count")
     private @Nullable Double count;
 
+    /**
+     * @return Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
+     * 
+     */
     public Optional<Double> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return VM size in terms of which the unutilized capacity is represented.
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -66,11 +74,23 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
             $ = new DedicatedHostAllocatableVMResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Maximum number of VMs of size vmSize that can fit in the dedicated host&#39;s remaining capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Double count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param vmSize VM size in terms of which the unutilized capacity is represented.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

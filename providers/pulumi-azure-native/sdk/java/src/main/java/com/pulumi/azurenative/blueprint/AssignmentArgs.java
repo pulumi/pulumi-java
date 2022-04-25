@@ -27,6 +27,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignmentName")
     private @Nullable Output<String> assignmentName;
 
+    /**
+     * @return Name of the blueprint assignment.
+     * 
+     */
     public Optional<Output<String>> assignmentName() {
         return Optional.ofNullable(this.assignmentName);
     }
@@ -38,6 +42,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId")
     private @Nullable Output<String> blueprintId;
 
+    /**
+     * @return ID of the published version of a blueprint definition.
+     * 
+     */
     public Optional<Output<String>> blueprintId() {
         return Optional.ofNullable(this.blueprintId);
     }
@@ -49,6 +57,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Multi-line explain this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -60,6 +72,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return One-liner string explain this resource.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -71,6 +87,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity", required=true)
     private Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Managed identity for this blueprint assignment.
+     * 
+     */
     public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity;
     }
@@ -82,6 +102,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of this blueprint assignment.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -93,6 +117,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locks")
     private @Nullable Output<AssignmentLockSettingsArgs> locks;
 
+    /**
+     * @return Defines how resources deployed by a blueprint assignment are locked.
+     * 
+     */
     public Optional<Output<AssignmentLockSettingsArgs>> locks() {
         return Optional.ofNullable(this.locks);
     }
@@ -104,6 +132,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
     private Output<Map<String,ParameterValueArgs>> parameters;
 
+    /**
+     * @return Blueprint assignment parameter values.
+     * 
+     */
     public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
     }
@@ -115,6 +147,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroups", required=true)
     private Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
+    /**
+     * @return Names and locations of resource group placeholders.
+     * 
+     */
     public Output<Map<String,ResourceGroupValueArgs>> resourceGroups() {
         return this.resourceGroups;
     }
@@ -126,6 +162,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
     private Output<String> resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
@@ -137,6 +177,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -175,101 +219,233 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentName Name of the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentName(@Nullable Output<String> assignmentName) {
             $.assignmentName = assignmentName;
             return this;
         }
 
+        /**
+         * @param assignmentName Name of the blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentName(String assignmentName) {
             return assignmentName(Output.of(assignmentName));
         }
 
+        /**
+         * @param blueprintId ID of the published version of a blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
             $.blueprintId = blueprintId;
             return this;
         }
 
+        /**
+         * @param blueprintId ID of the published version of a blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintId(String blueprintId) {
             return blueprintId(Output.of(blueprintId));
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param identity Managed identity for this blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed identity for this blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of this blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of this blueprint assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param locks Defines how resources deployed by a blueprint assignment are locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locks(@Nullable Output<AssignmentLockSettingsArgs> locks) {
             $.locks = locks;
             return this;
         }
 
+        /**
+         * @param locks Defines how resources deployed by a blueprint assignment are locked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locks(AssignmentLockSettingsArgs locks) {
             return locks(Output.of(locks));
         }
 
+        /**
+         * @param parameters Blueprint assignment parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Blueprint assignment parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroups Names and locations of resource group placeholders.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(Output<Map<String,ResourceGroupValueArgs>> resourceGroups) {
             $.resourceGroups = resourceGroups;
             return this;
         }
 
+        /**
+         * @param resourceGroups Names and locations of resource group placeholders.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
             return resourceGroups(Output.of(resourceGroups));
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(Output<String> resourceScope) {
             $.resourceScope = resourceScope;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             return resourceScope(Output.of(resourceScope));
         }
 
+        /**
+         * @param scope The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The target subscription scope of the blueprint assignment (format: &#39;/subscriptions/{subscriptionId}&#39;). For management group level assignments, the property is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

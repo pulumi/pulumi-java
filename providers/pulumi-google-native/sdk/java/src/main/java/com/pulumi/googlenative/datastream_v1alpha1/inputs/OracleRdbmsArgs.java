@@ -27,6 +27,10 @@ public final class OracleRdbmsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="oracleSchemas")
     private @Nullable Output<List<OracleSchemaArgs>> oracleSchemas;
 
+    /**
+     * @return Oracle schemas/databases in the database server.
+     * 
+     */
     public Optional<Output<List<OracleSchemaArgs>>> oracleSchemas() {
         return Optional.ofNullable(this.oracleSchemas);
     }
@@ -55,15 +59,33 @@ public final class OracleRdbmsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OracleRdbmsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oracleSchemas Oracle schemas/databases in the database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSchemas(@Nullable Output<List<OracleSchemaArgs>> oracleSchemas) {
             $.oracleSchemas = oracleSchemas;
             return this;
         }
 
+        /**
+         * @param oracleSchemas Oracle schemas/databases in the database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSchemas(List<OracleSchemaArgs> oracleSchemas) {
             return oracleSchemas(Output.of(oracleSchemas));
         }
 
+        /**
+         * @param oracleSchemas Oracle schemas/databases in the database server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleSchemas(OracleSchemaArgs... oracleSchemas) {
             return oracleSchemas(List.of(oracleSchemas));
         }

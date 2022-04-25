@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CacheHealthResponse {
     /**
-     * Outstanding conditions that need to be investigated and resolved.
+     * @return Outstanding conditions that need to be investigated and resolved.
      * 
      */
     private final List<ConditionResponse> conditions;
     /**
-     * List of Cache health states.
+     * @return List of Cache health states.
      * 
      */
     private final @Nullable String state;
     /**
-     * Describes explanation of state.
+     * @return Describes explanation of state.
      * 
      */
     private final @Nullable String statusDescription;
@@ -40,23 +40,23 @@ public final class CacheHealthResponse {
     }
 
     /**
-     * Outstanding conditions that need to be investigated and resolved.
+     * @return Outstanding conditions that need to be investigated and resolved.
      * 
-    */
+     */
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
-     * List of Cache health states.
+     * @return List of Cache health states.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Describes explanation of state.
+     * @return Describes explanation of state.
      * 
-    */
+     */
     public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }

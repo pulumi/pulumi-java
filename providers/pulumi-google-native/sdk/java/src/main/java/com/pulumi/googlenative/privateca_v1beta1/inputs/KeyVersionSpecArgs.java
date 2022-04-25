@@ -25,6 +25,10 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="algorithm", required=true)
     private Output<KeyVersionSpecAlgorithm> algorithm;
 
+    /**
+     * @return The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+     * 
+     */
     public Output<KeyVersionSpecAlgorithm> algorithm() {
         return this.algorithm;
     }
@@ -36,6 +40,10 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="cloudKmsKeyVersion", required=true)
     private Output<String> cloudKmsKeyVersion;
 
+    /**
+     * @return The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
+     * 
+     */
     public Output<String> cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
     }
@@ -65,20 +73,44 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
             $ = new KeyVersionSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<KeyVersionSpecAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(KeyVersionSpecAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param cloudKmsKeyVersion The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudKmsKeyVersion(Output<String> cloudKmsKeyVersion) {
             $.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
 
+        /**
+         * @param cloudKmsKeyVersion The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key&#39;s capabilities and properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             return cloudKmsKeyVersion(Output.of(cloudKmsKeyVersion));
         }

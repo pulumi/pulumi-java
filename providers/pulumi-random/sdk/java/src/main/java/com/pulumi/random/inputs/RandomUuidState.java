@@ -24,6 +24,10 @@ public final class RandomUuidState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> keepers() {
         return Optional.ofNullable(this.keepers);
     }
@@ -35,6 +39,10 @@ public final class RandomUuidState extends com.pulumi.resources.ResourceArgs {
     @Import(name="result")
     private @Nullable Output<String> result;
 
+    /**
+     * @return The generated uuid presented in string format.
+     * 
+     */
     public Optional<Output<String>> result() {
         return Optional.ofNullable(this.result);
     }
@@ -64,20 +72,44 @@ public final class RandomUuidState extends com.pulumi.resources.ResourceArgs {
             $ = new RandomUuidState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             $.keepers = keepers;
             return this;
         }
 
+        /**
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepers(Map<String,Object> keepers) {
             return keepers(Output.of(keepers));
         }
 
+        /**
+         * @param result The generated uuid presented in string format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(@Nullable Output<String> result) {
             $.result = result;
             return this;
         }
 
+        /**
+         * @param result The generated uuid presented in string format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder result(String result) {
             return result(Output.of(result));
         }

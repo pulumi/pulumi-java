@@ -26,6 +26,10 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends com.pulumi.re
     @Import(name="base64EncodedCertificates", required=true)
     private Map<String,List<String>> base64EncodedCertificates;
 
+    /**
+     * @return Mapping from certificate name to base 64 encoded format.
+     * 
+     */
     public Map<String,List<String>> base64EncodedCertificates() {
         return this.base64EncodedCertificates;
     }
@@ -37,6 +41,10 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends com.pulumi.re
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -66,16 +74,34 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends com.pulumi.re
             $ = new GetTdeCertificatesSqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param base64EncodedCertificates Mapping from certificate name to base 64 encoded format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64EncodedCertificates(Map<String,List<String>> base64EncodedCertificates) {
             $.base64EncodedCertificates = base64EncodedCertificates;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

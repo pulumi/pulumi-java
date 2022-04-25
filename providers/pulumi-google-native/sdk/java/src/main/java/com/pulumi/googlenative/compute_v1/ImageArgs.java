@@ -30,6 +30,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="archiveSizeBytes")
     private @Nullable Output<String> archiveSizeBytes;
 
+    /**
+     * @return Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
+     * 
+     */
     public Optional<Output<String>> archiveSizeBytes() {
         return Optional.ofNullable(this.archiveSizeBytes);
     }
@@ -41,6 +45,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecated")
     private @Nullable Output<DeprecationStatusArgs> deprecated;
 
+    /**
+     * @return The deprecation status associated with this image.
+     * 
+     */
     public Optional<Output<DeprecationStatusArgs>> deprecated() {
         return Optional.ofNullable(this.deprecated);
     }
@@ -52,6 +60,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -63,6 +75,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
     private @Nullable Output<String> diskSizeGb;
 
+    /**
+     * @return Size of the image when restored onto a persistent disk (in GB).
+     * 
+     */
     public Optional<Output<String>> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -74,6 +90,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family")
     private @Nullable Output<String> family;
 
+    /**
+     * @return The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> family() {
         return Optional.ofNullable(this.family);
     }
@@ -92,6 +112,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
     private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
+    /**
+     * @return A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
+     * 
+     */
     public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
         return Optional.ofNullable(this.guestOsFeatures);
     }
@@ -103,6 +127,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
 
+    /**
+     * @return Encrypts the image using a customer-supplied encryption key. After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the image, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the image later.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> imageEncryptionKey() {
         return Optional.ofNullable(this.imageEncryptionKey);
     }
@@ -114,6 +142,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this image. These can be later modified by the setLabels method.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -125,6 +157,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseCodes")
     private @Nullable Output<List<String>> licenseCodes;
 
+    /**
+     * @return Integer license codes indicating which licenses are attached to this image.
+     * 
+     */
     public Optional<Output<List<String>>> licenseCodes() {
         return Optional.ofNullable(this.licenseCodes);
     }
@@ -136,6 +172,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
     private @Nullable Output<List<String>> licenses;
 
+    /**
+     * @return Any applicable license URI.
+     * 
+     */
     public Optional<Output<List<String>>> licenses() {
         return Optional.ofNullable(this.licenses);
     }
@@ -147,6 +187,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -165,6 +209,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rawDisk")
     private @Nullable Output<ImageRawDiskArgs> rawDisk;
 
+    /**
+     * @return The parameters of the raw disk image.
+     * 
+     */
     public Optional<Output<ImageRawDiskArgs>> rawDisk() {
         return Optional.ofNullable(this.rawDisk);
     }
@@ -183,6 +231,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shieldedInstanceInitialState")
     private @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
 
+    /**
+     * @return Set the secure boot keys of shielded instance.
+     * 
+     */
     public Optional<Output<InitialStateConfigArgs>> shieldedInstanceInitialState() {
         return Optional.ofNullable(this.shieldedInstanceInitialState);
     }
@@ -194,6 +246,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
     private @Nullable Output<String> sourceDisk;
 
+    /**
+     * @return URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * 
+     */
     public Optional<Output<String>> sourceDisk() {
         return Optional.ofNullable(this.sourceDisk);
     }
@@ -205,6 +261,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceDiskEncryptionKey() {
         return Optional.ofNullable(this.sourceDiskEncryptionKey);
     }
@@ -216,6 +276,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
     private @Nullable Output<String> sourceImage;
 
+    /**
+     * @return URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * 
+     */
     public Optional<Output<String>> sourceImage() {
         return Optional.ofNullable(this.sourceImage);
     }
@@ -227,6 +291,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceImageEncryptionKey() {
         return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
@@ -238,6 +306,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
     private @Nullable Output<String> sourceSnapshot;
 
+    /**
+     * @return URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+     * 
+     */
     public Optional<Output<String>> sourceSnapshot() {
         return Optional.ofNullable(this.sourceSnapshot);
     }
@@ -249,6 +321,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
     private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
+    /**
+     * @return The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+     * 
+     */
     public Optional<Output<CustomerEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
         return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
@@ -260,6 +336,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
     private @Nullable Output<ImageSourceType> sourceType;
 
+    /**
+     * @return The type of the image used to create this disk. The default and only value is RAW
+     * 
+     */
     public Optional<Output<ImageSourceType>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -271,6 +351,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
     private @Nullable Output<List<String>> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket storage location of the image (regional or multi-regional).
+     * 
+     */
     public Optional<Output<List<String>>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -322,47 +406,107 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveSizeBytes Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveSizeBytes(@Nullable Output<String> archiveSizeBytes) {
             $.archiveSizeBytes = archiveSizeBytes;
             return this;
         }
 
+        /**
+         * @param archiveSizeBytes Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveSizeBytes(String archiveSizeBytes) {
             return archiveSizeBytes(Output.of(archiveSizeBytes));
         }
 
+        /**
+         * @param deprecated The deprecation status associated with this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(@Nullable Output<DeprecationStatusArgs> deprecated) {
             $.deprecated = deprecated;
             return this;
         }
 
+        /**
+         * @param deprecated The deprecation status associated with this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deprecated(DeprecationStatusArgs deprecated) {
             return deprecated(Output.of(deprecated));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param diskSizeGb Size of the image when restored onto a persistent disk (in GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             $.diskSizeGb = diskSizeGb;
             return this;
         }
 
+        /**
+         * @param diskSizeGb Size of the image when restored onto a persistent disk (in GB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGb(String diskSizeGb) {
             return diskSizeGb(Output.of(diskSizeGb));
         }
 
+        /**
+         * @param family The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable Output<String> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The name of the image family to which this image belongs. You can create disks by specifying an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Output.of(family));
         }
@@ -376,68 +520,158 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return forceCreate(Output.of(forceCreate));
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             $.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(List<GuestOsFeatureArgs> guestOsFeatures) {
             return guestOsFeatures(Output.of(guestOsFeatures));
         }
 
+        /**
+         * @param guestOsFeatures A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
 
+        /**
+         * @param imageEncryptionKey Encrypts the image using a customer-supplied encryption key. After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the image, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the image later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey) {
             $.imageEncryptionKey = imageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param imageEncryptionKey Encrypts the image using a customer-supplied encryption key. After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the image, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the image later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageEncryptionKey(CustomerEncryptionKeyArgs imageEncryptionKey) {
             return imageEncryptionKey(Output.of(imageEncryptionKey));
         }
 
+        /**
+         * @param labels Labels to apply to this image. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this image. These can be later modified by the setLabels method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             $.licenseCodes = licenseCodes;
             return this;
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(List<String> licenseCodes) {
             return licenseCodes(Output.of(licenseCodes));
         }
 
+        /**
+         * @param licenseCodes Integer license codes indicating which licenses are attached to this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseCodes(String... licenseCodes) {
             return licenseCodes(List.of(licenseCodes));
         }
 
+        /**
+         * @param licenses Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(@Nullable Output<List<String>> licenses) {
             $.licenses = licenses;
             return this;
         }
 
+        /**
+         * @param licenses Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(List<String> licenses) {
             return licenses(Output.of(licenses));
         }
 
+        /**
+         * @param licenses Any applicable license URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -451,11 +685,23 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rawDisk The parameters of the raw disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
             $.rawDisk = rawDisk;
             return this;
         }
 
+        /**
+         * @param rawDisk The parameters of the raw disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawDisk(ImageRawDiskArgs rawDisk) {
             return rawDisk(Output.of(rawDisk));
         }
@@ -469,87 +715,201 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return requestId(Output.of(requestId));
         }
 
+        /**
+         * @param shieldedInstanceInitialState Set the secure boot keys of shielded instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceInitialState(@Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState) {
             $.shieldedInstanceInitialState = shieldedInstanceInitialState;
             return this;
         }
 
+        /**
+         * @param shieldedInstanceInitialState Set the secure boot keys of shielded instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shieldedInstanceInitialState(InitialStateConfigArgs shieldedInstanceInitialState) {
             return shieldedInstanceInitialState(Output.of(shieldedInstanceInitialState));
         }
 
+        /**
+         * @param sourceDisk URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             $.sourceDisk = sourceDisk;
             return this;
         }
 
+        /**
+         * @param sourceDisk URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDisk(String sourceDisk) {
             return sourceDisk(Output.of(sourceDisk));
         }
 
+        /**
+         * @param sourceDiskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
             $.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceDiskEncryptionKey The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
             return sourceDiskEncryptionKey(Output.of(sourceDiskEncryptionKey));
         }
 
+        /**
+         * @param sourceImage URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
             $.sourceImage = sourceImage;
             return this;
         }
 
+        /**
+         * @param sourceImage URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImage(String sourceImage) {
             return sourceImage(Output.of(sourceImage));
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceImageEncryptionKey The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
 
+        /**
+         * @param sourceSnapshot URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             $.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
+        /**
+         * @param sourceSnapshot URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshot(String sourceSnapshot) {
             return sourceSnapshot(Output.of(sourceSnapshot));
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
+        /**
+         * @param sourceSnapshotEncryptionKey The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
         }
 
+        /**
+         * @param sourceType The type of the image used to create this disk. The default and only value is RAW
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<ImageSourceType> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType The type of the image used to create this disk. The default and only value is RAW
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(ImageSourceType sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the image (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the image (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(List<String> storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket storage location of the image (regional or multi-regional).
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }

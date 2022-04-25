@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointResponse {
     /**
-     * The URL of the endpoint.
+     * @return The URL of the endpoint.
      * 
      */
     private final @Nullable String endpointUrl;
     /**
-     * The type of the endpoint.
+     * @return The type of the endpoint.
      * 
      */
     private final String type;
@@ -31,16 +31,16 @@ public final class EndpointResponse {
     }
 
     /**
-     * The URL of the endpoint.
+     * @return The URL of the endpoint.
      * 
-    */
+     */
     public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
-     * The type of the endpoint.
+     * @return The type of the endpoint.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

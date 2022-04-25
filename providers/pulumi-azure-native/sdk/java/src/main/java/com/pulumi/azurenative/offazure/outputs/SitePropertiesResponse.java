@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SitePropertiesResponse {
     /**
-     * On-premises agent details.
+     * @return On-premises agent details.
      * 
      */
     private final @Nullable SiteAgentPropertiesResponse agentDetails;
     /**
-     * Appliance Name.
+     * @return Appliance Name.
      * 
      */
     private final @Nullable String applianceName;
     /**
-     * ARM ID of migration hub solution for SDS.
+     * @return ARM ID of migration hub solution for SDS.
      * 
      */
     private final @Nullable String discoverySolutionId;
     /**
-     * Service endpoint.
+     * @return Service endpoint.
      * 
      */
     private final String serviceEndpoint;
     /**
-     * Service principal identity details used by agent for communication to the service.
+     * @return Service principal identity details used by agent for communication to the service.
      * 
      */
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
@@ -54,37 +54,37 @@ public final class SitePropertiesResponse {
     }
 
     /**
-     * On-premises agent details.
+     * @return On-premises agent details.
      * 
-    */
+     */
     public Optional<SiteAgentPropertiesResponse> agentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
-     * Appliance Name.
+     * @return Appliance Name.
      * 
-    */
+     */
     public Optional<String> applianceName() {
         return Optional.ofNullable(this.applianceName);
     }
     /**
-     * ARM ID of migration hub solution for SDS.
+     * @return ARM ID of migration hub solution for SDS.
      * 
-    */
+     */
     public Optional<String> discoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
     /**
-     * Service endpoint.
+     * @return Service endpoint.
      * 
-    */
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
-     * Service principal identity details used by agent for communication to the service.
+     * @return Service principal identity details used by agent for communication to the service.
      * 
-    */
+     */
     public Optional<SiteSpnPropertiesResponse> servicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }

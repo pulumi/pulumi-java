@@ -32,6 +32,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="account")
     private @Nullable Output<AccountArgs> account;
 
+    /**
+     * @return The device will be logged in on this account for the duration of the test.
+     * 
+     */
     public Optional<Output<AccountArgs>> account() {
         return Optional.ofNullable(this.account);
     }
@@ -43,6 +47,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalApks")
     private @Nullable Output<List<ApkArgs>> additionalApks;
 
+    /**
+     * @return APKs to install in addition to those being directly tested. Currently capped at 100.
+     * 
+     */
     public Optional<Output<List<ApkArgs>>> additionalApks() {
         return Optional.ofNullable(this.additionalApks);
     }
@@ -54,6 +62,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoriesToPull")
     private @Nullable Output<List<String>> directoriesToPull;
 
+    /**
+     * @return List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+     * 
+     */
     public Optional<Output<List<String>>> directoriesToPull() {
         return Optional.ofNullable(this.directoriesToPull);
     }
@@ -65,6 +77,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dontAutograntPermissions")
     private @Nullable Output<Boolean> dontAutograntPermissions;
 
+    /**
+     * @return Whether to prevent all runtime permissions to be granted at app install
+     * 
+     */
     public Optional<Output<Boolean>> dontAutograntPermissions() {
         return Optional.ofNullable(this.dontAutograntPermissions);
     }
@@ -76,6 +92,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
     private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
+    /**
+     * @return Environment variables to set for the test (only applicable for instrumentation tests).
+     * 
+     */
     public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -87,6 +107,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filesToPush")
     private @Nullable Output<List<DeviceFileArgs>> filesToPush;
 
+    /**
+     * @return List of files to push to the device before starting the test.
+     * 
+     */
     public Optional<Output<List<DeviceFileArgs>>> filesToPush() {
         return Optional.ofNullable(this.filesToPush);
     }
@@ -98,6 +122,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
     private @Nullable Output<String> networkProfile;
 
+    /**
+     * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+     * 
+     */
     public Optional<Output<String>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -132,81 +160,189 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TestSetupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param account The device will be logged in on this account for the duration of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(@Nullable Output<AccountArgs> account) {
             $.account = account;
             return this;
         }
 
+        /**
+         * @param account The device will be logged in on this account for the duration of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder account(AccountArgs account) {
             return account(Output.of(account));
         }
 
+        /**
+         * @param additionalApks APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalApks(@Nullable Output<List<ApkArgs>> additionalApks) {
             $.additionalApks = additionalApks;
             return this;
         }
 
+        /**
+         * @param additionalApks APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalApks(List<ApkArgs> additionalApks) {
             return additionalApks(Output.of(additionalApks));
         }
 
+        /**
+         * @param additionalApks APKs to install in addition to those being directly tested. Currently capped at 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalApks(ApkArgs... additionalApks) {
             return additionalApks(List.of(additionalApks));
         }
 
+        /**
+         * @param directoriesToPull List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesToPull(@Nullable Output<List<String>> directoriesToPull) {
             $.directoriesToPull = directoriesToPull;
             return this;
         }
 
+        /**
+         * @param directoriesToPull List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesToPull(List<String> directoriesToPull) {
             return directoriesToPull(Output.of(directoriesToPull));
         }
 
+        /**
+         * @param directoriesToPull List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoriesToPull(String... directoriesToPull) {
             return directoriesToPull(List.of(directoriesToPull));
         }
 
+        /**
+         * @param dontAutograntPermissions Whether to prevent all runtime permissions to be granted at app install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dontAutograntPermissions(@Nullable Output<Boolean> dontAutograntPermissions) {
             $.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
 
+        /**
+         * @param dontAutograntPermissions Whether to prevent all runtime permissions to be granted at app install
+         * 
+         * @return builder
+         * 
+         */
         public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
             return dontAutograntPermissions(Output.of(dontAutograntPermissions));
         }
 
+        /**
+         * @param environmentVariables Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param environmentVariables Environment variables to set for the test (only applicable for instrumentation tests).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param filesToPush List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesToPush(@Nullable Output<List<DeviceFileArgs>> filesToPush) {
             $.filesToPush = filesToPush;
             return this;
         }
 
+        /**
+         * @param filesToPush List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesToPush(List<DeviceFileArgs> filesToPush) {
             return filesToPush(Output.of(filesToPush));
         }
 
+        /**
+         * @param filesToPush List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesToPush(DeviceFileArgs... filesToPush) {
             return filesToPush(List.of(filesToPush));
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(String networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }

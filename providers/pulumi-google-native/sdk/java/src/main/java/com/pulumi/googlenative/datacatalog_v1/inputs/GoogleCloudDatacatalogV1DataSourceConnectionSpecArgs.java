@@ -26,6 +26,10 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     @Import(name="bigqueryConnectionSpec")
     private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
+    /**
+     * @return Fields specific to BigQuery connections.
+     * 
+     */
     public Optional<Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs>> bigqueryConnectionSpec() {
         return Optional.ofNullable(this.bigqueryConnectionSpec);
     }
@@ -54,11 +58,23 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
             $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryConnectionSpec Fields specific to BigQuery connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryConnectionSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec) {
             $.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;
         }
 
+        /**
+         * @param bigqueryConnectionSpec Fields specific to BigQuery connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs bigqueryConnectionSpec) {
             return bigqueryConnectionSpec(Output.of(bigqueryConnectionSpec));
         }

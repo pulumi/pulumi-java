@@ -19,6 +19,10 @@ public final class GetLiveEventArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetLiveEventArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="liveEventName", required=true)
     private String liveEventName;
 
+    /**
+     * @return The name of the live event, maximum length is 32.
+     * 
+     */
     public String liveEventName() {
         return this.liveEventName;
     }
@@ -41,6 +49,10 @@ public final class GetLiveEventArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetLiveEventArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLiveEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param liveEventName The name of the live event, maximum length is 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveEventName(String liveEventName) {
             $.liveEventName = liveEventName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

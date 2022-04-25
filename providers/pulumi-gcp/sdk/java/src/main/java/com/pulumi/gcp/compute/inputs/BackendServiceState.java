@@ -37,6 +37,14 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="affinityCookieTtlSec")
     private @Nullable Output<Integer> affinityCookieTtlSec;
 
+    /**
+     * @return Lifetime of cookies in seconds if session_affinity is
+     * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
+     * only until the end of the browser session (or equivalent). The
+     * maximum allowed value for TTL is one day.
+     * When the load balancing scheme is INTERNAL, this field is not used.
+     * 
+     */
     public Optional<Output<Integer>> affinityCookieTtlSec() {
         return Optional.ofNullable(this.affinityCookieTtlSec);
     }
@@ -49,6 +57,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="backends")
     private @Nullable Output<List<BackendServiceBackendGetArgs>> backends;
 
+    /**
+     * @return The set of backends that serve this BackendService.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<BackendServiceBackendGetArgs>>> backends() {
         return Optional.ofNullable(this.backends);
     }
@@ -61,6 +74,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="cdnPolicy")
     private @Nullable Output<BackendServiceCdnPolicyGetArgs> cdnPolicy;
 
+    /**
+     * @return Cloud CDN configuration for this BackendService.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceCdnPolicyGetArgs>> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
@@ -74,6 +92,12 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="circuitBreakers")
     private @Nullable Output<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
+    /**
+     * @return Settings controlling the volume of connections to a backend service. This field
+     * is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceCircuitBreakersGetArgs>> circuitBreakers() {
         return Optional.ofNullable(this.circuitBreakers);
     }
@@ -86,6 +110,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="connectionDrainingTimeoutSec")
     private @Nullable Output<Integer> connectionDrainingTimeoutSec;
 
+    /**
+     * @return Time for which instance will be drained (not accept new
+     * connections, but still work to finish started).
+     * 
+     */
     public Optional<Output<Integer>> connectionDrainingTimeoutSec() {
         return Optional.ofNullable(this.connectionDrainingTimeoutSec);
     }
@@ -105,6 +134,18 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="consistentHash")
     private @Nullable Output<BackendServiceConsistentHashGetArgs> consistentHash;
 
+    /**
+     * @return Consistent Hash-based load balancing can be used to provide soft session
+     * affinity based on HTTP headers, cookies or other properties. This load balancing
+     * policy is applicable only for HTTP connections. The affinity to a particular
+     * destination host will be lost when one or more hosts are added/removed from the
+     * destination service. This field specifies parameters that control consistent
+     * hashing. This field only applies if the load_balancing_scheme is set to
+     * INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+     * set to MAGLEV or RING_HASH.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceConsistentHashGetArgs>> consistentHash() {
         return Optional.ofNullable(this.consistentHash);
     }
@@ -116,6 +157,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -128,6 +173,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="customRequestHeaders")
     private @Nullable Output<List<String>> customRequestHeaders;
 
+    /**
+     * @return Headers that the HTTP/S load balancer should add to proxied
+     * requests.
+     * 
+     */
     public Optional<Output<List<String>>> customRequestHeaders() {
         return Optional.ofNullable(this.customRequestHeaders);
     }
@@ -140,6 +190,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="customResponseHeaders")
     private @Nullable Output<List<String>> customResponseHeaders;
 
+    /**
+     * @return Headers that the HTTP/S load balancer should add to proxied
+     * responses.
+     * 
+     */
     public Optional<Output<List<String>>> customResponseHeaders() {
         return Optional.ofNullable(this.customResponseHeaders);
     }
@@ -152,6 +207,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -163,6 +223,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="enableCdn")
     private @Nullable Output<Boolean> enableCdn;
 
+    /**
+     * @return If true, enable Cloud CDN for this BackendService.
+     * 
+     */
     public Optional<Output<Boolean>> enableCdn() {
         return Optional.ofNullable(this.enableCdn);
     }
@@ -174,6 +238,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -190,6 +258,15 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="healthChecks")
     private @Nullable Output<String> healthChecks;
 
+    /**
+     * @return The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+     * for health checking this BackendService. Currently at most one health
+     * check can be specified.
+     * A health check must be specified unless the backend service uses an internet
+     * or serverless NEG as a backend.
+     * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+     * 
+     */
     public Optional<Output<String>> healthChecks() {
         return Optional.ofNullable(this.healthChecks);
     }
@@ -202,6 +279,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="iap")
     private @Nullable Output<BackendServiceIapGetArgs> iap;
 
+    /**
+     * @return Settings for enabling Cloud Identity Aware Proxy
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceIapGetArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
@@ -218,6 +300,15 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="loadBalancingScheme")
     private @Nullable Output<String> loadBalancingScheme;
 
+    /**
+     * @return Indicates whether the backend service will be used with internal or
+     * external load balancing. A backend service created for one type of
+     * load balancing cannot be used with the other. For more information, refer to
+     * [Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service).
+     * Default value is `EXTERNAL`.
+     * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
+     * 
+     */
     public Optional<Output<String>> loadBalancingScheme() {
         return Optional.ofNullable(this.loadBalancingScheme);
     }
@@ -248,6 +339,29 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="localityLbPolicy")
     private @Nullable Output<String> localityLbPolicy;
 
+    /**
+     * @return The load balancing algorithm used within the scope of the locality.
+     * The possible values are:
+     * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
+     *   is selected in round robin order.
+     * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
+     *   hosts and picks the host which has fewer active requests.
+     * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
+     *   hashing to backends. The algorithm has the property that the
+     *   addition/removal of a host from a set of N hosts only affects
+     *   1/N of the requests.
+     * * `RANDOM`: The load balancer selects a random healthy host.
+     * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
+     *   connection metadata, i.e., connections are opened
+     *   to the same address as the destination address of
+     *   the incoming connection before the connection
+     *   was redirected to the load balancer.
+     * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
+     *   Maglev is not as stable as ring hash but has faster table lookup
+     *   build times and host selection times. For more information about
+     *   Maglev, refer to https://ai.google/research/pubs/pub44824
+     * 
+     */
     public Optional<Output<String>> localityLbPolicy() {
         return Optional.ofNullable(this.localityLbPolicy);
     }
@@ -261,6 +375,12 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="logConfig")
     private @Nullable Output<BackendServiceLogConfigGetArgs> logConfig;
 
+    /**
+     * @return This field denotes the logging options for the load balancer traffic served by this backend service.
+     * If logging is enabled, logs will be exported to Stackdriver.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceLogConfigGetArgs>> logConfig() {
         return Optional.ofNullable(this.logConfig);
     }
@@ -272,6 +392,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the cookie.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -286,6 +410,13 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="outlierDetection")
     private @Nullable Output<BackendServiceOutlierDetectionGetArgs> outlierDetection;
 
+    /**
+     * @return Settings controlling eviction of unhealthy hosts from the load balancing pool.
+     * This field is applicable only when the load_balancing_scheme is set
+     * to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceOutlierDetectionGetArgs>> outlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
@@ -299,6 +430,12 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="portName")
     private @Nullable Output<String> portName;
 
+    /**
+     * @return Name of backend port. The same name should appear in the instance
+     * groups referenced by this service. Required when the load balancing
+     * scheme is EXTERNAL.
+     * 
+     */
     public Optional<Output<String>> portName() {
         return Optional.ofNullable(this.portName);
     }
@@ -311,6 +448,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -325,6 +467,13 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return The protocol this BackendService uses to communicate with backends.
+     * The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+     * types and may result in errors if used with the GA API.
+     * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -336,6 +485,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="securityPolicy")
     private @Nullable Output<String> securityPolicy;
 
+    /**
+     * @return The security policy associated with this backend service.
+     * 
+     */
     public Optional<Output<String>> securityPolicy() {
         return Optional.ofNullable(this.securityPolicy);
     }
@@ -351,6 +504,14 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="securitySettings")
     private @Nullable Output<BackendServiceSecuritySettingsGetArgs> securitySettings;
 
+    /**
+     * @return The security settings that apply to this backend service. This field is applicable to either
+     * a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+     * load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+     * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BackendServiceSecuritySettingsGetArgs>> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
@@ -362,6 +523,10 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -375,6 +540,12 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="sessionAffinity")
     private @Nullable Output<String> sessionAffinity;
 
+    /**
+     * @return Type of session affinity to use. The default is NONE. Session affinity is
+     * not applicable if the protocol is UDP.
+     * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+     * 
+     */
     public Optional<Output<String>> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
@@ -387,6 +558,11 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
+    /**
+     * @return How many seconds to wait for the backend before considering it a
+     * failed request. Default is 30 seconds. Valid range is [1, 86400].
+     * 
+     */
     public Optional<Output<Integer>> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
@@ -441,257 +617,738 @@ public final class BackendServiceState extends com.pulumi.resources.ResourceArgs
             $ = new BackendServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinityCookieTtlSec Lifetime of cookies in seconds if session_affinity is
+         * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
+         * only until the end of the browser session (or equivalent). The
+         * maximum allowed value for TTL is one day.
+         * When the load balancing scheme is INTERNAL, this field is not used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityCookieTtlSec(@Nullable Output<Integer> affinityCookieTtlSec) {
             $.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
 
+        /**
+         * @param affinityCookieTtlSec Lifetime of cookies in seconds if session_affinity is
+         * GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
+         * only until the end of the browser session (or equivalent). The
+         * maximum allowed value for TTL is one day.
+         * When the load balancing scheme is INTERNAL, this field is not used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
             return affinityCookieTtlSec(Output.of(affinityCookieTtlSec));
         }
 
+        /**
+         * @param backends The set of backends that serve this BackendService.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(@Nullable Output<List<BackendServiceBackendGetArgs>> backends) {
             $.backends = backends;
             return this;
         }
 
+        /**
+         * @param backends The set of backends that serve this BackendService.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(List<BackendServiceBackendGetArgs> backends) {
             return backends(Output.of(backends));
         }
 
+        /**
+         * @param backends The set of backends that serve this BackendService.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(BackendServiceBackendGetArgs... backends) {
             return backends(List.of(backends));
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this BackendService.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(@Nullable Output<BackendServiceCdnPolicyGetArgs> cdnPolicy) {
             $.cdnPolicy = cdnPolicy;
             return this;
         }
 
+        /**
+         * @param cdnPolicy Cloud CDN configuration for this BackendService.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnPolicy(BackendServiceCdnPolicyGetArgs cdnPolicy) {
             return cdnPolicy(Output.of(cdnPolicy));
         }
 
+        /**
+         * @param circuitBreakers Settings controlling the volume of connections to a backend service. This field
+         * is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitBreakers(@Nullable Output<BackendServiceCircuitBreakersGetArgs> circuitBreakers) {
             $.circuitBreakers = circuitBreakers;
             return this;
         }
 
+        /**
+         * @param circuitBreakers Settings controlling the volume of connections to a backend service. This field
+         * is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitBreakers(BackendServiceCircuitBreakersGetArgs circuitBreakers) {
             return circuitBreakers(Output.of(circuitBreakers));
         }
 
+        /**
+         * @param connectionDrainingTimeoutSec Time for which instance will be drained (not accept new
+         * connections, but still work to finish started).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionDrainingTimeoutSec(@Nullable Output<Integer> connectionDrainingTimeoutSec) {
             $.connectionDrainingTimeoutSec = connectionDrainingTimeoutSec;
             return this;
         }
 
+        /**
+         * @param connectionDrainingTimeoutSec Time for which instance will be drained (not accept new
+         * connections, but still work to finish started).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionDrainingTimeoutSec(Integer connectionDrainingTimeoutSec) {
             return connectionDrainingTimeoutSec(Output.of(connectionDrainingTimeoutSec));
         }
 
+        /**
+         * @param consistentHash Consistent Hash-based load balancing can be used to provide soft session
+         * affinity based on HTTP headers, cookies or other properties. This load balancing
+         * policy is applicable only for HTTP connections. The affinity to a particular
+         * destination host will be lost when one or more hosts are added/removed from the
+         * destination service. This field specifies parameters that control consistent
+         * hashing. This field only applies if the load_balancing_scheme is set to
+         * INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+         * set to MAGLEV or RING_HASH.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistentHash(@Nullable Output<BackendServiceConsistentHashGetArgs> consistentHash) {
             $.consistentHash = consistentHash;
             return this;
         }
 
+        /**
+         * @param consistentHash Consistent Hash-based load balancing can be used to provide soft session
+         * affinity based on HTTP headers, cookies or other properties. This load balancing
+         * policy is applicable only for HTTP connections. The affinity to a particular
+         * destination host will be lost when one or more hosts are added/removed from the
+         * destination service. This field specifies parameters that control consistent
+         * hashing. This field only applies if the load_balancing_scheme is set to
+         * INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
+         * set to MAGLEV or RING_HASH.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistentHash(BackendServiceConsistentHashGetArgs consistentHash) {
             return consistentHash(Output.of(consistentHash));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param customRequestHeaders Headers that the HTTP/S load balancer should add to proxied
+         * requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(@Nullable Output<List<String>> customRequestHeaders) {
             $.customRequestHeaders = customRequestHeaders;
             return this;
         }
 
+        /**
+         * @param customRequestHeaders Headers that the HTTP/S load balancer should add to proxied
+         * requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(List<String> customRequestHeaders) {
             return customRequestHeaders(Output.of(customRequestHeaders));
         }
 
+        /**
+         * @param customRequestHeaders Headers that the HTTP/S load balancer should add to proxied
+         * requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRequestHeaders(String... customRequestHeaders) {
             return customRequestHeaders(List.of(customRequestHeaders));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied
+         * responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
             $.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied
+         * responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(List<String> customResponseHeaders) {
             return customResponseHeaders(Output.of(customResponseHeaders));
         }
 
+        /**
+         * @param customResponseHeaders Headers that the HTTP/S load balancer should add to proxied
+         * responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableCdn If true, enable Cloud CDN for this BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             $.enableCdn = enableCdn;
             return this;
         }
 
+        /**
+         * @param enableCdn If true, enable Cloud CDN for this BackendService.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCdn(Boolean enableCdn) {
             return enableCdn(Output.of(enableCdn));
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param healthChecks The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+         * for health checking this BackendService. Currently at most one health
+         * check can be specified.
+         * A health check must be specified unless the backend service uses an internet
+         * or serverless NEG as a backend.
+         * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(@Nullable Output<String> healthChecks) {
             $.healthChecks = healthChecks;
             return this;
         }
 
+        /**
+         * @param healthChecks The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
+         * for health checking this BackendService. Currently at most one health
+         * check can be specified.
+         * A health check must be specified unless the backend service uses an internet
+         * or serverless NEG as a backend.
+         * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(String healthChecks) {
             return healthChecks(Output.of(healthChecks));
         }
 
+        /**
+         * @param iap Settings for enabling Cloud Identity Aware Proxy
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(@Nullable Output<BackendServiceIapGetArgs> iap) {
             $.iap = iap;
             return this;
         }
 
+        /**
+         * @param iap Settings for enabling Cloud Identity Aware Proxy
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(BackendServiceIapGetArgs iap) {
             return iap(Output.of(iap));
         }
 
+        /**
+         * @param loadBalancingScheme Indicates whether the backend service will be used with internal or
+         * external load balancing. A backend service created for one type of
+         * load balancing cannot be used with the other. For more information, refer to
+         * [Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service).
+         * Default value is `EXTERNAL`.
+         * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             $.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
+        /**
+         * @param loadBalancingScheme Indicates whether the backend service will be used with internal or
+         * external load balancing. A backend service created for one type of
+         * load balancing cannot be used with the other. For more information, refer to
+         * [Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service).
+         * Default value is `EXTERNAL`.
+         * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingScheme(String loadBalancingScheme) {
             return loadBalancingScheme(Output.of(loadBalancingScheme));
         }
 
+        /**
+         * @param localityLbPolicy The load balancing algorithm used within the scope of the locality.
+         * The possible values are:
+         * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
+         *   is selected in round robin order.
+         * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
+         *   hosts and picks the host which has fewer active requests.
+         * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
+         *   hashing to backends. The algorithm has the property that the
+         *   addition/removal of a host from a set of N hosts only affects
+         *   1/N of the requests.
+         * * `RANDOM`: The load balancer selects a random healthy host.
+         * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
+         *   connection metadata, i.e., connections are opened
+         *   to the same address as the destination address of
+         *   the incoming connection before the connection
+         *   was redirected to the load balancer.
+         * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
+         *   Maglev is not as stable as ring hash but has faster table lookup
+         *   build times and host selection times. For more information about
+         *   Maglev, refer to https://ai.google/research/pubs/pub44824
+         * 
+         * @return builder
+         * 
+         */
         public Builder localityLbPolicy(@Nullable Output<String> localityLbPolicy) {
             $.localityLbPolicy = localityLbPolicy;
             return this;
         }
 
+        /**
+         * @param localityLbPolicy The load balancing algorithm used within the scope of the locality.
+         * The possible values are:
+         * * `ROUND_ROBIN`: This is a simple policy in which each healthy backend
+         *   is selected in round robin order.
+         * * `LEAST_REQUEST`: An O(1) algorithm which selects two random healthy
+         *   hosts and picks the host which has fewer active requests.
+         * * `RING_HASH`: The ring/modulo hash load balancer implements consistent
+         *   hashing to backends. The algorithm has the property that the
+         *   addition/removal of a host from a set of N hosts only affects
+         *   1/N of the requests.
+         * * `RANDOM`: The load balancer selects a random healthy host.
+         * * `ORIGINAL_DESTINATION`: Backend host is selected based on the client
+         *   connection metadata, i.e., connections are opened
+         *   to the same address as the destination address of
+         *   the incoming connection before the connection
+         *   was redirected to the load balancer.
+         * * `MAGLEV`: used as a drop in replacement for the ring hash load balancer.
+         *   Maglev is not as stable as ring hash but has faster table lookup
+         *   build times and host selection times. For more information about
+         *   Maglev, refer to https://ai.google/research/pubs/pub44824
+         * 
+         * @return builder
+         * 
+         */
         public Builder localityLbPolicy(String localityLbPolicy) {
             return localityLbPolicy(Output.of(localityLbPolicy));
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for the load balancer traffic served by this backend service.
+         * If logging is enabled, logs will be exported to Stackdriver.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(@Nullable Output<BackendServiceLogConfigGetArgs> logConfig) {
             $.logConfig = logConfig;
             return this;
         }
 
+        /**
+         * @param logConfig This field denotes the logging options for the load balancer traffic served by this backend service.
+         * If logging is enabled, logs will be exported to Stackdriver.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logConfig(BackendServiceLogConfigGetArgs logConfig) {
             return logConfig(Output.of(logConfig));
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outlierDetection Settings controlling eviction of unhealthy hosts from the load balancing pool.
+         * This field is applicable only when the load_balancing_scheme is set
+         * to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(@Nullable Output<BackendServiceOutlierDetectionGetArgs> outlierDetection) {
             $.outlierDetection = outlierDetection;
             return this;
         }
 
+        /**
+         * @param outlierDetection Settings controlling eviction of unhealthy hosts from the load balancing pool.
+         * This field is applicable only when the load_balancing_scheme is set
+         * to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(BackendServiceOutlierDetectionGetArgs outlierDetection) {
             return outlierDetection(Output.of(outlierDetection));
         }
 
+        /**
+         * @param portName Name of backend port. The same name should appear in the instance
+         * groups referenced by this service. Required when the load balancing
+         * scheme is EXTERNAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(@Nullable Output<String> portName) {
             $.portName = portName;
             return this;
         }
 
+        /**
+         * @param portName Name of backend port. The same name should appear in the instance
+         * groups referenced by this service. Required when the load balancing
+         * scheme is EXTERNAL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(String portName) {
             return portName(Output.of(portName));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param protocol The protocol this BackendService uses to communicate with backends.
+         * The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+         * types and may result in errors if used with the GA API.
+         * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol this BackendService uses to communicate with backends.
+         * The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
+         * types and may result in errors if used with the GA API.
+         * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param securityPolicy The security policy associated with this backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(@Nullable Output<String> securityPolicy) {
             $.securityPolicy = securityPolicy;
             return this;
         }
 
+        /**
+         * @param securityPolicy The security policy associated with this backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicy(String securityPolicy) {
             return securityPolicy(Output.of(securityPolicy));
         }
 
+        /**
+         * @param securitySettings The security settings that apply to this backend service. This field is applicable to either
+         * a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+         * load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+         * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(@Nullable Output<BackendServiceSecuritySettingsGetArgs> securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param securitySettings The security settings that apply to this backend service. This field is applicable to either
+         * a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+         * load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
+         * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(BackendServiceSecuritySettingsGetArgs securitySettings) {
             return securitySettings(Output.of(securitySettings));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param sessionAffinity Type of session affinity to use. The default is NONE. Session affinity is
+         * not applicable if the protocol is UDP.
+         * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             $.sessionAffinity = sessionAffinity;
             return this;
         }
 
+        /**
+         * @param sessionAffinity Type of session affinity to use. The default is NONE. Session affinity is
+         * not applicable if the protocol is UDP.
+         * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(String sessionAffinity) {
             return sessionAffinity(Output.of(sessionAffinity));
         }
 
+        /**
+         * @param timeoutSec How many seconds to wait for the backend before considering it a
+         * failed request. Default is 30 seconds. Valid range is [1, 86400].
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             $.timeoutSec = timeoutSec;
             return this;
         }
 
+        /**
+         * @param timeoutSec How many seconds to wait for the backend before considering it a
+         * failed request. Default is 30 seconds. Valid range is [1, 86400].
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSec(Integer timeoutSec) {
             return timeoutSec(Output.of(timeoutSec));
         }

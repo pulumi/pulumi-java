@@ -29,6 +29,10 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appId", required=true)
     private Output<String> appId;
 
+    /**
+     * @return Facebook application id
+     * 
+     */
     public Output<String> appId() {
         return this.appId;
     }
@@ -40,6 +44,10 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appSecret")
     private @Nullable Output<String> appSecret;
 
+    /**
+     * @return Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> appSecret() {
         return Optional.ofNullable(this.appSecret);
     }
@@ -51,6 +59,10 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -62,6 +74,10 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="pages")
     private @Nullable Output<List<FacebookPageArgs>> pages;
 
+    /**
+     * @return The list of Facebook pages
+     * 
+     */
     public Optional<Output<List<FacebookPageArgs>>> pages() {
         return Optional.ofNullable(this.pages);
     }
@@ -93,42 +109,96 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
             $ = new FacebookChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Facebook application id
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId Facebook application id
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param appSecret Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSecret(@Nullable Output<String> appSecret) {
             $.appSecret = appSecret;
             return this;
         }
 
+        /**
+         * @param appSecret Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSecret(String appSecret) {
             return appSecret(Output.of(appSecret));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param pages The list of Facebook pages
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(@Nullable Output<List<FacebookPageArgs>> pages) {
             $.pages = pages;
             return this;
         }
 
+        /**
+         * @param pages The list of Facebook pages
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(List<FacebookPageArgs> pages) {
             return pages(Output.of(pages));
         }
 
+        /**
+         * @param pages The list of Facebook pages
+         * 
+         * @return builder
+         * 
+         */
         public Builder pages(FacebookPageArgs... pages) {
             return pages(List.of(pages));
         }

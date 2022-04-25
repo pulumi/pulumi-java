@@ -26,6 +26,10 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this site is enabled for DirectLine channel
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -37,6 +41,10 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
     private Output<Boolean> isWebchatPreviewEnabled;
 
+    /**
+     * @return Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     public Output<Boolean> isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
@@ -48,6 +56,10 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteName", required=true)
     private Output<String> siteName;
 
+    /**
+     * @return Site name
+     * 
+     */
     public Output<String> siteName() {
         return this.siteName;
     }
@@ -78,29 +90,65 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebChatSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isWebchatPreviewEnabled Whether this site is enabled for preview versions of Webchat
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebchatPreviewEnabled(Output<Boolean> isWebchatPreviewEnabled) {
             $.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
             return this;
         }
 
+        /**
+         * @param isWebchatPreviewEnabled Whether this site is enabled for preview versions of Webchat
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             return isWebchatPreviewEnabled(Output.of(isWebchatPreviewEnabled));
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(Output<String> siteName) {
             $.siteName = siteName;
             return this;
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             return siteName(Output.of(siteName));
         }

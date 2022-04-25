@@ -22,6 +22,10 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="imageFamily")
     private @Nullable Output<String> imageFamily;
 
+    /**
+     * @return Use this VM image family to find the image; the newest image in this family will be used.
+     * 
+     */
     public Optional<Output<String>> imageFamily() {
         return Optional.ofNullable(this.imageFamily);
     }
@@ -33,6 +37,10 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="imageName")
     private @Nullable Output<String> imageName;
 
+    /**
+     * @return Use VM image name to find the image.
+     * 
+     */
     public Optional<Output<String>> imageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -45,6 +53,11 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The name of the Google Cloud project that this VM image belongs to.
+     * Format: projects/{project_id}
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -75,29 +88,67 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceVmImageGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageFamily Use this VM image family to find the image; the newest image in this family will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageFamily(@Nullable Output<String> imageFamily) {
             $.imageFamily = imageFamily;
             return this;
         }
 
+        /**
+         * @param imageFamily Use this VM image family to find the image; the newest image in this family will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageFamily(String imageFamily) {
             return imageFamily(Output.of(imageFamily));
         }
 
+        /**
+         * @param imageName Use VM image name to find the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(@Nullable Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName Use VM image name to find the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param project The name of the Google Cloud project that this VM image belongs to.
+         * Format: projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The name of the Google Cloud project that this VM image belongs to.
+         * Format: projects/{project_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

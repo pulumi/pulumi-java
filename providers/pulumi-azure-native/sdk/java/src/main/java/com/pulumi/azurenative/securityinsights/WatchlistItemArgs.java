@@ -25,6 +25,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="created")
     private @Nullable Output<String> created;
 
+    /**
+     * @return The time the watchlist item was created
+     * 
+     */
     public Optional<Output<String>> created() {
         return Optional.ofNullable(this.created);
     }
@@ -36,6 +40,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
     private @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
+    /**
+     * @return Describes a user that created the watchlist item
+     * 
+     */
     public Optional<Output<WatchlistUserInfoArgs>> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -47,6 +55,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entityMapping")
     private @Nullable Output<Object> entityMapping;
 
+    /**
+     * @return key-value pairs for a watchlist item entity mapping
+     * 
+     */
     public Optional<Output<Object>> entityMapping() {
         return Optional.ofNullable(this.entityMapping);
     }
@@ -58,6 +70,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isDeleted")
     private @Nullable Output<Boolean> isDeleted;
 
+    /**
+     * @return A flag that indicates if the watchlist item is deleted or not
+     * 
+     */
     public Optional<Output<Boolean>> isDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
@@ -69,6 +85,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="itemsKeyValue", required=true)
     private Output<Object> itemsKeyValue;
 
+    /**
+     * @return key-value pairs for a watchlist item
+     * 
+     */
     public Output<Object> itemsKeyValue() {
         return this.itemsKeyValue;
     }
@@ -80,6 +100,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -91,6 +115,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenantId to which the watchlist item belongs to
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -113,6 +145,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updated")
     private @Nullable Output<String> updated;
 
+    /**
+     * @return The last time the watchlist item was updated
+     * 
+     */
     public Optional<Output<String>> updated() {
         return Optional.ofNullable(this.updated);
     }
@@ -124,6 +160,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedBy")
     private @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
+    /**
+     * @return Describes a user that updated the watchlist item
+     * 
+     */
     public Optional<Output<WatchlistUserInfoArgs>> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
@@ -135,6 +175,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistAlias", required=true)
     private Output<String> watchlistAlias;
 
+    /**
+     * @return Watchlist Alias
+     * 
+     */
     public Output<String> watchlistAlias() {
         return this.watchlistAlias;
     }
@@ -146,6 +190,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistItemId")
     private @Nullable Output<String> watchlistItemId;
 
+    /**
+     * @return The id (a Guid) of the watchlist item
+     * 
+     */
     public Optional<Output<String>> watchlistItemId() {
         return Optional.ofNullable(this.watchlistItemId);
     }
@@ -157,6 +205,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watchlistItemType")
     private @Nullable Output<String> watchlistItemType;
 
+    /**
+     * @return The type of the watchlist item
+     * 
+     */
     public Optional<Output<String>> watchlistItemType() {
         return Optional.ofNullable(this.watchlistItemType);
     }
@@ -168,6 +220,10 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -209,128 +265,296 @@ public final class WatchlistItemArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WatchlistItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param created The time the watchlist item was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(@Nullable Output<String> created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param created The time the watchlist item was created
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(String created) {
             return created(Output.of(created));
         }
 
+        /**
+         * @param createdBy Describes a user that created the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable Output<WatchlistUserInfoArgs> createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdBy Describes a user that created the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(WatchlistUserInfoArgs createdBy) {
             return createdBy(Output.of(createdBy));
         }
 
+        /**
+         * @param entityMapping key-value pairs for a watchlist item entity mapping
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityMapping(@Nullable Output<Object> entityMapping) {
             $.entityMapping = entityMapping;
             return this;
         }
 
+        /**
+         * @param entityMapping key-value pairs for a watchlist item entity mapping
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityMapping(Object entityMapping) {
             return entityMapping(Output.of(entityMapping));
         }
 
+        /**
+         * @param isDeleted A flag that indicates if the watchlist item is deleted or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeleted(@Nullable Output<Boolean> isDeleted) {
             $.isDeleted = isDeleted;
             return this;
         }
 
+        /**
+         * @param isDeleted A flag that indicates if the watchlist item is deleted or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeleted(Boolean isDeleted) {
             return isDeleted(Output.of(isDeleted));
         }
 
+        /**
+         * @param itemsKeyValue key-value pairs for a watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsKeyValue(Output<Object> itemsKeyValue) {
             $.itemsKeyValue = itemsKeyValue;
             return this;
         }
 
+        /**
+         * @param itemsKeyValue key-value pairs for a watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsKeyValue(Object itemsKeyValue) {
             return itemsKeyValue(Output.of(itemsKeyValue));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tenantId The tenantId to which the watchlist item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenantId to which the watchlist item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param updated The last time the watchlist item was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(@Nullable Output<String> updated) {
             $.updated = updated;
             return this;
         }
 
+        /**
+         * @param updated The last time the watchlist item was updated
+         * 
+         * @return builder
+         * 
+         */
         public Builder updated(String updated) {
             return updated(Output.of(updated));
         }
 
+        /**
+         * @param updatedBy Describes a user that updated the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedBy(@Nullable Output<WatchlistUserInfoArgs> updatedBy) {
             $.updatedBy = updatedBy;
             return this;
         }
 
+        /**
+         * @param updatedBy Describes a user that updated the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedBy(WatchlistUserInfoArgs updatedBy) {
             return updatedBy(Output.of(updatedBy));
         }
 
+        /**
+         * @param watchlistAlias Watchlist Alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistAlias(Output<String> watchlistAlias) {
             $.watchlistAlias = watchlistAlias;
             return this;
         }
 
+        /**
+         * @param watchlistAlias Watchlist Alias
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistAlias(String watchlistAlias) {
             return watchlistAlias(Output.of(watchlistAlias));
         }
 
+        /**
+         * @param watchlistItemId The id (a Guid) of the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistItemId(@Nullable Output<String> watchlistItemId) {
             $.watchlistItemId = watchlistItemId;
             return this;
         }
 
+        /**
+         * @param watchlistItemId The id (a Guid) of the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistItemId(String watchlistItemId) {
             return watchlistItemId(Output.of(watchlistItemId));
         }
 
+        /**
+         * @param watchlistItemType The type of the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistItemType(@Nullable Output<String> watchlistItemType) {
             $.watchlistItemType = watchlistItemType;
             return this;
         }
 
+        /**
+         * @param watchlistItemType The type of the watchlist item
+         * 
+         * @return builder
+         * 
+         */
         public Builder watchlistItemType(String watchlistItemType) {
             return watchlistItemType(Output.of(watchlistItemType));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

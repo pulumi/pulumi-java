@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GlobalReplicationGroupRegionalConfiguration {
     /**
-     * The replication group id of the Global Datastore member.
+     * @return The replication group id of the Global Datastore member.
      * 
      */
     private final @Nullable String replicationGroupId;
     /**
-     * The AWS region of the Global Datastore member.
+     * @return The AWS region of the Global Datastore member.
      * 
      */
     private final @Nullable String replicationGroupRegion;
     /**
-     * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+     * @return A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
      * 
      */
     private final @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations;
@@ -40,23 +40,23 @@ public final class GlobalReplicationGroupRegionalConfiguration {
     }
 
     /**
-     * The replication group id of the Global Datastore member.
+     * @return The replication group id of the Global Datastore member.
      * 
-    */
+     */
     public Optional<String> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
     /**
-     * The AWS region of the Global Datastore member.
+     * @return The AWS region of the Global Datastore member.
      * 
-    */
+     */
     public Optional<String> replicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
     /**
-     * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
+     * @return A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
      * 
-    */
+     */
     public List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations() {
         return this.reshardingConfigurations == null ? List.of() : this.reshardingConfigurations;
     }

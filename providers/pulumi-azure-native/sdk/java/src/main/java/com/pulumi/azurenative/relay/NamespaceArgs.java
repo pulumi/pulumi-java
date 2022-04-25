@@ -24,6 +24,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName")
     private @Nullable Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
@@ -46,6 +54,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return SKU of the namespace.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -68,6 +84,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU of the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU of the namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

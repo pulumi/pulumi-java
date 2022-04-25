@@ -27,6 +27,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionGroupId", required=true)
     private Output<String> actionGroupId;
 
+    /**
+     * @return The resource ID of the Action Group. This cannot be null or empty.
+     * 
+     */
     public Output<String> actionGroupId() {
         return this.actionGroupId;
     }
@@ -38,6 +42,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhookProperties")
     private @Nullable Output<Map<String,String>> webhookProperties;
 
+    /**
+     * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+     * 
+     */
     public Optional<Output<Map<String,String>>> webhookProperties() {
         return Optional.ofNullable(this.webhookProperties);
     }
@@ -67,20 +75,44 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroupId The resource ID of the Action Group. This cannot be null or empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(Output<String> actionGroupId) {
             $.actionGroupId = actionGroupId;
             return this;
         }
 
+        /**
+         * @param actionGroupId The resource ID of the Action Group. This cannot be null or empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroupId(String actionGroupId) {
             return actionGroupId(Output.of(actionGroupId));
         }
 
+        /**
+         * @param webhookProperties the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookProperties(@Nullable Output<Map<String,String>> webhookProperties) {
             $.webhookProperties = webhookProperties;
             return this;
         }
 
+        /**
+         * @param webhookProperties the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookProperties(Map<String,String> webhookProperties) {
             return webhookProperties(Output.of(webhookProperties));
         }

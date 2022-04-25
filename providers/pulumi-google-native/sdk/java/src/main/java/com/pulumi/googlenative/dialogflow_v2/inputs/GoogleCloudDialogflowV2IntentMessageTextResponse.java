@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends com.
     @Import(name="text", required=true)
     private List<String> text;
 
+    /**
+     * @return Optional. The collection of the agent&#39;s responses.
+     * 
+     */
     public List<String> text() {
         return this.text;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends com.
             $ = new GoogleCloudDialogflowV2IntentMessageTextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param text Optional. The collection of the agent&#39;s responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(List<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text Optional. The collection of the agent&#39;s responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String... text) {
             return text(List.of(text));
         }

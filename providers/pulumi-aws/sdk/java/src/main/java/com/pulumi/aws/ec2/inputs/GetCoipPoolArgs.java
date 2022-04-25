@@ -31,6 +31,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="localGatewayRouteTableId")
     private @Nullable String localGatewayRouteTableId;
 
+    /**
+     * @return Local Gateway Route Table Id assigned to desired COIP Pool
+     * 
+     */
     public Optional<String> localGatewayRouteTableId() {
         return Optional.ofNullable(this.localGatewayRouteTableId);
     }
@@ -42,6 +46,10 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="poolId")
     private @Nullable String poolId;
 
+    /**
+     * @return The id of the specific COIP Pool to retrieve.
+     * 
+     */
     public Optional<String> poolId() {
         return Optional.ofNullable(this.poolId);
     }
@@ -54,6 +62,11 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A mapping of tags, each pair of which must exactly match
+     * a pair on the desired COIP Pool.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -94,16 +107,35 @@ public final class GetCoipPoolArgs extends com.pulumi.resources.InvokeArgs {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param localGatewayRouteTableId Local Gateway Route Table Id assigned to desired COIP Pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
+        /**
+         * @param poolId The id of the specific COIP Pool to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder poolId(@Nullable String poolId) {
             $.poolId = poolId;
             return this;
         }
 
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired COIP Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

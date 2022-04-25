@@ -27,6 +27,10 @@ public final class StreamingPolicyContentKeysResponse extends com.pulumi.resourc
     @Import(name="defaultKey")
     private @Nullable DefaultKeyResponse defaultKey;
 
+    /**
+     * @return Default content key for an encryption scheme
+     * 
+     */
     public Optional<DefaultKeyResponse> defaultKey() {
         return Optional.ofNullable(this.defaultKey);
     }
@@ -38,6 +42,10 @@ public final class StreamingPolicyContentKeysResponse extends com.pulumi.resourc
     @Import(name="keyToTrackMappings")
     private @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 
+    /**
+     * @return Representing tracks needs separate content key
+     * 
+     */
     public Optional<List<StreamingPolicyContentKeyResponse>> keyToTrackMappings() {
         return Optional.ofNullable(this.keyToTrackMappings);
     }
@@ -67,16 +75,34 @@ public final class StreamingPolicyContentKeysResponse extends com.pulumi.resourc
             $ = new StreamingPolicyContentKeysResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKey Default content key for an encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKey(@Nullable DefaultKeyResponse defaultKey) {
             $.defaultKey = defaultKey;
             return this;
         }
 
+        /**
+         * @param keyToTrackMappings Representing tracks needs separate content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
             $.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
 
+        /**
+         * @param keyToTrackMappings Representing tracks needs separate content key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyToTrackMappings(StreamingPolicyContentKeyResponse... keyToTrackMappings) {
             return keyToTrackMappings(List.of(keyToTrackMappings));
         }

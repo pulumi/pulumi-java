@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DelayActionResponse {
     /**
-     * ISO8601 formatted string that represents a duration.
+     * @return ISO8601 formatted string that represents a duration.
      * 
      */
     private final String duration;
     /**
-     * String that represents a Capability URN.
+     * @return String that represents a Capability URN.
      * 
      */
     private final String name;
     /**
-     * Enum that discriminates between action models.
+     * @return Enum that discriminates between action models.
      * Expected value is &#39;delay&#39;.
      * 
      */
@@ -37,24 +37,24 @@ public final class DelayActionResponse {
     }
 
     /**
-     * ISO8601 formatted string that represents a duration.
+     * @return ISO8601 formatted string that represents a duration.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * String that represents a Capability URN.
+     * @return String that represents a Capability URN.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Enum that discriminates between action models.
+     * @return Enum that discriminates between action models.
      * Expected value is &#39;delay&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

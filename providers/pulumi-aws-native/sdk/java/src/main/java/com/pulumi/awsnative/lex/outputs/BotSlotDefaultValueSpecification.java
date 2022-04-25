@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BotSlotDefaultValueSpecification {
     /**
-     * A list of slot default values
+     * @return A list of slot default values
      * 
      */
     private final List<BotSlotDefaultValue> defaultValueList;
@@ -22,9 +22,9 @@ public final class BotSlotDefaultValueSpecification {
     }
 
     /**
-     * A list of slot default values
+     * @return A list of slot default values
      * 
-    */
+     */
     public List<BotSlotDefaultValue> defaultValueList() {
         return this.defaultValueList;
     }

@@ -27,6 +27,10 @@ public final class DetectorModelOnExitArgs extends com.pulumi.resources.Resource
     @Import(name="events")
     private @Nullable Output<List<DetectorModelEventArgs>> events;
 
+    /**
+     * @return Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+     * 
+     */
     public Optional<Output<List<DetectorModelEventArgs>>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -55,15 +59,33 @@ public final class DetectorModelOnExitArgs extends com.pulumi.resources.Resource
             $ = new DetectorModelOnExitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable Output<List<DetectorModelEventArgs>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<DetectorModelEventArgs> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(DetectorModelEventArgs... events) {
             return events(List.of(events));
         }

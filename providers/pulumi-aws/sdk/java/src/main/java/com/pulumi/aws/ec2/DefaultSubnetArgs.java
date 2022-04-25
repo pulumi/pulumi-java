@@ -24,6 +24,10 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
     private Output<String> availabilityZone;
 
+    /**
+     * @return AZ for the subnet.
+     * 
+     */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
@@ -77,6 +81,10 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mapPublicIpOnLaunch")
     private @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
+    /**
+     * @return Whether instances launched into the subnet should be assigned a public IP address.
+     * 
+     */
     public Optional<Output<Boolean>> mapPublicIpOnLaunch() {
         return Optional.ofNullable(this.mapPublicIpOnLaunch);
     }
@@ -102,6 +110,10 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,11 +152,23 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DefaultSubnetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone AZ for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone AZ for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
@@ -203,11 +227,23 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             return mapCustomerOwnedIpOnLaunch(Output.of(mapCustomerOwnedIpOnLaunch));
         }
 
+        /**
+         * @param mapPublicIpOnLaunch Whether instances launched into the subnet should be assigned a public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
             $.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
+        /**
+         * @param mapPublicIpOnLaunch Whether instances launched into the subnet should be assigned a public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
             return mapPublicIpOnLaunch(Output.of(mapPublicIpOnLaunch));
         }
@@ -230,11 +266,23 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             return privateDnsHostnameTypeOnLaunch(Output.of(privateDnsHostnameTypeOnLaunch));
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

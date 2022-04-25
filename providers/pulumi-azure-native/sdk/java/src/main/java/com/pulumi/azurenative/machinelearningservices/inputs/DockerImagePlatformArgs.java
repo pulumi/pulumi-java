@@ -24,6 +24,10 @@ public final class DockerImagePlatformArgs extends com.pulumi.resources.Resource
     @Import(name="operatingSystemType")
     private @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
+    /**
+     * @return The OS type the Environment.
+     * 
+     */
     public Optional<Output<Either<String,OperatingSystemType>>> operatingSystemType() {
         return Optional.ofNullable(this.operatingSystemType);
     }
@@ -52,19 +56,43 @@ public final class DockerImagePlatformArgs extends com.pulumi.resources.Resource
             $ = new DockerImagePlatformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatingSystemType The OS type the Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemType(@Nullable Output<Either<String,OperatingSystemType>> operatingSystemType) {
             $.operatingSystemType = operatingSystemType;
             return this;
         }
 
+        /**
+         * @param operatingSystemType The OS type the Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemType(Either<String,OperatingSystemType> operatingSystemType) {
             return operatingSystemType(Output.of(operatingSystemType));
         }
 
+        /**
+         * @param operatingSystemType The OS type the Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemType(String operatingSystemType) {
             return operatingSystemType(Either.ofLeft(operatingSystemType));
         }
 
+        /**
+         * @param operatingSystemType The OS type the Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemType(OperatingSystemType operatingSystemType) {
             return operatingSystemType(Either.ofRight(operatingSystemType));
         }

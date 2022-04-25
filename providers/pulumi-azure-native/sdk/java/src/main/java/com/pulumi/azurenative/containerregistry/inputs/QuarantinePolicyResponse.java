@@ -26,6 +26,10 @@ public final class QuarantinePolicyResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -54,6 +58,12 @@ public final class QuarantinePolicyResponse extends com.pulumi.resources.InvokeA
             $ = new QuarantinePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

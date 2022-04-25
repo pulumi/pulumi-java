@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MongoIndexOptionsResponse {
     /**
-     * Expire after seconds
+     * @return Expire after seconds
      * 
      */
     private final @Nullable Integer expireAfterSeconds;
     /**
-     * Is unique or not
+     * @return Is unique or not
      * 
      */
     private final @Nullable Boolean unique;
@@ -32,16 +32,16 @@ public final class MongoIndexOptionsResponse {
     }
 
     /**
-     * Expire after seconds
+     * @return Expire after seconds
      * 
-    */
+     */
     public Optional<Integer> expireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
     /**
-     * Is unique or not
+     * @return Is unique or not
      * 
-    */
+     */
     public Optional<Boolean> unique() {
         return Optional.ofNullable(this.unique);
     }

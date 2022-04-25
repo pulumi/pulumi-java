@@ -33,6 +33,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="details", required=true)
     private Map<String,Object> details;
 
+    /**
+     * @return Gets additional details specific to this recommended action.
+     * 
+     */
     public Map<String,Object> details() {
         return this.details;
     }
@@ -44,6 +48,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="errorDetails", required=true)
     private RecommendedActionErrorInfoResponse errorDetails;
 
+    /**
+     * @return Gets the error details if and why this recommended action is put to error state.
+     * 
+     */
     public RecommendedActionErrorInfoResponse errorDetails() {
         return this.errorDetails;
     }
@@ -55,6 +63,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="estimatedImpact", required=true)
     private List<RecommendedActionImpactRecordResponse> estimatedImpact;
 
+    /**
+     * @return Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+     * 
+     */
     public List<RecommendedActionImpactRecordResponse> estimatedImpact() {
         return this.estimatedImpact;
     }
@@ -66,6 +78,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="executeActionDuration", required=true)
     private String executeActionDuration;
 
+    /**
+     * @return Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+     * 
+     */
     public String executeActionDuration() {
         return this.executeActionDuration;
     }
@@ -77,6 +93,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="executeActionInitiatedBy", required=true)
     private String executeActionInitiatedBy;
 
+    /**
+     * @return Gets if approval for applying this recommended action was given by user/system.
+     * 
+     */
     public String executeActionInitiatedBy() {
         return this.executeActionInitiatedBy;
     }
@@ -88,6 +108,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="executeActionInitiatedTime", required=true)
     private String executeActionInitiatedTime;
 
+    /**
+     * @return Gets the time when this recommended action was approved for execution.
+     * 
+     */
     public String executeActionInitiatedTime() {
         return this.executeActionInitiatedTime;
     }
@@ -99,6 +123,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="executeActionStartTime", required=true)
     private String executeActionStartTime;
 
+    /**
+     * @return Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+     * 
+     */
     public String executeActionStartTime() {
         return this.executeActionStartTime;
     }
@@ -110,6 +138,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -121,6 +153,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="implementationDetails", required=true)
     private RecommendedActionImplementationInfoResponse implementationDetails;
 
+    /**
+     * @return Gets the implementation details of this recommended action for user to apply it manually.
+     * 
+     */
     public RecommendedActionImplementationInfoResponse implementationDetails() {
         return this.implementationDetails;
     }
@@ -132,6 +168,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="isArchivedAction", required=true)
     private Boolean isArchivedAction;
 
+    /**
+     * @return Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+     * 
+     */
     public Boolean isArchivedAction() {
         return this.isArchivedAction;
     }
@@ -143,6 +183,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="isExecutableAction", required=true)
     private Boolean isExecutableAction;
 
+    /**
+     * @return Gets if this recommended action is actionable by user
+     * 
+     */
     public Boolean isExecutableAction() {
         return this.isExecutableAction;
     }
@@ -154,6 +198,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="isRevertableAction", required=true)
     private Boolean isRevertableAction;
 
+    /**
+     * @return Gets if changes applied by this recommended action can be reverted by user
+     * 
+     */
     public Boolean isRevertableAction() {
         return this.isRevertableAction;
     }
@@ -165,6 +213,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Resource kind.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -176,6 +228,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="lastRefresh", required=true)
     private String lastRefresh;
 
+    /**
+     * @return Gets time when this recommended action was last refreshed.
+     * 
+     */
     public String lastRefresh() {
         return this.lastRefresh;
     }
@@ -187,6 +243,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="linkedObjects", required=true)
     private List<String> linkedObjects;
 
+    /**
+     * @return Gets the linked objects, if any.
+     * 
+     */
     public List<String> linkedObjects() {
         return this.linkedObjects;
     }
@@ -198,6 +258,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -209,6 +273,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -220,6 +288,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="observedImpact", required=true)
     private List<RecommendedActionImpactRecordResponse> observedImpact;
 
+    /**
+     * @return Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+     * 
+     */
     public List<RecommendedActionImpactRecordResponse> observedImpact() {
         return this.observedImpact;
     }
@@ -231,6 +303,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="recommendationReason", required=true)
     private String recommendationReason;
 
+    /**
+     * @return Gets the reason for recommending this action. e.g., DuplicateIndex
+     * 
+     */
     public String recommendationReason() {
         return this.recommendationReason;
     }
@@ -242,6 +318,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="revertActionDuration", required=true)
     private String revertActionDuration;
 
+    /**
+     * @return Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+     * 
+     */
     public String revertActionDuration() {
         return this.revertActionDuration;
     }
@@ -253,6 +333,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="revertActionInitiatedBy", required=true)
     private String revertActionInitiatedBy;
 
+    /**
+     * @return Gets if approval for reverting this recommended action was given by user/system.
+     * 
+     */
     public String revertActionInitiatedBy() {
         return this.revertActionInitiatedBy;
     }
@@ -264,6 +348,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="revertActionInitiatedTime", required=true)
     private String revertActionInitiatedTime;
 
+    /**
+     * @return Gets the time when this recommended action was approved for revert.
+     * 
+     */
     public String revertActionInitiatedTime() {
         return this.revertActionInitiatedTime;
     }
@@ -275,6 +363,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="revertActionStartTime", required=true)
     private String revertActionStartTime;
 
+    /**
+     * @return Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+     * 
+     */
     public String revertActionStartTime() {
         return this.revertActionStartTime;
     }
@@ -286,6 +378,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="score", required=true)
     private Integer score;
 
+    /**
+     * @return Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+     * 
+     */
     public Integer score() {
         return this.score;
     }
@@ -297,6 +393,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="state", required=true)
     private RecommendedActionStateInfoResponse state;
 
+    /**
+     * @return Gets the info of the current state the recommended action is in.
+     * 
+     */
     public RecommendedActionStateInfoResponse state() {
         return this.state;
     }
@@ -308,6 +408,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="timeSeries", required=true)
     private List<RecommendedActionMetricInfoResponse> timeSeries;
 
+    /**
+     * @return Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+     * 
+     */
     public List<RecommendedActionMetricInfoResponse> timeSeries() {
         return this.timeSeries;
     }
@@ -319,6 +423,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -330,6 +438,10 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
     @Import(name="validSince", required=true)
     private String validSince;
 
+    /**
+     * @return Gets the time since when this recommended action is valid.
+     * 
+     */
     public String validSince() {
         return this.validSince;
     }
@@ -385,157 +497,349 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
             $ = new RecommendedActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details Gets additional details specific to this recommended action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(Map<String,Object> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param errorDetails Gets the error details if and why this recommended action is put to error state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorDetails(RecommendedActionErrorInfoResponse errorDetails) {
             $.errorDetails = errorDetails;
             return this;
         }
 
+        /**
+         * @param estimatedImpact Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedImpact(List<RecommendedActionImpactRecordResponse> estimatedImpact) {
             $.estimatedImpact = estimatedImpact;
             return this;
         }
 
+        /**
+         * @param estimatedImpact Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedImpact(RecommendedActionImpactRecordResponse... estimatedImpact) {
             return estimatedImpact(List.of(estimatedImpact));
         }
 
+        /**
+         * @param executeActionDuration Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeActionDuration(String executeActionDuration) {
             $.executeActionDuration = executeActionDuration;
             return this;
         }
 
+        /**
+         * @param executeActionInitiatedBy Gets if approval for applying this recommended action was given by user/system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeActionInitiatedBy(String executeActionInitiatedBy) {
             $.executeActionInitiatedBy = executeActionInitiatedBy;
             return this;
         }
 
+        /**
+         * @param executeActionInitiatedTime Gets the time when this recommended action was approved for execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeActionInitiatedTime(String executeActionInitiatedTime) {
             $.executeActionInitiatedTime = executeActionInitiatedTime;
             return this;
         }
 
+        /**
+         * @param executeActionStartTime Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeActionStartTime(String executeActionStartTime) {
             $.executeActionStartTime = executeActionStartTime;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param implementationDetails Gets the implementation details of this recommended action for user to apply it manually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationDetails(RecommendedActionImplementationInfoResponse implementationDetails) {
             $.implementationDetails = implementationDetails;
             return this;
         }
 
+        /**
+         * @param isArchivedAction Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchivedAction(Boolean isArchivedAction) {
             $.isArchivedAction = isArchivedAction;
             return this;
         }
 
+        /**
+         * @param isExecutableAction Gets if this recommended action is actionable by user
+         * 
+         * @return builder
+         * 
+         */
         public Builder isExecutableAction(Boolean isExecutableAction) {
             $.isExecutableAction = isExecutableAction;
             return this;
         }
 
+        /**
+         * @param isRevertableAction Gets if changes applied by this recommended action can be reverted by user
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRevertableAction(Boolean isRevertableAction) {
             $.isRevertableAction = isRevertableAction;
             return this;
         }
 
+        /**
+         * @param kind Resource kind.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param lastRefresh Gets time when this recommended action was last refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefresh(String lastRefresh) {
             $.lastRefresh = lastRefresh;
             return this;
         }
 
+        /**
+         * @param linkedObjects Gets the linked objects, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedObjects(List<String> linkedObjects) {
             $.linkedObjects = linkedObjects;
             return this;
         }
 
+        /**
+         * @param linkedObjects Gets the linked objects, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedObjects(String... linkedObjects) {
             return linkedObjects(List.of(linkedObjects));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param observedImpact Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedImpact(List<RecommendedActionImpactRecordResponse> observedImpact) {
             $.observedImpact = observedImpact;
             return this;
         }
 
+        /**
+         * @param observedImpact Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
+         * 
+         * @return builder
+         * 
+         */
         public Builder observedImpact(RecommendedActionImpactRecordResponse... observedImpact) {
             return observedImpact(List.of(observedImpact));
         }
 
+        /**
+         * @param recommendationReason Gets the reason for recommending this action. e.g., DuplicateIndex
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationReason(String recommendationReason) {
             $.recommendationReason = recommendationReason;
             return this;
         }
 
+        /**
+         * @param revertActionDuration Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revertActionDuration(String revertActionDuration) {
             $.revertActionDuration = revertActionDuration;
             return this;
         }
 
+        /**
+         * @param revertActionInitiatedBy Gets if approval for reverting this recommended action was given by user/system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revertActionInitiatedBy(String revertActionInitiatedBy) {
             $.revertActionInitiatedBy = revertActionInitiatedBy;
             return this;
         }
 
+        /**
+         * @param revertActionInitiatedTime Gets the time when this recommended action was approved for revert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revertActionInitiatedTime(String revertActionInitiatedTime) {
             $.revertActionInitiatedTime = revertActionInitiatedTime;
             return this;
         }
 
+        /**
+         * @param revertActionStartTime Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revertActionStartTime(String revertActionStartTime) {
             $.revertActionStartTime = revertActionStartTime;
             return this;
         }
 
+        /**
+         * @param score Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
+         * 
+         * @return builder
+         * 
+         */
         public Builder score(Integer score) {
             $.score = score;
             return this;
         }
 
+        /**
+         * @param state Gets the info of the current state the recommended action is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(RecommendedActionStateInfoResponse state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param timeSeries Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(List<RecommendedActionMetricInfoResponse> timeSeries) {
             $.timeSeries = timeSeries;
             return this;
         }
 
+        /**
+         * @param timeSeries Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSeries(RecommendedActionMetricInfoResponse... timeSeries) {
             return timeSeries(List.of(timeSeries));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param validSince Gets the time since when this recommended action is valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validSince(String validSince) {
             $.validSince = validSince;
             return this;

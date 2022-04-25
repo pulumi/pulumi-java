@@ -20,6 +20,10 @@ public final class BucketVersioningGetArgs extends com.pulumi.resources.Resource
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return While set to `true`, versioning is fully enabled for this bucket.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -48,11 +52,23 @@ public final class BucketVersioningGetArgs extends com.pulumi.resources.Resource
             $ = new BucketVersioningGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled While set to `true`, versioning is fully enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled While set to `true`, versioning is fully enabled for this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

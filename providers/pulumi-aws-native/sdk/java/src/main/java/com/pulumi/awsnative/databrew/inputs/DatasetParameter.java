@@ -25,6 +25,10 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
     @Import(name="createColumn")
     private @Nullable Boolean createColumn;
 
+    /**
+     * @return Add the value of this parameter as a column in a dataset.
+     * 
+     */
     public Optional<Boolean> createColumn() {
         return Optional.ofNullable(this.createColumn);
     }
@@ -57,6 +61,10 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private DatasetParameterType type;
 
+    /**
+     * @return Parameter type
+     * 
+     */
     public DatasetParameterType type() {
         return this.type;
     }
@@ -89,6 +97,12 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
             $ = new DatasetParameter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createColumn Add the value of this parameter as a column in a dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createColumn(@Nullable Boolean createColumn) {
             $.createColumn = createColumn;
             return this;
@@ -109,6 +123,12 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param type Parameter type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DatasetParameterType type) {
             $.type = type;
             return this;

@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse {
     /**
-     * A list of cascading if-else conditions.
+     * @return A list of cascading if-else conditions.
      * 
      */
     private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases;
@@ -22,9 +22,9 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
     }
 
     /**
-     * A list of cascading if-else conditions.
+     * @return A list of cascading if-else conditions.
      * 
-    */
+     */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases() {
         return this.cases;
     }

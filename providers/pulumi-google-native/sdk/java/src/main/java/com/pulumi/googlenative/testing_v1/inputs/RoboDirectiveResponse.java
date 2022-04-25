@@ -23,6 +23,10 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="actionType", required=true)
     private String actionType;
 
+    /**
+     * @return The type of action that Robo should perform on the specified element.
+     * 
+     */
     public String actionType() {
         return this.actionType;
     }
@@ -34,6 +38,10 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="inputText", required=true)
     private String inputText;
 
+    /**
+     * @return The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+     * 
+     */
     public String inputText() {
         return this.inputText;
     }
@@ -45,6 +53,10 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -75,16 +87,34 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
             $ = new RoboDirectiveResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of action that Robo should perform on the specified element.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param inputText The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK on the element matching the resource_name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputText(String inputText) {
             $.inputText = inputText;
             return this;
         }
 
+        /**
+         * @param resourceName The android resource name of the target UI element. For example, in Java: R.string.foo in xml: @string/foo Only the &#34;foo&#34; part is needed. Reference doc: https://developer.android.com/guide/topics/resources/accessing-resources.html
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

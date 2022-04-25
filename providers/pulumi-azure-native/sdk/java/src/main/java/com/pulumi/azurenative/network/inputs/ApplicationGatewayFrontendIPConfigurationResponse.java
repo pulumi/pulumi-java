@@ -26,6 +26,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the frontend IP configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return PrivateIPAddress of the network interface IP Configuration.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -70,6 +86,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="privateIPAllocationMethod")
     private @Nullable String privateIPAllocationMethod;
 
+    /**
+     * @return The private IP address allocation method.
+     * 
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -81,6 +101,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="privateLinkConfiguration")
     private @Nullable SubResourceResponse privateLinkConfiguration;
 
+    /**
+     * @return Reference to the application gateway private link configuration.
+     * 
+     */
     public Optional<SubResourceResponse> privateLinkConfiguration() {
         return Optional.ofNullable(this.privateLinkConfiguration);
     }
@@ -92,6 +116,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the frontend IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -103,6 +131,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="publicIPAddress")
     private @Nullable SubResourceResponse publicIPAddress;
 
+    /**
+     * @return Reference to the PublicIP resource.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -114,6 +146,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Reference to the subnet resource.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -125,6 +161,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -162,51 +202,111 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
             $ = new ApplicationGatewayFrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the frontend IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param privateIPAddress PrivateIPAddress of the network interface IP Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateLinkConfiguration Reference to the application gateway private link configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConfiguration(@Nullable SubResourceResponse privateLinkConfiguration) {
             $.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the frontend IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Reference to the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

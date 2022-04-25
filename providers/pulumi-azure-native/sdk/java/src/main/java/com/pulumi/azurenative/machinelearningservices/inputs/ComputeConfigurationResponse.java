@@ -28,6 +28,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="instanceCount")
     private @Nullable Integer instanceCount;
 
+    /**
+     * @return Number of instances or nodes.
+     * 
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -39,6 +43,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="instanceType")
     private @Nullable String instanceType;
 
+    /**
+     * @return SKU type to run on.
+     * 
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -50,6 +58,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="isLocal")
     private @Nullable Boolean isLocal;
 
+    /**
+     * @return Set to true for jobs running on local compute.
+     * 
+     */
     public Optional<Boolean> isLocal() {
         return Optional.ofNullable(this.isLocal);
     }
@@ -61,6 +73,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location for virtual cluster run.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -72,6 +88,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Additional properties.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -83,6 +103,10 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return ARM resource ID of the compute resource.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -116,31 +140,67 @@ public final class ComputeConfigurationResponse extends com.pulumi.resources.Inv
             $ = new ComputeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceCount Number of instances or nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceType SKU type to run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param isLocal Set to true for jobs running on local compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocal(@Nullable Boolean isLocal) {
             $.isLocal = isLocal;
             return this;
         }
 
+        /**
+         * @param location Location for virtual cluster run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param properties Additional properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param target ARM resource ID of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

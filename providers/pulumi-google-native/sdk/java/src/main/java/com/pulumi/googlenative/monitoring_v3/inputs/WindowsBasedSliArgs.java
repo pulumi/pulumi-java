@@ -28,6 +28,10 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="goodBadMetricFilter")
     private @Nullable Output<String> goodBadMetricFilter;
 
+    /**
+     * @return A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+     * 
+     */
     public Optional<Output<String>> goodBadMetricFilter() {
         return Optional.ofNullable(this.goodBadMetricFilter);
     }
@@ -39,6 +43,10 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="goodTotalRatioThreshold")
     private @Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold;
 
+    /**
+     * @return A window is good if its performance is high enough.
+     * 
+     */
     public Optional<Output<PerformanceThresholdArgs>> goodTotalRatioThreshold() {
         return Optional.ofNullable(this.goodTotalRatioThreshold);
     }
@@ -50,6 +58,10 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metricMeanInRange")
     private @Nullable Output<MetricRangeArgs> metricMeanInRange;
 
+    /**
+     * @return A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
+     * 
+     */
     public Optional<Output<MetricRangeArgs>> metricMeanInRange() {
         return Optional.ofNullable(this.metricMeanInRange);
     }
@@ -61,6 +73,10 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metricSumInRange")
     private @Nullable Output<MetricRangeArgs> metricSumInRange;
 
+    /**
+     * @return A window is good if the metric&#39;s value is in a good range, summed across returned streams.
+     * 
+     */
     public Optional<Output<MetricRangeArgs>> metricSumInRange() {
         return Optional.ofNullable(this.metricSumInRange);
     }
@@ -72,6 +88,10 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="windowPeriod")
     private @Nullable Output<String> windowPeriod;
 
+    /**
+     * @return Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+     * 
+     */
     public Optional<Output<String>> windowPeriod() {
         return Optional.ofNullable(this.windowPeriod);
     }
@@ -104,47 +124,107 @@ public final class WindowsBasedSliArgs extends com.pulumi.resources.ResourceArgs
             $ = new WindowsBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param goodBadMetricFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodBadMetricFilter(@Nullable Output<String> goodBadMetricFilter) {
             $.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
 
+        /**
+         * @param goodBadMetricFilter A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodBadMetricFilter(String goodBadMetricFilter) {
             return goodBadMetricFilter(Output.of(goodBadMetricFilter));
         }
 
+        /**
+         * @param goodTotalRatioThreshold A window is good if its performance is high enough.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatioThreshold(@Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold) {
             $.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
 
+        /**
+         * @param goodTotalRatioThreshold A window is good if its performance is high enough.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goodTotalRatioThreshold(PerformanceThresholdArgs goodTotalRatioThreshold) {
             return goodTotalRatioThreshold(Output.of(goodTotalRatioThreshold));
         }
 
+        /**
+         * @param metricMeanInRange A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricMeanInRange(@Nullable Output<MetricRangeArgs> metricMeanInRange) {
             $.metricMeanInRange = metricMeanInRange;
             return this;
         }
 
+        /**
+         * @param metricMeanInRange A window is good if the metric&#39;s value is in a good range, averaged across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricMeanInRange(MetricRangeArgs metricMeanInRange) {
             return metricMeanInRange(Output.of(metricMeanInRange));
         }
 
+        /**
+         * @param metricSumInRange A window is good if the metric&#39;s value is in a good range, summed across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSumInRange(@Nullable Output<MetricRangeArgs> metricSumInRange) {
             $.metricSumInRange = metricSumInRange;
             return this;
         }
 
+        /**
+         * @param metricSumInRange A window is good if the metric&#39;s value is in a good range, summed across returned streams.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSumInRange(MetricRangeArgs metricSumInRange) {
             return metricSumInRange(Output.of(metricSumInRange));
         }
 
+        /**
+         * @param windowPeriod Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
             $.windowPeriod = windowPeriod;
             return this;
         }
 
+        /**
+         * @param windowPeriod Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowPeriod(String windowPeriod) {
             return windowPeriod(Output.of(windowPeriod));
         }

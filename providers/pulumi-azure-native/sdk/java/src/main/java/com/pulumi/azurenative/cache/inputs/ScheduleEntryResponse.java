@@ -26,6 +26,10 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dayOfWeek", required=true)
     private String dayOfWeek;
 
+    /**
+     * @return Day of the week when a cache can be patched.
+     * 
+     */
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -37,6 +41,10 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maintenanceWindow")
     private @Nullable String maintenanceWindow;
 
+    /**
+     * @return ISO8601 timespan specifying how much time cache patching can take.
+     * 
+     */
     public Optional<String> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
@@ -48,6 +56,10 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startHourUtc", required=true)
     private Integer startHourUtc;
 
+    /**
+     * @return Start hour after which cache patching can start.
+     * 
+     */
     public Integer startHourUtc() {
         return this.startHourUtc;
     }
@@ -78,16 +90,34 @@ public final class ScheduleEntryResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScheduleEntryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of the week when a cache can be patched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param maintenanceWindow ISO8601 timespan specifying how much time cache patching can take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             $.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
+        /**
+         * @param startHourUtc Start hour after which cache patching can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startHourUtc(Integer startHourUtc) {
             $.startHourUtc = startHourUtc;
             return this;

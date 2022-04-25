@@ -25,6 +25,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN that uniquely identifies this table.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the Timestream database.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -47,6 +55,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="magneticStoreWriteProperties")
     private @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
 
+    /**
+     * @return Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
+     * 
+     */
     public Optional<Output<TableMagneticStoreWritePropertiesGetArgs>> magneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
@@ -58,6 +70,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionProperties")
     private @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties;
 
+    /**
+     * @return The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
+     * 
+     */
     public Optional<Output<TableRetentionPropertiesGetArgs>> retentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
@@ -69,6 +85,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
     private @Nullable Output<String> tableName;
 
+    /**
+     * @return The name of the Timestream table.
+     * 
+     */
     public Optional<Output<String>> tableName() {
         return Optional.ofNullable(this.tableName);
     }
@@ -80,6 +100,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,6 +115,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -125,65 +153,149 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
             $ = new TableState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN that uniquely identifies this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN that uniquely identifies this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param databaseName The name of the Timestream database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the Timestream database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param magneticStoreWriteProperties Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreWriteProperties(@Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties) {
             $.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
 
+        /**
+         * @param magneticStoreWriteProperties Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder magneticStoreWriteProperties(TableMagneticStoreWritePropertiesGetArgs magneticStoreWriteProperties) {
             return magneticStoreWriteProperties(Output.of(magneticStoreWriteProperties));
         }
 
+        /**
+         * @param retentionProperties The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties) {
             $.retentionProperties = retentionProperties;
             return this;
         }
 
+        /**
+         * @param retentionProperties The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionProperties(TableRetentionPropertiesGetArgs retentionProperties) {
             return retentionProperties(Output.of(retentionProperties));
         }
 
+        /**
+         * @param tableName The name of the Timestream table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(@Nullable Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the Timestream table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param tags Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IndexField {
     /**
-     * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * @return Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
      * be specified.
      * Possible values are `CONTAINS`.
      * 
      */
     private final @Nullable String arrayConfig;
     /**
-     * Name of the field.
+     * @return Name of the field.
      * 
      */
     private final @Nullable String fieldPath;
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * Only one of `order` and `arrayConfig` can be specified.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
@@ -42,27 +42,27 @@ public final class IndexField {
     }
 
     /**
-     * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * @return Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
      * be specified.
      * Possible values are `CONTAINS`.
      * 
-    */
+     */
     public Optional<String> arrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
     /**
-     * Name of the field.
+     * @return Name of the field.
      * 
-    */
+     */
     public Optional<String> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
     /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
      * Only one of `order` and `arrayConfig` can be specified.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
-    */
+     */
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }

@@ -20,6 +20,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="claim", required=true)
     private Output<String> claim;
 
+    /**
+     * @return The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
+     * 
+     */
     public Output<String> claim() {
         return this.claim;
     }
@@ -31,6 +35,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="matchType", required=true)
     private Output<String> matchType;
 
+    /**
+     * @return The match condition that specifies how closely the claim value in the IdP token must match Value.
+     * 
+     */
     public Output<String> matchType() {
         return this.matchType;
     }
@@ -42,6 +50,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The role ARN.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -53,6 +65,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -84,38 +100,86 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
             $ = new IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claim The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claim(Output<String> claim) {
             $.claim = claim;
             return this;
         }
 
+        /**
+         * @param claim The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claim(String claim) {
             return claim(Output.of(claim));
         }
 
+        /**
+         * @param matchType The match condition that specifies how closely the claim value in the IdP token must match Value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchType(Output<String> matchType) {
             $.matchType = matchType;
             return this;
         }
 
+        /**
+         * @param matchType The match condition that specifies how closely the claim value in the IdP token must match Value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchType(String matchType) {
             return matchType(Output.of(matchType));
         }
 
+        /**
+         * @param roleArn The role ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The role ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param value A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

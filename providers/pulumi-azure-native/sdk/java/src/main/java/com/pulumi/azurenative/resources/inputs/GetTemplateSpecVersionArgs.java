@@ -19,6 +19,10 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
     @Import(name="templateSpecName", required=true)
     private String templateSpecName;
 
+    /**
+     * @return Name of the Template Spec.
+     * 
+     */
     public String templateSpecName() {
         return this.templateSpecName;
     }
@@ -41,6 +49,10 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
     @Import(name="templateSpecVersion", required=true)
     private String templateSpecVersion;
 
+    /**
+     * @return The version of the Template Spec.
+     * 
+     */
     public String templateSpecVersion() {
         return this.templateSpecVersion;
     }
@@ -71,16 +83,34 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
             $ = new GetTemplateSpecVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param templateSpecName Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateSpecName(String templateSpecName) {
             $.templateSpecName = templateSpecName;
             return this;
         }
 
+        /**
+         * @param templateSpecVersion The version of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateSpecVersion(String templateSpecVersion) {
             $.templateSpecVersion = templateSpecVersion;
             return this;

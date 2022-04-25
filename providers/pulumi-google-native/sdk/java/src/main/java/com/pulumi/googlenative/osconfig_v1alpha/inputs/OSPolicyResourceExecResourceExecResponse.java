@@ -25,6 +25,10 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
     @Import(name="args", required=true)
     private List<String> args;
 
+    /**
+     * @return Optional arguments to pass to the source during execution.
+     * 
+     */
     public List<String> args() {
         return this.args;
     }
@@ -36,6 +40,10 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
     @Import(name="file", required=true)
     private OSPolicyResourceFileResponse file;
 
+    /**
+     * @return A remote or local file.
+     * 
+     */
     public OSPolicyResourceFileResponse file() {
         return this.file;
     }
@@ -47,6 +55,10 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
     @Import(name="interpreter", required=true)
     private String interpreter;
 
+    /**
+     * @return The script interpreter to use.
+     * 
+     */
     public String interpreter() {
         return this.interpreter;
     }
@@ -58,6 +70,10 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
     @Import(name="outputFilePath", required=true)
     private String outputFilePath;
 
+    /**
+     * @return Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+     * 
+     */
     public String outputFilePath() {
         return this.outputFilePath;
     }
@@ -69,6 +85,10 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
     @Import(name="script", required=true)
     private String script;
 
+    /**
+     * @return An inline script. The size of the script is limited to 1024 characters.
+     * 
+     */
     public String script() {
         return this.script;
     }
@@ -101,30 +121,66 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
             $ = new OSPolicyResourceExecResourceExecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Optional arguments to pass to the source during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional arguments to pass to the source during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param file A remote or local file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(OSPolicyResourceFileResponse file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param interpreter The script interpreter to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(String interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param outputFilePath Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputFilePath(String outputFilePath) {
             $.outputFilePath = outputFilePath;
             return this;
         }
 
+        /**
+         * @param script An inline script. The size of the script is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             $.script = script;
             return this;

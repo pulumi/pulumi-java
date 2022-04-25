@@ -24,6 +24,10 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="atomKey", required=true)
     private String atomKey;
 
+    /**
+     * @return The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+     * 
+     */
     public String atomKey() {
         return this.atomKey;
     }
@@ -35,6 +39,10 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputKey", required=true)
     private String inputKey;
 
+    /**
+     * @return The `Input.key` that identifies the input file.
+     * 
+     */
     public String inputKey() {
         return this.inputKey;
     }
@@ -46,6 +54,10 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputTrack", required=true)
     private Integer inputTrack;
 
+    /**
+     * @return The zero-based index of the track in the input file.
+     * 
+     */
     public Integer inputTrack() {
         return this.inputTrack;
     }
@@ -76,16 +88,34 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TextMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atomKey The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomKey(String atomKey) {
             $.atomKey = atomKey;
             return this;
         }
 
+        /**
+         * @param inputKey The `Input.key` that identifies the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputKey(String inputKey) {
             $.inputKey = inputKey;
             return this;
         }
 
+        /**
+         * @param inputTrack The zero-based index of the track in the input file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputTrack(Integer inputTrack) {
             $.inputTrack = inputTrack;
             return this;

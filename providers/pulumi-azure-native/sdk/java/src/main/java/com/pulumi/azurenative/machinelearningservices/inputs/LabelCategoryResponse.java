@@ -28,6 +28,10 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allowMultiSelect")
     private @Nullable Boolean allowMultiSelect;
 
+    /**
+     * @return Indicates whether it is allowed to select multiple classes in this category.
+     * 
+     */
     public Optional<Boolean> allowMultiSelect() {
         return Optional.ofNullable(this.allowMultiSelect);
     }
@@ -39,6 +43,10 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="classes", required=true)
     private Map<String,LabelClassResponse> classes;
 
+    /**
+     * @return Dictionary of label classes in this category.
+     * 
+     */
     public Map<String,LabelClassResponse> classes() {
         return this.classes;
     }
@@ -50,6 +58,10 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name of the label category.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -80,16 +92,34 @@ public final class LabelCategoryResponse extends com.pulumi.resources.InvokeArgs
             $ = new LabelCategoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiSelect Indicates whether it is allowed to select multiple classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
             $.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
+        /**
+         * @param classes Dictionary of label classes in this category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classes(Map<String,LabelClassResponse> classes) {
             $.classes = classes;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the label category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;

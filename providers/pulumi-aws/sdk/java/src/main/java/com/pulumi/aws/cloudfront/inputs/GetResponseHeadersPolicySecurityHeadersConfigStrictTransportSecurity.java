@@ -20,6 +20,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="accessControlMaxAgeSec", required=true)
     private Integer accessControlMaxAgeSec;
 
+    /**
+     * @return A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
+     * 
+     */
     public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
@@ -31,6 +35,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="includeSubdomains", required=true)
     private Boolean includeSubdomains;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront includes the includeSubDomains directive in the Strict-Transport-Security HTTP response header.
+     * 
+     */
     public Boolean includeSubdomains() {
         return this.includeSubdomains;
     }
@@ -42,6 +50,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="override", required=true)
     private Boolean override;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * 
+     */
     public Boolean override() {
         return this.override;
     }
@@ -53,6 +65,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="preload", required=true)
     private Boolean preload;
 
+    /**
+     * @return A Boolean value that determines whether CloudFront includes the preload directive in the Strict-Transport-Security HTTP response header.
+     * 
+     */
     public Boolean preload() {
         return this.preload;
     }
@@ -84,21 +100,45 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
             $ = new GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
 
+        /**
+         * @param includeSubdomains A Boolean value that determines whether CloudFront includes the includeSubDomains directive in the Strict-Transport-Security HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeSubdomains(Boolean includeSubdomains) {
             $.includeSubdomains = includeSubdomains;
             return this;
         }
 
+        /**
+         * @param override A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder override(Boolean override) {
             $.override = override;
             return this;
         }
 
+        /**
+         * @param preload A Boolean value that determines whether CloudFront includes the preload directive in the Strict-Transport-Security HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preload(Boolean preload) {
             $.preload = preload;
             return this;

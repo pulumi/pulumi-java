@@ -30,6 +30,10 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="credentials")
     private @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
+    /**
+     * @return Polymorphic credentials to present to the endpoint.
+     * 
+     */
     public Optional<Output<MediaGraphUsernamePasswordCredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -42,6 +46,11 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -53,6 +62,10 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="trustedCertificates")
     private @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates;
 
+    /**
+     * @return What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+     * 
+     */
     public Optional<Output<MediaGraphPemCertificateListArgs>> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
@@ -64,6 +77,10 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return Url for the endpoint.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -75,6 +92,10 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="validationOptions")
     private @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions;
 
+    /**
+     * @return Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+     * 
+     */
     public Optional<Output<MediaGraphTlsValidationOptionsArgs>> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
@@ -107,47 +128,109 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
             $ = new MediaGraphTlsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(MediaGraphUsernamePasswordCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param trustedCertificates What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertificates(@Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates) {
             $.trustedCertificates = trustedCertificates;
             return this;
         }
 
+        /**
+         * @param trustedCertificates What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertificates(MediaGraphPemCertificateListArgs trustedCertificates) {
             return trustedCertificates(Output.of(trustedCertificates));
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param validationOptions Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(@Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions) {
             $.validationOptions = validationOptions;
             return this;
         }
 
+        /**
+         * @param validationOptions Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationOptions(MediaGraphTlsValidationOptionsArgs validationOptions) {
             return validationOptions(Output.of(validationOptions));
         }

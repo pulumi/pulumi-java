@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue {
     /**
-     * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
      * year by itself or a year and month where the day is not significant.
      * 
      */
     private final @Nullable Integer day;
     /**
-     * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+     * @return Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
      * 
      */
     private final @Nullable Integer month;
     /**
-     * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+     * @return Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
      * 
      */
     private final @Nullable Integer year;
@@ -39,24 +39,24 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     /**
-     * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+     * @return Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
      * year by itself or a year and month where the day is not significant.
      * 
-    */
+     */
     public Optional<Integer> day() {
         return Optional.ofNullable(this.day);
     }
     /**
-     * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
+     * @return Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
      * 
-    */
+     */
     public Optional<Integer> month() {
         return Optional.ofNullable(this.month);
     }
     /**
-     * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
+     * @return Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
      * 
-    */
+     */
     public Optional<Integer> year() {
         return Optional.ofNullable(this.year);
     }

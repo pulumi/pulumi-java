@@ -23,6 +23,10 @@ public final class DNSConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterDns", required=true)
     private String clusterDns;
 
+    /**
+     * @return cluster_dns indicates which in-cluster DNS provider should be used.
+     * 
+     */
     public String clusterDns() {
         return this.clusterDns;
     }
@@ -34,6 +38,10 @@ public final class DNSConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterDnsDomain", required=true)
     private String clusterDnsDomain;
 
+    /**
+     * @return cluster_dns_domain is the suffix used for all cluster service records.
+     * 
+     */
     public String clusterDnsDomain() {
         return this.clusterDnsDomain;
     }
@@ -45,6 +53,10 @@ public final class DNSConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterDnsScope", required=true)
     private String clusterDnsScope;
 
+    /**
+     * @return cluster_dns_scope indicates the scope of access to cluster DNS records.
+     * 
+     */
     public String clusterDnsScope() {
         return this.clusterDnsScope;
     }
@@ -75,16 +87,34 @@ public final class DNSConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DNSConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterDns cluster_dns indicates which in-cluster DNS provider should be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDns(String clusterDns) {
             $.clusterDns = clusterDns;
             return this;
         }
 
+        /**
+         * @param clusterDnsDomain cluster_dns_domain is the suffix used for all cluster service records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsDomain(String clusterDnsDomain) {
             $.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
+        /**
+         * @param clusterDnsScope cluster_dns_scope indicates the scope of access to cluster DNS records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDnsScope(String clusterDnsScope) {
             $.clusterDnsScope = clusterDnsScope;
             return this;

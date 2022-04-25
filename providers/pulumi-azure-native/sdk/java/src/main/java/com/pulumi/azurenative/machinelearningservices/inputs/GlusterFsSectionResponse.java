@@ -23,6 +23,10 @@ public final class GlusterFsSectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="serverAddress", required=true)
     private String serverAddress;
 
+    /**
+     * @return The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
+     * 
+     */
     public String serverAddress() {
         return this.serverAddress;
     }
@@ -34,6 +38,10 @@ public final class GlusterFsSectionResponse extends com.pulumi.resources.InvokeA
     @Import(name="volumeName", required=true)
     private String volumeName;
 
+    /**
+     * @return The name of the created GlusterFS volume.
+     * 
+     */
     public String volumeName() {
         return this.volumeName;
     }
@@ -63,11 +71,23 @@ public final class GlusterFsSectionResponse extends com.pulumi.resources.InvokeA
             $ = new GlusterFsSectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverAddress The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAddress(String serverAddress) {
             $.serverAddress = serverAddress;
             return this;
         }
 
+        /**
+         * @param volumeName The name of the created GlusterFS volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(String volumeName) {
             $.volumeName = volumeName;
             return this;

@@ -27,6 +27,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+     * 
+     */
     public Optional<Output<String>> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
@@ -38,6 +42,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The resource ID to include in key requests.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -49,6 +57,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -60,6 +72,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="systemIds", required=true)
     private Output<List<String>> systemIds;
 
+    /**
+     * @return The system IDs to include in key requests.
+     * 
+     */
     public Output<List<String>> systemIds() {
         return this.systemIds;
     }
@@ -71,6 +87,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The URL of the external key provider service.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -103,51 +123,117 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
             $ = new OriginEndpointSpekeKeyProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param certificateArn An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(String certificateArn) {
             return certificateArn(Output.of(certificateArn));
         }
 
+        /**
+         * @param resourceId The resource ID to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param roleArn An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(Output<List<String>> systemIds) {
             $.systemIds = systemIds;
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(List<String> systemIds) {
             return systemIds(Output.of(systemIds));
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

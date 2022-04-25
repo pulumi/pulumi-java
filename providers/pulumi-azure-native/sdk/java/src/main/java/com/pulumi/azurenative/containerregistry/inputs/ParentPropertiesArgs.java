@@ -27,6 +27,10 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The resource ID of the parent to which the connected registry will be associated.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="syncProperties", required=true)
     private Output<SyncPropertiesArgs> syncProperties;
 
+    /**
+     * @return The sync properties of the connected registry with its parent.
+     * 
+     */
     public Output<SyncPropertiesArgs> syncProperties() {
         return this.syncProperties;
     }
@@ -67,20 +75,44 @@ public final class ParentPropertiesArgs extends com.pulumi.resources.ResourceArg
             $ = new ParentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID of the parent to which the connected registry will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The resource ID of the parent to which the connected registry will be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param syncProperties The sync properties of the connected registry with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncProperties(Output<SyncPropertiesArgs> syncProperties) {
             $.syncProperties = syncProperties;
             return this;
         }
 
+        /**
+         * @param syncProperties The sync properties of the connected registry with its parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncProperties(SyncPropertiesArgs syncProperties) {
             return syncProperties(Output.of(syncProperties));
         }

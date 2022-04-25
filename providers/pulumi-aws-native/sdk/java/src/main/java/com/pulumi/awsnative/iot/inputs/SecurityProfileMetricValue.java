@@ -28,6 +28,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="cidrs")
     private @Nullable List<String> cidrs;
 
+    /**
+     * @return If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
+     * 
+     */
     public Optional<List<String>> cidrs() {
         return Optional.ofNullable(this.cidrs);
     }
@@ -39,6 +43,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="count")
     private @Nullable String count;
 
+    /**
+     * @return If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
+     * 
+     */
     public Optional<String> count() {
         return Optional.ofNullable(this.count);
     }
@@ -50,6 +58,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="number")
     private @Nullable Double number;
 
+    /**
+     * @return The numeral value of a metric.
+     * 
+     */
     public Optional<Double> number() {
         return Optional.ofNullable(this.number);
     }
@@ -61,6 +73,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="numbers")
     private @Nullable List<Double> numbers;
 
+    /**
+     * @return The numeral values of a metric.
+     * 
+     */
     public Optional<List<Double>> numbers() {
         return Optional.ofNullable(this.numbers);
     }
@@ -72,6 +88,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="ports")
     private @Nullable List<Integer> ports;
 
+    /**
+     * @return If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
+     * 
+     */
     public Optional<List<Integer>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -83,6 +103,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
     @Import(name="strings")
     private @Nullable List<String> strings;
 
+    /**
+     * @return The string values of a metric.
+     * 
+     */
     public Optional<List<String>> strings() {
         return Optional.ofNullable(this.strings);
     }
@@ -116,48 +140,108 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
             $ = new SecurityProfileMetricValue(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrs If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrs(@Nullable List<String> cidrs) {
             $.cidrs = cidrs;
             return this;
         }
 
+        /**
+         * @param cidrs If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
 
+        /**
+         * @param count If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable String count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param number The numeral value of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder number(@Nullable Double number) {
             $.number = number;
             return this;
         }
 
+        /**
+         * @param numbers The numeral values of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numbers(@Nullable List<Double> numbers) {
             $.numbers = numbers;
             return this;
         }
 
+        /**
+         * @param numbers The numeral values of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numbers(Double... numbers) {
             return numbers(List.of(numbers));
         }
 
+        /**
+         * @param ports If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable List<Integer> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param strings The string values of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strings(@Nullable List<String> strings) {
             $.strings = strings;
             return this;
         }
 
+        /**
+         * @param strings The string values of a metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strings(String... strings) {
             return strings(List.of(strings));
         }

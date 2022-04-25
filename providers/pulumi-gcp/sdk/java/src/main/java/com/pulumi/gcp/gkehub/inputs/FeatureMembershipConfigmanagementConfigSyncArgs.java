@@ -24,6 +24,11 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends com.p
     @Import(name="git")
     private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
+    /**
+     * @return -
+     * (Optional) Structure is documented below.
+     * 
+     */
     public Optional<Output<FeatureMembershipConfigmanagementConfigSyncGitArgs>> git() {
         return Optional.ofNullable(this.git);
     }
@@ -35,6 +40,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends com.p
     @Import(name="sourceFormat")
     private @Nullable Output<String> sourceFormat;
 
+    /**
+     * @return Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
+     * 
+     */
     public Optional<Output<String>> sourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }
@@ -64,20 +73,46 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends com.p
             $ = new FeatureMembershipConfigmanagementConfigSyncArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param git -
+         * (Optional) Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git) {
             $.git = git;
             return this;
         }
 
+        /**
+         * @param git -
+         * (Optional) Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder git(FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
             return git(Output.of(git));
         }
 
+        /**
+         * @param sourceFormat Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
             $.sourceFormat = sourceFormat;
             return this;
         }
 
+        /**
+         * @param sourceFormat Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFormat(String sourceFormat) {
             return sourceFormat(Output.of(sourceFormat));
         }

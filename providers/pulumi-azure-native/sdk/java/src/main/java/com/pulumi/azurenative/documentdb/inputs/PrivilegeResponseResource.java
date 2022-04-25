@@ -25,6 +25,10 @@ public final class PrivilegeResponseResource extends com.pulumi.resources.Invoke
     @Import(name="collection")
     private @Nullable String collection;
 
+    /**
+     * @return The collection name the role is applied.
+     * 
+     */
     public Optional<String> collection() {
         return Optional.ofNullable(this.collection);
     }
@@ -36,6 +40,10 @@ public final class PrivilegeResponseResource extends com.pulumi.resources.Invoke
     @Import(name="db")
     private @Nullable String db;
 
+    /**
+     * @return The database name the role is applied.
+     * 
+     */
     public Optional<String> db() {
         return Optional.ofNullable(this.db);
     }
@@ -65,11 +73,23 @@ public final class PrivilegeResponseResource extends com.pulumi.resources.Invoke
             $ = new PrivilegeResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collection The collection name the role is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collection(@Nullable String collection) {
             $.collection = collection;
             return this;
         }
 
+        /**
+         * @param db The database name the role is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder db(@Nullable String db) {
             $.db = db;
             return this;

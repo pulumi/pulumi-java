@@ -19,6 +19,10 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretResourceName", required=true)
     private String secretResourceName;
 
+    /**
+     * @return The name of the secret resource.
+     * 
+     */
     public String secretResourceName() {
         return this.secretResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretValueResourceName", required=true)
     private String secretValueResourceName;
 
+    /**
+     * @return The name of the secret resource value which is typically the version identifier for the value.
+     * 
+     */
     public String secretValueResourceName() {
         return this.secretValueResourceName;
     }
@@ -71,16 +83,34 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param secretResourceName The name of the secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretResourceName(String secretResourceName) {
             $.secretResourceName = secretResourceName;
             return this;
         }
 
+        /**
+         * @param secretValueResourceName The name of the secret resource value which is typically the version identifier for the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretValueResourceName(String secretValueResourceName) {
             $.secretValueResourceName = secretValueResourceName;
             return this;

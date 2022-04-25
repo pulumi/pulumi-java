@@ -23,6 +23,10 @@ public final class GcsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The Cloud Storage bucket name.
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -34,6 +38,10 @@ public final class GcsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rootPath", required=true)
     private String rootPath;
 
+    /**
+     * @return The root path inside the Cloud Storage bucket.
+     * 
+     */
     public String rootPath() {
         return this.rootPath;
     }
@@ -63,11 +71,23 @@ public final class GcsProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GcsProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The Cloud Storage bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param rootPath The root path inside the Cloud Storage bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(String rootPath) {
             $.rootPath = rootPath;
             return this;

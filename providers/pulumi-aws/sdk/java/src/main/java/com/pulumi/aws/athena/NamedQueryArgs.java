@@ -22,6 +22,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return The database to which the query belongs.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -33,6 +37,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A brief explanation of the query. Maximum length of 1024.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The plain language name for the query. Maximum length of 128.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return The text of the query itself. In other words, all query statements. Maximum length of 262144.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -66,6 +82,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workgroup")
     private @Nullable Output<String> workgroup;
 
+    /**
+     * @return The workgroup to which the query belongs. Defaults to `primary`
+     * 
+     */
     public Optional<Output<String>> workgroup() {
         return Optional.ofNullable(this.workgroup);
     }
@@ -98,47 +118,107 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NamedQueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database The database to which the query belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The database to which the query belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param description A brief explanation of the query. Maximum length of 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A brief explanation of the query. Maximum length of 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The plain language name for the query. Maximum length of 128.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The plain language name for the query. Maximum length of 128.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param query The text of the query itself. In other words, all query statements. Maximum length of 262144.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The text of the query itself. In other words, all query statements. Maximum length of 262144.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param workgroup The workgroup to which the query belongs. Defaults to `primary`
+         * 
+         * @return builder
+         * 
+         */
         public Builder workgroup(@Nullable Output<String> workgroup) {
             $.workgroup = workgroup;
             return this;
         }
 
+        /**
+         * @param workgroup The workgroup to which the query belongs. Defaults to `primary`
+         * 
+         * @return builder
+         * 
+         */
         public Builder workgroup(String workgroup) {
             return workgroup(Output.of(workgroup));
         }

@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHubVirtualNetworkConnectionResult {
     /**
-     * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+     * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
      */
     private final @Nullable Boolean allowHubToRemoteVnetTransit;
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
+     * @return Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
      */
     private final @Nullable Boolean allowRemoteVnetToUseHubVnetGateways;
     /**
-     * Enable internet security.
+     * @return Enable internet security.
      * 
      */
     private final @Nullable Boolean enableInternetSecurity;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the hub virtual network connection resource.
+     * @return The provisioning state of the hub virtual network connection resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Reference to the remote virtual network.
+     * @return Reference to the remote virtual network.
      * 
      */
     private final @Nullable SubResourceResponse remoteVirtualNetwork;
     /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
@@ -83,65 +83,65 @@ public final class GetHubVirtualNetworkConnectionResult {
     }
 
     /**
-     * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+     * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> allowHubToRemoteVnetTransit() {
         return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
     /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
+     * @return Deprecated: Allow RemoteVnet to use Virtual Hub&#39;s gateways.
      * 
-    */
+     */
     public Optional<Boolean> allowRemoteVnetToUseHubVnetGateways() {
         return Optional.ofNullable(this.allowRemoteVnetToUseHubVnetGateways);
     }
     /**
-     * Enable internet security.
+     * @return Enable internet security.
      * 
-    */
+     */
     public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the hub virtual network connection resource.
+     * @return The provisioning state of the hub virtual network connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Reference to the remote virtual network.
+     * @return Reference to the remote virtual network.
      * 
-    */
+     */
     public Optional<SubResourceResponse> remoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
     /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
-    */
+     */
     public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }

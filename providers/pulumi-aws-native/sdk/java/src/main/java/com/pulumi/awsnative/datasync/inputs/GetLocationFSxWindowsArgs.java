@@ -19,6 +19,10 @@ public final class GetLocationFSxWindowsArgs extends com.pulumi.resources.Invoke
     @Import(name="locationArn", required=true)
     private String locationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
+     * 
+     */
     public String locationArn() {
         return this.locationArn;
     }
@@ -47,6 +51,12 @@ public final class GetLocationFSxWindowsArgs extends com.pulumi.resources.Invoke
             $ = new GetLocationFSxWindowsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationArn The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationArn(String locationArn) {
             $.locationArn = locationArn;
             return this;

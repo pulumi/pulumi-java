@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SlotTypeEnumerationValue {
     /**
-     * Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
+     * @return Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
      * 
      */
     private final @Nullable List<String> synonyms;
     /**
-     * The value of the slot type. Must be less than or equal to 140 characters in length.
+     * @return The value of the slot type. Must be less than or equal to 140 characters in length.
      * 
      */
     private final String value;
@@ -31,16 +31,16 @@ public final class SlotTypeEnumerationValue {
     }
 
     /**
-     * Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
+     * @return Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
      * 
-    */
+     */
     public List<String> synonyms() {
         return this.synonyms == null ? List.of() : this.synonyms;
     }
     /**
-     * The value of the slot type. Must be less than or equal to 140 characters in length.
+     * @return The value of the slot type. Must be less than or equal to 140 characters in length.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

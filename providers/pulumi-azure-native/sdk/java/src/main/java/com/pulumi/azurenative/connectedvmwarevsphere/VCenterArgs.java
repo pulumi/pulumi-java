@@ -26,6 +26,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<VICredentialArgs> credentials;
 
+    /**
+     * @return Username / Password Credentials to connect to vcenter.
+     * 
+     */
     public Optional<Output<VICredentialArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -37,6 +41,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return Gets or sets the extended location.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -48,6 +56,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fqdn", required=true)
     private Output<String> fqdn;
 
+    /**
+     * @return Gets or sets the FQDN/IPAddress of the vCenter.
+     * 
+     */
     public Output<String> fqdn() {
         return this.fqdn;
     }
@@ -59,6 +71,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -70,6 +86,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Gets or sets the port of the vCenter.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -92,6 +116,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -103,6 +131,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +146,10 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vcenterName")
     private @Nullable Output<String> vcenterName;
 
+    /**
+     * @return Name of the vCenter.
+     * 
+     */
     public Optional<Output<String>> vcenterName() {
         return Optional.ofNullable(this.vcenterName);
     }
@@ -150,83 +186,191 @@ public final class VCenterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VCenterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Username / Password Credentials to connect to vcenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<VICredentialArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Username / Password Credentials to connect to vcenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(VICredentialArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param extendedLocation Gets or sets the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation Gets or sets the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param fqdn Gets or sets the FQDN/IPAddress of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(Output<String> fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param fqdn Gets or sets the FQDN/IPAddress of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Gets or sets the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param port Gets or sets the port of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Gets or sets the port of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Gets or sets the Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(@Nullable Output<String> vcenterName) {
             $.vcenterName = vcenterName;
             return this;
         }
 
+        /**
+         * @param vcenterName Name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcenterName(String vcenterName) {
             return vcenterName(Output.of(vcenterName));
         }

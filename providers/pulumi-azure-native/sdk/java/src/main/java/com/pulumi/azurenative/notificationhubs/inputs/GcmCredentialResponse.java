@@ -25,6 +25,10 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gcmEndpoint")
     private @Nullable String gcmEndpoint;
 
+    /**
+     * @return The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
+     * 
+     */
     public Optional<String> gcmEndpoint() {
         return Optional.ofNullable(this.gcmEndpoint);
     }
@@ -36,6 +40,10 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="googleApiKey")
     private @Nullable String googleApiKey;
 
+    /**
+     * @return The Google API key.
+     * 
+     */
     public Optional<String> googleApiKey() {
         return Optional.ofNullable(this.googleApiKey);
     }
@@ -65,11 +73,23 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
             $ = new GcmCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcmEndpoint The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
             $.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
+        /**
+         * @param googleApiKey The Google API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder googleApiKey(@Nullable String googleApiKey) {
             $.googleApiKey = googleApiKey;
             return this;

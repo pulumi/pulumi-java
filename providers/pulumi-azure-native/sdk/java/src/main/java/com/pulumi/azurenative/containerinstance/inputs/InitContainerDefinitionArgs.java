@@ -29,6 +29,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return The command to execute within the init container in exec form.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -40,6 +44,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="environmentVariables")
     private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
+    /**
+     * @return The environment variables to set in the init container.
+     * 
+     */
     public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -51,6 +59,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The image of the init container.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -62,6 +74,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name for the init container.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -73,6 +89,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="volumeMounts")
     private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
+    /**
+     * @return The volume mounts available to the init container.
+     * 
+     */
     public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
         return Optional.ofNullable(this.volumeMounts);
     }
@@ -105,59 +125,137 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
             $ = new InitContainerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The command to execute within the init container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The command to execute within the init container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command The command to execute within the init container in exec form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param environmentVariables The environment variables to set in the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
 
+        /**
+         * @param image The image of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The image of the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param name The name for the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
             $.volumeMounts = volumeMounts;
             return this;
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
             return volumeMounts(Output.of(volumeMounts));
         }
 
+        /**
+         * @param volumeMounts The volume mounts available to the init container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }

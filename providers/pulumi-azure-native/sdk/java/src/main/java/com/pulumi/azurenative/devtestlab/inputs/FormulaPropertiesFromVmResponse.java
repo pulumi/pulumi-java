@@ -25,6 +25,10 @@ public final class FormulaPropertiesFromVmResponse extends com.pulumi.resources.
     @Import(name="labVmId")
     private @Nullable String labVmId;
 
+    /**
+     * @return The identifier of the VM from which a formula is to be created.
+     * 
+     */
     public Optional<String> labVmId() {
         return Optional.ofNullable(this.labVmId);
     }
@@ -53,6 +57,12 @@ public final class FormulaPropertiesFromVmResponse extends com.pulumi.resources.
             $ = new FormulaPropertiesFromVmResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labVmId The identifier of the VM from which a formula is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVmId(@Nullable String labVmId) {
             $.labVmId = labVmId;
             return this;

@@ -29,6 +29,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="destination")
     private @Nullable Output<DestinationArgs> destination;
 
+    /**
+     * @return Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+     * 
+     */
     public Optional<Output<DestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -40,6 +44,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return A value that indicates whether capture description is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -51,6 +59,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="encoding")
     private @Nullable Output<EncodingCaptureDescription> encoding;
 
+    /**
+     * @return Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+     * 
+     */
     public Optional<Output<EncodingCaptureDescription>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -62,6 +74,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="intervalInSeconds")
     private @Nullable Output<Integer> intervalInSeconds;
 
+    /**
+     * @return The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+     * 
+     */
     public Optional<Output<Integer>> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -73,6 +89,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="sizeLimitInBytes")
     private @Nullable Output<Integer> sizeLimitInBytes;
 
+    /**
+     * @return The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+     * 
+     */
     public Optional<Output<Integer>> sizeLimitInBytes() {
         return Optional.ofNullable(this.sizeLimitInBytes);
     }
@@ -84,6 +104,10 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="skipEmptyArchives")
     private @Nullable Output<Boolean> skipEmptyArchives;
 
+    /**
+     * @return A value that indicates whether to Skip Empty Archives
+     * 
+     */
     public Optional<Output<Boolean>> skipEmptyArchives() {
         return Optional.ofNullable(this.skipEmptyArchives);
     }
@@ -117,56 +141,128 @@ public final class CaptureDescriptionArgs extends com.pulumi.resources.ResourceA
             $ = new CaptureDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<DestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(DestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param enabled A value that indicates whether capture description is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled A value that indicates whether capture description is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param encoding Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<EncodingCaptureDescription> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(EncodingCaptureDescription encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param intervalInSeconds The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(Integer intervalInSeconds) {
             return intervalInSeconds(Output.of(intervalInSeconds));
         }
 
+        /**
+         * @param sizeLimitInBytes The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeLimitInBytes(@Nullable Output<Integer> sizeLimitInBytes) {
             $.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
 
+        /**
+         * @param sizeLimitInBytes The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeLimitInBytes(Integer sizeLimitInBytes) {
             return sizeLimitInBytes(Output.of(sizeLimitInBytes));
         }
 
+        /**
+         * @param skipEmptyArchives A value that indicates whether to Skip Empty Archives
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipEmptyArchives(@Nullable Output<Boolean> skipEmptyArchives) {
             $.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
 
+        /**
+         * @param skipEmptyArchives A value that indicates whether to Skip Empty Archives
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipEmptyArchives(Boolean skipEmptyArchives) {
             return skipEmptyArchives(Output.of(skipEmptyArchives));
         }

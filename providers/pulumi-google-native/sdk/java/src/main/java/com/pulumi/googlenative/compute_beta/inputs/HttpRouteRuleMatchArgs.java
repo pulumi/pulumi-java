@@ -31,6 +31,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="fullPathMatch")
     private @Nullable Output<String> fullPathMatch;
 
+    /**
+     * @return For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. fullPathMatch must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+     * 
+     */
     public Optional<Output<String>> fullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
@@ -42,6 +46,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="headerMatches")
     private @Nullable Output<List<HttpHeaderMatchArgs>> headerMatches;
 
+    /**
+     * @return Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+     * 
+     */
     public Optional<Output<List<HttpHeaderMatchArgs>>> headerMatches() {
         return Optional.ofNullable(this.headerMatches);
     }
@@ -53,6 +61,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="ignoreCase")
     private @Nullable Output<Boolean> ignoreCase;
 
+    /**
+     * @return Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to a target gRPC proxy.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
@@ -64,6 +76,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="metadataFilters")
     private @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
 
+    /**
+     * @return Opaque filter criteria used by the load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to the load balancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadata filters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here is applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to. metadataFilters only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+     * 
+     */
     public Optional<Output<List<MetadataFilterArgs>>> metadataFilters() {
         return Optional.ofNullable(this.metadataFilters);
     }
@@ -75,6 +91,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="prefixMatch")
     private @Nullable Output<String> prefixMatch;
 
+    /**
+     * @return For satisfying the matchRule condition, the request&#39;s path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+     * 
+     */
     public Optional<Output<String>> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -86,6 +106,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryParameterMatches")
     private @Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches;
 
+    /**
+     * @return Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request. Not supported when the URL map is bound to a target gRPC proxy.
+     * 
+     */
     public Optional<Output<List<HttpQueryParameterMatchArgs>>> queryParameterMatches() {
         return Optional.ofNullable(this.queryParameterMatches);
     }
@@ -97,6 +121,10 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
     @Import(name="regexMatch")
     private @Nullable Output<String> regexMatch;
 
+    /**
+     * @return For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For more information about regular expression syntax, see Syntax. Only one of prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+     * 
+     */
     public Optional<Output<String>> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
@@ -131,77 +159,179 @@ public final class HttpRouteRuleMatchArgs extends com.pulumi.resources.ResourceA
             $ = new HttpRouteRuleMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fullPathMatch For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. fullPathMatch must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullPathMatch(@Nullable Output<String> fullPathMatch) {
             $.fullPathMatch = fullPathMatch;
             return this;
         }
 
+        /**
+         * @param fullPathMatch For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. fullPathMatch must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullPathMatch(String fullPathMatch) {
             return fullPathMatch(Output.of(fullPathMatch));
         }
 
+        /**
+         * @param headerMatches Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerMatches(@Nullable Output<List<HttpHeaderMatchArgs>> headerMatches) {
             $.headerMatches = headerMatches;
             return this;
         }
 
+        /**
+         * @param headerMatches Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerMatches(List<HttpHeaderMatchArgs> headerMatches) {
             return headerMatches(Output.of(headerMatches));
         }
 
+        /**
+         * @param headerMatches Specifies a list of header match criteria, all of which must match corresponding headers in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerMatches(HttpHeaderMatchArgs... headerMatches) {
             return headerMatches(List.of(headerMatches));
         }
 
+        /**
+         * @param ignoreCase Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
             $.ignoreCase = ignoreCase;
             return this;
         }
 
+        /**
+         * @param ignoreCase Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCase(Boolean ignoreCase) {
             return ignoreCase(Output.of(ignoreCase));
         }
 
+        /**
+         * @param metadataFilters Opaque filter criteria used by the load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to the load balancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadata filters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here is applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to. metadataFilters only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFilters(@Nullable Output<List<MetadataFilterArgs>> metadataFilters) {
             $.metadataFilters = metadataFilters;
             return this;
         }
 
+        /**
+         * @param metadataFilters Opaque filter criteria used by the load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to the load balancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadata filters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here is applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to. metadataFilters only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFilters(List<MetadataFilterArgs> metadataFilters) {
             return metadataFilters(Output.of(metadataFilters));
         }
 
+        /**
+         * @param metadataFilters Opaque filter criteria used by the load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to the load balancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadata filters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here is applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to. metadataFilters only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataFilters(MetadataFilterArgs... metadataFilters) {
             return metadataFilters(List.of(metadataFilters));
         }
 
+        /**
+         * @param prefixMatch For satisfying the matchRule condition, the request&#39;s path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
             $.prefixMatch = prefixMatch;
             return this;
         }
 
+        /**
+         * @param prefixMatch For satisfying the matchRule condition, the request&#39;s path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixMatch(String prefixMatch) {
             return prefixMatch(Output.of(prefixMatch));
         }
 
+        /**
+         * @param queryParameterMatches Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameterMatches(@Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches) {
             $.queryParameterMatches = queryParameterMatches;
             return this;
         }
 
+        /**
+         * @param queryParameterMatches Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameterMatches(List<HttpQueryParameterMatchArgs> queryParameterMatches) {
             return queryParameterMatches(Output.of(queryParameterMatches));
         }
 
+        /**
+         * @param queryParameterMatches Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request. Not supported when the URL map is bound to a target gRPC proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameterMatches(HttpQueryParameterMatchArgs... queryParameterMatches) {
             return queryParameterMatches(List.of(queryParameterMatches));
         }
 
+        /**
+         * @param regexMatch For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For more information about regular expression syntax, see Syntax. Only one of prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
             $.regexMatch = regexMatch;
             return this;
         }
 
+        /**
+         * @param regexMatch For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For more information about regular expression syntax, see Syntax. Only one of prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexMatch(String regexMatch) {
             return regexMatch(Output.of(regexMatch));
         }

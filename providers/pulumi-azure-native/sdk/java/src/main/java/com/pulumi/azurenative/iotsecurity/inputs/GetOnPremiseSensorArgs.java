@@ -19,6 +19,10 @@ public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="onPremiseSensorName", required=true)
     private String onPremiseSensorName;
 
+    /**
+     * @return Name of the on-premise IoT sensor
+     * 
+     */
     public String onPremiseSensorName() {
         return this.onPremiseSensorName;
     }
@@ -47,6 +51,12 @@ public final class GetOnPremiseSensorArgs extends com.pulumi.resources.InvokeArg
             $ = new GetOnPremiseSensorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onPremiseSensorName Name of the on-premise IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseSensorName(String onPremiseSensorName) {
             $.onPremiseSensorName = onPremiseSensorName;
             return this;

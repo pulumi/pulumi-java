@@ -27,6 +27,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="additionalColumns")
     private @Nullable Object additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -38,6 +42,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="baseRequestId")
     private @Nullable Object baseRequestId;
 
+    /**
+     * @return The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+     * 
+     */
     public Optional<Object> baseRequestId() {
         return Optional.ofNullable(this.baseRequestId);
     }
@@ -49,6 +57,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="customRfcReadTableFunctionModule")
     private @Nullable Object customRfcReadTableFunctionModule;
 
+    /**
+     * @return Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> customRfcReadTableFunctionModule() {
         return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
@@ -60,6 +72,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -71,6 +87,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="excludeLastRequest")
     private @Nullable Object excludeLastRequest;
 
+    /**
+     * @return Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> excludeLastRequest() {
         return Optional.ofNullable(this.excludeLastRequest);
     }
@@ -82,6 +102,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -93,6 +117,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="queryTimeout")
     private @Nullable Object queryTimeout;
 
+    /**
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -104,6 +132,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sapDataColumnDelimiter")
     private @Nullable Object sapDataColumnDelimiter;
 
+    /**
+     * @return The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> sapDataColumnDelimiter() {
         return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
@@ -115,6 +147,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceRetryCount")
     private @Nullable Object sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -126,6 +162,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceRetryWait")
     private @Nullable Object sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -138,6 +178,11 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;SapOpenHubSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -176,56 +221,123 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
             $ = new SapOpenHubSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param baseRequestId The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseRequestId(@Nullable Object baseRequestId) {
             $.baseRequestId = baseRequestId;
             return this;
         }
 
+        /**
+         * @param customRfcReadTableFunctionModule Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             $.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param excludeLastRequest Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             $.excludeLastRequest = excludeLastRequest;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Object queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param sapDataColumnDelimiter The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             $.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;SapOpenHubSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

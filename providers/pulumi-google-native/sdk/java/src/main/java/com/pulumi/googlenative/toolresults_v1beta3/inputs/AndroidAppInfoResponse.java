@@ -23,6 +23,10 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the app. Optional
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="packageName", required=true)
     private String packageName;
 
+    /**
+     * @return The package name of the app. Required.
+     * 
+     */
     public String packageName() {
         return this.packageName;
     }
@@ -45,6 +53,10 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="versionCode", required=true)
     private String versionCode;
 
+    /**
+     * @return The internal version code of the app. Optional.
+     * 
+     */
     public String versionCode() {
         return this.versionCode;
     }
@@ -56,6 +68,10 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="versionName", required=true)
     private String versionName;
 
+    /**
+     * @return The version name of the app. Optional.
+     * 
+     */
     public String versionName() {
         return this.versionName;
     }
@@ -87,21 +103,45 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new AndroidAppInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the app. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param packageName The package name of the app. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param versionCode The internal version code of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionCode(String versionCode) {
             $.versionCode = versionCode;
             return this;
         }
 
+        /**
+         * @param versionName The version name of the app. Optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionName(String versionName) {
             $.versionName = versionName;
             return this;

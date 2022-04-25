@@ -26,6 +26,10 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
     @Import(name="publicIPPrefixes")
     private @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
+    /**
+     * @return A list of public IP prefix resources.
+     * 
+     */
     public Optional<List<ResourceReferenceResponse>> publicIPPrefixes() {
         return Optional.ofNullable(this.publicIPPrefixes);
     }
@@ -54,11 +58,23 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
             $ = new ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIPPrefixes A list of public IP prefix resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefixes(@Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
             $.publicIPPrefixes = publicIPPrefixes;
             return this;
         }
 
+        /**
+         * @param publicIPPrefixes A list of public IP prefix resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefixes(ResourceReferenceResponse... publicIPPrefixes) {
             return publicIPPrefixes(List.of(publicIPPrefixes));
         }

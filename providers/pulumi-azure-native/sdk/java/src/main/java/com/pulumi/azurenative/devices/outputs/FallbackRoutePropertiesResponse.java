@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FallbackRoutePropertiesResponse {
     /**
-     * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * @return The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
      */
     private final @Nullable String condition;
     /**
-     * The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+     * @return The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
      * 
      */
     private final List<String> endpointNames;
     /**
-     * Used to specify whether the fallback route is enabled.
+     * @return Used to specify whether the fallback route is enabled.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
      */
     private final @Nullable String name;
     /**
-     * The source to which the routing rule is to be applied to. For example, DeviceMessages
+     * @return The source to which the routing rule is to be applied to. For example, DeviceMessages
      * 
      */
     private final String source;
@@ -54,37 +54,37 @@ public final class FallbackRoutePropertiesResponse {
     }
 
     /**
-     * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     * @return The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
-    */
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
+     * @return The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
      * 
-    */
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
     /**
-     * Used to specify whether the fallback route is enabled.
+     * @return Used to specify whether the fallback route is enabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     * @return The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The source to which the routing rule is to be applied to. For example, DeviceMessages
+     * @return The source to which the routing rule is to be applied to. For example, DeviceMessages
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

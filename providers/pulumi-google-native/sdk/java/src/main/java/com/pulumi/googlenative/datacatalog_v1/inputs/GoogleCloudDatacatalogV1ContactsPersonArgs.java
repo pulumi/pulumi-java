@@ -26,6 +26,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi
     @Import(name="designation")
     private @Nullable Output<String> designation;
 
+    /**
+     * @return Designation of the person, for example, Data Steward.
+     * 
+     */
     public Optional<Output<String>> designation() {
         return Optional.ofNullable(this.designation);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi
             $ = new GoogleCloudDatacatalogV1ContactsPersonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param designation Designation of the person, for example, Data Steward.
+         * 
+         * @return builder
+         * 
+         */
         public Builder designation(@Nullable Output<String> designation) {
             $.designation = designation;
             return this;
         }
 
+        /**
+         * @param designation Designation of the person, for example, Data Steward.
+         * 
+         * @return builder
+         * 
+         */
         public Builder designation(String designation) {
             return designation(Output.of(designation));
         }
 
+        /**
+         * @param email Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }

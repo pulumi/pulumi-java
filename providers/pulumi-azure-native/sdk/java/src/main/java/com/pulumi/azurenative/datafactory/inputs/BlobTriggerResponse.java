@@ -31,6 +31,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -42,6 +46,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="folderPath", required=true)
     private String folderPath;
 
+    /**
+     * @return The path of the container/folder that will trigger the pipeline.
+     * 
+     */
     public String folderPath() {
         return this.folderPath;
     }
@@ -64,6 +76,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedService", required=true)
     private LinkedServiceReferenceResponse linkedService;
 
+    /**
+     * @return The Azure Storage linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedService() {
         return this.linkedService;
     }
@@ -75,6 +91,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrency", required=true)
     private Integer maxConcurrency;
 
+    /**
+     * @return The max number of parallel files to handle when it is triggered.
+     * 
+     */
     public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
@@ -86,6 +106,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pipelines")
     private @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
+    /**
+     * @return Pipelines that need to be started.
+     * 
+     */
     public Optional<List<TriggerPipelineReferenceResponse>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -97,6 +121,10 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="runtimeState", required=true)
     private String runtimeState;
 
+    /**
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
@@ -109,6 +137,11 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;BlobTrigger&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -144,49 +177,110 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BlobTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param folderPath The path of the container/folder that will trigger the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(String folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param linkedService The Azure Storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(LinkedServiceReferenceResponse linkedService) {
             $.linkedService = linkedService;
             return this;
         }
 
+        /**
+         * @param maxConcurrency The max number of parallel files to handle when it is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(Integer maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             $.pipelines = pipelines;
             return this;
         }
 
+        /**
+         * @param pipelines Pipelines that need to be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelines(TriggerPipelineReferenceResponse... pipelines) {
             return pipelines(List.of(pipelines));
         }
 
+        /**
+         * @param runtimeState Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeState(String runtimeState) {
             $.runtimeState = runtimeState;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;BlobTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

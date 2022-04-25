@@ -45,6 +45,10 @@ public final class StoredQueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<StoredQueryTagArgs>> tags;
 
+    /**
+     * @return The tags for the stored query.
+     * 
+     */
     public Optional<Output<List<StoredQueryTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,15 +107,33 @@ public final class StoredQueryArgs extends com.pulumi.resources.ResourceArgs {
             return queryName(Output.of(queryName));
         }
 
+        /**
+         * @param tags The tags for the stored query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<StoredQueryTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the stored query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<StoredQueryTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the stored query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(StoredQueryTagArgs... tags) {
             return tags(List.of(tags));
         }

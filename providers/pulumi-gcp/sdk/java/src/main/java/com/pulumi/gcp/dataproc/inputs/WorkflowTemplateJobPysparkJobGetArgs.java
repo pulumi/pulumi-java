@@ -25,6 +25,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="archiveUris")
     private @Nullable Output<List<String>> archiveUris;
 
+    /**
+     * @return Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     * 
+     */
     public Optional<Output<List<String>>> archiveUris() {
         return Optional.ofNullable(this.archiveUris);
     }
@@ -36,6 +40,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -47,6 +55,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="fileUris")
     private @Nullable Output<List<String>> fileUris;
 
+    /**
+     * @return Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+     * 
+     */
     public Optional<Output<List<String>>> fileUris() {
         return Optional.ofNullable(this.fileUris);
     }
@@ -58,6 +70,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="jarFileUris")
     private @Nullable Output<List<String>> jarFileUris;
 
+    /**
+     * @return Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+     * 
+     */
     public Optional<Output<List<String>>> jarFileUris() {
         return Optional.ofNullable(this.jarFileUris);
     }
@@ -69,6 +85,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="loggingConfig")
     private @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
 
+    /**
+     * @return Optional. The runtime log config for job execution.
+     * 
+     */
     public Optional<Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs>> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
@@ -80,6 +100,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="mainPythonFileUri", required=true)
     private Output<String> mainPythonFileUri;
 
+    /**
+     * @return Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+     * 
+     */
     public Output<String> mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
@@ -91,6 +115,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -102,6 +130,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
     @Import(name="pythonFileUris")
     private @Nullable Output<List<String>> pythonFileUris;
 
+    /**
+     * @return Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+     * 
+     */
     public Optional<Output<List<String>>> pythonFileUris() {
         return Optional.ofNullable(this.pythonFileUris);
     }
@@ -137,94 +169,220 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
             $ = new WorkflowTemplateJobPysparkJobGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
             $.archiveUris = archiveUris;
             return this;
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(List<String> archiveUris) {
             return archiveUris(Output.of(archiveUris));
         }
 
+        /**
+         * @param archiveUris Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
             $.fileUris = fileUris;
             return this;
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(List<String> fileUris) {
             return fileUris(Output.of(fileUris));
         }
 
+        /**
+         * @param fileUris Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
             $.jarFileUris = jarFileUris;
             return this;
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(List<String> jarFileUris) {
             return jarFileUris(Output.of(jarFileUris));
         }
 
+        /**
+         * @param jarFileUris Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig) {
             $.loggingConfig = loggingConfig;
             return this;
         }
 
+        /**
+         * @param loggingConfig Optional. The runtime log config for job execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfig(WorkflowTemplateJobPysparkJobLoggingConfigGetArgs loggingConfig) {
             return loggingConfig(Output.of(loggingConfig));
         }
 
+        /**
+         * @param mainPythonFileUri Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
             $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
 
+        /**
+         * @param mainPythonFileUri Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainPythonFileUri(String mainPythonFileUri) {
             return mainPythonFileUri(Output.of(mainPythonFileUri));
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param pythonFileUris Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
             $.pythonFileUris = pythonFileUris;
             return this;
         }
 
+        /**
+         * @param pythonFileUris Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(List<String> pythonFileUris) {
             return pythonFileUris(Output.of(pythonFileUris));
         }
 
+        /**
+         * @param pythonFileUris Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
         }

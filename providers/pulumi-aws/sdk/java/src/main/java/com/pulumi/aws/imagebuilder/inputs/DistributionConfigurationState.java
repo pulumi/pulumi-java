@@ -25,6 +25,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return (Required) Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="dateCreated")
     private @Nullable Output<String> dateCreated;
 
+    /**
+     * @return Date the distribution configuration was created.
+     * 
+     */
     public Optional<Output<String>> dateCreated() {
         return Optional.ofNullable(this.dateCreated);
     }
@@ -47,6 +55,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="dateUpdated")
     private @Nullable Output<String> dateUpdated;
 
+    /**
+     * @return Date the distribution configuration was updated.
+     * 
+     */
     public Optional<Output<String>> dateUpdated() {
         return Optional.ofNullable(this.dateUpdated);
     }
@@ -58,6 +70,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the container distribution configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -69,6 +85,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="distributions")
     private @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
+    /**
+     * @return One or more configuration blocks with distribution settings. Detailed below.
+     * 
+     */
     public Optional<Output<List<DistributionConfigurationDistributionGetArgs>>> distributions() {
         return Optional.ofNullable(this.distributions);
     }
@@ -80,6 +100,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name to apply to the distributed AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +130,10 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -137,78 +169,180 @@ public final class DistributionConfigurationState extends com.pulumi.resources.R
             $ = new DistributionConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn (Required) Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn (Required) Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dateCreated Date the distribution configuration was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             $.dateCreated = dateCreated;
             return this;
         }
 
+        /**
+         * @param dateCreated Date the distribution configuration was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateCreated(String dateCreated) {
             return dateCreated(Output.of(dateCreated));
         }
 
+        /**
+         * @param dateUpdated Date the distribution configuration was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
             $.dateUpdated = dateUpdated;
             return this;
         }
 
+        /**
+         * @param dateUpdated Date the distribution configuration was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateUpdated(String dateUpdated) {
             return dateUpdated(Output.of(dateUpdated));
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the container distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param distributions One or more configuration blocks with distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
             $.distributions = distributions;
             return this;
         }
 
+        /**
+         * @param distributions One or more configuration blocks with distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(List<DistributionConfigurationDistributionGetArgs> distributions) {
             return distributions(Output.of(distributions));
         }
 
+        /**
+         * @param distributions One or more configuration blocks with distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributions(DistributionConfigurationDistributionGetArgs... distributions) {
             return distributions(List.of(distributions));
         }
 
+        /**
+         * @param name Name to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name to apply to the distributed AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

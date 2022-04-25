@@ -33,6 +33,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the game server config.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +48,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fleetConfigs")
     private @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
 
+    /**
+     * @return FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
+     * 
+     */
     public Optional<Output<List<FleetConfigArgs>>> fleetConfigs() {
         return Optional.ofNullable(this.fleetConfigs);
     }
@@ -62,6 +70,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The labels associated with this game server config. Each label is a key-value pair.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -80,6 +92,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,6 +114,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingConfigs")
     private @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
+    /**
+     * @return The autoscaling settings.
+     * 
+     */
     public Optional<Output<List<ScalingConfigArgs>>> scalingConfigs() {
         return Optional.ofNullable(this.scalingConfigs);
     }
@@ -143,24 +163,54 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return configId(Output.of(configId));
         }
 
+        /**
+         * @param description The description of the game server config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the game server config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fleetConfigs FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(@Nullable Output<List<FleetConfigArgs>> fleetConfigs) {
             $.fleetConfigs = fleetConfigs;
             return this;
         }
 
+        /**
+         * @param fleetConfigs FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(List<FleetConfigArgs> fleetConfigs) {
             return fleetConfigs(Output.of(fleetConfigs));
         }
 
+        /**
+         * @param fleetConfigs FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetConfigs(FleetConfigArgs... fleetConfigs) {
             return fleetConfigs(List.of(fleetConfigs));
         }
@@ -174,11 +224,23 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return gameServerDeploymentId(Output.of(gameServerDeploymentId));
         }
 
+        /**
+         * @param labels The labels associated with this game server config. Each label is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The labels associated with this game server config. Each label is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -192,11 +254,23 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -210,15 +284,33 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param scalingConfigs The autoscaling settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(@Nullable Output<List<ScalingConfigArgs>> scalingConfigs) {
             $.scalingConfigs = scalingConfigs;
             return this;
         }
 
+        /**
+         * @param scalingConfigs The autoscaling settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(List<ScalingConfigArgs> scalingConfigs) {
             return scalingConfigs(Output.of(scalingConfigs));
         }
 
+        /**
+         * @param scalingConfigs The autoscaling settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingConfigs(ScalingConfigArgs... scalingConfigs) {
             return scalingConfigs(List.of(scalingConfigs));
         }

@@ -27,6 +27,10 @@ public final class KeyForDiskEncryptionSetArgs extends com.pulumi.resources.Reso
     @Import(name="keyUrl", required=true)
     private Output<String> keyUrl;
 
+    /**
+     * @return Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+     * 
+     */
     public Output<String> keyUrl() {
         return this.keyUrl;
     }
@@ -38,6 +42,10 @@ public final class KeyForDiskEncryptionSetArgs extends com.pulumi.resources.Reso
     @Import(name="sourceVault")
     private @Nullable Output<SourceVaultArgs> sourceVault;
 
+    /**
+     * @return Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
+     * 
+     */
     public Optional<Output<SourceVaultArgs>> sourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
@@ -67,20 +75,44 @@ public final class KeyForDiskEncryptionSetArgs extends com.pulumi.resources.Reso
             $ = new KeyForDiskEncryptionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUrl Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(Output<String> keyUrl) {
             $.keyUrl = keyUrl;
             return this;
         }
 
+        /**
+         * @param keyUrl Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUrl(String keyUrl) {
             return keyUrl(Output.of(keyUrl));
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(@Nullable Output<SourceVaultArgs> sourceVault) {
             $.sourceVault = sourceVault;
             return this;
         }
 
+        /**
+         * @param sourceVault Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVault(SourceVaultArgs sourceVault) {
             return sourceVault(Output.of(sourceVault));
         }

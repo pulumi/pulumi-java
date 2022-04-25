@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceAmazonOpenSearchParameters {
     /**
-     * &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
      * 
      */
     private final String domain;
@@ -21,9 +21,9 @@ public final class DataSourceAmazonOpenSearchParameters {
     }
 
     /**
-     * &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon OpenSearch Service domain.&lt;/p&gt;
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }

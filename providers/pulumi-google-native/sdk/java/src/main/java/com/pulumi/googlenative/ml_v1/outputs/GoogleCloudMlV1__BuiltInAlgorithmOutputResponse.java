@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     /**
-     * Framework on which the built-in algorithm was trained.
+     * @return Framework on which the built-in algorithm was trained.
      * 
      */
     private final String framework;
     /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+     * @return The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
      * 
      */
     private final String modelPath;
     /**
-     * Python version on which the built-in algorithm was trained.
+     * @return Python version on which the built-in algorithm was trained.
      * 
      */
     private final String pythonVersion;
     /**
-     * AI Platform runtime version on which the built-in algorithm was trained.
+     * @return AI Platform runtime version on which the built-in algorithm was trained.
      * 
      */
     private final String runtimeVersion;
@@ -43,30 +43,30 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     }
 
     /**
-     * Framework on which the built-in algorithm was trained.
+     * @return Framework on which the built-in algorithm was trained.
      * 
-    */
+     */
     public String framework() {
         return this.framework;
     }
     /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
+     * @return The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don&#39;t use hyperparameter tuning.
      * 
-    */
+     */
     public String modelPath() {
         return this.modelPath;
     }
     /**
-     * Python version on which the built-in algorithm was trained.
+     * @return Python version on which the built-in algorithm was trained.
      * 
-    */
+     */
     public String pythonVersion() {
         return this.pythonVersion;
     }
     /**
-     * AI Platform runtime version on which the built-in algorithm was trained.
+     * @return AI Platform runtime version on which the built-in algorithm was trained.
      * 
-    */
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }

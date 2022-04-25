@@ -26,6 +26,10 @@ public final class ControllerDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return controller arm resource id
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class ControllerDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new ControllerDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id controller arm resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id controller arm resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

@@ -27,6 +27,10 @@ public final class ApplicationHealthPolicyResponse extends com.pulumi.resources.
     @Import(name="defaultServiceTypeHealthPolicy")
     private @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
+    /**
+     * @return The health policy used by default to evaluate the health of a service type.
+     * 
+     */
     public Optional<ServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
@@ -38,6 +42,10 @@ public final class ApplicationHealthPolicyResponse extends com.pulumi.resources.
     @Import(name="serviceTypeHealthPolicies")
     private @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
+    /**
+     * @return The map with service type health policy per service type name. The map is empty by default.
+     * 
+     */
     public Optional<Map<String,ServiceTypeHealthPolicyResponse>> serviceTypeHealthPolicies() {
         return Optional.ofNullable(this.serviceTypeHealthPolicies);
     }
@@ -67,11 +75,23 @@ public final class ApplicationHealthPolicyResponse extends com.pulumi.resources.
             $ = new ApplicationHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultServiceTypeHealthPolicy The health policy used by default to evaluate the health of a service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
             $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
+        /**
+         * @param serviceTypeHealthPolicies The map with service type health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
             $.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;

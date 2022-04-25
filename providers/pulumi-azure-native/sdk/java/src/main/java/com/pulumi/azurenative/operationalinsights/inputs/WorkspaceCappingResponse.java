@@ -26,6 +26,10 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
     @Import(name="dailyQuotaGb")
     private @Nullable Double dailyQuotaGb;
 
+    /**
+     * @return The workspace daily quota for ingestion.
+     * 
+     */
     public Optional<Double> dailyQuotaGb() {
         return Optional.ofNullable(this.dailyQuotaGb);
     }
@@ -37,6 +41,10 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataIngestionStatus", required=true)
     private String dataIngestionStatus;
 
+    /**
+     * @return The status of data ingestion for this workspace.
+     * 
+     */
     public String dataIngestionStatus() {
         return this.dataIngestionStatus;
     }
@@ -48,6 +56,10 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
     @Import(name="quotaNextResetTime", required=true)
     private String quotaNextResetTime;
 
+    /**
+     * @return The time when the quota will be rest.
+     * 
+     */
     public String quotaNextResetTime() {
         return this.quotaNextResetTime;
     }
@@ -78,16 +90,34 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
             $ = new WorkspaceCappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyQuotaGb The workspace daily quota for ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
             $.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
+        /**
+         * @param dataIngestionStatus The status of data ingestion for this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataIngestionStatus(String dataIngestionStatus) {
             $.dataIngestionStatus = dataIngestionStatus;
             return this;
         }
 
+        /**
+         * @param quotaNextResetTime The time when the quota will be rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaNextResetTime(String quotaNextResetTime) {
             $.quotaNextResetTime = quotaNextResetTime;
             return this;

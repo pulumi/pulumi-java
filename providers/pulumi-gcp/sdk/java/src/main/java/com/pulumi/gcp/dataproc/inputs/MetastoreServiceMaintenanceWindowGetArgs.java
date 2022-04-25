@@ -22,6 +22,11 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends com.pulumi.r
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
+    /**
+     * @return The day of week, when the window starts.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -33,6 +38,10 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends com.pulumi.r
     @Import(name="hourOfDay", required=true)
     private Output<Integer> hourOfDay;
 
+    /**
+     * @return The hour of day (0-23) when the window starts.
+     * 
+     */
     public Output<Integer> hourOfDay() {
         return this.hourOfDay;
     }
@@ -62,20 +71,46 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends com.pulumi.r
             $ = new MetastoreServiceMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek The day of week, when the window starts.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<String> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek The day of week, when the window starts.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param hourOfDay The hour of day (0-23) when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourOfDay(Output<Integer> hourOfDay) {
             $.hourOfDay = hourOfDay;
             return this;
         }
 
+        /**
+         * @param hourOfDay The hour of day (0-23) when the window starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourOfDay(Integer hourOfDay) {
             return hourOfDay(Output.of(hourOfDay));
         }

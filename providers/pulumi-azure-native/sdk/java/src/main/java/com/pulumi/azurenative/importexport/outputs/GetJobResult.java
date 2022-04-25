@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetJobResult {
     /**
-     * Specifies the resource identifier of the job.
+     * @return Specifies the resource identifier of the job.
      * 
      */
     private final String id;
     /**
-     * Specifies the job identity details
+     * @return Specifies the job identity details
      * 
      */
     private final @Nullable IdentityDetailsResponse identity;
     /**
-     * Specifies the Azure location where the job is created.
+     * @return Specifies the Azure location where the job is created.
      * 
      */
     private final @Nullable String location;
     /**
-     * Specifies the name of the job.
+     * @return Specifies the name of the job.
      * 
      */
     private final String name;
     /**
-     * Specifies the job properties
+     * @return Specifies the job properties
      * 
      */
     private final JobDetailsResponse properties;
     /**
-     * SystemData of ImportExport Jobs.
+     * @return SystemData of ImportExport Jobs.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Specifies the tags that are assigned to the job.
+     * @return Specifies the tags that are assigned to the job.
      * 
      */
     private final @Nullable Object tags;
     /**
-     * Specifies the type of the job resource.
+     * @return Specifies the type of the job resource.
      * 
      */
     private final String type;
@@ -77,58 +77,58 @@ public final class GetJobResult {
     }
 
     /**
-     * Specifies the resource identifier of the job.
+     * @return Specifies the resource identifier of the job.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the job identity details
+     * @return Specifies the job identity details
      * 
-    */
+     */
     public Optional<IdentityDetailsResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Specifies the Azure location where the job is created.
+     * @return Specifies the Azure location where the job is created.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the job.
+     * @return Specifies the name of the job.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the job properties
+     * @return Specifies the job properties
      * 
-    */
+     */
     public JobDetailsResponse properties() {
         return this.properties;
     }
     /**
-     * SystemData of ImportExport Jobs.
+     * @return SystemData of ImportExport Jobs.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Specifies the tags that are assigned to the job.
+     * @return Specifies the tags that are assigned to the job.
      * 
-    */
+     */
     public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
     /**
-     * Specifies the type of the job resource.
+     * @return Specifies the type of the job resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

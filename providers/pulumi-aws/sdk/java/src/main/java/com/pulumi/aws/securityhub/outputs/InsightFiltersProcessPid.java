@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InsightFiltersProcessPid {
     /**
-     * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The equal-to condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
     private final @Nullable String eq;
     /**
-     * The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
     private final @Nullable String gte;
     /**
-     * The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
     private final @Nullable String lte;
@@ -38,23 +38,23 @@ public final class InsightFiltersProcessPid {
     }
 
     /**
-     * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The equal-to condition to be applied to a single field when querying for findings, provided as a String.
      * 
-    */
+     */
     public Optional<String> eq() {
         return Optional.ofNullable(this.eq);
     }
     /**
-     * The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
-    */
+     */
     public Optional<String> gte() {
         return Optional.ofNullable(this.gte);
     }
     /**
-     * The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+     * @return The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
-    */
+     */
     public Optional<String> lte() {
         return Optional.ofNullable(this.lte);
     }

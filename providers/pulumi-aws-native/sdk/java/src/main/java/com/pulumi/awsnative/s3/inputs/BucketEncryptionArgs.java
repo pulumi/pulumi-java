@@ -25,6 +25,10 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverSideEncryptionConfiguration", required=true)
     private Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
+    /**
+     * @return Specifies the default server-side-encryption configuration.
+     * 
+     */
     public Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
@@ -53,15 +57,33 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
             $ = new BucketEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
             $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRuleArgs> serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
 
+        /**
+         * @param serverSideEncryptionConfiguration Specifies the default server-side-encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionRuleArgs... serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(List.of(serverSideEncryptionConfiguration));
         }

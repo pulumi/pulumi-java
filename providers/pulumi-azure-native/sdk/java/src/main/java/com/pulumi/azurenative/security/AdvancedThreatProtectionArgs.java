@@ -23,6 +23,10 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Indicates whether Advanced Threat Protection is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -34,6 +38,10 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -45,6 +53,10 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
     @Import(name="settingName")
     private @Nullable Output<String> settingName;
 
+    /**
+     * @return Advanced Threat Protection setting name.
+     * 
+     */
     public Optional<Output<String>> settingName() {
         return Optional.ofNullable(this.settingName);
     }
@@ -75,29 +87,65 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
             $ = new AdvancedThreatProtectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Indicates whether Advanced Threat Protection is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Indicates whether Advanced Threat Protection is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param settingName Advanced Threat Protection setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(@Nullable Output<String> settingName) {
             $.settingName = settingName;
             return this;
         }
 
+        /**
+         * @param settingName Advanced Threat Protection setting name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingName(String settingName) {
             return settingName(Output.of(settingName));
         }

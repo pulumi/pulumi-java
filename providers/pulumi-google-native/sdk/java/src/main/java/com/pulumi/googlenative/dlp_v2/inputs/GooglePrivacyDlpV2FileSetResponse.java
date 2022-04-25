@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2FileSetResponse extends com.pulumi.resource
     @Import(name="regexFileSet", required=true)
     private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
 
+    /**
+     * @return The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet() {
         return this.regexFileSet;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2FileSetResponse extends com.pulumi.resource
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2FileSetResponse extends com.pulumi.resource
             $ = new GooglePrivacyDlpV2FileSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regexFileSet The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet) {
             $.regexFileSet = regexFileSet;
             return this;
         }
 
+        /**
+         * @param url The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

@@ -21,6 +21,10 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="connectorName", required=true)
     private String connectorName;
 
+    /**
+     * @return Connector Name.
+     * 
+     */
     public String connectorName() {
         return this.connectorName;
     }
@@ -32,6 +36,10 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return May be used to expand the collectionInfo property. By default, collectionInfo is not included.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -61,11 +69,23 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetCloudConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorName Connector Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param expand May be used to expand the collectionInfo property. By default, collectionInfo is not included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;

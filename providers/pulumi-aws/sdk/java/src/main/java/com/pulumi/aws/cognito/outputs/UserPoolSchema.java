@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UserPoolSchema {
     /**
-     * Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
+     * @return Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
      * 
      */
     private final String attributeDataType;
     /**
-     * Whether the attribute type is developer only.
+     * @return Whether the attribute type is developer only.
      * 
      */
     private final @Nullable Boolean developerOnlyAttribute;
     /**
-     * Whether the attribute can be changed once it has been created.
+     * @return Whether the attribute can be changed once it has been created.
      * 
      */
     private final @Nullable Boolean mutable;
     /**
-     * Name of the attribute.
+     * @return Name of the attribute.
      * 
      */
     private final String name;
     /**
-     * Configuration block for the constraints for an attribute of the number type. Detailed below.
+     * @return Configuration block for the constraints for an attribute of the number type. Detailed below.
      * 
      */
     private final @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints;
     /**
-     * Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
+     * @return Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
      * 
      */
     private final @Nullable Boolean required;
     /**
-     * Constraints for an attribute of the string type. Detailed below.
+     * @return Constraints for an attribute of the string type. Detailed below.
      * 
      */
     private final @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints;
@@ -69,51 +69,51 @@ public final class UserPoolSchema {
     }
 
     /**
-     * Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
+     * @return Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
      * 
-    */
+     */
     public String attributeDataType() {
         return this.attributeDataType;
     }
     /**
-     * Whether the attribute type is developer only.
+     * @return Whether the attribute type is developer only.
      * 
-    */
+     */
     public Optional<Boolean> developerOnlyAttribute() {
         return Optional.ofNullable(this.developerOnlyAttribute);
     }
     /**
-     * Whether the attribute can be changed once it has been created.
+     * @return Whether the attribute can be changed once it has been created.
      * 
-    */
+     */
     public Optional<Boolean> mutable() {
         return Optional.ofNullable(this.mutable);
     }
     /**
-     * Name of the attribute.
+     * @return Name of the attribute.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Configuration block for the constraints for an attribute of the number type. Detailed below.
+     * @return Configuration block for the constraints for an attribute of the number type. Detailed below.
      * 
-    */
+     */
     public Optional<UserPoolSchemaNumberAttributeConstraints> numberAttributeConstraints() {
         return Optional.ofNullable(this.numberAttributeConstraints);
     }
     /**
-     * Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
+     * @return Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
      * 
-    */
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
-     * Constraints for an attribute of the string type. Detailed below.
+     * @return Constraints for an attribute of the string type. Detailed below.
      * 
-    */
+     */
     public Optional<UserPoolSchemaStringAttributeConstraints> stringAttributeConstraints() {
         return Optional.ofNullable(this.stringAttributeConstraints);
     }

@@ -19,6 +19,10 @@ public final class GetDBProxyEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="dBProxyEndpointName", required=true)
     private String dBProxyEndpointName;
 
+    /**
+     * @return The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
+     * 
+     */
     public String dBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
@@ -47,6 +51,12 @@ public final class GetDBProxyEndpointArgs extends com.pulumi.resources.InvokeArg
             $ = new GetDBProxyEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dBProxyEndpointName The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dBProxyEndpointName(String dBProxyEndpointName) {
             $.dBProxyEndpointName = dBProxyEndpointName;
             return this;

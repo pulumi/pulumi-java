@@ -22,6 +22,10 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
     @Import(name="customEntityStoreAssignmentName")
     private @Nullable Output<String> customEntityStoreAssignmentName;
 
+    /**
+     * @return Name of the custom entity store assignment. Generated name is GUID.
+     * 
+     */
     public Optional<Output<String>> customEntityStoreAssignmentName() {
         return Optional.ofNullable(this.customEntityStoreAssignmentName);
     }
@@ -33,6 +37,10 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
     @Import(name="principal")
     private @Nullable Output<String> principal;
 
+    /**
+     * @return The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
+     * 
+     */
     public Optional<Output<String>> principal() {
         return Optional.ofNullable(this.principal);
     }
@@ -44,6 +52,10 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
             $ = new CustomEntityStoreAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customEntityStoreAssignmentName Name of the custom entity store assignment. Generated name is GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEntityStoreAssignmentName(@Nullable Output<String> customEntityStoreAssignmentName) {
             $.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
             return this;
         }
 
+        /**
+         * @param customEntityStoreAssignmentName Name of the custom entity store assignment. Generated name is GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
             return customEntityStoreAssignmentName(Output.of(customEntityStoreAssignmentName));
         }
 
+        /**
+         * @param principal The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(@Nullable Output<String> principal) {
             $.principal = principal;
             return this;
         }
 
+        /**
+         * @param principal The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             return principal(Output.of(principal));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

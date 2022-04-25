@@ -27,6 +27,10 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
     @Import(name="day")
     private @Nullable Output<DayOfWeek> day;
 
+    /**
+     * @return The day of the week.
+     * 
+     */
     public Optional<Output<DayOfWeek>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -38,6 +42,10 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
     @Import(name="occurrence")
     private @Nullable Output<Integer> occurrence;
 
+    /**
+     * @return The occurrence.
+     * 
+     */
     public Optional<Output<Integer>> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -67,20 +75,44 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
             $ = new RecurrenceScheduleOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<DayOfWeek> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day The day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(DayOfWeek day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param occurrence The occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
             $.occurrence = occurrence;
             return this;
         }
 
+        /**
+         * @param occurrence The occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(Integer occurrence) {
             return occurrence(Output.of(occurrence));
         }

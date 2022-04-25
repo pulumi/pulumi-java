@@ -29,6 +29,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinations")
     private @Nullable Output<List<String>> destinations;
 
+    /**
+     * @return List of destinations for this data flow.
+     * 
+     */
     public Optional<Output<List<String>>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -40,6 +44,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streams")
     private @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
+    /**
+     * @return List of streams for this data flow.
+     * 
+     */
     public Optional<Output<List<Either<String,KnownDataFlowStreams>>>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -69,28 +77,64 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of destinations for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of destinations for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations List of destinations for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param streams List of streams for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(List<Either<String,KnownDataFlowStreams>> streams) {
             return streams(Output.of(streams));
         }
 
+        /**
+         * @param streams List of streams for this data flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(Either<String,KnownDataFlowStreams>... streams) {
             return streams(List.of(streams));
         }

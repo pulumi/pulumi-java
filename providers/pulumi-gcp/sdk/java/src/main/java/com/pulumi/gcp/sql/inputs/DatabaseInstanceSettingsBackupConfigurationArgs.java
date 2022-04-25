@@ -25,6 +25,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="backupRetentionSettings")
     private @Nullable Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs> backupRetentionSettings;
 
+    /**
+     * @return Backup retention settings. The configuration is detailed below.
+     * 
+     */
     public Optional<Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs>> backupRetentionSettings() {
         return Optional.ofNullable(this.backupRetentionSettings);
     }
@@ -37,6 +41,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="binaryLogEnabled")
     private @Nullable Output<Boolean> binaryLogEnabled;
 
+    /**
+     * @return True if binary logging is enabled.
+     * Cannot be used with Postgres.
+     * 
+     */
     public Optional<Output<Boolean>> binaryLogEnabled() {
         return Optional.ofNullable(this.binaryLogEnabled);
     }
@@ -48,6 +57,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return True if backup configuration is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -59,6 +72,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The region where the backup will be stored
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +87,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="pointInTimeRecoveryEnabled")
     private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
+    /**
+     * @return True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+     * 
+     */
     public Optional<Output<Boolean>> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
@@ -82,6 +103,11 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return `HH:MM` format time indicating when backup
+     * configuration starts.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -93,6 +119,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
     @Import(name="transactionLogRetentionDays")
     private @Nullable Output<Integer> transactionLogRetentionDays;
 
+    /**
+     * @return The number of days of transaction logs we retain for point in time restore, from 1-7.
+     * 
+     */
     public Optional<Output<Integer>> transactionLogRetentionDays() {
         return Optional.ofNullable(this.transactionLogRetentionDays);
     }
@@ -127,65 +157,153 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
             $ = new DatabaseInstanceSettingsBackupConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupRetentionSettings Backup retention settings. The configuration is detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionSettings(@Nullable Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs> backupRetentionSettings) {
             $.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
+        /**
+         * @param backupRetentionSettings Backup retention settings. The configuration is detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionSettings(DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs backupRetentionSettings) {
             return backupRetentionSettings(Output.of(backupRetentionSettings));
         }
 
+        /**
+         * @param binaryLogEnabled True if binary logging is enabled.
+         * Cannot be used with Postgres.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
             $.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
+        /**
+         * @param binaryLogEnabled True if binary logging is enabled.
+         * Cannot be used with Postgres.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             return binaryLogEnabled(Output.of(binaryLogEnabled));
         }
 
+        /**
+         * @param enabled True if backup configuration is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled True if backup configuration is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param location The region where the backup will be stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The region where the backup will be stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
+        /**
+         * @param pointInTimeRecoveryEnabled True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             return pointInTimeRecoveryEnabled(Output.of(pointInTimeRecoveryEnabled));
         }
 
+        /**
+         * @param startTime `HH:MM` format time indicating when backup
+         * configuration starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime `HH:MM` format time indicating when backup
+         * configuration starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param transactionLogRetentionDays The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
             $.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
 
+        /**
+         * @param transactionLogRetentionDays The number of days of transaction logs we retain for point in time restore, from 1-7.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             return transactionLogRetentionDays(Output.of(transactionLogRetentionDays));
         }

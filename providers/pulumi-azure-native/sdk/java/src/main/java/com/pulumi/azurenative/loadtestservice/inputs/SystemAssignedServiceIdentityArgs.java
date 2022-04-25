@@ -26,6 +26,10 @@ public final class SystemAssignedServiceIdentityArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<Either<String,SystemAssignedServiceIdentityType>> type;
 
+    /**
+     * @return Type of managed service identity (either system assigned, or none).
+     * 
+     */
     public Output<Either<String,SystemAssignedServiceIdentityType>> type() {
         return this.type;
     }
@@ -54,19 +58,43 @@ public final class SystemAssignedServiceIdentityArgs extends com.pulumi.resource
             $ = new SystemAssignedServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of managed service identity (either system assigned, or none).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,SystemAssignedServiceIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of managed service identity (either system assigned, or none).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,SystemAssignedServiceIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of managed service identity (either system assigned, or none).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of managed service identity (either system assigned, or none).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SystemAssignedServiceIdentityType type) {
             return type(Either.ofRight(type));
         }

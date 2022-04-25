@@ -39,6 +39,12 @@ public final class TagValueIamMemberArgs extends com.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.tags.TagValueIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -50,6 +56,10 @@ public final class TagValueIamMemberArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tagValue", required=true)
     private Output<String> tagValue;
 
+    /**
+     * @return Used to find the parent resource to bind the IAM policy to
+     * 
+     */
     public Output<String> tagValue() {
         return this.tagValue;
     }
@@ -99,20 +109,48 @@ public final class TagValueIamMemberArgs extends com.pulumi.resources.ResourceAr
             return member(Output.of(member));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.tags.TagValueIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.tags.TagValueIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param tagValue Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(Output<String> tagValue) {
             $.tagValue = tagValue;
             return this;
         }
 
+        /**
+         * @param tagValue Used to find the parent resource to bind the IAM policy to
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(String tagValue) {
             return tagValue(Output.of(tagValue));
         }

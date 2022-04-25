@@ -23,6 +23,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters", required=true)
     private List<GetGroupFilter> filters;
 
+    /**
+     * @return Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
+     * 
+     */
     public List<GetGroupFilter> filters() {
         return this.filters;
     }
@@ -34,6 +38,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The identifier for a group in the Identity Store.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -45,6 +53,10 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityStoreId", required=true)
     private String identityStoreId;
 
+    /**
+     * @return The Identity Store ID associated with the Single Sign-On Instance.
+     * 
+     */
     public String identityStoreId() {
         return this.identityStoreId;
     }
@@ -75,20 +87,44 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<GetGroupFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetGroupFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param groupId The identifier for a group in the Identity Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param identityStoreId The Identity Store ID associated with the Single Sign-On Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityStoreId(String identityStoreId) {
             $.identityStoreId = identityStoreId;
             return this;

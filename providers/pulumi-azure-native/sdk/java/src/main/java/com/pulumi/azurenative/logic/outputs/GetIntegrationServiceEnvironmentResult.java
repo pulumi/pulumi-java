@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIntegrationServiceEnvironmentResult {
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * Managed service identity properties.
+     * @return Managed service identity properties.
      * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
      */
     private final String name;
     /**
-     * The integration service environment properties.
+     * @return The integration service environment properties.
      * 
      */
     private final IntegrationServiceEnvironmentPropertiesResponse properties;
     /**
-     * The sku.
+     * @return The sku.
      * 
      */
     private final @Nullable IntegrationServiceEnvironmentSkuResponse sku;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
@@ -77,58 +77,58 @@ public final class GetIntegrationServiceEnvironmentResult {
     }
 
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed service identity properties.
+     * @return Managed service identity properties.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The integration service environment properties.
+     * @return The integration service environment properties.
      * 
-    */
+     */
     public IntegrationServiceEnvironmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The sku.
+     * @return The sku.
      * 
-    */
+     */
     public Optional<IntegrationServiceEnvironmentSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

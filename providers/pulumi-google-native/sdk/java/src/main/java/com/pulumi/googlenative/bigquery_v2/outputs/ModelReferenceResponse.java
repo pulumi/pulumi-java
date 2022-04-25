@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ModelReferenceResponse {
     /**
-     * [Required] The ID of the dataset containing this model.
+     * @return [Required] The ID of the dataset containing this model.
      * 
      */
     private final String datasetId;
     /**
-     * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * @return [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
      */
     private final String modelId;
     /**
-     * [Required] The ID of the project containing this model.
+     * @return [Required] The ID of the project containing this model.
      * 
      */
     private final String project;
@@ -36,23 +36,23 @@ public final class ModelReferenceResponse {
     }
 
     /**
-     * [Required] The ID of the dataset containing this model.
+     * @return [Required] The ID of the dataset containing this model.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     * @return [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
-    */
+     */
     public String modelId() {
         return this.modelId;
     }
     /**
-     * [Required] The ID of the project containing this model.
+     * @return [Required] The ID of the project containing this model.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

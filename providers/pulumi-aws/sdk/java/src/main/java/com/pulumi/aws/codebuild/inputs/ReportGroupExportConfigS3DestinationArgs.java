@@ -23,6 +23,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the S3 bucket where the raw data of a report are exported.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -35,6 +39,11 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     @Import(name="encryptionDisabled")
     private @Nullable Output<Boolean> encryptionDisabled;
 
+    /**
+     * @return A boolean value that specifies if the results of a report are encrypted.
+     * **Note: the API does not currently allow setting encryption as disabled**
+     * 
+     */
     public Optional<Output<Boolean>> encryptionDisabled() {
         return Optional.ofNullable(this.encryptionDisabled);
     }
@@ -46,6 +55,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     @Import(name="encryptionKey", required=true)
     private Output<String> encryptionKey;
 
+    /**
+     * @return The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
+     * 
+     */
     public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
@@ -57,6 +70,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     @Import(name="packaging")
     private @Nullable Output<String> packaging;
 
+    /**
+     * @return The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
+     * 
+     */
     public Optional<Output<String>> packaging() {
         return Optional.ofNullable(this.packaging);
     }
@@ -68,6 +85,10 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to the exported report&#39;s raw data results.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -100,47 +121,109 @@ public final class ReportGroupExportConfigS3DestinationArgs extends com.pulumi.r
             $ = new ReportGroupExportConfigS3DestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the S3 bucket where the raw data of a report are exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the S3 bucket where the raw data of a report are exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param encryptionDisabled A boolean value that specifies if the results of a report are encrypted.
+         * **Note: the API does not currently allow setting encryption as disabled**
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
             $.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
+        /**
+         * @param encryptionDisabled A boolean value that specifies if the results of a report are encrypted.
+         * **Note: the API does not currently allow setting encryption as disabled**
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionDisabled(Boolean encryptionDisabled) {
             return encryptionDisabled(Output.of(encryptionDisabled));
         }
 
+        /**
+         * @param encryptionKey The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(Output<String> encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param encryptionKey The encryption key for the report&#39;s encrypted raw data. The KMS key ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(String encryptionKey) {
             return encryptionKey(Output.of(encryptionKey));
         }
 
+        /**
+         * @param packaging The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packaging(@Nullable Output<String> packaging) {
             $.packaging = packaging;
             return this;
         }
 
+        /**
+         * @param packaging The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packaging(String packaging) {
             return packaging(Output.of(packaging));
         }
 
+        /**
+         * @param path The path to the exported report&#39;s raw data results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to the exported report&#39;s raw data results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

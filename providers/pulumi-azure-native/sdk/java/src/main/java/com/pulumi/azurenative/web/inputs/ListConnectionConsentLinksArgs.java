@@ -23,6 +23,10 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
     @Import(name="connectionName", required=true)
     private String connectionName;
 
+    /**
+     * @return Connection name
+     * 
+     */
     public String connectionName() {
         return this.connectionName;
     }
@@ -34,6 +38,10 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
     @Import(name="parameters")
     private @Nullable List<ConsentLinkParameterDefinition> parameters;
 
+    /**
+     * @return Collection of resources
+     * 
+     */
     public Optional<List<ConsentLinkParameterDefinition>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -45,6 +53,10 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return Subscription Id
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -87,25 +103,55 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
             $ = new ListConnectionConsentLinksArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionName Connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param parameters Collection of resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ConsentLinkParameterDefinition> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Collection of resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ConsentLinkParameterDefinition... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

@@ -39,6 +39,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accessTier")
     private @Nullable Output<AccessTier> accessTier;
 
+    /**
+     * @return Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+     * 
+     */
     public Optional<Output<AccessTier>> accessTier() {
         return Optional.ofNullable(this.accessTier);
     }
@@ -50,6 +54,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -61,6 +69,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowBlobPublicAccess")
     private @Nullable Output<Boolean> allowBlobPublicAccess;
 
+    /**
+     * @return Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
+     * 
+     */
     public Optional<Output<Boolean>> allowBlobPublicAccess() {
         return Optional.ofNullable(this.allowBlobPublicAccess);
     }
@@ -72,6 +84,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowSharedKeyAccess")
     private @Nullable Output<Boolean> allowSharedKeyAccess;
 
+    /**
+     * @return Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
+     * 
+     */
     public Optional<Output<Boolean>> allowSharedKeyAccess() {
         return Optional.ofNullable(this.allowSharedKeyAccess);
     }
@@ -83,6 +99,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="azureFilesIdentityBasedAuthentication")
     private @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
+    /**
+     * @return Provides the identity based authentication settings for Azure Files.
+     * 
+     */
     public Optional<Output<AzureFilesIdentityBasedAuthenticationArgs>> azureFilesIdentityBasedAuthentication() {
         return Optional.ofNullable(this.azureFilesIdentityBasedAuthentication);
     }
@@ -94,6 +114,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customDomain")
     private @Nullable Output<CustomDomainArgs> customDomain;
 
+    /**
+     * @return User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
+     * 
+     */
     public Optional<Output<CustomDomainArgs>> customDomain() {
         return Optional.ofNullable(this.customDomain);
     }
@@ -105,6 +129,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableHttpsTrafficOnly")
     private @Nullable Output<Boolean> enableHttpsTrafficOnly;
 
+    /**
+     * @return Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
+     * 
+     */
     public Optional<Output<Boolean>> enableHttpsTrafficOnly() {
         return Optional.ofNullable(this.enableHttpsTrafficOnly);
     }
@@ -116,6 +144,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableNfsV3")
     private @Nullable Output<Boolean> enableNfsV3;
 
+    /**
+     * @return NFS 3.0 protocol support enabled if set to true.
+     * 
+     */
     public Optional<Output<Boolean>> enableNfsV3() {
         return Optional.ofNullable(this.enableNfsV3);
     }
@@ -127,6 +159,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="encryption")
     private @Nullable Output<EncryptionArgs> encryption;
 
+    /**
+     * @return Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.
+     * 
+     */
     public Optional<Output<EncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -138,6 +174,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -149,6 +189,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -160,6 +204,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isHnsEnabled")
     private @Nullable Output<Boolean> isHnsEnabled;
 
+    /**
+     * @return Account HierarchicalNamespace enabled if sets to true.
+     * 
+     */
     public Optional<Output<Boolean>> isHnsEnabled() {
         return Optional.ofNullable(this.isHnsEnabled);
     }
@@ -171,6 +219,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyPolicy")
     private @Nullable Output<KeyPolicyArgs> keyPolicy;
 
+    /**
+     * @return KeyPolicy assigned to the storage account.
+     * 
+     */
     public Optional<Output<KeyPolicyArgs>> keyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
@@ -182,6 +234,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
     private Output<Either<String,Kind>> kind;
 
+    /**
+     * @return Required. Indicates the type of storage account.
+     * 
+     */
     public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
@@ -193,6 +249,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="largeFileSharesState")
     private @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
 
+    /**
+     * @return Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+     * 
+     */
     public Optional<Output<Either<String,LargeFileSharesState>>> largeFileSharesState() {
         return Optional.ofNullable(this.largeFileSharesState);
     }
@@ -204,6 +264,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -215,6 +279,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="minimumTlsVersion")
     private @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
+    /**
+     * @return Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+     * 
+     */
     public Optional<Output<Either<String,MinimumTlsVersion>>> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
@@ -226,6 +294,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkRuleSet")
     private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
+    /**
+     * @return Network rule set
+     * 
+     */
     public Optional<Output<NetworkRuleSetArgs>> networkRuleSet() {
         return Optional.ofNullable(this.networkRuleSet);
     }
@@ -237,6 +309,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -248,6 +324,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="routingPreference")
     private @Nullable Output<RoutingPreferenceArgs> routingPreference;
 
+    /**
+     * @return Maintains information about the network routing choice opted by the user for data transfer
+     * 
+     */
     public Optional<Output<RoutingPreferenceArgs>> routingPreference() {
         return Optional.ofNullable(this.routingPreference);
     }
@@ -259,6 +339,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sasPolicy")
     private @Nullable Output<SasPolicyArgs> sasPolicy;
 
+    /**
+     * @return SasPolicy assigned to the storage account.
+     * 
+     */
     public Optional<Output<SasPolicyArgs>> sasPolicy() {
         return Optional.ofNullable(this.sasPolicy);
     }
@@ -270,6 +354,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return Required. Gets or sets the SKU name.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -281,6 +369,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -331,233 +423,545 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(@Nullable Output<AccessTier> accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param accessTier Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(AccessTier accessTier) {
             return accessTier(Output.of(accessTier));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param allowBlobPublicAccess Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowBlobPublicAccess(@Nullable Output<Boolean> allowBlobPublicAccess) {
             $.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
 
+        /**
+         * @param allowBlobPublicAccess Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowBlobPublicAccess(Boolean allowBlobPublicAccess) {
             return allowBlobPublicAccess(Output.of(allowBlobPublicAccess));
         }
 
+        /**
+         * @param allowSharedKeyAccess Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSharedKeyAccess(@Nullable Output<Boolean> allowSharedKeyAccess) {
             $.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
 
+        /**
+         * @param allowSharedKeyAccess Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSharedKeyAccess(Boolean allowSharedKeyAccess) {
             return allowSharedKeyAccess(Output.of(allowSharedKeyAccess));
         }
 
+        /**
+         * @param azureFilesIdentityBasedAuthentication Provides the identity based authentication settings for Azure Files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFilesIdentityBasedAuthentication(@Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
             $.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
 
+        /**
+         * @param azureFilesIdentityBasedAuthentication Provides the identity based authentication settings for Azure Files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFilesIdentityBasedAuthentication(AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
             return azureFilesIdentityBasedAuthentication(Output.of(azureFilesIdentityBasedAuthentication));
         }
 
+        /**
+         * @param customDomain User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomain(@Nullable Output<CustomDomainArgs> customDomain) {
             $.customDomain = customDomain;
             return this;
         }
 
+        /**
+         * @param customDomain User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomain(CustomDomainArgs customDomain) {
             return customDomain(Output.of(customDomain));
         }
 
+        /**
+         * @param enableHttpsTrafficOnly Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpsTrafficOnly(@Nullable Output<Boolean> enableHttpsTrafficOnly) {
             $.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
 
+        /**
+         * @param enableHttpsTrafficOnly Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttpsTrafficOnly(Boolean enableHttpsTrafficOnly) {
             return enableHttpsTrafficOnly(Output.of(enableHttpsTrafficOnly));
         }
 
+        /**
+         * @param enableNfsV3 NFS 3.0 protocol support enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNfsV3(@Nullable Output<Boolean> enableNfsV3) {
             $.enableNfsV3 = enableNfsV3;
             return this;
         }
 
+        /**
+         * @param enableNfsV3 NFS 3.0 protocol support enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNfsV3(Boolean enableNfsV3) {
             return enableNfsV3(Output.of(enableNfsV3));
         }
 
+        /**
+         * @param encryption Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param extendedLocation Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param isHnsEnabled Account HierarchicalNamespace enabled if sets to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHnsEnabled(@Nullable Output<Boolean> isHnsEnabled) {
             $.isHnsEnabled = isHnsEnabled;
             return this;
         }
 
+        /**
+         * @param isHnsEnabled Account HierarchicalNamespace enabled if sets to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isHnsEnabled(Boolean isHnsEnabled) {
             return isHnsEnabled(Output.of(isHnsEnabled));
         }
 
+        /**
+         * @param keyPolicy KeyPolicy assigned to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(@Nullable Output<KeyPolicyArgs> keyPolicy) {
             $.keyPolicy = keyPolicy;
             return this;
         }
 
+        /**
+         * @param keyPolicy KeyPolicy assigned to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(KeyPolicyArgs keyPolicy) {
             return keyPolicy(Output.of(keyPolicy));
         }
 
+        /**
+         * @param kind Required. Indicates the type of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Required. Indicates the type of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Required. Indicates the type of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Required. Indicates the type of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param largeFileSharesState Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeFileSharesState(@Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState) {
             $.largeFileSharesState = largeFileSharesState;
             return this;
         }
 
+        /**
+         * @param largeFileSharesState Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeFileSharesState(Either<String,LargeFileSharesState> largeFileSharesState) {
             return largeFileSharesState(Output.of(largeFileSharesState));
         }
 
+        /**
+         * @param largeFileSharesState Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeFileSharesState(String largeFileSharesState) {
             return largeFileSharesState(Either.ofLeft(largeFileSharesState));
         }
 
+        /**
+         * @param largeFileSharesState Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeFileSharesState(LargeFileSharesState largeFileSharesState) {
             return largeFileSharesState(Either.ofRight(largeFileSharesState));
         }
 
+        /**
+         * @param location Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param minimumTlsVersion Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(@Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(Either<String,MinimumTlsVersion> minimumTlsVersion) {
             return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
 
+        /**
+         * @param minimumTlsVersion Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(String minimumTlsVersion) {
             return minimumTlsVersion(Either.ofLeft(minimumTlsVersion));
         }
 
+        /**
+         * @param minimumTlsVersion Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(MinimumTlsVersion minimumTlsVersion) {
             return minimumTlsVersion(Either.ofRight(minimumTlsVersion));
         }
 
+        /**
+         * @param networkRuleSet Network rule set
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             $.networkRuleSet = networkRuleSet;
             return this;
         }
 
+        /**
+         * @param networkRuleSet Network rule set
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleSet(NetworkRuleSetArgs networkRuleSet) {
             return networkRuleSet(Output.of(networkRuleSet));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routingPreference Maintains information about the network routing choice opted by the user for data transfer
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPreference(@Nullable Output<RoutingPreferenceArgs> routingPreference) {
             $.routingPreference = routingPreference;
             return this;
         }
 
+        /**
+         * @param routingPreference Maintains information about the network routing choice opted by the user for data transfer
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPreference(RoutingPreferenceArgs routingPreference) {
             return routingPreference(Output.of(routingPreference));
         }
 
+        /**
+         * @param sasPolicy SasPolicy assigned to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasPolicy(@Nullable Output<SasPolicyArgs> sasPolicy) {
             $.sasPolicy = sasPolicy;
             return this;
         }
 
+        /**
+         * @param sasPolicy SasPolicy assigned to the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasPolicy(SasPolicyArgs sasPolicy) {
             return sasPolicy(Output.of(sasPolicy));
         }
 
+        /**
+         * @param sku Required. Gets or sets the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Required. Gets or sets the SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

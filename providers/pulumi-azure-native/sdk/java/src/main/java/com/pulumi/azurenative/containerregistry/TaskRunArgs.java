@@ -28,6 +28,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
     private @Nullable Output<String> forceUpdateTag;
 
+    /**
+     * @return How the run should be forced to rerun even if the run request configuration has not changed
+     * 
+     */
     public Optional<Output<String>> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
@@ -39,6 +43,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityPropertiesArgs> identity;
 
+    /**
+     * @return Identity for the resource.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -50,6 +58,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +73,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -72,6 +88,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,6 +103,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runRequest")
     private @Nullable Output<Object> runRequest;
 
+    /**
+     * @return The request (parameters) for the run
+     * 
+     */
     public Optional<Output<Object>> runRequest() {
         return Optional.ofNullable(this.runRequest);
     }
@@ -94,6 +118,10 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taskRunName")
     private @Nullable Output<String> taskRunName;
 
+    /**
+     * @return The name of the task run.
+     * 
+     */
     public Optional<Output<String>> taskRunName() {
         return Optional.ofNullable(this.taskRunName);
     }
@@ -128,65 +156,149 @@ public final class TaskRunArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TaskRunArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forceUpdateTag How the run should be forced to rerun even if the run request configuration has not changed
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             $.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
+        /**
+         * @param forceUpdateTag How the run should be forced to rerun even if the run request configuration has not changed
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdateTag(String forceUpdateTag) {
             return forceUpdateTag(Output.of(forceUpdateTag));
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runRequest The request (parameters) for the run
+         * 
+         * @return builder
+         * 
+         */
         public Builder runRequest(@Nullable Output<Object> runRequest) {
             $.runRequest = runRequest;
             return this;
         }
 
+        /**
+         * @param runRequest The request (parameters) for the run
+         * 
+         * @return builder
+         * 
+         */
         public Builder runRequest(Object runRequest) {
             return runRequest(Output.of(runRequest));
         }
 
+        /**
+         * @param taskRunName The name of the task run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskRunName(@Nullable Output<String> taskRunName) {
             $.taskRunName = taskRunName;
             return this;
         }
 
+        /**
+         * @param taskRunName The name of the task run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskRunName(String taskRunName) {
             return taskRunName(Output.of(taskRunName));
         }

@@ -22,6 +22,10 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="meshName", required=true)
     private String meshName;
 
+    /**
+     * @return The name of the service mesh in which the virtual service exists.
+     * 
+     */
     public String meshName() {
         return this.meshName;
     }
@@ -33,6 +37,10 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="meshOwner")
     private @Nullable String meshOwner;
 
+    /**
+     * @return The AWS account ID of the service mesh&#39;s owner.
+     * 
+     */
     public Optional<String> meshOwner() {
         return Optional.ofNullable(this.meshOwner);
     }
@@ -44,6 +52,10 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the virtual service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -55,6 +67,10 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -86,21 +102,45 @@ public final class GetVirtualServiceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetVirtualServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param meshName The name of the service mesh in which the virtual service exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshName(String meshName) {
             $.meshName = meshName;
             return this;
         }
 
+        /**
+         * @param meshOwner The AWS account ID of the service mesh&#39;s owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meshOwner(@Nullable String meshOwner) {
             $.meshOwner = meshOwner;
             return this;
         }
 
+        /**
+         * @param name The name of the virtual service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags A map of tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

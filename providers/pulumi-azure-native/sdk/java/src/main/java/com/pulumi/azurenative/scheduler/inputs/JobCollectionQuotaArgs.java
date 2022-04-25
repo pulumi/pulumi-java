@@ -23,6 +23,10 @@ public final class JobCollectionQuotaArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxJobCount")
     private @Nullable Output<Integer> maxJobCount;
 
+    /**
+     * @return Gets or set the maximum job count.
+     * 
+     */
     public Optional<Output<Integer>> maxJobCount() {
         return Optional.ofNullable(this.maxJobCount);
     }
@@ -34,6 +38,10 @@ public final class JobCollectionQuotaArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxJobOccurrence")
     private @Nullable Output<Integer> maxJobOccurrence;
 
+    /**
+     * @return Gets or sets the maximum job occurrence.
+     * 
+     */
     public Optional<Output<Integer>> maxJobOccurrence() {
         return Optional.ofNullable(this.maxJobOccurrence);
     }
@@ -45,6 +53,10 @@ public final class JobCollectionQuotaArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxRecurrence")
     private @Nullable Output<JobMaxRecurrenceArgs> maxRecurrence;
 
+    /**
+     * @return Gets or set the maximum recurrence.
+     * 
+     */
     public Optional<Output<JobMaxRecurrenceArgs>> maxRecurrence() {
         return Optional.ofNullable(this.maxRecurrence);
     }
@@ -75,29 +87,65 @@ public final class JobCollectionQuotaArgs extends com.pulumi.resources.ResourceA
             $ = new JobCollectionQuotaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxJobCount Gets or set the maximum job count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobCount(@Nullable Output<Integer> maxJobCount) {
             $.maxJobCount = maxJobCount;
             return this;
         }
 
+        /**
+         * @param maxJobCount Gets or set the maximum job count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobCount(Integer maxJobCount) {
             return maxJobCount(Output.of(maxJobCount));
         }
 
+        /**
+         * @param maxJobOccurrence Gets or sets the maximum job occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobOccurrence(@Nullable Output<Integer> maxJobOccurrence) {
             $.maxJobOccurrence = maxJobOccurrence;
             return this;
         }
 
+        /**
+         * @param maxJobOccurrence Gets or sets the maximum job occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxJobOccurrence(Integer maxJobOccurrence) {
             return maxJobOccurrence(Output.of(maxJobOccurrence));
         }
 
+        /**
+         * @param maxRecurrence Gets or set the maximum recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRecurrence(@Nullable Output<JobMaxRecurrenceArgs> maxRecurrence) {
             $.maxRecurrence = maxRecurrence;
             return this;
         }
 
+        /**
+         * @param maxRecurrence Gets or set the maximum recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRecurrence(JobMaxRecurrenceArgs maxRecurrence) {
             return maxRecurrence(Output.of(maxRecurrence));
         }

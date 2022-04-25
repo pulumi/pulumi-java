@@ -24,6 +24,10 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keytab", required=true)
     private SecretResponse keytab;
 
+    /**
+     * @return A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+     * 
+     */
     public SecretResponse keytab() {
         return this.keytab;
     }
@@ -35,6 +39,10 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="krb5ConfigGcsUri", required=true)
     private String krb5ConfigGcsUri;
 
+    /**
+     * @return A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+     * 
+     */
     public String krb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
     }
@@ -46,6 +54,10 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="principal", required=true)
     private String principal;
 
+    /**
+     * @return A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
+     * 
+     */
     public String principal() {
         return this.principal;
     }
@@ -76,16 +88,34 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new KerberosConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keytab A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keytab(SecretResponse keytab) {
             $.keytab = keytab;
             return this;
         }
 
+        /**
+         * @param krb5ConfigGcsUri A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             $.krb5ConfigGcsUri = krb5ConfigGcsUri;
             return this;
         }
 
+        /**
+         * @param principal A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             $.principal = principal;
             return this;

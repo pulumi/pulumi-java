@@ -27,6 +27,10 @@ public final class RequestsBasedTriggerArgs extends com.pulumi.resources.Resourc
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class RequestsBasedTriggerArgs extends com.pulumi.resources.Resourc
     @Import(name="timeInterval")
     private @Nullable Output<String> timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<Output<String>> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -67,20 +75,44 @@ public final class RequestsBasedTriggerArgs extends com.pulumi.resources.Resourc
             $ = new RequestsBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(String timeInterval) {
             return timeInterval(Output.of(timeInterval));
         }

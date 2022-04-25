@@ -25,6 +25,10 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends com.pulumi.r
     @Import(name="upgradeChannel")
     private @Nullable String upgradeChannel;
 
+    /**
+     * @return upgrade channel for auto upgrade.
+     * 
+     */
     public Optional<String> upgradeChannel() {
         return Optional.ofNullable(this.upgradeChannel);
     }
@@ -53,6 +57,12 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends com.pulumi.r
             $ = new ManagedClusterAutoUpgradeProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param upgradeChannel upgrade channel for auto upgrade.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeChannel(@Nullable String upgradeChannel) {
             $.upgradeChannel = upgradeChannel;
             return this;

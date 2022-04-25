@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     /**
-     * Current volume free space percentage.
+     * @return Current volume free space percentage.
      * 
      */
     private final Integer currentVolumeFreeSpacePercent;
     /**
-     * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+     * @return In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
      * 
      */
     private final Integer effectiveVolumeFreeSpacePolicy;
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
      */
     private final String lastUpdatedTimestamp;
@@ -37,23 +37,23 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     }
 
     /**
-     * Current volume free space percentage.
+     * @return Current volume free space percentage.
      * 
-    */
+     */
     public Integer currentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
     }
     /**
-     * In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
+     * @return In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.
      * 
-    */
+     */
     public Integer effectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
     }
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }

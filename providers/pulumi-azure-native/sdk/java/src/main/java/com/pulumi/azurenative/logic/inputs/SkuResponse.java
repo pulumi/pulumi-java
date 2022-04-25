@@ -26,6 +26,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="plan")
     private @Nullable ResourceReferenceResponse plan;
 
+    /**
+     * @return The reference to plan.
+     * 
+     */
     public Optional<ResourceReferenceResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -66,11 +74,23 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param plan The reference to plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable ResourceReferenceResponse plan) {
             $.plan = plan;
             return this;

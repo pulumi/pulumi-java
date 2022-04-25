@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse {
     /**
-     * The maximum product price.
+     * @return The maximum product price.
      * 
      */
     private final Double max;
     /**
-     * The minimum product price.
+     * @return The minimum product price.
      * 
      */
     private final Double min;
@@ -29,16 +29,16 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     }
 
     /**
-     * The maximum product price.
+     * @return The maximum product price.
      * 
-    */
+     */
     public Double max() {
         return this.max;
     }
     /**
-     * The minimum product price.
+     * @return The minimum product price.
      * 
-    */
+     */
     public Double min() {
         return this.min;
     }

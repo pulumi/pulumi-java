@@ -19,6 +19,10 @@ public final class FirewallSubnetMapping extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetId", required=true)
     private String subnetId;
 
+    /**
+     * @return A SubnetId.
+     * 
+     */
     public String subnetId() {
         return this.subnetId;
     }
@@ -47,6 +51,12 @@ public final class FirewallSubnetMapping extends com.pulumi.resources.InvokeArgs
             $ = new FirewallSubnetMapping(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId A SubnetId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             $.subnetId = subnetId;
             return this;

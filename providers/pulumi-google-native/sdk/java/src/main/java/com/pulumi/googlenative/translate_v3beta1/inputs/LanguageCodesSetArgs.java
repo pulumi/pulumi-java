@@ -27,6 +27,10 @@ public final class LanguageCodesSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="languageCodes")
     private @Nullable Output<List<String>> languageCodes;
 
+    /**
+     * @return The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+     * 
+     */
     public Optional<Output<List<String>>> languageCodes() {
         return Optional.ofNullable(this.languageCodes);
     }
@@ -55,15 +59,33 @@ public final class LanguageCodesSetArgs extends com.pulumi.resources.ResourceArg
             $ = new LanguageCodesSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param languageCodes The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodes(@Nullable Output<List<String>> languageCodes) {
             $.languageCodes = languageCodes;
             return this;
         }
 
+        /**
+         * @param languageCodes The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodes(List<String> languageCodes) {
             return languageCodes(Output.of(languageCodes));
         }
 
+        /**
+         * @param languageCodes The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCodes(String... languageCodes) {
             return languageCodes(List.of(languageCodes));
         }

@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnterpriseKeyWebSettings {
     /**
-     * If set to true, it means allowed_domains will not be enforced.
+     * @return If set to true, it means allowed_domains will not be enforced.
      * 
      */
     private final @Nullable Boolean allowAllDomains;
     /**
-     * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
+     * @return If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
      * 
      */
     private final @Nullable Boolean allowAmpTraffic;
     /**
-     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
+     * @return Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
      * 
      */
     private final @Nullable List<String> allowedDomains;
     /**
-     * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE. Possible values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY, BALANCE, SECURITY
+     * @return Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE. Possible values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY, BALANCE, SECURITY
      * 
      */
     private final @Nullable String challengeSecurityPreference;
     /**
-     * Required. Describes how this key is integrated with the website. Possible values: SCORE, CHECKBOX, INVISIBLE
+     * @return Required. Describes how this key is integrated with the website. Possible values: SCORE, CHECKBOX, INVISIBLE
      * 
      */
     private final String integrationType;
@@ -54,37 +54,37 @@ public final class EnterpriseKeyWebSettings {
     }
 
     /**
-     * If set to true, it means allowed_domains will not be enforced.
+     * @return If set to true, it means allowed_domains will not be enforced.
      * 
-    */
+     */
     public Optional<Boolean> allowAllDomains() {
         return Optional.ofNullable(this.allowAllDomains);
     }
     /**
-     * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
+     * @return If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
      * 
-    */
+     */
     public Optional<Boolean> allowAmpTraffic() {
         return Optional.ofNullable(this.allowAmpTraffic);
     }
     /**
-     * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
+     * @return Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: &#39;example.com&#39; or &#39;subdomain.example.com&#39;
      * 
-    */
+     */
     public List<String> allowedDomains() {
         return this.allowedDomains == null ? List.of() : this.allowedDomains;
     }
     /**
-     * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE. Possible values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY, BALANCE, SECURITY
+     * @return Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE. Possible values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY, BALANCE, SECURITY
      * 
-    */
+     */
     public Optional<String> challengeSecurityPreference() {
         return Optional.ofNullable(this.challengeSecurityPreference);
     }
     /**
-     * Required. Describes how this key is integrated with the website. Possible values: SCORE, CHECKBOX, INVISIBLE
+     * @return Required. Describes how this key is integrated with the website. Possible values: SCORE, CHECKBOX, INVISIBLE
      * 
-    */
+     */
     public String integrationType() {
         return this.integrationType;
     }

@@ -24,6 +24,10 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyDocument", required=true)
     private Output<String> policyDocument;
 
+    /**
+     * @return The policy document.
+     * 
+     */
     public Output<String> policyDocument() {
         return this.policyDocument;
     }
@@ -35,6 +39,10 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyName", required=true)
     private Output<String> policyName;
 
+    /**
+     * @return The friendly name (not ARN) identifying the policy.
+     * 
+     */
     public Output<String> policyName() {
         return this.policyName;
     }
@@ -64,20 +72,44 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RolePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyDocument The policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Output<String> policyDocument) {
             $.policyDocument = policyDocument;
             return this;
         }
 
+        /**
+         * @param policyDocument The policy document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(String policyDocument) {
             return policyDocument(Output.of(policyDocument));
         }
 
+        /**
+         * @param policyName The friendly name (not ARN) identifying the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName The friendly name (not ARN) identifying the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }

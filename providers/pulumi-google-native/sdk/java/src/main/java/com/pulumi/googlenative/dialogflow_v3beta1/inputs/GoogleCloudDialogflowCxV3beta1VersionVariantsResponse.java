@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends
     @Import(name="variants", required=true)
     private List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 
+    /**
+     * @return A list of flow version variants.
+     * 
+     */
     public List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants() {
         return this.variants;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends
             $ = new GoogleCloudDialogflowCxV3beta1VersionVariantsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param variants A list of flow version variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variants(List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants) {
             $.variants = variants;
             return this;
         }
 
+        /**
+         * @param variants A list of flow version variants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variants(GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse... variants) {
             return variants(List.of(variants));
         }

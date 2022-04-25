@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class FileContentBufferResponse {
     /**
-     * The raw content in the secure keys file.
+     * @return The raw content in the secure keys file.
      * 
      */
     private final String content;
     /**
-     * The file type of source file.
+     * @return The file type of source file.
      * 
      */
     private final String fileType;
@@ -29,16 +29,16 @@ public final class FileContentBufferResponse {
     }
 
     /**
-     * The raw content in the secure keys file.
+     * @return The raw content in the secure keys file.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The file type of source file.
+     * @return The file type of source file.
      * 
-    */
+     */
     public String fileType() {
         return this.fileType;
     }

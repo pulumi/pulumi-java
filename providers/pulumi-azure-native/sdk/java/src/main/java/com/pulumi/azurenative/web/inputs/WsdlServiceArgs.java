@@ -27,6 +27,10 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointQualifiedNames")
     private @Nullable Output<List<String>> endpointQualifiedNames;
 
+    /**
+     * @return List of the endpoints&#39; qualified names
+     * 
+     */
     public Optional<Output<List<String>>> endpointQualifiedNames() {
         return Optional.ofNullable(this.endpointQualifiedNames);
     }
@@ -38,6 +42,10 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qualifiedName", required=true)
     private Output<String> qualifiedName;
 
+    /**
+     * @return The service&#39;s qualified name
+     * 
+     */
     public Output<String> qualifiedName() {
         return this.qualifiedName;
     }
@@ -67,24 +75,54 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WsdlServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointQualifiedNames List of the endpoints&#39; qualified names
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointQualifiedNames(@Nullable Output<List<String>> endpointQualifiedNames) {
             $.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
 
+        /**
+         * @param endpointQualifiedNames List of the endpoints&#39; qualified names
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointQualifiedNames(List<String> endpointQualifiedNames) {
             return endpointQualifiedNames(Output.of(endpointQualifiedNames));
         }
 
+        /**
+         * @param endpointQualifiedNames List of the endpoints&#39; qualified names
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
             return endpointQualifiedNames(List.of(endpointQualifiedNames));
         }
 
+        /**
+         * @param qualifiedName The service&#39;s qualified name
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifiedName(Output<String> qualifiedName) {
             $.qualifiedName = qualifiedName;
             return this;
         }
 
+        /**
+         * @param qualifiedName The service&#39;s qualified name
+         * 
+         * @return builder
+         * 
+         */
         public Builder qualifiedName(String qualifiedName) {
             return qualifiedName(Output.of(qualifiedName));
         }

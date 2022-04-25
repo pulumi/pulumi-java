@@ -27,6 +27,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="authorizations", required=true)
     private List<AuthorizationResponse> authorizations;
 
+    /**
+     * @return Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * 
+     */
     public List<AuthorizationResponse> authorizations() {
         return this.authorizations;
     }
@@ -38,6 +42,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the registration definition.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="managedByTenantId", required=true)
     private String managedByTenantId;
 
+    /**
+     * @return Id of the managedBy tenant.
+     * 
+     */
     public String managedByTenantId() {
         return this.managedByTenantId;
     }
@@ -60,6 +72,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="managedByTenantName", required=true)
     private String managedByTenantName;
 
+    /**
+     * @return Name of the managedBy tenant.
+     * 
+     */
     public String managedByTenantName() {
         return this.managedByTenantName;
     }
@@ -71,6 +87,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Current state of the registration definition.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -82,6 +102,10 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="registrationDefinitionName")
     private @Nullable String registrationDefinitionName;
 
+    /**
+     * @return Name of the registration definition.
+     * 
+     */
     public Optional<String> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
@@ -115,35 +139,77 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
             $ = new RegistrationDefinitionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(List<AuthorizationResponse> authorizations) {
             $.authorizations = authorizations;
             return this;
         }
 
+        /**
+         * @param authorizations Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizations(AuthorizationResponse... authorizations) {
             return authorizations(List.of(authorizations));
         }
 
+        /**
+         * @param description Description of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param managedByTenantId Id of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantId(String managedByTenantId) {
             $.managedByTenantId = managedByTenantId;
             return this;
         }
 
+        /**
+         * @param managedByTenantName Name of the managedBy tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedByTenantName(String managedByTenantName) {
             $.managedByTenantName = managedByTenantName;
             return this;
         }
 
+        /**
+         * @param provisioningState Current state of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param registrationDefinitionName Name of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             $.registrationDefinitionName = registrationDefinitionName;
             return this;

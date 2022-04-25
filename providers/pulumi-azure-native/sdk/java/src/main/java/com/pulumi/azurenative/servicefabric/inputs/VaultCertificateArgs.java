@@ -24,6 +24,10 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="certificateStore", required=true)
     private Output<String> certificateStore;
 
+    /**
+     * @return For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. &lt;br&gt;&lt;br&gt;For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key. Both of these files are .pem formatted.
+     * 
+     */
     public Output<String> certificateStore() {
         return this.certificateStore;
     }
@@ -35,6 +39,10 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="certificateUrl", required=true)
     private Output<String> certificateUrl;
 
+    /**
+     * @return This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: &lt;br&gt;&lt;br&gt; {&lt;br&gt;  &#34;data&#34;:&#34;&lt;Base64-encoded-certificate&gt;&#34;,&lt;br&gt;  &#34;dataType&#34;:&#34;pfx&#34;,&lt;br&gt;  &#34;password&#34;:&#34;&lt;pfx-file-password&gt;&#34;&lt;br&gt;}
+     * 
+     */
     public Output<String> certificateUrl() {
         return this.certificateUrl;
     }
@@ -64,20 +72,44 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
             $ = new VaultCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateStore For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. &lt;br&gt;&lt;br&gt;For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key. Both of these files are .pem formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateStore(Output<String> certificateStore) {
             $.certificateStore = certificateStore;
             return this;
         }
 
+        /**
+         * @param certificateStore For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. &lt;br&gt;&lt;br&gt;For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name &lt;UppercaseThumbprint&gt;.crt for the X509 certificate file and &lt;UppercaseThumbprint&gt;.prv for private key. Both of these files are .pem formatted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateStore(String certificateStore) {
             return certificateStore(Output.of(certificateStore));
         }
 
+        /**
+         * @param certificateUrl This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: &lt;br&gt;&lt;br&gt; {&lt;br&gt;  &#34;data&#34;:&#34;&lt;Base64-encoded-certificate&gt;&#34;,&lt;br&gt;  &#34;dataType&#34;:&#34;pfx&#34;,&lt;br&gt;  &#34;password&#34;:&#34;&lt;pfx-file-password&gt;&#34;&lt;br&gt;}
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateUrl(Output<String> certificateUrl) {
             $.certificateUrl = certificateUrl;
             return this;
         }
 
+        /**
+         * @param certificateUrl This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: &lt;br&gt;&lt;br&gt; {&lt;br&gt;  &#34;data&#34;:&#34;&lt;Base64-encoded-certificate&gt;&#34;,&lt;br&gt;  &#34;dataType&#34;:&#34;pfx&#34;,&lt;br&gt;  &#34;password&#34;:&#34;&lt;pfx-file-password&gt;&#34;&lt;br&gt;}
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateUrl(String certificateUrl) {
             return certificateUrl(Output.of(certificateUrl));
         }

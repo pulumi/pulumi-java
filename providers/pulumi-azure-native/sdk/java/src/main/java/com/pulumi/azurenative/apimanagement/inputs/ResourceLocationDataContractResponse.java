@@ -25,6 +25,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
     @Import(name="city")
     private @Nullable String city;
 
+    /**
+     * @return The city or locality where the resource is located.
+     * 
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
@@ -36,6 +40,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
     @Import(name="countryOrRegion")
     private @Nullable String countryOrRegion;
 
+    /**
+     * @return The country or region where the resource is located.
+     * 
+     */
     public Optional<String> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
@@ -47,6 +55,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
     @Import(name="district")
     private @Nullable String district;
 
+    /**
+     * @return The district, state, or province where the resource is located.
+     * 
+     */
     public Optional<String> district() {
         return Optional.ofNullable(this.district);
     }
@@ -58,6 +70,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A canonical name for the geographic or physical location.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -89,21 +105,45 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
             $ = new ResourceLocationDataContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param city The city or locality where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable String city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param countryOrRegion The country or region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             $.countryOrRegion = countryOrRegion;
             return this;
         }
 
+        /**
+         * @param district The district, state, or province where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder district(@Nullable String district) {
             $.district = district;
             return this;
         }
 
+        /**
+         * @param name A canonical name for the geographic or physical location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

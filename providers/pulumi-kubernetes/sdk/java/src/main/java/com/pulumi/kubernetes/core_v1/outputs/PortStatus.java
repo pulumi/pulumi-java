@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PortStatus {
     /**
-     * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+     * @return Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
      *   CamelCase names
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
@@ -21,12 +21,12 @@ public final class PortStatus {
      */
     private final @Nullable String error;
     /**
-     * Port is the port number of the service port of which status is recorded here
+     * @return Port is the port number of the service port of which status is recorded here
      * 
      */
     private final Integer port;
     /**
-     * Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
+     * @return Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
      * 
      * Possible enum values:
      *  - `&#34;SCTP&#34;` is the SCTP protocol.
@@ -47,31 +47,31 @@ public final class PortStatus {
     }
 
     /**
-     * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+     * @return Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
      *   CamelCase names
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
      * 
-    */
+     */
     public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Port is the port number of the service port of which status is recorded here
+     * @return Port is the port number of the service port of which status is recorded here
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
+     * @return Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
      * 
      * Possible enum values:
      *  - `&#34;SCTP&#34;` is the SCTP protocol.
      *  - `&#34;TCP&#34;` is the TCP protocol.
      *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

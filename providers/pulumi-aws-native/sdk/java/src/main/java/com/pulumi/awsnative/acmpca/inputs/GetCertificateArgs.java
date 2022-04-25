@@ -19,6 +19,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The ARN of the issued certificate.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -30,6 +34,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateAuthorityArn", required=true)
     private String certificateAuthorityArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+     * 
+     */
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -59,11 +67,23 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the issued certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArn The Amazon Resource Name (ARN) for the private CA to issue the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;

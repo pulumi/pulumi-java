@@ -25,6 +25,10 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interimSchemaName")
     private @Nullable Object interimSchemaName;
 
+    /**
+     * @return Schema name for interim table. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> interimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
@@ -36,6 +40,10 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="keys")
     private @Nullable Object keys;
 
+    /**
+     * @return Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Object> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -65,11 +73,23 @@ public final class SqlDWUpsertSettingsResponse extends com.pulumi.resources.Invo
             $ = new SqlDWUpsertSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             $.interimSchemaName = interimSchemaName;
             return this;
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Object keys) {
             $.keys = keys;
             return this;

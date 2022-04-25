@@ -24,6 +24,10 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryCode", required=true)
     private Output<String> countryCode;
 
+    /**
+     * @return The country code of the SMS receiver.
+     * 
+     */
     public Output<String> countryCode() {
         return this.countryCode;
     }
@@ -35,6 +39,10 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the SMS receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber", required=true)
     private Output<String> phoneNumber;
 
+    /**
+     * @return The phone number of the SMS receiver.
+     * 
+     */
     public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
@@ -76,29 +88,65 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SmsReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countryCode The country code of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(Output<String> countryCode) {
             $.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * @param countryCode The country code of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(String countryCode) {
             return countryCode(Output.of(countryCode));
         }
 
+        /**
+         * @param name The name of the SMS receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SMS receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param phoneNumber The phone number of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber The phone number of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }

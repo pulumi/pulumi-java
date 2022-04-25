@@ -23,6 +23,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -45,6 +53,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationName")
     private @Nullable Output<String> replicationName;
 
+    /**
+     * @return The name of the replication.
+     * 
+     */
     public Optional<Output<String>> replicationName() {
         return Optional.ofNullable(this.replicationName);
     }
@@ -56,6 +68,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param replicationName The name of the replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationName(@Nullable Output<String> replicationName) {
             $.replicationName = replicationName;
             return this;
         }
 
+        /**
+         * @param replicationName The name of the replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationName(String replicationName) {
             return replicationName(Output.of(replicationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

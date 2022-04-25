@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGuestConfigurationAssignmentResult {
     /**
-     * ARM resource id of the guest configuration assignment.
+     * @return ARM resource id of the guest configuration assignment.
      * 
      */
     private final String id;
     /**
-     * Region where the VM is located.
+     * @return Region where the VM is located.
      * 
      */
     private final @Nullable String location;
     /**
-     * Name of the guest configuration assignment.
+     * @return Name of the guest configuration assignment.
      * 
      */
     private final @Nullable String name;
     /**
-     * Properties of the Guest configuration assignment.
+     * @return Properties of the Guest configuration assignment.
      * 
      */
     private final GuestConfigurationAssignmentPropertiesResponse properties;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetGuestConfigurationAssignmentResult {
     }
 
     /**
-     * ARM resource id of the guest configuration assignment.
+     * @return ARM resource id of the guest configuration assignment.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Region where the VM is located.
+     * @return Region where the VM is located.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of the guest configuration assignment.
+     * @return Name of the guest configuration assignment.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Properties of the Guest configuration assignment.
+     * @return Properties of the Guest configuration assignment.
      * 
-    */
+     */
     public GuestConfigurationAssignmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

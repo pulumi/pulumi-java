@@ -25,6 +25,10 @@ public final class ConfigurationIdentityResponse extends com.pulumi.resources.In
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of the system assigned identity which is used by the configuration.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class ConfigurationIdentityResponse extends com.pulumi.resources.In
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id of the system assigned identity which is used by the configuration.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class ConfigurationIdentityResponse extends com.pulumi.resources.In
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class ConfigurationIdentityResponse extends com.pulumi.resources.In
             $ = new ConfigurationIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of the system assigned identity which is used by the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of the system assigned identity which is used by the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

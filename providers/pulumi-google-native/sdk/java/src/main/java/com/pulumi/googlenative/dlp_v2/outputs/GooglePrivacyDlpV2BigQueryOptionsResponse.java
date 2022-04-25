@@ -14,33 +14,33 @@ import java.util.Objects;
 @CustomType
 public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     /**
-     * References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
+     * @return References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
      * 
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> excludedFields;
     /**
-     * Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
+     * @return Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
      * 
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
     /**
-     * Limit scanning only to these fields.
+     * @return Limit scanning only to these fields.
      * 
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> includedFields;
     /**
-     * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * @return Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
      */
     private final String rowsLimit;
     /**
-     * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * @return Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
      */
     private final Integer rowsLimitPercent;
     private final String sampleMethod;
     /**
-     * Complete BigQuery table reference.
+     * @return Complete BigQuery table reference.
      * 
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
@@ -64,37 +64,37 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     }
 
     /**
-     * References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
+     * @return References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> excludedFields() {
         return this.excludedFields;
     }
     /**
-     * Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
+     * @return Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields() {
         return this.identifyingFields;
     }
     /**
-     * Limit scanning only to these fields.
+     * @return Limit scanning only to these fields.
      * 
-    */
+     */
     public List<GooglePrivacyDlpV2FieldIdResponse> includedFields() {
         return this.includedFields;
     }
     /**
-     * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * @return Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
-    */
+     */
     public String rowsLimit() {
         return this.rowsLimit;
     }
     /**
-     * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
+     * @return Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.
      * 
-    */
+     */
     public Integer rowsLimitPercent() {
         return this.rowsLimitPercent;
     }
@@ -102,9 +102,9 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
         return this.sampleMethod;
     }
     /**
-     * Complete BigQuery table reference.
+     * @return Complete BigQuery table reference.
      * 
-    */
+     */
     public GooglePrivacyDlpV2BigQueryTableResponse tableReference() {
         return this.tableReference;
     }

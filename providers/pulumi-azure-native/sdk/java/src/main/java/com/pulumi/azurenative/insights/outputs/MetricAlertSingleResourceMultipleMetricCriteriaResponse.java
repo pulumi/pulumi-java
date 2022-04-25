@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
     /**
-     * The list of metric criteria for this &#39;all of&#39; operation.
+     * @return The list of metric criteria for this &#39;all of&#39; operation.
      * 
      */
     private final @Nullable List<MetricCriteriaResponse> allOf;
     /**
-     * specifies the type of the alert criteria.
+     * @return specifies the type of the alert criteria.
      * Expected value is &#39;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#39;.
      * 
      */
@@ -33,17 +33,17 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
     }
 
     /**
-     * The list of metric criteria for this &#39;all of&#39; operation.
+     * @return The list of metric criteria for this &#39;all of&#39; operation.
      * 
-    */
+     */
     public List<MetricCriteriaResponse> allOf() {
         return this.allOf == null ? List.of() : this.allOf;
     }
     /**
-     * specifies the type of the alert criteria.
+     * @return specifies the type of the alert criteria.
      * Expected value is &#39;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

@@ -23,6 +23,10 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The new value of the variable.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -34,6 +38,10 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
     @Import(name="variableName", required=true)
     private String variableName;
 
+    /**
+     * @return The name of the variable.
+     * 
+     */
     public String variableName() {
         return this.variableName;
     }
@@ -63,11 +71,23 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
             $ = new DetectorModelSetVariable(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The new value of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param variableName The name of the variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             $.variableName = variableName;
             return this;

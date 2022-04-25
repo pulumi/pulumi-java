@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IntentRejectionStatementMessage {
     /**
-     * The text of the message. Must be less than or equal to 1000 characters in length.
+     * @return The text of the message. Must be less than or equal to 1000 characters in length.
      * 
      */
     private final String content;
     /**
-     * The content type of the message string.
+     * @return The content type of the message string.
      * 
      */
     private final String contentType;
     /**
-     * Identifies the message group that the message belongs to. When a group
+     * @return Identifies the message group that the message belongs to. When a group
      * is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
      * 
      */
@@ -40,24 +40,24 @@ public final class IntentRejectionStatementMessage {
     }
 
     /**
-     * The text of the message. Must be less than or equal to 1000 characters in length.
+     * @return The text of the message. Must be less than or equal to 1000 characters in length.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The content type of the message string.
+     * @return The content type of the message string.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * Identifies the message group that the message belongs to. When a group
+     * @return Identifies the message group that the message belongs to. When a group
      * is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
      * 
-    */
+     */
     public Optional<Integer> groupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }

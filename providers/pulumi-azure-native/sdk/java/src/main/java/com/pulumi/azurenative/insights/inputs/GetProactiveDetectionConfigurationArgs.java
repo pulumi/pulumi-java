@@ -19,6 +19,10 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="configurationId", required=true)
     private String configurationId;
 
+    /**
+     * @return The ProactiveDetection configuration ID. This is unique within a Application Insights component.
+     * 
+     */
     public String configurationId() {
         return this.configurationId;
     }
@@ -30,6 +34,10 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
             $ = new GetProactiveDetectionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationId The ProactiveDetection configuration ID. This is unique within a Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationId(String configurationId) {
             $.configurationId = configurationId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

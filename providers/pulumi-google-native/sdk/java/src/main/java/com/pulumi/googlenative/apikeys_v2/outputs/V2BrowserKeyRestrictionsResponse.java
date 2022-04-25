@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class V2BrowserKeyRestrictionsResponse {
     /**
-     * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+     * @return A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
      * 
      */
     private final List<String> allowedReferrers;
@@ -22,9 +22,9 @@ public final class V2BrowserKeyRestrictionsResponse {
     }
 
     /**
-     * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+     * @return A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
      * 
-    */
+     */
     public List<String> allowedReferrers() {
         return this.allowedReferrers;
     }

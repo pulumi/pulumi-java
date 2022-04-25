@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
     @Import(name="simpleResponses", required=true)
     private List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
 
+    /**
+     * @return The list of simple responses.
+     * 
+     */
     public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }
@@ -52,11 +56,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
             $ = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param simpleResponses The list of simple responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
             $.simpleResponses = simpleResponses;
             return this;
         }
 
+        /**
+         * @param simpleResponses The list of simple responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse... simpleResponses) {
             return simpleResponses(List.of(simpleResponses));
         }

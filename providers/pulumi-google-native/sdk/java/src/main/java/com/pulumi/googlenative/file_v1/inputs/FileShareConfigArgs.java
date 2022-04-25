@@ -28,6 +28,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="capacityGb")
     private @Nullable Output<String> capacityGb;
 
+    /**
+     * @return File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+     * 
+     */
     public Optional<Output<String>> capacityGb() {
         return Optional.ofNullable(this.capacityGb);
     }
@@ -39,6 +43,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the file share (must be 16 characters or less).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="nfsExportOptions")
     private @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
 
+    /**
+     * @return Nfs Export Options. There is a limit of 10 export options per file share.
+     * 
+     */
     public Optional<Output<List<NfsExportOptionsArgs>>> nfsExportOptions() {
         return Optional.ofNullable(this.nfsExportOptions);
     }
@@ -61,6 +73,10 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceBackup")
     private @Nullable Output<String> sourceBackup;
 
+    /**
+     * @return The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+     * 
+     */
     public Optional<Output<String>> sourceBackup() {
         return Optional.ofNullable(this.sourceBackup);
     }
@@ -92,42 +108,96 @@ public final class FileShareConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new FileShareConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityGb File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityGb(@Nullable Output<String> capacityGb) {
             $.capacityGb = capacityGb;
             return this;
         }
 
+        /**
+         * @param capacityGb File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityGb(String capacityGb) {
             return capacityGb(Output.of(capacityGb));
         }
 
+        /**
+         * @param name The name of the file share (must be 16 characters or less).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the file share (must be 16 characters or less).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(@Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions) {
             $.nfsExportOptions = nfsExportOptions;
             return this;
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(List<NfsExportOptionsArgs> nfsExportOptions) {
             return nfsExportOptions(Output.of(nfsExportOptions));
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(NfsExportOptionsArgs... nfsExportOptions) {
             return nfsExportOptions(List.of(nfsExportOptions));
         }
 
+        /**
+         * @param sourceBackup The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackup(@Nullable Output<String> sourceBackup) {
             $.sourceBackup = sourceBackup;
             return this;
         }
 
+        /**
+         * @param sourceBackup The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceBackup(String sourceBackup) {
             return sourceBackup(Output.of(sourceBackup));
         }

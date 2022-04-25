@@ -23,6 +23,10 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends com.pulum
     @Import(name="condition", required=true)
     private GooglePrivacyDlpV2RecordConditionResponse condition;
 
+    /**
+     * @return A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+     * 
+     */
     public GooglePrivacyDlpV2RecordConditionResponse condition() {
         return this.condition;
     }
@@ -51,6 +55,12 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends com.pulum
             $ = new GooglePrivacyDlpV2RecordSuppressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             $.condition = condition;
             return this;

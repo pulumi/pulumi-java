@@ -27,6 +27,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends c
     @Import(name="ruleGroupName", required=true)
     private String ruleGroupName;
 
+    /**
+     * @return The name of the rule group that will be disabled.
+     * 
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends c
     @Import(name="rules")
     private @Nullable List<Integer> rules;
 
+    /**
+     * @return The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+     * 
+     */
     public Optional<List<Integer>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -67,16 +75,34 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse extends c
             $ = new ApplicationGatewayFirewallDisabledRuleGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleGroupName The name of the rule group that will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param rules The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<Integer> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Integer... rules) {
             return rules(List.of(rules));
         }

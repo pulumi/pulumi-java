@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends com.pul
     @Import(name="overview", required=true)
     private String overview;
 
+    /**
+     * @return Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+     * 
+     */
     public String overview() {
         return this.overview;
     }
@@ -51,6 +55,12 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends com.pul
             $ = new GoogleCloudDatacatalogV1EntryOverviewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param overview Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overview(String overview) {
             $.overview = overview;
             return this;

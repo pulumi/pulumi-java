@@ -28,6 +28,10 @@ public final class KPIResourceHealthDetailsArgs extends com.pulumi.resources.Res
     @Import(name="resourceHealthStatus")
     private @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
+    /**
+     * @return Resource Health Status
+     * 
+     */
     public Optional<Output<Either<String,ResourceHealthStatus>>> resourceHealthStatus() {
         return Optional.ofNullable(this.resourceHealthStatus);
     }
@@ -56,19 +60,43 @@ public final class KPIResourceHealthDetailsArgs extends com.pulumi.resources.Res
             $ = new KPIResourceHealthDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceHealthStatus Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthStatus(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
             $.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
 
+        /**
+         * @param resourceHealthStatus Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthStatus(Either<String,ResourceHealthStatus> resourceHealthStatus) {
             return resourceHealthStatus(Output.of(resourceHealthStatus));
         }
 
+        /**
+         * @param resourceHealthStatus Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthStatus(String resourceHealthStatus) {
             return resourceHealthStatus(Either.ofLeft(resourceHealthStatus));
         }
 
+        /**
+         * @param resourceHealthStatus Resource Health Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceHealthStatus(ResourceHealthStatus resourceHealthStatus) {
             return resourceHealthStatus(Either.ofRight(resourceHealthStatus));
         }

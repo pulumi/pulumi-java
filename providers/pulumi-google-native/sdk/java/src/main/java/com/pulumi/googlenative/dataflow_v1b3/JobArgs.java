@@ -33,6 +33,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientRequestId")
     private @Nullable Output<String> clientRequestId;
 
+    /**
+     * @return The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
+     * 
+     */
     public Optional<Output<String>> clientRequestId() {
         return Optional.ofNullable(this.clientRequestId);
     }
@@ -44,6 +48,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -55,6 +63,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdFromSnapshotId")
     private @Nullable Output<String> createdFromSnapshotId;
 
+    /**
+     * @return If this is specified, the job&#39;s initial state is populated from the given snapshot.
+     * 
+     */
     public Optional<Output<String>> createdFromSnapshotId() {
         return Optional.ofNullable(this.createdFromSnapshotId);
     }
@@ -66,6 +78,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="currentState")
     private @Nullable Output<JobCurrentState> currentState;
 
+    /**
+     * @return The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * 
+     */
     public Optional<Output<JobCurrentState>> currentState() {
         return Optional.ofNullable(this.currentState);
     }
@@ -77,6 +93,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="currentStateTime")
     private @Nullable Output<String> currentStateTime;
 
+    /**
+     * @return The timestamp associated with the current state.
+     * 
+     */
     public Optional<Output<String>> currentStateTime() {
         return Optional.ofNullable(this.currentStateTime);
     }
@@ -88,6 +108,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<EnvironmentArgs> environment;
 
+    /**
+     * @return The environment for the job.
+     * 
+     */
     public Optional<Output<EnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -99,6 +123,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is created, and is immutable for the life of the job.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -110,6 +138,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobMetadata")
     private @Nullable Output<JobMetadataArgs> jobMetadata;
 
+    /**
+     * @return This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
+     * 
+     */
     public Optional<Output<JobMetadataArgs>> jobMetadata() {
         return Optional.ofNullable(this.jobMetadata);
     }
@@ -121,6 +153,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -132,6 +168,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -143,6 +183,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -154,6 +198,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDescription")
     private @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
 
+    /**
+     * @return Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
+     * 
+     */
     public Optional<Output<PipelineDescriptionArgs>> pipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
@@ -165,6 +213,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the Cloud Platform project that the job belongs to.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -176,6 +228,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replaceJobId")
     private @Nullable Output<String> replaceJobId;
 
+    /**
+     * @return If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
+     * 
+     */
     public Optional<Output<String>> replaceJobId() {
         return Optional.ofNullable(this.replaceJobId);
     }
@@ -187,6 +243,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replacedByJobId")
     private @Nullable Output<String> replacedByJobId;
 
+    /**
+     * @return If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
+     * 
+     */
     public Optional<Output<String>> replacedByJobId() {
         return Optional.ofNullable(this.replacedByJobId);
     }
@@ -198,6 +258,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestedState")
     private @Nullable Output<JobRequestedState> requestedState;
 
+    /**
+     * @return The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+     * 
+     */
     public Optional<Output<JobRequestedState>> requestedState() {
         return Optional.ofNullable(this.requestedState);
     }
@@ -209,6 +273,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
     private @Nullable Output<Boolean> satisfiesPzs;
 
+    /**
+     * @return Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     * 
+     */
     public Optional<Output<Boolean>> satisfiesPzs() {
         return Optional.ofNullable(this.satisfiesPzs);
     }
@@ -220,6 +288,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageStates")
     private @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
 
+    /**
+     * @return This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+     * 
+     */
     public Optional<Output<List<ExecutionStageStateArgs>>> stageStates() {
         return Optional.ofNullable(this.stageStates);
     }
@@ -231,6 +303,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -242,6 +318,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="steps")
     private @Nullable Output<List<StepArgs>> steps;
 
+    /**
+     * @return Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+     * 
+     */
     public Optional<Output<List<StepArgs>>> steps() {
         return Optional.ofNullable(this.steps);
     }
@@ -253,6 +333,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepsLocation")
     private @Nullable Output<String> stepsLocation;
 
+    /**
+     * @return The Cloud Storage location where the steps are stored.
+     * 
+     */
     public Optional<Output<String>> stepsLocation() {
         return Optional.ofNullable(this.stepsLocation);
     }
@@ -264,6 +348,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tempFiles")
     private @Nullable Output<List<String>> tempFiles;
 
+    /**
+     * @return A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * 
+     */
     public Optional<Output<List<String>>> tempFiles() {
         return Optional.ofNullable(this.tempFiles);
     }
@@ -275,6 +363,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transformNameMapping")
     private @Nullable Output<Map<String,String>> transformNameMapping;
 
+    /**
+     * @return The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
+     * 
+     */
     public Optional<Output<Map<String,String>>> transformNameMapping() {
         return Optional.ofNullable(this.transformNameMapping);
     }
@@ -286,6 +378,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<JobType> type;
 
+    /**
+     * @return The type of Cloud Dataflow job.
+     * 
+     */
     public Optional<Output<JobType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -345,230 +441,536 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientRequestId The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRequestId(@Nullable Output<String> clientRequestId) {
             $.clientRequestId = clientRequestId;
             return this;
         }
 
+        /**
+         * @param clientRequestId The client&#39;s unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client&#39;s ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientRequestId(String clientRequestId) {
             return clientRequestId(Output.of(clientRequestId));
         }
 
+        /**
+         * @param createTime The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The timestamp when the job was initially created. Immutable and set by the Cloud Dataflow service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param createdFromSnapshotId If this is specified, the job&#39;s initial state is populated from the given snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdFromSnapshotId(@Nullable Output<String> createdFromSnapshotId) {
             $.createdFromSnapshotId = createdFromSnapshotId;
             return this;
         }
 
+        /**
+         * @param createdFromSnapshotId If this is specified, the job&#39;s initial state is populated from the given snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdFromSnapshotId(String createdFromSnapshotId) {
             return createdFromSnapshotId(Output.of(createdFromSnapshotId));
         }
 
+        /**
+         * @param currentState The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentState(@Nullable Output<JobCurrentState> currentState) {
             $.currentState = currentState;
             return this;
         }
 
+        /**
+         * @param currentState The current state of the job. Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified. A job in the `JOB_STATE_RUNNING` state may asynchronously enter a terminal state. After a job has reached a terminal state, no further state updates may be made. This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentState(JobCurrentState currentState) {
             return currentState(Output.of(currentState));
         }
 
+        /**
+         * @param currentStateTime The timestamp associated with the current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
             $.currentStateTime = currentStateTime;
             return this;
         }
 
+        /**
+         * @param currentStateTime The timestamp associated with the current state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentStateTime(String currentStateTime) {
             return currentStateTime(Output.of(currentStateTime));
         }
 
+        /**
+         * @param environment The environment for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The environment for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(EnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param id The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is created, and is immutable for the life of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The unique ID of this job. This field is set by the Cloud Dataflow service when the Job is created, and is immutable for the life of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param jobMetadata This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobMetadata(@Nullable Output<JobMetadataArgs> jobMetadata) {
             $.jobMetadata = jobMetadata;
             return this;
         }
 
+        /**
+         * @param jobMetadata This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobMetadata(JobMetadataArgs jobMetadata) {
             return jobMetadata(Output.of(jobMetadata));
         }
 
+        /**
+         * @param labels User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels User-defined labels for this job. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be &lt;= 128 bytes in size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The user-specified Cloud Dataflow job name. Only one Job with a given name may exist in a project at any given time. If a caller attempts to create a Job with the same name as an already-existing Job, the attempt returns the existing Job. The name must match the regular expression `[a-z]([-a-z0-9]{0,38}[a-z0-9])?`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pipelineDescription Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDescription(@Nullable Output<PipelineDescriptionArgs> pipelineDescription) {
             $.pipelineDescription = pipelineDescription;
             return this;
         }
 
+        /**
+         * @param pipelineDescription Preliminary field: The format of this data may change at any time. A description of the user pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDescription(PipelineDescriptionArgs pipelineDescription) {
             return pipelineDescription(Output.of(pipelineDescription));
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the Cloud Platform project that the job belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param replaceJobId If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceJobId(@Nullable Output<String> replaceJobId) {
             $.replaceJobId = replaceJobId;
             return this;
         }
 
+        /**
+         * @param replaceJobId If this job is an update of an existing job, this field is the job ID of the job it replaced. When sending a `CreateJobRequest`, you can update a job by specifying it here. The job named here is stopped, and its intermediate state is transferred to this job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replaceJobId(String replaceJobId) {
             return replaceJobId(Output.of(replaceJobId));
         }
 
+        /**
+         * @param replacedByJobId If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacedByJobId(@Nullable Output<String> replacedByJobId) {
             $.replacedByJobId = replacedByJobId;
             return this;
         }
 
+        /**
+         * @param replacedByJobId If another job is an update of this job (and thus, this job is in `JOB_STATE_UPDATED`), this field contains the ID of that job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacedByJobId(String replacedByJobId) {
             return replacedByJobId(Output.of(replacedByJobId));
         }
 
+        /**
+         * @param requestedState The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedState(@Nullable Output<JobRequestedState> requestedState) {
             $.requestedState = requestedState;
             return this;
         }
 
+        /**
+         * @param requestedState The job&#39;s requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job&#39;s requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedState(JobRequestedState requestedState) {
             return requestedState(Output.of(requestedState));
         }
 
+        /**
+         * @param satisfiesPzs Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
             $.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
+        /**
+         * @param satisfiesPzs Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder satisfiesPzs(Boolean satisfiesPzs) {
             return satisfiesPzs(Output.of(satisfiesPzs));
         }
 
+        /**
+         * @param stageStates This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageStates(@Nullable Output<List<ExecutionStageStateArgs>> stageStates) {
             $.stageStates = stageStates;
             return this;
         }
 
+        /**
+         * @param stageStates This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageStates(List<ExecutionStageStateArgs> stageStates) {
             return stageStates(Output.of(stageStates));
         }
 
+        /**
+         * @param stageStates This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageStates(ExecutionStageStateArgs... stageStates) {
             return stageStates(List.of(stageStates));
         }
 
+        /**
+         * @param startTime The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource scheduling jobs are started with some delay after job creation, so start_time is unset before start and is updated when the job is started by the Cloud Dataflow service. For other jobs, start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param steps Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(@Nullable Output<List<StepArgs>> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<StepArgs> steps) {
             return steps(Output.of(steps));
         }
 
+        /**
+         * @param steps Exactly one of step or steps_location should be specified. The top-level steps that constitute the entire job. Only retrieved with JOB_VIEW_ALL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(StepArgs... steps) {
             return steps(List.of(steps));
         }
 
+        /**
+         * @param stepsLocation The Cloud Storage location where the steps are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepsLocation(@Nullable Output<String> stepsLocation) {
             $.stepsLocation = stepsLocation;
             return this;
         }
 
+        /**
+         * @param stepsLocation The Cloud Storage location where the steps are stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepsLocation(String stepsLocation) {
             return stepsLocation(Output.of(stepsLocation));
         }
 
+        /**
+         * @param tempFiles A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempFiles(@Nullable Output<List<String>> tempFiles) {
             $.tempFiles = tempFiles;
             return this;
         }
 
+        /**
+         * @param tempFiles A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempFiles(List<String> tempFiles) {
             return tempFiles(Output.of(tempFiles));
         }
 
+        /**
+         * @param tempFiles A set of files the system should be aware of that are used for temporary storage. These temporary files will be removed on job completion. No duplicates are allowed. No file patterns are supported. The supported files are: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+         * 
+         * @return builder
+         * 
+         */
         public Builder tempFiles(String... tempFiles) {
             return tempFiles(List.of(tempFiles));
         }
 
+        /**
+         * @param transformNameMapping The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
             $.transformNameMapping = transformNameMapping;
             return this;
         }
 
+        /**
+         * @param transformNameMapping The map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             return transformNameMapping(Output.of(transformNameMapping));
         }
 
+        /**
+         * @param type The type of Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<JobType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of Cloud Dataflow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobType type) {
             return type(Output.of(type));
         }

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTransitGatewayMulticastDomainAssociationResult {
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
      */
     private final @Nullable String resourceId;
     /**
-     * The type of resource, for example a VPC attachment.
+     * @return The type of resource, for example a VPC attachment.
      * 
      */
     private final @Nullable String resourceType;
     /**
-     * The state of the subnet association.
+     * @return The state of the subnet association.
      * 
      */
     private final @Nullable String state;
@@ -38,23 +38,23 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
     }
 
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * The type of resource, for example a VPC attachment.
+     * @return The type of resource, for example a VPC attachment.
      * 
-    */
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
-     * The state of the subnet association.
+     * @return The state of the subnet association.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

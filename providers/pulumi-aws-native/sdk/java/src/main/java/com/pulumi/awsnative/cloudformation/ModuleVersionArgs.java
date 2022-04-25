@@ -22,6 +22,12 @@ public final class ModuleVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moduleName", required=true)
     private Output<String> moduleName;
 
+    /**
+     * @return The name of the module being registered.
+     * 
+     * Recommended module naming pattern: company_or_organization::service::type::MODULE.
+     * 
+     */
     public Output<String> moduleName() {
         return this.moduleName;
     }
@@ -33,6 +39,10 @@ public final class ModuleVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modulePackage", required=true)
     private Output<String> modulePackage;
 
+    /**
+     * @return The url to the S3 bucket containing the schema and template fragment for the module you want to register.
+     * 
+     */
     public Output<String> modulePackage() {
         return this.modulePackage;
     }
@@ -62,20 +72,48 @@ public final class ModuleVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ModuleVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moduleName The name of the module being registered.
+         * 
+         * Recommended module naming pattern: company_or_organization::service::type::MODULE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleName(Output<String> moduleName) {
             $.moduleName = moduleName;
             return this;
         }
 
+        /**
+         * @param moduleName The name of the module being registered.
+         * 
+         * Recommended module naming pattern: company_or_organization::service::type::MODULE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moduleName(String moduleName) {
             return moduleName(Output.of(moduleName));
         }
 
+        /**
+         * @param modulePackage The url to the S3 bucket containing the schema and template fragment for the module you want to register.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulePackage(Output<String> modulePackage) {
             $.modulePackage = modulePackage;
             return this;
         }
 
+        /**
+         * @param modulePackage The url to the S3 bucket containing the schema and template fragment for the module you want to register.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modulePackage(String modulePackage) {
             return modulePackage(Output.of(modulePackage));
         }

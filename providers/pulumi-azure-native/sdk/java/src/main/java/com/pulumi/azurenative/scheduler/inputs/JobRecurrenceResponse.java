@@ -23,6 +23,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Gets or sets the maximum number of times that the job should run.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -34,6 +38,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return Gets or sets the time at which the job will complete.
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -45,6 +53,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="frequency")
     private @Nullable String frequency;
 
+    /**
+     * @return Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+     * 
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -56,6 +68,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="interval")
     private @Nullable Integer interval;
 
+    /**
+     * @return Gets or sets the interval between retries.
+     * 
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -95,21 +111,45 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Gets or sets the maximum number of times that the job should run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param endTime Gets or sets the time at which the job will complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param frequency Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(@Nullable String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval Gets or sets the interval between retries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Integer interval) {
             $.interval = interval;
             return this;

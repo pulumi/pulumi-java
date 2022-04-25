@@ -22,6 +22,10 @@ public final class BucketLifecycleRuleActionGetArgs extends com.pulumi.resources
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -33,6 +37,10 @@ public final class BucketLifecycleRuleActionGetArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -62,20 +70,44 @@ public final class BucketLifecycleRuleActionGetArgs extends com.pulumi.resources
             $ = new BucketLifecycleRuleActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageClass The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param type The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

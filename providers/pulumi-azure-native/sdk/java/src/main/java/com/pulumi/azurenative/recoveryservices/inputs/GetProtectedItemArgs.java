@@ -21,6 +21,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return Container name associated with the backed up item.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -32,6 +36,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Fabric name associated with the backed up item.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -43,6 +51,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="filter")
     private @Nullable String filter;
 
+    /**
+     * @return OData filter options.
+     * 
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -54,6 +66,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="protectedItemName", required=true)
     private String protectedItemName;
 
+    /**
+     * @return Backed up item name whose details are to be fetched.
+     * 
+     */
     public String protectedItemName() {
         return this.protectedItemName;
     }
@@ -65,6 +81,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -76,6 +96,10 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -109,31 +133,67 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerName Container name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param fabricName Fabric name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param filter OData filter options.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param protectedItemName Backed up item name whose details are to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemName(String protectedItemName) {
             $.protectedItemName = protectedItemName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

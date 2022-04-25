@@ -26,6 +26,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi
             $ = new GoogleCloudDatapipelinesV1ScheduleSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param timeZone Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

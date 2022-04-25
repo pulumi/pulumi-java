@@ -28,6 +28,10 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="credentials", required=true)
     private UsernamePasswordCredentialsResponse credentials;
 
+    /**
+     * @return Credentials to be presented to the endpoint.
+     * 
+     */
     public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
     }
@@ -39,6 +43,10 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="tunnel")
     private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
+    /**
+     * @return Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+     * 
+     */
     public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
         return Optional.ofNullable(this.tunnel);
     }
@@ -51,6 +59,11 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -62,6 +75,10 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The endpoint URL for Video Analyzer to connect to.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -93,21 +110,46 @@ public final class UnsecuredEndpointResponse extends com.pulumi.resources.Invoke
             $ = new UnsecuredEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Credentials to be presented to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param tunnel Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
             $.tunnel = tunnel;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The endpoint URL for Video Analyzer to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

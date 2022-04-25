@@ -21,6 +21,10 @@ public final class BucketLifecycleRuleArgs extends com.pulumi.resources.Resource
     @Import(name="action", required=true)
     private Output<BucketLifecycleRuleActionArgs> action;
 
+    /**
+     * @return The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     public Output<BucketLifecycleRuleActionArgs> action() {
         return this.action;
     }
@@ -32,6 +36,10 @@ public final class BucketLifecycleRuleArgs extends com.pulumi.resources.Resource
     @Import(name="condition", required=true)
     private Output<BucketLifecycleRuleConditionArgs> condition;
 
+    /**
+     * @return The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
+     * 
+     */
     public Output<BucketLifecycleRuleConditionArgs> condition() {
         return this.condition;
     }
@@ -61,20 +69,44 @@ public final class BucketLifecycleRuleArgs extends com.pulumi.resources.Resource
             $ = new BucketLifecycleRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<BucketLifecycleRuleActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(BucketLifecycleRuleActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param condition The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(Output<BucketLifecycleRuleConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The Lifecycle Rule&#39;s condition configuration. A single block of this type is supported. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(BucketLifecycleRuleConditionArgs condition) {
             return condition(Output.of(condition));
         }

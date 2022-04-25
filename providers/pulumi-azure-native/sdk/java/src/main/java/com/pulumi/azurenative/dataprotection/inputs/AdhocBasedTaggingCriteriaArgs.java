@@ -26,6 +26,10 @@ public final class AdhocBasedTaggingCriteriaArgs extends com.pulumi.resources.Re
     @Import(name="tagInfo")
     private @Nullable Output<RetentionTagArgs> tagInfo;
 
+    /**
+     * @return Retention tag information
+     * 
+     */
     public Optional<Output<RetentionTagArgs>> tagInfo() {
         return Optional.ofNullable(this.tagInfo);
     }
@@ -54,11 +58,23 @@ public final class AdhocBasedTaggingCriteriaArgs extends com.pulumi.resources.Re
             $ = new AdhocBasedTaggingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tagInfo Retention tag information
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagInfo(@Nullable Output<RetentionTagArgs> tagInfo) {
             $.tagInfo = tagInfo;
             return this;
         }
 
+        /**
+         * @param tagInfo Retention tag information
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagInfo(RetentionTagArgs tagInfo) {
             return tagInfo(Output.of(tagInfo));
         }

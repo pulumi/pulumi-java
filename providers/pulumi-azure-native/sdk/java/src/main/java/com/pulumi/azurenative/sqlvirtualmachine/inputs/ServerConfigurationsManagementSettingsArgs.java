@@ -29,6 +29,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
     @Import(name="additionalFeaturesServerConfigurations")
     private @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
+    /**
+     * @return Additional SQL feature settings.
+     * 
+     */
     public Optional<Output<AdditionalFeaturesServerConfigurationsArgs>> additionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
@@ -40,6 +44,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
     @Import(name="sqlConnectivityUpdateSettings")
     private @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
+    /**
+     * @return SQL connectivity type settings.
+     * 
+     */
     public Optional<Output<SqlConnectivityUpdateSettingsArgs>> sqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
@@ -51,6 +59,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
     @Import(name="sqlStorageUpdateSettings")
     private @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
+    /**
+     * @return SQL storage update settings.
+     * 
+     */
     public Optional<Output<SqlStorageUpdateSettingsArgs>> sqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
@@ -62,6 +74,10 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
     @Import(name="sqlWorkloadTypeUpdateSettings")
     private @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
+    /**
+     * @return SQL workload type settings.
+     * 
+     */
     public Optional<Output<SqlWorkloadTypeUpdateSettingsArgs>> sqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
@@ -93,38 +109,86 @@ public final class ServerConfigurationsManagementSettingsArgs extends com.pulumi
             $ = new ServerConfigurationsManagementSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalFeaturesServerConfigurations Additional SQL feature settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalFeaturesServerConfigurations(@Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
             $.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
 
+        /**
+         * @param additionalFeaturesServerConfigurations Additional SQL feature settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalFeaturesServerConfigurations(AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
             return additionalFeaturesServerConfigurations(Output.of(additionalFeaturesServerConfigurations));
         }
 
+        /**
+         * @param sqlConnectivityUpdateSettings SQL connectivity type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlConnectivityUpdateSettings(@Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
             $.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
 
+        /**
+         * @param sqlConnectivityUpdateSettings SQL connectivity type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlConnectivityUpdateSettings(SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
             return sqlConnectivityUpdateSettings(Output.of(sqlConnectivityUpdateSettings));
         }
 
+        /**
+         * @param sqlStorageUpdateSettings SQL storage update settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlStorageUpdateSettings(@Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
             $.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
 
+        /**
+         * @param sqlStorageUpdateSettings SQL storage update settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlStorageUpdateSettings(SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
             return sqlStorageUpdateSettings(Output.of(sqlStorageUpdateSettings));
         }
 
+        /**
+         * @param sqlWorkloadTypeUpdateSettings SQL workload type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadTypeUpdateSettings(@Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
             $.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
 
+        /**
+         * @param sqlWorkloadTypeUpdateSettings SQL workload type settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadTypeUpdateSettings(SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
             return sqlWorkloadTypeUpdateSettings(Output.of(sqlWorkloadTypeUpdateSettings));
         }

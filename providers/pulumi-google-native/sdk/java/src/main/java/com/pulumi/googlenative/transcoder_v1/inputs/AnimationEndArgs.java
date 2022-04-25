@@ -26,6 +26,10 @@ public final class AnimationEndArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTimeOffset")
     private @Nullable Output<String> startTimeOffset;
 
+    /**
+     * @return The time to end overlay object, in seconds. Default: 0
+     * 
+     */
     public Optional<Output<String>> startTimeOffset() {
         return Optional.ofNullable(this.startTimeOffset);
     }
@@ -54,11 +58,23 @@ public final class AnimationEndArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AnimationEndArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param startTimeOffset The time to end overlay object, in seconds. Default: 0
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
             $.startTimeOffset = startTimeOffset;
             return this;
         }
 
+        /**
+         * @param startTimeOffset The time to end overlay object, in seconds. Default: 0
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeOffset(String startTimeOffset) {
             return startTimeOffset(Output.of(startTimeOffset));
         }

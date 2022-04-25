@@ -28,6 +28,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -39,6 +43,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="httpRequestTimeout")
     private @Nullable Output<Object> httpRequestTimeout;
 
+    /**
+     * @return The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> httpRequestTimeout() {
         return Optional.ofNullable(this.httpRequestTimeout);
     }
@@ -50,6 +58,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -61,6 +73,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="query")
     private @Nullable Output<Object> query;
 
+    /**
+     * @return The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -72,6 +88,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="sourceRetryCount")
     private @Nullable Output<Object> sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -83,6 +103,10 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="sourceRetryWait")
     private @Nullable Output<Object> sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -95,6 +119,11 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;SharePointOnlineListSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -129,65 +158,151 @@ public final class SharePointOnlineListSourceArgs extends com.pulumi.resources.R
             $ = new SharePointOnlineListSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param httpRequestTimeout The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
             $.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
 
+        /**
+         * @param httpRequestTimeout The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRequestTimeout(Object httpRequestTimeout) {
             return httpRequestTimeout(Output.of(httpRequestTimeout));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param query The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<Object> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Object query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(Object sourceRetryCount) {
             return sourceRetryCount(Output.of(sourceRetryCount));
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(Object sourceRetryWait) {
             return sourceRetryWait(Output.of(sourceRetryWait));
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;SharePointOnlineListSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;SharePointOnlineListSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

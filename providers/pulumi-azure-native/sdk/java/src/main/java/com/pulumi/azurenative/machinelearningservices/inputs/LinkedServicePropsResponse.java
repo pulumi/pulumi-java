@@ -25,6 +25,10 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The creation time of the linked service.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -36,6 +40,10 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="linkType")
     private @Nullable String linkType;
 
+    /**
+     * @return Type of the link target.
+     * 
+     */
     public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -47,6 +55,10 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="linkedServiceResourceId", required=true)
     private String linkedServiceResourceId;
 
+    /**
+     * @return ResourceId of the link target of the linked service.
+     * 
+     */
     public String linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
@@ -58,6 +70,10 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
     @Import(name="modifiedTime")
     private @Nullable String modifiedTime;
 
+    /**
+     * @return The last modified time of the linked service.
+     * 
+     */
     public Optional<String> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
@@ -89,21 +105,45 @@ public final class LinkedServicePropsResponse extends com.pulumi.resources.Invok
             $ = new LinkedServicePropsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdTime The creation time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param linkType Type of the link target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable String linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param linkedServiceResourceId ResourceId of the link target of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             $.linkedServiceResourceId = linkedServiceResourceId;
             return this;
         }
 
+        /**
+         * @param modifiedTime The last modified time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(@Nullable String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;

@@ -23,6 +23,10 @@ public final class SchedulingConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Defines whether the node is preemptible.
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -34,6 +38,10 @@ public final class SchedulingConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="reserved", required=true)
     private Boolean reserved;
 
+    /**
+     * @return Whether the node is created under a reservation.
+     * 
+     */
     public Boolean reserved() {
         return this.reserved;
     }
@@ -63,11 +71,23 @@ public final class SchedulingConfigResponse extends com.pulumi.resources.InvokeA
             $ = new SchedulingConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preemptible Defines whether the node is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;
         }
 
+        /**
+         * @param reserved Whether the node is created under a reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reserved(Boolean reserved) {
             $.reserved = reserved;
             return this;

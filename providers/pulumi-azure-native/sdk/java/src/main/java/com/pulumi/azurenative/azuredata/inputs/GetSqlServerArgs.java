@@ -21,6 +21,10 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The child resources to include in the response.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sqlServerName", required=true)
     private String sqlServerName;
 
+    /**
+     * @return Name of the SQL Server.
+     * 
+     */
     public String sqlServerName() {
         return this.sqlServerName;
     }
@@ -54,6 +66,10 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sqlServerRegistrationName", required=true)
     private String sqlServerRegistrationName;
 
+    /**
+     * @return Name of the SQL Server registration.
+     * 
+     */
     public String sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
@@ -85,21 +101,45 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSqlServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sqlServerName Name of the SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerName(String sqlServerName) {
             $.sqlServerName = sqlServerName;
             return this;
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;

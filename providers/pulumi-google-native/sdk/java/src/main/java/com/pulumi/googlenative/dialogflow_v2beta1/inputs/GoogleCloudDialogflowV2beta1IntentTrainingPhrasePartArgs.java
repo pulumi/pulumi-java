@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     @Import(name="entityType")
     private @Nullable Output<String> entityType;
 
+    /**
+     * @return Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public Optional<Output<String>> entityType() {
         return Optional.ofNullable(this.entityType);
     }
@@ -49,6 +57,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return The text for this part.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -60,6 +72,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
     @Import(name="userDefined")
     private @Nullable Output<Boolean> userDefined;
 
+    /**
+     * @return Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+     * 
+     */
     public Optional<Output<Boolean>> userDefined() {
         return Optional.ofNullable(this.userDefined);
     }
@@ -91,38 +107,86 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
             $ = new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param entityType Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(@Nullable Output<String> entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityType Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(String entityType) {
             return entityType(Output.of(entityType));
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }
 
+        /**
+         * @param userDefined Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefined(@Nullable Output<Boolean> userDefined) {
             $.userDefined = userDefined;
             return this;
         }
 
+        /**
+         * @param userDefined Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDefined(Boolean userDefined) {
             return userDefined(Output.of(userDefined));
         }

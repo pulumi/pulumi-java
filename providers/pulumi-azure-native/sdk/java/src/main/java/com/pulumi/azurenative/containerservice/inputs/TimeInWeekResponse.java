@@ -27,6 +27,10 @@ public final class TimeInWeekResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="day")
     private @Nullable String day;
 
+    /**
+     * @return A day in a week.
+     * 
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
@@ -38,6 +42,10 @@ public final class TimeInWeekResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hourSlots")
     private @Nullable List<Integer> hourSlots;
 
+    /**
+     * @return hour slots in a day.
+     * 
+     */
     public Optional<List<Integer>> hourSlots() {
         return Optional.ofNullable(this.hourSlots);
     }
@@ -67,16 +75,34 @@ public final class TimeInWeekResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TimeInWeekResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day A day in a week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param hourSlots hour slots in a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourSlots(@Nullable List<Integer> hourSlots) {
             $.hourSlots = hourSlots;
             return this;
         }
 
+        /**
+         * @param hourSlots hour slots in a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourSlots(Integer... hourSlots) {
             return hourSlots(List.of(hourSlots));
         }

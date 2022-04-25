@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ByteMatchSetByteMatchTuple {
     /**
-     * Settings for the ByteMatchTuple. FieldToMatch documented below.
+     * @return Settings for the ByteMatchTuple. FieldToMatch documented below.
      * 
      */
     private final ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch;
     /**
-     * Within the portion of a web request that you want to search.
+     * @return Within the portion of a web request that you want to search.
      * 
      */
     private final String positionalConstraint;
     /**
-     * The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
+     * @return The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
      * 
      */
     private final @Nullable String targetString;
     /**
-     * The formatting way for web request.
+     * @return The formatting way for web request.
      * 
      */
     private final String textTransformation;
@@ -46,30 +46,30 @@ public final class ByteMatchSetByteMatchTuple {
     }
 
     /**
-     * Settings for the ByteMatchTuple. FieldToMatch documented below.
+     * @return Settings for the ByteMatchTuple. FieldToMatch documented below.
      * 
-    */
+     */
     public ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
-     * Within the portion of a web request that you want to search.
+     * @return Within the portion of a web request that you want to search.
      * 
-    */
+     */
     public String positionalConstraint() {
         return this.positionalConstraint;
     }
     /**
-     * The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
+     * @return The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
      * 
-    */
+     */
     public Optional<String> targetString() {
         return Optional.ofNullable(this.targetString);
     }
     /**
-     * The formatting way for web request.
+     * @return The formatting way for web request.
      * 
-    */
+     */
     public String textTransformation() {
         return this.textTransformation;
     }

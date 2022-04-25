@@ -19,6 +19,10 @@ public final class UpgradeSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxSurge", required=true)
     private Integer maxSurge;
 
+    /**
+     * @return The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+     * 
+     */
     public Integer maxSurge() {
         return this.maxSurge;
     }
@@ -30,6 +34,10 @@ public final class UpgradeSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxUnavailable", required=true)
     private Integer maxUnavailable;
 
+    /**
+     * @return The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+     * 
+     */
     public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
@@ -59,11 +67,23 @@ public final class UpgradeSettingsResponse extends com.pulumi.resources.InvokeAr
             $ = new UpgradeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSurge The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(Integer maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxUnavailable The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnavailable(Integer maxUnavailable) {
             $.maxUnavailable = maxUnavailable;
             return this;

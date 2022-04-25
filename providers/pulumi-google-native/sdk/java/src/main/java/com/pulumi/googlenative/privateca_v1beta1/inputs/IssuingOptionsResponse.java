@@ -23,6 +23,10 @@ public final class IssuingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="includeCaCertUrl", required=true)
     private Boolean includeCaCertUrl;
 
+    /**
+     * @return When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+     * 
+     */
     public Boolean includeCaCertUrl() {
         return this.includeCaCertUrl;
     }
@@ -34,6 +38,10 @@ public final class IssuingOptionsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="includeCrlAccessUrl", required=true)
     private Boolean includeCrlAccessUrl;
 
+    /**
+     * @return When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+     * 
+     */
     public Boolean includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
@@ -63,11 +71,23 @@ public final class IssuingOptionsResponse extends com.pulumi.resources.InvokeArg
             $ = new IssuingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeCaCertUrl When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
             $.includeCaCertUrl = includeCaCertUrl;
             return this;
         }
 
+        /**
+         * @param includeCrlAccessUrl When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             $.includeCrlAccessUrl = includeCrlAccessUrl;
             return this;

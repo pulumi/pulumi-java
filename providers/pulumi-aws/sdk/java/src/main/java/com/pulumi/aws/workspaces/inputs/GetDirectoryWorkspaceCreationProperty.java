@@ -20,6 +20,10 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="customSecurityGroupId", required=true)
     private String customSecurityGroupId;
 
+    /**
+     * @return The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+     * 
+     */
     public String customSecurityGroupId() {
         return this.customSecurityGroupId;
     }
@@ -31,6 +35,10 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="defaultOu", required=true)
     private String defaultOu;
 
+    /**
+     * @return The default organizational unit (OU) for your WorkSpace directories.
+     * 
+     */
     public String defaultOu() {
         return this.defaultOu;
     }
@@ -42,6 +50,10 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="enableInternetAccess", required=true)
     private Boolean enableInternetAccess;
 
+    /**
+     * @return Indicates whether internet access is enabled for your WorkSpaces.
+     * 
+     */
     public Boolean enableInternetAccess() {
         return this.enableInternetAccess;
     }
@@ -53,6 +65,10 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="enableMaintenanceMode", required=true)
     private Boolean enableMaintenanceMode;
 
+    /**
+     * @return Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+     * 
+     */
     public Boolean enableMaintenanceMode() {
         return this.enableMaintenanceMode;
     }
@@ -64,6 +80,10 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="userEnabledAsLocalAdministrator", required=true)
     private Boolean userEnabledAsLocalAdministrator;
 
+    /**
+     * @return Indicates whether users are local administrators of their WorkSpaces.
+     * 
+     */
     public Boolean userEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator;
     }
@@ -96,26 +116,56 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
             $ = new GetDirectoryWorkspaceCreationProperty(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customSecurityGroupId The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSecurityGroupId(String customSecurityGroupId) {
             $.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param defaultOu The default organizational unit (OU) for your WorkSpace directories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultOu(String defaultOu) {
             $.defaultOu = defaultOu;
             return this;
         }
 
+        /**
+         * @param enableInternetAccess Indicates whether internet access is enabled for your WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             $.enableInternetAccess = enableInternetAccess;
             return this;
         }
 
+        /**
+         * @param enableMaintenanceMode Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableMaintenanceMode(Boolean enableMaintenanceMode) {
             $.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
 
+        /**
+         * @param userEnabledAsLocalAdministrator Indicates whether users are local administrators of their WorkSpaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
             $.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;

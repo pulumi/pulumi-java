@@ -29,6 +29,10 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
     @Import(name="registryId")
     private @Nullable Output<String> registryId;
 
+    /**
+     * @return The registry ID where the registry was created.
+     * 
+     */
     public Optional<Output<String>> registryId() {
         return Optional.ofNullable(this.registryId);
     }
@@ -67,11 +71,23 @@ public final class RegistryPolicyState extends com.pulumi.resources.ResourceArgs
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param registryId The registry ID where the registry was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
 
+        /**
+         * @param registryId The registry ID where the registry was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }

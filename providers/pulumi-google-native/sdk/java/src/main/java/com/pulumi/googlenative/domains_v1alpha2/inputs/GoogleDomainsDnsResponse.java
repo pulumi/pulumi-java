@@ -25,6 +25,10 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
     @Import(name="dsRecords", required=true)
     private List<DsRecordResponse> dsRecords;
 
+    /**
+     * @return The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
+     * 
+     */
     public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
     }
@@ -36,6 +40,10 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
     @Import(name="dsState", required=true)
     private String dsState;
 
+    /**
+     * @return The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+     * 
+     */
     public String dsState() {
         return this.dsState;
     }
@@ -47,6 +55,10 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
     @Import(name="nameServers", required=true)
     private List<String> nameServers;
 
+    /**
+     * @return A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
+     * 
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
@@ -77,25 +89,55 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
             $ = new GoogleDomainsDnsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dsRecords The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             $.dsRecords = dsRecords;
             return this;
         }
 
+        /**
+         * @param dsRecords The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsRecords(DsRecordResponse... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
 
+        /**
+         * @param dsState The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dsState(String dsState) {
             $.dsState = dsState;
             return this;
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(List<String> nameServers) {
             $.nameServers = nameServers;
             return this;
         }
 
+        /**
+         * @param nameServers A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }

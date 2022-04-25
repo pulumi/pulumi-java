@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBundleResult {
     /**
-     * The ID of the bundle.
+     * @return The ID of the bundle.
      * 
      */
     private final @Nullable String bundleId;
     /**
-     * The compute type. See supported fields below.
+     * @return The compute type. See supported fields below.
      * 
      */
     private final List<GetBundleComputeType> computeTypes;
     /**
-     * The description of the bundle.
+     * @return The description of the bundle.
      * 
      */
     private final String description;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The name of the compute type.
+     * @return The name of the compute type.
      * 
      */
     private final @Nullable String name;
     /**
-     * The owner of the bundle.
+     * @return The owner of the bundle.
      * 
      */
     private final @Nullable String owner;
     /**
-     * The root volume. See supported fields below.
+     * @return The root volume. See supported fields below.
      * 
      */
     private final List<GetBundleRootStorage> rootStorages;
     /**
-     * The user storage. See supported fields below.
+     * @return The user storage. See supported fields below.
      * 
      */
     private final List<GetBundleUserStorage> userStorages;
@@ -77,58 +77,58 @@ public final class GetBundleResult {
     }
 
     /**
-     * The ID of the bundle.
+     * @return The ID of the bundle.
      * 
-    */
+     */
     public Optional<String> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
     /**
-     * The compute type. See supported fields below.
+     * @return The compute type. See supported fields below.
      * 
-    */
+     */
     public List<GetBundleComputeType> computeTypes() {
         return this.computeTypes;
     }
     /**
-     * The description of the bundle.
+     * @return The description of the bundle.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the compute type.
+     * @return The name of the compute type.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The owner of the bundle.
+     * @return The owner of the bundle.
      * 
-    */
+     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
-     * The root volume. See supported fields below.
+     * @return The root volume. See supported fields below.
      * 
-    */
+     */
     public List<GetBundleRootStorage> rootStorages() {
         return this.rootStorages;
     }
     /**
-     * The user storage. See supported fields below.
+     * @return The user storage. See supported fields below.
      * 
-    */
+     */
     public List<GetBundleUserStorage> userStorages() {
         return this.userStorages;
     }

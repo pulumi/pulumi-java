@@ -22,6 +22,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="infoTypes", required=true)
     private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs>> infoTypes;
 
+    /**
+     * @return If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs>> infoTypes() {
         return this.infoTypes;
     }
@@ -50,15 +55,36 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             $ = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }

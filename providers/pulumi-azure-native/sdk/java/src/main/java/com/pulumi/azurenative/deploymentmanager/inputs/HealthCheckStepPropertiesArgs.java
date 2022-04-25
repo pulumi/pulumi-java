@@ -26,6 +26,10 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="attributes", required=true)
     private Output<RestHealthCheckStepAttributesArgs> attributes;
 
+    /**
+     * @return The health check step attributes
+     * 
+     */
     public Output<RestHealthCheckStepAttributesArgs> attributes() {
         return this.attributes;
     }
@@ -38,6 +42,11 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="stepType", required=true)
     private Output<String> stepType;
 
+    /**
+     * @return The type of step.
+     * Expected value is &#39;HealthCheck&#39;.
+     * 
+     */
     public Output<String> stepType() {
         return this.stepType;
     }
@@ -67,20 +76,46 @@ public final class HealthCheckStepPropertiesArgs extends com.pulumi.resources.Re
             $ = new HealthCheckStepPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The health check step attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Output<RestHealthCheckStepAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The health check step attributes
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(RestHealthCheckStepAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;HealthCheck&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(Output<String> stepType) {
             $.stepType = stepType;
             return this;
         }
 
+        /**
+         * @param stepType The type of step.
+         * Expected value is &#39;HealthCheck&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepType(String stepType) {
             return stepType(Output.of(stepType));
         }

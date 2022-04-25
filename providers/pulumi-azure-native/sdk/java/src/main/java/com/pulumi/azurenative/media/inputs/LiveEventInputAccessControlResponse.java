@@ -25,6 +25,10 @@ public final class LiveEventInputAccessControlResponse extends com.pulumi.resour
     @Import(name="ip")
     private @Nullable IPAccessControlResponse ip;
 
+    /**
+     * @return The IP access control properties.
+     * 
+     */
     public Optional<IPAccessControlResponse> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -53,6 +57,12 @@ public final class LiveEventInputAccessControlResponse extends com.pulumi.resour
             $ = new LiveEventInputAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP access control properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable IPAccessControlResponse ip) {
             $.ip = ip;
             return this;

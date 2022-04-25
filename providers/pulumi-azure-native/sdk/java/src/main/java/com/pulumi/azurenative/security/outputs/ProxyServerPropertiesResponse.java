@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProxyServerPropertiesResponse {
     /**
-     * Proxy server IP
+     * @return Proxy server IP
      * 
      */
     private final @Nullable String ip;
     /**
-     * Proxy server port
+     * @return Proxy server port
      * 
      */
     private final @Nullable String port;
@@ -31,16 +31,16 @@ public final class ProxyServerPropertiesResponse {
     }
 
     /**
-     * Proxy server IP
+     * @return Proxy server IP
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * Proxy server port
+     * @return Proxy server port
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }

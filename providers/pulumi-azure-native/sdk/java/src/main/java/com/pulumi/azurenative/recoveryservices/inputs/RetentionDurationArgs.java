@@ -30,6 +30,11 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+     * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -41,6 +46,10 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="durationType")
     private @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
+    /**
+     * @return Retention duration type of retention policy.
+     * 
+     */
     public Optional<Output<Either<String,RetentionDurationType>>> durationType() {
         return Optional.ofNullable(this.durationType);
     }
@@ -70,28 +79,66 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
             $ = new RetentionDurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+         * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+         * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param durationType Retention duration type of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationType(@Nullable Output<Either<String,RetentionDurationType>> durationType) {
             $.durationType = durationType;
             return this;
         }
 
+        /**
+         * @param durationType Retention duration type of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationType(Either<String,RetentionDurationType> durationType) {
             return durationType(Output.of(durationType));
         }
 
+        /**
+         * @param durationType Retention duration type of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationType(String durationType) {
             return durationType(Either.ofLeft(durationType));
         }
 
+        /**
+         * @param durationType Retention duration type of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationType(RetentionDurationType durationType) {
             return durationType(Either.ofRight(durationType));
         }

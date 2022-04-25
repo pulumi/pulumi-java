@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetLambdaFunctionAssociationResult {
     private final String functionArn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -31,9 +31,9 @@ public final class GetLambdaFunctionAssociationResult {
         return this.functionArn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -25,6 +25,10 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
     @Import(name="additionalLatencyInMilliseconds")
     private @Nullable Integer additionalLatencyInMilliseconds;
 
+    /**
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     public Optional<Integer> additionalLatencyInMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyInMilliseconds);
     }
@@ -36,6 +40,10 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
     @Import(name="sampleSize")
     private @Nullable Integer sampleSize;
 
+    /**
+     * @return The number of samples to consider for load balancing decisions
+     * 
+     */
     public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
@@ -47,6 +55,10 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
     @Import(name="successfulSamplesRequired")
     private @Nullable Integer successfulSamplesRequired;
 
+    /**
+     * @return The number of samples within the sample period that must succeed
+     * 
+     */
     public Optional<Integer> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
@@ -77,16 +89,34 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
             $ = new LoadBalancingSettingsParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLatencyInMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
             $.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(@Nullable Integer sampleSize) {
             $.sampleSize = sampleSize;
             return this;
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             $.successfulSamplesRequired = successfulSamplesRequired;
             return this;

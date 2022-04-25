@@ -21,72 +21,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpnGatewayResult {
     /**
-     * Local network gateway&#39;s BGP speaker settings.
+     * @return Local network gateway&#39;s BGP speaker settings.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
     /**
-     * List of all vpn connections to the gateway.
+     * @return List of all vpn connections to the gateway.
      * 
      */
     private final @Nullable List<VpnConnectionResponse> connections;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * List of all IPs configured on the gateway.
+     * @return List of all IPs configured on the gateway.
      * 
      */
     private final List<VpnGatewayIpConfigurationResponse> ipConfigurations;
     /**
-     * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     * @return Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
      */
     private final @Nullable Boolean isRoutingPreferenceInternet;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * List of all the nat Rules associated with the gateway.
+     * @return List of all the nat Rules associated with the gateway.
      * 
      */
     private final @Nullable List<VpnGatewayNatRuleResponse> natRules;
     /**
-     * The provisioning state of the VPN gateway resource.
+     * @return The provisioning state of the VPN gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The VirtualHub to which the gateway belongs.
+     * @return The VirtualHub to which the gateway belongs.
      * 
      */
     private final @Nullable SubResourceResponse virtualHub;
     /**
-     * The scale unit for this vpn gateway.
+     * @return The scale unit for this vpn gateway.
      * 
      */
     private final @Nullable Integer vpnGatewayScaleUnit;
@@ -124,100 +124,100 @@ public final class GetVpnGatewayResult {
     }
 
     /**
-     * Local network gateway&#39;s BGP speaker settings.
+     * @return Local network gateway&#39;s BGP speaker settings.
      * 
-    */
+     */
     public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
-     * List of all vpn connections to the gateway.
+     * @return List of all vpn connections to the gateway.
      * 
-    */
+     */
     public List<VpnConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * List of all IPs configured on the gateway.
+     * @return List of all IPs configured on the gateway.
      * 
-    */
+     */
     public List<VpnGatewayIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
-     * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     * @return Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
-    */
+     */
     public Optional<Boolean> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of all the nat Rules associated with the gateway.
+     * @return List of all the nat Rules associated with the gateway.
      * 
-    */
+     */
     public List<VpnGatewayNatRuleResponse> natRules() {
         return this.natRules == null ? List.of() : this.natRules;
     }
     /**
-     * The provisioning state of the VPN gateway resource.
+     * @return The provisioning state of the VPN gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The VirtualHub to which the gateway belongs.
+     * @return The VirtualHub to which the gateway belongs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
-     * The scale unit for this vpn gateway.
+     * @return The scale unit for this vpn gateway.
      * 
-    */
+     */
     public Optional<Integer> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }

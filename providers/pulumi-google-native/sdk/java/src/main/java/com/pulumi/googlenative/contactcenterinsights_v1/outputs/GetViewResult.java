@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetViewResult {
     /**
-     * The time at which this view was created.
+     * @return The time at which this view was created.
      * 
      */
     private final String createTime;
     /**
-     * The human-readable display name of the view.
+     * @return The human-readable display name of the view.
      * 
      */
     private final String displayName;
     /**
-     * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+     * @return Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
      * 
      */
     private final String name;
     /**
-     * The most recent time at which the view was updated.
+     * @return The most recent time at which the view was updated.
      * 
      */
     private final String updateTime;
     /**
-     * String with specific view properties.
+     * @return String with specific view properties.
      * 
      */
     private final String value;
@@ -50,37 +50,37 @@ public final class GetViewResult {
     }
 
     /**
-     * The time at which this view was created.
+     * @return The time at which this view was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The human-readable display name of the view.
+     * @return The human-readable display name of the view.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+     * @return Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The most recent time at which the view was updated.
+     * @return The most recent time at which the view was updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }
     /**
-     * String with specific view properties.
+     * @return String with specific view properties.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

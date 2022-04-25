@@ -19,6 +19,10 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="virtualNetworkName", required=true)
     private String virtualNetworkName;
 
+    /**
+     * @return Name of the virtual network resource.
+     * 
+     */
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetVirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkName Name of the virtual network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(String virtualNetworkName) {
             $.virtualNetworkName = virtualNetworkName;
             return this;

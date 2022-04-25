@@ -28,6 +28,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="committedStorageMb")
     private @Nullable Output<String> committedStorageMb;
 
+    /**
+     * @return The total size of the storage allocated to the VM in MB.
+     * 
+     */
     public Optional<Output<String>> committedStorageMb() {
         return Optional.ofNullable(this.committedStorageMb);
     }
@@ -39,6 +43,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cpuCount")
     private @Nullable Output<Integer> cpuCount;
 
+    /**
+     * @return The number of cpus in the VM.
+     * 
+     */
     public Optional<Output<Integer>> cpuCount() {
         return Optional.ofNullable(this.cpuCount);
     }
@@ -50,6 +58,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="datacenterDescription")
     private @Nullable Output<String> datacenterDescription;
 
+    /**
+     * @return The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
+     * 
+     */
     public Optional<Output<String>> datacenterDescription() {
         return Optional.ofNullable(this.datacenterDescription);
     }
@@ -61,6 +73,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="datacenterId")
     private @Nullable Output<String> datacenterId;
 
+    /**
+     * @return The id of the vCenter&#39;s datacenter this VM is contained in.
+     * 
+     */
     public Optional<Output<String>> datacenterId() {
         return Optional.ofNullable(this.datacenterId);
     }
@@ -72,6 +88,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="diskCount")
     private @Nullable Output<Integer> diskCount;
 
+    /**
+     * @return The number of disks the VM has.
+     * 
+     */
     public Optional<Output<Integer>> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
@@ -83,6 +103,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the VM. Note that this is not necessarily unique.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -94,6 +118,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="guestDescription")
     private @Nullable Output<String> guestDescription;
 
+    /**
+     * @return The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     * 
+     */
     public Optional<Output<String>> guestDescription() {
         return Optional.ofNullable(this.guestDescription);
     }
@@ -105,6 +133,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memoryMb")
     private @Nullable Output<Integer> memoryMb;
 
+    /**
+     * @return The size of the memory of the VM in MB.
+     * 
+     */
     public Optional<Output<Integer>> memoryMb() {
         return Optional.ofNullable(this.memoryMb);
     }
@@ -116,6 +148,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="powerState")
     private @Nullable Output<VmwareVmDetailsPowerState> powerState;
 
+    /**
+     * @return The power state of the VM at the moment list was taken.
+     * 
+     */
     public Optional<Output<VmwareVmDetailsPowerState>> powerState() {
         return Optional.ofNullable(this.powerState);
     }
@@ -127,6 +163,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uuid")
     private @Nullable Output<String> uuid;
 
+    /**
+     * @return The unique identifier of the VM in vCenter.
+     * 
+     */
     public Optional<Output<String>> uuid() {
         return Optional.ofNullable(this.uuid);
     }
@@ -138,6 +178,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vmId")
     private @Nullable Output<String> vmId;
 
+    /**
+     * @return The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
+     * 
+     */
     public Optional<Output<String>> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -176,101 +220,233 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
             $ = new VmwareVmDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param committedStorageMb The total size of the storage allocated to the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder committedStorageMb(@Nullable Output<String> committedStorageMb) {
             $.committedStorageMb = committedStorageMb;
             return this;
         }
 
+        /**
+         * @param committedStorageMb The total size of the storage allocated to the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder committedStorageMb(String committedStorageMb) {
             return committedStorageMb(Output.of(committedStorageMb));
         }
 
+        /**
+         * @param cpuCount The number of cpus in the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
             $.cpuCount = cpuCount;
             return this;
         }
 
+        /**
+         * @param cpuCount The number of cpus in the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCount(Integer cpuCount) {
             return cpuCount(Output.of(cpuCount));
         }
 
+        /**
+         * @param datacenterDescription The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterDescription(@Nullable Output<String> datacenterDescription) {
             $.datacenterDescription = datacenterDescription;
             return this;
         }
 
+        /**
+         * @param datacenterDescription The descriptive name of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterDescription(String datacenterDescription) {
             return datacenterDescription(Output.of(datacenterDescription));
         }
 
+        /**
+         * @param datacenterId The id of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterId(@Nullable Output<String> datacenterId) {
             $.datacenterId = datacenterId;
             return this;
         }
 
+        /**
+         * @param datacenterId The id of the vCenter&#39;s datacenter this VM is contained in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datacenterId(String datacenterId) {
             return datacenterId(Output.of(datacenterId));
         }
 
+        /**
+         * @param diskCount The number of disks the VM has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             $.diskCount = diskCount;
             return this;
         }
 
+        /**
+         * @param diskCount The number of disks the VM has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCount(Integer diskCount) {
             return diskCount(Output.of(diskCount));
         }
 
+        /**
+         * @param displayName The display name of the VM. Note that this is not necessarily unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the VM. Note that this is not necessarily unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param guestDescription The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestDescription(@Nullable Output<String> guestDescription) {
             $.guestDescription = guestDescription;
             return this;
         }
 
+        /**
+         * @param guestDescription The VM&#39;s OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestDescription(String guestDescription) {
             return guestDescription(Output.of(guestDescription));
         }
 
+        /**
+         * @param memoryMb The size of the memory of the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMb(@Nullable Output<Integer> memoryMb) {
             $.memoryMb = memoryMb;
             return this;
         }
 
+        /**
+         * @param memoryMb The size of the memory of the VM in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryMb(Integer memoryMb) {
             return memoryMb(Output.of(memoryMb));
         }
 
+        /**
+         * @param powerState The power state of the VM at the moment list was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerState(@Nullable Output<VmwareVmDetailsPowerState> powerState) {
             $.powerState = powerState;
             return this;
         }
 
+        /**
+         * @param powerState The power state of the VM at the moment list was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerState(VmwareVmDetailsPowerState powerState) {
             return powerState(Output.of(powerState));
         }
 
+        /**
+         * @param uuid The unique identifier of the VM in vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uuid(@Nullable Output<String> uuid) {
             $.uuid = uuid;
             return this;
         }
 
+        /**
+         * @param uuid The unique identifier of the VM in vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uuid(String uuid) {
             return uuid(Output.of(uuid));
         }
 
+        /**
+         * @param vmId The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable Output<String> vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmId The VM&#39;s id in the source (note that this is not the MigratingVm&#39;s id). This is the moref id of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             return vmId(Output.of(vmId));
         }

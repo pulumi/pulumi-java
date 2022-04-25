@@ -29,6 +29,10 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="additionalOptions")
     private @Nullable Output<Map<String,String>> additionalOptions;
 
+    /**
+     * @return Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
+     * 
+     */
     public Optional<Output<Map<String,String>>> additionalOptions() {
         return Optional.ofNullable(this.additionalOptions);
     }
@@ -40,6 +44,10 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="defaultValues")
     private @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
+    /**
+     * @return Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Output<List<DWCopyCommandDefaultValueArgs>>> defaultValues() {
         return Optional.ofNullable(this.defaultValues);
     }
@@ -69,24 +77,54 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
             $ = new DWCopyCommandSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalOptions Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalOptions(@Nullable Output<Map<String,String>> additionalOptions) {
             $.additionalOptions = additionalOptions;
             return this;
         }
 
+        /**
+         * @param additionalOptions Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalOptions(Map<String,String> additionalOptions) {
             return additionalOptions(Output.of(additionalOptions));
         }
 
+        /**
+         * @param defaultValues Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValues(@Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
             $.defaultValues = defaultValues;
             return this;
         }
 
+        /**
+         * @param defaultValues Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValues(List<DWCopyCommandDefaultValueArgs> defaultValues) {
             return defaultValues(Output.of(defaultValues));
         }
 
+        /**
+         * @param defaultValues Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValues(DWCopyCommandDefaultValueArgs... defaultValues) {
             return defaultValues(List.of(defaultValues));
         }

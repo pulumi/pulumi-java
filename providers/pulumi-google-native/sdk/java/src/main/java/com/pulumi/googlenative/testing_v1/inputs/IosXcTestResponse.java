@@ -25,6 +25,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="appBundleId", required=true)
     private String appBundleId;
 
+    /**
+     * @return The bundle id for the application under test.
+     * 
+     */
     public String appBundleId() {
         return this.appBundleId;
     }
@@ -36,6 +40,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testSpecialEntitlements", required=true)
     private Boolean testSpecialEntitlements;
 
+    /**
+     * @return The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+     * 
+     */
     public Boolean testSpecialEntitlements() {
         return this.testSpecialEntitlements;
     }
@@ -47,6 +55,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="testsZip", required=true)
     private FileReferenceResponse testsZip;
 
+    /**
+     * @return The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+     * 
+     */
     public FileReferenceResponse testsZip() {
         return this.testsZip;
     }
@@ -58,6 +70,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xcodeVersion", required=true)
     private String xcodeVersion;
 
+    /**
+     * @return The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+     * 
+     */
     public String xcodeVersion() {
         return this.xcodeVersion;
     }
@@ -69,6 +85,10 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="xctestrun", required=true)
     private FileReferenceResponse xctestrun;
 
+    /**
+     * @return An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+     * 
+     */
     public FileReferenceResponse xctestrun() {
         return this.xctestrun;
     }
@@ -101,26 +121,56 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IosXcTestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appBundleId The bundle id for the application under test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appBundleId(String appBundleId) {
             $.appBundleId = appBundleId;
             return this;
         }
 
+        /**
+         * @param testSpecialEntitlements The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
             $.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
 
+        /**
+         * @param testsZip The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testsZip(FileReferenceResponse testsZip) {
             $.testsZip = testsZip;
             return this;
         }
 
+        /**
+         * @param xcodeVersion The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xcodeVersion(String xcodeVersion) {
             $.xcodeVersion = xcodeVersion;
             return this;
         }
 
+        /**
+         * @param xctestrun An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xctestrun(FileReferenceResponse xctestrun) {
             $.xctestrun = xctestrun;
             return this;

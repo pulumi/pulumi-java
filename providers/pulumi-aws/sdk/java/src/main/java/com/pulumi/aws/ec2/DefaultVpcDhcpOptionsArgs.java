@@ -24,6 +24,10 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="netbiosNameServers")
     private @Nullable Output<List<String>> netbiosNameServers;
 
+    /**
+     * @return List of NETBIOS name servers.
+     * 
+     */
     public Optional<Output<List<String>>> netbiosNameServers() {
         return Optional.ofNullable(this.netbiosNameServers);
     }
@@ -35,6 +39,10 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="netbiosNodeType")
     private @Nullable Output<String> netbiosNodeType;
 
+    /**
+     * @return The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
+     * 
+     */
     public Optional<Output<String>> netbiosNodeType() {
         return Optional.ofNullable(this.netbiosNodeType);
     }
@@ -46,6 +54,10 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return The ID of the AWS account that owns the DHCP options set.
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -57,6 +69,10 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,42 +104,96 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
             $ = new DefaultVpcDhcpOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param netbiosNameServers List of NETBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(@Nullable Output<List<String>> netbiosNameServers) {
             $.netbiosNameServers = netbiosNameServers;
             return this;
         }
 
+        /**
+         * @param netbiosNameServers List of NETBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(List<String> netbiosNameServers) {
             return netbiosNameServers(Output.of(netbiosNameServers));
         }
 
+        /**
+         * @param netbiosNameServers List of NETBIOS name servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNameServers(String... netbiosNameServers) {
             return netbiosNameServers(List.of(netbiosNameServers));
         }
 
+        /**
+         * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNodeType(@Nullable Output<String> netbiosNodeType) {
             $.netbiosNodeType = netbiosNodeType;
             return this;
         }
 
+        /**
+         * @param netbiosNodeType The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
+         * 
+         * @return builder
+         * 
+         */
         public Builder netbiosNodeType(String netbiosNodeType) {
             return netbiosNodeType(Output.of(netbiosNodeType));
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the DHCP options set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId The ID of the AWS account that owns the DHCP options set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

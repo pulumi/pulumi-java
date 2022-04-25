@@ -24,6 +24,10 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataManagerName")
     private @Nullable Output<String> dataManagerName;
 
+    /**
+     * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public Optional<Output<String>> dataManagerName() {
         return Optional.ofNullable(this.dataManagerName);
     }
@@ -37,6 +41,12 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+     * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+     * region is specified on update the request will succeed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +58,10 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +73,10 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The sku type.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -71,6 +89,11 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+     * (across resource groups).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,47 +126,113 @@ public final class DataManagerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataManagerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(@Nullable Output<String> dataManagerName) {
             $.dataManagerName = dataManagerName;
             return this;
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(String dataManagerName) {
             return dataManagerName(Output.of(dataManagerName));
         }
 
+        /**
+         * @param location The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+         * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+         * region is specified on update the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+         * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+         * region is specified on update the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+         * (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+         * (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

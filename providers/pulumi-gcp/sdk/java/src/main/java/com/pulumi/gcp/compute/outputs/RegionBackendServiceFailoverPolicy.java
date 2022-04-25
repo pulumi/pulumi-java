@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionBackendServiceFailoverPolicy {
     /**
-     * On failover or failback, this field indicates whether connection drain
+     * @return On failover or failback, this field indicates whether connection drain
      * will be honored. Setting this to true has the following effect: connections
      * to the old active pool are not drained. Connections to the new active pool
      * use the timeout of 10 min (currently fixed). Setting to false has the
@@ -25,7 +25,7 @@ public final class RegionBackendServiceFailoverPolicy {
      */
     private final @Nullable Boolean disableConnectionDrainOnFailover;
     /**
-     * This option is used only when no healthy VMs are detected in the primary
+     * @return This option is used only when no healthy VMs are detected in the primary
      * and backup instance groups. When set to true, traffic is dropped. When
      * set to false, new connections are sent across all VMs in the primary group.
      * The default is false.
@@ -33,7 +33,7 @@ public final class RegionBackendServiceFailoverPolicy {
      */
     private final @Nullable Boolean dropTrafficIfUnhealthy;
     /**
-     * The value of the field must be in [0, 1]. If the ratio of the healthy
+     * @return The value of the field must be in [0, 1]. If the ratio of the healthy
      * VMs in the primary backend is at or below this number, traffic arriving
      * at the load-balanced IP will be directed to the failover backend.
      * In case where &#39;failoverRatio&#39; is not set or all the VMs in the backup
@@ -56,7 +56,7 @@ public final class RegionBackendServiceFailoverPolicy {
     }
 
     /**
-     * On failover or failback, this field indicates whether connection drain
+     * @return On failover or failback, this field indicates whether connection drain
      * will be honored. Setting this to true has the following effect: connections
      * to the old active pool are not drained. Connections to the new active pool
      * use the timeout of 10 min (currently fixed). Setting to false has the
@@ -65,22 +65,22 @@ public final class RegionBackendServiceFailoverPolicy {
      * This can be set to true only if the protocol is TCP.
      * The default is false.
      * 
-    */
+     */
     public Optional<Boolean> disableConnectionDrainOnFailover() {
         return Optional.ofNullable(this.disableConnectionDrainOnFailover);
     }
     /**
-     * This option is used only when no healthy VMs are detected in the primary
+     * @return This option is used only when no healthy VMs are detected in the primary
      * and backup instance groups. When set to true, traffic is dropped. When
      * set to false, new connections are sent across all VMs in the primary group.
      * The default is false.
      * 
-    */
+     */
     public Optional<Boolean> dropTrafficIfUnhealthy() {
         return Optional.ofNullable(this.dropTrafficIfUnhealthy);
     }
     /**
-     * The value of the field must be in [0, 1]. If the ratio of the healthy
+     * @return The value of the field must be in [0, 1]. If the ratio of the healthy
      * VMs in the primary backend is at or below this number, traffic arriving
      * at the load-balanced IP will be directed to the failover backend.
      * In case where &#39;failoverRatio&#39; is not set or all the VMs in the backup
@@ -89,7 +89,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * VMs with the best effort, or to all VMs when no VM is healthy.
      * This field is only used with l4 load balancing.
      * 
-    */
+     */
     public Optional<Double> failoverRatio() {
         return Optional.ofNullable(this.failoverRatio);
     }

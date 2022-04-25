@@ -26,6 +26,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="controllerId", required=true)
     private String controllerId;
 
+    /**
+     * @return Disk&#39;s Controller id
+     * 
+     */
     public String controllerId() {
         return this.controllerId;
     }
@@ -37,6 +41,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="independenceMode", required=true)
     private String independenceMode;
 
+    /**
+     * @return Disk&#39;s independence mode type
+     * 
+     */
     public String independenceMode() {
         return this.independenceMode;
     }
@@ -48,6 +56,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="totalSize", required=true)
     private Integer totalSize;
 
+    /**
+     * @return Disk&#39;s total size
+     * 
+     */
     public Integer totalSize() {
         return this.totalSize;
     }
@@ -59,6 +71,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualDiskId")
     private @Nullable String virtualDiskId;
 
+    /**
+     * @return Disk&#39;s id
+     * 
+     */
     public Optional<String> virtualDiskId() {
         return Optional.ofNullable(this.virtualDiskId);
     }
@@ -70,6 +86,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualDiskName", required=true)
     private String virtualDiskName;
 
+    /**
+     * @return Disk&#39;s display name
+     * 
+     */
     public String virtualDiskName() {
         return this.virtualDiskName;
     }
@@ -102,26 +122,56 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VirtualDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controllerId Disk&#39;s Controller id
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerId(String controllerId) {
             $.controllerId = controllerId;
             return this;
         }
 
+        /**
+         * @param independenceMode Disk&#39;s independence mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder independenceMode(String independenceMode) {
             $.independenceMode = independenceMode;
             return this;
         }
 
+        /**
+         * @param totalSize Disk&#39;s total size
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSize(Integer totalSize) {
             $.totalSize = totalSize;
             return this;
         }
 
+        /**
+         * @param virtualDiskId Disk&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
             $.virtualDiskId = virtualDiskId;
             return this;
         }
 
+        /**
+         * @param virtualDiskName Disk&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualDiskName(String virtualDiskName) {
             $.virtualDiskName = virtualDiskName;
             return this;

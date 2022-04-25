@@ -25,6 +25,10 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerGroupName")
     private @Nullable String containerGroupName;
 
+    /**
+     * @return Container group name, if not specified then the name will get auto-generated. Not specifying a &#39;containerGroupName&#39; indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use &#39;containerGroupName&#39; when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. &#39;containerGroupName&#39; property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a &#39;containerGroupName&#39;, add the following object to properties: { &#34;containerSettings&#34;: { &#34;containerGroupName&#34;: &#34;contoso-container&#34; } }. If you do not want to specify a &#39;containerGroupName&#39; then do not add &#39;containerSettings&#39; property.
+     * 
+     */
     public Optional<String> containerGroupName() {
         return Optional.ofNullable(this.containerGroupName);
     }
@@ -53,6 +57,12 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
             $ = new ContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerGroupName Container group name, if not specified then the name will get auto-generated. Not specifying a &#39;containerGroupName&#39; indicates the system to generate a unique name which might end up flagging an Azure Policy as non-compliant. Use &#39;containerGroupName&#39; when you have an Azure Policy that expects a specific naming convention or when you want to fully control the name. &#39;containerGroupName&#39; property must be between 1 and 63 characters long, must contain only lowercase letters, numbers, and dashes and it cannot start or end with a dash and consecutive dashes are not allowed. To specify a &#39;containerGroupName&#39;, add the following object to properties: { &#34;containerSettings&#34;: { &#34;containerGroupName&#34;: &#34;contoso-container&#34; } }. If you do not want to specify a &#39;containerGroupName&#39; then do not add &#39;containerSettings&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerGroupName(@Nullable String containerGroupName) {
             $.containerGroupName = containerGroupName;
             return this;

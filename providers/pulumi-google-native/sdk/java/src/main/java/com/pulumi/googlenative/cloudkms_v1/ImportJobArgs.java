@@ -31,6 +31,10 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="importMethod", required=true)
     private Output<ImportJobImportMethod> importMethod;
 
+    /**
+     * @return Immutable. The wrapping method to be used for incoming key material.
+     * 
+     */
     public Output<ImportJobImportMethod> importMethod() {
         return this.importMethod;
     }
@@ -63,6 +67,10 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectionLevel", required=true)
     private Output<ImportJobProtectionLevel> protectionLevel;
 
+    /**
+     * @return Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+     * 
+     */
     public Output<ImportJobProtectionLevel> protectionLevel() {
         return this.protectionLevel;
     }
@@ -105,11 +113,23 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
             return importJobId(Output.of(importJobId));
         }
 
+        /**
+         * @param importMethod Immutable. The wrapping method to be used for incoming key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(Output<ImportJobImportMethod> importMethod) {
             $.importMethod = importMethod;
             return this;
         }
 
+        /**
+         * @param importMethod Immutable. The wrapping method to be used for incoming key material.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(ImportJobImportMethod importMethod) {
             return importMethod(Output.of(importMethod));
         }
@@ -141,11 +161,23 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param protectionLevel Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(Output<ImportJobProtectionLevel> protectionLevel) {
             $.protectionLevel = protectionLevel;
             return this;
         }
 
+        /**
+         * @param protectionLevel Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(ImportJobProtectionLevel protectionLevel) {
             return protectionLevel(Output.of(protectionLevel));
         }

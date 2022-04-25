@@ -24,6 +24,10 @@ public final class InstanceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class InstanceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class InstanceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namedPorts")
     private @Nullable Output<List<NamedPortArgs>> namedPorts;
 
+    /**
+     * @return  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+     * 
+     */
     public Optional<Output<List<NamedPortArgs>>> namedPorts() {
         return Optional.ofNullable(this.namedPorts);
     }
@@ -100,33 +112,75 @@ public final class InstanceGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namedPorts  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(@Nullable Output<List<NamedPortArgs>> namedPorts) {
             $.namedPorts = namedPorts;
             return this;
         }
 
+        /**
+         * @param namedPorts  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(List<NamedPortArgs> namedPorts) {
             return namedPorts(Output.of(namedPorts));
         }
 
+        /**
+         * @param namedPorts  Assigns a name to a port number. For example: {name: &#34;http&#34;, port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: &#34;http&#34;, port: 80},{name: &#34;http&#34;, port: 8080}] Named ports apply to all instances in this instance group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedPorts(NamedPortArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }

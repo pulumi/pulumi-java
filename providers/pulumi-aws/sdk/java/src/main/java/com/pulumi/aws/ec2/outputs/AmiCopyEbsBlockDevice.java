@@ -14,48 +14,48 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AmiCopyEbsBlockDevice {
     /**
-     * Boolean controlling whether the EBS volumes created to
+     * @return Boolean controlling whether the EBS volumes created to
      * support each created instance will be deleted once that instance is terminated.
      * 
      */
     private final @Nullable Boolean deleteOnTermination;
     /**
-     * The path at which the device is exposed to created instances.
+     * @return The path at which the device is exposed to created instances.
      * 
      */
     private final @Nullable String deviceName;
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
     private final @Nullable Boolean encrypted;
     /**
-     * Number of I/O operations per second the
+     * @return Number of I/O operations per second the
      * created volumes will support.
      * 
      */
     private final @Nullable Integer iops;
     /**
-     * The id of an EBS snapshot that will be used to initialize the created
+     * @return The id of an EBS snapshot that will be used to initialize the created
      * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
      * snapshot.
      * 
      */
     private final @Nullable String snapshotId;
     /**
-     * The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+     * @return The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
      * 
      */
     private final @Nullable Integer throughput;
     /**
-     * The size of created volumes in GiB.
+     * @return The size of created volumes in GiB.
      * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
      * as the selected snapshot.
      * 
      */
     private final @Nullable Integer volumeSize;
     /**
-     * The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
+     * @return The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
      * 
      */
     private final @Nullable String volumeType;
@@ -81,64 +81,64 @@ public final class AmiCopyEbsBlockDevice {
     }
 
     /**
-     * Boolean controlling whether the EBS volumes created to
+     * @return Boolean controlling whether the EBS volumes created to
      * support each created instance will be deleted once that instance is terminated.
      * 
-    */
+     */
     public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * The path at which the device is exposed to created instances.
+     * @return The path at which the device is exposed to created instances.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
-    */
+     */
     public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * Number of I/O operations per second the
+     * @return Number of I/O operations per second the
      * created volumes will support.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The id of an EBS snapshot that will be used to initialize the created
+     * @return The id of an EBS snapshot that will be used to initialize the created
      * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
      * snapshot.
      * 
-    */
+     */
     public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
-     * The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+     * @return The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
      * 
-    */
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
-     * The size of created volumes in GiB.
+     * @return The size of created volumes in GiB.
      * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
      * as the selected snapshot.
      * 
-    */
+     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
+     * @return The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

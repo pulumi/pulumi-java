@@ -24,6 +24,11 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends com.pulumi.
     @Import(name="cloudStoragePath")
     private @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
+    /**
+     * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs>> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -36,6 +41,11 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends com.pulumi.
     @Import(name="wordList")
     private @Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
 
+    /**
+     * @return List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionStoredInfoTypeDictionaryWordListGetArgs>> wordList() {
         return Optional.ofNullable(this.wordList);
     }
@@ -65,20 +75,48 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends com.pulumi.
             $ = new PreventionStoredInfoTypeDictionaryGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(@Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath) {
             $.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs cloudStoragePath) {
             return cloudStoragePath(Output.of(cloudStoragePath));
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList) {
             $.wordList = wordList;
             return this;
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(PreventionStoredInfoTypeDictionaryWordListGetArgs wordList) {
             return wordList(Output.of(wordList));
         }

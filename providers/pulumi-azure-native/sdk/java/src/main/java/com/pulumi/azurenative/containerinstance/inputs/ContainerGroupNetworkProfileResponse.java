@@ -23,6 +23,10 @@ public final class ContainerGroupNetworkProfileResponse extends com.pulumi.resou
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The identifier for a network profile.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class ContainerGroupNetworkProfileResponse extends com.pulumi.resou
             $ = new ContainerGroupNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier for a network profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

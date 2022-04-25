@@ -19,6 +19,10 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
     private String environmentId;
 
+    /**
+     * @return Unique identifier for representing FinSpace Environment
+     * 
+     */
     public String environmentId() {
         return this.environmentId;
     }
@@ -47,6 +51,12 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param environmentId Unique identifier for representing FinSpace Environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             $.environmentId = environmentId;
             return this;

@@ -24,6 +24,10 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontDoorName", required=true)
     private Output<String> frontDoorName;
 
+    /**
+     * @return Name of the Front Door which is globally unique.
+     * 
+     */
     public Output<String> frontDoorName() {
         return this.frontDoorName;
     }
@@ -35,6 +39,10 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -46,6 +54,10 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
+    /**
+     * @return A list of rules that define a particular Rules Engine Configuration.
+     * 
+     */
     public Optional<Output<List<RulesEngineRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -57,6 +69,10 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rulesEngineName")
     private @Nullable Output<String> rulesEngineName;
 
+    /**
+     * @return Name of the Rules Engine which is unique within the Front Door.
+     * 
+     */
     public Optional<Output<String>> rulesEngineName() {
         return Optional.ofNullable(this.rulesEngineName);
     }
@@ -88,42 +104,96 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RulesEngineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(Output<String> frontDoorName) {
             $.frontDoorName = frontDoorName;
             return this;
         }
 
+        /**
+         * @param frontDoorName Name of the Front Door which is globally unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontDoorName(String frontDoorName) {
             return frontDoorName(Output.of(frontDoorName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rules A list of rules that define a particular Rules Engine Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RulesEngineRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of rules that define a particular Rules Engine Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RulesEngineRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of rules that define a particular Rules Engine Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RulesEngineRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param rulesEngineName Name of the Rules Engine which is unique within the Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineName(@Nullable Output<String> rulesEngineName) {
             $.rulesEngineName = rulesEngineName;
             return this;
         }
 
+        /**
+         * @param rulesEngineName Name of the Rules Engine which is unique within the Front Door.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineName(String rulesEngineName) {
             return rulesEngineName(Output.of(rulesEngineName));
         }

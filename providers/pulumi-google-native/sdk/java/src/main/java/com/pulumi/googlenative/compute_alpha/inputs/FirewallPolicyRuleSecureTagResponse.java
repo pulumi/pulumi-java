@@ -19,6 +19,10 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the secure tag, created with TagManager&#39;s TagValue API.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -59,11 +67,23 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
             $ = new FirewallPolicyRuleSecureTagResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the secure tag, created with TagManager&#39;s TagValue API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param state State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

@@ -22,6 +22,10 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="crawlState")
     private @Nullable Output<String> crawlState;
 
+    /**
+     * @return The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
+     * 
+     */
     public Optional<Output<String>> crawlState() {
         return Optional.ofNullable(this.crawlState);
     }
@@ -33,6 +37,10 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="crawlerName")
     private @Nullable Output<String> crawlerName;
 
+    /**
+     * @return The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
+     * 
+     */
     public Optional<Output<String>> crawlerName() {
         return Optional.ofNullable(this.crawlerName);
     }
@@ -44,6 +52,10 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -55,6 +67,10 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="logicalOperator")
     private @Nullable Output<String> logicalOperator;
 
+    /**
+     * @return A logical operator. Defaults to `EQUALS`.
+     * 
+     */
     public Optional<Output<String>> logicalOperator() {
         return Optional.ofNullable(this.logicalOperator);
     }
@@ -66,6 +82,10 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -98,47 +118,107 @@ public final class TriggerPredicateConditionArgs extends com.pulumi.resources.Re
             $ = new TriggerPredicateConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param crawlState The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crawlState(@Nullable Output<String> crawlState) {
             $.crawlState = crawlState;
             return this;
         }
 
+        /**
+         * @param crawlState The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crawlState(String crawlState) {
             return crawlState(Output.of(crawlState));
         }
 
+        /**
+         * @param crawlerName The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crawlerName(@Nullable Output<String> crawlerName) {
             $.crawlerName = crawlerName;
             return this;
         }
 
+        /**
+         * @param crawlerName The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crawlerName(String crawlerName) {
             return crawlerName(Output.of(crawlerName));
         }
 
+        /**
+         * @param jobName The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param logicalOperator A logical operator. Defaults to `EQUALS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalOperator(@Nullable Output<String> logicalOperator) {
             $.logicalOperator = logicalOperator;
             return this;
         }
 
+        /**
+         * @param logicalOperator A logical operator. Defaults to `EQUALS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalOperator(String logicalOperator) {
             return logicalOperator(Output.of(logicalOperator));
         }
 
+        /**
+         * @param state The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

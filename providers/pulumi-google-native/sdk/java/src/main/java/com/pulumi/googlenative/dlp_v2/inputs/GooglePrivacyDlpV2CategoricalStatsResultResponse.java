@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends com.
     @Import(name="valueFrequencyHistogramBuckets", required=true)
     private List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
+    /**
+     * @return Histogram of value frequencies in the column.
+     * 
+     */
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends com.
             $ = new GooglePrivacyDlpV2CategoricalStatsResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param valueFrequencyHistogramBuckets Histogram of value frequencies in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
             $.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
             return this;
         }
 
+        /**
+         * @param valueFrequencyHistogramBuckets Histogram of value frequencies in the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrequencyHistogramBuckets(GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse... valueFrequencyHistogramBuckets) {
             return valueFrequencyHistogramBuckets(List.of(valueFrequencyHistogramBuckets));
         }

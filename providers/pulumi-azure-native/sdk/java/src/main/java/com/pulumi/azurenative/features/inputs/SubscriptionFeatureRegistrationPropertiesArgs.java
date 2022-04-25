@@ -27,6 +27,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The feature description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Key-value pairs for meta data.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -49,6 +57,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="shouldFeatureDisplayInPortal")
     private @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
 
+    /**
+     * @return Indicates whether feature should be displayed in Portal.
+     * 
+     */
     public Optional<Output<Boolean>> shouldFeatureDisplayInPortal() {
         return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
@@ -60,6 +72,10 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="state")
     private @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
+    /**
+     * @return The state.
+     * 
+     */
     public Optional<Output<Either<String,SubscriptionFeatureRegistrationState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -91,46 +107,106 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
             $ = new SubscriptionFeatureRegistrationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The feature description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The feature description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param metadata Key-value pairs for meta data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Key-value pairs for meta data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param shouldFeatureDisplayInPortal Indicates whether feature should be displayed in Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shouldFeatureDisplayInPortal(@Nullable Output<Boolean> shouldFeatureDisplayInPortal) {
             $.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
 
+        /**
+         * @param shouldFeatureDisplayInPortal Indicates whether feature should be displayed in Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shouldFeatureDisplayInPortal(Boolean shouldFeatureDisplayInPortal) {
             return shouldFeatureDisplayInPortal(Output.of(shouldFeatureDisplayInPortal));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,SubscriptionFeatureRegistrationState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(SubscriptionFeatureRegistrationState state) {
             return state(Either.ofRight(state));
         }

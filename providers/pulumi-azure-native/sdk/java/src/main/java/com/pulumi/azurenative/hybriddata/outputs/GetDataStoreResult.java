@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataStoreResult {
     /**
-     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
     private final @Nullable List<CustomerSecretResponse> customerSecrets;
     /**
-     * The arm id of the data store type.
+     * @return The arm id of the data store type.
      * 
      */
     private final String dataStoreTypeId;
     /**
-     * A generic json used differently by each data source type.
+     * @return A generic json used differently by each data source type.
      * 
      */
     private final @Nullable Object extendedProperties;
     /**
-     * Id of the object.
+     * @return Id of the object.
      * 
      */
     private final String id;
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
      */
     private final String name;
     /**
-     * Arm Id for the manager resource to which the data source is associated. This is optional.
+     * @return Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
      */
     private final @Nullable String repositoryId;
     /**
-     * State of the data source.
+     * @return State of the data source.
      * 
      */
     private final String state;
     /**
-     * Type of the object.
+     * @return Type of the object.
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetDataStoreResult {
     }
 
     /**
-     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
-    */
+     */
     public List<CustomerSecretResponse> customerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
     /**
-     * The arm id of the data store type.
+     * @return The arm id of the data store type.
      * 
-    */
+     */
     public String dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
     /**
-     * A generic json used differently by each data source type.
+     * @return A generic json used differently by each data source type.
      * 
-    */
+     */
     public Optional<Object> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
     /**
-     * Id of the object.
+     * @return Id of the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Arm Id for the manager resource to which the data source is associated. This is optional.
+     * @return Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
-    */
+     */
     public Optional<String> repositoryId() {
         return Optional.ofNullable(this.repositoryId);
     }
     /**
-     * State of the data source.
+     * @return State of the data source.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Type of the object.
+     * @return Type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

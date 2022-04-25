@@ -26,6 +26,10 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends com
     @Import(name="confidenceLevel")
     private @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
+    /**
+     * @return The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+     * 
+     */
     public Optional<Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel>> confidenceLevel() {
         return Optional.ofNullable(this.confidenceLevel);
     }
@@ -54,11 +58,23 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends com
             $ = new SecurityProfileMachineLearningDetectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param confidenceLevel The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceLevel(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
             $.confidenceLevel = confidenceLevel;
             return this;
         }
 
+        /**
+         * @param confidenceLevel The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceLevel(SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
             return confidenceLevel(Output.of(confidenceLevel));
         }

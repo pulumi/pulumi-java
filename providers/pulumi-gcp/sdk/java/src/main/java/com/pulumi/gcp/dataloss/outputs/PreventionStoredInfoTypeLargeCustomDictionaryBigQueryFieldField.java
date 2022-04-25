@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField {
     /**
-     * Name describing the field.
+     * @return Name describing the field.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
     }
 
     /**
-     * Name describing the field.
+     * @return Name describing the field.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

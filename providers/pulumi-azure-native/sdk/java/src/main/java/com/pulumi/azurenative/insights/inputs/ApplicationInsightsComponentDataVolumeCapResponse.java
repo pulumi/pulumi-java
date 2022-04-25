@@ -27,6 +27,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="cap")
     private @Nullable Double cap;
 
+    /**
+     * @return Daily data volume cap in GB.
+     * 
+     */
     public Optional<Double> cap() {
         return Optional.ofNullable(this.cap);
     }
@@ -38,6 +42,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="maxHistoryCap", required=true)
     private Double maxHistoryCap;
 
+    /**
+     * @return Maximum daily data volume cap that the user can set for this component.
+     * 
+     */
     public Double maxHistoryCap() {
         return this.maxHistoryCap;
     }
@@ -49,6 +57,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="resetTime", required=true)
     private Integer resetTime;
 
+    /**
+     * @return Daily data volume cap UTC reset hour.
+     * 
+     */
     public Integer resetTime() {
         return this.resetTime;
     }
@@ -60,6 +72,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="stopSendNotificationWhenHitCap")
     private @Nullable Boolean stopSendNotificationWhenHitCap;
 
+    /**
+     * @return Do not send a notification email when the daily data volume cap is met.
+     * 
+     */
     public Optional<Boolean> stopSendNotificationWhenHitCap() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
@@ -71,6 +87,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="stopSendNotificationWhenHitThreshold")
     private @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
+    /**
+     * @return Reserved, not used for now.
+     * 
+     */
     public Optional<Boolean> stopSendNotificationWhenHitThreshold() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
@@ -82,6 +102,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
     @Import(name="warningThreshold")
     private @Nullable Integer warningThreshold;
 
+    /**
+     * @return Reserved, not used for now.
+     * 
+     */
     public Optional<Integer> warningThreshold() {
         return Optional.ofNullable(this.warningThreshold);
     }
@@ -115,31 +139,67 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
             $ = new ApplicationInsightsComponentDataVolumeCapResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cap Daily data volume cap in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cap(@Nullable Double cap) {
             $.cap = cap;
             return this;
         }
 
+        /**
+         * @param maxHistoryCap Maximum daily data volume cap that the user can set for this component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxHistoryCap(Double maxHistoryCap) {
             $.maxHistoryCap = maxHistoryCap;
             return this;
         }
 
+        /**
+         * @param resetTime Daily data volume cap UTC reset hour.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resetTime(Integer resetTime) {
             $.resetTime = resetTime;
             return this;
         }
 
+        /**
+         * @param stopSendNotificationWhenHitCap Do not send a notification email when the daily data volume cap is met.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
             $.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
+        /**
+         * @param stopSendNotificationWhenHitThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
             $.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
+        /**
+         * @param warningThreshold Reserved, not used for now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder warningThreshold(@Nullable Integer warningThreshold) {
             $.warningThreshold = warningThreshold;
             return this;

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UserIdentityResponse {
     /**
-     * The client ID of the user-assigned identity.
+     * @return The client ID of the user-assigned identity.
      * 
      */
     private final String clientId;
     /**
-     * The principal ID of the user-assigned identity.
+     * @return The principal ID of the user-assigned identity.
      * 
      */
     private final String principalId;
@@ -29,16 +29,16 @@ public final class UserIdentityResponse {
     }
 
     /**
-     * The client ID of the user-assigned identity.
+     * @return The client ID of the user-assigned identity.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The principal ID of the user-assigned identity.
+     * @return The principal ID of the user-assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

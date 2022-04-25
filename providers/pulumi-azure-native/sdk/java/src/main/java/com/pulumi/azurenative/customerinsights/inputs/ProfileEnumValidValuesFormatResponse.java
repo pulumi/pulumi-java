@@ -27,6 +27,10 @@ public final class ProfileEnumValidValuesFormatResponse extends com.pulumi.resou
     @Import(name="localizedValueNames")
     private @Nullable Map<String,String> localizedValueNames;
 
+    /**
+     * @return Localized names of the enum member.
+     * 
+     */
     public Optional<Map<String,String>> localizedValueNames() {
         return Optional.ofNullable(this.localizedValueNames);
     }
@@ -38,6 +42,10 @@ public final class ProfileEnumValidValuesFormatResponse extends com.pulumi.resou
     @Import(name="value")
     private @Nullable Integer value;
 
+    /**
+     * @return The integer value of the enum member.
+     * 
+     */
     public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,11 +75,23 @@ public final class ProfileEnumValidValuesFormatResponse extends com.pulumi.resou
             $ = new ProfileEnumValidValuesFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localizedValueNames Localized names of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
             $.localizedValueNames = localizedValueNames;
             return this;
         }
 
+        /**
+         * @param value The integer value of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Integer value) {
             $.value = value;
             return this;

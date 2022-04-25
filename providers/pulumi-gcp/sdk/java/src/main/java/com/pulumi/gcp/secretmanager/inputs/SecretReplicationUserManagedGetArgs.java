@@ -22,6 +22,11 @@ public final class SecretReplicationUserManagedGetArgs extends com.pulumi.resour
     @Import(name="replicas", required=true)
     private Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
 
+    /**
+     * @return The list of Replicas for this Secret. Cannot be empty.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas() {
         return this.replicas;
     }
@@ -50,15 +55,36 @@ public final class SecretReplicationUserManagedGetArgs extends com.pulumi.resour
             $ = new SecretReplicationUserManagedGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicas The list of Replicas for this Secret. Cannot be empty.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas) {
             $.replicas = replicas;
             return this;
         }
 
+        /**
+         * @param replicas The list of Replicas for this Secret. Cannot be empty.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(List<SecretReplicationUserManagedReplicaGetArgs> replicas) {
             return replicas(Output.of(replicas));
         }
 
+        /**
+         * @param replicas The list of Replicas for this Secret. Cannot be empty.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicas(SecretReplicationUserManagedReplicaGetArgs... replicas) {
             return replicas(List.of(replicas));
         }

@@ -25,6 +25,10 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="incomingTrafficPolicy")
     private @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
+    /**
+     * @return Incoming Traffic Policy
+     * 
+     */
     public Optional<Output<Either<String,IncomingTrafficPolicy>>> incomingTrafficPolicy() {
         return Optional.ofNullable(this.incomingTrafficPolicy);
     }
@@ -36,6 +40,10 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="storageSyncServiceName")
     private @Nullable Output<String> storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public Optional<Output<String>> storageSyncServiceName() {
         return Optional.ofNullable(this.storageSyncServiceName);
     }
@@ -69,6 +85,10 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,55 +121,127 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
             $ = new StorageSyncServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incomingTrafficPolicy Incoming Traffic Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingTrafficPolicy(@Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy) {
             $.incomingTrafficPolicy = incomingTrafficPolicy;
             return this;
         }
 
+        /**
+         * @param incomingTrafficPolicy Incoming Traffic Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingTrafficPolicy(Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
             return incomingTrafficPolicy(Output.of(incomingTrafficPolicy));
         }
 
+        /**
+         * @param incomingTrafficPolicy Incoming Traffic Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingTrafficPolicy(String incomingTrafficPolicy) {
             return incomingTrafficPolicy(Either.ofLeft(incomingTrafficPolicy));
         }
 
+        /**
+         * @param incomingTrafficPolicy Incoming Traffic Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder incomingTrafficPolicy(IncomingTrafficPolicy incomingTrafficPolicy) {
             return incomingTrafficPolicy(Either.ofRight(incomingTrafficPolicy));
         }
 
+        /**
+         * @param location Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(@Nullable Output<String> storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

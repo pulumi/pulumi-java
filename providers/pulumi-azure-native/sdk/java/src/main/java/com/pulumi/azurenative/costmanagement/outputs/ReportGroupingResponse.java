@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ReportGroupingResponse {
     /**
-     * The name of the column to group.
+     * @return The name of the column to group.
      * 
      */
     private final String name;
     /**
-     * Has type of the column to group.
+     * @return Has type of the column to group.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class ReportGroupingResponse {
     }
 
     /**
-     * The name of the column to group.
+     * @return The name of the column to group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Has type of the column to group.
+     * @return Has type of the column to group.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

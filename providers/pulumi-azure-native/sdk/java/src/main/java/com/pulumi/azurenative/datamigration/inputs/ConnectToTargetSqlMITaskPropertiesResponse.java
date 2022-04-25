@@ -33,6 +33,10 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="commands", required=true)
     private List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
+    /**
+     * @return Array of command properties.
+     * 
+     */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
@@ -44,6 +48,10 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="errors", required=true)
     private List<ODataErrorResponse> errors;
 
+    /**
+     * @return Array of errors. This is ignored if submitted.
+     * 
+     */
     public List<ODataErrorResponse> errors() {
         return this.errors;
     }
@@ -55,6 +63,10 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="input")
     private @Nullable ConnectToTargetSqlMITaskInputResponse input;
 
+    /**
+     * @return Task input
+     * 
+     */
     public Optional<ConnectToTargetSqlMITaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
@@ -66,6 +78,10 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="output", required=true)
     private List<ConnectToTargetSqlMITaskOutputResponse> output;
 
+    /**
+     * @return Task output. This is ignored if submitted.
+     * 
+     */
     public List<ConnectToTargetSqlMITaskOutputResponse> output() {
         return this.output;
     }
@@ -77,6 +93,10 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of the task. This is ignored if submitted.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -89,6 +109,11 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
     @Import(name="taskType", required=true)
     private String taskType;
 
+    /**
+     * @return Task type.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI&#39;.
+     * 
+     */
     public String taskType() {
         return this.taskType;
     }
@@ -122,43 +147,98 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
             $ = new ConnectToTargetSqlMITaskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commands Array of command properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands Array of command properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param errors Array of errors. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<ODataErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Array of errors. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ODataErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param input Task input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable ConnectToTargetSqlMITaskInputResponse input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param output Task output. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(List<ConnectToTargetSqlMITaskOutputResponse> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output Task output. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(ConnectToTargetSqlMITaskOutputResponse... output) {
             return output(List.of(output));
         }
 
+        /**
+         * @param state The state of the task. This is ignored if submitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param taskType Task type.
+         * Expected value is &#39;ConnectToTarget.AzureSqlDbMI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(String taskType) {
             $.taskType = taskType;
             return this;

@@ -26,6 +26,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="kerberosArmoring")
     private @Nullable String kerberosArmoring;
 
+    /**
+     * @return A flag to determine whether or not KerberosArmoring is enabled or disabled.
+     * 
+     */
     public Optional<String> kerberosArmoring() {
         return Optional.ofNullable(this.kerberosArmoring);
     }
@@ -37,6 +41,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="kerberosRc4Encryption")
     private @Nullable String kerberosRc4Encryption;
 
+    /**
+     * @return A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+     * 
+     */
     public Optional<String> kerberosRc4Encryption() {
         return Optional.ofNullable(this.kerberosRc4Encryption);
     }
@@ -48,6 +56,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="ntlmV1")
     private @Nullable String ntlmV1;
 
+    /**
+     * @return A flag to determine whether or not NtlmV1 is enabled or disabled.
+     * 
+     */
     public Optional<String> ntlmV1() {
         return Optional.ofNullable(this.ntlmV1);
     }
@@ -59,6 +71,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="syncKerberosPasswords")
     private @Nullable String syncKerberosPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+     * 
+     */
     public Optional<String> syncKerberosPasswords() {
         return Optional.ofNullable(this.syncKerberosPasswords);
     }
@@ -70,6 +86,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="syncNtlmPasswords")
     private @Nullable String syncNtlmPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+     * 
+     */
     public Optional<String> syncNtlmPasswords() {
         return Optional.ofNullable(this.syncNtlmPasswords);
     }
@@ -81,6 +101,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="syncOnPremPasswords")
     private @Nullable String syncOnPremPasswords;
 
+    /**
+     * @return A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+     * 
+     */
     public Optional<String> syncOnPremPasswords() {
         return Optional.ofNullable(this.syncOnPremPasswords);
     }
@@ -92,6 +116,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
     @Import(name="tlsV1")
     private @Nullable String tlsV1;
 
+    /**
+     * @return A flag to determine whether or not TlsV1 is enabled or disabled.
+     * 
+     */
     public Optional<String> tlsV1() {
         return Optional.ofNullable(this.tlsV1);
     }
@@ -126,36 +154,78 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
             $ = new DomainSecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kerberosArmoring A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosArmoring(@Nullable String kerberosArmoring) {
             $.kerberosArmoring = kerberosArmoring;
             return this;
         }
 
+        /**
+         * @param kerberosRc4Encryption A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosRc4Encryption(@Nullable String kerberosRc4Encryption) {
             $.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
 
+        /**
+         * @param ntlmV1 A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntlmV1(@Nullable String ntlmV1) {
             $.ntlmV1 = ntlmV1;
             return this;
         }
 
+        /**
+         * @param syncKerberosPasswords A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncKerberosPasswords(@Nullable String syncKerberosPasswords) {
             $.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
 
+        /**
+         * @param syncNtlmPasswords A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncNtlmPasswords(@Nullable String syncNtlmPasswords) {
             $.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
 
+        /**
+         * @param syncOnPremPasswords A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncOnPremPasswords(@Nullable String syncOnPremPasswords) {
             $.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
 
+        /**
+         * @param tlsV1 A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsV1(@Nullable String tlsV1) {
             $.tlsV1 = tlsV1;
             return this;

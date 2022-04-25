@@ -24,6 +24,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -35,6 +39,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -46,6 +54,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="errorMessageParameters", required=true)
     private Map<String,String> errorMessageParameters;
 
+    /**
+     * @return The error message parameters.
+     * 
+     */
     public Map<String,String> errorMessageParameters() {
         return this.errorMessageParameters;
     }
@@ -57,6 +69,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="errorTags", required=true)
     private Map<String,String> errorTags;
 
+    /**
+     * @return The error tags.
+     * 
+     */
     public Map<String,String> errorTags() {
         return this.errorTags;
     }
@@ -68,6 +84,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="possibleCauses", required=true)
     private String possibleCauses;
 
+    /**
+     * @return The possible causes.
+     * 
+     */
     public String possibleCauses() {
         return this.possibleCauses;
     }
@@ -79,6 +99,10 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
     @Import(name="recommendedAction", required=true)
     private String recommendedAction;
 
+    /**
+     * @return The recommended action.
+     * 
+     */
     public String recommendedAction() {
         return this.recommendedAction;
     }
@@ -112,31 +136,67 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends com
             $ = new InMageRcmAgentUpgradeBlockingErrorDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorMessage The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param errorMessageParameters The error message parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessageParameters(Map<String,String> errorMessageParameters) {
             $.errorMessageParameters = errorMessageParameters;
             return this;
         }
 
+        /**
+         * @param errorTags The error tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorTags(Map<String,String> errorTags) {
             $.errorTags = errorTags;
             return this;
         }
 
+        /**
+         * @param possibleCauses The possible causes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder possibleCauses(String possibleCauses) {
             $.possibleCauses = possibleCauses;
             return this;
         }
 
+        /**
+         * @param recommendedAction The recommended action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendedAction(String recommendedAction) {
             $.recommendedAction = recommendedAction;
             return this;

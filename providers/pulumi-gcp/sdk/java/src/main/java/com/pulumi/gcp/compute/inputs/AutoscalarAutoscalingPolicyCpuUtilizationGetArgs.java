@@ -25,6 +25,12 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends com.
     @Import(name="predictiveMethod")
     private @Nullable Output<String> predictiveMethod;
 
+    /**
+     * @return Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+     * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+     * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+     * 
+     */
     public Optional<Output<String>> predictiveMethod() {
         return Optional.ofNullable(this.predictiveMethod);
     }
@@ -38,6 +44,12 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends com.
     @Import(name="target", required=true)
     private Output<Double> target;
 
+    /**
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
+     * balancing configuration) that autoscaler should maintain. Must
+     * be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     public Output<Double> target() {
         return this.target;
     }
@@ -67,20 +79,52 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends com.
             $ = new AutoscalarAutoscalingPolicyCpuUtilizationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predictiveMethod Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+         * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+         * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveMethod(@Nullable Output<String> predictiveMethod) {
             $.predictiveMethod = predictiveMethod;
             return this;
         }
 
+        /**
+         * @param predictiveMethod Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+         * - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
+         * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveMethod(String predictiveMethod) {
             return predictiveMethod(Output.of(predictiveMethod));
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<Double> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Double target) {
             return target(Output.of(target));
         }

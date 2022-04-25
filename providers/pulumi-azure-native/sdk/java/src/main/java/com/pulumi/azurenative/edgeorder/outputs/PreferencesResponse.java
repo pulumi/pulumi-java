@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreferencesResponse {
     /**
-     * Preferences related to the Encryption.
+     * @return Preferences related to the Encryption.
      * 
      */
     private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
     /**
-     * Preferences related to the Management resource.
+     * @return Preferences related to the Management resource.
      * 
      */
     private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
     /**
-     * Notification preferences.
+     * @return Notification preferences.
      * 
      */
     private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
     /**
-     * Preferences related to the shipment logistics of the order.
+     * @return Preferences related to the shipment logistics of the order.
      * 
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
@@ -49,30 +49,30 @@ public final class PreferencesResponse {
     }
 
     /**
-     * Preferences related to the Encryption.
+     * @return Preferences related to the Encryption.
      * 
-    */
+     */
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
-     * Preferences related to the Management resource.
+     * @return Preferences related to the Management resource.
      * 
-    */
+     */
     public Optional<ManagementResourcePreferencesResponse> managementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
     /**
-     * Notification preferences.
+     * @return Notification preferences.
      * 
-    */
+     */
     public List<NotificationPreferenceResponse> notificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
     /**
-     * Preferences related to the shipment logistics of the order.
+     * @return Preferences related to the shipment logistics of the order.
      * 
-    */
+     */
     public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }

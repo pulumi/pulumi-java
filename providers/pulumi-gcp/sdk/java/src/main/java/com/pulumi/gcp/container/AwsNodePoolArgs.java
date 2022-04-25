@@ -26,6 +26,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -37,6 +41,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling", required=true)
     private Output<AwsNodePoolAutoscalingArgs> autoscaling;
 
+    /**
+     * @return Required. Autoscaler configuration for this node pool.
+     * 
+     */
     public Output<AwsNodePoolAutoscalingArgs> autoscaling() {
         return this.autoscaling;
     }
@@ -48,6 +56,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster", required=true)
     private Output<String> cluster;
 
+    /**
+     * @return The awsCluster for the resource
+     * 
+     */
     public Output<String> cluster() {
         return this.cluster;
     }
@@ -59,6 +71,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
     private Output<AwsNodePoolConfigArgs> config;
 
+    /**
+     * @return Required. The configuration of the node pool.
+     * 
+     */
     public Output<AwsNodePoolConfigArgs> config() {
         return this.config;
     }
@@ -70,6 +86,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The location for the resource
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -81,6 +101,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint", required=true)
     private Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
+    /**
+     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * 
+     */
     public Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
@@ -92,6 +116,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -114,6 +146,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return Required. The subnet where the node pool node run.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -125,6 +161,10 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
     private Output<String> version;
 
+    /**
+     * @return Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * 
+     */
     public Output<String> version() {
         return this.version;
     }
@@ -162,92 +202,212 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AwsNodePoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(Output<AwsNodePoolAutoscalingArgs> autoscaling) {
             $.autoscaling = autoscaling;
             return this;
         }
 
+        /**
+         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaling(AwsNodePoolAutoscalingArgs autoscaling) {
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param cluster The awsCluster for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
+        /**
+         * @param cluster The awsCluster for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
         }
 
+        /**
+         * @param config Required. The configuration of the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<AwsNodePoolConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Required. The configuration of the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(AwsNodePoolConfigArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsConstraint(Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
+        /**
+         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPodsConstraint(AwsNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
             return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param subnetId Required. The subnet where the node pool node run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Required. The subnet where the node pool node run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

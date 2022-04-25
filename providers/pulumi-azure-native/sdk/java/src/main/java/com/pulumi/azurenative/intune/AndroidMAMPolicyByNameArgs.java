@@ -109,6 +109,10 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
     @Import(name="hostName", required=true)
     private Output<String> hostName;
 
+    /**
+     * @return Location hostName for the tenant
+     * 
+     */
     public Output<String> hostName() {
         return this.hostName;
     }
@@ -120,6 +124,10 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -159,6 +167,10 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Unique name for the policy
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -177,6 +189,10 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource Tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -333,20 +349,44 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param hostName Location hostName for the tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName Location hostName for the tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param location Resource Location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -387,11 +427,23 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
             return pinNumRetry(Output.of(pinNumRetry));
         }
 
+        /**
+         * @param policyName Unique name for the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Unique name for the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
@@ -405,11 +457,23 @@ public final class AndroidMAMPolicyByNameArgs extends com.pulumi.resources.Resou
             return screenCapture(Output.of(screenCapture));
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

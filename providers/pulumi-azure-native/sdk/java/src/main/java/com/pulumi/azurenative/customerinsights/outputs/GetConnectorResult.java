@@ -16,72 +16,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConnectorResult {
     /**
-     * ID of the connector.
+     * @return ID of the connector.
      * 
      */
     private final Integer connectorId;
     /**
-     * Name of the connector.
+     * @return Name of the connector.
      * 
      */
     private final @Nullable String connectorName;
     /**
-     * The connector properties.
+     * @return The connector properties.
      * 
      */
     private final Map<String,Object> connectorProperties;
     /**
-     * Type of connector.
+     * @return Type of connector.
      * 
      */
     private final String connectorType;
     /**
-     * The created time.
+     * @return The created time.
      * 
      */
     private final String created;
     /**
-     * Description of the connector.
+     * @return Description of the connector.
      * 
      */
     private final @Nullable String description;
     /**
-     * Display name of the connector.
+     * @return Display name of the connector.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * If this is an internal connector.
+     * @return If this is an internal connector.
      * 
      */
     private final @Nullable Boolean isInternal;
     /**
-     * The last modified time.
+     * @return The last modified time.
      * 
      */
     private final String lastModified;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * State of connector.
+     * @return State of connector.
      * 
      */
     private final String state;
     /**
-     * The hub name.
+     * @return The hub name.
      * 
      */
     private final String tenantId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -119,100 +119,100 @@ public final class GetConnectorResult {
     }
 
     /**
-     * ID of the connector.
+     * @return ID of the connector.
      * 
-    */
+     */
     public Integer connectorId() {
         return this.connectorId;
     }
     /**
-     * Name of the connector.
+     * @return Name of the connector.
      * 
-    */
+     */
     public Optional<String> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
     /**
-     * The connector properties.
+     * @return The connector properties.
      * 
-    */
+     */
     public Map<String,Object> connectorProperties() {
         return this.connectorProperties;
     }
     /**
-     * Type of connector.
+     * @return Type of connector.
      * 
-    */
+     */
     public String connectorType() {
         return this.connectorType;
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Description of the connector.
+     * @return Description of the connector.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Display name of the connector.
+     * @return Display name of the connector.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If this is an internal connector.
+     * @return If this is an internal connector.
      * 
-    */
+     */
     public Optional<Boolean> isInternal() {
         return Optional.ofNullable(this.isInternal);
     }
     /**
-     * The last modified time.
+     * @return The last modified time.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of connector.
+     * @return State of connector.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

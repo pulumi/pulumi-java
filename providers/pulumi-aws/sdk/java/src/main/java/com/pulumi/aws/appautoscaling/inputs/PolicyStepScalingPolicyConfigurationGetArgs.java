@@ -25,6 +25,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     @Import(name="adjustmentType")
     private @Nullable Output<String> adjustmentType;
 
+    /**
+     * @return Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+     * 
+     */
     public Optional<Output<String>> adjustmentType() {
         return Optional.ofNullable(this.adjustmentType);
     }
@@ -36,6 +40,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     @Import(name="cooldown")
     private @Nullable Output<Integer> cooldown;
 
+    /**
+     * @return The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+     * 
+     */
     public Optional<Output<Integer>> cooldown() {
         return Optional.ofNullable(this.cooldown);
     }
@@ -47,6 +55,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     @Import(name="metricAggregationType")
     private @Nullable Output<String> metricAggregationType;
 
+    /**
+     * @return The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+     * 
+     */
     public Optional<Output<String>> metricAggregationType() {
         return Optional.ofNullable(this.metricAggregationType);
     }
@@ -58,6 +70,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     @Import(name="minAdjustmentMagnitude")
     private @Nullable Output<Integer> minAdjustmentMagnitude;
 
+    /**
+     * @return The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
+     * 
+     */
     public Optional<Output<Integer>> minAdjustmentMagnitude() {
         return Optional.ofNullable(this.minAdjustmentMagnitude);
     }
@@ -69,6 +85,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
     @Import(name="stepAdjustments")
     private @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
 
+    /**
+     * @return A set of adjustments that manage scaling. These have the following structure:
+     * 
+     */
     public Optional<Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>>> stepAdjustments() {
         return Optional.ofNullable(this.stepAdjustments);
     }
@@ -101,51 +121,117 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
             $ = new PolicyStepScalingPolicyConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adjustmentType Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adjustmentType(@Nullable Output<String> adjustmentType) {
             $.adjustmentType = adjustmentType;
             return this;
         }
 
+        /**
+         * @param adjustmentType Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adjustmentType(String adjustmentType) {
             return adjustmentType(Output.of(adjustmentType));
         }
 
+        /**
+         * @param cooldown The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(@Nullable Output<Integer> cooldown) {
             $.cooldown = cooldown;
             return this;
         }
 
+        /**
+         * @param cooldown The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(Integer cooldown) {
             return cooldown(Output.of(cooldown));
         }
 
+        /**
+         * @param metricAggregationType The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
             $.metricAggregationType = metricAggregationType;
             return this;
         }
 
+        /**
+         * @param metricAggregationType The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricAggregationType(String metricAggregationType) {
             return metricAggregationType(Output.of(metricAggregationType));
         }
 
+        /**
+         * @param minAdjustmentMagnitude The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
             $.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
 
+        /**
+         * @param minAdjustmentMagnitude The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             return minAdjustmentMagnitude(Output.of(minAdjustmentMagnitude));
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments) {
             $.stepAdjustments = stepAdjustments;
             return this;
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs> stepAdjustments) {
             return stepAdjustments(Output.of(stepAdjustments));
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs... stepAdjustments) {
             return stepAdjustments(List.of(stepAdjustments));
         }

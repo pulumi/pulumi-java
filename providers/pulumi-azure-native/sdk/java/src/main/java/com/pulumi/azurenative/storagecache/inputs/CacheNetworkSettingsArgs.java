@@ -29,6 +29,10 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="dnsSearchDomain")
     private @Nullable Output<String> dnsSearchDomain;
 
+    /**
+     * @return DNS search domain
+     * 
+     */
     public Optional<Output<String>> dnsSearchDomain() {
         return Optional.ofNullable(this.dnsSearchDomain);
     }
@@ -40,6 +44,10 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -51,6 +59,10 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
+    /**
+     * @return The IPv4 maximum transmission unit configured for the subnet.
+     * 
+     */
     public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
@@ -62,6 +74,10 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="ntpServer")
     private @Nullable Output<String> ntpServer;
 
+    /**
+     * @return NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+     * 
+     */
     public Optional<Output<String>> ntpServer() {
         return Optional.ofNullable(this.ntpServer);
     }
@@ -93,42 +109,96 @@ public final class CacheNetworkSettingsArgs extends com.pulumi.resources.Resourc
             $ = new CacheNetworkSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSearchDomain DNS search domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearchDomain(@Nullable Output<String> dnsSearchDomain) {
             $.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
 
+        /**
+         * @param dnsSearchDomain DNS search domain
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSearchDomain(String dnsSearchDomain) {
             return dnsSearchDomain(Output.of(dnsSearchDomain));
         }
 
+        /**
+         * @param dnsServers DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param mtu The IPv4 maximum transmission unit configured for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
 
+        /**
+         * @param mtu The IPv4 maximum transmission unit configured for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
+        /**
+         * @param ntpServer NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServer(@Nullable Output<String> ntpServer) {
             $.ntpServer = ntpServer;
             return this;
         }
 
+        /**
+         * @param ntpServer NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ntpServer(String ntpServer) {
             return ntpServer(Output.of(ntpServer));
         }

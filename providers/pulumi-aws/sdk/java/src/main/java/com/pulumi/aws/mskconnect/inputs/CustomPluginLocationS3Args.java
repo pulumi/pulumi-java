@@ -22,6 +22,10 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="bucketArn", required=true)
     private Output<String> bucketArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of an S3 bucket.
+     * 
+     */
     public Output<String> bucketArn() {
         return this.bucketArn;
     }
@@ -33,6 +37,10 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="fileKey", required=true)
     private Output<String> fileKey;
 
+    /**
+     * @return The file key for an object in an S3 bucket.
+     * 
+     */
     public Output<String> fileKey() {
         return this.fileKey;
     }
@@ -44,6 +52,10 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
     @Import(name="objectVersion")
     private @Nullable Output<String> objectVersion;
 
+    /**
+     * @return The version of an object in an S3 bucket.
+     * 
+     */
     public Optional<Output<String>> objectVersion() {
         return Optional.ofNullable(this.objectVersion);
     }
@@ -74,29 +86,65 @@ public final class CustomPluginLocationS3Args extends com.pulumi.resources.Resou
             $ = new CustomPluginLocationS3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketArn The Amazon Resource Name (ARN) of an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(Output<String> bucketArn) {
             $.bucketArn = bucketArn;
             return this;
         }
 
+        /**
+         * @param bucketArn The Amazon Resource Name (ARN) of an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketArn(String bucketArn) {
             return bucketArn(Output.of(bucketArn));
         }
 
+        /**
+         * @param fileKey The file key for an object in an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileKey(Output<String> fileKey) {
             $.fileKey = fileKey;
             return this;
         }
 
+        /**
+         * @param fileKey The file key for an object in an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileKey(String fileKey) {
             return fileKey(Output.of(fileKey));
         }
 
+        /**
+         * @param objectVersion The version of an object in an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectVersion(@Nullable Output<String> objectVersion) {
             $.objectVersion = objectVersion;
             return this;
         }
 
+        /**
+         * @param objectVersion The version of an object in an S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectVersion(String objectVersion) {
             return objectVersion(Output.of(objectVersion));
         }

@@ -28,6 +28,11 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return Gets the class type.
+     * Expected value is &#39;VMwareV2&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -39,6 +44,10 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
     @Import(name="migrationSolutionId", required=true)
     private Output<String> migrationSolutionId;
 
+    /**
+     * @return The ARM Id of the migration solution.
+     * 
+     */
     public Output<String> migrationSolutionId() {
         return this.migrationSolutionId;
     }
@@ -50,6 +59,10 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
     @Import(name="vmwareSiteId", required=true)
     private Output<String> vmwareSiteId;
 
+    /**
+     * @return The ARM Id of the VMware site.
+     * 
+     */
     public Output<String> vmwareSiteId() {
         return this.vmwareSiteId;
     }
@@ -80,29 +93,67 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
             $ = new VMwareV2FabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;VMwareV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type.
+         * Expected value is &#39;VMwareV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param migrationSolutionId The ARM Id of the migration solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSolutionId(Output<String> migrationSolutionId) {
             $.migrationSolutionId = migrationSolutionId;
             return this;
         }
 
+        /**
+         * @param migrationSolutionId The ARM Id of the migration solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSolutionId(String migrationSolutionId) {
             return migrationSolutionId(Output.of(migrationSolutionId));
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(Output<String> vmwareSiteId) {
             $.vmwareSiteId = vmwareSiteId;
             return this;
         }
 
+        /**
+         * @param vmwareSiteId The ARM Id of the VMware site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareSiteId(String vmwareSiteId) {
             return vmwareSiteId(Output.of(vmwareSiteId));
         }

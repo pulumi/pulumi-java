@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends com.pulumi
     @Import(name="jobConfig", required=true)
     private GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
 
+    /**
+     * @return Inspect config.
+     * 
+     */
     public GooglePrivacyDlpV2InspectJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends com.pulumi
     @Import(name="snapshotInspectTemplate", required=true)
     private GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
+    /**
+     * @return If run with an InspectTemplate, a snapshot of its state at the time of this run.
+     * 
+     */
     public GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate() {
         return this.snapshotInspectTemplate;
     }
@@ -64,11 +72,23 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends com.pulumi
             $ = new GooglePrivacyDlpV2RequestedOptionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobConfig Inspect config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
             $.jobConfig = jobConfig;
             return this;
         }
 
+        /**
+         * @param snapshotInspectTemplate If run with an InspectTemplate, a snapshot of its state at the time of this run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
             $.snapshotInspectTemplate = snapshotInspectTemplate;
             return this;

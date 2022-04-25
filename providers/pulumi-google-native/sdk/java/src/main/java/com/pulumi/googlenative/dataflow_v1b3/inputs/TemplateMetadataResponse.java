@@ -25,6 +25,10 @@ public final class TemplateMetadataResponse extends com.pulumi.resources.InvokeA
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Optional. A description of the template.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -36,6 +40,10 @@ public final class TemplateMetadataResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the template.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class TemplateMetadataResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters", required=true)
     private List<ParameterMetadataResponse> parameters;
 
+    /**
+     * @return The parameters for the template.
+     * 
+     */
     public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
@@ -77,21 +89,45 @@ public final class TemplateMetadataResponse extends com.pulumi.resources.InvokeA
             $ = new TemplateMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. A description of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name The name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ParameterMetadataResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ParameterMetadataResponse... parameters) {
             return parameters(List.of(parameters));
         }

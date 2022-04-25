@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class VirtualNetworkConfigurationResponse {
     /**
-     * Data management&#39;s service public IP address resource id.
+     * @return Data management&#39;s service public IP address resource id.
      * 
      */
     private final String dataManagementPublicIpId;
     /**
-     * Engine service&#39;s public IP address resource id.
+     * @return Engine service&#39;s public IP address resource id.
      * 
      */
     private final String enginePublicIpId;
     /**
-     * The subnet resource id.
+     * @return The subnet resource id.
      * 
      */
     private final String subnetId;
@@ -36,23 +36,23 @@ public final class VirtualNetworkConfigurationResponse {
     }
 
     /**
-     * Data management&#39;s service public IP address resource id.
+     * @return Data management&#39;s service public IP address resource id.
      * 
-    */
+     */
     public String dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
     /**
-     * Engine service&#39;s public IP address resource id.
+     * @return Engine service&#39;s public IP address resource id.
      * 
-    */
+     */
     public String enginePublicIpId() {
         return this.enginePublicIpId;
     }
     /**
-     * The subnet resource id.
+     * @return The subnet resource id.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }

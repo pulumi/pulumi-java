@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class CaseClassificationResponse {
     /**
-     * The display name of the classification.
+     * @return The display name of the classification.
      * 
      */
     private final String displayName;
@@ -21,9 +21,9 @@ public final class CaseClassificationResponse {
     }
 
     /**
-     * The display name of the classification.
+     * @return The display name of the classification.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }

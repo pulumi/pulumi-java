@@ -27,6 +27,10 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
     @Import(name="locationPlacementId")
     private @Nullable String locationPlacementId;
 
+    /**
+     * @return Location placement Id of a subscription
+     * 
+     */
     public Optional<String> locationPlacementId() {
         return Optional.ofNullable(this.locationPlacementId);
     }
@@ -38,6 +42,10 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
     @Import(name="quotaId", required=true)
     private String quotaId;
 
+    /**
+     * @return Quota ID of a subscription
+     * 
+     */
     public String quotaId() {
         return this.quotaId;
     }
@@ -49,6 +57,10 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
     @Import(name="registeredFeatures")
     private @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 
+    /**
+     * @return List of registered feature flags for subscription
+     * 
+     */
     public Optional<List<CustomerSubscriptionRegisteredFeatures>> registeredFeatures() {
         return Optional.ofNullable(this.registeredFeatures);
     }
@@ -79,21 +91,45 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
             $ = new CustomerSubscriptionDetails(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationPlacementId Location placement Id of a subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationPlacementId(@Nullable String locationPlacementId) {
             $.locationPlacementId = locationPlacementId;
             return this;
         }
 
+        /**
+         * @param quotaId Quota ID of a subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotaId(String quotaId) {
             $.quotaId = quotaId;
             return this;
         }
 
+        /**
+         * @param registeredFeatures List of registered feature flags for subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredFeatures(@Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures) {
             $.registeredFeatures = registeredFeatures;
             return this;
         }
 
+        /**
+         * @param registeredFeatures List of registered feature flags for subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder registeredFeatures(CustomerSubscriptionRegisteredFeatures... registeredFeatures) {
             return registeredFeatures(List.of(registeredFeatures));
         }

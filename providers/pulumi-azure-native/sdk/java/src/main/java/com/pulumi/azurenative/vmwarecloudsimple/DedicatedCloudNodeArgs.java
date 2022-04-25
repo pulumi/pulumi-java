@@ -25,6 +25,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="availabilityZoneId", required=true)
     private Output<String> availabilityZoneId;
 
+    /**
+     * @return Availability Zone id, e.g. &#34;az1&#34;
+     * 
+     */
     public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
@@ -36,6 +40,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="dedicatedCloudNodeName")
     private @Nullable Output<String> dedicatedCloudNodeName;
 
+    /**
+     * @return dedicated cloud node name
+     * 
+     */
     public Optional<Output<String>> dedicatedCloudNodeName() {
         return Optional.ofNullable(this.dedicatedCloudNodeName);
     }
@@ -47,6 +55,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return SKU&#39;s id
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure region
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return SKU&#39;s name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodesCount", required=true)
     private Output<Integer> nodesCount;
 
+    /**
+     * @return count of nodes to create
+     * 
+     */
     public Output<Integer> nodesCount() {
         return this.nodesCount;
     }
@@ -91,6 +115,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="placementGroupId", required=true)
     private Output<String> placementGroupId;
 
+    /**
+     * @return Placement Group id, e.g. &#34;n1&#34;
+     * 
+     */
     public Output<String> placementGroupId() {
         return this.placementGroupId;
     }
@@ -102,6 +130,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="purchaseId", required=true)
     private Output<String> purchaseId;
 
+    /**
+     * @return purchase id
+     * 
+     */
     public Output<String> purchaseId() {
         return this.purchaseId;
     }
@@ -113,6 +145,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -124,6 +160,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Dedicated Cloud Nodes SKU
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -135,6 +175,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Dedicated Cloud Nodes tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -173,101 +217,233 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
             $ = new DedicatedCloudNodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZoneId Availability Zone id, e.g. &#34;az1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneId(Output<String> availabilityZoneId) {
             $.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
+        /**
+         * @param availabilityZoneId Availability Zone id, e.g. &#34;az1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZoneId(String availabilityZoneId) {
             return availabilityZoneId(Output.of(availabilityZoneId));
         }
 
+        /**
+         * @param dedicatedCloudNodeName dedicated cloud node name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCloudNodeName(@Nullable Output<String> dedicatedCloudNodeName) {
             $.dedicatedCloudNodeName = dedicatedCloudNodeName;
             return this;
         }
 
+        /**
+         * @param dedicatedCloudNodeName dedicated cloud node name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dedicatedCloudNodeName(String dedicatedCloudNodeName) {
             return dedicatedCloudNodeName(Output.of(dedicatedCloudNodeName));
         }
 
+        /**
+         * @param id SKU&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id SKU&#39;s id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure region
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name SKU&#39;s name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU&#39;s name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nodesCount count of nodes to create
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesCount(Output<Integer> nodesCount) {
             $.nodesCount = nodesCount;
             return this;
         }
 
+        /**
+         * @param nodesCount count of nodes to create
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodesCount(Integer nodesCount) {
             return nodesCount(Output.of(nodesCount));
         }
 
+        /**
+         * @param placementGroupId Placement Group id, e.g. &#34;n1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementGroupId(Output<String> placementGroupId) {
             $.placementGroupId = placementGroupId;
             return this;
         }
 
+        /**
+         * @param placementGroupId Placement Group id, e.g. &#34;n1&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementGroupId(String placementGroupId) {
             return placementGroupId(Output.of(placementGroupId));
         }
 
+        /**
+         * @param purchaseId purchase id
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchaseId(Output<String> purchaseId) {
             $.purchaseId = purchaseId;
             return this;
         }
 
+        /**
+         * @param purchaseId purchase id
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchaseId(String purchaseId) {
             return purchaseId(Output.of(purchaseId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Dedicated Cloud Nodes SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Dedicated Cloud Nodes SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Dedicated Cloud Nodes tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Dedicated Cloud Nodes tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

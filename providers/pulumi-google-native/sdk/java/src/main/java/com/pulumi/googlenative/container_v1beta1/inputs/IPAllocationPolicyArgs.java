@@ -27,6 +27,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowRouteOverlap")
     private @Nullable Output<Boolean> allowRouteOverlap;
 
+    /**
+     * @return If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
+     * 
+     */
     public Optional<Output<Boolean>> allowRouteOverlap() {
         return Optional.ofNullable(this.allowRouteOverlap);
     }
@@ -38,6 +42,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="clusterIpv4CidrBlock")
     private @Nullable Output<String> clusterIpv4CidrBlock;
 
+    /**
+     * @return The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+     * 
+     */
     public Optional<Output<String>> clusterIpv4CidrBlock() {
         return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
@@ -49,6 +57,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="clusterSecondaryRangeName")
     private @Nullable Output<String> clusterSecondaryRangeName;
 
+    /**
+     * @return The name of the secondary range to be used for the cluster CIDR block. The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+     * 
+     */
     public Optional<Output<String>> clusterSecondaryRangeName() {
         return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
@@ -60,6 +72,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="createSubnetwork")
     private @Nullable Output<Boolean> createSubnetwork;
 
+    /**
+     * @return Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.
+     * 
+     */
     public Optional<Output<Boolean>> createSubnetwork() {
         return Optional.ofNullable(this.createSubnetwork);
     }
@@ -71,6 +87,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeIpv4CidrBlock")
     private @Nullable Output<String> nodeIpv4CidrBlock;
 
+    /**
+     * @return The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+     * 
+     */
     public Optional<Output<String>> nodeIpv4CidrBlock() {
         return Optional.ofNullable(this.nodeIpv4CidrBlock);
     }
@@ -82,6 +102,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="servicesIpv4CidrBlock")
     private @Nullable Output<String> servicesIpv4CidrBlock;
 
+    /**
+     * @return The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+     * 
+     */
     public Optional<Output<String>> servicesIpv4CidrBlock() {
         return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
@@ -93,6 +117,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="servicesSecondaryRangeName")
     private @Nullable Output<String> servicesSecondaryRangeName;
 
+    /**
+     * @return The name of the secondary range to be used as for the services CIDR block. The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+     * 
+     */
     public Optional<Output<String>> servicesSecondaryRangeName() {
         return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
@@ -104,6 +132,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="subnetworkName")
     private @Nullable Output<String> subnetworkName;
 
+    /**
+     * @return A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty, then an automatic name will be chosen for the new subnetwork.
+     * 
+     */
     public Optional<Output<String>> subnetworkName() {
         return Optional.ofNullable(this.subnetworkName);
     }
@@ -115,6 +147,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="useIpAliases")
     private @Nullable Output<Boolean> useIpAliases;
 
+    /**
+     * @return Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+     * 
+     */
     public Optional<Output<Boolean>> useIpAliases() {
         return Optional.ofNullable(this.useIpAliases);
     }
@@ -126,6 +162,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     @Import(name="useRoutes")
     private @Nullable Output<Boolean> useRoutes;
 
+    /**
+     * @return Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+     * 
+     */
     public Optional<Output<Boolean>> useRoutes() {
         return Optional.ofNullable(this.useRoutes);
     }
@@ -163,92 +203,212 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
             $ = new IPAllocationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowRouteOverlap If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRouteOverlap(@Nullable Output<Boolean> allowRouteOverlap) {
             $.allowRouteOverlap = allowRouteOverlap;
             return this;
         }
 
+        /**
+         * @param allowRouteOverlap If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRouteOverlap(Boolean allowRouteOverlap) {
             return allowRouteOverlap(Output.of(allowRouteOverlap));
         }
 
+        /**
+         * @param clusterIpv4CidrBlock The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4CidrBlock(@Nullable Output<String> clusterIpv4CidrBlock) {
             $.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param clusterIpv4CidrBlock The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
             return clusterIpv4CidrBlock(Output.of(clusterIpv4CidrBlock));
         }
 
+        /**
+         * @param clusterSecondaryRangeName The name of the secondary range to be used for the cluster CIDR block. The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
             $.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
+        /**
+         * @param clusterSecondaryRangeName The name of the secondary range to be used for the cluster CIDR block. The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             return clusterSecondaryRangeName(Output.of(clusterSecondaryRangeName));
         }
 
+        /**
+         * @param createSubnetwork Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createSubnetwork(@Nullable Output<Boolean> createSubnetwork) {
             $.createSubnetwork = createSubnetwork;
             return this;
         }
 
+        /**
+         * @param createSubnetwork Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createSubnetwork(Boolean createSubnetwork) {
             return createSubnetwork(Output.of(createSubnetwork));
         }
 
+        /**
+         * @param nodeIpv4CidrBlock The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeIpv4CidrBlock(@Nullable Output<String> nodeIpv4CidrBlock) {
             $.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param nodeIpv4CidrBlock The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             return nodeIpv4CidrBlock(Output.of(nodeIpv4CidrBlock));
         }
 
+        /**
+         * @param servicesIpv4CidrBlock The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
             $.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
+        /**
+         * @param servicesIpv4CidrBlock The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             return servicesIpv4CidrBlock(Output.of(servicesIpv4CidrBlock));
         }
 
+        /**
+         * @param servicesSecondaryRangeName The name of the secondary range to be used as for the services CIDR block. The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
             $.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
 
+        /**
+         * @param servicesSecondaryRangeName The name of the secondary range to be used as for the services CIDR block. The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             return servicesSecondaryRangeName(Output.of(servicesSecondaryRangeName));
         }
 
+        /**
+         * @param subnetworkName A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty, then an automatic name will be chosen for the new subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
             $.subnetworkName = subnetworkName;
             return this;
         }
 
+        /**
+         * @param subnetworkName A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty, then an automatic name will be chosen for the new subnetwork.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkName(String subnetworkName) {
             return subnetworkName(Output.of(subnetworkName));
         }
 
+        /**
+         * @param useIpAliases Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
             $.useIpAliases = useIpAliases;
             return this;
         }
 
+        /**
+         * @param useIpAliases Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder useIpAliases(Boolean useIpAliases) {
             return useIpAliases(Output.of(useIpAliases));
         }
 
+        /**
+         * @param useRoutes Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRoutes(@Nullable Output<Boolean> useRoutes) {
             $.useRoutes = useRoutes;
             return this;
         }
 
+        /**
+         * @param useRoutes Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRoutes(Boolean useRoutes) {
             return useRoutes(Output.of(useRoutes));
         }

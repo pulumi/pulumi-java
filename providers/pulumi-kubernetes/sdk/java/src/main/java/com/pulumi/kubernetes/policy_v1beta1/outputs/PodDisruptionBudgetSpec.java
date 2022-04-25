@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PodDisruptionBudgetSpec {
     /**
-     * An eviction is allowed if at most &#34;maxUnavailable&#34; pods selected by &#34;selector&#34; are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with &#34;minAvailable&#34;.
+     * @return An eviction is allowed if at most &#34;maxUnavailable&#34; pods selected by &#34;selector&#34; are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with &#34;minAvailable&#34;.
      * 
      */
     private final @Nullable Either<Integer,String> maxUnavailable;
     /**
-     * An eviction is allowed if at least &#34;minAvailable&#34; pods selected by &#34;selector&#34; will still be available after the eviction, i.e. even in the absence of the evicted pod.  So for example you can prevent all voluntary evictions by specifying &#34;100%&#34;.
+     * @return An eviction is allowed if at least &#34;minAvailable&#34; pods selected by &#34;selector&#34; will still be available after the eviction, i.e. even in the absence of the evicted pod.  So for example you can prevent all voluntary evictions by specifying &#34;100%&#34;.
      * 
      */
     private final @Nullable Either<Integer,String> minAvailable;
     /**
-     * Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.
+     * @return Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.
      * 
      */
     private final @Nullable LabelSelector selector;
@@ -41,23 +41,23 @@ public final class PodDisruptionBudgetSpec {
     }
 
     /**
-     * An eviction is allowed if at most &#34;maxUnavailable&#34; pods selected by &#34;selector&#34; are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with &#34;minAvailable&#34;.
+     * @return An eviction is allowed if at most &#34;maxUnavailable&#34; pods selected by &#34;selector&#34; are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with &#34;minAvailable&#34;.
      * 
-    */
+     */
     public Optional<Either<Integer,String>> maxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
     /**
-     * An eviction is allowed if at least &#34;minAvailable&#34; pods selected by &#34;selector&#34; will still be available after the eviction, i.e. even in the absence of the evicted pod.  So for example you can prevent all voluntary evictions by specifying &#34;100%&#34;.
+     * @return An eviction is allowed if at least &#34;minAvailable&#34; pods selected by &#34;selector&#34; will still be available after the eviction, i.e. even in the absence of the evicted pod.  So for example you can prevent all voluntary evictions by specifying &#34;100%&#34;.
      * 
-    */
+     */
     public Optional<Either<Integer,String>> minAvailable() {
         return Optional.ofNullable(this.minAvailable);
     }
     /**
-     * Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.
+     * @return Label query over pods whose evictions are managed by the disruption budget. A null selector selects no pods. An empty selector ({}) also selects no pods, which differs from standard behavior of selecting all pods. In policy/v1, an empty selector will select all pods in the namespace.
      * 
-    */
+     */
     public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }

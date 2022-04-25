@@ -26,6 +26,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Search results table&#39;s Description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="endSearchTime")
     private @Nullable String endSearchTime;
 
+    /**
+     * @return The timestamp to end the search by (UTC)
+     * 
+     */
     public Optional<String> endSearchTime() {
         return Optional.ofNullable(this.endSearchTime);
     }
@@ -48,6 +56,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="limit")
     private @Nullable Integer limit;
 
+    /**
+     * @return Limit the search job to return up to specified number of rows.
+     * 
+     */
     public Optional<Integer> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -59,6 +71,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="query")
     private @Nullable String query;
 
+    /**
+     * @return Search job query.
+     * 
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
@@ -70,6 +86,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sourceTable", required=true)
     private String sourceTable;
 
+    /**
+     * @return The table to search data from.
+     * 
+     */
     public String sourceTable() {
         return this.sourceTable;
     }
@@ -81,6 +101,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startSearchTime")
     private @Nullable String startSearchTime;
 
+    /**
+     * @return The timestamp to start the search from (UTC)
+     * 
+     */
     public Optional<String> startSearchTime() {
         return Optional.ofNullable(this.startSearchTime);
     }
@@ -114,31 +138,67 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
             $ = new SearchResultsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Search results table&#39;s Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param endSearchTime The timestamp to end the search by (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endSearchTime(@Nullable String endSearchTime) {
             $.endSearchTime = endSearchTime;
             return this;
         }
 
+        /**
+         * @param limit Limit the search job to return up to specified number of rows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Integer limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param query Search job query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param sourceTable The table to search data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(String sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param startSearchTime The timestamp to start the search from (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder startSearchTime(@Nullable String startSearchTime) {
             $.startSearchTime = startSearchTime;
             return this;

@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServerConfigurationsManagementSettingsResponse {
     /**
-     * Additional SQL feature settings.
+     * @return Additional SQL feature settings.
      * 
      */
     private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
     /**
-     * SQL connectivity type settings.
+     * @return SQL connectivity type settings.
      * 
      */
     private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
     /**
-     * SQL storage update settings.
+     * @return SQL storage update settings.
      * 
      */
     private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
     /**
-     * SQL workload type settings.
+     * @return SQL workload type settings.
      * 
      */
     private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
@@ -48,30 +48,30 @@ public final class ServerConfigurationsManagementSettingsResponse {
     }
 
     /**
-     * Additional SQL feature settings.
+     * @return Additional SQL feature settings.
      * 
-    */
+     */
     public Optional<AdditionalFeaturesServerConfigurationsResponse> additionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
     /**
-     * SQL connectivity type settings.
+     * @return SQL connectivity type settings.
      * 
-    */
+     */
     public Optional<SqlConnectivityUpdateSettingsResponse> sqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
     /**
-     * SQL storage update settings.
+     * @return SQL storage update settings.
      * 
-    */
+     */
     public Optional<SqlStorageUpdateSettingsResponse> sqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
     /**
-     * SQL workload type settings.
+     * @return SQL workload type settings.
      * 
-    */
+     */
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> sqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }

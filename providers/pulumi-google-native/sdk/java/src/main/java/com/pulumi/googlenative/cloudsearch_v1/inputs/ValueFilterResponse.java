@@ -20,6 +20,10 @@ public final class ValueFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operatorName", required=true)
     private String operatorName;
 
+    /**
+     * @return The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.
+     * 
+     */
     public String operatorName() {
         return this.operatorName;
     }
@@ -31,6 +35,10 @@ public final class ValueFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private ValueResponse value;
 
+    /**
+     * @return The value to be compared with.
+     * 
+     */
     public ValueResponse value() {
         return this.value;
     }
@@ -60,11 +68,23 @@ public final class ValueFilterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ValueFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatorName The `operator_name` applied to the query, such as *price_greater_than*. The filter can work against both types of filters defined in the schema for your data source: 1. `operator_name`, where the query filters results by the property that matches the value. 2. `greater_than_operator_name` or `less_than_operator_name` in your schema. The query filters the results for the property values that are greater than or less than the supplied value in the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorName(String operatorName) {
             $.operatorName = operatorName;
             return this;
         }
 
+        /**
+         * @param value The value to be compared with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(ValueResponse value) {
             $.value = value;
             return this;

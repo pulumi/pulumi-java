@@ -22,6 +22,10 @@ public final class DatasetFilterExpressionArgs extends com.pulumi.resources.Reso
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return Filtering expression for a parameter
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -58,11 +62,23 @@ public final class DatasetFilterExpressionArgs extends com.pulumi.resources.Reso
             $ = new DatasetFilterExpressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression Filtering expression for a parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression Filtering expression for a parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }

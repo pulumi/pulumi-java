@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NFSMountConfigurationResponse {
     /**
-     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
      */
     private final @Nullable String mountOptions;
     /**
-     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
      */
     private final String relativeMountPath;
@@ -34,16 +34,16 @@ public final class NFSMountConfigurationResponse {
     }
 
     /**
-     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
-    */
+     */
     public Optional<String> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     /**
-     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
-    */
+     */
     public String relativeMountPath() {
         return this.relativeMountPath;
     }

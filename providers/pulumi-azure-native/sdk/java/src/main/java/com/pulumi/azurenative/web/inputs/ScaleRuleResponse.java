@@ -28,6 +28,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="azureQueue")
     private @Nullable QueueScaleRuleResponse azureQueue;
 
+    /**
+     * @return Azure Queue based scaling.
+     * 
+     */
     public Optional<QueueScaleRuleResponse> azureQueue() {
         return Optional.ofNullable(this.azureQueue);
     }
@@ -39,6 +43,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="custom")
     private @Nullable CustomScaleRuleResponse custom;
 
+    /**
+     * @return Custom scale rule.
+     * 
+     */
     public Optional<CustomScaleRuleResponse> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -50,6 +58,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="http")
     private @Nullable HttpScaleRuleResponse http;
 
+    /**
+     * @return HTTP requests based scaling.
+     * 
+     */
     public Optional<HttpScaleRuleResponse> http() {
         return Optional.ofNullable(this.http);
     }
@@ -61,6 +73,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Scale Rule Name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,21 +108,45 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureQueue Azure Queue based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureQueue(@Nullable QueueScaleRuleResponse azureQueue) {
             $.azureQueue = azureQueue;
             return this;
         }
 
+        /**
+         * @param custom Custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable CustomScaleRuleResponse custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param http HTTP requests based scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(@Nullable HttpScaleRuleResponse http) {
             $.http = http;
             return this;
         }
 
+        /**
+         * @param name Scale Rule Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

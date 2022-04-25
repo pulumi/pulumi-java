@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SloWindowsBasedSliMetricSumInRangeRange {
     /**
-     * max value for the range (inclusive). If not given,
+     * @return max value for the range (inclusive). If not given,
      * will be set to &#34;infinity&#34;, defining an open range
      * &#34;&gt;= range.min&#34;
      * 
      */
     private final @Nullable Double max;
     /**
-     * Min value for the range (inclusive). If not given,
+     * @return Min value for the range (inclusive). If not given,
      * will be set to &#34;-infinity&#34;, defining an open range
      * &#34;&lt; range.max&#34;
      * 
@@ -35,20 +35,20 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
     }
 
     /**
-     * max value for the range (inclusive). If not given,
+     * @return max value for the range (inclusive). If not given,
      * will be set to &#34;infinity&#34;, defining an open range
      * &#34;&gt;= range.min&#34;
      * 
-    */
+     */
     public Optional<Double> max() {
         return Optional.ofNullable(this.max);
     }
     /**
-     * Min value for the range (inclusive). If not given,
+     * @return Min value for the range (inclusive). If not given,
      * will be set to &#34;-infinity&#34;, defining an open range
      * &#34;&lt; range.max&#34;
      * 
-    */
+     */
     public Optional<Double> min() {
         return Optional.ofNullable(this.min);
     }

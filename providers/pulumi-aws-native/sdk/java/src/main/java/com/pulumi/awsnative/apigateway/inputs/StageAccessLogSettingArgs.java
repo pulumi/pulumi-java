@@ -26,6 +26,10 @@ public final class StageAccessLogSettingArgs extends com.pulumi.resources.Resour
     @Import(name="destinationArn")
     private @Nullable Output<String> destinationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+     * 
+     */
     public Optional<Output<String>> destinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
@@ -37,6 +41,10 @@ public final class StageAccessLogSettingArgs extends com.pulumi.resources.Resour
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -66,20 +74,44 @@ public final class StageAccessLogSettingArgs extends com.pulumi.resources.Resour
             $ = new StageAccessLogSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
             $.destinationArn = destinationArn;
             return this;
         }
 
+        /**
+         * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(String destinationArn) {
             return destinationArn(Output.of(destinationArn));
         }
 
+        /**
+         * @param format A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }

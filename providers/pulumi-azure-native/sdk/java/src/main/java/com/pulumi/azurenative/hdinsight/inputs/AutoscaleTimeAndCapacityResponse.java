@@ -26,6 +26,10 @@ public final class AutoscaleTimeAndCapacityResponse extends com.pulumi.resources
     @Import(name="maxInstanceCount")
     private @Nullable Integer maxInstanceCount;
 
+    /**
+     * @return The maximum instance count of the cluster
+     * 
+     */
     public Optional<Integer> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
@@ -37,6 +41,10 @@ public final class AutoscaleTimeAndCapacityResponse extends com.pulumi.resources
     @Import(name="minInstanceCount")
     private @Nullable Integer minInstanceCount;
 
+    /**
+     * @return The minimum instance count of the cluster
+     * 
+     */
     public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
@@ -48,6 +56,10 @@ public final class AutoscaleTimeAndCapacityResponse extends com.pulumi.resources
     @Import(name="time")
     private @Nullable String time;
 
+    /**
+     * @return 24-hour time in the form xx:xx
+     * 
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
@@ -78,16 +90,34 @@ public final class AutoscaleTimeAndCapacityResponse extends com.pulumi.resources
             $ = new AutoscaleTimeAndCapacityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxInstanceCount The maximum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             $.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
+        /**
+         * @param minInstanceCount The minimum instance count of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             $.minInstanceCount = minInstanceCount;
             return this;
         }
 
+        /**
+         * @param time 24-hour time in the form xx:xx
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable String time) {
             $.time = time;
             return this;

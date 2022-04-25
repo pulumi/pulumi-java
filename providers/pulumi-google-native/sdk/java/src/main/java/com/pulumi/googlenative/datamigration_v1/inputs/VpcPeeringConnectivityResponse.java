@@ -23,6 +23,10 @@ public final class VpcPeeringConnectivityResponse extends com.pulumi.resources.I
     @Import(name="vpc", required=true)
     private String vpc;
 
+    /**
+     * @return The name of the VPC network to peer with the Cloud SQL private network.
+     * 
+     */
     public String vpc() {
         return this.vpc;
     }
@@ -51,6 +55,12 @@ public final class VpcPeeringConnectivityResponse extends com.pulumi.resources.I
             $ = new VpcPeeringConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpc The name of the VPC network to peer with the Cloud SQL private network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpc(String vpc) {
             $.vpc = vpc;
             return this;

@@ -26,6 +26,10 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends com.
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return Specifies the frequency for the operation, using the unix-cron format.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -54,11 +58,23 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends com.
             $ = new ResourcePolicyInstanceSchedulePolicyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Specifies the frequency for the operation, using the unix-cron format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }

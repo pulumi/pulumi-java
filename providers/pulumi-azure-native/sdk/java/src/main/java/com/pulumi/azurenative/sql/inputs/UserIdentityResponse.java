@@ -23,6 +23,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return The Azure Active Directory client id.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -34,6 +38,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The Azure Active Directory principal id.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -63,11 +71,23 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UserIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The Azure Active Directory client id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId The Azure Active Directory principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

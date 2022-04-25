@@ -27,6 +27,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
     @Import(name="oldestRecoveryPoint")
     private @Nullable String oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available for this backup item.
+     * 
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -38,6 +42,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
     @Import(name="policyInconsistent")
     private @Nullable Boolean policyInconsistent;
 
+    /**
+     * @return Specifies if backup policy associated with the backup item is inconsistent.
+     * 
+     */
     public Optional<Boolean> policyInconsistent() {
         return Optional.ofNullable(this.policyInconsistent);
     }
@@ -49,6 +57,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
     @Import(name="recoveryPointCount")
     private @Nullable Integer recoveryPointCount;
 
+    /**
+     * @return Number of backup copies available for this backup item.
+     * 
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -79,16 +91,34 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
             $ = new AzureIaaSVMProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param policyInconsistent Specifies if backup policy associated with the backup item is inconsistent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInconsistent(@Nullable Boolean policyInconsistent) {
             $.policyInconsistent = policyInconsistent;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of backup copies available for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;

@@ -27,6 +27,10 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="code")
     private @Nullable Output<String> code;
 
+    /**
+     * @return The status code.
+     * 
+     */
     public Optional<Output<String>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -38,6 +42,10 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="displayStatus")
     private @Nullable Output<String> displayStatus;
 
+    /**
+     * @return The short localizable label for the status.
+     * 
+     */
     public Optional<Output<String>> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
@@ -49,6 +57,10 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="level")
     private @Nullable Output<StatusLevelTypes> level;
 
+    /**
+     * @return The level code.
+     * 
+     */
     public Optional<Output<StatusLevelTypes>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -60,6 +72,10 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return The detailed status message, including for alerts and error messages.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -71,6 +87,10 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
     @Import(name="time")
     private @Nullable Output<String> time;
 
+    /**
+     * @return The time of the status.
+     * 
+     */
     public Optional<Output<String>> time() {
         return Optional.ofNullable(this.time);
     }
@@ -103,47 +123,107 @@ public final class InstanceViewStatusArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceViewStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<String> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code The status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param displayStatus The short localizable label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(@Nullable Output<String> displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param displayStatus The short localizable label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(String displayStatus) {
             return displayStatus(Output.of(displayStatus));
         }
 
+        /**
+         * @param level The level code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<StatusLevelTypes> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level The level code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(StatusLevelTypes level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param message The detailed status message, including for alerts and error messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message The detailed status message, including for alerts and error messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param time The time of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time The time of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

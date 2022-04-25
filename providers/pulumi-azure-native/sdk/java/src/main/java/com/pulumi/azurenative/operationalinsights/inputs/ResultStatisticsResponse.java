@@ -24,6 +24,10 @@ public final class ResultStatisticsResponse extends com.pulumi.resources.InvokeA
     @Import(name="ingestedRecords", required=true)
     private Integer ingestedRecords;
 
+    /**
+     * @return The number of rows that were returned by the search job.
+     * 
+     */
     public Integer ingestedRecords() {
         return this.ingestedRecords;
     }
@@ -35,6 +39,10 @@ public final class ResultStatisticsResponse extends com.pulumi.resources.InvokeA
     @Import(name="progress", required=true)
     private Double progress;
 
+    /**
+     * @return Search job completion percentage.
+     * 
+     */
     public Double progress() {
         return this.progress;
     }
@@ -64,11 +72,23 @@ public final class ResultStatisticsResponse extends com.pulumi.resources.InvokeA
             $ = new ResultStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingestedRecords The number of rows that were returned by the search job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingestedRecords(Integer ingestedRecords) {
             $.ingestedRecords = ingestedRecords;
             return this;
         }
 
+        /**
+         * @param progress Search job completion percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Double progress) {
             $.progress = progress;
             return this;

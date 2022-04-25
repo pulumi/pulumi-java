@@ -25,6 +25,10 @@ public final class RuleManagementEventClaimsDataSourceResponse extends com.pulum
     @Import(name="emailAddress")
     private @Nullable String emailAddress;
 
+    /**
+     * @return the email address.
+     * 
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -53,6 +57,12 @@ public final class RuleManagementEventClaimsDataSourceResponse extends com.pulum
             $ = new RuleManagementEventClaimsDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress the email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable String emailAddress) {
             $.emailAddress = emailAddress;
             return this;

@@ -26,6 +26,10 @@ public final class AccessPolicyUserArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The AWS SSO ID of the user.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class AccessPolicyUserArgs extends com.pulumi.resources.ResourceArg
             $ = new AccessPolicyUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The AWS SSO ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The AWS SSO ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

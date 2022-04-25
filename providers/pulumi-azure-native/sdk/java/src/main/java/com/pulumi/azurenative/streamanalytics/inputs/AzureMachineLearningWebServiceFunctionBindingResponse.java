@@ -30,6 +30,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="apiKey")
     private @Nullable String apiKey;
 
+    /**
+     * @return The API key used to authenticate with Request-Response endpoint.
+     * 
+     */
     public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
@@ -41,6 +45,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="batchSize")
     private @Nullable Integer batchSize;
 
+    /**
+     * @return Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
+     * 
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -52,6 +60,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -63,6 +75,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="inputs")
     private @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
 
+    /**
+     * @return The inputs for the Azure Machine Learning web service endpoint.
+     * 
+     */
     public Optional<AzureMachineLearningWebServiceInputsResponse> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -74,6 +90,10 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="outputs")
     private @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
 
+    /**
+     * @return A list of outputs from the Azure Machine Learning web service endpoint execution.
+     * 
+     */
     public Optional<List<AzureMachineLearningWebServiceOutputColumnResponse>> outputs() {
         return Optional.ofNullable(this.outputs);
     }
@@ -86,6 +106,11 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the function binding type.
+     * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -119,35 +144,78 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
             $ = new AzureMachineLearningWebServiceFunctionBindingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiKey The API key used to authenticate with Request-Response endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(@Nullable String apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param batchSize Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Integer batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param endpoint The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param inputs The inputs for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable AzureMachineLearningWebServiceInputsResponse inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param outputs A list of outputs from the Azure Machine Learning web service endpoint execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs A list of outputs from the Azure Machine Learning web service endpoint execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(AzureMachineLearningWebServiceOutputColumnResponse... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param type Indicates the function binding type.
+         * Expected value is &#39;Microsoft.MachineLearning/WebService&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

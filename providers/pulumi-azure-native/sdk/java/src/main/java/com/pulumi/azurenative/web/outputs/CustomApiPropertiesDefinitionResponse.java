@@ -19,62 +19,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomApiPropertiesDefinitionResponse {
     /**
-     * API Definitions
+     * @return API Definitions
      * 
      */
     private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
     /**
-     * The API type
+     * @return The API type
      * 
      */
     private final @Nullable String apiType;
     /**
-     * The API backend service
+     * @return The API backend service
      * 
      */
     private final @Nullable ApiResourceBackendServiceResponse backendService;
     /**
-     * Brand color
+     * @return Brand color
      * 
      */
     private final @Nullable String brandColor;
     /**
-     * The custom API capabilities
+     * @return The custom API capabilities
      * 
      */
     private final @Nullable List<String> capabilities;
     /**
-     * Connection parameters
+     * @return Connection parameters
      * 
      */
     private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
     /**
-     * The custom API description
+     * @return The custom API description
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name
+     * @return The display name
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The icon URI
+     * @return The icon URI
      * 
      */
     private final @Nullable String iconUri;
     /**
-     * Runtime URLs
+     * @return Runtime URLs
      * 
      */
     private final @Nullable List<String> runtimeUrls;
     /**
-     * The JSON representation of the swagger
+     * @return The JSON representation of the swagger
      * 
      */
     private final @Nullable Object swagger;
     /**
-     * The WSDL definition
+     * @return The WSDL definition
      * 
      */
     private final @Nullable WsdlDefinitionResponse wsdlDefinition;
@@ -108,86 +108,86 @@ public final class CustomApiPropertiesDefinitionResponse {
     }
 
     /**
-     * API Definitions
+     * @return API Definitions
      * 
-    */
+     */
     public Optional<ApiResourceDefinitionsResponse> apiDefinitions() {
         return Optional.ofNullable(this.apiDefinitions);
     }
     /**
-     * The API type
+     * @return The API type
      * 
-    */
+     */
     public Optional<String> apiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
-     * The API backend service
+     * @return The API backend service
      * 
-    */
+     */
     public Optional<ApiResourceBackendServiceResponse> backendService() {
         return Optional.ofNullable(this.backendService);
     }
     /**
-     * Brand color
+     * @return Brand color
      * 
-    */
+     */
     public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
-     * The custom API capabilities
+     * @return The custom API capabilities
      * 
-    */
+     */
     public List<String> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
-     * Connection parameters
+     * @return Connection parameters
      * 
-    */
+     */
     public Map<String,ConnectionParameterResponse> connectionParameters() {
         return this.connectionParameters == null ? Map.of() : this.connectionParameters;
     }
     /**
-     * The custom API description
+     * @return The custom API description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name
+     * @return The display name
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The icon URI
+     * @return The icon URI
      * 
-    */
+     */
     public Optional<String> iconUri() {
         return Optional.ofNullable(this.iconUri);
     }
     /**
-     * Runtime URLs
+     * @return Runtime URLs
      * 
-    */
+     */
     public List<String> runtimeUrls() {
         return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
     }
     /**
-     * The JSON representation of the swagger
+     * @return The JSON representation of the swagger
      * 
-    */
+     */
     public Optional<Object> swagger() {
         return Optional.ofNullable(this.swagger);
     }
     /**
-     * The WSDL definition
+     * @return The WSDL definition
      * 
-    */
+     */
     public Optional<WsdlDefinitionResponse> wsdlDefinition() {
         return Optional.ofNullable(this.wsdlDefinition);
     }

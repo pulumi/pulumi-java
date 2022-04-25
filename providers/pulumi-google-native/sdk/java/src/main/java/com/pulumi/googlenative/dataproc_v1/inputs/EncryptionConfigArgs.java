@@ -26,6 +26,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gcePdKmsKeyName")
     private @Nullable Output<String> gcePdKmsKeyName;
 
+    /**
+     * @return Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     * 
+     */
     public Optional<Output<String>> gcePdKmsKeyName() {
         return Optional.ofNullable(this.gcePdKmsKeyName);
     }
@@ -54,11 +58,23 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
             $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcePdKmsKeyName Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePdKmsKeyName(@Nullable Output<String> gcePdKmsKeyName) {
             $.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
 
+        /**
+         * @param gcePdKmsKeyName Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
             return gcePdKmsKeyName(Output.of(gcePdKmsKeyName));
         }

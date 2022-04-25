@@ -26,6 +26,10 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return a property bag of settings. This value can be empty.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -37,6 +41,10 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
     @Import(name="serviceUri")
     private @Nullable String serviceUri;
 
+    /**
+     * @return the service address to receive the notification.
+     * 
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -66,11 +74,23 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
             $ = new WebhookNotificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties a property bag of settings. This value can be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param serviceUri the service address to receive the notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable String serviceUri) {
             $.serviceUri = serviceUri;
             return this;

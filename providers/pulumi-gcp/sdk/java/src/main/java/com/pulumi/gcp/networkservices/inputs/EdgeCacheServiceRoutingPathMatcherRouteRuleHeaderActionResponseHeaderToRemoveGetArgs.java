@@ -21,6 +21,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     @Import(name="headerName", required=true)
     private Output<String> headerName;
 
+    /**
+     * @return Headers to remove from the response prior to sending it back to the client.
+     * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+     * 
+     */
     public Output<String> headerName() {
         return this.headerName;
     }
@@ -49,11 +54,25 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
             $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(Output<String> headerName) {
             $.headerName = headerName;
             return this;
         }
 
+        /**
+         * @param headerName Headers to remove from the response prior to sending it back to the client.
+         * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerName(String headerName) {
             return headerName(Output.of(headerName));
         }

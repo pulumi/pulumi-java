@@ -28,6 +28,10 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends com.pul
     @Import(name="authorizationRule", required=true)
     private Output<ExprArgs> authorizationRule;
 
+    /**
+     * @return The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+     * 
+     */
     public Output<ExprArgs> authorizationRule() {
         return this.authorizationRule;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends com.pul
     @Import(name="resourceAttributes")
     private @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
+    /**
+     * @return The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+     * 
+     */
     public Optional<Output<List<AttributeArgs>>> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
@@ -68,24 +76,54 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyArgs extends com.pul
             $ = new GoogleCloudHealthcareV1beta1ConsentPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRule The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRule(Output<ExprArgs> authorizationRule) {
             $.authorizationRule = authorizationRule;
             return this;
         }
 
+        /**
+         * @param authorizationRule The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&amp;&amp;`), `OR` (`||`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRule(ExprArgs authorizationRule) {
             return authorizationRule(Output.of(authorizationRule));
         }
 
+        /**
+         * @param resourceAttributes The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
             $.resourceAttributes = resourceAttributes;
             return this;
         }
 
+        /**
+         * @param resourceAttributes The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(List<AttributeArgs> resourceAttributes) {
             return resourceAttributes(Output.of(resourceAttributes));
         }
 
+        /**
+         * @param resourceAttributes The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
         }

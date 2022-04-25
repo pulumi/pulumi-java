@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ErrorAdditionalInfoResponse {
     /**
-     * The additional info.
+     * @return The additional info.
      * 
      */
     private final Object info;
     /**
-     * The additional info type.
+     * @return The additional info type.
      * 
      */
     private final String type;
@@ -30,16 +30,16 @@ public final class ErrorAdditionalInfoResponse {
     }
 
     /**
-     * The additional info.
+     * @return The additional info.
      * 
-    */
+     */
     public Object info() {
         return this.info;
     }
     /**
-     * The additional info type.
+     * @return The additional info type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

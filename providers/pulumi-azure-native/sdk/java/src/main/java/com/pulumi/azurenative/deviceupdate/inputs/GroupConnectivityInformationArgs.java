@@ -27,6 +27,10 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="customerVisibleFqdns")
     private @Nullable Output<List<String>> customerVisibleFqdns;
 
+    /**
+     * @return List of customer visible FQDNs.
+     * 
+     */
     public Optional<Output<List<String>>> customerVisibleFqdns() {
         return Optional.ofNullable(this.customerVisibleFqdns);
     }
@@ -38,6 +42,10 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceArmRegion")
     private @Nullable Output<String> privateLinkServiceArmRegion;
 
+    /**
+     * @return PrivateLinkService ARM region.
+     * 
+     */
     public Optional<Output<String>> privateLinkServiceArmRegion() {
         return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
@@ -49,6 +57,10 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
     @Import(name="redirectMapId")
     private @Nullable Output<String> redirectMapId;
 
+    /**
+     * @return Redirect map ID.
+     * 
+     */
     public Optional<Output<String>> redirectMapId() {
         return Optional.ofNullable(this.redirectMapId);
     }
@@ -79,33 +91,75 @@ public final class GroupConnectivityInformationArgs extends com.pulumi.resources
             $ = new GroupConnectivityInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerVisibleFqdns List of customer visible FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerVisibleFqdns(@Nullable Output<List<String>> customerVisibleFqdns) {
             $.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
 
+        /**
+         * @param customerVisibleFqdns List of customer visible FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerVisibleFqdns(List<String> customerVisibleFqdns) {
             return customerVisibleFqdns(Output.of(customerVisibleFqdns));
         }
 
+        /**
+         * @param customerVisibleFqdns List of customer visible FQDNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
             return customerVisibleFqdns(List.of(customerVisibleFqdns));
         }
 
+        /**
+         * @param privateLinkServiceArmRegion PrivateLinkService ARM region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceArmRegion(@Nullable Output<String> privateLinkServiceArmRegion) {
             $.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceArmRegion PrivateLinkService ARM region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceArmRegion(String privateLinkServiceArmRegion) {
             return privateLinkServiceArmRegion(Output.of(privateLinkServiceArmRegion));
         }
 
+        /**
+         * @param redirectMapId Redirect map ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectMapId(@Nullable Output<String> redirectMapId) {
             $.redirectMapId = redirectMapId;
             return this;
         }
 
+        /**
+         * @param redirectMapId Redirect map ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectMapId(String redirectMapId) {
             return redirectMapId(Output.of(redirectMapId));
         }

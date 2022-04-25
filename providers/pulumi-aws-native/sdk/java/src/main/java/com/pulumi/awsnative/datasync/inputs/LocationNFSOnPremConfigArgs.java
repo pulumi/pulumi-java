@@ -25,6 +25,10 @@ public final class LocationNFSOnPremConfigArgs extends com.pulumi.resources.Reso
     @Import(name="agentArns", required=true)
     private Output<List<String>> agentArns;
 
+    /**
+     * @return ARN(s) of the agent(s) to use for an NFS location.
+     * 
+     */
     public Output<List<String>> agentArns() {
         return this.agentArns;
     }
@@ -53,15 +57,33 @@ public final class LocationNFSOnPremConfigArgs extends com.pulumi.resources.Reso
             $ = new LocationNFSOnPremConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an NFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(Output<List<String>> agentArns) {
             $.agentArns = agentArns;
             return this;
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an NFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(List<String> agentArns) {
             return agentArns(Output.of(agentArns));
         }
 
+        /**
+         * @param agentArns ARN(s) of the agent(s) to use for an NFS location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
         }

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BootDiagnosticsResponse {
     /**
-     * Whether boot diagnostics should be enabled on the Virtual Machine.
+     * @return Whether boot diagnostics should be enabled on the Virtual Machine.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+     * @return Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
      * 
      */
     private final @Nullable String storageUri;
@@ -32,16 +32,16 @@ public final class BootDiagnosticsResponse {
     }
 
     /**
-     * Whether boot diagnostics should be enabled on the Virtual Machine.
+     * @return Whether boot diagnostics should be enabled on the Virtual Machine.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
+     * @return Uri of the storage account to use for placing the console output and screenshot. &lt;br&gt;&lt;br&gt;If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
      * 
-    */
+     */
     public Optional<String> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }

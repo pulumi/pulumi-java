@@ -19,64 +19,64 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse {
     /**
-     * Azure-AsyncOperation Error info.
+     * @return Azure-AsyncOperation Error info.
      * 
      */
     private final @Nullable ErrorEntityResponse error;
     /**
-     * Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+     * @return Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
      * value for GET requests only.
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
      * 
      */
     private final @Nullable String id;
     /**
-     * MSI resource
+     * @return MSI resource
      * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
-     * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+     * @return Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
      * 
      */
     private final @Nullable String location;
     /**
-     * Name of resource.
+     * @return Name of resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * Azure resource manager plan.
+     * @return Azure resource manager plan.
      * 
      */
     private final @Nullable ArmPlanResponse plan;
     /**
-     * Resource specific properties.
+     * @return Resource specific properties.
      * 
      */
     private final @Nullable RemotePrivateEndpointConnectionResponse properties;
     /**
-     * SKU description of the resource.
+     * @return SKU description of the resource.
      * 
      */
     private final @Nullable SkuDescriptionResponse sku;
     /**
-     * Azure-AsyncOperation Status info.
+     * @return Azure-AsyncOperation Status info.
      * 
      */
     private final @Nullable String status;
     /**
-     * Tags associated with resource.
+     * @return Tags associated with resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of resource e.g &#34;Microsoft.Web/sites&#34;.
+     * @return Type of resource e.g &#34;Microsoft.Web/sites&#34;.
      * 
      */
     private final @Nullable String type;
     /**
-     * Logical Availability Zones the service is hosted in
+     * @return Logical Availability Zones the service is hosted in
      * 
      */
     private final @Nullable List<String> zones;
@@ -110,88 +110,88 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     }
 
     /**
-     * Azure-AsyncOperation Error info.
+     * @return Azure-AsyncOperation Error info.
      * 
-    */
+     */
     public Optional<ErrorEntityResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
+     * @return Resource Id. Typically ID is populated only for responses to GET requests. Caller is responsible for passing in this
      * value for GET requests only.
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * MSI resource
+     * @return MSI resource
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
+     * @return Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of resource.
+     * @return Name of resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Azure resource manager plan.
+     * @return Azure resource manager plan.
      * 
-    */
+     */
     public Optional<ArmPlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Resource specific properties.
+     * @return Resource specific properties.
      * 
-    */
+     */
     public Optional<RemotePrivateEndpointConnectionResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * SKU description of the resource.
+     * @return SKU description of the resource.
      * 
-    */
+     */
     public Optional<SkuDescriptionResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Azure-AsyncOperation Status info.
+     * @return Azure-AsyncOperation Status info.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Tags associated with resource.
+     * @return Tags associated with resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of resource e.g &#34;Microsoft.Web/sites&#34;.
+     * @return Type of resource e.g &#34;Microsoft.Web/sites&#34;.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Logical Availability Zones the service is hosted in
+     * @return Logical Availability Zones the service is hosted in
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

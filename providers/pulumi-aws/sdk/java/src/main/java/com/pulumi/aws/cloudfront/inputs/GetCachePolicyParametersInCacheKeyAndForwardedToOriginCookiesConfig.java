@@ -21,6 +21,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     @Import(name="cookieBehavior", required=true)
     private String cookieBehavior;
 
+    /**
+     * @return Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+     * 
+     */
     public String cookieBehavior() {
         return this.cookieBehavior;
     }
@@ -32,6 +36,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     @Import(name="cookies", required=true)
     private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
+    /**
+     * @return Object that contains a list of cookie names. See Items for more information.
+     * 
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies() {
         return this.cookies;
     }
@@ -61,16 +69,34 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
             $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cookieBehavior Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieBehavior(String cookieBehavior) {
             $.cookieBehavior = cookieBehavior;
             return this;
         }
 
+        /**
+         * @param cookies Object that contains a list of cookie names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookies(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
             $.cookies = cookies;
             return this;
         }
 
+        /**
+         * @param cookies Object that contains a list of cookie names. See Items for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookies(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie... cookies) {
             return cookies(List.of(cookies));
         }

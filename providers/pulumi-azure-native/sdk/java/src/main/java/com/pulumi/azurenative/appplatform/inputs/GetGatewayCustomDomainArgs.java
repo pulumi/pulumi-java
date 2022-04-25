@@ -19,6 +19,10 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The name of the Spring Cloud Gateway custom domain.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -30,6 +34,10 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of Spring Cloud Gateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -41,6 +49,10 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetGatewayCustomDomainArgs extends com.pulumi.resources.Invok
             $ = new GetGatewayCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The name of the Spring Cloud Gateway custom domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

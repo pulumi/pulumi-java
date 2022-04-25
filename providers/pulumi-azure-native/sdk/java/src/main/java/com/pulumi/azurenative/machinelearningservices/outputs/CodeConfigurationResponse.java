@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CodeConfigurationResponse {
     /**
-     * ARM resource ID of the code asset.
+     * @return ARM resource ID of the code asset.
      * 
      */
     private final @Nullable String codeId;
     /**
-     * The script to execute on startup. eg. &#34;score.py&#34;
+     * @return The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     private final String scoringScript;
@@ -31,16 +31,16 @@ public final class CodeConfigurationResponse {
     }
 
     /**
-     * ARM resource ID of the code asset.
+     * @return ARM resource ID of the code asset.
      * 
-    */
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * The script to execute on startup. eg. &#34;score.py&#34;
+     * @return The script to execute on startup. eg. &#34;score.py&#34;
      * 
-    */
+     */
     public String scoringScript() {
         return this.scoringScript;
     }

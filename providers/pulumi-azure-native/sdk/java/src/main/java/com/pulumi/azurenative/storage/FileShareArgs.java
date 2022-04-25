@@ -28,6 +28,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessTier")
     private @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
+    /**
+     * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+     * 
+     */
     public Optional<Output<Either<String,ShareAccessTier>>> accessTier() {
         return Optional.ofNullable(this.accessTier);
     }
@@ -39,6 +43,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -50,6 +58,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledProtocols")
     private @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
+    /**
+     * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
+     * 
+     */
     public Optional<Output<Either<String,EnabledProtocols>>> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -61,6 +73,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expand")
     private @Nullable Output<String> expand;
 
+    /**
+     * @return Optional, used to create a snapshot.
+     * 
+     */
     public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -72,6 +88,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return A name-value pair to associate with the share as metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -83,6 +103,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -94,6 +118,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootSquash")
     private @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
+    /**
+     * @return The property is for NFS share only. The default is NoRootSquash.
+     * 
+     */
     public Optional<Output<Either<String,RootSquashType>>> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
@@ -105,6 +133,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName")
     private @Nullable Output<String> shareName;
 
+    /**
+     * @return The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public Optional<Output<String>> shareName() {
         return Optional.ofNullable(this.shareName);
     }
@@ -116,6 +148,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareQuota")
     private @Nullable Output<Integer> shareQuota;
 
+    /**
+     * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+     * 
+     */
     public Optional<Output<Integer>> shareQuota() {
         return Optional.ofNullable(this.shareQuota);
     }
@@ -152,107 +188,251 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FileShareArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(@Nullable Output<Either<String,ShareAccessTier>> accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param accessTier Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(Either<String,ShareAccessTier> accessTier) {
             return accessTier(Output.of(accessTier));
         }
 
+        /**
+         * @param accessTier Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(String accessTier) {
             return accessTier(Either.ofLeft(accessTier));
         }
 
+        /**
+         * @param accessTier Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(ShareAccessTier accessTier) {
             return accessTier(Either.ofRight(accessTier));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param enabledProtocols The authentication protocol that is used for the file share. Can only be specified when creating a share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable Output<Either<String,EnabledProtocols>> enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;
         }
 
+        /**
+         * @param enabledProtocols The authentication protocol that is used for the file share. Can only be specified when creating a share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(Either<String,EnabledProtocols> enabledProtocols) {
             return enabledProtocols(Output.of(enabledProtocols));
         }
 
+        /**
+         * @param enabledProtocols The authentication protocol that is used for the file share. Can only be specified when creating a share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(String enabledProtocols) {
             return enabledProtocols(Either.ofLeft(enabledProtocols));
         }
 
+        /**
+         * @param enabledProtocols The authentication protocol that is used for the file share. Can only be specified when creating a share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(EnabledProtocols enabledProtocols) {
             return enabledProtocols(Either.ofRight(enabledProtocols));
         }
 
+        /**
+         * @param expand Optional, used to create a snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param expand Optional, used to create a snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 
+        /**
+         * @param metadata A name-value pair to associate with the share as metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata A name-value pair to associate with the share as metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rootSquash The property is for NFS share only. The default is NoRootSquash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSquash(@Nullable Output<Either<String,RootSquashType>> rootSquash) {
             $.rootSquash = rootSquash;
             return this;
         }
 
+        /**
+         * @param rootSquash The property is for NFS share only. The default is NoRootSquash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSquash(Either<String,RootSquashType> rootSquash) {
             return rootSquash(Output.of(rootSquash));
         }
 
+        /**
+         * @param rootSquash The property is for NFS share only. The default is NoRootSquash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSquash(String rootSquash) {
             return rootSquash(Either.ofLeft(rootSquash));
         }
 
+        /**
+         * @param rootSquash The property is for NFS share only. The default is NoRootSquash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSquash(RootSquashType rootSquash) {
             return rootSquash(Either.ofRight(rootSquash));
         }
 
+        /**
+         * @param shareName The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(@Nullable Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param shareQuota The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareQuota(@Nullable Output<Integer> shareQuota) {
             $.shareQuota = shareQuota;
             return this;
         }
 
+        /**
+         * @param shareQuota The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareQuota(Integer shareQuota) {
             return shareQuota(Output.of(shareQuota));
         }

@@ -23,6 +23,10 @@ public final class DatabaseFlagsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class DatabaseFlagsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn&#39;t take a value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class DatabaseFlagsResponse extends com.pulumi.resources.InvokeArgs
             $ = new DatabaseFlagsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn&#39;t take a value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

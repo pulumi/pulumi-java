@@ -37,6 +37,10 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipamPoolId", required=true)
     private Output<String> ipamPoolId;
 
+    /**
+     * @return Id of the IPAM Pool.
+     * 
+     */
     public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
@@ -48,6 +52,10 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="netmaskLength")
     private @Nullable Output<Integer> netmaskLength;
 
+    /**
+     * @return The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
+     * 
+     */
     public Optional<Output<Integer>> netmaskLength() {
         return Optional.ofNullable(this.netmaskLength);
     }
@@ -97,20 +105,44 @@ public final class IPAMAllocationArgs extends com.pulumi.resources.ResourceArgs 
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipamPoolId Id of the IPAM Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolId(Output<String> ipamPoolId) {
             $.ipamPoolId = ipamPoolId;
             return this;
         }
 
+        /**
+         * @param ipamPoolId Id of the IPAM Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamPoolId(String ipamPoolId) {
             return ipamPoolId(Output.of(ipamPoolId));
         }
 
+        /**
+         * @param netmaskLength The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             $.netmaskLength = netmaskLength;
             return this;
         }
 
+        /**
+         * @param netmaskLength The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netmaskLength(Integer netmaskLength) {
             return netmaskLength(Output.of(netmaskLength));
         }

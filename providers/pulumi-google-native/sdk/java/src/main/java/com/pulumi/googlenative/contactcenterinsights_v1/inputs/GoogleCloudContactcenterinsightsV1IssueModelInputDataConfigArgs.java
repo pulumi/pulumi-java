@@ -27,6 +27,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return A filter to reduce the conversations used for training the model to a specific subset.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
     @Import(name="medium")
     private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
+    /**
+     * @return Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+     * 
+     */
     public Optional<Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium>> medium() {
         return Optional.ofNullable(this.medium);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
             $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A filter to reduce the conversations used for training the model to a specific subset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter A filter to reduce the conversations used for training the model to a specific subset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param medium Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
             $.medium = medium;
             return this;
         }
 
+        /**
+         * @param medium Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium medium) {
             return medium(Output.of(medium));
         }

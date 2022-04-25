@@ -26,6 +26,10 @@ public final class PropertiesNetworkInjectionArgs extends com.pulumi.resources.R
     @Import(name="virtualNetworks")
     private @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
+    /**
+     * @return Network injection configuration
+     * 
+     */
     public Optional<Output<VirtualNetworkPropertiesListArgs>> virtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }
@@ -54,11 +58,23 @@ public final class PropertiesNetworkInjectionArgs extends com.pulumi.resources.R
             $ = new PropertiesNetworkInjectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNetworks Network injection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(@Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks) {
             $.virtualNetworks = virtualNetworks;
             return this;
         }
 
+        /**
+         * @param virtualNetworks Network injection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworks(VirtualNetworkPropertiesListArgs virtualNetworks) {
             return virtualNetworks(Output.of(virtualNetworks));
         }

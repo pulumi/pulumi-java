@@ -26,6 +26,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataTransferSubscriberFeePercent")
     private @Nullable Output<Integer> dataTransferSubscriberFeePercent;
 
+    /**
+     * @return Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+     * 
+     */
     public Optional<Output<Integer>> dataTransferSubscriberFeePercent() {
         return Optional.ofNullable(this.dataTransferSubscriberFeePercent);
     }
@@ -37,6 +41,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return A description of the entitlement.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -48,6 +56,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryption")
     private @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
 
+    /**
+     * @return The type of encryption that will be used on the output that is associated with this entitlement.
+     * 
+     */
     public Optional<Output<FlowEntitlementEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -59,6 +71,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="entitlementStatus")
     private @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
 
+    /**
+     * @return  An indication of whether the entitlement is enabled.
+     * 
+     */
     public Optional<Output<FlowEntitlementEntitlementStatus>> entitlementStatus() {
         return Optional.ofNullable(this.entitlementStatus);
     }
@@ -70,6 +86,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="flowArn", required=true)
     private Output<String> flowArn;
 
+    /**
+     * @return The ARN of the flow.
+     * 
+     */
     public Output<String> flowArn() {
         return this.flowArn;
     }
@@ -81,6 +101,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the entitlement.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,6 +116,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subscribers", required=true)
     private Output<List<String>> subscribers;
 
+    /**
+     * @return The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+     * 
+     */
     public Output<List<String>> subscribers() {
         return this.subscribers;
     }
@@ -126,69 +154,159 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
             $ = new FlowEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTransferSubscriberFeePercent Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferSubscriberFeePercent(@Nullable Output<Integer> dataTransferSubscriberFeePercent) {
             $.dataTransferSubscriberFeePercent = dataTransferSubscriberFeePercent;
             return this;
         }
 
+        /**
+         * @param dataTransferSubscriberFeePercent Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTransferSubscriberFeePercent(Integer dataTransferSubscriberFeePercent) {
             return dataTransferSubscriberFeePercent(Output.of(dataTransferSubscriberFeePercent));
         }
 
+        /**
+         * @param description A description of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryption The type of encryption that will be used on the output that is associated with this entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<FlowEntitlementEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption The type of encryption that will be used on the output that is associated with this entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(FlowEntitlementEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param entitlementStatus  An indication of whether the entitlement is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitlementStatus(@Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus) {
             $.entitlementStatus = entitlementStatus;
             return this;
         }
 
+        /**
+         * @param entitlementStatus  An indication of whether the entitlement is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entitlementStatus(FlowEntitlementEntitlementStatus entitlementStatus) {
             return entitlementStatus(Output.of(entitlementStatus));
         }
 
+        /**
+         * @param flowArn The ARN of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(Output<String> flowArn) {
             $.flowArn = flowArn;
             return this;
         }
 
+        /**
+         * @param flowArn The ARN of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(String flowArn) {
             return flowArn(Output.of(flowArn));
         }
 
+        /**
+         * @param name The name of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the entitlement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subscribers The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(Output<List<String>> subscribers) {
             $.subscribers = subscribers;
             return this;
         }
 
+        /**
+         * @param subscribers The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(List<String> subscribers) {
             return subscribers(Output.of(subscribers));
         }
 
+        /**
+         * @param subscribers The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscribers(String... subscribers) {
             return subscribers(List.of(subscribers));
         }

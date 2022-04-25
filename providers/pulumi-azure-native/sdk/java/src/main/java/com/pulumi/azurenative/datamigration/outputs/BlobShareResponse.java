@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BlobShareResponse {
     /**
-     * SAS URI of Azure Storage Account Container.
+     * @return SAS URI of Azure Storage Account Container.
      * 
      */
     private final String sasUri;
@@ -21,9 +21,9 @@ public final class BlobShareResponse {
     }
 
     /**
-     * SAS URI of Azure Storage Account Container.
+     * @return SAS URI of Azure Storage Account Container.
      * 
-    */
+     */
     public String sasUri() {
         return this.sasUri;
     }

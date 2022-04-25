@@ -21,6 +21,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="datastoreId")
     private @Nullable String datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the data output will be stored.
+     * 
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -32,6 +36,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Mechanism for data movement to datastore.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -43,6 +51,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="pathOnCompute")
     private @Nullable String pathOnCompute;
 
+    /**
+     * @return Location of data inside the container process.
+     * 
+     */
     public Optional<String> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
@@ -54,6 +66,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="pathOnDatastore")
     private @Nullable String pathOnDatastore;
 
+    /**
+     * @return Path within the datastore to the data.
+     * 
+     */
     public Optional<String> pathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }
@@ -85,21 +101,45 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
             $ = new OutputDataBindingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the data output will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable String datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param mode Mechanism for data movement to datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
             $.pathOnCompute = pathOnCompute;
             return this;
         }
 
+        /**
+         * @param pathOnDatastore Path within the datastore to the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
             $.pathOnDatastore = pathOnDatastore;
             return this;

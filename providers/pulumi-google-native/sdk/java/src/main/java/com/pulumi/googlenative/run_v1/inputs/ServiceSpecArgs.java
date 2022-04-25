@@ -28,6 +28,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="template")
     private @Nullable Output<RevisionTemplateArgs> template;
 
+    /**
+     * @return Template holds the latest specification for the Revision to be stamped out.
+     * 
+     */
     public Optional<Output<RevisionTemplateArgs>> template() {
         return Optional.ofNullable(this.template);
     }
@@ -39,6 +43,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
     private @Nullable Output<List<TrafficTargetArgs>> traffic;
 
+    /**
+     * @return Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+     * 
+     */
     public Optional<Output<List<TrafficTargetArgs>>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
@@ -68,24 +76,54 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param template Template holds the latest specification for the Revision to be stamped out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(@Nullable Output<RevisionTemplateArgs> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template Template holds the latest specification for the Revision to be stamped out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(RevisionTemplateArgs template) {
             return template(Output.of(template));
         }
 
+        /**
+         * @param traffic Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
             $.traffic = traffic;
             return this;
         }
 
+        /**
+         * @param traffic Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(List<TrafficTargetArgs> traffic) {
             return traffic(Output.of(traffic));
         }
 
+        /**
+         * @param traffic Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
         }

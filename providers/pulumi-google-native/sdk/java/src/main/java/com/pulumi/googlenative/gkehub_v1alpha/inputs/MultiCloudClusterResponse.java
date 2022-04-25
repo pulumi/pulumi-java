@@ -24,6 +24,10 @@ public final class MultiCloudClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterMissing", required=true)
     private Boolean clusterMissing;
 
+    /**
+     * @return If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
+     * 
+     */
     public Boolean clusterMissing() {
         return this.clusterMissing;
     }
@@ -35,6 +39,10 @@ public final class MultiCloudClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceLink", required=true)
     private String resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     * 
+     */
     public String resourceLink() {
         return this.resourceLink;
     }
@@ -64,11 +72,23 @@ public final class MultiCloudClusterResponse extends com.pulumi.resources.Invoke
             $ = new MultiCloudClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterMissing If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMissing(Boolean clusterMissing) {
             $.clusterMissing = clusterMissing;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             $.resourceLink = resourceLink;
             return this;

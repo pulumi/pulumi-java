@@ -27,6 +27,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends com
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends com
     @Import(name="versionVariants")
     private @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
+    /**
+     * @return The flow versions as the variants of this experiment.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowCxV3VersionVariantsArgs>> versionVariants() {
         return Optional.ofNullable(this.versionVariants);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionArgs extends com
             $ = new GoogleCloudDialogflowCxV3ExperimentDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. &#34;query_input.language_code=en&#34; See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
             $.versionVariants = versionVariants;
             return this;
         }
 
+        /**
+         * @param versionVariants The flow versions as the variants of this experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
             return versionVariants(Output.of(versionVariants));
         }

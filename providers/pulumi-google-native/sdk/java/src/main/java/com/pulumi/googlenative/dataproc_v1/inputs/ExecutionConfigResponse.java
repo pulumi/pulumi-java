@@ -24,6 +24,10 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="kmsKey", required=true)
     private String kmsKey;
 
+    /**
+     * @return Optional. The Cloud KMS key to use for encryption.
+     * 
+     */
     public String kmsKey() {
         return this.kmsKey;
     }
@@ -35,6 +39,10 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="networkTags", required=true)
     private List<String> networkTags;
 
+    /**
+     * @return Optional. Tags used for network traffic control.
+     * 
+     */
     public List<String> networkTags() {
         return this.networkTags;
     }
@@ -46,6 +54,10 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="networkUri", required=true)
     private String networkUri;
 
+    /**
+     * @return Optional. Network URI to connect workload to.
+     * 
+     */
     public String networkUri() {
         return this.networkUri;
     }
@@ -57,6 +69,10 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serviceAccount", required=true)
     private String serviceAccount;
 
+    /**
+     * @return Optional. Service account that used to execute workload.
+     * 
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
@@ -68,6 +84,10 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="subnetworkUri", required=true)
     private String subnetworkUri;
 
+    /**
+     * @return Optional. Subnetwork URI to connect workload to.
+     * 
+     */
     public String subnetworkUri() {
         return this.subnetworkUri;
     }
@@ -100,30 +120,66 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new ExecutionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey Optional. The Cloud KMS key to use for encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param networkTags Optional. Tags used for network traffic control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(List<String> networkTags) {
             $.networkTags = networkTags;
             return this;
         }
 
+        /**
+         * @param networkTags Optional. Tags used for network traffic control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
 
+        /**
+         * @param networkUri Optional. Network URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Service account that used to execute workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param subnetworkUri Optional. Subnetwork URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkUri(String subnetworkUri) {
             $.subnetworkUri = subnetworkUri;
             return this;

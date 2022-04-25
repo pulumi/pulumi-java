@@ -27,6 +27,10 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="effect")
     private @Nullable Output<NodeTaintEffect> effect;
 
+    /**
+     * @return Effect for taint.
+     * 
+     */
     public Optional<Output<NodeTaintEffect>> effect() {
         return Optional.ofNullable(this.effect);
     }
@@ -38,6 +42,10 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Key for taint.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -49,6 +57,10 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value for taint.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -79,29 +91,65 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeTaintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param effect Effect for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(@Nullable Output<NodeTaintEffect> effect) {
             $.effect = effect;
             return this;
         }
 
+        /**
+         * @param effect Effect for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effect(NodeTaintEffect effect) {
             return effect(Output.of(effect));
         }
 
+        /**
+         * @param key Key for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Key for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value Value for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value for taint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -24,6 +24,10 @@ public final class CustomerManagedEncryptionArgs extends com.pulumi.resources.Re
     @Import(name="kmsKeyName", required=true)
     private Output<String> kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+     * 
+     */
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -52,11 +56,23 @@ public final class CustomerManagedEncryptionArgs extends com.pulumi.resources.Re
             $ = new CustomerManagedEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }

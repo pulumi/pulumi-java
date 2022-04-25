@@ -27,6 +27,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="diskCapacityInBytes")
     private @Nullable Double diskCapacityInBytes;
 
+    /**
+     * @return The disk capacity in bytes.
+     * 
+     */
     public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
@@ -38,6 +42,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="diskId")
     private @Nullable String diskId;
 
+    /**
+     * @return The disk id.
+     * 
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
@@ -49,6 +57,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="diskName")
     private @Nullable String diskName;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -60,6 +72,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="diskResized")
     private @Nullable String diskResized;
 
+    /**
+     * @return A value indicating whether disk is resized.
+     * 
+     */
     public Optional<String> diskResized() {
         return Optional.ofNullable(this.diskResized);
     }
@@ -71,6 +87,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="fileSystemCapacityInBytes")
     private @Nullable Double fileSystemCapacityInBytes;
 
+    /**
+     * @return The disk file system capacity in bytes.
+     * 
+     */
     public Optional<Double> fileSystemCapacityInBytes() {
         return Optional.ofNullable(this.fileSystemCapacityInBytes);
     }
@@ -82,6 +102,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="healthErrorCode")
     private @Nullable String healthErrorCode;
 
+    /**
+     * @return The health error code for the disk.
+     * 
+     */
     public Optional<String> healthErrorCode() {
         return Optional.ofNullable(this.healthErrorCode);
     }
@@ -93,6 +117,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="lastRpoCalculatedTime")
     private @Nullable String lastRpoCalculatedTime;
 
+    /**
+     * @return The last RPO calculated time.
+     * 
+     */
     public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
@@ -104,6 +132,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="protectionStage")
     private @Nullable String protectionStage;
 
+    /**
+     * @return The protection stage.
+     * 
+     */
     public Optional<String> protectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
@@ -115,6 +147,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="psDataInMegaBytes")
     private @Nullable Double psDataInMegaBytes;
 
+    /**
+     * @return The PS data transit in MB.
+     * 
+     */
     public Optional<Double> psDataInMegaBytes() {
         return Optional.ofNullable(this.psDataInMegaBytes);
     }
@@ -126,6 +162,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="resyncDurationInSeconds")
     private @Nullable Double resyncDurationInSeconds;
 
+    /**
+     * @return The resync duration in seconds.
+     * 
+     */
     public Optional<Double> resyncDurationInSeconds() {
         return Optional.ofNullable(this.resyncDurationInSeconds);
     }
@@ -137,6 +177,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="resyncProgressPercentage")
     private @Nullable Integer resyncProgressPercentage;
 
+    /**
+     * @return The resync progress percentage.
+     * 
+     */
     public Optional<Integer> resyncProgressPercentage() {
         return Optional.ofNullable(this.resyncProgressPercentage);
     }
@@ -148,6 +192,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="resyncRequired")
     private @Nullable String resyncRequired;
 
+    /**
+     * @return A value indicating whether resync is required for this disk.
+     * 
+     */
     public Optional<String> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
@@ -159,6 +207,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="rpoInSeconds")
     private @Nullable Double rpoInSeconds;
 
+    /**
+     * @return The RPO in seconds.
+     * 
+     */
     public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
@@ -170,6 +222,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="sourceDataInMegaBytes")
     private @Nullable Double sourceDataInMegaBytes;
 
+    /**
+     * @return The source data transit in MB.
+     * 
+     */
     public Optional<Double> sourceDataInMegaBytes() {
         return Optional.ofNullable(this.sourceDataInMegaBytes);
     }
@@ -181,6 +237,10 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
     @Import(name="targetDataInMegaBytes")
     private @Nullable Double targetDataInMegaBytes;
 
+    /**
+     * @return The target data transit in MB.
+     * 
+     */
     public Optional<Double> targetDataInMegaBytes() {
         return Optional.ofNullable(this.targetDataInMegaBytes);
     }
@@ -223,76 +283,166 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends com.pulumi.
             $ = new InMageAzureV2ProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskCapacityInBytes The disk capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             $.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
 
+        /**
+         * @param diskId The disk id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(@Nullable String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskName The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(@Nullable String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskResized A value indicating whether disk is resized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskResized(@Nullable String diskResized) {
             $.diskResized = diskResized;
             return this;
         }
 
+        /**
+         * @param fileSystemCapacityInBytes The disk file system capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemCapacityInBytes(@Nullable Double fileSystemCapacityInBytes) {
             $.fileSystemCapacityInBytes = fileSystemCapacityInBytes;
             return this;
         }
 
+        /**
+         * @param healthErrorCode The health error code for the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrorCode(@Nullable String healthErrorCode) {
             $.healthErrorCode = healthErrorCode;
             return this;
         }
 
+        /**
+         * @param lastRpoCalculatedTime The last RPO calculated time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
+        /**
+         * @param protectionStage The protection stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStage(@Nullable String protectionStage) {
             $.protectionStage = protectionStage;
             return this;
         }
 
+        /**
+         * @param psDataInMegaBytes The PS data transit in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder psDataInMegaBytes(@Nullable Double psDataInMegaBytes) {
             $.psDataInMegaBytes = psDataInMegaBytes;
             return this;
         }
 
+        /**
+         * @param resyncDurationInSeconds The resync duration in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncDurationInSeconds(@Nullable Double resyncDurationInSeconds) {
             $.resyncDurationInSeconds = resyncDurationInSeconds;
             return this;
         }
 
+        /**
+         * @param resyncProgressPercentage The resync progress percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             $.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
 
+        /**
+         * @param resyncRequired A value indicating whether resync is required for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncRequired(@Nullable String resyncRequired) {
             $.resyncRequired = resyncRequired;
             return this;
         }
 
+        /**
+         * @param rpoInSeconds The RPO in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             $.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
+        /**
+         * @param sourceDataInMegaBytes The source data transit in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDataInMegaBytes(@Nullable Double sourceDataInMegaBytes) {
             $.sourceDataInMegaBytes = sourceDataInMegaBytes;
             return this;
         }
 
+        /**
+         * @param targetDataInMegaBytes The target data transit in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDataInMegaBytes(@Nullable Double targetDataInMegaBytes) {
             $.targetDataInMegaBytes = targetDataInMegaBytes;
             return this;

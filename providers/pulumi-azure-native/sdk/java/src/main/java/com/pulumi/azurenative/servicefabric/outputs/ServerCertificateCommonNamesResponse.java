@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServerCertificateCommonNamesResponse {
     /**
-     * The list of server certificates referenced by common name that are used to secure the cluster.
+     * @return The list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
     private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
     /**
-     * The local certificate store location.
+     * @return The local certificate store location.
      * 
      */
     private final @Nullable String x509StoreName;
@@ -33,16 +33,16 @@ public final class ServerCertificateCommonNamesResponse {
     }
 
     /**
-     * The list of server certificates referenced by common name that are used to secure the cluster.
+     * @return The list of server certificates referenced by common name that are used to secure the cluster.
      * 
-    */
+     */
     public List<ServerCertificateCommonNameResponse> commonNames() {
         return this.commonNames == null ? List.of() : this.commonNames;
     }
     /**
-     * The local certificate store location.
+     * @return The local certificate store location.
      * 
-    */
+     */
     public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }

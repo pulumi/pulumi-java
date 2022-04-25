@@ -68,6 +68,10 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleLabels")
     private @Nullable List<WebACLLabel> ruleLabels;
 
+    /**
+     * @return Collection of Rule Labels.
+     * 
+     */
     public Optional<List<WebACLLabel>> ruleLabels() {
         return Optional.ofNullable(this.ruleLabels);
     }
@@ -142,11 +146,23 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(@Nullable List<WebACLLabel> ruleLabels) {
             $.ruleLabels = ruleLabels;
             return this;
         }
 
+        /**
+         * @param ruleLabels Collection of Rule Labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleLabels(WebACLLabel... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }

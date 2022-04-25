@@ -25,6 +25,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createStatement", required=true)
     private Output<String> createStatement;
 
+    /**
+     * @return A `CREATE DATABASE` statement, which specifies the ID of the new database. The database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30 characters in length. If the database ID is a reserved word or if it contains a hyphen, the database ID must be enclosed in backticks (`` ` ``).
+     * 
+     */
     public Output<String> createStatement() {
         return this.createStatement;
     }
@@ -36,6 +40,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseDialect")
     private @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
+    /**
+     * @return Optional. The dialect of the Cloud Spanner Database.
+     * 
+     */
     public Optional<Output<DatabaseDatabaseDialect>> databaseDialect() {
         return Optional.ofNullable(this.databaseDialect);
     }
@@ -47,6 +55,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
     private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
+    /**
+     * @return Optional. The encryption configuration for the database. If this field is not specified, Cloud Spanner will encrypt/decrypt all data at rest using Google default encryption.
+     * 
+     */
     public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -58,6 +70,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extraStatements")
     private @Nullable Output<List<String>> extraStatements;
 
+    /**
+     * @return Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
+     * 
+     */
     public Optional<Output<List<String>>> extraStatements() {
         return Optional.ofNullable(this.extraStatements);
     }
@@ -105,42 +121,96 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createStatement A `CREATE DATABASE` statement, which specifies the ID of the new database. The database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30 characters in length. If the database ID is a reserved word or if it contains a hyphen, the database ID must be enclosed in backticks (`` ` ``).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createStatement(Output<String> createStatement) {
             $.createStatement = createStatement;
             return this;
         }
 
+        /**
+         * @param createStatement A `CREATE DATABASE` statement, which specifies the ID of the new database. The database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30 characters in length. If the database ID is a reserved word or if it contains a hyphen, the database ID must be enclosed in backticks (`` ` ``).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createStatement(String createStatement) {
             return createStatement(Output.of(createStatement));
         }
 
+        /**
+         * @param databaseDialect Optional. The dialect of the Cloud Spanner Database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseDialect(@Nullable Output<DatabaseDatabaseDialect> databaseDialect) {
             $.databaseDialect = databaseDialect;
             return this;
         }
 
+        /**
+         * @param databaseDialect Optional. The dialect of the Cloud Spanner Database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseDialect(DatabaseDatabaseDialect databaseDialect) {
             return databaseDialect(Output.of(databaseDialect));
         }
 
+        /**
+         * @param encryptionConfig Optional. The encryption configuration for the database. If this field is not specified, Cloud Spanner will encrypt/decrypt all data at rest using Google default encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             $.encryptionConfig = encryptionConfig;
             return this;
         }
 
+        /**
+         * @param encryptionConfig Optional. The encryption configuration for the database. If this field is not specified, Cloud Spanner will encrypt/decrypt all data at rest using Google default encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
             return encryptionConfig(Output.of(encryptionConfig));
         }
 
+        /**
+         * @param extraStatements Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extraStatements(@Nullable Output<List<String>> extraStatements) {
             $.extraStatements = extraStatements;
             return this;
         }
 
+        /**
+         * @param extraStatements Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extraStatements(List<String> extraStatements) {
             return extraStatements(Output.of(extraStatements));
         }
 
+        /**
+         * @param extraStatements Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extraStatements(String... extraStatements) {
             return extraStatements(List.of(extraStatements));
         }

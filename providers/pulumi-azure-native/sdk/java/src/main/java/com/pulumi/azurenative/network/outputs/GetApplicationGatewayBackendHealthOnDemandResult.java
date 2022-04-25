@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationGatewayBackendHealthOnDemandResult {
     /**
-     * Reference to an ApplicationGatewayBackendAddressPool resource.
+     * @return Reference to an ApplicationGatewayBackendAddressPool resource.
      * 
      */
     private final @Nullable ApplicationGatewayBackendAddressPoolResponse backendAddressPool;
     /**
-     * Application gateway BackendHealthHttp settings.
+     * @return Application gateway BackendHealthHttp settings.
      * 
      */
     private final @Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings;
@@ -32,16 +32,16 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
     }
 
     /**
-     * Reference to an ApplicationGatewayBackendAddressPool resource.
+     * @return Reference to an ApplicationGatewayBackendAddressPool resource.
      * 
-    */
+     */
     public Optional<ApplicationGatewayBackendAddressPoolResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
-     * Application gateway BackendHealthHttp settings.
+     * @return Application gateway BackendHealthHttp settings.
      * 
-    */
+     */
     public Optional<ApplicationGatewayBackendHealthHttpSettingsResponse> backendHealthHttpSettings() {
         return Optional.ofNullable(this.backendHealthHttpSettings);
     }

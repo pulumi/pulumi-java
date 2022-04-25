@@ -19,6 +19,10 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
     @Import(name="roleDefinitionId", required=true)
     private String roleDefinitionId;
 
+    /**
+     * @return The GUID for the Role Definition.
+     * 
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -71,16 +83,34 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends com.pulumi.resour
             $ = new GetSqlResourceSqlRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The GUID for the Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;

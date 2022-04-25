@@ -22,6 +22,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the stream consumer.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -44,6 +52,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the stream consumer.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
     @Import(name="streamArn")
     private @Nullable Output<String> streamArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+     * 
+     */
     public Optional<Output<String>> streamArn() {
         return Optional.ofNullable(this.streamArn);
     }
@@ -86,38 +102,86 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
             $ = new StreamConsumerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param creationTimestamp Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(@Nullable Output<String> streamArn) {
             $.streamArn = streamArn;
             return this;
         }
 
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamArn(String streamArn) {
             return streamArn(Output.of(streamArn));
         }

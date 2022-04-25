@@ -28,6 +28,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="allowMultiLabel")
     private @Nullable Output<Boolean> allowMultiLabel;
 
+    /**
+     * @return Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+     * 
+     */
     public Optional<Output<Boolean>> allowMultiLabel() {
         return Optional.ofNullable(this.allowMultiLabel);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="annotationSpecSet", required=true)
     private Output<String> annotationSpecSet;
 
+    /**
+     * @return Annotation spec set resource name.
+     * 
+     */
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="sentimentConfig")
     private @Nullable Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig;
 
+    /**
+     * @return Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+     * 
+     */
     public Optional<Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs>> sentimentConfig() {
         return Optional.ofNullable(this.sentimentConfig);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
             $ = new GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(@Nullable Output<Boolean> allowMultiLabel) {
             $.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
+        /**
+         * @param allowMultiLabel Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowMultiLabel(Boolean allowMultiLabel) {
             return allowMultiLabel(Output.of(allowMultiLabel));
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             $.annotationSpecSet = annotationSpecSet;
             return this;
         }
 
+        /**
+         * @param annotationSpecSet Annotation spec set resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationSpecSet(String annotationSpecSet) {
             return annotationSpecSet(Output.of(annotationSpecSet));
         }
 
+        /**
+         * @param sentimentConfig Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig) {
             $.sentimentConfig = sentimentConfig;
             return this;
         }
 
+        /**
+         * @param sentimentConfig Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigArgs sentimentConfig) {
             return sentimentConfig(Output.of(sentimentConfig));
         }

@@ -19,6 +19,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userArn", required=true)
     private String userArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the user.
+     * 
+     */
     public String userArn() {
         return this.userArn;
     }
@@ -47,6 +51,12 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userArn The Amazon Resource Name (ARN) for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userArn(String userArn) {
             $.userArn = userArn;
             return this;

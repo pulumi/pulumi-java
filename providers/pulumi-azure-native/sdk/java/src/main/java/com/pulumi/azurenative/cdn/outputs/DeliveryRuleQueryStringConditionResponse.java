@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class DeliveryRuleQueryStringConditionResponse {
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;QueryString&#39;.
      * 
      */
     private final String name;
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
      */
     private final QueryStringMatchConditionParametersResponse parameters;
@@ -31,17 +31,17 @@ public final class DeliveryRuleQueryStringConditionResponse {
     }
 
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;QueryString&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
-    */
+     */
     public QueryStringMatchConditionParametersResponse parameters() {
         return this.parameters;
     }

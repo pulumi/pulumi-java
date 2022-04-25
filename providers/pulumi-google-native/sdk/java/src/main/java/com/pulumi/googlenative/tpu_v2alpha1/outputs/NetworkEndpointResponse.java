@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class NetworkEndpointResponse {
     /**
-     * The access config for the TPU worker.
+     * @return The access config for the TPU worker.
      * 
      */
     private final AccessConfigResponse accessConfig;
     /**
-     * The internal IP address of this network endpoint.
+     * @return The internal IP address of this network endpoint.
      * 
      */
     private final String ipAddress;
     /**
-     * The port of this network endpoint.
+     * @return The port of this network endpoint.
      * 
      */
     private final Integer port;
@@ -38,23 +38,23 @@ public final class NetworkEndpointResponse {
     }
 
     /**
-     * The access config for the TPU worker.
+     * @return The access config for the TPU worker.
      * 
-    */
+     */
     public AccessConfigResponse accessConfig() {
         return this.accessConfig;
     }
     /**
-     * The internal IP address of this network endpoint.
+     * @return The internal IP address of this network endpoint.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * The port of this network endpoint.
+     * @return The port of this network endpoint.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

@@ -24,6 +24,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
     @Import(name="metadata", required=true)
     private Map<String,String> metadata;
 
+    /**
+     * @return Custom metadata. Dialogflow doesn&#39;t impose any structure on this.
+     * 
+     */
     public Map<String,String> metadata() {
         return this.metadata;
     }
@@ -52,6 +56,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
             $ = new GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata Custom metadata. Dialogflow doesn&#39;t impose any structure on this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             $.metadata = metadata;
             return this;

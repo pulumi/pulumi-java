@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource {
     /**
-     * An `AccessLevel` resource name that allow resources within the
+     * @return An `AccessLevel` resource name that allow resources within the
      * `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
      * must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent
      * `AccessLevel` will cause an error. If no `AccessLevel` names are listed,
@@ -24,7 +24,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      */
     private final @Nullable String accessLevel;
     /**
-     * A Google Cloud resource that is allowed to ingress the perimeter.
+     * @return A Google Cloud resource that is allowed to ingress the perimeter.
      * Requests from these resources will be allowed to access perimeter data.
      * Currently only projects are allowed. Format `projects/{project_number}`
      * The project may be in any Google Cloud organization, not just the
@@ -43,7 +43,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     }
 
     /**
-     * An `AccessLevel` resource name that allow resources within the
+     * @return An `AccessLevel` resource name that allow resources within the
      * `ServicePerimeters` to be accessed from the internet. `AccessLevels` listed
      * must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent
      * `AccessLevel` will cause an error. If no `AccessLevel` names are listed,
@@ -52,19 +52,19 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.`
      * If * is specified, then all IngressSources will be allowed.
      * 
-    */
+     */
     public Optional<String> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
     /**
-     * A Google Cloud resource that is allowed to ingress the perimeter.
+     * @return A Google Cloud resource that is allowed to ingress the perimeter.
      * Requests from these resources will be allowed to access perimeter data.
      * Currently only projects are allowed. Format `projects/{project_number}`
      * The project may be in any Google Cloud organization, not just the
      * organization that the perimeter is defined in. `*` is not allowed, the case
      * of allowing all Google Cloud resources only is not supported.
      * 
-    */
+     */
     public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }

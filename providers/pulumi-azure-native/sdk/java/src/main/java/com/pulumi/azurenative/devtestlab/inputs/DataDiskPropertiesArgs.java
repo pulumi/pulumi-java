@@ -29,6 +29,10 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="attachNewDataDiskOptions")
     private @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
+    /**
+     * @return Specifies options to attach a new disk to the virtual machine.
+     * 
+     */
     public Optional<Output<AttachNewDataDiskOptionsArgs>> attachNewDataDiskOptions() {
         return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
@@ -40,6 +44,10 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="existingLabDiskId")
     private @Nullable Output<String> existingLabDiskId;
 
+    /**
+     * @return Specifies the existing lab disk id to attach to virtual machine.
+     * 
+     */
     public Optional<Output<String>> existingLabDiskId() {
         return Optional.ofNullable(this.existingLabDiskId);
     }
@@ -51,6 +59,10 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="hostCaching")
     private @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
+    /**
+     * @return Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     public Optional<Output<Either<String,HostCachingOptions>>> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -81,37 +93,85 @@ public final class DataDiskPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new DataDiskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachNewDataDiskOptions Specifies options to attach a new disk to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachNewDataDiskOptions(@Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions) {
             $.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
 
+        /**
+         * @param attachNewDataDiskOptions Specifies options to attach a new disk to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachNewDataDiskOptions(AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
             return attachNewDataDiskOptions(Output.of(attachNewDataDiskOptions));
         }
 
+        /**
+         * @param existingLabDiskId Specifies the existing lab disk id to attach to virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingLabDiskId(@Nullable Output<String> existingLabDiskId) {
             $.existingLabDiskId = existingLabDiskId;
             return this;
         }
 
+        /**
+         * @param existingLabDiskId Specifies the existing lab disk id to attach to virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingLabDiskId(String existingLabDiskId) {
             return existingLabDiskId(Output.of(existingLabDiskId));
         }
 
+        /**
+         * @param hostCaching Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(@Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
             $.hostCaching = hostCaching;
             return this;
         }
 
+        /**
+         * @param hostCaching Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(Either<String,HostCachingOptions> hostCaching) {
             return hostCaching(Output.of(hostCaching));
         }
 
+        /**
+         * @param hostCaching Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(String hostCaching) {
             return hostCaching(Either.ofLeft(hostCaching));
         }
 
+        /**
+         * @param hostCaching Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(HostCachingOptions hostCaching) {
             return hostCaching(Either.ofRight(hostCaching));
         }

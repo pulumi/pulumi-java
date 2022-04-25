@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UsagePlanThrottleSettings {
     /**
-     * The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
+     * @return The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
      * 
      */
     private final @Nullable Integer burstLimit;
     /**
-     * The API request steady-state rate limit (average requests per second over an extended period of time).
+     * @return The API request steady-state rate limit (average requests per second over an extended period of time).
      * 
      */
     private final @Nullable Double rateLimit;
@@ -32,16 +32,16 @@ public final class UsagePlanThrottleSettings {
     }
 
     /**
-     * The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
+     * @return The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
      * 
-    */
+     */
     public Optional<Integer> burstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
     /**
-     * The API request steady-state rate limit (average requests per second over an extended period of time).
+     * @return The API request steady-state rate limit (average requests per second over an extended period of time).
      * 
-    */
+     */
     public Optional<Double> rateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }

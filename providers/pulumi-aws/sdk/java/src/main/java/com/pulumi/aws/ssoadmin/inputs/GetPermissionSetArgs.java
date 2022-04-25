@@ -22,6 +22,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the permission set.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -33,6 +37,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="instanceArn", required=true)
     private String instanceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
+     * 
+     */
     public String instanceArn() {
         return this.instanceArn;
     }
@@ -44,6 +52,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the SSO Permission Set.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value map of resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -86,21 +102,45 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPermissionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param instanceArn The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param name The name of the SSO Permission Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

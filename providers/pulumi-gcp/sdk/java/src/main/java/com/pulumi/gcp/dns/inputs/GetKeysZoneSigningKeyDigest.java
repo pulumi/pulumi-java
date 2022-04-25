@@ -21,6 +21,10 @@ public final class GetKeysZoneSigningKeyDigest extends com.pulumi.resources.Invo
     @Import(name="digest")
     private @Nullable String digest;
 
+    /**
+     * @return The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+     * 
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
@@ -32,6 +36,10 @@ public final class GetKeysZoneSigningKeyDigest extends com.pulumi.resources.Invo
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -61,11 +69,23 @@ public final class GetKeysZoneSigningKeyDigest extends com.pulumi.resources.Invo
             $ = new GetKeysZoneSigningKeyDigest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param digest The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder digest(@Nullable String digest) {
             $.digest = digest;
             return this;
         }
 
+        /**
+         * @param type Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -21,6 +21,10 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends com.pulumi.resources
     @Import(name="ttl", required=true)
     private Output<Integer> ttl;
 
+    /**
+     * @return The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.
+     * 
+     */
     public Output<Integer> ttl() {
         return this.ttl;
     }
@@ -32,6 +36,10 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -61,20 +69,44 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends com.pulumi.resources
             $ = new ServiceDnsConfigDnsRecordGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ttl The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param type The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

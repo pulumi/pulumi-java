@@ -13,62 +13,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAssetResult {
     /**
-     * The alternate ID of the Asset.
+     * @return The alternate ID of the Asset.
      * 
      */
     private final @Nullable String alternateId;
     /**
-     * The Asset ID.
+     * @return The Asset ID.
      * 
      */
     private final String assetId;
     /**
-     * The name of the asset blob container.
+     * @return The name of the asset blob container.
      * 
      */
     private final @Nullable String container;
     /**
-     * The creation date of the Asset.
+     * @return The creation date of the Asset.
      * 
      */
     private final String created;
     /**
-     * The Asset description.
+     * @return The Asset description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The last modified date of the Asset.
+     * @return The last modified date of the Asset.
      * 
      */
     private final String lastModified;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The name of the storage account.
+     * @return The name of the storage account.
      * 
      */
     private final @Nullable String storageAccountName;
     /**
-     * The Asset encryption format. One of None or MediaStorageEncryption.
+     * @return The Asset encryption format. One of None or MediaStorageEncryption.
      * 
      */
     private final String storageEncryptionFormat;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -102,86 +102,86 @@ public final class GetAssetResult {
     }
 
     /**
-     * The alternate ID of the Asset.
+     * @return The alternate ID of the Asset.
      * 
-    */
+     */
     public Optional<String> alternateId() {
         return Optional.ofNullable(this.alternateId);
     }
     /**
-     * The Asset ID.
+     * @return The Asset ID.
      * 
-    */
+     */
     public String assetId() {
         return this.assetId;
     }
     /**
-     * The name of the asset blob container.
+     * @return The name of the asset blob container.
      * 
-    */
+     */
     public Optional<String> container() {
         return Optional.ofNullable(this.container);
     }
     /**
-     * The creation date of the Asset.
+     * @return The creation date of the Asset.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * The Asset description.
+     * @return The Asset description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last modified date of the Asset.
+     * @return The last modified date of the Asset.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the storage account.
+     * @return The name of the storage account.
      * 
-    */
+     */
     public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
-     * The Asset encryption format. One of None or MediaStorageEncryption.
+     * @return The Asset encryption format. One of None or MediaStorageEncryption.
      * 
-    */
+     */
     public String storageEncryptionFormat() {
         return this.storageEncryptionFormat;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

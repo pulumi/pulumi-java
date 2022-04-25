@@ -23,6 +23,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="propertyBag")
     private @Nullable Output<String> propertyBag;
 
+    /**
+     * @return Optional Properties as JSON string
+     * 
+     */
     public Optional<Output<String>> propertyBag() {
         return Optional.ofNullable(this.propertyBag);
     }
@@ -45,6 +53,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroup")
     private @Nullable Output<String> resourceGroup;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public Optional<Output<String>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -56,6 +68,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="sqlServerRegistrationName")
     private @Nullable Output<String> sqlServerRegistrationName;
 
+    /**
+     * @return Name of the SQL Server registration.
+     * 
+     */
     public Optional<Output<String>> sqlServerRegistrationName() {
         return Optional.ofNullable(this.sqlServerRegistrationName);
     }
@@ -78,6 +98,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return Subscription Id
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -89,6 +113,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,65 +151,149 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
             $ = new SqlServerRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param propertyBag Optional Properties as JSON string
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
             $.propertyBag = propertyBag;
             return this;
         }
 
+        /**
+         * @param propertyBag Optional Properties as JSON string
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyBag(String propertyBag) {
             return propertyBag(Output.of(propertyBag));
         }
 
+        /**
+         * @param resourceGroup Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(@Nullable Output<String> sqlServerRegistrationName) {
             $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
 
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             return sqlServerRegistrationName(Output.of(sqlServerRegistrationName));
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

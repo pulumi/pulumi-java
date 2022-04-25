@@ -22,6 +22,10 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="companyName")
     private @Nullable Output<String> companyName;
 
+    /**
+     * @return Name of the Logz organization.
+     * 
+     */
     public Optional<Output<String>> companyName() {
         return Optional.ofNullable(this.companyName);
     }
@@ -33,6 +37,10 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="enterpriseAppId")
     private @Nullable Output<String> enterpriseAppId;
 
+    /**
+     * @return The Id of the Enterprise App used for Single sign on.
+     * 
+     */
     public Optional<Output<String>> enterpriseAppId() {
         return Optional.ofNullable(this.enterpriseAppId);
     }
@@ -44,6 +52,10 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="singleSignOnUrl")
     private @Nullable Output<String> singleSignOnUrl;
 
+    /**
+     * @return The login URL specific to this Logz Organization.
+     * 
+     */
     public Optional<Output<String>> singleSignOnUrl() {
         return Optional.ofNullable(this.singleSignOnUrl);
     }
@@ -74,29 +86,65 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
             $ = new LogzOrganizationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param companyName Name of the Logz organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(@Nullable Output<String> companyName) {
             $.companyName = companyName;
             return this;
         }
 
+        /**
+         * @param companyName Name of the Logz organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(String companyName) {
             return companyName(Output.of(companyName));
         }
 
+        /**
+         * @param enterpriseAppId The Id of the Enterprise App used for Single sign on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
             $.enterpriseAppId = enterpriseAppId;
             return this;
         }
 
+        /**
+         * @param enterpriseAppId The Id of the Enterprise App used for Single sign on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterpriseAppId(String enterpriseAppId) {
             return enterpriseAppId(Output.of(enterpriseAppId));
         }
 
+        /**
+         * @param singleSignOnUrl The login URL specific to this Logz Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUrl(@Nullable Output<String> singleSignOnUrl) {
             $.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
 
+        /**
+         * @param singleSignOnUrl The login URL specific to this Logz Organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleSignOnUrl(String singleSignOnUrl) {
             return singleSignOnUrl(Output.of(singleSignOnUrl));
         }

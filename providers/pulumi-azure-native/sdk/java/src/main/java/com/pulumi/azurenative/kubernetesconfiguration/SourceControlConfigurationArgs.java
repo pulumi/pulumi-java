@@ -29,6 +29,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the kubernetes cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -40,6 +44,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterResourceName", required=true)
     private Output<String> clusterResourceName;
 
+    /**
+     * @return The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     * 
+     */
     public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
@@ -51,6 +59,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterRp", required=true)
     private Output<String> clusterRp;
 
+    /**
+     * @return The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     * 
+     */
     public Output<String> clusterRp() {
         return this.clusterRp;
     }
@@ -62,6 +74,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="configurationProtectedSettings")
     private @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
+    /**
+     * @return Name-value pairs of protected configuration settings for the configuration
+     * 
+     */
     public Optional<Output<Map<String,String>>> configurationProtectedSettings() {
         return Optional.ofNullable(this.configurationProtectedSettings);
     }
@@ -73,6 +89,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="enableHelmOperator")
     private @Nullable Output<Boolean> enableHelmOperator;
 
+    /**
+     * @return Option to enable Helm Operator for this git configuration.
+     * 
+     */
     public Optional<Output<Boolean>> enableHelmOperator() {
         return Optional.ofNullable(this.enableHelmOperator);
     }
@@ -84,6 +104,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="helmOperatorProperties")
     private @Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties;
 
+    /**
+     * @return Properties for Helm operator.
+     * 
+     */
     public Optional<Output<HelmOperatorPropertiesArgs>> helmOperatorProperties() {
         return Optional.ofNullable(this.helmOperatorProperties);
     }
@@ -95,6 +119,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorInstanceName")
     private @Nullable Output<String> operatorInstanceName;
 
+    /**
+     * @return Instance name of the operator - identifying the specific configuration.
+     * 
+     */
     public Optional<Output<String>> operatorInstanceName() {
         return Optional.ofNullable(this.operatorInstanceName);
     }
@@ -106,6 +134,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorNamespace")
     private @Nullable Output<String> operatorNamespace;
 
+    /**
+     * @return The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+     * 
+     */
     public Optional<Output<String>> operatorNamespace() {
         return Optional.ofNullable(this.operatorNamespace);
     }
@@ -117,6 +149,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorParams")
     private @Nullable Output<String> operatorParams;
 
+    /**
+     * @return Any Parameters for the Operator instance in string format.
+     * 
+     */
     public Optional<Output<String>> operatorParams() {
         return Optional.ofNullable(this.operatorParams);
     }
@@ -128,6 +164,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorScope")
     private @Nullable Output<Either<String,OperatorScopeType>> operatorScope;
 
+    /**
+     * @return Scope at which the operator will be installed.
+     * 
+     */
     public Optional<Output<Either<String,OperatorScopeType>>> operatorScope() {
         return Optional.ofNullable(this.operatorScope);
     }
@@ -139,6 +179,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorType")
     private @Nullable Output<Either<String,OperatorType>> operatorType;
 
+    /**
+     * @return Type of the operator
+     * 
+     */
     public Optional<Output<Either<String,OperatorType>>> operatorType() {
         return Optional.ofNullable(this.operatorType);
     }
@@ -150,6 +194,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="repositoryUrl")
     private @Nullable Output<String> repositoryUrl;
 
+    /**
+     * @return Url of the SourceControl Repository.
+     * 
+     */
     public Optional<Output<String>> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
@@ -161,6 +209,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -172,6 +224,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="sourceControlConfigurationName")
     private @Nullable Output<String> sourceControlConfigurationName;
 
+    /**
+     * @return Name of the Source Control Configuration.
+     * 
+     */
     public Optional<Output<String>> sourceControlConfigurationName() {
         return Optional.ofNullable(this.sourceControlConfigurationName);
     }
@@ -183,6 +239,10 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="sshKnownHostsContents")
     private @Nullable Output<String> sshKnownHostsContents;
 
+    /**
+     * @return Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
+     * 
+     */
     public Optional<Output<String>> sshKnownHostsContents() {
         return Optional.ofNullable(this.sshKnownHostsContents);
     }
@@ -225,153 +285,357 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
             $ = new SourceControlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(Output<String> clusterResourceName) {
             $.clusterResourceName = clusterResourceName;
             return this;
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(String clusterResourceName) {
             return clusterResourceName(Output.of(clusterResourceName));
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(Output<String> clusterRp) {
             $.clusterRp = clusterRp;
             return this;
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(String clusterRp) {
             return clusterRp(Output.of(clusterRp));
         }
 
+        /**
+         * @param configurationProtectedSettings Name-value pairs of protected configuration settings for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
             $.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
+        /**
+         * @param configurationProtectedSettings Name-value pairs of protected configuration settings for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedSettings(Map<String,String> configurationProtectedSettings) {
             return configurationProtectedSettings(Output.of(configurationProtectedSettings));
         }
 
+        /**
+         * @param enableHelmOperator Option to enable Helm Operator for this git configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHelmOperator(@Nullable Output<Boolean> enableHelmOperator) {
             $.enableHelmOperator = enableHelmOperator;
             return this;
         }
 
+        /**
+         * @param enableHelmOperator Option to enable Helm Operator for this git configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHelmOperator(Boolean enableHelmOperator) {
             return enableHelmOperator(Output.of(enableHelmOperator));
         }
 
+        /**
+         * @param helmOperatorProperties Properties for Helm operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmOperatorProperties(@Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties) {
             $.helmOperatorProperties = helmOperatorProperties;
             return this;
         }
 
+        /**
+         * @param helmOperatorProperties Properties for Helm operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmOperatorProperties(HelmOperatorPropertiesArgs helmOperatorProperties) {
             return helmOperatorProperties(Output.of(helmOperatorProperties));
         }
 
+        /**
+         * @param operatorInstanceName Instance name of the operator - identifying the specific configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorInstanceName(@Nullable Output<String> operatorInstanceName) {
             $.operatorInstanceName = operatorInstanceName;
             return this;
         }
 
+        /**
+         * @param operatorInstanceName Instance name of the operator - identifying the specific configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorInstanceName(String operatorInstanceName) {
             return operatorInstanceName(Output.of(operatorInstanceName));
         }
 
+        /**
+         * @param operatorNamespace The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorNamespace(@Nullable Output<String> operatorNamespace) {
             $.operatorNamespace = operatorNamespace;
             return this;
         }
 
+        /**
+         * @param operatorNamespace The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorNamespace(String operatorNamespace) {
             return operatorNamespace(Output.of(operatorNamespace));
         }
 
+        /**
+         * @param operatorParams Any Parameters for the Operator instance in string format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorParams(@Nullable Output<String> operatorParams) {
             $.operatorParams = operatorParams;
             return this;
         }
 
+        /**
+         * @param operatorParams Any Parameters for the Operator instance in string format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorParams(String operatorParams) {
             return operatorParams(Output.of(operatorParams));
         }
 
+        /**
+         * @param operatorScope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorScope(@Nullable Output<Either<String,OperatorScopeType>> operatorScope) {
             $.operatorScope = operatorScope;
             return this;
         }
 
+        /**
+         * @param operatorScope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorScope(Either<String,OperatorScopeType> operatorScope) {
             return operatorScope(Output.of(operatorScope));
         }
 
+        /**
+         * @param operatorScope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorScope(String operatorScope) {
             return operatorScope(Either.ofLeft(operatorScope));
         }
 
+        /**
+         * @param operatorScope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorScope(OperatorScopeType operatorScope) {
             return operatorScope(Either.ofRight(operatorScope));
         }
 
+        /**
+         * @param operatorType Type of the operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(@Nullable Output<Either<String,OperatorType>> operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param operatorType Type of the operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(Either<String,OperatorType> operatorType) {
             return operatorType(Output.of(operatorType));
         }
 
+        /**
+         * @param operatorType Type of the operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             return operatorType(Either.ofLeft(operatorType));
         }
 
+        /**
+         * @param operatorType Type of the operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(OperatorType operatorType) {
             return operatorType(Either.ofRight(operatorType));
         }
 
+        /**
+         * @param repositoryUrl Url of the SourceControl Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
             $.repositoryUrl = repositoryUrl;
             return this;
         }
 
+        /**
+         * @param repositoryUrl Url of the SourceControl Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryUrl(String repositoryUrl) {
             return repositoryUrl(Output.of(repositoryUrl));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceControlConfigurationName Name of the Source Control Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlConfigurationName(@Nullable Output<String> sourceControlConfigurationName) {
             $.sourceControlConfigurationName = sourceControlConfigurationName;
             return this;
         }
 
+        /**
+         * @param sourceControlConfigurationName Name of the Source Control Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlConfigurationName(String sourceControlConfigurationName) {
             return sourceControlConfigurationName(Output.of(sourceControlConfigurationName));
         }
 
+        /**
+         * @param sshKnownHostsContents Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKnownHostsContents(@Nullable Output<String> sshKnownHostsContents) {
             $.sshKnownHostsContents = sshKnownHostsContents;
             return this;
         }
 
+        /**
+         * @param sshKnownHostsContents Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshKnownHostsContents(String sshKnownHostsContents) {
             return sshKnownHostsContents(Output.of(sshKnownHostsContents));
         }

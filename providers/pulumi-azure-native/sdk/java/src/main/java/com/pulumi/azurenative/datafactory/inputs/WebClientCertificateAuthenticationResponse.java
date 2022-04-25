@@ -29,6 +29,11 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the web table source.
+     * Expected value is &#39;ClientCertificate&#39;.
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -40,6 +45,10 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
     @Import(name="password", required=true)
     private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password for the PFX file.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
@@ -51,6 +60,10 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
     @Import(name="pfx", required=true)
     private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
+    /**
+     * @return Base64-encoded contents of a PFX file.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
         return this.pfx;
     }
@@ -62,6 +75,10 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
     @Import(name="url", required=true)
     private Object url;
 
+    /**
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * 
+     */
     public Object url() {
         return this.url;
     }
@@ -93,37 +110,86 @@ public final class WebClientCertificateAuthenticationResponse extends com.pulumi
             $ = new WebClientCertificateAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;ClientCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for the PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             $.pfx = pfx;
             return this;
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(AzureKeyVaultSecretReferenceResponse pfx) {
             return pfx(Either.ofLeft(pfx));
         }
 
+        /**
+         * @param pfx Base64-encoded contents of a PFX file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfx(SecureStringResponse pfx) {
             return pfx(Either.ofRight(pfx));
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             $.url = url;
             return this;

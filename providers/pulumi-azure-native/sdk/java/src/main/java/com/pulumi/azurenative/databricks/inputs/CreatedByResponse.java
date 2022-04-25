@@ -23,6 +23,10 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -34,6 +38,10 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oid", required=true)
     private String oid;
 
+    /**
+     * @return The Object ID that created the workspace.
+     * 
+     */
     public String oid() {
         return this.oid;
     }
@@ -45,6 +53,10 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="puid", required=true)
     private String puid;
 
+    /**
+     * @return The Personal Object ID corresponding to the object ID above
+     * 
+     */
     public String puid() {
         return this.puid;
     }
@@ -75,16 +87,34 @@ public final class CreatedByResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CreatedByResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param oid The Object ID that created the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oid(String oid) {
             $.oid = oid;
             return this;
         }
 
+        /**
+         * @param puid The Personal Object ID corresponding to the object ID above
+         * 
+         * @return builder
+         * 
+         */
         public Builder puid(String puid) {
             $.puid = puid;
             return this;

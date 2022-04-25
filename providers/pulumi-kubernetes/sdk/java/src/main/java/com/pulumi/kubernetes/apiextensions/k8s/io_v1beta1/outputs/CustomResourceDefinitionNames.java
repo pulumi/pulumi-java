@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomResourceDefinitionNames {
     /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
+     * @return categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
      */
     private final @Nullable List<String> categories;
     /**
-     * kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
+     * @return kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
      * 
      */
     private final String kind;
     /**
-     * listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
+     * @return listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
      * 
      */
     private final @Nullable String listKind;
     /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
+     * @return plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
      * 
      */
     private final String plural;
     /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
+     * @return shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
      * 
      */
     private final @Nullable List<String> shortNames;
     /**
-     * singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
+     * @return singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
      * 
      */
     private final @Nullable String singular;
@@ -60,44 +60,44 @@ public final class CustomResourceDefinitionNames {
     }
 
     /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
+     * @return categories is a list of grouped resources this custom resource belongs to (e.g. &#39;all&#39;). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
-     * kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
+     * @return kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
+     * @return listKind is the serialized kind of the list for this resource. Defaults to &#34;`kind`List&#34;.
      * 
-    */
+     */
     public Optional<String> listKind() {
         return Optional.ofNullable(this.listKind);
     }
     /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
+     * @return plural is the plural name of the resource to serve. The custom resources are served under `/apis/&lt;group&gt;/&lt;version&gt;/.../&lt;plural&gt;`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`). Must be all lowercase.
      * 
-    */
+     */
     public String plural() {
         return this.plural;
     }
     /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
+     * @return shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get &lt;shortname&gt;`. It must be all lowercase.
      * 
-    */
+     */
     public List<String> shortNames() {
         return this.shortNames == null ? List.of() : this.shortNames;
     }
     /**
-     * singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
+     * @return singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
      * 
-    */
+     */
     public Optional<String> singular() {
         return Optional.ofNullable(this.singular);
     }

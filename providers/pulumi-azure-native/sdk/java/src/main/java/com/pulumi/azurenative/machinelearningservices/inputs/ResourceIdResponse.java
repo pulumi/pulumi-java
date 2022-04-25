@@ -23,6 +23,10 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the resource
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

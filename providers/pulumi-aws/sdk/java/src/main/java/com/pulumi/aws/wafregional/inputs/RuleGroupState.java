@@ -25,6 +25,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="activatedRules")
     private @Nullable Output<List<RuleGroupActivatedRuleGetArgs>> activatedRules;
 
+    /**
+     * @return A list of activated rules, see below
+     * 
+     */
     public Optional<Output<List<RuleGroupActivatedRuleGetArgs>>> activatedRules() {
         return Optional.ofNullable(this.activatedRules);
     }
@@ -36,6 +40,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the WAF Regional Rule Group.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -47,6 +55,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
     private @Nullable Output<String> metricName;
 
+    /**
+     * @return A friendly name for the metrics from the rule group
+     * 
+     */
     public Optional<Output<String>> metricName() {
         return Optional.ofNullable(this.metricName);
     }
@@ -58,6 +70,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name of the rule group
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,60 +137,138 @@ public final class RuleGroupState extends com.pulumi.resources.ResourceArgs {
             $ = new RuleGroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activatedRules A list of activated rules, see below
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedRules(@Nullable Output<List<RuleGroupActivatedRuleGetArgs>> activatedRules) {
             $.activatedRules = activatedRules;
             return this;
         }
 
+        /**
+         * @param activatedRules A list of activated rules, see below
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedRules(List<RuleGroupActivatedRuleGetArgs> activatedRules) {
             return activatedRules(Output.of(activatedRules));
         }
 
+        /**
+         * @param activatedRules A list of activated rules, see below
+         * 
+         * @return builder
+         * 
+         */
         public Builder activatedRules(RuleGroupActivatedRuleGetArgs... activatedRules) {
             return activatedRules(List.of(activatedRules));
         }
 
+        /**
+         * @param arn The ARN of the WAF Regional Rule Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the WAF Regional Rule Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param metricName A friendly name for the metrics from the rule group
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(@Nullable Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName A friendly name for the metrics from the rule group
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param name A friendly name of the rule group
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name of the rule group
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

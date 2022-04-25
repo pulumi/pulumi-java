@@ -21,6 +21,11 @@ public final class GetInstanceTemplateServiceAccount extends com.pulumi.resource
     @Import(name="email", required=true)
     private String email;
 
+    /**
+     * @return The service account e-mail address. If not given, the
+     * default Google Compute Engine service account is used.
+     * 
+     */
     public String email() {
         return this.email;
     }
@@ -34,6 +39,12 @@ public final class GetInstanceTemplateServiceAccount extends com.pulumi.resource
     @Import(name="scopes", required=true)
     private List<String> scopes;
 
+    /**
+     * @return A list of service scopes. Both OAuth2 URLs and gcloud
+     * short names are supported. To allow full access to all Cloud APIs, use the
+     * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+     * 
+     */
     public List<String> scopes() {
         return this.scopes;
     }
@@ -63,16 +74,39 @@ public final class GetInstanceTemplateServiceAccount extends com.pulumi.resource
             $ = new GetInstanceTemplateServiceAccount(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The service account e-mail address. If not given, the
+         * default Google Compute Engine service account is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param scopes A list of service scopes. Both OAuth2 URLs and gcloud
+         * short names are supported. To allow full access to all Cloud APIs, use the
+         * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes A list of service scopes. Both OAuth2 URLs and gcloud
+         * short names are supported. To allow full access to all Cloud APIs, use the
+         * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }

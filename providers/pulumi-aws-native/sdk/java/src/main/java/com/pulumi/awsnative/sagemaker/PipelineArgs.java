@@ -40,6 +40,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDescription")
     private @Nullable Output<String> pipelineDescription;
 
+    /**
+     * @return The description of the Pipeline.
+     * 
+     */
     public Optional<Output<String>> pipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
@@ -51,6 +55,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineDisplayName")
     private @Nullable Output<String> pipelineDisplayName;
 
+    /**
+     * @return The display name of the Pipeline.
+     * 
+     */
     public Optional<Output<String>> pipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
@@ -62,6 +70,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
     private @Nullable Output<String> pipelineName;
 
+    /**
+     * @return The name of the Pipeline.
+     * 
+     */
     public Optional<Output<String>> pipelineName() {
         return Optional.ofNullable(this.pipelineName);
     }
@@ -73,6 +85,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return Role Arn
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -132,38 +148,86 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             return pipelineDefinition(Output.of(pipelineDefinition));
         }
 
+        /**
+         * @param pipelineDescription The description of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDescription(@Nullable Output<String> pipelineDescription) {
             $.pipelineDescription = pipelineDescription;
             return this;
         }
 
+        /**
+         * @param pipelineDescription The description of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDescription(String pipelineDescription) {
             return pipelineDescription(Output.of(pipelineDescription));
         }
 
+        /**
+         * @param pipelineDisplayName The display name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDisplayName(@Nullable Output<String> pipelineDisplayName) {
             $.pipelineDisplayName = pipelineDisplayName;
             return this;
         }
 
+        /**
+         * @param pipelineDisplayName The display name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineDisplayName(String pipelineDisplayName) {
             return pipelineDisplayName(Output.of(pipelineDisplayName));
         }
 
+        /**
+         * @param pipelineName The name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             $.pipelineName = pipelineName;
             return this;
         }
 
+        /**
+         * @param pipelineName The name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(String pipelineName) {
             return pipelineName(Output.of(pipelineName));
         }
 
+        /**
+         * @param roleArn Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role Arn
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

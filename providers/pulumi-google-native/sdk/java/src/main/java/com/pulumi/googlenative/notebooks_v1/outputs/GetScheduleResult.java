@@ -13,48 +13,48 @@ import java.util.Objects;
 @CustomType
 public final class GetScheduleResult {
     /**
-     * Time the schedule was created.
+     * @return Time the schedule was created.
      * 
      */
     private final String createTime;
     /**
-     * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
+     * @return Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
      * 
      */
     private final String cronSchedule;
     /**
-     * A brief description of this environment.
+     * @return A brief description of this environment.
      * 
      */
     private final String description;
     /**
-     * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
+     * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
      * 
      */
     private final String displayName;
     /**
-     * Notebook Execution Template corresponding to this schedule.
+     * @return Notebook Execution Template corresponding to this schedule.
      * 
      */
     private final ExecutionTemplateResponse executionTemplate;
     /**
-     * The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+     * @return The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
      * 
      */
     private final String name;
     /**
-     * The most recent execution names triggered from this schedule and their corresponding states.
+     * @return The most recent execution names triggered from this schedule and their corresponding states.
      * 
      */
     private final List<ExecutionResponse> recentExecutions;
     private final String state;
     /**
-     * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
+     * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
     private final String timeZone;
     /**
-     * Time the schedule was last updated.
+     * @return Time the schedule was last updated.
      * 
      */
     private final String updateTime;
@@ -84,51 +84,51 @@ public final class GetScheduleResult {
     }
 
     /**
-     * Time the schedule was created.
+     * @return Time the schedule was created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
+     * @return Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
      * 
-    */
+     */
     public String cronSchedule() {
         return this.cronSchedule;
     }
     /**
-     * A brief description of this environment.
+     * @return A brief description of this environment.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
+     * @return Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens &#39;-&#39;, and underscores &#39;_&#39;.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Notebook Execution Template corresponding to this schedule.
+     * @return Notebook Execution Template corresponding to this schedule.
      * 
-    */
+     */
     public ExecutionTemplateResponse executionTemplate() {
         return this.executionTemplate;
     }
     /**
-     * The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
+     * @return The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The most recent execution names triggered from this schedule and their corresponding states.
+     * @return The most recent execution names triggered from this schedule and their corresponding states.
      * 
-    */
+     */
     public List<ExecutionResponse> recentExecutions() {
         return this.recentExecutions;
     }
@@ -136,16 +136,16 @@ public final class GetScheduleResult {
         return this.state;
     }
     /**
-     * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
+     * @return Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string &#34;utc&#34;. If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
-    */
+     */
     public String timeZone() {
         return this.timeZone;
     }
     /**
-     * Time the schedule was last updated.
+     * @return Time the schedule was last updated.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

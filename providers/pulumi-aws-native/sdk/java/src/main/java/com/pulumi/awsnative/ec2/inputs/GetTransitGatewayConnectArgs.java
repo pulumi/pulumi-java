@@ -19,6 +19,10 @@ public final class GetTransitGatewayConnectArgs extends com.pulumi.resources.Inv
     @Import(name="transitGatewayAttachmentId", required=true)
     private String transitGatewayAttachmentId;
 
+    /**
+     * @return The ID of the Connect attachment.
+     * 
+     */
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
@@ -47,6 +51,12 @@ public final class GetTransitGatewayConnectArgs extends com.pulumi.resources.Inv
             $ = new GetTransitGatewayConnectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transitGatewayAttachmentId The ID of the Connect attachment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;

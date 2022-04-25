@@ -28,6 +28,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
     @Import(name="networks", required=true)
     private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
+    /**
+     * @return The list of VPC networks that can see this zone.
+     * 
+     */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }
@@ -62,11 +66,23 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
             return this;
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             $.networks = networks;
             return this;
         }
 
+        /**
+         * @param networks The list of VPC networks that can see this zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
             return networks(List.of(networks));
         }

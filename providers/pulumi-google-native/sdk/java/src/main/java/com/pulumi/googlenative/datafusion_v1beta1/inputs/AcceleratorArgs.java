@@ -26,6 +26,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType")
     private @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
+    /**
+     * @return The type of an accelator for a CDF instance.
+     * 
+     */
     public Optional<Output<AcceleratorAcceleratorType>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -54,11 +58,23 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType The type of an accelator for a CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The type of an accelator for a CDF instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(AcceleratorAcceleratorType acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }

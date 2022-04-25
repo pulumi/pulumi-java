@@ -27,6 +27,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
     @Import(name="ignoreCase")
     private @Nullable Output<Boolean> ignoreCase;
 
+    /**
+     * @return Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
+     * 
+     */
     public Optional<Output<Boolean>> ignoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
+    /**
+     * @return Setting this value as truth will force to check the negation of the condition given by the user.
+     * 
+     */
     public Optional<Output<Boolean>> negate() {
         return Optional.ofNullable(this.negate);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
     @Import(name="pattern")
     private @Nullable Output<String> pattern;
 
+    /**
+     * @return The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
+     * 
+     */
     public Optional<Output<String>> pattern() {
         return Optional.ofNullable(this.pattern);
     }
@@ -60,6 +72,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
     @Import(name="variable")
     private @Nullable Output<String> variable;
 
+    /**
+     * @return The condition parameter of the RewriteRuleCondition.
+     * 
+     */
     public Optional<Output<String>> variable() {
         return Optional.ofNullable(this.variable);
     }
@@ -91,38 +107,86 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
             $ = new ApplicationGatewayRewriteRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreCase Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
             $.ignoreCase = ignoreCase;
             return this;
         }
 
+        /**
+         * @param ignoreCase Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCase(Boolean ignoreCase) {
             return ignoreCase(Output.of(ignoreCase));
         }
 
+        /**
+         * @param negate Setting this value as truth will force to check the negation of the condition given by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negate(@Nullable Output<Boolean> negate) {
             $.negate = negate;
             return this;
         }
 
+        /**
+         * @param negate Setting this value as truth will force to check the negation of the condition given by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negate(Boolean negate) {
             return negate(Output.of(negate));
         }
 
+        /**
+         * @param pattern The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(@Nullable Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }
 
+        /**
+         * @param variable The condition parameter of the RewriteRuleCondition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variable(@Nullable Output<String> variable) {
             $.variable = variable;
             return this;
         }
 
+        /**
+         * @param variable The condition parameter of the RewriteRuleCondition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variable(String variable) {
             return variable(Output.of(variable));
         }

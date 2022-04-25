@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class StepResponse {
     /**
-     * List of branches.
+     * @return List of branches.
      * 
      */
     private final List<BranchResponse> branches;
     /**
-     * String of the step name.
+     * @return String of the step name.
      * 
      */
     private final String name;
@@ -31,16 +31,16 @@ public final class StepResponse {
     }
 
     /**
-     * List of branches.
+     * @return List of branches.
      * 
-    */
+     */
     public List<BranchResponse> branches() {
         return this.branches;
     }
     /**
-     * String of the step name.
+     * @return String of the step name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

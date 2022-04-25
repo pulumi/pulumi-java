@@ -36,6 +36,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ddosSettings")
     private @Nullable Output<DdosSettingsArgs> ddosSettings;
 
+    /**
+     * @return The DDoS protection custom policy associated with the public IP address.
+     * 
+     */
     public Optional<Output<DdosSettingsArgs>> ddosSettings() {
         return Optional.ofNullable(this.ddosSettings);
     }
@@ -47,6 +51,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dnsSettings")
     private @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
+    /**
+     * @return The FQDN of the DNS record associated with the public IP address.
+     * 
+     */
     public Optional<Output<PublicIPAddressDnsSettingsArgs>> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -58,6 +66,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the public ip address.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -69,6 +81,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -80,6 +96,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Output<Integer> idleTimeoutInMinutes;
 
+    /**
+     * @return The idle timeout of the public IP address.
+     * 
+     */
     public Optional<Output<Integer>> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -91,6 +111,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The IP address associated with the public IP address resource.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -102,6 +126,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ipTags")
     private @Nullable Output<List<IpTagArgs>> ipTags;
 
+    /**
+     * @return The list of tags associated with the public IP address.
+     * 
+     */
     public Optional<Output<List<IpTagArgs>>> ipTags() {
         return Optional.ofNullable(this.ipTags);
     }
@@ -113,6 +141,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="linkedPublicIPAddress")
     private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
 
+    /**
+     * @return The linked public IP address of the public IP address resource.
+     * 
+     */
     public Optional<Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs>> linkedPublicIPAddress() {
         return Optional.ofNullable(this.linkedPublicIPAddress);
     }
@@ -124,6 +156,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -135,6 +171,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="migrationPhase")
     private @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
+    /**
+     * @return Migration phase of Public IP Address.
+     * 
+     */
     public Optional<Output<Either<String,PublicIPAddressMigrationPhase>>> migrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
@@ -146,6 +186,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="natGateway")
     private @Nullable Output<NatGatewayArgs> natGateway;
 
+    /**
+     * @return The NatGateway for the Public IP address.
+     * 
+     */
     public Optional<Output<NatGatewayArgs>> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
@@ -157,6 +201,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPAddressVersion")
     private @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
+    /**
+     * @return The public IP address version.
+     * 
+     */
     public Optional<Output<Either<String,IPVersion>>> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
@@ -168,6 +216,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
+    /**
+     * @return The public IP address allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> publicIPAllocationMethod() {
         return Optional.ofNullable(this.publicIPAllocationMethod);
     }
@@ -179,6 +231,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIPPrefix")
     private @Nullable Output<SubResourceArgs> publicIPPrefix;
 
+    /**
+     * @return The Public IP Prefix this Public IP Address should be allocated from.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -190,6 +246,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="publicIpAddressName")
     private @Nullable Output<String> publicIpAddressName;
 
+    /**
+     * @return The name of the public IP address.
+     * 
+     */
     public Optional<Output<String>> publicIpAddressName() {
         return Optional.ofNullable(this.publicIpAddressName);
     }
@@ -201,6 +261,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -212,6 +276,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="servicePublicIPAddress")
     private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
 
+    /**
+     * @return The service public IP address of the public IP address resource.
+     * 
+     */
     public Optional<Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs>> servicePublicIPAddress() {
         return Optional.ofNullable(this.servicePublicIPAddress);
     }
@@ -223,6 +291,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
     private @Nullable Output<PublicIPAddressSkuArgs> sku;
 
+    /**
+     * @return The public IP address SKU.
+     * 
+     */
     public Optional<Output<PublicIPAddressSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -234,6 +306,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -245,6 +321,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -292,214 +372,502 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
             $ = new PublicIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosSettings The DDoS protection custom policy associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosSettings(@Nullable Output<DdosSettingsArgs> ddosSettings) {
             $.ddosSettings = ddosSettings;
             return this;
         }
 
+        /**
+         * @param ddosSettings The DDoS protection custom policy associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosSettings(DdosSettingsArgs ddosSettings) {
             return ddosSettings(Output.of(ddosSettings));
         }
 
+        /**
+         * @param dnsSettings The FQDN of the DNS record associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings The FQDN of the DNS record associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(PublicIPAddressDnsSettingsArgs dnsSettings) {
             return dnsSettings(Output.of(dnsSettings));
         }
 
+        /**
+         * @param extendedLocation The extended location of the public ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the public ip address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(Integer idleTimeoutInMinutes) {
             return idleTimeoutInMinutes(Output.of(idleTimeoutInMinutes));
         }
 
+        /**
+         * @param ipAddress The IP address associated with the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address associated with the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param ipTags The list of tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(@Nullable Output<List<IpTagArgs>> ipTags) {
             $.ipTags = ipTags;
             return this;
         }
 
+        /**
+         * @param ipTags The list of tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(List<IpTagArgs> ipTags) {
             return ipTags(Output.of(ipTags));
         }
 
+        /**
+         * @param ipTags The list of tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(IpTagArgs... ipTags) {
             return ipTags(List.of(ipTags));
         }
 
+        /**
+         * @param linkedPublicIPAddress The linked public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedPublicIPAddress(@Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress) {
             $.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
 
+        /**
+         * @param linkedPublicIPAddress The linked public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedPublicIPAddress(com.pulumi.azurenative.network.inputs.PublicIPAddressArgs linkedPublicIPAddress) {
             return linkedPublicIPAddress(Output.of(linkedPublicIPAddress));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Public IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(@Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase) {
             $.migrationPhase = migrationPhase;
             return this;
         }
 
+        /**
+         * @param migrationPhase Migration phase of Public IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(Either<String,PublicIPAddressMigrationPhase> migrationPhase) {
             return migrationPhase(Output.of(migrationPhase));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Public IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(String migrationPhase) {
             return migrationPhase(Either.ofLeft(migrationPhase));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Public IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(PublicIPAddressMigrationPhase migrationPhase) {
             return migrationPhase(Either.ofRight(migrationPhase));
         }
 
+        /**
+         * @param natGateway The NatGateway for the Public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGateway(@Nullable Output<NatGatewayArgs> natGateway) {
             $.natGateway = natGateway;
             return this;
         }
 
+        /**
+         * @param natGateway The NatGateway for the Public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natGateway(NatGatewayArgs natGateway) {
             return natGateway(Output.of(natGateway));
         }
 
+        /**
+         * @param publicIPAddressVersion The public IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersion>> publicIPAddressVersion) {
             $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param publicIPAddressVersion The public IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(Either<String,IPVersion> publicIPAddressVersion) {
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAddressVersion The public IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(String publicIPAddressVersion) {
             return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAddressVersion The public IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(IPVersion publicIPAddressVersion) {
             return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
         }
 
+        /**
+         * @param publicIPAllocationMethod The public IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod) {
             $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param publicIPAllocationMethod The public IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(Either<String,IPAllocationMethod> publicIPAllocationMethod) {
             return publicIPAllocationMethod(Output.of(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAllocationMethod The public IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(String publicIPAllocationMethod) {
             return publicIPAllocationMethod(Either.ofLeft(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAllocationMethod The public IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAllocationMethod(IPAllocationMethod publicIPAllocationMethod) {
             return publicIPAllocationMethod(Either.ofRight(publicIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPPrefix The Public IP Prefix this Public IP Address should be allocated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The Public IP Prefix this Public IP Address should be allocated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(SubResourceArgs publicIPPrefix) {
             return publicIPPrefix(Output.of(publicIPPrefix));
         }
 
+        /**
+         * @param publicIpAddressName The name of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressName(@Nullable Output<String> publicIpAddressName) {
             $.publicIpAddressName = publicIpAddressName;
             return this;
         }
 
+        /**
+         * @param publicIpAddressName The name of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressName(String publicIpAddressName) {
             return publicIpAddressName(Output.of(publicIpAddressName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param servicePublicIPAddress The service public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePublicIPAddress(@Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress) {
             $.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
 
+        /**
+         * @param servicePublicIPAddress The service public IP address of the public IP address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePublicIPAddress(com.pulumi.azurenative.network.inputs.PublicIPAddressArgs servicePublicIPAddress) {
             return servicePublicIPAddress(Output.of(servicePublicIPAddress));
         }
 
+        /**
+         * @param sku The public IP address SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The public IP address SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(PublicIPAddressSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

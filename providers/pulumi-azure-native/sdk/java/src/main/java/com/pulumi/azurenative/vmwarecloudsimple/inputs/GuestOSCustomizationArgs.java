@@ -27,6 +27,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return List of dns servers to use
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -38,6 +42,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
     @Import(name="hostName")
     private @Nullable Output<String> hostName;
 
+    /**
+     * @return Virtual Machine hostname
+     * 
+     */
     public Optional<Output<String>> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -49,6 +57,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password for login
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -60,6 +72,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return id of customization policy
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -71,6 +87,10 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Username for login
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -103,51 +123,117 @@ public final class GuestOSCustomizationArgs extends com.pulumi.resources.Resourc
             $ = new GuestOSCustomizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param hostName Virtual Machine hostname
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName Virtual Machine hostname
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param password Password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param policyId id of customization policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId id of customization policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param username Username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

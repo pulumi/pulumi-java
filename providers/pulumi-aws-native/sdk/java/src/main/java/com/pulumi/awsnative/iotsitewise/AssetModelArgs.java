@@ -27,6 +27,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelCompositeModels")
     private @Nullable Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels;
 
+    /**
+     * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+     * 
+     */
     public Optional<Output<List<AssetModelCompositeModelArgs>>> assetModelCompositeModels() {
         return Optional.ofNullable(this.assetModelCompositeModels);
     }
@@ -38,6 +42,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelDescription")
     private @Nullable Output<String> assetModelDescription;
 
+    /**
+     * @return A description for the asset model.
+     * 
+     */
     public Optional<Output<String>> assetModelDescription() {
         return Optional.ofNullable(this.assetModelDescription);
     }
@@ -49,6 +57,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelHierarchies")
     private @Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies;
 
+    /**
+     * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+     * 
+     */
     public Optional<Output<List<AssetModelHierarchyArgs>>> assetModelHierarchies() {
         return Optional.ofNullable(this.assetModelHierarchies);
     }
@@ -60,6 +72,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelName")
     private @Nullable Output<String> assetModelName;
 
+    /**
+     * @return A unique, friendly name for the asset model.
+     * 
+     */
     public Optional<Output<String>> assetModelName() {
         return Optional.ofNullable(this.assetModelName);
     }
@@ -71,6 +87,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetModelProperties")
     private @Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties;
 
+    /**
+     * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * 
+     */
     public Optional<Output<List<AssetModelPropertyArgs>>> assetModelProperties() {
         return Optional.ofNullable(this.assetModelProperties);
     }
@@ -82,6 +102,10 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AssetModelTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Optional<Output<List<AssetModelTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -115,72 +139,168 @@ public final class AssetModelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssetModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetModelCompositeModels The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelCompositeModels(@Nullable Output<List<AssetModelCompositeModelArgs>> assetModelCompositeModels) {
             $.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
 
+        /**
+         * @param assetModelCompositeModels The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelCompositeModels(List<AssetModelCompositeModelArgs> assetModelCompositeModels) {
             return assetModelCompositeModels(Output.of(assetModelCompositeModels));
         }
 
+        /**
+         * @param assetModelCompositeModels The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelCompositeModels(AssetModelCompositeModelArgs... assetModelCompositeModels) {
             return assetModelCompositeModels(List.of(assetModelCompositeModels));
         }
 
+        /**
+         * @param assetModelDescription A description for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelDescription(@Nullable Output<String> assetModelDescription) {
             $.assetModelDescription = assetModelDescription;
             return this;
         }
 
+        /**
+         * @param assetModelDescription A description for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelDescription(String assetModelDescription) {
             return assetModelDescription(Output.of(assetModelDescription));
         }
 
+        /**
+         * @param assetModelHierarchies The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelHierarchies(@Nullable Output<List<AssetModelHierarchyArgs>> assetModelHierarchies) {
             $.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
 
+        /**
+         * @param assetModelHierarchies The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelHierarchies(List<AssetModelHierarchyArgs> assetModelHierarchies) {
             return assetModelHierarchies(Output.of(assetModelHierarchies));
         }
 
+        /**
+         * @param assetModelHierarchies The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelHierarchies(AssetModelHierarchyArgs... assetModelHierarchies) {
             return assetModelHierarchies(List.of(assetModelHierarchies));
         }
 
+        /**
+         * @param assetModelName A unique, friendly name for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelName(@Nullable Output<String> assetModelName) {
             $.assetModelName = assetModelName;
             return this;
         }
 
+        /**
+         * @param assetModelName A unique, friendly name for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelName(String assetModelName) {
             return assetModelName(Output.of(assetModelName));
         }
 
+        /**
+         * @param assetModelProperties The property definitions of the asset model. You can specify up to 200 properties per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelProperties(@Nullable Output<List<AssetModelPropertyArgs>> assetModelProperties) {
             $.assetModelProperties = assetModelProperties;
             return this;
         }
 
+        /**
+         * @param assetModelProperties The property definitions of the asset model. You can specify up to 200 properties per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelProperties(List<AssetModelPropertyArgs> assetModelProperties) {
             return assetModelProperties(Output.of(assetModelProperties));
         }
 
+        /**
+         * @param assetModelProperties The property definitions of the asset model. You can specify up to 200 properties per asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetModelProperties(AssetModelPropertyArgs... assetModelProperties) {
             return assetModelProperties(List.of(assetModelProperties));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AssetModelTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AssetModelTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AssetModelTagArgs... tags) {
             return tags(List.of(tags));
         }

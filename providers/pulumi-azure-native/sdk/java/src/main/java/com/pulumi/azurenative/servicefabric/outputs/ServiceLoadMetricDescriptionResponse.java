@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceLoadMetricDescriptionResponse {
     /**
-     * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
+     * @return Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
      * 
      */
     private final @Nullable Integer defaultLoad;
     /**
-     * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
+     * @return The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
      * 
      */
     private final String name;
     /**
-     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
      * 
      */
     private final @Nullable Integer primaryDefaultLoad;
     /**
-     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
      * 
      */
     private final @Nullable Integer secondaryDefaultLoad;
     /**
-     * The service load metric relative weight, compared to other metrics configured for this service, as a number.
+     * @return The service load metric relative weight, compared to other metrics configured for this service, as a number.
      * 
      */
     private final @Nullable String weight;
@@ -53,37 +53,37 @@ public final class ServiceLoadMetricDescriptionResponse {
     }
 
     /**
-     * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
+     * @return Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
      * 
-    */
+     */
     public Optional<Integer> defaultLoad() {
         return Optional.ofNullable(this.defaultLoad);
     }
     /**
-     * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
+     * @return The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
      * 
-    */
+     */
     public Optional<Integer> primaryDefaultLoad() {
         return Optional.ofNullable(this.primaryDefaultLoad);
     }
     /**
-     * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
+     * @return Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
      * 
-    */
+     */
     public Optional<Integer> secondaryDefaultLoad() {
         return Optional.ofNullable(this.secondaryDefaultLoad);
     }
     /**
-     * The service load metric relative weight, compared to other metrics configured for this service, as a number.
+     * @return The service load metric relative weight, compared to other metrics configured for this service, as a number.
      * 
-    */
+     */
     public Optional<String> weight() {
         return Optional.ofNullable(this.weight);
     }

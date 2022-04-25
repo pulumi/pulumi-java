@@ -25,6 +25,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="properties")
     private @Nullable Output<EnterpriseKnowledgeGraphPropertiesArgs> properties;
 
+    /**
+     * @return The set of properties specific to EnterpriseKnowledgeGraph resource
+     * 
+     */
     public Optional<Output<EnterpriseKnowledgeGraphPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -47,6 +55,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the EnterpriseKnowledgeGraph resource.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -69,6 +85,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -80,6 +100,10 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,56 +137,128 @@ public final class EnterpriseKnowledgeGraphArgs extends com.pulumi.resources.Res
             $ = new EnterpriseKnowledgeGraphArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The set of properties specific to EnterpriseKnowledgeGraph resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<EnterpriseKnowledgeGraphPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The set of properties specific to EnterpriseKnowledgeGraph resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(EnterpriseKnowledgeGraphPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the EnterpriseKnowledgeGraph resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the EnterpriseKnowledgeGraph resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param sku Gets or sets the SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets the SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Contains resource tags defined as key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

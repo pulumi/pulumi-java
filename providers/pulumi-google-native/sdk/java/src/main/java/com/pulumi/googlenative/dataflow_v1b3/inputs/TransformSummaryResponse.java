@@ -25,6 +25,10 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
     @Import(name="displayData", required=true)
     private List<DisplayDataResponse> displayData;
 
+    /**
+     * @return Transform-specific display data.
+     * 
+     */
     public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
@@ -36,6 +40,10 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
     @Import(name="inputCollectionName", required=true)
     private List<String> inputCollectionName;
 
+    /**
+     * @return User names for all collection inputs to this transform.
+     * 
+     */
     public List<String> inputCollectionName() {
         return this.inputCollectionName;
     }
@@ -47,6 +55,10 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Type of transform.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -58,6 +70,10 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return User provided name for this transform instance.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
     @Import(name="outputCollectionName", required=true)
     private List<String> outputCollectionName;
 
+    /**
+     * @return User names for all collection outputs to this transform.
+     * 
+     */
     public List<String> outputCollectionName() {
         return this.outputCollectionName;
     }
@@ -101,39 +121,87 @@ public final class TransformSummaryResponse extends com.pulumi.resources.InvokeA
             $ = new TransformSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayData Transform-specific display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(List<DisplayDataResponse> displayData) {
             $.displayData = displayData;
             return this;
         }
 
+        /**
+         * @param displayData Transform-specific display data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayData(DisplayDataResponse... displayData) {
             return displayData(List.of(displayData));
         }
 
+        /**
+         * @param inputCollectionName User names for all collection inputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputCollectionName(List<String> inputCollectionName) {
             $.inputCollectionName = inputCollectionName;
             return this;
         }
 
+        /**
+         * @param inputCollectionName User names for all collection inputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputCollectionName(String... inputCollectionName) {
             return inputCollectionName(List.of(inputCollectionName));
         }
 
+        /**
+         * @param kind Type of transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name User provided name for this transform instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outputCollectionName User names for all collection outputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputCollectionName(List<String> outputCollectionName) {
             $.outputCollectionName = outputCollectionName;
             return this;
         }
 
+        /**
+         * @param outputCollectionName User names for all collection outputs to this transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputCollectionName(String... outputCollectionName) {
             return outputCollectionName(List.of(outputCollectionName));
         }

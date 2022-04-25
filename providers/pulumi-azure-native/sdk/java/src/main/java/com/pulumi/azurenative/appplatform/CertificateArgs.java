@@ -23,6 +23,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
     private @Nullable Output<String> certificateName;
 
+    /**
+     * @return The name of the certificate resource.
+     * 
+     */
     public Optional<Output<String>> certificateName() {
         return Optional.ofNullable(this.certificateName);
     }
@@ -34,6 +38,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<CertificatePropertiesArgs> properties;
 
+    /**
+     * @return Properties of the certificate resource payload.
+     * 
+     */
     public Optional<Output<CertificatePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -87,38 +103,86 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The name of the certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(@Nullable Output<String> certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param certificateName The name of the certificate resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             return certificateName(Output.of(certificateName));
         }
 
+        /**
+         * @param properties Properties of the certificate resource payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<CertificatePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the certificate resource payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(CertificatePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

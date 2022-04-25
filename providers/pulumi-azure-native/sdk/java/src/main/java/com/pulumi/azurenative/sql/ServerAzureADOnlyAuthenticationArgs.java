@@ -23,6 +23,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
     @Import(name="authenticationName")
     private @Nullable Output<String> authenticationName;
 
+    /**
+     * @return The name of server azure active directory only authentication.
+     * 
+     */
     public Optional<Output<String>> authenticationName() {
         return Optional.ofNullable(this.authenticationName);
     }
@@ -34,6 +38,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
     @Import(name="azureADOnlyAuthentication", required=true)
     private Output<Boolean> azureADOnlyAuthentication;
 
+    /**
+     * @return Azure Active Directory only Authentication enabled.
+     * 
+     */
     public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
@@ -45,6 +53,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -87,38 +103,86 @@ public final class ServerAzureADOnlyAuthenticationArgs extends com.pulumi.resour
             $ = new ServerAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationName(@Nullable Output<String> authenticationName) {
             $.authenticationName = authenticationName;
             return this;
         }
 
+        /**
+         * @param authenticationName The name of server azure active directory only authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationName(String authenticationName) {
             return authenticationName(Output.of(authenticationName));
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
             $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
+        /**
+         * @param azureADOnlyAuthentication Azure Active Directory only Authentication enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

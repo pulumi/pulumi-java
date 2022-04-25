@@ -19,6 +19,10 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -30,6 +34,10 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -59,11 +67,23 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
             $ = new GetResourceTypeRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

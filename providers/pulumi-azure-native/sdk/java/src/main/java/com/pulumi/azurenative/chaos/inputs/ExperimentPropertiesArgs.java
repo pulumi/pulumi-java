@@ -29,6 +29,10 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="selectors", required=true)
     private Output<List<SelectorArgs>> selectors;
 
+    /**
+     * @return List of selectors.
+     * 
+     */
     public Output<List<SelectorArgs>> selectors() {
         return this.selectors;
     }
@@ -40,6 +44,10 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="startOnCreation")
     private @Nullable Output<Boolean> startOnCreation;
 
+    /**
+     * @return A boolean value that indicates if experiment should be started on creation or not.
+     * 
+     */
     public Optional<Output<Boolean>> startOnCreation() {
         return Optional.ofNullable(this.startOnCreation);
     }
@@ -51,6 +59,10 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="steps", required=true)
     private Output<List<StepArgs>> steps;
 
+    /**
+     * @return List of steps.
+     * 
+     */
     public Output<List<StepArgs>> steps() {
         return this.steps;
     }
@@ -81,37 +93,85 @@ public final class ExperimentPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new ExperimentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectors List of selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(Output<List<SelectorArgs>> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors List of selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<SelectorArgs> selectors) {
             return selectors(Output.of(selectors));
         }
 
+        /**
+         * @param selectors List of selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(SelectorArgs... selectors) {
             return selectors(List.of(selectors));
         }
 
+        /**
+         * @param startOnCreation A boolean value that indicates if experiment should be started on creation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
             $.startOnCreation = startOnCreation;
             return this;
         }
 
+        /**
+         * @param startOnCreation A boolean value that indicates if experiment should be started on creation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startOnCreation(Boolean startOnCreation) {
             return startOnCreation(Output.of(startOnCreation));
         }
 
+        /**
+         * @param steps List of steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(Output<List<StepArgs>> steps) {
             $.steps = steps;
             return this;
         }
 
+        /**
+         * @param steps List of steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(List<StepArgs> steps) {
             return steps(Output.of(steps));
         }
 
+        /**
+         * @param steps List of steps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder steps(StepArgs... steps) {
             return steps(List.of(steps));
         }

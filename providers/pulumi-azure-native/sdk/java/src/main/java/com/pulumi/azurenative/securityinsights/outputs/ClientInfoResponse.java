@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClientInfoResponse {
     /**
-     * The email of the client.
+     * @return The email of the client.
      * 
      */
     private final @Nullable String email;
     /**
-     * The name of the client.
+     * @return The name of the client.
      * 
      */
     private final @Nullable String name;
     /**
-     * The object id of the client.
+     * @return The object id of the client.
      * 
      */
     private final @Nullable String objectId;
     /**
-     * The user principal name of the client.
+     * @return The user principal name of the client.
      * 
      */
     private final @Nullable String userPrincipalName;
@@ -45,30 +45,30 @@ public final class ClientInfoResponse {
     }
 
     /**
-     * The email of the client.
+     * @return The email of the client.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The name of the client.
+     * @return The name of the client.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The object id of the client.
+     * @return The object id of the client.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * The user principal name of the client.
+     * @return The user principal name of the client.
      * 
-    */
+     */
     public Optional<String> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }

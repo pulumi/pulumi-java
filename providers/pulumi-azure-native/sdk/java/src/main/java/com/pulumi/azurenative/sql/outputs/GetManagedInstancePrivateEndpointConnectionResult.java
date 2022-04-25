@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetManagedInstancePrivateEndpointConnectionResult {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Private endpoint which the connection belongs to.
+     * @return Private endpoint which the connection belongs to.
      * 
      */
     private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
     /**
-     * Connection State of the Private Endpoint Connection.
+     * @return Connection State of the Private Endpoint Connection.
      * 
      */
     private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
     /**
-     * State of the Private Endpoint Connection.
+     * @return State of the Private Endpoint Connection.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Private endpoint which the connection belongs to.
+     * @return Private endpoint which the connection belongs to.
      * 
-    */
+     */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Connection State of the Private Endpoint Connection.
+     * @return Connection State of the Private Endpoint Connection.
      * 
-    */
+     */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * State of the Private Endpoint Connection.
+     * @return State of the Private Endpoint Connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

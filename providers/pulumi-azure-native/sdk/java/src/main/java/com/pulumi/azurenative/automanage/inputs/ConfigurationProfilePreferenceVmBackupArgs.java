@@ -27,6 +27,10 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi
     @Import(name="instantRpRetentionRangeInDays")
     private @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
+    /**
+     * @return Instant RP retention policy range in days
+     * 
+     */
     public Optional<Output<Integer>> instantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
@@ -38,6 +42,10 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi
     @Import(name="retentionPolicy")
     private @Nullable Output<String> retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<Output<String>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -49,6 +57,10 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi
     @Import(name="schedulePolicy")
     private @Nullable Output<String> schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<Output<String>> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -60,6 +72,10 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: Pacific Standard Time
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -91,38 +107,86 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends com.pulumi
             $ = new ConfigurationProfilePreferenceVmBackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instantRpRetentionRangeInDays Instant RP retention policy range in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantRpRetentionRangeInDays(@Nullable Output<Integer> instantRpRetentionRangeInDays) {
             $.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
+        /**
+         * @param instantRpRetentionRangeInDays Instant RP retention policy range in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantRpRetentionRangeInDays(Integer instantRpRetentionRangeInDays) {
             return instantRpRetentionRangeInDays(Output.of(instantRpRetentionRangeInDays));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<String> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(String retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Output<String> schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(String schedulePolicy) {
             return schedulePolicy(Output.of(schedulePolicy));
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: Pacific Standard Time
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: Pacific Standard Time
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

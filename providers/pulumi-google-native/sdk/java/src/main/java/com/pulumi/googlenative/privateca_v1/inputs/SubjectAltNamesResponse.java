@@ -25,6 +25,10 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customSans", required=true)
     private List<X509ExtensionResponse> customSans;
 
+    /**
+     * @return Contains additional subject alternative name values.
+     * 
+     */
     public List<X509ExtensionResponse> customSans() {
         return this.customSans;
     }
@@ -36,6 +40,10 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dnsNames", required=true)
     private List<String> dnsNames;
 
+    /**
+     * @return Contains only valid, fully-qualified host names.
+     * 
+     */
     public List<String> dnsNames() {
         return this.dnsNames;
     }
@@ -47,6 +55,10 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="emailAddresses", required=true)
     private List<String> emailAddresses;
 
+    /**
+     * @return Contains only valid RFC 2822 E-mail addresses.
+     * 
+     */
     public List<String> emailAddresses() {
         return this.emailAddresses;
     }
@@ -58,6 +70,10 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="ipAddresses", required=true)
     private List<String> ipAddresses;
 
+    /**
+     * @return Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * 
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses;
     }
@@ -69,6 +85,10 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uris", required=true)
     private List<String> uris;
 
+    /**
+     * @return Contains only valid RFC 3986 URIs.
+     * 
+     */
     public List<String> uris() {
         return this.uris;
     }
@@ -101,47 +121,107 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
             $ = new SubjectAltNamesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customSans Contains additional subject alternative name values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSans(List<X509ExtensionResponse> customSans) {
             $.customSans = customSans;
             return this;
         }
 
+        /**
+         * @param customSans Contains additional subject alternative name values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSans(X509ExtensionResponse... customSans) {
             return customSans(List.of(customSans));
         }
 
+        /**
+         * @param dnsNames Contains only valid, fully-qualified host names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(List<String> dnsNames) {
             $.dnsNames = dnsNames;
             return this;
         }
 
+        /**
+         * @param dnsNames Contains only valid, fully-qualified host names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
 
+        /**
+         * @param emailAddresses Contains only valid RFC 2822 E-mail addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(List<String> emailAddresses) {
             $.emailAddresses = emailAddresses;
             return this;
         }
 
+        /**
+         * @param emailAddresses Contains only valid RFC 2822 E-mail addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
 
+        /**
+         * @param ipAddresses Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param uris Contains only valid RFC 3986 URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris Contains only valid RFC 3986 URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

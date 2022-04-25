@@ -26,6 +26,11 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="billingType", required=true)
     private String billingType;
 
+    /**
+     * @return Represents billing type.
+     * Expected value is &#39;Pav2&#39;.
+     * 
+     */
     public String billingType() {
         return this.billingType;
     }
@@ -37,6 +42,10 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="chargingType", required=true)
     private String chargingType;
 
+    /**
+     * @return Charging type.
+     * 
+     */
     public String chargingType() {
         return this.chargingType;
     }
@@ -48,6 +57,10 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="meterGuid", required=true)
     private String meterGuid;
 
+    /**
+     * @return Validation status of requested data center and transport.
+     * 
+     */
     public String meterGuid() {
         return this.meterGuid;
     }
@@ -59,6 +72,10 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
     @Import(name="multiplier", required=true)
     private Double multiplier;
 
+    /**
+     * @return Billing unit applicable for Pav2 billing
+     * 
+     */
     public Double multiplier() {
         return this.multiplier;
     }
@@ -90,21 +107,46 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
             $ = new Pav2MeterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingType Represents billing type.
+         * Expected value is &#39;Pav2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(String billingType) {
             $.billingType = billingType;
             return this;
         }
 
+        /**
+         * @param chargingType Charging type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chargingType(String chargingType) {
             $.chargingType = chargingType;
             return this;
         }
 
+        /**
+         * @param meterGuid Validation status of requested data center and transport.
+         * 
+         * @return builder
+         * 
+         */
         public Builder meterGuid(String meterGuid) {
             $.meterGuid = meterGuid;
             return this;
         }
 
+        /**
+         * @param multiplier Billing unit applicable for Pav2 billing
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiplier(Double multiplier) {
             $.multiplier = multiplier;
             return this;

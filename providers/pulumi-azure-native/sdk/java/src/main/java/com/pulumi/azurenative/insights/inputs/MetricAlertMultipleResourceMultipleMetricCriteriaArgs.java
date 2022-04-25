@@ -31,6 +31,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="allOf")
     private @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
+    /**
+     * @return the list of multiple metric criteria for this &#39;all of&#39; operation.
+     * 
+     */
     public Optional<Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>>> allOf() {
         return Optional.ofNullable(this.allOf);
     }
@@ -43,6 +47,11 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return specifies the type of the alert criteria.
+     * Expected value is &#39;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -72,24 +81,56 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
             $ = new MetricAlertMultipleResourceMultipleMetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allOf the list of multiple metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(@Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf) {
             $.allOf = allOf;
             return this;
         }
 
+        /**
+         * @param allOf the list of multiple metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>> allOf) {
             return allOf(Output.of(allOf));
         }
 
+        /**
+         * @param allOf the list of multiple metric criteria for this &#39;all of&#39; operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allOf(Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>... allOf) {
             return allOf(List.of(allOf));
         }
 
+        /**
+         * @param odataType specifies the type of the alert criteria.
+         * Expected value is &#39;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of the alert criteria.
+         * Expected value is &#39;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

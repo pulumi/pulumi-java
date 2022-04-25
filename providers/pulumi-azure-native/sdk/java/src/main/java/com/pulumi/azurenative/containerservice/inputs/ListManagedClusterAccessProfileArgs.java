@@ -19,6 +19,10 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the managed cluster resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -41,6 +49,10 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
     @Import(name="roleName", required=true)
     private String roleName;
 
+    /**
+     * @return The name of the role for managed cluster accessProfile resource.
+     * 
+     */
     public String roleName() {
         return this.roleName;
     }
@@ -71,16 +83,34 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
             $ = new ListManagedClusterAccessProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param roleName The name of the role for managed cluster accessProfile resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             $.roleName = roleName;
             return this;

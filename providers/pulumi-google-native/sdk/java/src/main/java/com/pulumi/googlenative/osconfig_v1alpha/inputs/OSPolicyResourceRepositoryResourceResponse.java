@@ -26,6 +26,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
     @Import(name="apt", required=true)
     private OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
+    /**
+     * @return An Apt Repository.
+     * 
+     */
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse apt() {
         return this.apt;
     }
@@ -37,6 +41,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
     @Import(name="goo", required=true)
     private OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
+    /**
+     * @return A Goo Repository.
+     * 
+     */
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse goo() {
         return this.goo;
     }
@@ -48,6 +56,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
     @Import(name="yum", required=true)
     private OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
+    /**
+     * @return A Yum Repository.
+     * 
+     */
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse yum() {
         return this.yum;
     }
@@ -59,6 +71,10 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
     @Import(name="zypper", required=true)
     private OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
+    /**
+     * @return A Zypper Repository.
+     * 
+     */
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper() {
         return this.zypper;
     }
@@ -90,21 +106,45 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
             $ = new OSPolicyResourceRepositoryResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apt An Apt Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apt(OSPolicyResourceRepositoryResourceAptRepositoryResponse apt) {
             $.apt = apt;
             return this;
         }
 
+        /**
+         * @param goo A Goo Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goo(OSPolicyResourceRepositoryResourceGooRepositoryResponse goo) {
             $.goo = goo;
             return this;
         }
 
+        /**
+         * @param yum A Yum Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yum(OSPolicyResourceRepositoryResourceYumRepositoryResponse yum) {
             $.yum = yum;
             return this;
         }
 
+        /**
+         * @param zypper A Zypper Repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zypper(OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
             $.zypper = zypper;
             return this;

@@ -20,6 +20,10 @@ public final class DomainSnapshotOptionsGetArgs extends com.pulumi.resources.Res
     @Import(name="automatedSnapshotStartHour", required=true)
     private Output<Integer> automatedSnapshotStartHour;
 
+    /**
+     * @return Hour during which the service takes an automated daily snapshot of the indices in the domain.
+     * 
+     */
     public Output<Integer> automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
@@ -48,11 +52,23 @@ public final class DomainSnapshotOptionsGetArgs extends com.pulumi.resources.Res
             $ = new DomainSnapshotOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automatedSnapshotStartHour Hour during which the service takes an automated daily snapshot of the indices in the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedSnapshotStartHour(Output<Integer> automatedSnapshotStartHour) {
             $.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
         }
 
+        /**
+         * @param automatedSnapshotStartHour Hour during which the service takes an automated daily snapshot of the indices in the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
             return automatedSnapshotStartHour(Output.of(automatedSnapshotStartHour));
         }

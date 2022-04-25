@@ -26,6 +26,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryUserId")
     private @Nullable Output<String> directoryUserId;
 
+    /**
+     * @return The identifier of the user account in the directory used for identity management.
+     * 
+     */
     public Optional<Output<String>> directoryUserId() {
         return Optional.ofNullable(this.directoryUserId);
     }
@@ -37,6 +41,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hierarchyGroupArn")
     private @Nullable Output<String> hierarchyGroupArn;
 
+    /**
+     * @return The identifier of the hierarchy group for the user.
+     * 
+     */
     public Optional<Output<String>> hierarchyGroupArn() {
         return Optional.ofNullable(this.hierarchyGroupArn);
     }
@@ -48,6 +56,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityInfo")
     private @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
+    /**
+     * @return The information about the identity of the user.
+     * 
+     */
     public Optional<Output<UserIdentityInfoArgs>> identityInfo() {
         return Optional.ofNullable(this.identityInfo);
     }
@@ -59,6 +71,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The identifier of the Amazon Connect instance.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -70,6 +86,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -81,6 +101,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneConfig", required=true)
     private Output<UserPhoneConfigArgs> phoneConfig;
 
+    /**
+     * @return The phone settings for the user.
+     * 
+     */
     public Output<UserPhoneConfigArgs> phoneConfig() {
         return this.phoneConfig;
     }
@@ -92,6 +116,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingProfileArn", required=true)
     private Output<String> routingProfileArn;
 
+    /**
+     * @return The identifier of the routing profile for the user.
+     * 
+     */
     public Output<String> routingProfileArn() {
         return this.routingProfileArn;
     }
@@ -103,6 +131,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityProfileArns", required=true)
     private Output<List<String>> securityProfileArns;
 
+    /**
+     * @return One or more security profile arns for the user
+     * 
+     */
     public Output<List<String>> securityProfileArns() {
         return this.securityProfileArns;
     }
@@ -114,6 +146,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<UserTagArgs>> tags;
 
+    /**
+     * @return One or more tags.
+     * 
+     */
     public Optional<Output<List<UserTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,6 +161,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The user name for the account.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -162,100 +202,232 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directoryUserId The identifier of the user account in the directory used for identity management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryUserId(@Nullable Output<String> directoryUserId) {
             $.directoryUserId = directoryUserId;
             return this;
         }
 
+        /**
+         * @param directoryUserId The identifier of the user account in the directory used for identity management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryUserId(String directoryUserId) {
             return directoryUserId(Output.of(directoryUserId));
         }
 
+        /**
+         * @param hierarchyGroupArn The identifier of the hierarchy group for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyGroupArn(@Nullable Output<String> hierarchyGroupArn) {
             $.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
 
+        /**
+         * @param hierarchyGroupArn The identifier of the hierarchy group for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyGroupArn(String hierarchyGroupArn) {
             return hierarchyGroupArn(Output.of(hierarchyGroupArn));
         }
 
+        /**
+         * @param identityInfo The information about the identity of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityInfo(@Nullable Output<UserIdentityInfoArgs> identityInfo) {
             $.identityInfo = identityInfo;
             return this;
         }
 
+        /**
+         * @param identityInfo The information about the identity of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityInfo(UserIdentityInfoArgs identityInfo) {
             return identityInfo(Output.of(identityInfo));
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The identifier of the Amazon Connect instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
 
+        /**
+         * @param password The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param phoneConfig The phone settings for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfig(Output<UserPhoneConfigArgs> phoneConfig) {
             $.phoneConfig = phoneConfig;
             return this;
         }
 
+        /**
+         * @param phoneConfig The phone settings for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneConfig(UserPhoneConfigArgs phoneConfig) {
             return phoneConfig(Output.of(phoneConfig));
         }
 
+        /**
+         * @param routingProfileArn The identifier of the routing profile for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingProfileArn(Output<String> routingProfileArn) {
             $.routingProfileArn = routingProfileArn;
             return this;
         }
 
+        /**
+         * @param routingProfileArn The identifier of the routing profile for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingProfileArn(String routingProfileArn) {
             return routingProfileArn(Output.of(routingProfileArn));
         }
 
+        /**
+         * @param securityProfileArns One or more security profile arns for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileArns(Output<List<String>> securityProfileArns) {
             $.securityProfileArns = securityProfileArns;
             return this;
         }
 
+        /**
+         * @param securityProfileArns One or more security profile arns for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileArns(List<String> securityProfileArns) {
             return securityProfileArns(Output.of(securityProfileArns));
         }
 
+        /**
+         * @param securityProfileArns One or more security profile arns for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfileArns(String... securityProfileArns) {
             return securityProfileArns(List.of(securityProfileArns));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<UserTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags One or more tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(UserTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param username The user name for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The user name for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedNetworkPeeringPolicyResponse {
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Gets or sets the properties of a Managed Network Policy
+     * @return Gets or sets the properties of a Managed Network Policy
      * 
      */
     private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class ManagedNetworkPeeringPolicyResponse {
     }
 
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the properties of a Managed Network Policy
+     * @return Gets or sets the properties of a Managed Network Policy
      * 
-    */
+     */
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

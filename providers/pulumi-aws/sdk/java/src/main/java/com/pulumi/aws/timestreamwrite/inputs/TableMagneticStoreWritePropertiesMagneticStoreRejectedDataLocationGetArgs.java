@@ -22,6 +22,10 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="s3Configuration")
     private @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration;
 
+    /**
+     * @return Configuration of an S3 location to write error reports for records rejected, asynchronously, during magnetic store writes. See S3 Configuration below for more details.
+     * 
+     */
     public Optional<Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs>> s3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }
@@ -50,11 +54,23 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
             $ = new TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Configuration Configuration of an S3 location to write error reports for records rejected, asynchronously, during magnetic store writes. See S3 Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Configuration(@Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs> s3Configuration) {
             $.s3Configuration = s3Configuration;
             return this;
         }
 
+        /**
+         * @param s3Configuration Configuration of an S3 location to write error reports for records rejected, asynchronously, during magnetic store writes. See S3 Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Configuration(TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationGetArgs s3Configuration) {
             return s3Configuration(Output.of(s3Configuration));
         }

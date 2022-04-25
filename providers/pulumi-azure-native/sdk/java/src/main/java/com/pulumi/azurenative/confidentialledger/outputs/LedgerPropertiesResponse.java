@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LedgerPropertiesResponse {
     /**
-     * Array of all AAD based Security Principals.
+     * @return Array of all AAD based Security Principals.
      * 
      */
     private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
     /**
-     * Array of all cert based Security Principals.
+     * @return Array of all cert based Security Principals.
      * 
      */
     private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
     /**
-     * Endpoint for accessing network identity.
+     * @return Endpoint for accessing network identity.
      * 
      */
     private final String identityServiceUri;
     /**
-     * Internal namespace for the Ledger
+     * @return Internal namespace for the Ledger
      * 
      */
     private final String ledgerInternalNamespace;
     /**
-     * Unique name for the Confidential Ledger.
+     * @return Unique name for the Confidential Ledger.
      * 
      */
     private final String ledgerName;
     /**
-     * Name of the Blob Storage Account for saving ledger files
+     * @return Name of the Blob Storage Account for saving ledger files
      * 
      */
     private final @Nullable String ledgerStorageAccount;
     /**
-     * Type of Confidential Ledger
+     * @return Type of Confidential Ledger
      * 
      */
     private final @Nullable String ledgerType;
     /**
-     * Endpoint for calling Ledger Service.
+     * @return Endpoint for calling Ledger Service.
      * 
      */
     private final String ledgerUri;
     /**
-     * Provisioning state of Ledger Resource
+     * @return Provisioning state of Ledger Resource
      * 
      */
     private final String provisioningState;
@@ -83,65 +83,65 @@ public final class LedgerPropertiesResponse {
     }
 
     /**
-     * Array of all AAD based Security Principals.
+     * @return Array of all AAD based Security Principals.
      * 
-    */
+     */
     public List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
     }
     /**
-     * Array of all cert based Security Principals.
+     * @return Array of all cert based Security Principals.
      * 
-    */
+     */
     public List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
     }
     /**
-     * Endpoint for accessing network identity.
+     * @return Endpoint for accessing network identity.
      * 
-    */
+     */
     public String identityServiceUri() {
         return this.identityServiceUri;
     }
     /**
-     * Internal namespace for the Ledger
+     * @return Internal namespace for the Ledger
      * 
-    */
+     */
     public String ledgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
     /**
-     * Unique name for the Confidential Ledger.
+     * @return Unique name for the Confidential Ledger.
      * 
-    */
+     */
     public String ledgerName() {
         return this.ledgerName;
     }
     /**
-     * Name of the Blob Storage Account for saving ledger files
+     * @return Name of the Blob Storage Account for saving ledger files
      * 
-    */
+     */
     public Optional<String> ledgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
     /**
-     * Type of Confidential Ledger
+     * @return Type of Confidential Ledger
      * 
-    */
+     */
     public Optional<String> ledgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
     /**
-     * Endpoint for calling Ledger Service.
+     * @return Endpoint for calling Ledger Service.
      * 
-    */
+     */
     public String ledgerUri() {
         return this.ledgerUri;
     }
     /**
-     * Provisioning state of Ledger Resource
+     * @return Provisioning state of Ledger Resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

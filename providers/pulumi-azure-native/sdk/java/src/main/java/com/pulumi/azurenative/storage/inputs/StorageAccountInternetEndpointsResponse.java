@@ -23,6 +23,10 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
     @Import(name="blob", required=true)
     private String blob;
 
+    /**
+     * @return Gets the blob endpoint.
+     * 
+     */
     public String blob() {
         return this.blob;
     }
@@ -34,6 +38,10 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
     @Import(name="dfs", required=true)
     private String dfs;
 
+    /**
+     * @return Gets the dfs endpoint.
+     * 
+     */
     public String dfs() {
         return this.dfs;
     }
@@ -45,6 +53,10 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
     @Import(name="file", required=true)
     private String file;
 
+    /**
+     * @return Gets the file endpoint.
+     * 
+     */
     public String file() {
         return this.file;
     }
@@ -56,6 +68,10 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
     @Import(name="web", required=true)
     private String web;
 
+    /**
+     * @return Gets the web endpoint.
+     * 
+     */
     public String web() {
         return this.web;
     }
@@ -87,21 +103,45 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
             $ = new StorageAccountInternetEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blob Gets the blob endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blob(String blob) {
             $.blob = blob;
             return this;
         }
 
+        /**
+         * @param dfs Gets the dfs endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dfs(String dfs) {
             $.dfs = dfs;
             return this;
         }
 
+        /**
+         * @param file Gets the file endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(String file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param web Gets the web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder web(String web) {
             $.web = web;
             return this;

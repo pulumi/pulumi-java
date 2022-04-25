@@ -28,6 +28,10 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="includeChangeDetails")
     private @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
+    /**
+     * @return The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+     * 
+     */
     public Optional<Output<Either<String,ChangeDetailsMode>>> includeChangeDetails() {
         return Optional.ofNullable(this.includeChangeDetails);
     }
@@ -39,6 +43,10 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="workspaceId")
     private @Nullable Output<String> workspaceId;
 
+    /**
+     * @return The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -50,6 +58,10 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
     @Import(name="workspaceResourceId")
     private @Nullable Output<String> workspaceResourceId;
 
+    /**
+     * @return The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+     * 
+     */
     public Optional<Output<String>> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
@@ -80,37 +92,85 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
             $ = new AzureMonitorWorkspacePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includeChangeDetails The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeChangeDetails(@Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails) {
             $.includeChangeDetails = includeChangeDetails;
             return this;
         }
 
+        /**
+         * @param includeChangeDetails The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeChangeDetails(Either<String,ChangeDetailsMode> includeChangeDetails) {
             return includeChangeDetails(Output.of(includeChangeDetails));
         }
 
+        /**
+         * @param includeChangeDetails The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeChangeDetails(String includeChangeDetails) {
             return includeChangeDetails(Either.ofLeft(includeChangeDetails));
         }
 
+        /**
+         * @param includeChangeDetails The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeChangeDetails(ChangeDetailsMode includeChangeDetails) {
             return includeChangeDetails(Either.ofRight(includeChangeDetails));
         }
 
+        /**
+         * @param workspaceId The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }
 
+        /**
+         * @param workspaceResourceId The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
             $.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
+        /**
+         * @param workspaceResourceId The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceResourceId(String workspaceResourceId) {
             return workspaceResourceId(Output.of(workspaceResourceId));
         }

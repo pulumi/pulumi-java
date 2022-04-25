@@ -20,6 +20,10 @@ public final class RecordFailoverRoutingPolicyGetArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,11 +52,23 @@ public final class RecordFailoverRoutingPolicyGetArgs extends com.pulumi.resourc
             $ = new RecordFailoverRoutingPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

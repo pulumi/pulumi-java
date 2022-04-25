@@ -22,6 +22,10 @@ public final class VirtualServiceSpecArgs extends com.pulumi.resources.ResourceA
     @Import(name="provider")
     private @Nullable Output<VirtualServiceSpecProviderArgs> provider;
 
+    /**
+     * @return The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
+     * 
+     */
     public Optional<Output<VirtualServiceSpecProviderArgs>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -50,11 +54,23 @@ public final class VirtualServiceSpecArgs extends com.pulumi.resources.ResourceA
             $ = new VirtualServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provider The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<VirtualServiceSpecProviderArgs> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(VirtualServiceSpecProviderArgs provider) {
             return provider(Output.of(provider));
         }

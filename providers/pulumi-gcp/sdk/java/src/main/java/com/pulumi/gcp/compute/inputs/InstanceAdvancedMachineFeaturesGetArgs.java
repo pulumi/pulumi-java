@@ -23,6 +23,10 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends com.pulumi.res
     @Import(name="enableNestedVirtualization")
     private @Nullable Output<Boolean> enableNestedVirtualization;
 
+    /**
+     * @return Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+     * 
+     */
     public Optional<Output<Boolean>> enableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
@@ -34,6 +38,10 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends com.pulumi.res
     @Import(name="threadsPerCore")
     private @Nullable Output<Integer> threadsPerCore;
 
+    /**
+     * @return he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+     * 
+     */
     public Optional<Output<Integer>> threadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }
@@ -63,20 +71,44 @@ public final class InstanceAdvancedMachineFeaturesGetArgs extends com.pulumi.res
             $ = new InstanceAdvancedMachineFeaturesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableNestedVirtualization Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNestedVirtualization(@Nullable Output<Boolean> enableNestedVirtualization) {
             $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
+        /**
+         * @param enableNestedVirtualization Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             return enableNestedVirtualization(Output.of(enableNestedVirtualization));
         }
 
+        /**
+         * @param threadsPerCore he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             $.threadsPerCore = threadsPerCore;
             return this;
         }
 
+        /**
+         * @param threadsPerCore he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threadsPerCore(Integer threadsPerCore) {
             return threadsPerCore(Output.of(threadsPerCore));
         }

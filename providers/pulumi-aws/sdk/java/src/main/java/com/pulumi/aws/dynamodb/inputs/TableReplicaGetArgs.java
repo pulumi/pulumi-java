@@ -23,6 +23,11 @@ public final class TableReplicaGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return The ARN of the CMK that should be used for the AWS KMS encryption.
+     * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -34,6 +39,10 @@ public final class TableReplicaGetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="regionName", required=true)
     private Output<String> regionName;
 
+    /**
+     * @return Region name of the replica.
+     * 
+     */
     public Output<String> regionName() {
         return this.regionName;
     }
@@ -63,20 +72,46 @@ public final class TableReplicaGetArgs extends com.pulumi.resources.ResourceArgs
             $ = new TableReplicaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the CMK that should be used for the AWS KMS encryption.
+         * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the CMK that should be used for the AWS KMS encryption.
+         * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param regionName Region name of the replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(Output<String> regionName) {
             $.regionName = regionName;
             return this;
         }
 
+        /**
+         * @param regionName Region name of the replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionName(String regionName) {
             return regionName(Output.of(regionName));
         }

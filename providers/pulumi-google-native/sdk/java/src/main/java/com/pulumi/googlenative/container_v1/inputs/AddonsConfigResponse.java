@@ -31,6 +31,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="cloudRunConfig", required=true)
     private CloudRunConfigResponse cloudRunConfig;
 
+    /**
+     * @return Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+     * 
+     */
     public CloudRunConfigResponse cloudRunConfig() {
         return this.cloudRunConfig;
     }
@@ -42,6 +46,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="configConnectorConfig", required=true)
     private ConfigConnectorConfigResponse configConnectorConfig;
 
+    /**
+     * @return Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+     * 
+     */
     public ConfigConnectorConfigResponse configConnectorConfig() {
         return this.configConnectorConfig;
     }
@@ -53,6 +61,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dnsCacheConfig", required=true)
     private DnsCacheConfigResponse dnsCacheConfig;
 
+    /**
+     * @return Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+     * 
+     */
     public DnsCacheConfigResponse dnsCacheConfig() {
         return this.dnsCacheConfig;
     }
@@ -64,6 +76,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcePersistentDiskCsiDriverConfig", required=true)
     private GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
 
+    /**
+     * @return Configuration for the Compute Engine Persistent Disk CSI driver.
+     * 
+     */
     public GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig() {
         return this.gcePersistentDiskCsiDriverConfig;
     }
@@ -75,6 +91,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="gcpFilestoreCsiDriverConfig", required=true)
     private GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
 
+    /**
+     * @return Configuration for the GCP Filestore CSI driver.
+     * 
+     */
     public GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig() {
         return this.gcpFilestoreCsiDriverConfig;
     }
@@ -86,6 +106,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="horizontalPodAutoscaling", required=true)
     private HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
 
+    /**
+     * @return Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+     * 
+     */
     public HorizontalPodAutoscalingResponse horizontalPodAutoscaling() {
         return this.horizontalPodAutoscaling;
     }
@@ -97,6 +121,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="httpLoadBalancing", required=true)
     private HttpLoadBalancingResponse httpLoadBalancing;
 
+    /**
+     * @return Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+     * 
+     */
     public HttpLoadBalancingResponse httpLoadBalancing() {
         return this.httpLoadBalancing;
     }
@@ -108,6 +136,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kubernetesDashboard", required=true)
     private KubernetesDashboardResponse kubernetesDashboard;
 
+    /**
+     * @return Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+     * 
+     */
     public KubernetesDashboardResponse kubernetesDashboard() {
         return this.kubernetesDashboard;
     }
@@ -119,6 +151,10 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="networkPolicyConfig", required=true)
     private NetworkPolicyConfigResponse networkPolicyConfig;
 
+    /**
+     * @return Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+     * 
+     */
     public NetworkPolicyConfigResponse networkPolicyConfig() {
         return this.networkPolicyConfig;
     }
@@ -155,46 +191,100 @@ public final class AddonsConfigResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AddonsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudRunConfig Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudRunConfig(CloudRunConfigResponse cloudRunConfig) {
             $.cloudRunConfig = cloudRunConfig;
             return this;
         }
 
+        /**
+         * @param configConnectorConfig Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
+         * 
+         * @return builder
+         * 
+         */
         public Builder configConnectorConfig(ConfigConnectorConfigResponse configConnectorConfig) {
             $.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
+        /**
+         * @param dnsCacheConfig Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsCacheConfig(DnsCacheConfigResponse dnsCacheConfig) {
             $.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
+        /**
+         * @param gcePersistentDiskCsiDriverConfig Configuration for the Compute Engine Persistent Disk CSI driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig) {
             $.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
+        /**
+         * @param gcpFilestoreCsiDriverConfig Configuration for the GCP Filestore CSI driver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig) {
             $.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
+        /**
+         * @param horizontalPodAutoscaling Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalPodAutoscaling(HorizontalPodAutoscalingResponse horizontalPodAutoscaling) {
             $.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
+        /**
+         * @param httpLoadBalancing Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLoadBalancing(HttpLoadBalancingResponse httpLoadBalancing) {
             $.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
+        /**
+         * @param kubernetesDashboard Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesDashboard(KubernetesDashboardResponse kubernetesDashboard) {
             $.kubernetesDashboard = kubernetesDashboard;
             return this;
         }
 
+        /**
+         * @param networkPolicyConfig Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicyConfig(NetworkPolicyConfigResponse networkPolicyConfig) {
             $.networkPolicyConfig = networkPolicyConfig;
             return this;

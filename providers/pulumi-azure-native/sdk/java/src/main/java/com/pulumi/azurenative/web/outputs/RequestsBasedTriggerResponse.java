@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RequestsBasedTriggerResponse {
     /**
-     * Request Count.
+     * @return Request Count.
      * 
      */
     private final @Nullable Integer count;
     /**
-     * Time interval.
+     * @return Time interval.
      * 
      */
     private final @Nullable String timeInterval;
@@ -32,16 +32,16 @@ public final class RequestsBasedTriggerResponse {
     }
 
     /**
-     * Request Count.
+     * @return Request Count.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Time interval.
+     * @return Time interval.
      * 
-    */
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }

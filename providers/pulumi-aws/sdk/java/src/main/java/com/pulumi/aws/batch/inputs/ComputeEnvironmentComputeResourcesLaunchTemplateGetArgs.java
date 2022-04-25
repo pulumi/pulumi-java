@@ -22,6 +22,10 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs exten
     @Import(name="launchTemplateId")
     private @Nullable Output<String> launchTemplateId;
 
+    /**
+     * @return ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
+     * 
+     */
     public Optional<Output<String>> launchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
@@ -33,6 +37,10 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs exten
     @Import(name="launchTemplateName")
     private @Nullable Output<String> launchTemplateName;
 
+    /**
+     * @return Name of the launch template.
+     * 
+     */
     public Optional<Output<String>> launchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
@@ -44,6 +52,10 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs exten
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version number of the launch template. Default: The default version of the launch template.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -74,29 +86,65 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs exten
             $ = new ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchTemplateId ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
             $.launchTemplateId = launchTemplateId;
             return this;
         }
 
+        /**
+         * @param launchTemplateId ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateId(String launchTemplateId) {
             return launchTemplateId(Output.of(launchTemplateId));
         }
 
+        /**
+         * @param launchTemplateName Name of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
             $.launchTemplateName = launchTemplateName;
             return this;
         }
 
+        /**
+         * @param launchTemplateName Name of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateName(String launchTemplateName) {
             return launchTemplateName(Output.of(launchTemplateName));
         }
 
+        /**
+         * @param version The version number of the launch template. Default: The default version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version number of the launch template. Default: The default version of the launch template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

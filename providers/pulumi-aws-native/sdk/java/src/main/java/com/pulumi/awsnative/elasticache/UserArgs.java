@@ -25,6 +25,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
     private @Nullable Output<String> accessString;
 
+    /**
+     * @return Access permissions string used for this user account.
+     * 
+     */
     public Optional<Output<String>> accessString() {
         return Optional.ofNullable(this.accessString);
     }
@@ -36,6 +40,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
     private Output<UserEngine> engine;
 
+    /**
+     * @return Must be redis.
+     * 
+     */
     public Output<UserEngine> engine() {
         return this.engine;
     }
@@ -47,6 +55,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="noPasswordRequired")
     private @Nullable Output<Boolean> noPasswordRequired;
 
+    /**
+     * @return Indicates a password is not required for this user account.
+     * 
+     */
     public Optional<Output<Boolean>> noPasswordRequired() {
         return Optional.ofNullable(this.noPasswordRequired);
     }
@@ -58,6 +70,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwords")
     private @Nullable Output<List<String>> passwords;
 
+    /**
+     * @return Passwords used for this user account. You can create up to two passwords for each user.
+     * 
+     */
     public Optional<Output<List<String>>> passwords() {
         return Optional.ofNullable(this.passwords);
     }
@@ -69,6 +85,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return The ID of the user.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -80,6 +100,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return The username of the user.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -113,60 +137,138 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessString Access permissions string used for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(@Nullable Output<String> accessString) {
             $.accessString = accessString;
             return this;
         }
 
+        /**
+         * @param accessString Access permissions string used for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessString(String accessString) {
             return accessString(Output.of(accessString));
         }
 
+        /**
+         * @param engine Must be redis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(Output<UserEngine> engine) {
             $.engine = engine;
             return this;
         }
 
+        /**
+         * @param engine Must be redis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engine(UserEngine engine) {
             return engine(Output.of(engine));
         }
 
+        /**
+         * @param noPasswordRequired Indicates a password is not required for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             $.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
+        /**
+         * @param noPasswordRequired Indicates a password is not required for this user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noPasswordRequired(Boolean noPasswordRequired) {
             return noPasswordRequired(Output.of(noPasswordRequired));
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(@Nullable Output<List<String>> passwords) {
             $.passwords = passwords;
             return this;
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(List<String> passwords) {
             return passwords(Output.of(passwords));
         }
 
+        /**
+         * @param passwords Passwords used for this user account. You can create up to two passwords for each user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
 
+        /**
+         * @param userId The ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId The ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }
 
+        /**
+         * @param userName The username of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName The username of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

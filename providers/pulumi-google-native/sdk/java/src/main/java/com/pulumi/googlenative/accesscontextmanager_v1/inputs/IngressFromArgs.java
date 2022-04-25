@@ -29,6 +29,10 @@ public final class IngressFromArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identities")
     private @Nullable Output<List<String>> identities;
 
+    /**
+     * @return A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+     * 
+     */
     public Optional<Output<List<String>>> identities() {
         return Optional.ofNullable(this.identities);
     }
@@ -40,6 +44,10 @@ public final class IngressFromArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityType")
     private @Nullable Output<IngressFromIdentityType> identityType;
 
+    /**
+     * @return Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+     * 
+     */
     public Optional<Output<IngressFromIdentityType>> identityType() {
         return Optional.ofNullable(this.identityType);
     }
@@ -51,6 +59,10 @@ public final class IngressFromArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sources")
     private @Nullable Output<List<IngressSourceArgs>> sources;
 
+    /**
+     * @return Sources that this IngressPolicy authorizes access from.
+     * 
+     */
     public Optional<Output<List<IngressSourceArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -81,37 +93,85 @@ public final class IngressFromArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IngressFromArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(@Nullable Output<List<String>> identities) {
             $.identities = identities;
             return this;
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(List<String> identities) {
             return identities(Output.of(identities));
         }
 
+        /**
+         * @param identities A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(@Nullable Output<IngressFromIdentityType> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(IngressFromIdentityType identityType) {
             return identityType(Output.of(identityType));
         }
 
+        /**
+         * @param sources Sources that this IngressPolicy authorizes access from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<IngressSourceArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources Sources that this IngressPolicy authorizes access from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<IngressSourceArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources Sources that this IngressPolicy authorizes access from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(IngressSourceArgs... sources) {
             return sources(List.of(sources));
         }

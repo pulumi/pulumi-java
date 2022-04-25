@@ -230,6 +230,10 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="input")
     private @Nullable Output<RecipeParametersInputPropertiesArgs> input;
 
+    /**
+     * @return Input
+     * 
+     */
     public Optional<Output<RecipeParametersInputPropertiesArgs>> input() {
         return Optional.ofNullable(this.input);
     }
@@ -1116,11 +1120,23 @@ public final class RecipeParametersArgs extends com.pulumi.resources.ResourceArg
             return includeInSplit(Output.of(includeInSplit));
         }
 
+        /**
+         * @param input Input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(@Nullable Output<RecipeParametersInputPropertiesArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Input
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(RecipeParametersInputPropertiesArgs input) {
             return input(Output.of(input));
         }

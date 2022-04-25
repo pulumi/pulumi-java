@@ -21,6 +21,11 @@ public final class DataStoreIndexPropertyArgs extends com.pulumi.resources.Resou
     @Import(name="direction", required=true)
     private Output<String> direction;
 
+    /**
+     * @return The direction the index should optimize for sorting.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     public Output<String> direction() {
         return this.direction;
     }
@@ -32,6 +37,10 @@ public final class DataStoreIndexPropertyArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The property name to index.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,20 +70,46 @@ public final class DataStoreIndexPropertyArgs extends com.pulumi.resources.Resou
             $ = new DataStoreIndexPropertyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param direction The direction the index should optimize for sorting.
+         * Possible values are `ASCENDING` and `DESCENDING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction The direction the index should optimize for sorting.
+         * Possible values are `ASCENDING` and `DESCENDING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param name The property name to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The property name to index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

@@ -28,6 +28,10 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.r
     @Import(name="retentionPolicy")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy;
 
+    /**
+     * @return Retention policy applied to snapshots created by this resource policy.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -39,6 +43,10 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.r
     @Import(name="schedule")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule;
 
+    /**
+     * @return A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -50,6 +58,10 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.r
     @Import(name="snapshotProperties")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties;
 
+    /**
+     * @return Properties with which snapshots are created such as labels, encryption keys.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs>> snapshotProperties() {
         return Optional.ofNullable(this.snapshotProperties);
     }
@@ -80,29 +92,65 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends com.pulumi.r
             $ = new ResourcePolicySnapshotSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionPolicy Retention policy applied to snapshots created by this resource policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy applied to snapshots created by this resource policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param schedule A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param snapshotProperties Properties with which snapshots are created such as labels, encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotProperties(@Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties) {
             $.snapshotProperties = snapshotProperties;
             return this;
         }
 
+        /**
+         * @param snapshotProperties Properties with which snapshots are created such as labels, encryption keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs snapshotProperties) {
             return snapshotProperties(Output.of(snapshotProperties));
         }

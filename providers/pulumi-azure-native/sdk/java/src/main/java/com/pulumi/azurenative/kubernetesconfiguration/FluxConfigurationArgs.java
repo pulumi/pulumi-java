@@ -30,6 +30,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the kubernetes cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -41,6 +45,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterResourceName", required=true)
     private Output<String> clusterResourceName;
 
+    /**
+     * @return The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     * 
+     */
     public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
@@ -52,6 +60,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterRp", required=true)
     private Output<String> clusterRp;
 
+    /**
+     * @return The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     * 
+     */
     public Output<String> clusterRp() {
         return this.clusterRp;
     }
@@ -63,6 +75,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="configurationProtectedSettings")
     private @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
+    /**
+     * @return Key-value pairs of protected configuration settings for the configuration
+     * 
+     */
     public Optional<Output<Map<String,String>>> configurationProtectedSettings() {
         return Optional.ofNullable(this.configurationProtectedSettings);
     }
@@ -74,6 +90,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fluxConfigurationName")
     private @Nullable Output<String> fluxConfigurationName;
 
+    /**
+     * @return Name of the Flux Configuration.
+     * 
+     */
     public Optional<Output<String>> fluxConfigurationName() {
         return Optional.ofNullable(this.fluxConfigurationName);
     }
@@ -85,6 +105,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gitRepository")
     private @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
 
+    /**
+     * @return Parameters to reconcile to the GitRepository source kind type.
+     * 
+     */
     public Optional<Output<GitRepositoryDefinitionArgs>> gitRepository() {
         return Optional.ofNullable(this.gitRepository);
     }
@@ -96,6 +120,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kustomizations")
     private @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
+    /**
+     * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+     * 
+     */
     public Optional<Output<Map<String,KustomizationDefinitionArgs>>> kustomizations() {
         return Optional.ofNullable(this.kustomizations);
     }
@@ -107,6 +135,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -118,6 +150,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -129,6 +165,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scope")
     private @Nullable Output<Either<String,ScopeType>> scope;
 
+    /**
+     * @return Scope at which the operator will be installed.
+     * 
+     */
     public Optional<Output<Either<String,ScopeType>>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -140,6 +180,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceKind")
     private @Nullable Output<Either<String,SourceKindType>> sourceKind;
 
+    /**
+     * @return Source Kind to pull the configuration data from.
+     * 
+     */
     public Optional<Output<Either<String,SourceKindType>>> sourceKind() {
         return Optional.ofNullable(this.sourceKind);
     }
@@ -151,6 +195,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="suspend")
     private @Nullable Output<Boolean> suspend;
 
+    /**
+     * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+     * 
+     */
     public Optional<Output<Boolean>> suspend() {
         return Optional.ofNullable(this.suspend);
     }
@@ -190,126 +238,294 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
             $ = new FluxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(Output<String> clusterResourceName) {
             $.clusterResourceName = clusterResourceName;
             return this;
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(String clusterResourceName) {
             return clusterResourceName(Output.of(clusterResourceName));
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(Output<String> clusterRp) {
             $.clusterRp = clusterRp;
             return this;
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(String clusterRp) {
             return clusterRp(Output.of(clusterRp));
         }
 
+        /**
+         * @param configurationProtectedSettings Key-value pairs of protected configuration settings for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
             $.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
+        /**
+         * @param configurationProtectedSettings Key-value pairs of protected configuration settings for the configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedSettings(Map<String,String> configurationProtectedSettings) {
             return configurationProtectedSettings(Output.of(configurationProtectedSettings));
         }
 
+        /**
+         * @param fluxConfigurationName Name of the Flux Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fluxConfigurationName(@Nullable Output<String> fluxConfigurationName) {
             $.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
 
+        /**
+         * @param fluxConfigurationName Name of the Flux Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fluxConfigurationName(String fluxConfigurationName) {
             return fluxConfigurationName(Output.of(fluxConfigurationName));
         }
 
+        /**
+         * @param gitRepository Parameters to reconcile to the GitRepository source kind type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepository(@Nullable Output<GitRepositoryDefinitionArgs> gitRepository) {
             $.gitRepository = gitRepository;
             return this;
         }
 
+        /**
+         * @param gitRepository Parameters to reconcile to the GitRepository source kind type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gitRepository(GitRepositoryDefinitionArgs gitRepository) {
             return gitRepository(Output.of(gitRepository));
         }
 
+        /**
+         * @param kustomizations Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustomizations(@Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations) {
             $.kustomizations = kustomizations;
             return this;
         }
 
+        /**
+         * @param kustomizations Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustomizations(Map<String,KustomizationDefinitionArgs> kustomizations) {
             return kustomizations(Output.of(kustomizations));
         }
 
+        /**
+         * @param namespace The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<Either<String,ScopeType>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Either<String,ScopeType> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Either.ofLeft(scope));
         }
 
+        /**
+         * @param scope Scope at which the operator will be installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ScopeType scope) {
             return scope(Either.ofRight(scope));
         }
 
+        /**
+         * @param sourceKind Source Kind to pull the configuration data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceKind(@Nullable Output<Either<String,SourceKindType>> sourceKind) {
             $.sourceKind = sourceKind;
             return this;
         }
 
+        /**
+         * @param sourceKind Source Kind to pull the configuration data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceKind(Either<String,SourceKindType> sourceKind) {
             return sourceKind(Output.of(sourceKind));
         }
 
+        /**
+         * @param sourceKind Source Kind to pull the configuration data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceKind(String sourceKind) {
             return sourceKind(Either.ofLeft(sourceKind));
         }
 
+        /**
+         * @param sourceKind Source Kind to pull the configuration data from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceKind(SourceKindType sourceKind) {
             return sourceKind(Either.ofRight(sourceKind));
         }
 
+        /**
+         * @param suspend Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspend(@Nullable Output<Boolean> suspend) {
             $.suspend = suspend;
             return this;
         }
 
+        /**
+         * @param suspend Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspend(Boolean suspend) {
             return suspend(Output.of(suspend));
         }

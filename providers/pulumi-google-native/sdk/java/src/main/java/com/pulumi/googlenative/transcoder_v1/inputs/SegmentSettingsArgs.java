@@ -27,6 +27,10 @@ public final class SegmentSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="individualSegments", required=true)
     private Output<Boolean> individualSegments;
 
+    /**
+     * @return Create an individual segment file. The default is `false`.
+     * 
+     */
     public Output<Boolean> individualSegments() {
         return this.individualSegments;
     }
@@ -38,6 +42,10 @@ public final class SegmentSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="segmentDuration")
     private @Nullable Output<String> segmentDuration;
 
+    /**
+     * @return Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+     * 
+     */
     public Optional<Output<String>> segmentDuration() {
         return Optional.ofNullable(this.segmentDuration);
     }
@@ -67,20 +75,44 @@ public final class SegmentSettingsArgs extends com.pulumi.resources.ResourceArgs
             $ = new SegmentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param individualSegments Create an individual segment file. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualSegments(Output<Boolean> individualSegments) {
             $.individualSegments = individualSegments;
             return this;
         }
 
+        /**
+         * @param individualSegments Create an individual segment file. The default is `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder individualSegments(Boolean individualSegments) {
             return individualSegments(Output.of(individualSegments));
         }
 
+        /**
+         * @param segmentDuration Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDuration(@Nullable Output<String> segmentDuration) {
             $.segmentDuration = segmentDuration;
             return this;
         }
 
+        /**
+         * @param segmentDuration Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentDuration(String segmentDuration) {
             return segmentDuration(Output.of(segmentDuration));
         }

@@ -27,6 +27,10 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
     @Import(name="hostCaching")
     private @Nullable String hostCaching;
 
+    /**
+     * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+     * 
+     */
     public Optional<String> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -38,6 +42,10 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
     @Import(name="sizeInGB", required=true)
     private Integer sizeInGB;
 
+    /**
+     * @return This property indicates the size of the VHD to be created.
+     * 
+     */
     public Integer sizeInGB() {
         return this.sizeInGB;
     }
@@ -49,6 +57,10 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
     @Import(name="source")
     private @Nullable GalleryArtifactVersionSourceResponse source;
 
+    /**
+     * @return The gallery artifact version source.
+     * 
+     */
     public Optional<GalleryArtifactVersionSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
@@ -79,16 +91,34 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
             $ = new GalleryOSDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostCaching The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(@Nullable String hostCaching) {
             $.hostCaching = hostCaching;
             return this;
         }
 
+        /**
+         * @param sizeInGB This property indicates the size of the VHD to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeInGB(Integer sizeInGB) {
             $.sizeInGB = sizeInGB;
             return this;
         }
 
+        /**
+         * @param source The gallery artifact version source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             $.source = source;
             return this;

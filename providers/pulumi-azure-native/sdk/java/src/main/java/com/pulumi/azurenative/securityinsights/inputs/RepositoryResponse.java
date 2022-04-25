@@ -27,6 +27,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branch")
     private @Nullable String branch;
 
+    /**
+     * @return Branch name of repository.
+     * 
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -38,6 +42,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deploymentLogsUrl")
     private @Nullable String deploymentLogsUrl;
 
+    /**
+     * @return Url to access repository action logs.
+     * 
+     */
     public Optional<String> deploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
@@ -49,6 +57,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayUrl")
     private @Nullable String displayUrl;
 
+    /**
+     * @return Display url of repository.
+     * 
+     */
     public Optional<String> displayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
@@ -60,6 +72,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="pathMapping")
     private @Nullable List<ContentPathMapResponse> pathMapping;
 
+    /**
+     * @return Dictionary of source control content type and path mapping.
+     * 
+     */
     public Optional<List<ContentPathMapResponse>> pathMapping() {
         return Optional.ofNullable(this.pathMapping);
     }
@@ -71,6 +87,10 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return Url of repository.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -103,30 +123,66 @@ public final class RepositoryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Branch name of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable String branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param deploymentLogsUrl Url to access repository action logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
             $.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
 
+        /**
+         * @param displayUrl Display url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayUrl(@Nullable String displayUrl) {
             $.displayUrl = displayUrl;
             return this;
         }
 
+        /**
+         * @param pathMapping Dictionary of source control content type and path mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMapping(@Nullable List<ContentPathMapResponse> pathMapping) {
             $.pathMapping = pathMapping;
             return this;
         }
 
+        /**
+         * @param pathMapping Dictionary of source control content type and path mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMapping(ContentPathMapResponse... pathMapping) {
             return pathMapping(List.of(pathMapping));
         }
 
+        /**
+         * @param url Url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

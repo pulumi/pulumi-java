@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateMISyncCompleteCommandOutputResponse {
     /**
-     * List of errors that happened during the command execution
+     * @return List of errors that happened during the command execution
      * 
      */
     private final @Nullable List<ReportableExceptionResponse> errors;
@@ -23,9 +23,9 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
     }
 
     /**
-     * List of errors that happened during the command execution
+     * @return List of errors that happened during the command execution
      * 
-    */
+     */
     public List<ReportableExceptionResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }

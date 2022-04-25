@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutoscalingGroupsResult {
     /**
-     * A list of the Autoscaling Groups Arns in the current region.
+     * @return A list of the Autoscaling Groups Arns in the current region.
      * 
      */
     private final List<String> arns;
     private final @Nullable List<GetAutoscalingGroupsFilter> filters;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of the Autoscaling Groups in the current region.
+     * @return A list of the Autoscaling Groups in the current region.
      * 
      */
     private final List<String> names;
@@ -42,9 +42,9 @@ public final class GetAutoscalingGroupsResult {
     }
 
     /**
-     * A list of the Autoscaling Groups Arns in the current region.
+     * @return A list of the Autoscaling Groups Arns in the current region.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
@@ -52,16 +52,16 @@ public final class GetAutoscalingGroupsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of the Autoscaling Groups in the current region.
+     * @return A list of the Autoscaling Groups in the current region.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

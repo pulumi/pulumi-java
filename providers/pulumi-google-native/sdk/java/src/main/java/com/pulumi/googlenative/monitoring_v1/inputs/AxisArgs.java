@@ -27,6 +27,10 @@ public final class AxisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return The label of the axis.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -38,6 +42,10 @@ public final class AxisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
     private @Nullable Output<AxisScale> scale;
 
+    /**
+     * @return The axis scale. By default, a linear scale is used.
+     * 
+     */
     public Optional<Output<AxisScale>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -67,20 +75,44 @@ public final class AxisArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AxisArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param label The label of the axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label The label of the axis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param scale The axis scale. By default, a linear scale is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<AxisScale> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale The axis scale. By default, a linear scale is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(AxisScale scale) {
             return scale(Output.of(scale));
         }

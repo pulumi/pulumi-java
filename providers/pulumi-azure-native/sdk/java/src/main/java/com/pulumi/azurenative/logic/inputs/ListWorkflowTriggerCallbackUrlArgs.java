@@ -19,6 +19,10 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
     @Import(name="triggerName", required=true)
     private String triggerName;
 
+    /**
+     * @return The workflow trigger name.
+     * 
+     */
     public String triggerName() {
         return this.triggerName;
     }
@@ -41,6 +49,10 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
     @Import(name="workflowName", required=true)
     private String workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public String workflowName() {
         return this.workflowName;
     }
@@ -71,16 +83,34 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
             $ = new ListWorkflowTriggerCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param triggerName The workflow trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             $.triggerName = triggerName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             $.workflowName = workflowName;
             return this;

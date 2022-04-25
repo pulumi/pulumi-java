@@ -27,6 +27,10 @@ public final class RolloutPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRolloutTime")
     private @Nullable Output<String> defaultRolloutTime;
 
+    /**
+     * @return An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+     * 
+     */
     public Optional<Output<String>> defaultRolloutTime() {
         return Optional.ofNullable(this.defaultRolloutTime);
     }
@@ -38,6 +42,10 @@ public final class RolloutPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationRolloutPolicies")
     private @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
+    /**
+     * @return Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+     * 
+     */
     public Optional<Output<Map<String,String>>> locationRolloutPolicies() {
         return Optional.ofNullable(this.locationRolloutPolicies);
     }
@@ -67,20 +75,44 @@ public final class RolloutPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RolloutPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultRolloutTime An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRolloutTime(@Nullable Output<String> defaultRolloutTime) {
             $.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
 
+        /**
+         * @param defaultRolloutTime An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRolloutTime(String defaultRolloutTime) {
             return defaultRolloutTime(Output.of(defaultRolloutTime));
         }
 
+        /**
+         * @param locationRolloutPolicies Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationRolloutPolicies(@Nullable Output<Map<String,String>> locationRolloutPolicies) {
             $.locationRolloutPolicies = locationRolloutPolicies;
             return this;
         }
 
+        /**
+         * @param locationRolloutPolicies Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
             return locationRolloutPolicies(Output.of(locationRolloutPolicies));
         }

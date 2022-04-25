@@ -23,6 +23,10 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Template Spec version description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -34,6 +38,10 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="timeCreated", required=true)
     private String timeCreated;
 
+    /**
+     * @return The timestamp of when the version was created.
+     * 
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
@@ -45,6 +53,10 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="timeModified", required=true)
     private String timeModified;
 
+    /**
+     * @return The timestamp of when the version was last modified.
+     * 
+     */
     public String timeModified() {
         return this.timeModified;
     }
@@ -75,16 +87,34 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
             $ = new TemplateSpecVersionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Template Spec version description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param timeCreated The timestamp of when the version was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(String timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param timeModified The timestamp of when the version was last modified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeModified(String timeModified) {
             $.timeModified = timeModified;
             return this;

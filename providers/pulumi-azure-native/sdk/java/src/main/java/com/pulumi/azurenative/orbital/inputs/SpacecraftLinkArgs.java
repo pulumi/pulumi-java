@@ -28,6 +28,10 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bandwidthMHz", required=true)
     private Output<Double> bandwidthMHz;
 
+    /**
+     * @return Bandwidth in MHz
+     * 
+     */
     public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
     }
@@ -39,6 +43,10 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="centerFrequencyMHz", required=true)
     private Output<Double> centerFrequencyMHz;
 
+    /**
+     * @return Center Frequency in MHz
+     * 
+     */
     public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
@@ -50,6 +58,10 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="direction", required=true)
     private Output<Either<String,Direction>> direction;
 
+    /**
+     * @return Direction (uplink or downlink)
+     * 
+     */
     public Output<Either<String,Direction>> direction() {
         return this.direction;
     }
@@ -61,6 +73,10 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="polarization", required=true)
     private Output<Either<String,Polarization>> polarization;
 
+    /**
+     * @return polarization. eg (RHCP, LHCP)
+     * 
+     */
     public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
@@ -92,54 +108,126 @@ public final class SpacecraftLinkArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SpacecraftLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthMHz Bandwidth in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
             $.bandwidthMHz = bandwidthMHz;
             return this;
         }
 
+        /**
+         * @param bandwidthMHz Bandwidth in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthMHz(Double bandwidthMHz) {
             return bandwidthMHz(Output.of(bandwidthMHz));
         }
 
+        /**
+         * @param centerFrequencyMHz Center Frequency in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
             $.centerFrequencyMHz = centerFrequencyMHz;
             return this;
         }
 
+        /**
+         * @param centerFrequencyMHz Center Frequency in MHz
+         * 
+         * @return builder
+         * 
+         */
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             return centerFrequencyMHz(Output.of(centerFrequencyMHz));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Output<Either<String,Direction>> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Either<String,Direction> direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Either.ofLeft(direction));
         }
 
+        /**
+         * @param direction Direction (uplink or downlink)
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Direction direction) {
             return direction(Either.ofRight(direction));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
             $.polarization = polarization;
             return this;
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Either<String,Polarization> polarization) {
             return polarization(Output.of(polarization));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(String polarization) {
             return polarization(Either.ofLeft(polarization));
         }
 
+        /**
+         * @param polarization polarization. eg (RHCP, LHCP)
+         * 
+         * @return builder
+         * 
+         */
         public Builder polarization(Polarization polarization) {
             return polarization(Either.ofRight(polarization));
         }

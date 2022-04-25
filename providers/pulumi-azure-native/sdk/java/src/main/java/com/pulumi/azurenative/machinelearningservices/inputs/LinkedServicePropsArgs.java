@@ -27,6 +27,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return The creation time of the linked service.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -38,6 +42,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkType")
     private @Nullable Output<LinkedServiceLinkType> linkType;
 
+    /**
+     * @return Type of the link target.
+     * 
+     */
     public Optional<Output<LinkedServiceLinkType>> linkType() {
         return Optional.ofNullable(this.linkType);
     }
@@ -49,6 +57,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedServiceResourceId", required=true)
     private Output<String> linkedServiceResourceId;
 
+    /**
+     * @return ResourceId of the link target of the linked service.
+     * 
+     */
     public Output<String> linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
@@ -60,6 +72,10 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
     @Import(name="modifiedTime")
     private @Nullable Output<String> modifiedTime;
 
+    /**
+     * @return The last modified time of the linked service.
+     * 
+     */
     public Optional<Output<String>> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
@@ -91,38 +107,86 @@ public final class LinkedServicePropsArgs extends com.pulumi.resources.ResourceA
             $ = new LinkedServicePropsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdTime The creation time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime The creation time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param linkType Type of the link target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(@Nullable Output<LinkedServiceLinkType> linkType) {
             $.linkType = linkType;
             return this;
         }
 
+        /**
+         * @param linkType Type of the link target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkType(LinkedServiceLinkType linkType) {
             return linkType(Output.of(linkType));
         }
 
+        /**
+         * @param linkedServiceResourceId ResourceId of the link target of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceResourceId(Output<String> linkedServiceResourceId) {
             $.linkedServiceResourceId = linkedServiceResourceId;
             return this;
         }
 
+        /**
+         * @param linkedServiceResourceId ResourceId of the link target of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             return linkedServiceResourceId(Output.of(linkedServiceResourceId));
         }
 
+        /**
+         * @param modifiedTime The last modified time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param modifiedTime The last modified time of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(String modifiedTime) {
             return modifiedTime(Output.of(modifiedTime));
         }

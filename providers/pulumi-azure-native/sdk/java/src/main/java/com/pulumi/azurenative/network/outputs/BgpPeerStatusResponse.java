@@ -11,42 +11,42 @@ import java.util.Objects;
 @CustomType
 public final class BgpPeerStatusResponse {
     /**
-     * The autonomous system number of the remote BGP peer.
+     * @return The autonomous system number of the remote BGP peer.
      * 
      */
     private final Double asn;
     /**
-     * For how long the peering has been up.
+     * @return For how long the peering has been up.
      * 
      */
     private final String connectedDuration;
     /**
-     * The virtual network gateway&#39;s local address.
+     * @return The virtual network gateway&#39;s local address.
      * 
      */
     private final String localAddress;
     /**
-     * The number of BGP messages received.
+     * @return The number of BGP messages received.
      * 
      */
     private final Double messagesReceived;
     /**
-     * The number of BGP messages sent.
+     * @return The number of BGP messages sent.
      * 
      */
     private final Double messagesSent;
     /**
-     * The remote BGP peer.
+     * @return The remote BGP peer.
      * 
      */
     private final String neighbor;
     /**
-     * The number of routes learned from this peer.
+     * @return The number of routes learned from this peer.
      * 
      */
     private final Double routesReceived;
     /**
-     * The BGP peer state.
+     * @return The BGP peer state.
      * 
      */
     private final String state;
@@ -72,58 +72,58 @@ public final class BgpPeerStatusResponse {
     }
 
     /**
-     * The autonomous system number of the remote BGP peer.
+     * @return The autonomous system number of the remote BGP peer.
      * 
-    */
+     */
     public Double asn() {
         return this.asn;
     }
     /**
-     * For how long the peering has been up.
+     * @return For how long the peering has been up.
      * 
-    */
+     */
     public String connectedDuration() {
         return this.connectedDuration;
     }
     /**
-     * The virtual network gateway&#39;s local address.
+     * @return The virtual network gateway&#39;s local address.
      * 
-    */
+     */
     public String localAddress() {
         return this.localAddress;
     }
     /**
-     * The number of BGP messages received.
+     * @return The number of BGP messages received.
      * 
-    */
+     */
     public Double messagesReceived() {
         return this.messagesReceived;
     }
     /**
-     * The number of BGP messages sent.
+     * @return The number of BGP messages sent.
      * 
-    */
+     */
     public Double messagesSent() {
         return this.messagesSent;
     }
     /**
-     * The remote BGP peer.
+     * @return The remote BGP peer.
      * 
-    */
+     */
     public String neighbor() {
         return this.neighbor;
     }
     /**
-     * The number of routes learned from this peer.
+     * @return The number of routes learned from this peer.
      * 
-    */
+     */
     public Double routesReceived() {
         return this.routesReceived;
     }
     /**
-     * The BGP peer state.
+     * @return The BGP peer state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

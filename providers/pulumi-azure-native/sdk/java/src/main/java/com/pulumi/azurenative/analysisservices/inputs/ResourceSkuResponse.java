@@ -27,6 +27,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The number of instances in the read only query pool.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -38,6 +42,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the SKU level.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The name of the Azure pricing tier to which the SKU applies.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -79,16 +91,34 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of instances in the read only query pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Name of the SKU level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The name of the Azure pricing tier to which the SKU applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

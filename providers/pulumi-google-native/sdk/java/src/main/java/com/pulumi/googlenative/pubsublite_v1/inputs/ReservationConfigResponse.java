@@ -23,6 +23,10 @@ public final class ReservationConfigResponse extends com.pulumi.resources.Invoke
     @Import(name="throughputReservation", required=true)
     private String throughputReservation;
 
+    /**
+     * @return The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * 
+     */
     public String throughputReservation() {
         return this.throughputReservation;
     }
@@ -51,6 +55,12 @@ public final class ReservationConfigResponse extends com.pulumi.resources.Invoke
             $ = new ReservationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param throughputReservation The Reservation to use for this topic&#39;s throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputReservation(String throughputReservation) {
             $.throughputReservation = throughputReservation;
             return this;

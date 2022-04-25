@@ -22,6 +22,10 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -44,6 +52,10 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable. Resource name for TagValue in the format `tagValues/456`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -66,6 +82,10 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName", required=true)
     private Output<String> shortName;
 
+    /**
+     * @return Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * 
+     */
     public Output<String> shortName() {
         return this.shortName;
     }
@@ -106,47 +126,107 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param name Immutable. Resource name for TagValue in the format `tagValues/456`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable. Resource name for TagValue in the format `tagValues/456`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param shortName Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }

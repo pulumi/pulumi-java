@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSessionResult {
     /**
-     * AWS account ID of customer
+     * @return AWS account ID of customer
      * 
      */
     private final @Nullable String awsAccountId;
     /**
-     * A enumeration value that specifies how frequently finding updates are published.
+     * @return A enumeration value that specifies how frequently finding updates are published.
      * 
      */
     private final @Nullable SessionFindingPublishingFrequency findingPublishingFrequency;
     /**
-     * Service role used by Macie
+     * @return Service role used by Macie
      * 
      */
     private final @Nullable String serviceRole;
     /**
-     * A enumeration value that specifies the status of the Macie Session.
+     * @return A enumeration value that specifies the status of the Macie Session.
      * 
      */
     private final @Nullable SessionStatus status;
@@ -47,30 +47,30 @@ public final class GetSessionResult {
     }
 
     /**
-     * AWS account ID of customer
+     * @return AWS account ID of customer
      * 
-    */
+     */
     public Optional<String> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
-     * A enumeration value that specifies how frequently finding updates are published.
+     * @return A enumeration value that specifies how frequently finding updates are published.
      * 
-    */
+     */
     public Optional<SessionFindingPublishingFrequency> findingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
     /**
-     * Service role used by Macie
+     * @return Service role used by Macie
      * 
-    */
+     */
     public Optional<String> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
     /**
-     * A enumeration value that specifies the status of the Macie Session.
+     * @return A enumeration value that specifies the status of the Macie Session.
      * 
-    */
+     */
     public Optional<SessionStatus> status() {
         return Optional.ofNullable(this.status);
     }

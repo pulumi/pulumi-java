@@ -23,6 +23,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -34,6 +38,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="header", required=true)
     private Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header;
 
+    /**
+     * @return A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
+     * 
+     */
     public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header() {
         return this.header;
     }
@@ -45,6 +53,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
     @Import(name="ruleOptions", required=true)
     private Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions;
 
+    /**
+     * @return Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
+     * 
+     */
     public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions() {
         return this.ruleOptions;
     }
@@ -75,33 +87,75 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends com.
             $ = new RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param header A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param ruleOptions Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleOptions(Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions) {
             $.ruleOptions = ruleOptions;
             return this;
         }
 
+        /**
+         * @param ruleOptions Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs> ruleOptions) {
             return ruleOptions(Output.of(ruleOptions));
         }
 
+        /**
+         * @param ruleOptions Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleOptions(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs... ruleOptions) {
             return ruleOptions(List.of(ruleOptions));
         }

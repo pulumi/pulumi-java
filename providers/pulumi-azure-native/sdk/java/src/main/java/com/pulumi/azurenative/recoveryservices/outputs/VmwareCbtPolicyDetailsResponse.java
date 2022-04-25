@@ -13,23 +13,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VmwareCbtPolicyDetailsResponse {
     /**
-     * The app consistent snapshot frequency in minutes.
+     * @return The app consistent snapshot frequency in minutes.
      * 
      */
     private final @Nullable Integer appConsistentFrequencyInMinutes;
     /**
-     * The crash consistent snapshot frequency in minutes.
+     * @return The crash consistent snapshot frequency in minutes.
      * 
      */
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The duration in minutes until which the recovery points need to be stored.
+     * @return The duration in minutes until which the recovery points need to be stored.
      * 
      */
     private final @Nullable Integer recoveryPointHistoryInMinutes;
@@ -47,31 +47,31 @@ public final class VmwareCbtPolicyDetailsResponse {
     }
 
     /**
-     * The app consistent snapshot frequency in minutes.
+     * @return The app consistent snapshot frequency in minutes.
      * 
-    */
+     */
     public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
-     * The crash consistent snapshot frequency in minutes.
+     * @return The crash consistent snapshot frequency in minutes.
      * 
-    */
+     */
     public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMwareCbt&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The duration in minutes until which the recovery points need to be stored.
+     * @return The duration in minutes until which the recovery points need to be stored.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointHistoryInMinutes() {
         return Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }

@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetSynchronizationSettingResult {
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
      */
     private final String id;
     /**
-     * Kind of synchronization setting.
+     * @return Kind of synchronization setting.
      * 
      */
     private final String kind;
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
      */
     private final String name;
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
      */
     private final String type;
@@ -51,37 +51,37 @@ public final class GetSynchronizationSettingResult {
     }
 
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of synchronization setting.
+     * @return Kind of synchronization setting.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

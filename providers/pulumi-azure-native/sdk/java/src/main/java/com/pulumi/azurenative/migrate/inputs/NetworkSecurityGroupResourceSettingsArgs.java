@@ -30,6 +30,11 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -41,6 +46,10 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="securityRules")
     private @Nullable Output<List<NsgSecurityRuleArgs>> securityRules;
 
+    /**
+     * @return Gets or sets Security rules of network security group.
+     * 
+     */
     public Optional<Output<List<NsgSecurityRuleArgs>>> securityRules() {
         return Optional.ofNullable(this.securityRules);
     }
@@ -52,6 +61,10 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -82,33 +95,77 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
             $ = new NetworkSecurityGroupResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/networkSecurityGroups&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param securityRules Gets or sets Security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(@Nullable Output<List<NsgSecurityRuleArgs>> securityRules) {
             $.securityRules = securityRules;
             return this;
         }
 
+        /**
+         * @param securityRules Gets or sets Security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(List<NsgSecurityRuleArgs> securityRules) {
             return securityRules(Output.of(securityRules));
         }
 
+        /**
+         * @param securityRules Gets or sets Security rules of network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityRules(NsgSecurityRuleArgs... securityRules) {
             return securityRules(List.of(securityRules));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }

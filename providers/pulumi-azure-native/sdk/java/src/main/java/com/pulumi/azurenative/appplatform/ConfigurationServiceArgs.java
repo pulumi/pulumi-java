@@ -23,6 +23,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationServiceName")
     private @Nullable Output<String> configurationServiceName;
 
+    /**
+     * @return The name of Application Configuration Service.
+     * 
+     */
     public Optional<Output<String>> configurationServiceName() {
         return Optional.ofNullable(this.configurationServiceName);
     }
@@ -34,6 +38,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
     private @Nullable Output<ConfigurationServicePropertiesArgs> properties;
 
+    /**
+     * @return Application Configuration Service properties payload
+     * 
+     */
     public Optional<Output<ConfigurationServicePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -87,38 +103,86 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
             $ = new ConfigurationServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationServiceName The name of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationServiceName(@Nullable Output<String> configurationServiceName) {
             $.configurationServiceName = configurationServiceName;
             return this;
         }
 
+        /**
+         * @param configurationServiceName The name of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationServiceName(String configurationServiceName) {
             return configurationServiceName(Output.of(configurationServiceName));
         }
 
+        /**
+         * @param properties Application Configuration Service properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ConfigurationServicePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Application Configuration Service properties payload
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ConfigurationServicePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

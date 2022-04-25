@@ -27,6 +27,10 @@ public final class NetworkFunctionTemplateArgs extends com.pulumi.resources.Reso
     @Import(name="networkFunctionRoleConfigurations")
     private @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
+    /**
+     * @return An array of network function role definitions.
+     * 
+     */
     public Optional<Output<List<NetworkFunctionRoleConfigurationArgs>>> networkFunctionRoleConfigurations() {
         return Optional.ofNullable(this.networkFunctionRoleConfigurations);
     }
@@ -55,15 +59,33 @@ public final class NetworkFunctionTemplateArgs extends com.pulumi.resources.Reso
             $ = new NetworkFunctionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkFunctionRoleConfigurations An array of network function role definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionRoleConfigurations(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
             $.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }
 
+        /**
+         * @param networkFunctionRoleConfigurations An array of network function role definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionRoleConfigurations(List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
             return networkFunctionRoleConfigurations(Output.of(networkFunctionRoleConfigurations));
         }
 
+        /**
+         * @param networkFunctionRoleConfigurations An array of network function role definitions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFunctionRoleConfigurations(NetworkFunctionRoleConfigurationArgs... networkFunctionRoleConfigurations) {
             return networkFunctionRoleConfigurations(List.of(networkFunctionRoleConfigurations));
         }

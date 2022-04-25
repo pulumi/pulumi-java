@@ -19,6 +19,10 @@ public final class GetEnterprisePolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="enterprisePolicyName", required=true)
     private String enterprisePolicyName;
 
+    /**
+     * @return The EnterprisePolicy name.
+     * 
+     */
     public String enterprisePolicyName() {
         return this.enterprisePolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetEnterprisePolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetEnterprisePolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetEnterprisePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enterprisePolicyName The EnterprisePolicy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterprisePolicyName(String enterprisePolicyName) {
             $.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

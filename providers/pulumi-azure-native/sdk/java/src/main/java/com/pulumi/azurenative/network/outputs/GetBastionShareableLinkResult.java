@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBastionShareableLinkResult {
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
      */
     private final @Nullable String nextLink;
     /**
-     * List of Bastion Shareable Links for the request.
+     * @return List of Bastion Shareable Links for the request.
      * 
      */
     private final @Nullable List<BastionShareableLinkResponse> value;
@@ -33,16 +33,16 @@ public final class GetBastionShareableLinkResult {
     }
 
     /**
-     * The URL to get the next set of results.
+     * @return The URL to get the next set of results.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * List of Bastion Shareable Links for the request.
+     * @return List of Bastion Shareable Links for the request.
      * 
-    */
+     */
     public List<BastionShareableLinkResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

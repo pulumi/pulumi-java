@@ -23,6 +23,10 @@ public final class PoolOptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -51,6 +55,12 @@ public final class PoolOptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PoolOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

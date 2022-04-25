@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DWCopyCommandDefaultValueResponse {
     /**
-     * Column name. Type: object (or Expression with resultType string).
+     * @return Column name. Type: object (or Expression with resultType string).
      * 
      */
     private final @Nullable Object columnName;
     /**
-     * The default value of the column. Type: object (or Expression with resultType string).
+     * @return The default value of the column. Type: object (or Expression with resultType string).
      * 
      */
     private final @Nullable Object defaultValue;
@@ -31,16 +31,16 @@ public final class DWCopyCommandDefaultValueResponse {
     }
 
     /**
-     * Column name. Type: object (or Expression with resultType string).
+     * @return Column name. Type: object (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> columnName() {
         return Optional.ofNullable(this.columnName);
     }
     /**
-     * The default value of the column. Type: object (or Expression with resultType string).
+     * @return The default value of the column. Type: object (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }

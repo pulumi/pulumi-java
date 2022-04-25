@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
     /**
-     * The resource id of the playbook resource
+     * @return The resource id of the playbook resource
      * 
      */
     private final @Nullable String logicAppResourceId;
     /**
-     * The tenant id of the playbook resource
+     * @return The tenant id of the playbook resource
      * 
      */
     private final @Nullable String tenantId;
@@ -31,16 +31,16 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
     }
 
     /**
-     * The resource id of the playbook resource
+     * @return The resource id of the playbook resource
      * 
-    */
+     */
     public Optional<String> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
     /**
-     * The tenant id of the playbook resource
+     * @return The tenant id of the playbook resource
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

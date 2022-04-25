@@ -28,6 +28,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="deleteFilesAfterCompletion")
     private @Nullable Object deleteFilesAfterCompletion;
 
+    /**
+     * @return Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> deleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
@@ -39,6 +43,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableChunking")
     private @Nullable Object disableChunking;
 
+    /**
+     * @return If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableChunking() {
         return Optional.ofNullable(this.disableChunking);
     }
@@ -50,6 +58,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -61,6 +73,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="enablePartitionDiscovery")
     private @Nullable Boolean enablePartitionDiscovery;
 
+    /**
+     * @return Indicates whether to enable partition discovery.
+     * 
+     */
     public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
@@ -72,6 +88,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="fileListPath")
     private @Nullable Object fileListPath;
 
+    /**
+     * @return Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
@@ -83,6 +103,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -94,6 +118,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="modifiedDatetimeEnd")
     private @Nullable Object modifiedDatetimeEnd;
 
+    /**
+     * @return The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
@@ -105,6 +133,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="modifiedDatetimeStart")
     private @Nullable Object modifiedDatetimeStart;
 
+    /**
+     * @return The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
@@ -116,6 +148,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="partitionRootPath")
     private @Nullable Object partitionRootPath;
 
+    /**
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
@@ -127,6 +163,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="recursive")
     private @Nullable Object recursive;
 
+    /**
+     * @return If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
@@ -139,6 +179,11 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;SftpReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -150,6 +195,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="wildcardFileName")
     private @Nullable Object wildcardFileName;
 
+    /**
+     * @return Sftp wildcardFileName. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> wildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
@@ -161,6 +210,10 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="wildcardFolderPath")
     private @Nullable Object wildcardFolderPath;
 
+    /**
+     * @return Sftp wildcardFolderPath. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> wildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }
@@ -201,66 +254,145 @@ public final class SftpReadSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new SftpReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteFilesAfterCompletion Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
             $.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
 
+        /**
+         * @param disableChunking If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableChunking(@Nullable Object disableChunking) {
             $.disableChunking = disableChunking;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
+        /**
+         * @param fileListPath Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileListPath(@Nullable Object fileListPath) {
             $.fileListPath = fileListPath;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeEnd The end of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeStart The start of file&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             $.partitionRootPath = partitionRootPath;
             return this;
         }
 
+        /**
+         * @param recursive If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder recursive(@Nullable Object recursive) {
             $.recursive = recursive;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;SftpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param wildcardFileName Sftp wildcardFileName. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             $.wildcardFileName = wildcardFileName;
             return this;
         }
 
+        /**
+         * @param wildcardFolderPath Sftp wildcardFolderPath. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             $.wildcardFolderPath = wildcardFolderPath;
             return this;

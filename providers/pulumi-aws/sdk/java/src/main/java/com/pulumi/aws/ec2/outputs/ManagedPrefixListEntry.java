@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedPrefixListEntry {
     /**
-     * CIDR block of this entry.
+     * @return CIDR block of this entry.
      * 
      */
     private final String cidr;
     /**
-     * Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
+     * @return Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
      * 
      */
     private final @Nullable String description;
@@ -31,16 +31,16 @@ public final class ManagedPrefixListEntry {
     }
 
     /**
-     * CIDR block of this entry.
+     * @return CIDR block of this entry.
      * 
-    */
+     */
     public String cidr() {
         return this.cidr;
     }
     /**
-     * Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
+     * @return Description of this entry. Due to API limitations, updating only the description of an existing entry requires temporarily removing and re-adding the entry.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

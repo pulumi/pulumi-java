@@ -23,6 +23,10 @@ public final class DataRepositoryAssociationS3Args extends com.pulumi.resources.
     @Import(name="autoExportPolicy")
     private @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
 
+    /**
+     * @return Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
+     * 
+     */
     public Optional<Output<DataRepositoryAssociationS3AutoExportPolicyArgs>> autoExportPolicy() {
         return Optional.ofNullable(this.autoExportPolicy);
     }
@@ -34,6 +38,10 @@ public final class DataRepositoryAssociationS3Args extends com.pulumi.resources.
     @Import(name="autoImportPolicy")
     private @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
 
+    /**
+     * @return Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the `events` configuration block.
+     * 
+     */
     public Optional<Output<DataRepositoryAssociationS3AutoImportPolicyArgs>> autoImportPolicy() {
         return Optional.ofNullable(this.autoImportPolicy);
     }
@@ -63,20 +71,44 @@ public final class DataRepositoryAssociationS3Args extends com.pulumi.resources.
             $ = new DataRepositoryAssociationS3Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoExportPolicy Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy) {
             $.autoExportPolicy = autoExportPolicy;
             return this;
         }
 
+        /**
+         * @param autoExportPolicy Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoExportPolicy(DataRepositoryAssociationS3AutoExportPolicyArgs autoExportPolicy) {
             return autoExportPolicy(Output.of(autoExportPolicy));
         }
 
+        /**
+         * @param autoImportPolicy Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the `events` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoImportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
             $.autoImportPolicy = autoImportPolicy;
             return this;
         }
 
+        /**
+         * @param autoImportPolicy Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the `events` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoImportPolicy(DataRepositoryAssociationS3AutoImportPolicyArgs autoImportPolicy) {
             return autoImportPolicy(Output.of(autoImportPolicy));
         }

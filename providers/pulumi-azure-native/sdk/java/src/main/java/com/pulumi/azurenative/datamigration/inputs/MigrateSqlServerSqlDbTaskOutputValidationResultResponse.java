@@ -28,6 +28,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -39,6 +43,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="migrationId", required=true)
     private String migrationId;
 
+    /**
+     * @return Migration Identifier
+     * 
+     */
     public String migrationId() {
         return this.migrationId;
     }
@@ -51,6 +59,11 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;MigrationValidationOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -62,6 +75,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -73,6 +90,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     @Import(name="summaryResults")
     private @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
+    /**
+     * @return Validation summary results for each database
+     * 
+     */
     public Optional<Map<String,MigrationValidationDatabaseSummaryResultResponse>> summaryResults() {
         return Optional.ofNullable(this.summaryResults);
     }
@@ -105,26 +126,57 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
             $ = new MigrateSqlServerSqlDbTaskOutputValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param migrationId Migration Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationId(String migrationId) {
             $.migrationId = migrationId;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;MigrationValidationOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param status Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param summaryResults Validation summary results for each database
+         * 
+         * @return builder
+         * 
+         */
         public Builder summaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
             $.summaryResults = summaryResults;
             return this;

@@ -24,6 +24,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return the Amazon Resource Name (ARN) of the custom plugin.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The type of the plugin file. Allowed values are `ZIP` and `JAR`.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -46,6 +54,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A summary description of the custom plugin.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
     private @Nullable Output<Integer> latestRevision;
 
+    /**
+     * @return an ID of the latest successfully created revision of the custom plugin.
+     * 
+     */
     public Optional<Output<Integer>> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
@@ -68,6 +84,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<CustomPluginLocationGetArgs> location;
 
+    /**
+     * @return Information about the location of a custom plugin. See below.
+     * 
+     */
     public Optional<Output<CustomPluginLocationGetArgs>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +99,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the custom plugin..
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return the state of the custom plugin.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -124,65 +152,149 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
             $ = new CustomPluginState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn the Amazon Resource Name (ARN) of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn the Amazon Resource Name (ARN) of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param contentType The type of the plugin file. Allowed values are `ZIP` and `JAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The type of the plugin file. Allowed values are `ZIP` and `JAR`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param description A summary description of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A summary description of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param latestRevision an ID of the latest successfully created revision of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             $.latestRevision = latestRevision;
             return this;
         }
 
+        /**
+         * @param latestRevision an ID of the latest successfully created revision of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestRevision(Integer latestRevision) {
             return latestRevision(Output.of(latestRevision));
         }
 
+        /**
+         * @param location Information about the location of a custom plugin. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<CustomPluginLocationGetArgs> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Information about the location of a custom plugin. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(CustomPluginLocationGetArgs location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the custom plugin..
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the custom plugin..
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param state the state of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state the state of the custom plugin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

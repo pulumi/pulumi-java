@@ -21,6 +21,10 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAllocationName", required=true)
     private String ipAllocationName;
 
+    /**
+     * @return The name of the IpAllocation.
+     * 
+     */
     public String ipAllocationName() {
         return this.ipAllocationName;
     }
@@ -43,6 +51,10 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIpAllocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param ipAllocationName The name of the IpAllocation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationName(String ipAllocationName) {
             $.ipAllocationName = ipAllocationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

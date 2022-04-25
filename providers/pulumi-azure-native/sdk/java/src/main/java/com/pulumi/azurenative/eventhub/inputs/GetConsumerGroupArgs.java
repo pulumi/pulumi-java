@@ -19,6 +19,10 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="consumerGroupName", required=true)
     private String consumerGroupName;
 
+    /**
+     * @return The consumer group name
+     * 
+     */
     public String consumerGroupName() {
         return this.consumerGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="eventHubName", required=true)
     private String eventHubName;
 
+    /**
+     * @return The Event Hub name
+     * 
+     */
     public String eventHubName() {
         return this.eventHubName;
     }
@@ -41,6 +49,10 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -52,6 +64,10 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerGroupName The consumer group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerGroupName(String consumerGroupName) {
             $.consumerGroupName = consumerGroupName;
             return this;
         }
 
+        /**
+         * @param eventHubName The Event Hub name
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubName(String eventHubName) {
             $.eventHubName = eventHubName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

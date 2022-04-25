@@ -26,6 +26,10 @@ public final class AccountResponseSku extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return Gets or sets the sku capacity.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class AccountResponseSku extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the sku name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,11 +74,23 @@ public final class AccountResponseSku extends com.pulumi.resources.InvokeArgs {
             $ = new AccountResponseSku(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Gets or sets the sku capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

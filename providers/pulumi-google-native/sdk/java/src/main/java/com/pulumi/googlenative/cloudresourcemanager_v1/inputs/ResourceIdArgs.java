@@ -26,6 +26,10 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The type-specific id. This should correspond to the id used in the type-specific API&#39;s.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -66,20 +74,44 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The type-specific id. This should correspond to the id used in the type-specific API&#39;s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The type-specific id. This should correspond to the id used in the type-specific API&#39;s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param type The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The resource type this id is for. At present, the valid types are: &#34;organization&#34;, &#34;folder&#34;, and &#34;project&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

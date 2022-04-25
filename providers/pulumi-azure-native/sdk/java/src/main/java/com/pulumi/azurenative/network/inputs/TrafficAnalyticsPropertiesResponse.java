@@ -25,6 +25,10 @@ public final class TrafficAnalyticsPropertiesResponse extends com.pulumi.resourc
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
     private @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
+    /**
+     * @return Parameters that define the configuration of traffic analytics.
+     * 
+     */
     public Optional<TrafficAnalyticsConfigurationPropertiesResponse> networkWatcherFlowAnalyticsConfiguration() {
         return Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }
@@ -53,6 +57,12 @@ public final class TrafficAnalyticsPropertiesResponse extends com.pulumi.resourc
             $ = new TrafficAnalyticsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkWatcherFlowAnalyticsConfiguration Parameters that define the configuration of traffic analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
             $.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;

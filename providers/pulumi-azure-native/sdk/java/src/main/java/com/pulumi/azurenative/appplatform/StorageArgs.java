@@ -23,6 +23,10 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<StorageAccountArgs> properties;
 
+    /**
+     * @return Properties of the storage resource payload.
+     * 
+     */
     public Optional<Output<StorageAccountArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -34,6 +38,10 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -56,6 +68,10 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageName")
     private @Nullable Output<String> storageName;
 
+    /**
+     * @return The name of the storage resource.
+     * 
+     */
     public Optional<Output<String>> storageName() {
         return Optional.ofNullable(this.storageName);
     }
@@ -87,38 +103,86 @@ public final class StorageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Properties of the storage resource payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<StorageAccountArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the storage resource payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(StorageAccountArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param storageName The name of the storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageName(@Nullable Output<String> storageName) {
             $.storageName = storageName;
             return this;
         }
 
+        /**
+         * @param storageName The name of the storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageName(String storageName) {
             return storageName(Output.of(storageName));
         }

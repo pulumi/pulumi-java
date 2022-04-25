@@ -27,6 +27,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="customGpuDriverPath", required=true)
     private String customGpuDriverPath;
 
+    /**
+     * @return Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+     * 
+     */
     public String customGpuDriverPath() {
         return this.customGpuDriverPath;
     }
@@ -38,6 +42,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="enableHealthMonitoring", required=true)
     private Boolean enableHealthMonitoring;
 
+    /**
+     * @return Verifies core internal services are running. Default: True
+     * 
+     */
     public Boolean enableHealthMonitoring() {
         return this.enableHealthMonitoring;
     }
@@ -49,6 +57,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="idleShutdown", required=true)
     private Boolean idleShutdown;
 
+    /**
+     * @return Runtime will automatically shutdown after idle_shutdown_time. Default: True
+     * 
+     */
     public Boolean idleShutdown() {
         return this.idleShutdown;
     }
@@ -60,6 +72,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="idleShutdownTimeout", required=true)
     private Integer idleShutdownTimeout;
 
+    /**
+     * @return Time in minutes to wait before shutting down runtime. Default: 180 minutes
+     * 
+     */
     public Integer idleShutdownTimeout() {
         return this.idleShutdownTimeout;
     }
@@ -71,6 +87,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="installGpuDriver", required=true)
     private Boolean installGpuDriver;
 
+    /**
+     * @return Install Nvidia Driver automatically.
+     * 
+     */
     public Boolean installGpuDriver() {
         return this.installGpuDriver;
     }
@@ -82,6 +102,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="kernels", required=true)
     private List<ContainerImageResponse> kernels;
 
+    /**
+     * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
+     * 
+     */
     public List<ContainerImageResponse> kernels() {
         return this.kernels;
     }
@@ -93,6 +117,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="notebookUpgradeSchedule", required=true)
     private String notebookUpgradeSchedule;
 
+    /**
+     * @return Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+     * 
+     */
     public String notebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
     }
@@ -104,6 +132,10 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
     @Import(name="postStartupScript", required=true)
     private String postStartupScript;
 
+    /**
+     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+     * 
+     */
     public String postStartupScript() {
         return this.postStartupScript;
     }
@@ -139,45 +171,99 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
             $ = new RuntimeSoftwareConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customGpuDriverPath Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customGpuDriverPath(String customGpuDriverPath) {
             $.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
+        /**
+         * @param enableHealthMonitoring Verifies core internal services are running. Default: True
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHealthMonitoring(Boolean enableHealthMonitoring) {
             $.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
 
+        /**
+         * @param idleShutdown Runtime will automatically shutdown after idle_shutdown_time. Default: True
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleShutdown(Boolean idleShutdown) {
             $.idleShutdown = idleShutdown;
             return this;
         }
 
+        /**
+         * @param idleShutdownTimeout Time in minutes to wait before shutting down runtime. Default: 180 minutes
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleShutdownTimeout(Integer idleShutdownTimeout) {
             $.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
 
+        /**
+         * @param installGpuDriver Install Nvidia Driver automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installGpuDriver(Boolean installGpuDriver) {
             $.installGpuDriver = installGpuDriver;
             return this;
         }
 
+        /**
+         * @param kernels Optional. Use a list of container images to use as Kernels in the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernels(List<ContainerImageResponse> kernels) {
             $.kernels = kernels;
             return this;
         }
 
+        /**
+         * @param kernels Optional. Use a list of container images to use as Kernels in the notebook instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kernels(ContainerImageResponse... kernels) {
             return kernels(List.of(kernels));
         }
 
+        /**
+         * @param notebookUpgradeSchedule Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notebookUpgradeSchedule(String notebookUpgradeSchedule) {
             $.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
 
+        /**
+         * @param postStartupScript Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder postStartupScript(String postStartupScript) {
             $.postStartupScript = postStartupScript;
             return this;

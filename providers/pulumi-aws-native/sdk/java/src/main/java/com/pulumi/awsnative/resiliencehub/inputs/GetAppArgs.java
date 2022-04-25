@@ -19,6 +19,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appArn", required=true)
     private String appArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the App.
+     * 
+     */
     public String appArn() {
         return this.appArn;
     }
@@ -47,6 +51,12 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appArn Amazon Resource Name (ARN) of the App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appArn(String appArn) {
             $.appArn = appArn;
             return this;

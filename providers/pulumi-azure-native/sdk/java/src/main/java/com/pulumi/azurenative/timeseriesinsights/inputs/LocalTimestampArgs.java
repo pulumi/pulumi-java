@@ -29,6 +29,10 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="format")
     private @Nullable Output<Either<String,LocalTimestampFormat>> format;
 
+    /**
+     * @return An enum that represents the format of the local timestamp property that needs to be set.
+     * 
+     */
     public Optional<Output<Either<String,LocalTimestampFormat>>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -40,6 +44,10 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeZoneOffset")
     private @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
+    /**
+     * @return An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+     * 
+     */
     public Optional<Output<LocalTimestampTimeZoneOffsetArgs>> timeZoneOffset() {
         return Optional.ofNullable(this.timeZoneOffset);
     }
@@ -69,28 +77,64 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
             $ = new LocalTimestampArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format An enum that represents the format of the local timestamp property that needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Either<String,LocalTimestampFormat>> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format An enum that represents the format of the local timestamp property that needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Either<String,LocalTimestampFormat> format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param format An enum that represents the format of the local timestamp property that needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Either.ofLeft(format));
         }
 
+        /**
+         * @param format An enum that represents the format of the local timestamp property that needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(LocalTimestampFormat format) {
             return format(Either.ofRight(format));
         }
 
+        /**
+         * @param timeZoneOffset An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneOffset(@Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
             $.timeZoneOffset = timeZoneOffset;
             return this;
         }
 
+        /**
+         * @param timeZoneOffset An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneOffset(LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
             return timeZoneOffset(Output.of(timeZoneOffset));
         }

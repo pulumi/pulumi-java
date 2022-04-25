@@ -22,6 +22,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
     @Import(name="attachmentTarget")
     private @Nullable Output<String> attachmentTarget;
 
+    /**
+     * @return The target that the firewall policy is attached to.
+     * 
+     */
     public Optional<Output<String>> attachmentTarget() {
         return Optional.ofNullable(this.attachmentTarget);
     }
@@ -33,6 +37,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
     @Import(name="firewallPolicy")
     private @Nullable Output<String> firewallPolicy;
 
+    /**
+     * @return The firewall policy ID of the association.
+     * 
+     */
     public Optional<Output<String>> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
@@ -44,6 +52,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
     @Import(name="shortName")
     private @Nullable Output<String> shortName;
 
+    /**
+     * @return The short name of the firewall policy of the association.
+     * 
+     */
     public Optional<Output<String>> shortName() {
         return Optional.ofNullable(this.shortName);
     }
@@ -86,38 +102,86 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
             $ = new FirewallPolicyAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentTarget The target that the firewall policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentTarget(@Nullable Output<String> attachmentTarget) {
             $.attachmentTarget = attachmentTarget;
             return this;
         }
 
+        /**
+         * @param attachmentTarget The target that the firewall policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentTarget(String attachmentTarget) {
             return attachmentTarget(Output.of(attachmentTarget));
         }
 
+        /**
+         * @param firewallPolicy The firewall policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
+        /**
+         * @param firewallPolicy The firewall policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(String firewallPolicy) {
             return firewallPolicy(Output.of(firewallPolicy));
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param shortName The short name of the firewall policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(@Nullable Output<String> shortName) {
             $.shortName = shortName;
             return this;
         }
 
+        /**
+         * @param shortName The short name of the firewall policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortName(String shortName) {
             return shortName(Output.of(shortName));
         }

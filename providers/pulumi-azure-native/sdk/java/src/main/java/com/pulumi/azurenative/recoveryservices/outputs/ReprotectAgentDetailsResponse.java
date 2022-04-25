@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class ReprotectAgentDetailsResponse {
     /**
-     * The health of the reprotect agent.
+     * @return The health of the reprotect agent.
      * 
      */
     private final String health;
     /**
-     * The health errors.
+     * @return The health errors.
      * 
      */
     private final List<HealthErrorResponse> healthErrors;
     /**
-     * The reprotect agent Id.
+     * @return The reprotect agent Id.
      * 
      */
     private final String id;
     /**
-     * The last heartbeat received from the reprotect agent.
+     * @return The last heartbeat received from the reprotect agent.
      * 
      */
     private final String lastHeartbeatUtc;
     /**
-     * The reprotect agent name.
+     * @return The reprotect agent name.
      * 
      */
     private final String name;
     /**
-     * The version.
+     * @return The version.
      * 
      */
     private final String version;
@@ -59,44 +59,44 @@ public final class ReprotectAgentDetailsResponse {
     }
 
     /**
-     * The health of the reprotect agent.
+     * @return The health of the reprotect agent.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The reprotect agent Id.
+     * @return The reprotect agent Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the reprotect agent.
+     * @return The last heartbeat received from the reprotect agent.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The reprotect agent name.
+     * @return The reprotect agent name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The version.
+     * @return The version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

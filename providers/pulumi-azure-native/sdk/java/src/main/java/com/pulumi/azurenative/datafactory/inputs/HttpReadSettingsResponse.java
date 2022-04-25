@@ -28,6 +28,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="additionalHeaders")
     private @Nullable Object additionalHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
@@ -39,6 +43,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -50,6 +58,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="enablePartitionDiscovery")
     private @Nullable Boolean enablePartitionDiscovery;
 
+    /**
+     * @return Indicates whether to enable partition discovery.
+     * 
+     */
     public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
@@ -61,6 +73,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -72,6 +88,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="partitionRootPath")
     private @Nullable Object partitionRootPath;
 
+    /**
+     * @return Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
@@ -83,6 +103,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestBody")
     private @Nullable Object requestBody;
 
+    /**
+     * @return The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
@@ -94,6 +118,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestMethod")
     private @Nullable Object requestMethod;
 
+    /**
+     * @return The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
@@ -105,6 +133,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestTimeout")
     private @Nullable Object requestTimeout;
 
+    /**
+     * @return Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+     * 
+     */
     public Optional<Object> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
@@ -117,6 +149,11 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;HttpReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -153,46 +190,101 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new HttpReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalHeaders The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             $.additionalHeaders = additionalHeaders;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param enablePartitionDiscovery Indicates whether to enable partition discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param partitionRootPath Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             $.partitionRootPath = partitionRootPath;
             return this;
         }
 
+        /**
+         * @param requestBody The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBody(@Nullable Object requestBody) {
             $.requestBody = requestBody;
             return this;
         }
 
+        /**
+         * @param requestMethod The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(@Nullable Object requestMethod) {
             $.requestMethod = requestMethod;
             return this;
         }
 
+        /**
+         * @param requestTimeout Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(@Nullable Object requestTimeout) {
             $.requestTimeout = requestTimeout;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;HttpReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

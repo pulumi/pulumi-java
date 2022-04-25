@@ -27,6 +27,10 @@ public final class ComputeProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roles")
     private @Nullable Output<List<RoleArgs>> roles;
 
+    /**
+     * @return The list of roles in the cluster.
+     * 
+     */
     public Optional<Output<List<RoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -55,15 +59,33 @@ public final class ComputeProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ComputeProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<RoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The list of roles in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
         }

@@ -19,6 +19,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationGroupName", required=true)
     private String applicationGroupName;
 
+    /**
+     * @return The name of the application group
+     * 
+     */
     public String applicationGroupName() {
         return this.applicationGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationName", required=true)
     private String applicationName;
 
+    /**
+     * @return The name of the application within the specified application group
+     * 
+     */
     public String applicationName() {
         return this.applicationName;
     }
@@ -41,6 +49,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(String applicationGroupName) {
             $.applicationGroupName = applicationGroupName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application within the specified application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

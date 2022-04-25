@@ -23,6 +23,10 @@ public final class ExportDeliveryInfoResponse extends com.pulumi.resources.Invok
     @Import(name="destination", required=true)
     private ExportDeliveryDestinationResponse destination;
 
+    /**
+     * @return Has destination for the export being delivered.
+     * 
+     */
     public ExportDeliveryDestinationResponse destination() {
         return this.destination;
     }
@@ -51,6 +55,12 @@ public final class ExportDeliveryInfoResponse extends com.pulumi.resources.Invok
             $ = new ExportDeliveryInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Has destination for the export being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(ExportDeliveryDestinationResponse destination) {
             $.destination = destination;
             return this;

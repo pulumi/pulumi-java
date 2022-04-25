@@ -20,6 +20,10 @@ public final class HoursOfOperationConfigEndTimeArgs extends com.pulumi.resource
     @Import(name="hours", required=true)
     private Output<Integer> hours;
 
+    /**
+     * @return Specifies the hour of closing.
+     * 
+     */
     public Output<Integer> hours() {
         return this.hours;
     }
@@ -31,6 +35,10 @@ public final class HoursOfOperationConfigEndTimeArgs extends com.pulumi.resource
     @Import(name="minutes", required=true)
     private Output<Integer> minutes;
 
+    /**
+     * @return Specifies the minute of closing.
+     * 
+     */
     public Output<Integer> minutes() {
         return this.minutes;
     }
@@ -60,20 +68,44 @@ public final class HoursOfOperationConfigEndTimeArgs extends com.pulumi.resource
             $ = new HoursOfOperationConfigEndTimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours Specifies the hour of closing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Output<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours Specifies the hour of closing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             return hours(Output.of(hours));
         }
 
+        /**
+         * @param minutes Specifies the minute of closing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Output<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes Specifies the minute of closing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             return minutes(Output.of(minutes));
         }

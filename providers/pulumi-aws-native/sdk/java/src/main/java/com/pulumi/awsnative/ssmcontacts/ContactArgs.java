@@ -23,6 +23,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias", required=true)
     private Output<String> alias;
 
+    /**
+     * @return Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
+     * 
+     */
     public Output<String> alias() {
         return this.alias;
     }
@@ -34,6 +38,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -45,6 +53,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan", required=true)
     private Output<List<ContactStageArgs>> plan;
 
+    /**
+     * @return The stages that an escalation plan or engagement plan engages contacts and contact methods in.
+     * 
+     */
     public Output<List<ContactStageArgs>> plan() {
         return this.plan;
     }
@@ -56,6 +68,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<ContactType> type;
 
+    /**
+     * @return Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
+     * 
+     */
     public Output<ContactType> type() {
         return this.type;
     }
@@ -87,42 +103,96 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param displayName Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param plan The stages that an escalation plan or engagement plan engages contacts and contact methods in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(Output<List<ContactStageArgs>> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan The stages that an escalation plan or engagement plan engages contacts and contact methods in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(List<ContactStageArgs> plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param plan The stages that an escalation plan or engagement plan engages contacts and contact methods in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(ContactStageArgs... plan) {
             return plan(List.of(plan));
         }
 
+        /**
+         * @param type Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ContactType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ContactType type) {
             return type(Output.of(type));
         }

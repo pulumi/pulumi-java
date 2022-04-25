@@ -25,6 +25,10 @@ public final class UefiSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secureBootEnabled")
     private @Nullable Boolean secureBootEnabled;
 
+    /**
+     * @return Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * 
+     */
     public Optional<Boolean> secureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
@@ -36,6 +40,10 @@ public final class UefiSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vTpmEnabled")
     private @Nullable Boolean vTpmEnabled;
 
+    /**
+     * @return Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+     * 
+     */
     public Optional<Boolean> vTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);
     }
@@ -65,11 +73,23 @@ public final class UefiSettingsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new UefiSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secureBootEnabled Specifies whether secure boot should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
             $.secureBootEnabled = secureBootEnabled;
             return this;
         }
 
+        /**
+         * @param vTpmEnabled Specifies whether vTPM should be enabled on the virtual machine. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-12-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
             $.vTpmEnabled = vTpmEnabled;
             return this;

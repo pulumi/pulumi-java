@@ -25,6 +25,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="aliasContext", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
+    /**
+     * @return An alias, which may be a branch or tag.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
@@ -36,6 +40,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="repoId", required=true)
     private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
 
+    /**
+     * @return The ID of the repo.
+     * 
+     */
     public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId() {
         return this.repoId;
     }
@@ -47,6 +55,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     @Import(name="revisionId", required=true)
     private String revisionId;
 
+    /**
+     * @return A revision ID.
+     * 
+     */
     public String revisionId() {
         return this.revisionId;
     }
@@ -77,16 +89,34 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             $ = new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasContext An alias, which may be a branch or tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
             $.aliasContext = aliasContext;
             return this;
         }
 
+        /**
+         * @param repoId The ID of the repo.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repoId(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId) {
             $.repoId = repoId;
             return this;
         }
 
+        /**
+         * @param revisionId A revision ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionId(String revisionId) {
             $.revisionId = revisionId;
             return this;

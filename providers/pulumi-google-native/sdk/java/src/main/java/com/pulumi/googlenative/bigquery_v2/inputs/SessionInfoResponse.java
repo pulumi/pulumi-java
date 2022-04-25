@@ -19,6 +19,10 @@ public final class SessionInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sessionId", required=true)
     private String sessionId;
 
+    /**
+     * @return // [Preview] Id of the session.
+     * 
+     */
     public String sessionId() {
         return this.sessionId;
     }
@@ -47,6 +51,12 @@ public final class SessionInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SessionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sessionId // [Preview] Id of the session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionId(String sessionId) {
             $.sessionId = sessionId;
             return this;

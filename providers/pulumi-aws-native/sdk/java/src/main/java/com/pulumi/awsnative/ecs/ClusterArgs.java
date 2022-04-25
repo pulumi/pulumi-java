@@ -34,6 +34,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -108,11 +112,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return capacityProviders(List.of(capacityProviders));
         }
 
+        /**
+         * @param clusterName A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName A user-generated string that you use to identify your cluster. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID for the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }

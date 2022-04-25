@@ -29,6 +29,10 @@ public final class EventHandlerSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="items")
     private @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
+    /**
+     * @return Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+     * 
+     */
     public Optional<Output<Map<String,List<EventHandlerTemplateArgs>>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -57,11 +61,23 @@ public final class EventHandlerSettingsArgs extends com.pulumi.resources.Resourc
             $ = new EventHandlerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Map<String,List<EventHandlerTemplateArgs>> items) {
             return items(Output.of(items));
         }

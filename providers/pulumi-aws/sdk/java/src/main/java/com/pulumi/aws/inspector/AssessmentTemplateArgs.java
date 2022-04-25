@@ -25,6 +25,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="duration", required=true)
     private Output<Integer> duration;
 
+    /**
+     * @return The duration of the inspector run.
+     * 
+     */
     public Output<Integer> duration() {
         return this.duration;
     }
@@ -36,6 +40,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the assessment template.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="rulesPackageArns", required=true)
     private Output<List<String>> rulesPackageArns;
 
+    /**
+     * @return The rules to be used during the run.
+     * 
+     */
     public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns;
     }
@@ -58,6 +70,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -69,6 +85,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetArn", required=true)
     private Output<String> targetArn;
 
+    /**
+     * @return The assessment target ARN to attach the template to.
+     * 
+     */
     public Output<String> targetArn() {
         return this.targetArn;
     }
@@ -101,51 +121,117 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
             $ = new AssessmentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration The duration of the inspector run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<Integer> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration The duration of the inspector run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Integer duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param name The name of the assessment template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the assessment template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param rulesPackageArns The rules to be used during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesPackageArns(Output<List<String>> rulesPackageArns) {
             $.rulesPackageArns = rulesPackageArns;
             return this;
         }
 
+        /**
+         * @param rulesPackageArns The rules to be used during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesPackageArns(List<String> rulesPackageArns) {
             return rulesPackageArns(Output.of(rulesPackageArns));
         }
 
+        /**
+         * @param rulesPackageArns The rules to be used during the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesPackageArns(String... rulesPackageArns) {
             return rulesPackageArns(List.of(rulesPackageArns));
         }
 
+        /**
+         * @param tags Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetArn The assessment target ARN to attach the template to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(Output<String> targetArn) {
             $.targetArn = targetArn;
             return this;
         }
 
+        /**
+         * @param targetArn The assessment target ARN to attach the template to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetArn(String targetArn) {
             return targetArn(Output.of(targetArn));
         }

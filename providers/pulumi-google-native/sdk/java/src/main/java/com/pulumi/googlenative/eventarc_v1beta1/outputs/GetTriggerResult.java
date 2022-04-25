@@ -15,47 +15,47 @@ import java.util.Objects;
 @CustomType
 public final class GetTriggerResult {
     /**
-     * The creation time.
+     * @return The creation time.
      * 
      */
     private final String createTime;
     /**
-     * Destination specifies where the events should be sent to.
+     * @return Destination specifies where the events should be sent to.
      * 
      */
     private final DestinationResponse destination;
     /**
-     * This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
     private final String etag;
     /**
-     * Optional. User labels attached to the triggers that can be used to group resources.
+     * @return Optional. User labels attached to the triggers that can be used to group resources.
      * 
      */
     private final Map<String,String> labels;
     /**
-     * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     * @return null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
      * 
      */
     private final List<MatchingCriteriaResponse> matchingCriteria;
     /**
-     * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * @return The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
      */
     private final String name;
     /**
-     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
+     * @return Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
      * 
      */
     private final String serviceAccount;
     /**
-     * In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+     * @return In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
     private final TransportResponse transport;
     /**
-     * The last-modified time.
+     * @return The last-modified time.
      * 
      */
     private final String updateTime;
@@ -83,65 +83,65 @@ public final class GetTriggerResult {
     }
 
     /**
-     * The creation time.
+     * @return The creation time.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * Destination specifies where the events should be sent to.
+     * @return Destination specifies where the events should be sent to.
      * 
-    */
+     */
     public DestinationResponse destination() {
         return this.destination;
     }
     /**
-     * This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
+     * @return This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Optional. User labels attached to the triggers that can be used to group resources.
+     * @return Optional. User labels attached to the triggers that can be used to group resources.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
+     * @return null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
      * 
-    */
+     */
     public List<MatchingCriteriaResponse> matchingCriteria() {
         return this.matchingCriteria;
     }
     /**
-     * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     * @return The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
+     * @return Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have &#39;eventarc.events.receiveAuditLogV1Written&#39; permission.
      * 
-    */
+     */
     public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
-     * In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+     * @return In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
-    */
+     */
     public TransportResponse transport() {
         return this.transport;
     }
     /**
-     * The last-modified time.
+     * @return The last-modified time.
      * 
-    */
+     */
     public String updateTime() {
         return this.updateTime;
     }

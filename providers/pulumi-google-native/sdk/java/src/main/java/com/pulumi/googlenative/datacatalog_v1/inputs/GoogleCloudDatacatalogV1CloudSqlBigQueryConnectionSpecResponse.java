@@ -23,6 +23,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     @Import(name="database", required=true)
     private String database;
 
+    /**
+     * @return Database name.
+     * 
+     */
     public String database() {
         return this.database;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return Cloud SQL instance ID in the format of `project:location:instance`.
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -45,6 +53,10 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the Cloud SQL database.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
             $ = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param database Database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param instanceId Cloud SQL instance ID in the format of `project:location:instance`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param type Type of the Cloud SQL database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -30,6 +34,10 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
     @Import(name="policyName", required=true)
     private String policyName;
 
+    /**
+     * @return The policy name. Should always be Default.
+     * 
+     */
     public String policyName() {
         return this.policyName;
     }
@@ -41,6 +49,10 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -83,21 +99,45 @@ public final class GetLongTermRetentionPolicyArgs extends com.pulumi.resources.I
             $ = new GetLongTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param policyName The policy name. Should always be Default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

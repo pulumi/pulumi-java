@@ -25,6 +25,10 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Effective vnet Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location of vnet.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
     @Import(name="membershipType")
     private @Nullable String membershipType;
 
+    /**
+     * @return Membership Type.
+     * 
+     */
     public Optional<String> membershipType() {
         return Optional.ofNullable(this.membershipType);
     }
@@ -77,16 +89,34 @@ public final class EffectiveVirtualNetworkResponse extends com.pulumi.resources.
             $ = new EffectiveVirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Effective vnet Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Location of vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param membershipType Membership Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipType(@Nullable String membershipType) {
             $.membershipType = membershipType;
             return this;

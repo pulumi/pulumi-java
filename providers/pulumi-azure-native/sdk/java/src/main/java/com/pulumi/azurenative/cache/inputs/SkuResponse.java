@@ -24,6 +24,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity", required=true)
     private Integer capacity;
 
+    /**
+     * @return The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+     * 
+     */
     public Integer capacity() {
         return this.capacity;
     }
@@ -35,6 +39,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family", required=true)
     private String family;
 
+    /**
+     * @return The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+     * 
+     */
     public String family() {
         return this.family;
     }
@@ -46,6 +54,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -76,16 +88,34 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

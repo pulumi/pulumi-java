@@ -29,6 +29,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availableFeatures")
     private @Nullable Output<List<String>> availableFeatures;
 
+    /**
+     * @return Represents a list of available feature names for a given version.
+     * 
+     */
     public Optional<Output<List<String>>> availableFeatures() {
         return Optional.ofNullable(this.availableFeatures);
     }
@@ -40,6 +44,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
     private @Nullable Output<Boolean> defaultVersion;
 
+    /**
+     * @return Whether this is currently the default version for Cloud Data Fusion
+     * 
+     */
     public Optional<Output<Boolean>> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
@@ -51,6 +59,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<VersionType> type;
 
+    /**
+     * @return Type represents the release availability of the version
+     * 
+     */
     public Optional<Output<VersionType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -62,6 +74,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionNumber")
     private @Nullable Output<String> versionNumber;
 
+    /**
+     * @return The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+     * 
+     */
     public Optional<Output<String>> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
@@ -93,42 +109,96 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableFeatures Represents a list of available feature names for a given version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableFeatures(@Nullable Output<List<String>> availableFeatures) {
             $.availableFeatures = availableFeatures;
             return this;
         }
 
+        /**
+         * @param availableFeatures Represents a list of available feature names for a given version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableFeatures(List<String> availableFeatures) {
             return availableFeatures(Output.of(availableFeatures));
         }
 
+        /**
+         * @param availableFeatures Represents a list of available feature names for a given version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableFeatures(String... availableFeatures) {
             return availableFeatures(List.of(availableFeatures));
         }
 
+        /**
+         * @param defaultVersion Whether this is currently the default version for Cloud Data Fusion
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(@Nullable Output<Boolean> defaultVersion) {
             $.defaultVersion = defaultVersion;
             return this;
         }
 
+        /**
+         * @param defaultVersion Whether this is currently the default version for Cloud Data Fusion
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultVersion(Boolean defaultVersion) {
             return defaultVersion(Output.of(defaultVersion));
         }
 
+        /**
+         * @param type Type represents the release availability of the version
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<VersionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type represents the release availability of the version
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(VersionType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param versionNumber The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(@Nullable Output<String> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
         }
 
+        /**
+         * @param versionNumber The version number of the Data Fusion instance, such as &#39;6.0.1.0&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionNumber(String versionNumber) {
             return versionNumber(Output.of(versionNumber));
         }

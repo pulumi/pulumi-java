@@ -26,6 +26,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="ciphers", required=true)
     private List<String> ciphers;
 
+    /**
+     * @return The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+     * 
+     */
     public List<String> ciphers() {
         return this.ciphers;
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="clientAuthEnabled", required=true)
     private Boolean clientAuthEnabled;
 
+    /**
+     * @return Optional. Enables two-way TLS.
+     * 
+     */
     public Boolean clientAuthEnabled() {
         return this.clientAuthEnabled;
     }
@@ -48,6 +56,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="commonName", required=true)
     private GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
 
+    /**
+     * @return The TLS Common Name of the certificate.
+     * 
+     */
     public GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName() {
         return this.commonName;
     }
@@ -59,6 +71,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -70,6 +86,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="ignoreValidationErrors", required=true)
     private Boolean ignoreValidationErrors;
 
+    /**
+     * @return If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
+     * 
+     */
     public Boolean ignoreValidationErrors() {
         return this.ignoreValidationErrors;
     }
@@ -81,6 +101,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="keyAlias", required=true)
     private String keyAlias;
 
+    /**
+     * @return Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
+     * 
+     */
     public String keyAlias() {
         return this.keyAlias;
     }
@@ -92,6 +116,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="keyStore", required=true)
     private String keyStore;
 
+    /**
+     * @return Required if `client_auth_enabled` is true. The resource ID of the keystore.
+     * 
+     */
     public String keyStore() {
         return this.keyStore;
     }
@@ -103,6 +131,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="protocols", required=true)
     private List<String> protocols;
 
+    /**
+     * @return The TLS versioins to be used.
+     * 
+     */
     public List<String> protocols() {
         return this.protocols;
     }
@@ -114,6 +146,10 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
     @Import(name="trustStore", required=true)
     private String trustStore;
 
+    /**
+     * @return The resource ID of the truststore.
+     * 
+     */
     public String trustStore() {
         return this.trustStore;
     }
@@ -150,54 +186,120 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
             $ = new GoogleCloudApigeeV1TlsInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ciphers The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphers(List<String> ciphers) {
             $.ciphers = ciphers;
             return this;
         }
 
+        /**
+         * @param ciphers The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
+         * 
+         * @return builder
+         * 
+         */
         public Builder ciphers(String... ciphers) {
             return ciphers(List.of(ciphers));
         }
 
+        /**
+         * @param clientAuthEnabled Optional. Enables two-way TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuthEnabled(Boolean clientAuthEnabled) {
             $.clientAuthEnabled = clientAuthEnabled;
             return this;
         }
 
+        /**
+         * @param commonName The TLS Common Name of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param enabled Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param ignoreValidationErrors If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreValidationErrors(Boolean ignoreValidationErrors) {
             $.ignoreValidationErrors = ignoreValidationErrors;
             return this;
         }
 
+        /**
+         * @param keyAlias Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlias(String keyAlias) {
             $.keyAlias = keyAlias;
             return this;
         }
 
+        /**
+         * @param keyStore Required if `client_auth_enabled` is true. The resource ID of the keystore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyStore(String keyStore) {
             $.keyStore = keyStore;
             return this;
         }
 
+        /**
+         * @param protocols The TLS versioins to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(List<String> protocols) {
             $.protocols = protocols;
             return this;
         }
 
+        /**
+         * @param protocols The TLS versioins to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(String... protocols) {
             return protocols(List.of(protocols));
         }
 
+        /**
+         * @param trustStore The resource ID of the truststore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustStore(String trustStore) {
             $.trustStore = trustStore;
             return this;

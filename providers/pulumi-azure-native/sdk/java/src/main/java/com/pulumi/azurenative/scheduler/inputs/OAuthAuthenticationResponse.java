@@ -22,6 +22,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return Gets or sets the audience.
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -33,6 +37,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Gets or sets the client identifier.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -44,6 +52,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="secret")
     private @Nullable String secret;
 
+    /**
+     * @return Gets or sets the secret, return value will always be empty.
+     * 
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -55,6 +67,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="tenant")
     private @Nullable String tenant;
 
+    /**
+     * @return Gets or sets the tenant.
+     * 
+     */
     public Optional<String> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -67,6 +83,11 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Gets or sets the HTTP authentication type.
+     * Expected value is &#39;ActiveDirectoryOAuth&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -99,26 +120,57 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
             $ = new OAuthAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Gets or sets the audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param clientId Gets or sets the client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param secret Gets or sets the secret, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param tenant Gets or sets the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable String tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;ActiveDirectoryOAuth&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

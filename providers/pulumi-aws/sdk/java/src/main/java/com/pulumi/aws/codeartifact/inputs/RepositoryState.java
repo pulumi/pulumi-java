@@ -26,6 +26,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="administratorAccount")
     private @Nullable Output<String> administratorAccount;
 
+    /**
+     * @return The account number of the AWS account that manages the repository.
+     * 
+     */
     public Optional<Output<String>> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
@@ -37,6 +41,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the repository.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -48,6 +56,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the repository.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The domain that contains the created repository.
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -70,6 +86,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainOwner")
     private @Nullable Output<String> domainOwner;
 
+    /**
+     * @return The account number of the AWS account that owns the domain.
+     * 
+     */
     public Optional<Output<String>> domainOwner() {
         return Optional.ofNullable(this.domainOwner);
     }
@@ -81,6 +101,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalConnections")
     private @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
 
+    /**
+     * @return An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+     * 
+     */
     public Optional<Output<RepositoryExternalConnectionsGetArgs>> externalConnections() {
         return Optional.ofNullable(this.externalConnections);
     }
@@ -92,6 +116,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository")
     private @Nullable Output<String> repository;
 
+    /**
+     * @return The name of the repository to create.
+     * 
+     */
     public Optional<Output<String>> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -103,6 +131,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,6 +146,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -125,6 +161,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="upstreams")
     private @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
 
+    /**
+     * @return A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
+     * 
+     */
     public Optional<Output<List<RepositoryUpstreamGetArgs>>> upstreams() {
         return Optional.ofNullable(this.upstreams);
     }
@@ -162,96 +202,222 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorAccount The account number of the AWS account that manages the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(@Nullable Output<String> administratorAccount) {
             $.administratorAccount = administratorAccount;
             return this;
         }
 
+        /**
+         * @param administratorAccount The account number of the AWS account that manages the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(String administratorAccount) {
             return administratorAccount(Output.of(administratorAccount));
         }
 
+        /**
+         * @param arn The ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param description The description of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param domain The domain that contains the created repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain that contains the created repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
             $.domainOwner = domainOwner;
             return this;
         }
 
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainOwner(String domainOwner) {
             return domainOwner(Output.of(domainOwner));
         }
 
+        /**
+         * @param externalConnections An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections) {
             $.externalConnections = externalConnections;
             return this;
         }
 
+        /**
+         * @param externalConnections An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalConnections(RepositoryExternalConnectionsGetArgs externalConnections) {
             return externalConnections(Output.of(externalConnections));
         }
 
+        /**
+         * @param repository The name of the repository to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable Output<String> repository) {
             $.repository = repository;
             return this;
         }
 
+        /**
+         * @param repository The name of the repository to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(String repository) {
             return repository(Output.of(repository));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param upstreams A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreams(@Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams) {
             $.upstreams = upstreams;
             return this;
         }
 
+        /**
+         * @param upstreams A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreams(List<RepositoryUpstreamGetArgs> upstreams) {
             return upstreams(Output.of(upstreams));
         }
 
+        /**
+         * @param upstreams A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
+         * 
+         * @return builder
+         * 
+         */
         public Builder upstreams(RepositoryUpstreamGetArgs... upstreams) {
             return upstreams(List.of(upstreams));
         }

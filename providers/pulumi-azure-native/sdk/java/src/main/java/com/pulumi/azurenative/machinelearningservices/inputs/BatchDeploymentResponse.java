@@ -37,6 +37,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="codeConfiguration")
     private @Nullable CodeConfigurationResponse codeConfiguration;
 
+    /**
+     * @return Code configuration for the endpoint deployment.
+     * 
+     */
     public Optional<CodeConfigurationResponse> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
@@ -48,6 +52,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="compute")
     private @Nullable ComputeConfigurationResponse compute;
 
+    /**
+     * @return Configuration for compute binding.
+     * 
+     */
     public Optional<ComputeConfigurationResponse> compute() {
         return Optional.ofNullable(this.compute);
     }
@@ -59,6 +67,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the endpoint deployment.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -70,6 +82,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="environmentId")
     private @Nullable String environmentId;
 
+    /**
+     * @return ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -81,6 +97,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Environment variables configuration for the deployment.
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -96,6 +116,14 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="errorThreshold")
     private @Nullable Integer errorThreshold;
 
+    /**
+     * @return Error threshold, if the error count for the entire input goes above this value,
+     * the batch inference will be aborted. Range is [-1, int.MaxValue].
+     * For FileDataset, this value is the count of file failures.
+     * For TabularDataset, this value is the count of record failures.
+     * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+     * 
+     */
     public Optional<Integer> errorThreshold() {
         return Optional.ofNullable(this.errorThreshold);
     }
@@ -107,6 +135,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="loggingLevel")
     private @Nullable String loggingLevel;
 
+    /**
+     * @return Logging level for batch inference operation.
+     * 
+     */
     public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
@@ -120,6 +152,12 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="miniBatchSize")
     private @Nullable Double miniBatchSize;
 
+    /**
+     * @return Size of the mini-batch passed to each batch invocation.
+     * For FileDataset, this is the number of files per mini-batch.
+     * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+     * 
+     */
     public Optional<Double> miniBatchSize() {
         return Optional.ofNullable(this.miniBatchSize);
     }
@@ -131,6 +169,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="model")
     private @Nullable Object model;
 
+    /**
+     * @return Reference to the model asset for the endpoint deployment.
+     * 
+     */
     public Optional<Object> model() {
         return Optional.ofNullable(this.model);
     }
@@ -142,6 +184,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="outputConfiguration")
     private @Nullable BatchOutputConfigurationResponse outputConfiguration;
 
+    /**
+     * @return Output configuration for the batch inference operation.
+     * 
+     */
     public Optional<BatchOutputConfigurationResponse> outputConfiguration() {
         return Optional.ofNullable(this.outputConfiguration);
     }
@@ -153,6 +199,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="partitionKeys")
     private @Nullable List<String> partitionKeys;
 
+    /**
+     * @return Partition keys list used for Named partitioning.
+     * 
+     */
     public Optional<List<String>> partitionKeys() {
         return Optional.ofNullable(this.partitionKeys);
     }
@@ -164,6 +214,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -175,6 +229,10 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
     @Import(name="retrySettings")
     private @Nullable BatchRetrySettingsResponse retrySettings;
 
+    /**
+     * @return Retry Settings for the batch inference operation.
+     * 
+     */
     public Optional<BatchRetrySettingsResponse> retrySettings() {
         return Optional.ofNullable(this.retrySettings);
     }
@@ -215,70 +273,160 @@ public final class BatchDeploymentResponse extends com.pulumi.resources.InvokeAr
             $ = new BatchDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeConfiguration Code configuration for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             $.codeConfiguration = codeConfiguration;
             return this;
         }
 
+        /**
+         * @param compute Configuration for compute binding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(@Nullable ComputeConfigurationResponse compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param errorThreshold Error threshold, if the error count for the entire input goes above this value,
+         * the batch inference will be aborted. Range is [-1, int.MaxValue].
+         * For FileDataset, this value is the count of file failures.
+         * For TabularDataset, this value is the count of record failures.
+         * If set to -1 (the lower bound), all failures during batch inference will be ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorThreshold(@Nullable Integer errorThreshold) {
             $.errorThreshold = errorThreshold;
             return this;
         }
 
+        /**
+         * @param loggingLevel Logging level for batch inference operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(@Nullable String loggingLevel) {
             $.loggingLevel = loggingLevel;
             return this;
         }
 
+        /**
+         * @param miniBatchSize Size of the mini-batch passed to each batch invocation.
+         * For FileDataset, this is the number of files per mini-batch.
+         * For TabularDataset, this is the size of the records in bytes, per mini-batch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder miniBatchSize(@Nullable Double miniBatchSize) {
             $.miniBatchSize = miniBatchSize;
             return this;
         }
 
+        /**
+         * @param model Reference to the model asset for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Object model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param outputConfiguration Output configuration for the batch inference operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputConfiguration(@Nullable BatchOutputConfigurationResponse outputConfiguration) {
             $.outputConfiguration = outputConfiguration;
             return this;
         }
 
+        /**
+         * @param partitionKeys Partition keys list used for Named partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(@Nullable List<String> partitionKeys) {
             $.partitionKeys = partitionKeys;
             return this;
         }
 
+        /**
+         * @param partitionKeys Partition keys list used for Named partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionKeys(String... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param retrySettings Retry Settings for the batch inference operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retrySettings(@Nullable BatchRetrySettingsResponse retrySettings) {
             $.retrySettings = retrySettings;
             return this;

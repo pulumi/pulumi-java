@@ -25,6 +25,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     @Import(name="isCloudFunction", required=true)
     private Boolean isCloudFunction;
 
+    /**
+     * @return Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
+     * 
+     */
     public Boolean isCloudFunction() {
         return this.isCloudFunction;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password for HTTP Basic authentication.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     @Import(name="requestHeaders", required=true)
     private Map<String,String> requestHeaders;
 
+    /**
+     * @return The HTTP request headers to send together with fulfillment requests.
+     * 
+     */
     public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The fulfillment URI for receiving POST requests. It must use https protocol.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return The user name for HTTP Basic authentication.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -101,26 +121,56 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
             $ = new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCloudFunction Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCloudFunction(Boolean isCloudFunction) {
             $.isCloudFunction = isCloudFunction;
             return this;
         }
 
+        /**
+         * @param password The password for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param requestHeaders The HTTP request headers to send together with fulfillment requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestHeaders(Map<String,String> requestHeaders) {
             $.requestHeaders = requestHeaders;
             return this;
         }
 
+        /**
+         * @param uri The fulfillment URI for receiving POST requests. It must use https protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param username The user name for HTTP Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

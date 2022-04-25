@@ -36,6 +36,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime", required=true)
     private Output<String> expireTime;
 
+    /**
+     * @return The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
+     * 
+     */
     public Output<String> expireTime() {
         return this.expireTime;
     }
@@ -54,6 +58,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +80,10 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceTable", required=true)
     private Output<String> sourceTable;
 
+    /**
+     * @return Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
+     * 
+     */
     public Output<String> sourceTable() {
         return this.sourceTable;
     }
@@ -124,11 +136,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param expireTime The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param expireTime The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
@@ -142,11 +166,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -160,11 +196,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param sourceTable Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(Output<String> sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param sourceTable Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(String sourceTable) {
             return sourceTable(Output.of(sourceTable));
         }

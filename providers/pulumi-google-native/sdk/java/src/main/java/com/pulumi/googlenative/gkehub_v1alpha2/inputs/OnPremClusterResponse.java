@@ -24,6 +24,10 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="adminCluster", required=true)
     private Boolean adminCluster;
 
+    /**
+     * @return Immutable. Whether the cluster is an admin cluster.
+     * 
+     */
     public Boolean adminCluster() {
         return this.adminCluster;
     }
@@ -35,6 +39,10 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterMissing", required=true)
     private Boolean clusterMissing;
 
+    /**
+     * @return If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
+     * 
+     */
     public Boolean clusterMissing() {
         return this.clusterMissing;
     }
@@ -46,6 +54,10 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceLink", required=true)
     private String resourceLink;
 
+    /**
+     * @return Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+     * 
+     */
     public String resourceLink() {
         return this.resourceLink;
     }
@@ -76,16 +88,34 @@ public final class OnPremClusterResponse extends com.pulumi.resources.InvokeArgs
             $ = new OnPremClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminCluster Immutable. Whether the cluster is an admin cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminCluster(Boolean adminCluster) {
             $.adminCluster = adminCluster;
             return this;
         }
 
+        /**
+         * @param clusterMissing If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterMissing(Boolean clusterMissing) {
             $.clusterMissing = clusterMissing;
             return this;
         }
 
+        /**
+         * @param resourceLink Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLink(String resourceLink) {
             $.resourceLink = resourceLink;
             return this;

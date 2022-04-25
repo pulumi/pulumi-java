@@ -19,6 +19,10 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="internetGatewayId", required=true)
     private String internetGatewayId;
 
+    /**
+     * @return ID of internet gateway.
+     * 
+     */
     public String internetGatewayId() {
         return this.internetGatewayId;
     }
@@ -47,6 +51,12 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param internetGatewayId ID of internet gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internetGatewayId(String internetGatewayId) {
             $.internetGatewayId = internetGatewayId;
             return this;

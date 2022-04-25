@@ -19,6 +19,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The storage account credential name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetStorageAccountCredentialArgs extends com.pulumi.resources.
             $ = new GetStorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param name The storage account credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

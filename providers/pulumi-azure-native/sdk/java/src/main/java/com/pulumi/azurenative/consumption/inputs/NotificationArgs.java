@@ -34,6 +34,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactEmails", required=true)
     private Output<List<String>> contactEmails;
 
+    /**
+     * @return Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+     * 
+     */
     public Output<List<String>> contactEmails() {
         return this.contactEmails;
     }
@@ -45,6 +49,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactGroups")
     private @Nullable Output<List<String>> contactGroups;
 
+    /**
+     * @return Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+     * 
+     */
     public Optional<Output<List<String>>> contactGroups() {
         return Optional.ofNullable(this.contactGroups);
     }
@@ -56,6 +64,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactRoles")
     private @Nullable Output<List<String>> contactRoles;
 
+    /**
+     * @return Contact roles to send the budget notification to when the threshold is exceeded.
+     * 
+     */
     public Optional<Output<List<String>>> contactRoles() {
         return Optional.ofNullable(this.contactRoles);
     }
@@ -67,6 +79,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return The notification is enabled or not.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -78,6 +94,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locale")
     private @Nullable Output<Either<String,CultureCode>> locale;
 
+    /**
+     * @return Language in which the recipient will receive the notification
+     * 
+     */
     public Optional<Output<Either<String,CultureCode>>> locale() {
         return Optional.ofNullable(this.locale);
     }
@@ -89,6 +109,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operator", required=true)
     private Output<Either<String,OperatorType>> operator;
 
+    /**
+     * @return The comparison operator.
+     * 
+     */
     public Output<Either<String,OperatorType>> operator() {
         return this.operator;
     }
@@ -100,6 +124,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="threshold", required=true)
     private Output<Double> threshold;
 
+    /**
+     * @return Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+     * 
+     */
     public Output<Double> threshold() {
         return this.threshold;
     }
@@ -111,6 +139,10 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresholdType")
     private @Nullable Output<Either<String,ThresholdType>> thresholdType;
 
+    /**
+     * @return The type of threshold
+     * 
+     */
     public Optional<Output<Either<String,ThresholdType>>> thresholdType() {
         return Optional.ofNullable(this.thresholdType);
     }
@@ -146,110 +178,260 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NotificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactEmails Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactEmails(Output<List<String>> contactEmails) {
             $.contactEmails = contactEmails;
             return this;
         }
 
+        /**
+         * @param contactEmails Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactEmails(List<String> contactEmails) {
             return contactEmails(Output.of(contactEmails));
         }
 
+        /**
+         * @param contactEmails Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactEmails(String... contactEmails) {
             return contactEmails(List.of(contactEmails));
         }
 
+        /**
+         * @param contactGroups Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactGroups(@Nullable Output<List<String>> contactGroups) {
             $.contactGroups = contactGroups;
             return this;
         }
 
+        /**
+         * @param contactGroups Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactGroups(List<String> contactGroups) {
             return contactGroups(Output.of(contactGroups));
         }
 
+        /**
+         * @param contactGroups Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactGroups(String... contactGroups) {
             return contactGroups(List.of(contactGroups));
         }
 
+        /**
+         * @param contactRoles Contact roles to send the budget notification to when the threshold is exceeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRoles(@Nullable Output<List<String>> contactRoles) {
             $.contactRoles = contactRoles;
             return this;
         }
 
+        /**
+         * @param contactRoles Contact roles to send the budget notification to when the threshold is exceeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRoles(List<String> contactRoles) {
             return contactRoles(Output.of(contactRoles));
         }
 
+        /**
+         * @param contactRoles Contact roles to send the budget notification to when the threshold is exceeded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactRoles(String... contactRoles) {
             return contactRoles(List.of(contactRoles));
         }
 
+        /**
+         * @param enabled The notification is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The notification is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param locale Language in which the recipient will receive the notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(@Nullable Output<Either<String,CultureCode>> locale) {
             $.locale = locale;
             return this;
         }
 
+        /**
+         * @param locale Language in which the recipient will receive the notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(Either<String,CultureCode> locale) {
             return locale(Output.of(locale));
         }
 
+        /**
+         * @param locale Language in which the recipient will receive the notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(String locale) {
             return locale(Either.ofLeft(locale));
         }
 
+        /**
+         * @param locale Language in which the recipient will receive the notification
+         * 
+         * @return builder
+         * 
+         */
         public Builder locale(CultureCode locale) {
             return locale(Either.ofRight(locale));
         }
 
+        /**
+         * @param operator The comparison operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,OperatorType>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator The comparison operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,OperatorType> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator The comparison operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator The comparison operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(OperatorType operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param threshold Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Output<Double> threshold) {
             $.threshold = threshold;
             return this;
         }
 
+        /**
+         * @param threshold Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threshold(Double threshold) {
             return threshold(Output.of(threshold));
         }
 
+        /**
+         * @param thresholdType The type of threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdType(@Nullable Output<Either<String,ThresholdType>> thresholdType) {
             $.thresholdType = thresholdType;
             return this;
         }
 
+        /**
+         * @param thresholdType The type of threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdType(Either<String,ThresholdType> thresholdType) {
             return thresholdType(Output.of(thresholdType));
         }
 
+        /**
+         * @param thresholdType The type of threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdType(String thresholdType) {
             return thresholdType(Either.ofLeft(thresholdType));
         }
 
+        /**
+         * @param thresholdType The type of threshold
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdType(ThresholdType thresholdType) {
             return thresholdType(Either.ofRight(thresholdType));
         }

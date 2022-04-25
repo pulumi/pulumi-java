@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 public final class GetBasePathMappingResult {
     private final @Nullable String id;
     /**
-     * The ID of the API.
+     * @return The ID of the API.
      * 
      */
     private final @Nullable String restApiId;
     /**
-     * The name of the API&#39;s stage.
+     * @return The name of the API&#39;s stage.
      * 
      */
     private final @Nullable String stage;
@@ -37,16 +37,16 @@ public final class GetBasePathMappingResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ID of the API.
+     * @return The ID of the API.
      * 
-    */
+     */
     public Optional<String> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
     /**
-     * The name of the API&#39;s stage.
+     * @return The name of the API&#39;s stage.
      * 
-    */
+     */
     public Optional<String> stage() {
         return Optional.ofNullable(this.stage);
     }

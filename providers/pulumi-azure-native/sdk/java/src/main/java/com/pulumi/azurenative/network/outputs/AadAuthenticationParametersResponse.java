@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AadAuthenticationParametersResponse {
     /**
-     * AAD Vpn authentication parameter AAD audience.
+     * @return AAD Vpn authentication parameter AAD audience.
      * 
      */
     private final @Nullable String aadAudience;
     /**
-     * AAD Vpn authentication parameter AAD issuer.
+     * @return AAD Vpn authentication parameter AAD issuer.
      * 
      */
     private final @Nullable String aadIssuer;
     /**
-     * AAD Vpn authentication parameter AAD tenant.
+     * @return AAD Vpn authentication parameter AAD tenant.
      * 
      */
     private final @Nullable String aadTenant;
@@ -38,23 +38,23 @@ public final class AadAuthenticationParametersResponse {
     }
 
     /**
-     * AAD Vpn authentication parameter AAD audience.
+     * @return AAD Vpn authentication parameter AAD audience.
      * 
-    */
+     */
     public Optional<String> aadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
     /**
-     * AAD Vpn authentication parameter AAD issuer.
+     * @return AAD Vpn authentication parameter AAD issuer.
      * 
-    */
+     */
     public Optional<String> aadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
     /**
-     * AAD Vpn authentication parameter AAD tenant.
+     * @return AAD Vpn authentication parameter AAD tenant.
      * 
-    */
+     */
     public Optional<String> aadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }

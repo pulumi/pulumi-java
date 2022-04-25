@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class KeyDescriptionResponse {
     /**
-     * The name of the key
+     * @return The name of the key
      * 
      */
     private final String name;
     /**
-     * The rank of the key
+     * @return The rank of the key
      * 
      */
     private final String rank;
     /**
-     * The value of the key
+     * @return The value of the key
      * 
      */
     private final String value;
@@ -36,23 +36,23 @@ public final class KeyDescriptionResponse {
     }
 
     /**
-     * The name of the key
+     * @return The name of the key
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The rank of the key
+     * @return The rank of the key
      * 
-    */
+     */
     public String rank() {
         return this.rank;
     }
     /**
-     * The value of the key
+     * @return The value of the key
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

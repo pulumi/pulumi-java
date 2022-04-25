@@ -27,6 +27,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<List<HealthAlertActionArgs>> actions;
 
+    /**
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * 
+     */
     public Optional<Output<List<HealthAlertActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="criteria", required=true)
     private Output<HealthAlertCriteriaArgs> criteria;
 
+    /**
+     * @return defines the specific alert criteria information.
+     * 
+     */
     public Output<HealthAlertCriteriaArgs> criteria() {
         return this.criteria;
     }
@@ -49,6 +57,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return the description of the health alert that will be included in the alert email.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -60,6 +72,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return the flag that indicates whether the health alert is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -71,6 +87,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -82,6 +102,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -104,6 +132,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
     private @Nullable Output<List<String>> scopes;
 
+    /**
+     * @return the list of resource id&#39;s that this health alert is scoped to.
+     * 
+     */
     public Optional<Output<List<String>>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -115,6 +147,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -151,91 +187,211 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HealthAlertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<HealthAlertActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<HealthAlertActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(HealthAlertActionArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param criteria defines the specific alert criteria information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(Output<HealthAlertCriteriaArgs> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria defines the specific alert criteria information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(HealthAlertCriteriaArgs criteria) {
             return criteria(Output.of(criteria));
         }
 
+        /**
+         * @param description the description of the health alert that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description the description of the health alert that will be included in the alert email.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enabled the flag that indicates whether the health alert is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled the flag that indicates whether the health alert is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this health alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<List<String>> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this health alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(List<String> scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param scopes the list of resource id&#39;s that this health alert is scoped to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

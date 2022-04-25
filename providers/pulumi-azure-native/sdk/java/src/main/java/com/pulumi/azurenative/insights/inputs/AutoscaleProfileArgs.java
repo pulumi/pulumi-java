@@ -31,6 +31,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="capacity", required=true)
     private Output<ScaleCapacityArgs> capacity;
 
+    /**
+     * @return the number of instances that can be used during this profile.
+     * 
+     */
     public Output<ScaleCapacityArgs> capacity() {
         return this.capacity;
     }
@@ -42,6 +46,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="fixedDate")
     private @Nullable Output<TimeWindowArgs> fixedDate;
 
+    /**
+     * @return the specific date-time for the profile. This element is not used if the Recurrence element is used.
+     * 
+     */
     public Optional<Output<TimeWindowArgs>> fixedDate() {
         return Optional.ofNullable(this.fixedDate);
     }
@@ -53,6 +61,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return the name of the profile.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -64,6 +76,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="recurrence")
     private @Nullable Output<RecurrenceArgs> recurrence;
 
+    /**
+     * @return the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+     * 
+     */
     public Optional<Output<RecurrenceArgs>> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -75,6 +91,10 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rules", required=true)
     private Output<List<ScaleRuleArgs>> rules;
 
+    /**
+     * @return the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+     * 
+     */
     public Output<List<ScaleRuleArgs>> rules() {
         return this.rules;
     }
@@ -107,51 +127,117 @@ public final class AutoscaleProfileArgs extends com.pulumi.resources.ResourceArg
             $ = new AutoscaleProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity the number of instances that can be used during this profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Output<ScaleCapacityArgs> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity the number of instances that can be used during this profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(ScaleCapacityArgs capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param fixedDate the specific date-time for the profile. This element is not used if the Recurrence element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDate(@Nullable Output<TimeWindowArgs> fixedDate) {
             $.fixedDate = fixedDate;
             return this;
         }
 
+        /**
+         * @param fixedDate the specific date-time for the profile. This element is not used if the Recurrence element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedDate(TimeWindowArgs fixedDate) {
             return fixedDate(Output.of(fixedDate));
         }
 
+        /**
+         * @param name the name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name the name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recurrence the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable Output<RecurrenceArgs> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(RecurrenceArgs recurrence) {
             return recurrence(Output.of(recurrence));
         }
 
+        /**
+         * @param rules the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<ScaleRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ScaleRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ScaleRuleArgs... rules) {
             return rules(List.of(rules));
         }

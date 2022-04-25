@@ -24,6 +24,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -35,6 +39,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID where service accounts are created.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -49,6 +57,13 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
     @Import(name="restorePolicy")
     private @Nullable Output<String> restorePolicy;
 
+    /**
+     * @return The action to be performed in the default service accounts on the resource destroy.
+     * Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
+     * If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
+     * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
+     * 
+     */
     public Optional<Output<String>> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
@@ -60,6 +75,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
     @Import(name="serviceAccounts")
     private @Nullable Output<Map<String,Object>> serviceAccounts;
 
+    /**
+     * @return The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> serviceAccounts() {
         return Optional.ofNullable(this.serviceAccounts);
     }
@@ -91,38 +110,92 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
             $ = new DefaultServiceAccountsState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param project The project ID where service accounts are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID where service accounts are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param restorePolicy The action to be performed in the default service accounts on the resource destroy.
+         * Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
+         * If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
+         * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
             $.restorePolicy = restorePolicy;
             return this;
         }
 
+        /**
+         * @param restorePolicy The action to be performed in the default service accounts on the resource destroy.
+         * Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
+         * If set to REVERT it attempts to restore all default SAs but the DEPRIVILEGE action.
+         * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(String restorePolicy) {
             return restorePolicy(Output.of(restorePolicy));
         }
 
+        /**
+         * @param serviceAccounts The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(@Nullable Output<Map<String,Object>> serviceAccounts) {
             $.serviceAccounts = serviceAccounts;
             return this;
         }
 
+        /**
+         * @param serviceAccounts The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccounts(Map<String,Object> serviceAccounts) {
             return serviceAccounts(Output.of(serviceAccounts));
         }

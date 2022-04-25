@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleActionCountCustomRequestHandlingInsertHeader {
     /**
-     * The label string.
+     * @return The label string.
      * 
      */
     private final String name;
     /**
-     * The value of the custom header.
+     * @return The value of the custom header.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class WebAclRuleActionCountCustomRequestHandlingInsertHeader {
     }
 
     /**
-     * The label string.
+     * @return The label string.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the custom header.
+     * @return The value of the custom header.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

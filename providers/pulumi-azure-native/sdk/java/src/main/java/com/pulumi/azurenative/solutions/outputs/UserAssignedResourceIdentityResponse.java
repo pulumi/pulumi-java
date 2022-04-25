@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UserAssignedResourceIdentityResponse {
     /**
-     * The principal id of user assigned identity.
+     * @return The principal id of user assigned identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant id of user assigned identity.
+     * @return The tenant id of user assigned identity.
      * 
      */
     private final String tenantId;
@@ -29,16 +29,16 @@ public final class UserAssignedResourceIdentityResponse {
     }
 
     /**
-     * The principal id of user assigned identity.
+     * @return The principal id of user assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of user assigned identity.
+     * @return The tenant id of user assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

@@ -23,6 +23,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="guestConfigurationAssignmentName")
     private @Nullable Output<String> guestConfigurationAssignmentName;
 
+    /**
+     * @return Name of the guest configuration assignment.
+     * 
+     */
     public Optional<Output<String>> guestConfigurationAssignmentName() {
         return Optional.ofNullable(this.guestConfigurationAssignmentName);
     }
@@ -34,6 +38,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Region where the VM is located.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -45,6 +53,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="machineName", required=true)
     private Output<String> machineName;
 
+    /**
+     * @return The name of the ARC machine.
+     * 
+     */
     public Output<String> machineName() {
         return this.machineName;
     }
@@ -56,6 +68,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the guest configuration assignment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +83,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="properties")
     private @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the Guest configuration assignment.
+     * 
+     */
     public Optional<Output<GuestConfigurationAssignmentPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -78,6 +98,10 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,56 +135,128 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
             $ = new GuestConfigurationHCRPAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param guestConfigurationAssignmentName Name of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfigurationAssignmentName(@Nullable Output<String> guestConfigurationAssignmentName) {
             $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
 
+        /**
+         * @param guestConfigurationAssignmentName Name of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
             return guestConfigurationAssignmentName(Output.of(guestConfigurationAssignmentName));
         }
 
+        /**
+         * @param location Region where the VM is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Region where the VM is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param machineName The name of the ARC machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(Output<String> machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param machineName The name of the ARC machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             return machineName(Output.of(machineName));
         }
 
+        /**
+         * @param name Name of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Properties of the Guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the Guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(GuestConfigurationAssignmentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

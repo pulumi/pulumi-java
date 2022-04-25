@@ -27,6 +27,10 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="azureQueries")
     private @Nullable List<AzureQueryPropertiesResponse> azureQueries;
 
+    /**
+     * @return List of Azure queries in the software update configuration.
+     * 
+     */
     public Optional<List<AzureQueryPropertiesResponse>> azureQueries() {
         return Optional.ofNullable(this.azureQueries);
     }
@@ -38,6 +42,10 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="nonAzureQueries")
     private @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
+    /**
+     * @return List of non Azure queries in the software update configuration.
+     * 
+     */
     public Optional<List<NonAzureQueryPropertiesResponse>> nonAzureQueries() {
         return Optional.ofNullable(this.nonAzureQueries);
     }
@@ -67,20 +75,44 @@ public final class TargetPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new TargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureQueries List of Azure queries in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureQueries(@Nullable List<AzureQueryPropertiesResponse> azureQueries) {
             $.azureQueries = azureQueries;
             return this;
         }
 
+        /**
+         * @param azureQueries List of Azure queries in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureQueries(AzureQueryPropertiesResponse... azureQueries) {
             return azureQueries(List.of(azureQueries));
         }
 
+        /**
+         * @param nonAzureQueries List of non Azure queries in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
             $.nonAzureQueries = nonAzureQueries;
             return this;
         }
 
+        /**
+         * @param nonAzureQueries List of non Azure queries in the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonAzureQueries(NonAzureQueryPropertiesResponse... nonAzureQueries) {
             return nonAzureQueries(List.of(nonAzureQueries));
         }

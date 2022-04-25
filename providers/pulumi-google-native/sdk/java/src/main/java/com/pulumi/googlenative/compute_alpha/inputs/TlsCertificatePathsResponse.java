@@ -23,6 +23,10 @@ public final class TlsCertificatePathsResponse extends com.pulumi.resources.Invo
     @Import(name="certificatePath", required=true)
     private String certificatePath;
 
+    /**
+     * @return The path to the file holding the client or server TLS certificate to use.
+     * 
+     */
     public String certificatePath() {
         return this.certificatePath;
     }
@@ -34,6 +38,10 @@ public final class TlsCertificatePathsResponse extends com.pulumi.resources.Invo
     @Import(name="privateKeyPath", required=true)
     private String privateKeyPath;
 
+    /**
+     * @return The path to the file holding the client or server private key.
+     * 
+     */
     public String privateKeyPath() {
         return this.privateKeyPath;
     }
@@ -63,11 +71,23 @@ public final class TlsCertificatePathsResponse extends com.pulumi.resources.Invo
             $ = new TlsCertificatePathsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificatePath The path to the file holding the client or server TLS certificate to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificatePath(String certificatePath) {
             $.certificatePath = certificatePath;
             return this;
         }
 
+        /**
+         * @param privateKeyPath The path to the file holding the client or server private key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyPath(String privateKeyPath) {
             $.privateKeyPath = privateKeyPath;
             return this;

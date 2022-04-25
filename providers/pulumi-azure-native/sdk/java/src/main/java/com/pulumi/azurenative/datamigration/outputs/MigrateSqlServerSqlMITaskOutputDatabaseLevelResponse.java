@@ -13,53 +13,53 @@ import java.util.Objects;
 @CustomType
 public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     /**
-     * Name of the database
+     * @return Name of the database
      * 
      */
     private final String databaseName;
     /**
-     * Migration end time
+     * @return Migration end time
      * 
      */
     private final String endedOn;
     /**
-     * Migration exceptions and warnings
+     * @return Migration exceptions and warnings
      * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Migration progress message
+     * @return Migration progress message
      * 
      */
     private final String message;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Size of the database in megabytes
+     * @return Size of the database in megabytes
      * 
      */
     private final Double sizeMB;
     /**
-     * Current stage of migration
+     * @return Current stage of migration
      * 
      */
     private final String stage;
     /**
-     * Migration start time
+     * @return Migration start time
      * 
      */
     private final String startedOn;
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
      */
     private final String state;
@@ -89,73 +89,73 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     }
 
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Migration exceptions and warnings
+     * @return Migration exceptions and warnings
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Migration progress message
+     * @return Migration progress message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Size of the database in megabytes
+     * @return Size of the database in megabytes
      * 
-    */
+     */
     public Double sizeMB() {
         return this.sizeMB;
     }
     /**
-     * Current stage of migration
+     * @return Current stage of migration
      * 
-    */
+     */
     public String stage() {
         return this.stage;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

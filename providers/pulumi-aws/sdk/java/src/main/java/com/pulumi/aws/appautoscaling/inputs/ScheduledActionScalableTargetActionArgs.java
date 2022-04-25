@@ -22,6 +22,10 @@ public final class ScheduledActionScalableTargetActionArgs extends com.pulumi.re
     @Import(name="maxCapacity")
     private @Nullable Output<Integer> maxCapacity;
 
+    /**
+     * @return The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
+     * 
+     */
     public Optional<Output<Integer>> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
@@ -33,6 +37,10 @@ public final class ScheduledActionScalableTargetActionArgs extends com.pulumi.re
     @Import(name="minCapacity")
     private @Nullable Output<Integer> minCapacity;
 
+    /**
+     * @return The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
+     * 
+     */
     public Optional<Output<Integer>> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }
@@ -62,20 +70,44 @@ public final class ScheduledActionScalableTargetActionArgs extends com.pulumi.re
             $ = new ScheduledActionScalableTargetActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCapacity The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
             $.maxCapacity = maxCapacity;
             return this;
         }
 
+        /**
+         * @param maxCapacity The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(Integer maxCapacity) {
             return maxCapacity(Output.of(maxCapacity));
         }
 
+        /**
+         * @param minCapacity The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
             $.minCapacity = minCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Integer minCapacity) {
             return minCapacity(Output.of(minCapacity));
         }

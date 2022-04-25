@@ -23,6 +23,10 @@ public final class StoredInfoTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="config", required=true)
     private Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
+    /**
+     * @return Configuration of the storedInfoType to create.
+     * 
+     */
     public Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config() {
         return this.config;
     }
@@ -48,6 +52,10 @@ public final class StoredInfoTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storedInfoTypeId")
     private @Nullable Output<String> storedInfoTypeId;
 
+    /**
+     * @return The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     * 
+     */
     public Optional<Output<String>> storedInfoTypeId() {
         return Optional.ofNullable(this.storedInfoTypeId);
     }
@@ -79,11 +87,23 @@ public final class StoredInfoTypeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StoredInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config Configuration of the storedInfoType to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config Configuration of the storedInfoType to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(GooglePrivacyDlpV2StoredInfoTypeConfigArgs config) {
             return config(Output.of(config));
         }
@@ -106,11 +126,23 @@ public final class StoredInfoTypeArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param storedInfoTypeId The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedInfoTypeId(@Nullable Output<String> storedInfoTypeId) {
             $.storedInfoTypeId = storedInfoTypeId;
             return this;
         }
 
+        /**
+         * @param storedInfoTypeId The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedInfoTypeId(String storedInfoTypeId) {
             return storedInfoTypeId(Output.of(storedInfoTypeId));
         }

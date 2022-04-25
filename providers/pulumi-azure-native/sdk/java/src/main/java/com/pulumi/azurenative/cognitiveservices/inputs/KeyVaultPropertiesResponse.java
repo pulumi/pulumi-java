@@ -25,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return Name of the Key from KeyVault
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -36,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultUri")
     private @Nullable String keyVaultUri;
 
+    /**
+     * @return Uri of KeyVault
+     * 
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -47,6 +55,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return Version of the Key from KeyVault
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -77,16 +89,34 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Name of the Key from KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVaultUri Uri of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVersion Version of the Key from KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;

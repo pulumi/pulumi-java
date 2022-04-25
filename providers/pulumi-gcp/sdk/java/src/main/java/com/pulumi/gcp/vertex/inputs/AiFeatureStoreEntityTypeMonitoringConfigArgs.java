@@ -23,6 +23,11 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends com.pulu
     @Import(name="snapshotAnalysis")
     private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis;
 
+    /**
+     * @return Configuration of how features in Featurestore are monitored.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs>> snapshotAnalysis() {
         return Optional.ofNullable(this.snapshotAnalysis);
     }
@@ -51,11 +56,25 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends com.pulu
             $ = new AiFeatureStoreEntityTypeMonitoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param snapshotAnalysis Configuration of how features in Featurestore are monitored.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotAnalysis(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis) {
             $.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
 
+        /**
+         * @param snapshotAnalysis Configuration of how features in Featurestore are monitored.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotAnalysis(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs snapshotAnalysis) {
             return snapshotAnalysis(Output.of(snapshotAnalysis));
         }

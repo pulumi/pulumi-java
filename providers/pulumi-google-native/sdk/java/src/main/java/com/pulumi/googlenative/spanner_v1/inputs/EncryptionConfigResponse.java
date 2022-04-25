@@ -23,6 +23,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="kmsKeyName", required=true)
     private String kmsKeyName;
 
+    /**
+     * @return The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+     * 
+     */
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
@@ -51,6 +55,12 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
             $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyName The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;

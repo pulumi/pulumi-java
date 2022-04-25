@@ -12,33 +12,33 @@ import java.util.Objects;
 @CustomType
 public final class AllowlistCustomAlertRuleResponse {
     /**
-     * The values to allow. The format of the values depends on the rule type.
+     * @return The values to allow. The format of the values depends on the rule type.
      * 
      */
     private final List<String> allowlistValues;
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
      */
     private final String description;
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
      */
     private final String displayName;
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
      */
     private final Boolean isEnabled;
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;AllowlistCustomAlertRule&#39;.
      * 
      */
     private final String ruleType;
     /**
-     * The value type of the items in the list.
+     * @return The value type of the items in the list.
      * 
      */
     private final String valueType;
@@ -60,45 +60,45 @@ public final class AllowlistCustomAlertRuleResponse {
     }
 
     /**
-     * The values to allow. The format of the values depends on the rule type.
+     * @return The values to allow. The format of the values depends on the rule type.
      * 
-    */
+     */
     public List<String> allowlistValues() {
         return this.allowlistValues;
     }
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;AllowlistCustomAlertRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }
     /**
-     * The value type of the items in the list.
+     * @return The value type of the items in the list.
      * 
-    */
+     */
     public String valueType() {
         return this.valueType;
     }

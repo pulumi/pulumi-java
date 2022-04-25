@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CatalogTableStorageDescriptorSchemaReference {
     /**
-     * Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
+     * @return Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
      * 
      */
     private final @Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId;
     /**
-     * Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+     * @return Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
      * 
      */
     private final @Nullable String schemaVersionId;
     /**
-     * Version number of the schema.
+     * @return Version number of the schema.
      * 
      */
     private final Integer schemaVersionNumber;
@@ -40,23 +40,23 @@ public final class CatalogTableStorageDescriptorSchemaReference {
     }
 
     /**
-     * Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
+     * @return Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
      * 
-    */
+     */
     public Optional<CatalogTableStorageDescriptorSchemaReferenceSchemaId> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
     /**
-     * Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
+     * @return Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
      * 
-    */
+     */
     public Optional<String> schemaVersionId() {
         return Optional.ofNullable(this.schemaVersionId);
     }
     /**
-     * Version number of the schema.
+     * @return Version number of the schema.
      * 
-    */
+     */
     public Integer schemaVersionNumber() {
         return this.schemaVersionNumber;
     }

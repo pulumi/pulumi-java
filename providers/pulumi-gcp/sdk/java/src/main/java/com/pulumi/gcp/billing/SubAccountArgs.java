@@ -24,6 +24,12 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
     private @Nullable Output<String> deletionPolicy;
 
+    /**
+     * @return If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+     * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+     * Default is &#34;&#34;.
+     * 
+     */
     public Optional<Output<String>> deletionPolicy() {
         return Optional.ofNullable(this.deletionPolicy);
     }
@@ -35,6 +41,10 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the billing account.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -47,6 +57,11 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount", required=true)
     private Output<String> masterBillingAccount;
 
+    /**
+     * @return The name of the master billing account that the subaccount
+     * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
@@ -77,29 +92,71 @@ public final class SubAccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deletionPolicy If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+         * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+         * Default is &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             $.deletionPolicy = deletionPolicy;
             return this;
         }
 
+        /**
+         * @param deletionPolicy If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+         * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+         * Default is &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionPolicy(String deletionPolicy) {
             return deletionPolicy(Output.of(deletionPolicy));
         }
 
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param masterBillingAccount The name of the master billing account that the subaccount
+         * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(Output<String> masterBillingAccount) {
             $.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
+        /**
+         * @param masterBillingAccount The name of the master billing account that the subaccount
+         * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(String masterBillingAccount) {
             return masterBillingAccount(Output.of(masterBillingAccount));
         }

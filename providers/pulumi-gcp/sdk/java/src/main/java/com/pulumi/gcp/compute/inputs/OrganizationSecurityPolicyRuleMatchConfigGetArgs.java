@@ -25,6 +25,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends com.
     @Import(name="destIpRanges")
     private @Nullable Output<List<String>> destIpRanges;
 
+    /**
+     * @return Destination IP address range in CIDR format. Required for
+     * EGRESS rules.
+     * 
+     */
     public Optional<Output<List<String>>> destIpRanges() {
         return Optional.ofNullable(this.destIpRanges);
     }
@@ -37,6 +42,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends com.
     @Import(name="layer4Configs", required=true)
     private Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs;
 
+    /**
+     * @return Pairs of IP protocols and ports that the rule should match.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs() {
         return this.layer4Configs;
     }
@@ -49,6 +59,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends com.
     @Import(name="srcIpRanges")
     private @Nullable Output<List<String>> srcIpRanges;
 
+    /**
+     * @return Source IP address range in CIDR format. Required for
+     * INGRESS rules.
+     * 
+     */
     public Optional<Output<List<String>>> srcIpRanges() {
         return Optional.ofNullable(this.srcIpRanges);
     }
@@ -79,41 +94,104 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends com.
             $ = new OrganizationSecurityPolicyRuleMatchConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destIpRanges Destination IP address range in CIDR format. Required for
+         * EGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
             $.destIpRanges = destIpRanges;
             return this;
         }
 
+        /**
+         * @param destIpRanges Destination IP address range in CIDR format. Required for
+         * EGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(List<String> destIpRanges) {
             return destIpRanges(Output.of(destIpRanges));
         }
 
+        /**
+         * @param destIpRanges Destination IP address range in CIDR format. Required for
+         * EGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs) {
             $.layer4Configs = layer4Configs;
             return this;
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs> layer4Configs) {
             return layer4Configs(Output.of(layer4Configs));
         }
 
+        /**
+         * @param layer4Configs Pairs of IP protocols and ports that the rule should match.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layer4Configs(OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
 
+        /**
+         * @param srcIpRanges Source IP address range in CIDR format. Required for
+         * INGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
             $.srcIpRanges = srcIpRanges;
             return this;
         }
 
+        /**
+         * @param srcIpRanges Source IP address range in CIDR format. Required for
+         * INGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(List<String> srcIpRanges) {
             return srcIpRanges(Output.of(srcIpRanges));
         }
 
+        /**
+         * @param srcIpRanges Source IP address range in CIDR format. Required for
+         * INGRESS rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }

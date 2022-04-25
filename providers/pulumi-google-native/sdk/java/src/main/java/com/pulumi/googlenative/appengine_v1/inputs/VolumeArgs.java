@@ -27,6 +27,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name for the volume.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeGb")
     private @Nullable Output<Double> sizeGb;
 
+    /**
+     * @return Volume size in gigabytes.
+     * 
+     */
     public Optional<Output<Double>> sizeGb() {
         return Optional.ofNullable(this.sizeGb);
     }
@@ -49,6 +57,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeType")
     private @Nullable Output<String> volumeType;
 
+    /**
+     * @return Underlying volume type, e.g. &#39;tmpfs&#39;.
+     * 
+     */
     public Optional<Output<String>> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -79,29 +91,65 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Unique name for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sizeGb Volume size in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(@Nullable Output<Double> sizeGb) {
             $.sizeGb = sizeGb;
             return this;
         }
 
+        /**
+         * @param sizeGb Volume size in gigabytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGb(Double sizeGb) {
             return sizeGb(Output.of(sizeGb));
         }
 
+        /**
+         * @param volumeType Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(@Nullable Output<String> volumeType) {
             $.volumeType = volumeType;
             return this;
         }
 
+        /**
+         * @param volumeType Underlying volume type, e.g. &#39;tmpfs&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             return volumeType(Output.of(volumeType));
         }

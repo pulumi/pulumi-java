@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointResponse privateEndpoint;
 
+    /**
+     * @return Gets or sets private endpoint associated with the private endpoint connection
+     * 
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Gets or sets private link service connection state
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Gets or sets provisioning state of the private endpoint connection
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -79,16 +91,34 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
             $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Gets or sets private endpoint associated with the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Gets or sets private link service connection state
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState Gets or sets provisioning state of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

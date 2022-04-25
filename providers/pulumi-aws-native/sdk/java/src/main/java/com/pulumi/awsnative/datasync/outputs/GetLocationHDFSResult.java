@@ -18,58 +18,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocationHDFSResult {
     /**
-     * ARN(s) of the agent(s) to use for an HDFS location.
+     * @return ARN(s) of the agent(s) to use for an HDFS location.
      * 
      */
     private final @Nullable List<String> agentArns;
     /**
-     * The authentication mode used to determine identity of user.
+     * @return The authentication mode used to determine identity of user.
      * 
      */
     private final @Nullable LocationHDFSAuthenticationType authenticationType;
     /**
-     * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+     * @return Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
      */
     private final @Nullable Integer blockSize;
     /**
-     * The unique identity, or principal, to which Kerberos can assign tickets.
+     * @return The unique identity, or principal, to which Kerberos can assign tickets.
      * 
      */
     private final @Nullable String kerberosPrincipal;
     /**
-     * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+     * @return The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
      */
     private final @Nullable String kmsKeyProviderUri;
     /**
-     * The Amazon Resource Name (ARN) of the HDFS location.
+     * @return The Amazon Resource Name (ARN) of the HDFS location.
      * 
      */
     private final @Nullable String locationArn;
     /**
-     * The URL of the HDFS location that was described.
+     * @return The URL of the HDFS location that was described.
      * 
      */
     private final @Nullable String locationUri;
     /**
-     * An array of Name Node(s) of the HDFS location.
+     * @return An array of Name Node(s) of the HDFS location.
      * 
      */
     private final @Nullable List<LocationHDFSNameNode> nameNodes;
     private final @Nullable LocationHDFSQopConfiguration qopConfiguration;
     /**
-     * Number of copies of each block that exists inside the HDFS cluster.
+     * @return Number of copies of each block that exists inside the HDFS cluster.
      * 
      */
     private final @Nullable Integer replicationFactor;
     /**
-     * The user name that has read and write permissions on the specified HDFS cluster.
+     * @return The user name that has read and write permissions on the specified HDFS cluster.
      * 
      */
     private final @Nullable String simpleUser;
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
      */
     private final @Nullable List<LocationHDFSTag> tags;
@@ -103,58 +103,58 @@ public final class GetLocationHDFSResult {
     }
 
     /**
-     * ARN(s) of the agent(s) to use for an HDFS location.
+     * @return ARN(s) of the agent(s) to use for an HDFS location.
      * 
-    */
+     */
     public List<String> agentArns() {
         return this.agentArns == null ? List.of() : this.agentArns;
     }
     /**
-     * The authentication mode used to determine identity of user.
+     * @return The authentication mode used to determine identity of user.
      * 
-    */
+     */
     public Optional<LocationHDFSAuthenticationType> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
+     * @return Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
-    */
+     */
     public Optional<Integer> blockSize() {
         return Optional.ofNullable(this.blockSize);
     }
     /**
-     * The unique identity, or principal, to which Kerberos can assign tickets.
+     * @return The unique identity, or principal, to which Kerberos can assign tickets.
      * 
-    */
+     */
     public Optional<String> kerberosPrincipal() {
         return Optional.ofNullable(this.kerberosPrincipal);
     }
     /**
-     * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
+     * @return The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
-    */
+     */
     public Optional<String> kmsKeyProviderUri() {
         return Optional.ofNullable(this.kmsKeyProviderUri);
     }
     /**
-     * The Amazon Resource Name (ARN) of the HDFS location.
+     * @return The Amazon Resource Name (ARN) of the HDFS location.
      * 
-    */
+     */
     public Optional<String> locationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
-     * The URL of the HDFS location that was described.
+     * @return The URL of the HDFS location that was described.
      * 
-    */
+     */
     public Optional<String> locationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
-     * An array of Name Node(s) of the HDFS location.
+     * @return An array of Name Node(s) of the HDFS location.
      * 
-    */
+     */
     public List<LocationHDFSNameNode> nameNodes() {
         return this.nameNodes == null ? List.of() : this.nameNodes;
     }
@@ -162,23 +162,23 @@ public final class GetLocationHDFSResult {
         return Optional.ofNullable(this.qopConfiguration);
     }
     /**
-     * Number of copies of each block that exists inside the HDFS cluster.
+     * @return Number of copies of each block that exists inside the HDFS cluster.
      * 
-    */
+     */
     public Optional<Integer> replicationFactor() {
         return Optional.ofNullable(this.replicationFactor);
     }
     /**
-     * The user name that has read and write permissions on the specified HDFS cluster.
+     * @return The user name that has read and write permissions on the specified HDFS cluster.
      * 
-    */
+     */
     public Optional<String> simpleUser() {
         return Optional.ofNullable(this.simpleUser);
     }
     /**
-     * An array of key-value pairs to apply to this resource.
+     * @return An array of key-value pairs to apply to this resource.
      * 
-    */
+     */
     public List<LocationHDFSTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

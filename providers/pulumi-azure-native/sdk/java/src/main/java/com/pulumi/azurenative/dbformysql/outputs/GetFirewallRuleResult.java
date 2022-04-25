@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class GetFirewallRuleResult {
     /**
-     * The end IP address of the server firewall rule. Must be IPv4 format.
+     * @return The end IP address of the server firewall rule. Must be IPv4 format.
      * 
      */
     private final String endIpAddress;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The start IP address of the server firewall rule. Must be IPv4 format.
+     * @return The start IP address of the server firewall rule. Must be IPv4 format.
      * 
      */
     private final String startIpAddress;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -50,37 +50,37 @@ public final class GetFirewallRuleResult {
     }
 
     /**
-     * The end IP address of the server firewall rule. Must be IPv4 format.
+     * @return The end IP address of the server firewall rule. Must be IPv4 format.
      * 
-    */
+     */
     public String endIpAddress() {
         return this.endIpAddress;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The start IP address of the server firewall rule. Must be IPv4 format.
+     * @return The start IP address of the server firewall rule. Must be IPv4 format.
      * 
-    */
+     */
     public String startIpAddress() {
         return this.startIpAddress;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

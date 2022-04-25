@@ -26,6 +26,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hash")
     private @Nullable ContentHashResponse hash;
 
+    /**
+     * @return Gets or sets the hash.
+     * 
+     */
     public Optional<ContentHashResponse> hash() {
         return Optional.ofNullable(this.hash);
     }
@@ -37,6 +41,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Gets or sets the content source type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -48,6 +56,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Gets or sets the value of the content. This is based on the content source type.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -59,6 +71,10 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Gets or sets the version of the content.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -90,21 +106,45 @@ public final class ContentSourceResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContentSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hash Gets or sets the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hash(@Nullable ContentHashResponse hash) {
             $.hash = hash;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the content source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Gets or sets the value of the content. This is based on the content source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param version Gets or sets the version of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

@@ -23,6 +23,10 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="allocationMethod", required=true)
     private String allocationMethod;
 
+    /**
+     * @return Gets the ip address allocation method.
+     * 
+     */
     public String allocationMethod() {
         return this.allocationMethod;
     }
@@ -34,6 +38,10 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return Gets the ip address for the nic.
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -45,6 +53,10 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="subnetMask", required=true)
     private String subnetMask;
 
+    /**
+     * @return Gets the mask.
+     * 
+     */
     public String subnetMask() {
         return this.subnetMask;
     }
@@ -75,16 +87,34 @@ public final class NicIPAddressSettingsResponse extends com.pulumi.resources.Inv
             $ = new NicIPAddressSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationMethod Gets the ip address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(String allocationMethod) {
             $.allocationMethod = allocationMethod;
             return this;
         }
 
+        /**
+         * @param ipAddress Gets the ip address for the nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param subnetMask Gets the mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(String subnetMask) {
             $.subnetMask = subnetMask;
             return this;

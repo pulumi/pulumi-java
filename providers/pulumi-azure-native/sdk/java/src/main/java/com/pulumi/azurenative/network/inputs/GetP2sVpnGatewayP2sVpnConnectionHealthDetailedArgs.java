@@ -22,6 +22,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
     @Import(name="gatewayName", required=true)
     private String gatewayName;
 
+    /**
+     * @return The name of the P2SVpnGateway.
+     * 
+     */
     public String gatewayName() {
         return this.gatewayName;
     }
@@ -33,6 +37,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
     @Import(name="outputBlobSasUrl")
     private @Nullable String outputBlobSasUrl;
 
+    /**
+     * @return The sas-url to download the P2S Vpn connection health detail.
+     * 
+     */
     public Optional<String> outputBlobSasUrl() {
         return Optional.ofNullable(this.outputBlobSasUrl);
     }
@@ -44,6 +52,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
     @Import(name="vpnUserNamesFilter")
     private @Nullable List<String> vpnUserNamesFilter;
 
+    /**
+     * @return The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+     * 
+     */
     public Optional<List<String>> vpnUserNamesFilter() {
         return Optional.ofNullable(this.vpnUserNamesFilter);
     }
@@ -86,26 +102,56 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
             $ = new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gatewayName The name of the P2SVpnGateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayName(String gatewayName) {
             $.gatewayName = gatewayName;
             return this;
         }
 
+        /**
+         * @param outputBlobSasUrl The sas-url to download the P2S Vpn connection health detail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBlobSasUrl(@Nullable String outputBlobSasUrl) {
             $.outputBlobSasUrl = outputBlobSasUrl;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vpnUserNamesFilter The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
             $.vpnUserNamesFilter = vpnUserNamesFilter;
             return this;
         }
 
+        /**
+         * @param vpnUserNamesFilter The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnUserNamesFilter(String... vpnUserNamesFilter) {
             return vpnUserNamesFilter(List.of(vpnUserNamesFilter));
         }

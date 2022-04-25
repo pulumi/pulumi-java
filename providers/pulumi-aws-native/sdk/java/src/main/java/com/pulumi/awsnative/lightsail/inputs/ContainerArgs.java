@@ -29,6 +29,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return The launch command for the container.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -40,6 +44,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The name of the container.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -51,6 +59,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
 
+    /**
+     * @return The environment variables of the container.
+     * 
+     */
     public Optional<Output<List<ContainerEnvironmentVariableArgs>>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -62,6 +74,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return The name of the image used for the container.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -73,6 +89,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports")
     private @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
+    /**
+     * @return The open firewall ports of the container.
+     * 
+     */
     public Optional<Output<List<ContainerPortInfoArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -105,59 +125,137 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The launch command for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The launch command for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command The launch command for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param containerName The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param environment The environment variables of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<List<ContainerEnvironmentVariableArgs>> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The environment variables of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(List<ContainerEnvironmentVariableArgs> environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param environment The environment variables of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(ContainerEnvironmentVariableArgs... environment) {
             return environment(List.of(environment));
         }
 
+        /**
+         * @param image The name of the image used for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The name of the image used for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param ports The open firewall ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<ContainerPortInfoArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The open firewall ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<ContainerPortInfoArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports The open firewall ports of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ContainerPortInfoArgs... ports) {
             return ports(List.of(ports));
         }

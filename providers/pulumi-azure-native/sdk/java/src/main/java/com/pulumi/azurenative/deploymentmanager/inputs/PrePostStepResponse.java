@@ -23,6 +23,10 @@ public final class PrePostStepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stepId", required=true)
     private String stepId;
 
+    /**
+     * @return The resource Id of the step to be run.
+     * 
+     */
     public String stepId() {
         return this.stepId;
     }
@@ -51,6 +55,12 @@ public final class PrePostStepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrePostStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stepId The resource Id of the step to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepId(String stepId) {
             $.stepId = stepId;
             return this;

@@ -31,6 +31,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="dailyRecurrence")
     private @Nullable DayDetailsResponse dailyRecurrence;
 
+    /**
+     * @return If the schedule will occur once each day of the week, specify the daily recurrence.
+     * 
+     */
     public Optional<DayDetailsResponse> dailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
@@ -42,6 +46,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="hourlyRecurrence")
     private @Nullable HourDetailsResponse hourlyRecurrence;
 
+    /**
+     * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
+     * 
+     */
     public Optional<HourDetailsResponse> hourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
@@ -53,6 +61,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location of the new virtual machine or environment
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -64,6 +76,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the virtual machine or environment
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,6 +91,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="notificationSettings")
     private @Nullable NotificationSettingsResponse notificationSettings;
 
+    /**
+     * @return Notification settings.
+     * 
+     */
     public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
@@ -86,6 +106,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the schedule (i.e. Enabled, Disabled)
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -97,6 +121,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -108,6 +136,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="targetResourceId")
     private @Nullable String targetResourceId;
 
+    /**
+     * @return The resource ID to which the schedule belongs
+     * 
+     */
     public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
@@ -119,6 +151,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="taskType")
     private @Nullable String taskType;
 
+    /**
+     * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+     * 
+     */
     public Optional<String> taskType() {
         return Optional.ofNullable(this.taskType);
     }
@@ -130,6 +166,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="timeZoneId")
     private @Nullable String timeZoneId;
 
+    /**
+     * @return The time zone ID (e.g. Pacific Standard time).
+     * 
+     */
     public Optional<String> timeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
@@ -141,6 +181,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
     @Import(name="weeklyRecurrence")
     private @Nullable WeekDetailsResponse weeklyRecurrence;
 
+    /**
+     * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
+     * 
+     */
     public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }
@@ -179,56 +223,122 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
             $ = new ScheduleCreationParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyRecurrence If the schedule will occur once each day of the week, specify the daily recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             $.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
+        /**
+         * @param hourlyRecurrence If the schedule will occur multiple times a day, specify the hourly recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             $.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
+        /**
+         * @param location The location of the new virtual machine or environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the virtual machine or environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param notificationSettings Notification settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             $.notificationSettings = notificationSettings;
             return this;
         }
 
+        /**
+         * @param status The status of the schedule (i.e. Enabled, Disabled)
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param targetResourceId The resource ID to which the schedule belongs
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(@Nullable String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param taskType The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskType(@Nullable String taskType) {
             $.taskType = taskType;
             return this;
         }
 
+        /**
+         * @param timeZoneId The time zone ID (e.g. Pacific Standard time).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneId(@Nullable String timeZoneId) {
             $.timeZoneId = timeZoneId;
             return this;
         }
 
+        /**
+         * @param weeklyRecurrence If the schedule will occur only some days of the week, specify the weekly recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             $.weeklyRecurrence = weeklyRecurrence;
             return this;

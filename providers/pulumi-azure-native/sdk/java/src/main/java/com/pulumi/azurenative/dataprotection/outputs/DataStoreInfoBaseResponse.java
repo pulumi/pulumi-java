@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DataStoreInfoBaseResponse {
     /**
-     * type of datastore; Operational/Vault/Archive
+     * @return type of datastore; Operational/Vault/Archive
      * 
      */
     private final String dataStoreType;
     /**
-     * Type of Datasource object, used to initialize the right inherited type
+     * @return Type of Datasource object, used to initialize the right inherited type
      * 
      */
     private final String objectType;
@@ -29,16 +29,16 @@ public final class DataStoreInfoBaseResponse {
     }
 
     /**
-     * type of datastore; Operational/Vault/Archive
+     * @return type of datastore; Operational/Vault/Archive
      * 
-    */
+     */
     public String dataStoreType() {
         return this.dataStoreType;
     }
     /**
-     * Type of Datasource object, used to initialize the right inherited type
+     * @return Type of Datasource object, used to initialize the right inherited type
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }

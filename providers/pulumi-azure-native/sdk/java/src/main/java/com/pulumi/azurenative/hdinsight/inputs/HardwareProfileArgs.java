@@ -26,6 +26,10 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return The size of the VM
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -54,11 +58,23 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
             $ = new HardwareProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vmSize The size of the VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize The size of the VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

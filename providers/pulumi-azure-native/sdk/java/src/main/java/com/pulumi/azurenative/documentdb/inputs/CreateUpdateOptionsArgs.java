@@ -27,6 +27,10 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="autoscaleSettings")
     private @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
 
+    /**
+     * @return Specifies the Autoscale settings.
+     * 
+     */
     public Optional<Output<AutoscaleSettingsArgs>> autoscaleSettings() {
         return Optional.ofNullable(this.autoscaleSettings);
     }
@@ -38,6 +42,10 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="throughput")
     private @Nullable Output<Integer> throughput;
 
+    /**
+     * @return Request Units per second. For example, &#34;throughput&#34;: 10000.
+     * 
+     */
     public Optional<Output<Integer>> throughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -67,20 +75,44 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
             $ = new CreateUpdateOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleSettings Specifies the Autoscale settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettings(@Nullable Output<AutoscaleSettingsArgs> autoscaleSettings) {
             $.autoscaleSettings = autoscaleSettings;
             return this;
         }
 
+        /**
+         * @param autoscaleSettings Specifies the Autoscale settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleSettings(AutoscaleSettingsArgs autoscaleSettings) {
             return autoscaleSettings(Output.of(autoscaleSettings));
         }
 
+        /**
+         * @param throughput Request Units per second. For example, &#34;throughput&#34;: 10000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(@Nullable Output<Integer> throughput) {
             $.throughput = throughput;
             return this;
         }
 
+        /**
+         * @param throughput Request Units per second. For example, &#34;throughput&#34;: 10000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Integer throughput) {
             return throughput(Output.of(throughput));
         }

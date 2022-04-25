@@ -15,7 +15,7 @@ public final class DatabaseInstanceServerCaCert {
     private final @Nullable String commonName;
     private final @Nullable String createTime;
     /**
-     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * @return The [RFC 3339](https://tools.ietf.org/html/rfc3339)
      * formatted date time string indicating when this whitelist expires.
      * 
      */
@@ -46,10 +46,10 @@ public final class DatabaseInstanceServerCaCert {
         return Optional.ofNullable(this.createTime);
     }
     /**
-     * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
+     * @return The [RFC 3339](https://tools.ietf.org/html/rfc3339)
      * formatted date time string indicating when this whitelist expires.
      * 
-    */
+     */
     public Optional<String> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }

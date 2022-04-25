@@ -27,6 +27,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="affectedCpeUri", required=true)
     private Output<String> affectedCpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+     * 
+     */
     public Output<String> affectedCpeUri() {
         return this.affectedCpeUri;
     }
@@ -38,6 +42,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="affectedPackage", required=true)
     private Output<String> affectedPackage;
 
+    /**
+     * @return The package this vulnerability was found in.
+     * 
+     */
     public Output<String> affectedPackage() {
         return this.affectedPackage;
     }
@@ -49,6 +57,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="affectedVersion", required=true)
     private Output<VersionArgs> affectedVersion;
 
+    /**
+     * @return The version of the package that is installed on the resource affected by this vulnerability.
+     * 
+     */
     public Output<VersionArgs> affectedVersion() {
         return this.affectedVersion;
     }
@@ -60,6 +72,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedCpeUri")
     private @Nullable Output<String> fixedCpeUri;
 
+    /**
+     * @return The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+     * 
+     */
     public Optional<Output<String>> fixedCpeUri() {
         return Optional.ofNullable(this.fixedCpeUri);
     }
@@ -71,6 +87,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedPackage")
     private @Nullable Output<String> fixedPackage;
 
+    /**
+     * @return The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+     * 
+     */
     public Optional<Output<String>> fixedPackage() {
         return Optional.ofNullable(this.fixedPackage);
     }
@@ -82,6 +102,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedVersion", required=true)
     private Output<VersionArgs> fixedVersion;
 
+    /**
+     * @return The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+     * 
+     */
     public Output<VersionArgs> fixedVersion() {
         return this.fixedVersion;
     }
@@ -93,6 +117,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
     private @Nullable Output<String> packageType;
 
+    /**
+     * @return The type of package (e.g. OS, MAVEN, GO).
+     * 
+     */
     public Optional<Output<String>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
@@ -127,65 +155,149 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageIssueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affectedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedCpeUri(Output<String> affectedCpeUri) {
             $.affectedCpeUri = affectedCpeUri;
             return this;
         }
 
+        /**
+         * @param affectedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedCpeUri(String affectedCpeUri) {
             return affectedCpeUri(Output.of(affectedCpeUri));
         }
 
+        /**
+         * @param affectedPackage The package this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedPackage(Output<String> affectedPackage) {
             $.affectedPackage = affectedPackage;
             return this;
         }
 
+        /**
+         * @param affectedPackage The package this vulnerability was found in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedPackage(String affectedPackage) {
             return affectedPackage(Output.of(affectedPackage));
         }
 
+        /**
+         * @param affectedVersion The version of the package that is installed on the resource affected by this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedVersion(Output<VersionArgs> affectedVersion) {
             $.affectedVersion = affectedVersion;
             return this;
         }
 
+        /**
+         * @param affectedVersion The version of the package that is installed on the resource affected by this vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder affectedVersion(VersionArgs affectedVersion) {
             return affectedVersion(Output.of(affectedVersion));
         }
 
+        /**
+         * @param fixedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
             $.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
+        /**
+         * @param fixedCpeUri The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedCpeUri(String fixedCpeUri) {
             return fixedCpeUri(Output.of(fixedCpeUri));
         }
 
+        /**
+         * @param fixedPackage The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
             $.fixedPackage = fixedPackage;
             return this;
         }
 
+        /**
+         * @param fixedPackage The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedPackage(String fixedPackage) {
             return fixedPackage(Output.of(fixedPackage));
         }
 
+        /**
+         * @param fixedVersion The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedVersion(Output<VersionArgs> fixedVersion) {
             $.fixedVersion = fixedVersion;
             return this;
         }
 
+        /**
+         * @param fixedVersion The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedVersion(VersionArgs fixedVersion) {
             return fixedVersion(Output.of(fixedVersion));
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(@Nullable Output<String> packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param packageType The type of package (e.g. OS, MAVEN, GO).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(String packageType) {
             return packageType(Output.of(packageType));
         }

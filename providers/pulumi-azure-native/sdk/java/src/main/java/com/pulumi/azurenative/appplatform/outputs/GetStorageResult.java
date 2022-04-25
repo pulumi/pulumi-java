@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class GetStorageResult {
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * Properties of the storage resource payload.
+     * @return Properties of the storage resource payload.
      * 
      */
     private final StorageAccountResponse properties;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -52,37 +52,37 @@ public final class GetStorageResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the storage resource payload.
+     * @return Properties of the storage resource payload.
      * 
-    */
+     */
     public StorageAccountResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

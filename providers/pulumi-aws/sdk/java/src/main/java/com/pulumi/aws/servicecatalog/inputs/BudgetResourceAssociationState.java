@@ -22,6 +22,10 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
     @Import(name="budgetName")
     private @Nullable Output<String> budgetName;
 
+    /**
+     * @return Budget name.
+     * 
+     */
     public Optional<Output<String>> budgetName() {
         return Optional.ofNullable(this.budgetName);
     }
@@ -33,6 +37,10 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource identifier.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -62,20 +70,44 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
             $ = new BudgetResourceAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param budgetName Budget name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(@Nullable Output<String> budgetName) {
             $.budgetName = budgetName;
             return this;
         }
 
+        /**
+         * @param budgetName Budget name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder budgetName(String budgetName) {
             return budgetName(Output.of(budgetName));
         }
 
+        /**
+         * @param resourceId Resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

@@ -23,6 +23,10 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return key_id is an identifier for the signing key.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -34,6 +38,10 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyScheme", required=true)
     private String keyScheme;
 
+    /**
+     * @return This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+     * 
+     */
     public String keyScheme() {
         return this.keyScheme;
     }
@@ -45,6 +53,10 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyType", required=true)
     private String keyType;
 
+    /**
+     * @return This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+     * 
+     */
     public String keyType() {
         return this.keyType;
     }
@@ -56,6 +68,10 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicKeyValue", required=true)
     private String publicKeyValue;
 
+    /**
+     * @return This field contains the actual public key.
+     * 
+     */
     public String publicKeyValue() {
         return this.publicKeyValue;
     }
@@ -87,21 +103,45 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SigningKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId key_id is an identifier for the signing key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyScheme This field contains the corresponding signature scheme. Eg: &#34;rsassa-pss-sha256&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyScheme(String keyScheme) {
             $.keyScheme = keyScheme;
             return this;
         }
 
+        /**
+         * @param keyType This field identifies the specific signing method. Eg: &#34;rsa&#34;, &#34;ed25519&#34;, and &#34;ecdsa&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param publicKeyValue This field contains the actual public key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyValue(String publicKeyValue) {
             $.publicKeyValue = publicKeyValue;
             return this;

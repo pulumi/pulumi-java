@@ -29,6 +29,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="controllerExpandSecretRef")
     private @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef;
 
+    /**
+     * @return ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> controllerExpandSecretRef() {
         return Optional.ofNullable(this.controllerExpandSecretRef);
     }
@@ -40,6 +44,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="controllerPublishSecretRef")
     private @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef;
 
+    /**
+     * @return ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> controllerPublishSecretRef() {
         return Optional.ofNullable(this.controllerPublishSecretRef);
     }
@@ -51,6 +59,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="driver", required=true)
     private Output<String> driver;
 
+    /**
+     * @return Driver is the name of the driver to use for this volume. Required.
+     * 
+     */
     public Output<String> driver() {
         return this.driver;
     }
@@ -62,6 +74,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -73,6 +89,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="nodePublishSecretRef")
     private @Nullable Output<SecretReferenceArgs> nodePublishSecretRef;
 
+    /**
+     * @return NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> nodePublishSecretRef() {
         return Optional.ofNullable(this.nodePublishSecretRef);
     }
@@ -84,6 +104,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="nodeStageSecretRef")
     private @Nullable Output<SecretReferenceArgs> nodeStageSecretRef;
 
+    /**
+     * @return NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+     * 
+     */
     public Optional<Output<SecretReferenceArgs>> nodeStageSecretRef() {
         return Optional.ofNullable(this.nodeStageSecretRef);
     }
@@ -95,6 +119,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -106,6 +134,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="volumeAttributes")
     private @Nullable Output<Map<String,String>> volumeAttributes;
 
+    /**
+     * @return Attributes of the volume to publish.
+     * 
+     */
     public Optional<Output<Map<String,String>>> volumeAttributes() {
         return Optional.ofNullable(this.volumeAttributes);
     }
@@ -117,6 +149,10 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     @Import(name="volumeHandle", required=true)
     private Output<String> volumeHandle;
 
+    /**
+     * @return VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.
+     * 
+     */
     public Output<String> volumeHandle() {
         return this.volumeHandle;
     }
@@ -153,83 +189,191 @@ public final class CSIPersistentVolumeSourceArgs extends com.pulumi.resources.Re
             $ = new CSIPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controllerExpandSecretRef ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerExpandSecretRef(@Nullable Output<SecretReferenceArgs> controllerExpandSecretRef) {
             $.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
 
+        /**
+         * @param controllerExpandSecretRef ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerExpandSecretRef(SecretReferenceArgs controllerExpandSecretRef) {
             return controllerExpandSecretRef(Output.of(controllerExpandSecretRef));
         }
 
+        /**
+         * @param controllerPublishSecretRef ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerPublishSecretRef(@Nullable Output<SecretReferenceArgs> controllerPublishSecretRef) {
             $.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
 
+        /**
+         * @param controllerPublishSecretRef ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllerPublishSecretRef(SecretReferenceArgs controllerPublishSecretRef) {
             return controllerPublishSecretRef(Output.of(controllerPublishSecretRef));
         }
 
+        /**
+         * @param driver Driver is the name of the driver to use for this volume. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(Output<String> driver) {
             $.driver = driver;
             return this;
         }
 
+        /**
+         * @param driver Driver is the name of the driver to use for this volume. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driver(String driver) {
             return driver(Output.of(driver));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublishSecretRef(@Nullable Output<SecretReferenceArgs> nodePublishSecretRef) {
             $.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
+        /**
+         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublishSecretRef(SecretReferenceArgs nodePublishSecretRef) {
             return nodePublishSecretRef(Output.of(nodePublishSecretRef));
         }
 
+        /**
+         * @param nodeStageSecretRef NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeStageSecretRef(@Nullable Output<SecretReferenceArgs> nodeStageSecretRef) {
             $.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
 
+        /**
+         * @param nodeStageSecretRef NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeStageSecretRef(SecretReferenceArgs nodeStageSecretRef) {
             return nodeStageSecretRef(Output.of(nodeStageSecretRef));
         }
 
+        /**
+         * @param readOnly Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param volumeAttributes Attributes of the volume to publish.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeAttributes(@Nullable Output<Map<String,String>> volumeAttributes) {
             $.volumeAttributes = volumeAttributes;
             return this;
         }
 
+        /**
+         * @param volumeAttributes Attributes of the volume to publish.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeAttributes(Map<String,String> volumeAttributes) {
             return volumeAttributes(Output.of(volumeAttributes));
         }
 
+        /**
+         * @param volumeHandle VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeHandle(Output<String> volumeHandle) {
             $.volumeHandle = volumeHandle;
             return this;
         }
 
+        /**
+         * @param volumeHandle VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeHandle(String volumeHandle) {
             return volumeHandle(Output.of(volumeHandle));
         }

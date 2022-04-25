@@ -20,6 +20,10 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestinationArgs extends
     @Import(name="topic", required=true)
     private Output<String> topic;
 
+    /**
+     * @return Destination on Cloud Pubsub topic.
+     * 
+     */
     public Output<String> topic() {
         return this.topic;
     }
@@ -48,11 +52,23 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestinationArgs extends
             $ = new OrganizationFeedFeedOutputConfigPubsubDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topic Destination on Cloud Pubsub topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Destination on Cloud Pubsub topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

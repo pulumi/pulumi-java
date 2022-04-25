@@ -30,6 +30,10 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queueUrl", required=true)
     private String queueUrl;
 
+    /**
+     * @return The URL of the SQS queue where the data is written.
+     * 
+     */
     public String queueUrl() {
         return this.queueUrl;
     }
@@ -41,6 +45,10 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     @Import(name="useBase64")
     private @Nullable Boolean useBase64;
 
+    /**
+     * @return Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+     * 
+     */
     public Optional<Boolean> useBase64() {
         return Optional.ofNullable(this.useBase64);
     }
@@ -76,11 +84,23 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param queueUrl The URL of the SQS queue where the data is written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueUrl(String queueUrl) {
             $.queueUrl = queueUrl;
             return this;
         }
 
+        /**
+         * @param useBase64 Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useBase64(@Nullable Boolean useBase64) {
             $.useBase64 = useBase64;
             return this;

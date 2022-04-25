@@ -26,6 +26,10 @@ public final class ConsumptionMeteringConfigArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -54,11 +58,23 @@ public final class ConsumptionMeteringConfigArgs extends com.pulumi.resources.Re
             $ = new ConsumptionMeteringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

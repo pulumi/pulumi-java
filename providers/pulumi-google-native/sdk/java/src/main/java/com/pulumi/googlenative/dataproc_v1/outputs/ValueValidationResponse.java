@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ValueValidationResponse {
     /**
-     * List of allowed values for the parameter.
+     * @return List of allowed values for the parameter.
      * 
      */
     private final List<String> values;
@@ -22,9 +22,9 @@ public final class ValueValidationResponse {
     }
 
     /**
-     * List of allowed values for the parameter.
+     * @return List of allowed values for the parameter.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

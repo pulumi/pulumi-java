@@ -19,6 +19,10 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="botName", required=true)
     private String botName;
 
+    /**
+     * @return The name of the Bot resource.
+     * 
+     */
     public String botName() {
         return this.botName;
     }
@@ -30,6 +34,10 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Bot resource group in the user subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param botName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder botName(String botName) {
             $.botName = botName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

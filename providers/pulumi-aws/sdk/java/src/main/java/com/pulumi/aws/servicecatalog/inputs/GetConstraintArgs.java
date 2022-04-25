@@ -21,6 +21,10 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceptLanguage")
     private @Nullable String acceptLanguage;
 
+    /**
+     * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+     * 
+     */
     public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
@@ -32,6 +36,10 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the constraint.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -43,6 +51,10 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Constraint identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -73,16 +85,34 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetConstraintArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
 
+        /**
+         * @param description Description of the constraint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param id Constraint identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

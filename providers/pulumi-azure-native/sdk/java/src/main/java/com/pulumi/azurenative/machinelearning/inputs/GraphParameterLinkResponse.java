@@ -23,6 +23,10 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
     @Import(name="nodeId", required=true)
     private String nodeId;
 
+    /**
+     * @return The graph node&#39;s identifier
+     * 
+     */
     public String nodeId() {
         return this.nodeId;
     }
@@ -34,6 +38,10 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
     @Import(name="parameterKey", required=true)
     private String parameterKey;
 
+    /**
+     * @return The identifier of the node parameter that the global parameter maps to.
+     * 
+     */
     public String parameterKey() {
         return this.parameterKey;
     }
@@ -63,11 +71,23 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
             $ = new GraphParameterLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeId The graph node&#39;s identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param parameterKey The identifier of the node parameter that the global parameter maps to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterKey(String parameterKey) {
             $.parameterKey = parameterKey;
             return this;

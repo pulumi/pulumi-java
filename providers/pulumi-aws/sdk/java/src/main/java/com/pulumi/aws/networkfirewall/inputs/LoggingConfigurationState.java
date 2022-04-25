@@ -23,6 +23,10 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
     @Import(name="firewallArn")
     private @Nullable Output<String> firewallArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Network Firewall firewall.
+     * 
+     */
     public Optional<Output<String>> firewallArn() {
         return Optional.ofNullable(this.firewallArn);
     }
@@ -34,6 +38,10 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
     @Import(name="loggingConfiguration")
     private @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
+    /**
+     * @return A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
+     * 
+     */
     public Optional<Output<LoggingConfigurationLoggingConfigurationGetArgs>> loggingConfiguration() {
         return Optional.ofNullable(this.loggingConfiguration);
     }
@@ -63,20 +71,44 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
             $ = new LoggingConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallArn The Amazon Resource Name (ARN) of the Network Firewall firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallArn(@Nullable Output<String> firewallArn) {
             $.firewallArn = firewallArn;
             return this;
         }
 
+        /**
+         * @param firewallArn The Amazon Resource Name (ARN) of the Network Firewall firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallArn(String firewallArn) {
             return firewallArn(Output.of(firewallArn));
         }
 
+        /**
+         * @param loggingConfiguration A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
             $.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
+        /**
+         * @param loggingConfiguration A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
             return loggingConfiguration(Output.of(loggingConfiguration));
         }

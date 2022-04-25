@@ -27,6 +27,10 @@ public final class DailyRetentionScheduleResponse extends com.pulumi.resources.I
     @Import(name="retentionDuration")
     private @Nullable RetentionDurationResponse retentionDuration;
 
+    /**
+     * @return Retention duration of retention Policy.
+     * 
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -38,6 +42,10 @@ public final class DailyRetentionScheduleResponse extends com.pulumi.resources.I
     @Import(name="retentionTimes")
     private @Nullable List<String> retentionTimes;
 
+    /**
+     * @return Retention times of retention policy.
+     * 
+     */
     public Optional<List<String>> retentionTimes() {
         return Optional.ofNullable(this.retentionTimes);
     }
@@ -67,16 +75,34 @@ public final class DailyRetentionScheduleResponse extends com.pulumi.resources.I
             $ = new DailyRetentionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionDuration Retention duration of retention Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             $.retentionDuration = retentionDuration;
             return this;
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             $.retentionTimes = retentionTimes;
             return this;
         }
 
+        /**
+         * @param retentionTimes Retention times of retention policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
         }

@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AS2MdnSettingsResponse {
     /**
-     * The disposition notification to header value.
+     * @return The disposition notification to header value.
      * 
      */
     private final @Nullable String dispositionNotificationTo;
     /**
-     * The MDN text.
+     * @return The MDN text.
      * 
      */
     private final @Nullable String mdnText;
     /**
-     * The signing or hashing algorithm.
+     * @return The signing or hashing algorithm.
      * 
      */
     private final String micHashingAlgorithm;
     /**
-     * The value indicating whether to send or request a MDN.
+     * @return The value indicating whether to send or request a MDN.
      * 
      */
     private final Boolean needMDN;
     /**
-     * The receipt delivery URL.
+     * @return The receipt delivery URL.
      * 
      */
     private final @Nullable String receiptDeliveryUrl;
     /**
-     * The value indicating whether to send inbound MDN to message box.
+     * @return The value indicating whether to send inbound MDN to message box.
      * 
      */
     private final Boolean sendInboundMDNToMessageBox;
     /**
-     * The value indicating whether to send the asynchronous MDN.
+     * @return The value indicating whether to send the asynchronous MDN.
      * 
      */
     private final Boolean sendMDNAsynchronously;
     /**
-     * The value indicating whether the MDN needs to be signed or not.
+     * @return The value indicating whether the MDN needs to be signed or not.
      * 
      */
     private final Boolean signMDN;
     /**
-     * The value indicating whether to sign the outbound MDN if optional.
+     * @return The value indicating whether to sign the outbound MDN if optional.
      * 
      */
     private final Boolean signOutboundMDNIfOptional;
@@ -81,65 +81,65 @@ public final class AS2MdnSettingsResponse {
     }
 
     /**
-     * The disposition notification to header value.
+     * @return The disposition notification to header value.
      * 
-    */
+     */
     public Optional<String> dispositionNotificationTo() {
         return Optional.ofNullable(this.dispositionNotificationTo);
     }
     /**
-     * The MDN text.
+     * @return The MDN text.
      * 
-    */
+     */
     public Optional<String> mdnText() {
         return Optional.ofNullable(this.mdnText);
     }
     /**
-     * The signing or hashing algorithm.
+     * @return The signing or hashing algorithm.
      * 
-    */
+     */
     public String micHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
     /**
-     * The value indicating whether to send or request a MDN.
+     * @return The value indicating whether to send or request a MDN.
      * 
-    */
+     */
     public Boolean needMDN() {
         return this.needMDN;
     }
     /**
-     * The receipt delivery URL.
+     * @return The receipt delivery URL.
      * 
-    */
+     */
     public Optional<String> receiptDeliveryUrl() {
         return Optional.ofNullable(this.receiptDeliveryUrl);
     }
     /**
-     * The value indicating whether to send inbound MDN to message box.
+     * @return The value indicating whether to send inbound MDN to message box.
      * 
-    */
+     */
     public Boolean sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
     /**
-     * The value indicating whether to send the asynchronous MDN.
+     * @return The value indicating whether to send the asynchronous MDN.
      * 
-    */
+     */
     public Boolean sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
     /**
-     * The value indicating whether the MDN needs to be signed or not.
+     * @return The value indicating whether the MDN needs to be signed or not.
      * 
-    */
+     */
     public Boolean signMDN() {
         return this.signMDN;
     }
     /**
-     * The value indicating whether to sign the outbound MDN if optional.
+     * @return The value indicating whether to sign the outbound MDN if optional.
      * 
-    */
+     */
     public Boolean signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }

@@ -24,6 +24,10 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password for the share.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -35,6 +39,10 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return Name of the share.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -46,6 +54,10 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="shareType", required=true)
     private String shareType;
 
+    /**
+     * @return Type of the share.
+     * 
+     */
     public String shareType() {
         return this.shareType;
     }
@@ -57,6 +69,10 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="supportedAccessProtocols", required=true)
     private List<String> supportedAccessProtocols;
 
+    /**
+     * @return Access protocols supported on the device.
+     * 
+     */
     public List<String> supportedAccessProtocols() {
         return this.supportedAccessProtocols;
     }
@@ -68,6 +84,10 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return User name for the share.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -100,30 +120,66 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
             $ = new ShareCredentialDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param shareName Name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareType Type of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareType(String shareType) {
             $.shareType = shareType;
             return this;
         }
 
+        /**
+         * @param supportedAccessProtocols Access protocols supported on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedAccessProtocols(List<String> supportedAccessProtocols) {
             $.supportedAccessProtocols = supportedAccessProtocols;
             return this;
         }
 
+        /**
+         * @param supportedAccessProtocols Access protocols supported on the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedAccessProtocols(String... supportedAccessProtocols) {
             return supportedAccessProtocols(List.of(supportedAccessProtocols));
         }
 
+        /**
+         * @param userName User name for the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

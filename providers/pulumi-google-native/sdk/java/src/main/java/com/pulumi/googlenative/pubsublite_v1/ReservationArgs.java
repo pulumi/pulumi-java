@@ -29,6 +29,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +58,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throughputCapacity")
     private @Nullable Output<String> throughputCapacity;
 
+    /**
+     * @return The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
+     * 
+     */
     public Optional<Output<String>> throughputCapacity() {
         return Optional.ofNullable(this.throughputCapacity);
     }
@@ -95,11 +103,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -122,11 +142,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return reservationId(Output.of(reservationId));
         }
 
+        /**
+         * @param throughputCapacity The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(@Nullable Output<String> throughputCapacity) {
             $.throughputCapacity = throughputCapacity;
             return this;
         }
 
+        /**
+         * @param throughputCapacity The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputCapacity(String throughputCapacity) {
             return throughputCapacity(Output.of(throughputCapacity));
         }

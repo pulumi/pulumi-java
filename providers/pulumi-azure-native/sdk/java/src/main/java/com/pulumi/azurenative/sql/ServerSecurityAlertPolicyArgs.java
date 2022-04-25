@@ -26,6 +26,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="disabledAlerts")
     private @Nullable Output<List<String>> disabledAlerts;
 
+    /**
+     * @return Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
+     * 
+     */
     public Optional<Output<List<String>>> disabledAlerts() {
         return Optional.ofNullable(this.disabledAlerts);
     }
@@ -37,6 +41,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="emailAccountAdmins")
     private @Nullable Output<Boolean> emailAccountAdmins;
 
+    /**
+     * @return Specifies that the alert is sent to the account administrators.
+     * 
+     */
     public Optional<Output<Boolean>> emailAccountAdmins() {
         return Optional.ofNullable(this.emailAccountAdmins);
     }
@@ -48,6 +56,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="emailAddresses")
     private @Nullable Output<List<String>> emailAddresses;
 
+    /**
+     * @return Specifies an array of e-mail addresses to which the alert is sent.
+     * 
+     */
     public Optional<Output<List<String>>> emailAddresses() {
         return Optional.ofNullable(this.emailAddresses);
     }
@@ -59,6 +71,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="retentionDays")
     private @Nullable Output<Integer> retentionDays;
 
+    /**
+     * @return Specifies the number of days to keep in the Threat Detection audit logs.
+     * 
+     */
     public Optional<Output<Integer>> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -81,6 +101,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="securityAlertPolicyName")
     private @Nullable Output<String> securityAlertPolicyName;
 
+    /**
+     * @return The name of the threat detection policy.
+     * 
+     */
     public Optional<Output<String>> securityAlertPolicyName() {
         return Optional.ofNullable(this.securityAlertPolicyName);
     }
@@ -92,6 +116,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -103,6 +131,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="state", required=true)
     private Output<SecurityAlertsPolicyState> state;
 
+    /**
+     * @return Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
+     * 
+     */
     public Output<SecurityAlertsPolicyState> state() {
         return this.state;
     }
@@ -114,6 +146,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="storageAccountAccessKey")
     private @Nullable Output<String> storageAccountAccessKey;
 
+    /**
+     * @return Specifies the identifier key of the Threat Detection audit storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountAccessKey() {
         return Optional.ofNullable(this.storageAccountAccessKey);
     }
@@ -125,6 +161,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
     @Import(name="storageEndpoint")
     private @Nullable Output<String> storageEndpoint;
 
+    /**
+     * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+     * 
+     */
     public Optional<Output<String>> storageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
@@ -162,100 +202,232 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
             $ = new ServerSecurityAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabledAlerts Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledAlerts(@Nullable Output<List<String>> disabledAlerts) {
             $.disabledAlerts = disabledAlerts;
             return this;
         }
 
+        /**
+         * @param disabledAlerts Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledAlerts(List<String> disabledAlerts) {
             return disabledAlerts(Output.of(disabledAlerts));
         }
 
+        /**
+         * @param disabledAlerts Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledAlerts(String... disabledAlerts) {
             return disabledAlerts(List.of(disabledAlerts));
         }
 
+        /**
+         * @param emailAccountAdmins Specifies that the alert is sent to the account administrators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAccountAdmins(@Nullable Output<Boolean> emailAccountAdmins) {
             $.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
 
+        /**
+         * @param emailAccountAdmins Specifies that the alert is sent to the account administrators.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAccountAdmins(Boolean emailAccountAdmins) {
             return emailAccountAdmins(Output.of(emailAccountAdmins));
         }
 
+        /**
+         * @param emailAddresses Specifies an array of e-mail addresses to which the alert is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             $.emailAddresses = emailAddresses;
             return this;
         }
 
+        /**
+         * @param emailAddresses Specifies an array of e-mail addresses to which the alert is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(List<String> emailAddresses) {
             return emailAddresses(Output.of(emailAddresses));
         }
 
+        /**
+         * @param emailAddresses Specifies an array of e-mail addresses to which the alert is sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param retentionDays Specifies the number of days to keep in the Threat Detection audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             $.retentionDays = retentionDays;
             return this;
         }
 
+        /**
+         * @param retentionDays Specifies the number of days to keep in the Threat Detection audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(Integer retentionDays) {
             return retentionDays(Output.of(retentionDays));
         }
 
+        /**
+         * @param securityAlertPolicyName The name of the threat detection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityAlertPolicyName(@Nullable Output<String> securityAlertPolicyName) {
             $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
+        /**
+         * @param securityAlertPolicyName The name of the threat detection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
             return securityAlertPolicyName(Output.of(securityAlertPolicyName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param state Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<SecurityAlertsPolicyState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(SecurityAlertsPolicyState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param storageAccountAccessKey Specifies the identifier key of the Threat Detection audit storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
             $.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
 
+        /**
+         * @param storageAccountAccessKey Specifies the identifier key of the Threat Detection audit storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountAccessKey(String storageAccountAccessKey) {
             return storageAccountAccessKey(Output.of(storageAccountAccessKey));
         }
 
+        /**
+         * @param storageEndpoint Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
             $.storageEndpoint = storageEndpoint;
             return this;
         }
 
+        /**
+         * @param storageEndpoint Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEndpoint(String storageEndpoint) {
             return storageEndpoint(Output.of(storageEndpoint));
         }

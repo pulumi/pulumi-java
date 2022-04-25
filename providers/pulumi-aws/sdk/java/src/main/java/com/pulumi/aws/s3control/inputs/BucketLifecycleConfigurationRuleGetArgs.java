@@ -25,6 +25,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
     @Import(name="abortIncompleteMultipartUpload")
     private @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
 
+    /**
+     * @return Configuration block containing settings for abort incomplete multipart upload.
+     * 
+     */
     public Optional<Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs>> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
@@ -36,6 +40,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
     @Import(name="expiration")
     private @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
 
+    /**
+     * @return Configuration block containing settings for expiration of objects.
+     * 
+     */
     public Optional<Output<BucketLifecycleConfigurationRuleExpirationGetArgs>> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -47,6 +55,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
     @Import(name="filter")
     private @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
 
+    /**
+     * @return Configuration block containing settings for filtering.
+     * 
+     */
     public Optional<Output<BucketLifecycleConfigurationRuleFilterGetArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -58,6 +70,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Unique identifier for the rule.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -69,6 +85,10 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -101,47 +121,107 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends com.pulumi.re
             $ = new BucketLifecycleConfigurationRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param abortIncompleteMultipartUpload Configuration block containing settings for abort incomplete multipart upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUpload(@Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload) {
             $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
+        /**
+         * @param abortIncompleteMultipartUpload Configuration block containing settings for abort incomplete multipart upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder abortIncompleteMultipartUpload(BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs abortIncompleteMultipartUpload) {
             return abortIncompleteMultipartUpload(Output.of(abortIncompleteMultipartUpload));
         }
 
+        /**
+         * @param expiration Configuration block containing settings for expiration of objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param expiration Configuration block containing settings for expiration of objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(BucketLifecycleConfigurationRuleExpirationGetArgs expiration) {
             return expiration(Output.of(expiration));
         }
 
+        /**
+         * @param filter Configuration block containing settings for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Configuration block containing settings for filtering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(BucketLifecycleConfigurationRuleFilterGetArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param id Unique identifier for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param status Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

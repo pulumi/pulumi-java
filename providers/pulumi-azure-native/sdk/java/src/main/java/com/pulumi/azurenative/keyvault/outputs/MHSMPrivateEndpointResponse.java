@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MHSMPrivateEndpointResponse {
     /**
-     * Full identifier of the private endpoint resource.
+     * @return Full identifier of the private endpoint resource.
      * 
      */
     private final String id;
@@ -21,9 +21,9 @@ public final class MHSMPrivateEndpointResponse {
     }
 
     /**
-     * Full identifier of the private endpoint resource.
+     * @return Full identifier of the private endpoint resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

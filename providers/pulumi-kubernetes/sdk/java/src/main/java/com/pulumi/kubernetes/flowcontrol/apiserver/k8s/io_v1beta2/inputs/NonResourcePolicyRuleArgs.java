@@ -31,6 +31,16 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
     @Import(name="nonResourceURLs", required=true)
     private Output<List<String>> nonResourceURLs;
 
+    /**
+     * @return `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+     *   - &#34;/healthz&#34; is legal
+     *   - &#34;/hea*&#34; is illegal
+     *   - &#34;/hea&#34; is legal but matches nothing
+     *   - &#34;/hea/*&#34; also matches nothing
+     *   - &#34;/healthz/*&#34; matches all per-component health checks.
+     *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
+     * 
+     */
     public Output<List<String>> nonResourceURLs() {
         return this.nonResourceURLs;
     }
@@ -42,6 +52,10 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
     @Import(name="verbs", required=true)
     private Output<List<String>> verbs;
 
+    /**
+     * @return `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+     * 
+     */
     public Output<List<String>> verbs() {
         return this.verbs;
     }
@@ -71,28 +85,82 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
             $ = new NonResourcePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonResourceURLs `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+         *   - &#34;/healthz&#34; is legal
+         *   - &#34;/hea*&#34; is illegal
+         *   - &#34;/hea&#34; is legal but matches nothing
+         *   - &#34;/hea/*&#34; also matches nothing
+         *   - &#34;/healthz/*&#34; matches all per-component health checks.
+         *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(Output<List<String>> nonResourceURLs) {
             $.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
+        /**
+         * @param nonResourceURLs `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+         *   - &#34;/healthz&#34; is legal
+         *   - &#34;/hea*&#34; is illegal
+         *   - &#34;/hea&#34; is legal but matches nothing
+         *   - &#34;/hea/*&#34; also matches nothing
+         *   - &#34;/healthz/*&#34; matches all per-component health checks.
+         *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(List<String> nonResourceURLs) {
             return nonResourceURLs(Output.of(nonResourceURLs));
         }
 
+        /**
+         * @param nonResourceURLs `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+         *   - &#34;/healthz&#34; is legal
+         *   - &#34;/hea*&#34; is illegal
+         *   - &#34;/hea&#34; is legal but matches nothing
+         *   - &#34;/hea/*&#34; also matches nothing
+         *   - &#34;/healthz/*&#34; matches all per-component health checks.
+         *     &#34;*&#34; matches all non-resource urls. if it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceURLs(String... nonResourceURLs) {
             return nonResourceURLs(List.of(nonResourceURLs));
         }
 
+        /**
+         * @param verbs `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(Output<List<String>> verbs) {
             $.verbs = verbs;
             return this;
         }
 
+        /**
+         * @param verbs `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(List<String> verbs) {
             return verbs(Output.of(verbs));
         }
 
+        /**
+         * @param verbs `verbs` is a list of matching verbs and may not be empty. &#34;*&#34; matches all verbs. If it is present, it must be the only entry. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verbs(String... verbs) {
             return verbs(List.of(verbs));
         }

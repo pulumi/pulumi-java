@@ -24,6 +24,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the compute environment.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeEnvironmentName")
     private @Nullable Output<String> computeEnvironmentName;
 
+    /**
+     * @return The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
+     * 
+     */
     public Optional<Output<String>> computeEnvironmentName() {
         return Optional.ofNullable(this.computeEnvironmentName);
     }
@@ -46,6 +54,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeEnvironmentNamePrefix")
     private @Nullable Output<String> computeEnvironmentNamePrefix;
 
+    /**
+     * @return Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
+     * 
+     */
     public Optional<Output<String>> computeEnvironmentNamePrefix() {
         return Optional.ofNullable(this.computeEnvironmentNamePrefix);
     }
@@ -57,6 +69,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="computeResources")
     private @Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
 
+    /**
+     * @return Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
+     * 
+     */
     public Optional<Output<ComputeEnvironmentComputeResourcesGetArgs>> computeResources() {
         return Optional.ofNullable(this.computeResources);
     }
@@ -68,6 +84,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="ecsClusterArn")
     private @Nullable Output<String> ecsClusterArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
+     * 
+     */
     public Optional<Output<String>> ecsClusterArn() {
         return Optional.ofNullable(this.ecsClusterArn);
     }
@@ -79,6 +99,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="serviceRole")
     private @Nullable Output<String> serviceRole;
 
+    /**
+     * @return The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+     * 
+     */
     public Optional<Output<String>> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
@@ -90,6 +114,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -101,6 +129,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The current status of the compute environment (for example, CREATING or VALID).
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -112,6 +144,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="statusReason")
     private @Nullable Output<String> statusReason;
 
+    /**
+     * @return A short, human-readable string to provide additional details about the current status of the compute environment.
+     * 
+     */
     public Optional<Output<String>> statusReason() {
         return Optional.ofNullable(this.statusReason);
     }
@@ -123,6 +159,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn&#39;t applicable to jobs running on Fargate resources, and shouldn&#39;t be specified.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -134,6 +174,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -145,6 +189,10 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -184,110 +232,254 @@ public final class ComputeEnvironmentState extends com.pulumi.resources.Resource
             $ = new ComputeEnvironmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param computeEnvironmentName The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEnvironmentName(@Nullable Output<String> computeEnvironmentName) {
             $.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
 
+        /**
+         * @param computeEnvironmentName The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEnvironmentName(String computeEnvironmentName) {
             return computeEnvironmentName(Output.of(computeEnvironmentName));
         }
 
+        /**
+         * @param computeEnvironmentNamePrefix Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEnvironmentNamePrefix(@Nullable Output<String> computeEnvironmentNamePrefix) {
             $.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
 
+        /**
+         * @param computeEnvironmentNamePrefix Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeEnvironmentNamePrefix(String computeEnvironmentNamePrefix) {
             return computeEnvironmentNamePrefix(Output.of(computeEnvironmentNamePrefix));
         }
 
+        /**
+         * @param computeResources Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeResources(@Nullable Output<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
             $.computeResources = computeResources;
             return this;
         }
 
+        /**
+         * @param computeResources Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeResources(ComputeEnvironmentComputeResourcesGetArgs computeResources) {
             return computeResources(Output.of(computeResources));
         }
 
+        /**
+         * @param ecsClusterArn The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecsClusterArn(@Nullable Output<String> ecsClusterArn) {
             $.ecsClusterArn = ecsClusterArn;
             return this;
         }
 
+        /**
+         * @param ecsClusterArn The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ecsClusterArn(String ecsClusterArn) {
             return ecsClusterArn(Output.of(ecsClusterArn));
         }
 
+        /**
+         * @param serviceRole The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param state The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param status The current status of the compute environment (for example, CREATING or VALID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of the compute environment (for example, CREATING or VALID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param statusReason A short, human-readable string to provide additional details about the current status of the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(@Nullable Output<String> statusReason) {
             $.statusReason = statusReason;
             return this;
         }
 
+        /**
+         * @param statusReason A short, human-readable string to provide additional details about the current status of the compute environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(String statusReason) {
             return statusReason(Output.of(statusReason));
         }
 
+        /**
+         * @param tags Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn&#39;t applicable to jobs running on Fargate resources, and shouldn&#39;t be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn&#39;t applicable to jobs running on Fargate resources, and shouldn&#39;t be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

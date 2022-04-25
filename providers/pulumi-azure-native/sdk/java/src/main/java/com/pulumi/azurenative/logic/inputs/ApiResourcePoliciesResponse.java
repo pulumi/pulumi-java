@@ -25,6 +25,10 @@ public final class ApiResourcePoliciesResponse extends com.pulumi.resources.Invo
     @Import(name="content")
     private @Nullable String content;
 
+    /**
+     * @return The API level only policies XML as embedded content.
+     * 
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -36,6 +40,10 @@ public final class ApiResourcePoliciesResponse extends com.pulumi.resources.Invo
     @Import(name="contentLink")
     private @Nullable String contentLink;
 
+    /**
+     * @return The content link to the policies.
+     * 
+     */
     public Optional<String> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
@@ -65,11 +73,23 @@ public final class ApiResourcePoliciesResponse extends com.pulumi.resources.Invo
             $ = new ApiResourcePoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The API level only policies XML as embedded content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param contentLink The content link to the policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLink(@Nullable String contentLink) {
             $.contentLink = contentLink;
             return this;

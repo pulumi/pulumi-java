@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetDatasetResult {
     /**
-     * The names of any related resources that are blocking changes to the dataset.
+     * @return The names of any related resources that are blocking changes to the dataset.
      * 
      */
     private final List<String> blockingResources;
     /**
-     * Time the dataset is created.
+     * @return Time the dataset is created.
      * 
      */
     private final String createTime;
     /**
-     * The number of data items in the dataset.
+     * @return The number of data items in the dataset.
      * 
      */
     private final String dataItemCount;
     /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
+     * @return Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
      */
     private final String description;
     /**
-     * The display name of the dataset. Maximum of 64 characters.
+     * @return The display name of the dataset. Maximum of 64 characters.
      * 
      */
     private final String displayName;
     /**
-     * This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
+     * @return This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
      * 
      */
     private final List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs;
     /**
-     * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
+     * @return Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
      */
     private final String lastMigrateTime;
     /**
-     * Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
+     * @return Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
      * 
      */
     private final String name;
@@ -73,58 +73,58 @@ public final class GetDatasetResult {
     }
 
     /**
-     * The names of any related resources that are blocking changes to the dataset.
+     * @return The names of any related resources that are blocking changes to the dataset.
      * 
-    */
+     */
     public List<String> blockingResources() {
         return this.blockingResources;
     }
     /**
-     * Time the dataset is created.
+     * @return Time the dataset is created.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The number of data items in the dataset.
+     * @return The number of data items in the dataset.
      * 
-    */
+     */
     public String dataItemCount() {
         return this.dataItemCount;
     }
     /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
+     * @return Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the dataset. Maximum of 64 characters.
+     * @return The display name of the dataset. Maximum of 64 characters.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
+     * @return This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
      * 
-    */
+     */
     public List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs() {
         return this.inputConfigs;
     }
     /**
-     * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
+     * @return Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
-    */
+     */
     public String lastMigrateTime() {
         return this.lastMigrateTime;
     }
     /**
-     * Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
+     * @return Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

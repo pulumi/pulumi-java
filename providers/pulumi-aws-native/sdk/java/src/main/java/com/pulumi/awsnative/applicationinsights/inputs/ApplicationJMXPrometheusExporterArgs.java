@@ -26,6 +26,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="hostPort")
     private @Nullable Output<String> hostPort;
 
+    /**
+     * @return Java agent host port
+     * 
+     */
     public Optional<Output<String>> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
@@ -37,6 +41,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="jMXURL")
     private @Nullable Output<String> jMXURL;
 
+    /**
+     * @return JMX service URL.
+     * 
+     */
     public Optional<Output<String>> jMXURL() {
         return Optional.ofNullable(this.jMXURL);
     }
@@ -48,6 +56,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
     @Import(name="prometheusPort")
     private @Nullable Output<String> prometheusPort;
 
+    /**
+     * @return Prometheus exporter port.
+     * 
+     */
     public Optional<Output<String>> prometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }
@@ -78,29 +90,65 @@ public final class ApplicationJMXPrometheusExporterArgs extends com.pulumi.resou
             $ = new ApplicationJMXPrometheusExporterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostPort Java agent host port
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(@Nullable Output<String> hostPort) {
             $.hostPort = hostPort;
             return this;
         }
 
+        /**
+         * @param hostPort Java agent host port
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPort(String hostPort) {
             return hostPort(Output.of(hostPort));
         }
 
+        /**
+         * @param jMXURL JMX service URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jMXURL(@Nullable Output<String> jMXURL) {
             $.jMXURL = jMXURL;
             return this;
         }
 
+        /**
+         * @param jMXURL JMX service URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jMXURL(String jMXURL) {
             return jMXURL(Output.of(jMXURL));
         }
 
+        /**
+         * @param prometheusPort Prometheus exporter port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
             $.prometheusPort = prometheusPort;
             return this;
         }
 
+        /**
+         * @param prometheusPort Prometheus exporter port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prometheusPort(String prometheusPort) {
             return prometheusPort(Output.of(prometheusPort));
         }

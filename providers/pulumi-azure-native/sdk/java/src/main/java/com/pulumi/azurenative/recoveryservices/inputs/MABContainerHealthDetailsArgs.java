@@ -28,6 +28,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="code")
     private @Nullable Output<Integer> code;
 
+    /**
+     * @return Health Code
+     * 
+     */
     public Optional<Output<Integer>> code() {
         return Optional.ofNullable(this.code);
     }
@@ -39,6 +43,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return Health Message
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -50,6 +58,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="recommendations")
     private @Nullable Output<List<String>> recommendations;
 
+    /**
+     * @return Health Recommended Actions
+     * 
+     */
     public Optional<Output<List<String>>> recommendations() {
         return Optional.ofNullable(this.recommendations);
     }
@@ -61,6 +73,10 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Health Title
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -92,42 +108,96 @@ public final class MABContainerHealthDetailsArgs extends com.pulumi.resources.Re
             $ = new MABContainerHealthDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Health Code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Output<Integer> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Health Code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Integer code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param message Health Message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message Health Message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(@Nullable Output<List<String>> recommendations) {
             $.recommendations = recommendations;
             return this;
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(List<String> recommendations) {
             return recommendations(Output.of(recommendations));
         }
 
+        /**
+         * @param recommendations Health Recommended Actions
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendations(String... recommendations) {
             return recommendations(List.of(recommendations));
         }
 
+        /**
+         * @param title Health Title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Health Title
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

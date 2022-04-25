@@ -29,6 +29,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="caching")
     private @Nullable String caching;
 
+    /**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -40,6 +44,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="createOption", required=true)
     private String createOption;
 
+    /**
+     * @return The create option.
+     * 
+     */
     public String createOption() {
         return this.createOption;
     }
@@ -51,6 +59,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="diskIOPSReadWrite")
     private @Nullable Double diskIOPSReadWrite;
 
+    /**
+     * @return Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * 
+     */
     public Optional<Double> diskIOPSReadWrite() {
         return Optional.ofNullable(this.diskIOPSReadWrite);
     }
@@ -62,6 +74,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="diskMBpsReadWrite")
     private @Nullable Double diskMBpsReadWrite;
 
+    /**
+     * @return Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * 
+     */
     public Optional<Double> diskMBpsReadWrite() {
         return Optional.ofNullable(this.diskMBpsReadWrite);
     }
@@ -73,6 +89,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="diskSizeGB")
     private @Nullable Integer diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -84,6 +104,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="lun", required=true)
     private Integer lun;
 
+    /**
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     public Integer lun() {
         return this.lun;
     }
@@ -95,6 +119,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="managedDisk")
     private @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
+    /**
+     * @return The managed disk parameters.
+     * 
+     */
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -106,6 +134,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -117,6 +149,10 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
     @Import(name="writeAcceleratorEnabled")
     private @Nullable Boolean writeAcceleratorEnabled;
 
+    /**
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     public Optional<Boolean> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
@@ -153,46 +189,100 @@ public final class VirtualMachineScaleSetDataDiskResponse extends com.pulumi.res
             $ = new VirtualMachineScaleSetDataDiskResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable String caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param createOption The create option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param diskIOPSReadWrite Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             $.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
 
+        /**
+         * @param diskMBpsReadWrite Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             $.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param managedDisk The managed disk parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param writeAcceleratorEnabled Specifies whether writeAccelerator should be enabled or disabled on the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;

@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetMaintenanceConfigurationResult {
     /**
-     * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
+     * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
      */
     private final @Nullable Map<String,String> extensionProperties;
     /**
-     * Fully qualified identifier of the resource
+     * @return Fully qualified identifier of the resource
      * 
      */
     private final String id;
     /**
-     * Gets or sets location of the resource
+     * @return Gets or sets location of the resource
      * 
      */
     private final @Nullable String location;
     /**
-     * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+     * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
      */
     private final @Nullable String maintenanceScope;
     /**
-     * Name of the resource
+     * @return Name of the resource
      * 
      */
     private final String name;
     /**
-     * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
+     * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
      */
     private final @Nullable String namespace;
     /**
-     * Gets or sets tags of the resource
+     * @return Gets or sets tags of the resource
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class GetMaintenanceConfigurationResult {
     }
 
     /**
-     * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
+     * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
-    */
+     */
     public Map<String,String> extensionProperties() {
         return this.extensionProperties == null ? Map.of() : this.extensionProperties;
     }
     /**
-     * Fully qualified identifier of the resource
+     * @return Fully qualified identifier of the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets location of the resource
+     * @return Gets or sets location of the resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+     * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
-    */
+     */
     public Optional<String> maintenanceScope() {
         return Optional.ofNullable(this.maintenanceScope);
     }
     /**
-     * Name of the resource
+     * @return Name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
+     * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Gets or sets tags of the resource
+     * @return Gets or sets tags of the resource
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the resource
+     * @return Type of the resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

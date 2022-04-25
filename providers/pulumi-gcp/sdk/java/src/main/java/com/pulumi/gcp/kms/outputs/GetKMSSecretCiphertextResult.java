@@ -10,13 +10,13 @@ import java.util.Objects;
 @CustomType
 public final class GetKMSSecretCiphertextResult {
     /**
-     * Contains the result of encrypting the provided plaintext, encoded in base64.
+     * @return Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
      */
     private final String ciphertext;
     private final String cryptoKey;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -35,9 +35,9 @@ public final class GetKMSSecretCiphertextResult {
     }
 
     /**
-     * Contains the result of encrypting the provided plaintext, encoded in base64.
+     * @return Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
-    */
+     */
     public String ciphertext() {
         return this.ciphertext;
     }
@@ -45,9 +45,9 @@ public final class GetKMSSecretCiphertextResult {
         return this.cryptoKey;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

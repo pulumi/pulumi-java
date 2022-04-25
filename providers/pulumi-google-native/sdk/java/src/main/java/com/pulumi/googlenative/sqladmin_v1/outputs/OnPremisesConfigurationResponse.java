@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class OnPremisesConfigurationResponse {
     /**
-     * PEM representation of the trusted CA&#39;s x509 certificate.
+     * @return PEM representation of the trusted CA&#39;s x509 certificate.
      * 
      */
     private final String caCertificate;
     /**
-     * PEM representation of the replica&#39;s x509 certificate.
+     * @return PEM representation of the replica&#39;s x509 certificate.
      * 
      */
     private final String clientCertificate;
     /**
-     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+     * @return PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
      */
     private final String clientKey;
     /**
-     * The dump file to create the Cloud SQL replica.
+     * @return The dump file to create the Cloud SQL replica.
      * 
      */
     private final String dumpFilePath;
     /**
-     * The host and port of the on-premises instance in host:port format
+     * @return The host and port of the on-premises instance in host:port format
      * 
      */
     private final String hostPort;
     /**
-     * This is always `sql#onPremisesConfiguration`.
+     * @return This is always `sql#onPremisesConfiguration`.
      * 
      */
     private final String kind;
     /**
-     * The password for connecting to on-premises instance.
+     * @return The password for connecting to on-premises instance.
      * 
      */
     private final String password;
     /**
-     * The reference to Cloud SQL instance if the source is Cloud SQL.
+     * @return The reference to Cloud SQL instance if the source is Cloud SQL.
      * 
      */
     private final InstanceReferenceResponse sourceInstance;
     /**
-     * The username for connecting to on-premises instance.
+     * @return The username for connecting to on-premises instance.
      * 
      */
     private final String username;
@@ -79,65 +79,65 @@ public final class OnPremisesConfigurationResponse {
     }
 
     /**
-     * PEM representation of the trusted CA&#39;s x509 certificate.
+     * @return PEM representation of the trusted CA&#39;s x509 certificate.
      * 
-    */
+     */
     public String caCertificate() {
         return this.caCertificate;
     }
     /**
-     * PEM representation of the replica&#39;s x509 certificate.
+     * @return PEM representation of the replica&#39;s x509 certificate.
      * 
-    */
+     */
     public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
-     * PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
+     * @return PEM representation of the replica&#39;s private key. The corresponsing public key is encoded in the client&#39;s certificate.
      * 
-    */
+     */
     public String clientKey() {
         return this.clientKey;
     }
     /**
-     * The dump file to create the Cloud SQL replica.
+     * @return The dump file to create the Cloud SQL replica.
      * 
-    */
+     */
     public String dumpFilePath() {
         return this.dumpFilePath;
     }
     /**
-     * The host and port of the on-premises instance in host:port format
+     * @return The host and port of the on-premises instance in host:port format
      * 
-    */
+     */
     public String hostPort() {
         return this.hostPort;
     }
     /**
-     * This is always `sql#onPremisesConfiguration`.
+     * @return This is always `sql#onPremisesConfiguration`.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The password for connecting to on-premises instance.
+     * @return The password for connecting to on-premises instance.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The reference to Cloud SQL instance if the source is Cloud SQL.
+     * @return The reference to Cloud SQL instance if the source is Cloud SQL.
      * 
-    */
+     */
     public InstanceReferenceResponse sourceInstance() {
         return this.sourceInstance;
     }
     /**
-     * The username for connecting to on-premises instance.
+     * @return The username for connecting to on-premises instance.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCloudServiceResult {
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Cloud service properties
+     * @return Cloud service properties
      * 
      */
     private final CloudServicePropertiesResponse properties;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetCloudServiceResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Cloud service properties
+     * @return Cloud service properties
      * 
-    */
+     */
     public CloudServicePropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

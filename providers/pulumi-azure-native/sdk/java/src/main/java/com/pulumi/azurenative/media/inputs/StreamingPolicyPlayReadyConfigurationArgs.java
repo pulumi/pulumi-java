@@ -26,6 +26,10 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends com.pulumi.
     @Import(name="customLicenseAcquisitionUrlTemplate")
     private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
+    /**
+     * @return Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+     * 
+     */
     public Optional<Output<String>> customLicenseAcquisitionUrlTemplate() {
         return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
@@ -37,6 +41,10 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends com.pulumi.
     @Import(name="playReadyCustomAttributes")
     private @Nullable Output<String> playReadyCustomAttributes;
 
+    /**
+     * @return Custom attributes for PlayReady
+     * 
+     */
     public Optional<Output<String>> playReadyCustomAttributes() {
         return Optional.ofNullable(this.playReadyCustomAttributes);
     }
@@ -66,20 +74,44 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends com.pulumi.
             $ = new StreamingPolicyPlayReadyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customLicenseAcquisitionUrlTemplate Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
             $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
 
+        /**
+         * @param customLicenseAcquisitionUrlTemplate Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customLicenseAcquisitionUrlTemplate(String customLicenseAcquisitionUrlTemplate) {
             return customLicenseAcquisitionUrlTemplate(Output.of(customLicenseAcquisitionUrlTemplate));
         }
 
+        /**
+         * @param playReadyCustomAttributes Custom attributes for PlayReady
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReadyCustomAttributes(@Nullable Output<String> playReadyCustomAttributes) {
             $.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
 
+        /**
+         * @param playReadyCustomAttributes Custom attributes for PlayReady
+         * 
+         * @return builder
+         * 
+         */
         public Builder playReadyCustomAttributes(String playReadyCustomAttributes) {
             return playReadyCustomAttributes(Output.of(playReadyCustomAttributes));
         }

@@ -30,6 +30,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -41,6 +45,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="common")
     private @Nullable Output<Boolean> common;
 
+    /**
+     * @return Whether the application is commonly run on the machine
+     * 
+     */
     public Optional<Output<Boolean>> common() {
         return Optional.ofNullable(this.common);
     }
@@ -52,6 +60,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="configurationStatus")
     private @Nullable Output<String> configurationStatus;
 
+    /**
+     * @return The configuration status of the machines group or machine or rule
+     * 
+     */
     public Optional<Output<String>> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
@@ -63,6 +75,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="fileType")
     private @Nullable Output<String> fileType;
 
+    /**
+     * @return The type of the file (for Linux files - Executable is used)
+     * 
+     */
     public Optional<Output<String>> fileType() {
         return Optional.ofNullable(this.fileType);
     }
@@ -74,6 +90,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The full path of the file, or an identifier of the application
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -85,6 +105,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="publisherInfo")
     private @Nullable Output<PublisherInfoArgs> publisherInfo;
 
+    /**
+     * @return Represents the publisher information of a process/rule
+     * 
+     */
     public Optional<Output<PublisherInfoArgs>> publisherInfo() {
         return Optional.ofNullable(this.publisherInfo);
     }
@@ -96,6 +120,10 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the rule to be allowed
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -146,65 +174,149 @@ public final class PathRecommendationArgs extends com.pulumi.resources.ResourceA
             $ = new PathRecommendationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param common Whether the application is commonly run on the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder common(@Nullable Output<Boolean> common) {
             $.common = common;
             return this;
         }
 
+        /**
+         * @param common Whether the application is commonly run on the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder common(Boolean common) {
             return common(Output.of(common));
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
             $.configurationStatus = configurationStatus;
             return this;
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(String configurationStatus) {
             return configurationStatus(Output.of(configurationStatus));
         }
 
+        /**
+         * @param fileType The type of the file (for Linux files - Executable is used)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(@Nullable Output<String> fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param fileType The type of the file (for Linux files - Executable is used)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(String fileType) {
             return fileType(Output.of(fileType));
         }
 
+        /**
+         * @param path The full path of the file, or an identifier of the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The full path of the file, or an identifier of the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param publisherInfo Represents the publisher information of a process/rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherInfo(@Nullable Output<PublisherInfoArgs> publisherInfo) {
             $.publisherInfo = publisherInfo;
             return this;
         }
 
+        /**
+         * @param publisherInfo Represents the publisher information of a process/rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherInfo(PublisherInfoArgs publisherInfo) {
             return publisherInfo(Output.of(publisherInfo));
         }
 
+        /**
+         * @param type The type of the rule to be allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the rule to be allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

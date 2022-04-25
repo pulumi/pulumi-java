@@ -23,6 +23,10 @@ public final class QueryContentResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="iamPolicyAnalysisQuery", required=true)
     private IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
+    /**
+     * @return An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+     * 
+     */
     public IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }
@@ -51,6 +55,12 @@ public final class QueryContentResponse extends com.pulumi.resources.InvokeArgs 
             $ = new QueryContentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param iamPolicyAnalysisQuery An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
             $.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
             return this;

@@ -27,6 +27,10 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
     @Import(name="type")
     private @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
 
+    /**
+     * @return The type of source access configuration.
+     * 
+     */
     public Optional<Output<EventSourceMappingSourceAccessConfigurationType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -38,6 +42,10 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
     @Import(name="uRI")
     private @Nullable Output<String> uRI;
 
+    /**
+     * @return The URI for the source access configuration resource.
+     * 
+     */
     public Optional<Output<String>> uRI() {
         return Optional.ofNullable(this.uRI);
     }
@@ -67,20 +75,44 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
             $ = new EventSourceMappingSourceAccessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of source access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<EventSourceMappingSourceAccessConfigurationType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of source access configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EventSourceMappingSourceAccessConfigurationType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param uRI The URI for the source access configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRI(@Nullable Output<String> uRI) {
             $.uRI = uRI;
             return this;
         }
 
+        /**
+         * @param uRI The URI for the source access configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRI(String uRI) {
             return uRI(Output.of(uRI));
         }

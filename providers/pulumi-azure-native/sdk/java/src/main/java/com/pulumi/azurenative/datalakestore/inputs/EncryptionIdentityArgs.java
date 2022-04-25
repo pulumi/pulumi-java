@@ -24,6 +24,10 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
     private Output<EncryptionIdentityType> type;
 
+    /**
+     * @return The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
+     * 
+     */
     public Output<EncryptionIdentityType> type() {
         return this.type;
     }
@@ -52,11 +56,23 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
             $ = new EncryptionIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<EncryptionIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(EncryptionIdentityType type) {
             return type(Output.of(type));
         }

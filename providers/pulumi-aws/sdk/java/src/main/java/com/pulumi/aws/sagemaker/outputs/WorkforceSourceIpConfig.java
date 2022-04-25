@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WorkforceSourceIpConfig {
     /**
-     * A list of up to 10 CIDR values.
+     * @return A list of up to 10 CIDR values.
      * 
      */
     private final List<String> cidrs;
@@ -22,9 +22,9 @@ public final class WorkforceSourceIpConfig {
     }
 
     /**
-     * A list of up to 10 CIDR values.
+     * @return A list of up to 10 CIDR values.
      * 
-    */
+     */
     public List<String> cidrs() {
         return this.cidrs;
     }

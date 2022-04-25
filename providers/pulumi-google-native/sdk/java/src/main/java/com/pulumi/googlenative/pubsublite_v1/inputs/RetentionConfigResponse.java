@@ -23,6 +23,10 @@ public final class RetentionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="perPartitionBytes", required=true)
     private String perPartitionBytes;
 
+    /**
+     * @return The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * 
+     */
     public String perPartitionBytes() {
         return this.perPartitionBytes;
     }
@@ -34,6 +38,10 @@ public final class RetentionConfigResponse extends com.pulumi.resources.InvokeAr
     @Import(name="period", required=true)
     private String period;
 
+    /**
+     * @return How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
+     * 
+     */
     public String period() {
         return this.period;
     }
@@ -63,11 +71,23 @@ public final class RetentionConfigResponse extends com.pulumi.resources.InvokeAr
             $ = new RetentionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param perPartitionBytes The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perPartitionBytes(String perPartitionBytes) {
             $.perPartitionBytes = perPartitionBytes;
             return this;
         }
 
+        /**
+         * @param period How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(String period) {
             $.period = period;
             return this;

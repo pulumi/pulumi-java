@@ -26,6 +26,10 @@ public final class MaintenanceExclusionOptionsArgs extends com.pulumi.resources.
     @Import(name="scope")
     private @Nullable Output<MaintenanceExclusionOptionsScope> scope;
 
+    /**
+     * @return Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+     * 
+     */
     public Optional<Output<MaintenanceExclusionOptionsScope>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -54,11 +58,23 @@ public final class MaintenanceExclusionOptionsArgs extends com.pulumi.resources.
             $ = new MaintenanceExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<MaintenanceExclusionOptionsScope> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(MaintenanceExclusionOptionsScope scope) {
             return scope(Output.of(scope));
         }

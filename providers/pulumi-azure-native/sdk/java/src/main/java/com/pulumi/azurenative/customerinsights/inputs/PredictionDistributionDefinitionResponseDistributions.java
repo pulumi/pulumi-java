@@ -26,6 +26,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="negatives")
     private @Nullable Double negatives;
 
+    /**
+     * @return Number of negatives.
+     * 
+     */
     public Optional<Double> negatives() {
         return Optional.ofNullable(this.negatives);
     }
@@ -37,6 +41,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="negativesAboveThreshold")
     private @Nullable Double negativesAboveThreshold;
 
+    /**
+     * @return Number of negatives above threshold.
+     * 
+     */
     public Optional<Double> negativesAboveThreshold() {
         return Optional.ofNullable(this.negativesAboveThreshold);
     }
@@ -48,6 +56,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="positives")
     private @Nullable Double positives;
 
+    /**
+     * @return Number of positives.
+     * 
+     */
     public Optional<Double> positives() {
         return Optional.ofNullable(this.positives);
     }
@@ -59,6 +71,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="positivesAboveThreshold")
     private @Nullable Double positivesAboveThreshold;
 
+    /**
+     * @return Number of positives above threshold.
+     * 
+     */
     public Optional<Double> positivesAboveThreshold() {
         return Optional.ofNullable(this.positivesAboveThreshold);
     }
@@ -70,6 +86,10 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="scoreThreshold")
     private @Nullable Integer scoreThreshold;
 
+    /**
+     * @return Score threshold.
+     * 
+     */
     public Optional<Integer> scoreThreshold() {
         return Optional.ofNullable(this.scoreThreshold);
     }
@@ -102,26 +122,56 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
             $ = new PredictionDistributionDefinitionResponseDistributions(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param negatives Number of negatives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negatives(@Nullable Double negatives) {
             $.negatives = negatives;
             return this;
         }
 
+        /**
+         * @param negativesAboveThreshold Number of negatives above threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
             $.negativesAboveThreshold = negativesAboveThreshold;
             return this;
         }
 
+        /**
+         * @param positives Number of positives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positives(@Nullable Double positives) {
             $.positives = positives;
             return this;
         }
 
+        /**
+         * @param positivesAboveThreshold Number of positives above threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder positivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
             $.positivesAboveThreshold = positivesAboveThreshold;
             return this;
         }
 
+        /**
+         * @param scoreThreshold Score threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoreThreshold(@Nullable Integer scoreThreshold) {
             $.scoreThreshold = scoreThreshold;
             return this;

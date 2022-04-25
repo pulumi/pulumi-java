@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class CustomAccountResponse {
     /**
-     * The login form URL of the website.
+     * @return The login form URL of the website.
      * 
      */
     private final String loginUrl;
     /**
-     * Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * @return Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
      * 
      */
     private final String password;
     /**
-     * The user name of the custom account.
+     * @return The user name of the custom account.
      * 
      */
     private final String username;
@@ -36,23 +36,23 @@ public final class CustomAccountResponse {
     }
 
     /**
-     * The login form URL of the website.
+     * @return The login form URL of the website.
      * 
-    */
+     */
     public String loginUrl() {
         return this.loginUrl;
     }
     /**
-     * Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+     * @return Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The user name of the custom account.
+     * @return The user name of the custom account.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

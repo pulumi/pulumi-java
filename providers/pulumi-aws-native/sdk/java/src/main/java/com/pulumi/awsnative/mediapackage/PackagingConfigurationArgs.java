@@ -28,6 +28,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="cmafPackage")
     private @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
+    /**
+     * @return A CMAF packaging configuration.
+     * 
+     */
     public Optional<Output<PackagingConfigurationCmafPackageArgs>> cmafPackage() {
         return Optional.ofNullable(this.cmafPackage);
     }
@@ -39,6 +43,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="dashPackage")
     private @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
+    /**
+     * @return A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+     * 
+     */
     public Optional<Output<PackagingConfigurationDashPackageArgs>> dashPackage() {
         return Optional.ofNullable(this.dashPackage);
     }
@@ -50,6 +58,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="hlsPackage")
     private @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
+    /**
+     * @return An HTTP Live Streaming (HLS) packaging configuration.
+     * 
+     */
     public Optional<Output<PackagingConfigurationHlsPackageArgs>> hlsPackage() {
         return Optional.ofNullable(this.hlsPackage);
     }
@@ -61,6 +73,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="mssPackage")
     private @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
+    /**
+     * @return A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+     * 
+     */
     public Optional<Output<PackagingConfigurationMssPackageArgs>> mssPackage() {
         return Optional.ofNullable(this.mssPackage);
     }
@@ -72,6 +88,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="packagingGroupId", required=true)
     private Output<String> packagingGroupId;
 
+    /**
+     * @return The ID of a PackagingGroup.
+     * 
+     */
     public Output<String> packagingGroupId() {
         return this.packagingGroupId;
     }
@@ -83,6 +103,10 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<PackagingConfigurationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -116,60 +140,138 @@ public final class PackagingConfigurationArgs extends com.pulumi.resources.Resou
             $ = new PackagingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmafPackage A CMAF packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmafPackage(@Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage) {
             $.cmafPackage = cmafPackage;
             return this;
         }
 
+        /**
+         * @param cmafPackage A CMAF packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmafPackage(PackagingConfigurationCmafPackageArgs cmafPackage) {
             return cmafPackage(Output.of(cmafPackage));
         }
 
+        /**
+         * @param dashPackage A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashPackage(@Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage) {
             $.dashPackage = dashPackage;
             return this;
         }
 
+        /**
+         * @param dashPackage A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashPackage(PackagingConfigurationDashPackageArgs dashPackage) {
             return dashPackage(Output.of(dashPackage));
         }
 
+        /**
+         * @param hlsPackage An HTTP Live Streaming (HLS) packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsPackage(@Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage) {
             $.hlsPackage = hlsPackage;
             return this;
         }
 
+        /**
+         * @param hlsPackage An HTTP Live Streaming (HLS) packaging configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsPackage(PackagingConfigurationHlsPackageArgs hlsPackage) {
             return hlsPackage(Output.of(hlsPackage));
         }
 
+        /**
+         * @param mssPackage A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssPackage(@Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage) {
             $.mssPackage = mssPackage;
             return this;
         }
 
+        /**
+         * @param mssPackage A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssPackage(PackagingConfigurationMssPackageArgs mssPackage) {
             return mssPackage(Output.of(mssPackage));
         }
 
+        /**
+         * @param packagingGroupId The ID of a PackagingGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagingGroupId(Output<String> packagingGroupId) {
             $.packagingGroupId = packagingGroupId;
             return this;
         }
 
+        /**
+         * @param packagingGroupId The ID of a PackagingGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagingGroupId(String packagingGroupId) {
             return packagingGroupId(Output.of(packagingGroupId));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<PackagingConfigurationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(PackagingConfigurationTagArgs... tags) {
             return tags(List.of(tags));
         }

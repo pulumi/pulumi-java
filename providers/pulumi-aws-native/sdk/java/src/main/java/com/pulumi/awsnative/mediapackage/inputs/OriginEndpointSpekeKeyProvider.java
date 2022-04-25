@@ -26,6 +26,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
     @Import(name="certificateArn")
     private @Nullable String certificateArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+     * 
+     */
     public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
@@ -37,6 +41,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The resource ID to include in key requests.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -48,6 +56,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -59,6 +71,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
     @Import(name="systemIds", required=true)
     private List<String> systemIds;
 
+    /**
+     * @return The system IDs to include in key requests.
+     * 
+     */
     public List<String> systemIds() {
         return this.systemIds;
     }
@@ -70,6 +86,10 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of the external key provider service.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -102,30 +122,66 @@ public final class OriginEndpointSpekeKeyProvider extends com.pulumi.resources.I
             $ = new OriginEndpointSpekeKeyProvider(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateArn An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateArn(@Nullable String certificateArn) {
             $.certificateArn = certificateArn;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param roleArn An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(List<String> systemIds) {
             $.systemIds = systemIds;
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

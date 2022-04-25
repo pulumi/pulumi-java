@@ -31,6 +31,13 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
     @Import(name="copySourceArn")
     private @Nullable Output<String> copySourceArn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of a data source that has the credential pair that you
+     *             want to use. When &lt;code&gt;CopySourceArn&lt;/code&gt; is not null, the credential pair from the
+     *             data source in the ARN is used as the credentials for the
+     *             &lt;code&gt;DataSourceCredentials&lt;/code&gt; structure.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> copySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
@@ -67,11 +74,29 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
             $ = new DataSourceCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copySourceArn &lt;p&gt;The Amazon Resource Name (ARN) of a data source that has the credential pair that you
+         *             want to use. When &lt;code&gt;CopySourceArn&lt;/code&gt; is not null, the credential pair from the
+         *             data source in the ARN is used as the credentials for the
+         *             &lt;code&gt;DataSourceCredentials&lt;/code&gt; structure.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder copySourceArn(@Nullable Output<String> copySourceArn) {
             $.copySourceArn = copySourceArn;
             return this;
         }
 
+        /**
+         * @param copySourceArn &lt;p&gt;The Amazon Resource Name (ARN) of a data source that has the credential pair that you
+         *             want to use. When &lt;code&gt;CopySourceArn&lt;/code&gt; is not null, the credential pair from the
+         *             data source in the ARN is used as the credentials for the
+         *             &lt;code&gt;DataSourceCredentials&lt;/code&gt; structure.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder copySourceArn(String copySourceArn) {
             return copySourceArn(Output.of(copySourceArn));
         }

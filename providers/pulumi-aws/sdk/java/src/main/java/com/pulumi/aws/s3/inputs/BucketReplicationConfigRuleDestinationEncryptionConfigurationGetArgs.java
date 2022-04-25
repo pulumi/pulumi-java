@@ -20,6 +20,10 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
     @Import(name="replicaKmsKeyId", required=true)
     private Output<String> replicaKmsKeyId;
 
+    /**
+     * @return The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
+     * 
+     */
     public Output<String> replicaKmsKeyId() {
         return this.replicaKmsKeyId;
     }
@@ -48,11 +52,23 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
             $ = new BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicaKmsKeyId The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaKmsKeyId(Output<String> replicaKmsKeyId) {
             $.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
 
+        /**
+         * @param replicaKmsKeyId The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaKmsKeyId(String replicaKmsKeyId) {
             return replicaKmsKeyId(Output.of(replicaKmsKeyId));
         }

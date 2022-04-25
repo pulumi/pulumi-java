@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends com.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends com.
     @Import(name="properties", required=true)
     private VaultPrivateEndpointConnectionResponse properties;
 
+    /**
+     * @return Private Endpoint Connection Response Properties.
+     * 
+     */
     public VaultPrivateEndpointConnectionResponse properties() {
         return this.properties;
     }
@@ -64,11 +72,23 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends com.
             $ = new PrivateEndpointConnectionVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param properties Private Endpoint Connection Response Properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(VaultPrivateEndpointConnectionResponse properties) {
             $.properties = properties;
             return this;

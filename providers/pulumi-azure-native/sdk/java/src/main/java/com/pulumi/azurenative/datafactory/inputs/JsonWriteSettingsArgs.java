@@ -28,6 +28,10 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filePattern")
     private @Nullable Output<Object> filePattern;
 
+    /**
+     * @return File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+     * 
+     */
     public Optional<Output<Object>> filePattern() {
         return Optional.ofNullable(this.filePattern);
     }
@@ -40,6 +44,11 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;JsonWriteSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -69,20 +78,46 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new JsonWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePattern File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(@Nullable Output<Object> filePattern) {
             $.filePattern = filePattern;
             return this;
         }
 
+        /**
+         * @param filePattern File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is &#39;setOfObjects&#39;. It is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePattern(Object filePattern) {
             return filePattern(Output.of(filePattern));
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;JsonWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;JsonWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

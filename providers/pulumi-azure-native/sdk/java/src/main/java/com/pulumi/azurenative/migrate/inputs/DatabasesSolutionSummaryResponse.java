@@ -27,6 +27,10 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="databaseInstancesAssessedCount")
     private @Nullable Integer databaseInstancesAssessedCount;
 
+    /**
+     * @return Gets or sets the count of database instances assessed.
+     * 
+     */
     public Optional<Integer> databaseInstancesAssessedCount() {
         return Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
@@ -38,6 +42,10 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="databasesAssessedCount")
     private @Nullable Integer databasesAssessedCount;
 
+    /**
+     * @return Gets or sets the count of databases assessed.
+     * 
+     */
     public Optional<Integer> databasesAssessedCount() {
         return Optional.ofNullable(this.databasesAssessedCount);
     }
@@ -50,6 +58,11 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;Databases&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -61,6 +74,10 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
     @Import(name="migrationReadyCount")
     private @Nullable Integer migrationReadyCount;
 
+    /**
+     * @return Gets or sets the count of databases ready for migration.
+     * 
+     */
     public Optional<Integer> migrationReadyCount() {
         return Optional.ofNullable(this.migrationReadyCount);
     }
@@ -92,21 +109,46 @@ public final class DatabasesSolutionSummaryResponse extends com.pulumi.resources
             $ = new DatabasesSolutionSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseInstancesAssessedCount Gets or sets the count of database instances assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseInstancesAssessedCount(@Nullable Integer databaseInstancesAssessedCount) {
             $.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
             return this;
         }
 
+        /**
+         * @param databasesAssessedCount Gets or sets the count of databases assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesAssessedCount(@Nullable Integer databasesAssessedCount) {
             $.databasesAssessedCount = databasesAssessedCount;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;Databases&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param migrationReadyCount Gets or sets the count of databases ready for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationReadyCount(@Nullable Integer migrationReadyCount) {
             $.migrationReadyCount = migrationReadyCount;
             return this;

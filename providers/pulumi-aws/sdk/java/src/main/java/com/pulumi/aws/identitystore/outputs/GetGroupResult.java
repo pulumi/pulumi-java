@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupResult {
     /**
-     * The group&#39;s display name value.
+     * @return The group&#39;s display name value.
      * 
      */
     private final String displayName;
     private final List<GetGroupFilter> filters;
     private final String groupId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -40,9 +40,9 @@ public final class GetGroupResult {
     }
 
     /**
-     * The group&#39;s display name value.
+     * @return The group&#39;s display name value.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -53,9 +53,9 @@ public final class GetGroupResult {
         return this.groupId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

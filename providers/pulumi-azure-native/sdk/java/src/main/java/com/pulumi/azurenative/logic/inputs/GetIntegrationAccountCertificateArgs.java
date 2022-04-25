@@ -19,6 +19,10 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return The integration account certificate name.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -30,6 +34,10 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -41,6 +49,10 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetIntegrationAccountCertificateArgs extends com.pulumi.resou
             $ = new GetIntegrationAccountCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The integration account certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -23,6 +23,10 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
     @Import(name="attachedDatabaseConfigurationName", required=true)
     private String attachedDatabaseConfigurationName;
 
+    /**
+     * @return Resource name of the attached database configuration in the follower cluster.
+     * 
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
@@ -34,6 +38,10 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The database name owned by this cluster that was followed. * in case following all databases.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -45,6 +53,10 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
     @Import(name="kustoPoolResourceId", required=true)
     private String kustoPoolResourceId;
 
+    /**
+     * @return Resource id of the cluster that follows a database owned by this cluster.
+     * 
+     */
     public String kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
@@ -75,16 +87,34 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
             $ = new FollowerDatabaseDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedDatabaseConfigurationName Resource name of the attached database configuration in the follower cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
+        /**
+         * @param databaseName The database name owned by this cluster that was followed. * in case following all databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param kustoPoolResourceId Resource id of the cluster that follows a database owned by this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             $.kustoPoolResourceId = kustoPoolResourceId;
             return this;

@@ -28,6 +28,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.re
     @Import(name="infoTypes")
     private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
+    /**
+     * @return List of infoTypes this rule set is applied to.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2InfoTypeArgs>>> infoTypes() {
         return Optional.ofNullable(this.infoTypes);
     }
@@ -39,6 +43,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.re
     @Import(name="rules")
     private @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
 
+    /**
+     * @return Set of rules to be applied to infoTypes. The rules are applied in order.
+     * 
+     */
     public Optional<Output<List<GooglePrivacyDlpV2InspectionRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -68,28 +76,64 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.re
             $ = new GooglePrivacyDlpV2InspectionRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypes List of infoTypes this rule set is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             $.infoTypes = infoTypes;
             return this;
         }
 
+        /**
+         * @param infoTypes List of infoTypes this rule set is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             return infoTypes(Output.of(infoTypes));
         }
 
+        /**
+         * @param infoTypes List of infoTypes this rule set is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<GooglePrivacyDlpV2InspectionRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Set of rules to be applied to infoTypes. The rules are applied in order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(GooglePrivacyDlpV2InspectionRuleArgs... rules) {
             return rules(List.of(rules));
         }

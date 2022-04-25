@@ -19,6 +19,10 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
     @Import(name="dnsZoneId", required=true)
     private String dnsZoneId;
 
+    /**
+     * @return NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+     * 
+     */
     public String dnsZoneId() {
         return this.dnsZoneId;
     }
@@ -30,6 +34,10 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
     @Import(name="privateCloudName", required=true)
     private String privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
@@ -41,6 +49,10 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
             $ = new GetWorkloadNetworkDnsZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsZoneId NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsZoneId(String dnsZoneId) {
             $.dnsZoneId = dnsZoneId;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

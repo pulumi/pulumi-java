@@ -24,6 +24,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchFilter")
     private @Nullable Output<String> branchFilter;
 
+    /**
+     * @return A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+     * 
+     */
     public Optional<Output<String>> branchFilter() {
         return Optional.ofNullable(this.branchFilter);
     }
@@ -35,6 +39,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
     private @Nullable Output<String> buildType;
 
+    /**
+     * @return The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+     * 
+     */
     public Optional<Output<String>> buildType() {
         return Optional.ofNullable(this.buildType);
     }
@@ -46,6 +54,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterGroups")
     private @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
 
+    /**
+     * @return Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+     * 
+     */
     public Optional<Output<List<WebhookFilterGroupGetArgs>>> filterGroups() {
         return Optional.ofNullable(this.filterGroups);
     }
@@ -57,6 +69,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="payloadUrl")
     private @Nullable Output<String> payloadUrl;
 
+    /**
+     * @return The CodeBuild endpoint where webhook events are sent.
+     * 
+     */
     public Optional<Output<String>> payloadUrl() {
         return Optional.ofNullable(this.payloadUrl);
     }
@@ -68,6 +84,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
     private @Nullable Output<String> projectName;
 
+    /**
+     * @return The name of the build project.
+     * 
+     */
     public Optional<Output<String>> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -79,6 +99,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -90,6 +114,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The URL to the webhook.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -124,69 +152,159 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branchFilter A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchFilter(@Nullable Output<String> branchFilter) {
             $.branchFilter = branchFilter;
             return this;
         }
 
+        /**
+         * @param branchFilter A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branchFilter(String branchFilter) {
             return branchFilter(Output.of(branchFilter));
         }
 
+        /**
+         * @param buildType The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildType(@Nullable Output<String> buildType) {
             $.buildType = buildType;
             return this;
         }
 
+        /**
+         * @param buildType The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildType(String buildType) {
             return buildType(Output.of(buildType));
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups) {
             $.filterGroups = filterGroups;
             return this;
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(List<WebhookFilterGroupGetArgs> filterGroups) {
             return filterGroups(Output.of(filterGroups));
         }
 
+        /**
+         * @param filterGroups Information about the webhook&#39;s trigger. Filter group blocks are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterGroups(WebhookFilterGroupGetArgs... filterGroups) {
             return filterGroups(List.of(filterGroups));
         }
 
+        /**
+         * @param payloadUrl The CodeBuild endpoint where webhook events are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadUrl(@Nullable Output<String> payloadUrl) {
             $.payloadUrl = payloadUrl;
             return this;
         }
 
+        /**
+         * @param payloadUrl The CodeBuild endpoint where webhook events are sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadUrl(String payloadUrl) {
             return payloadUrl(Output.of(payloadUrl));
         }
 
+        /**
+         * @param projectName The name of the build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(@Nullable Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName The name of the build project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param secret The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param url The URL to the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL to the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

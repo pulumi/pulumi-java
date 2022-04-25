@@ -22,6 +22,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return Name of domain.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -33,6 +37,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -44,6 +52,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of identifier.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="ownershipId")
     private @Nullable Output<String> ownershipId;
 
+    /**
+     * @return Ownership Id.
+     * 
+     */
     public Optional<Output<String>> ownershipId() {
         return Optional.ofNullable(this.ownershipId);
     }
@@ -66,6 +82,10 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -98,47 +118,107 @@ public final class DomainOwnershipIdentifierArgs extends com.pulumi.resources.Re
             $ = new DomainOwnershipIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownershipId Ownership Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownershipId(@Nullable Output<String> ownershipId) {
             $.ownershipId = ownershipId;
             return this;
         }
 
+        /**
+         * @param ownershipId Ownership Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownershipId(String ownershipId) {
             return ownershipId(Output.of(ownershipId));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

@@ -27,6 +27,10 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
     private @Nullable Output<MarkdownPartMetadataArgs> metadata;
 
+    /**
+     * @return The dashboard part&#39;s metadata.
+     * 
+     */
     public Optional<Output<MarkdownPartMetadataArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -38,6 +42,10 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="position", required=true)
     private Output<DashboardPartsPositionArgs> position;
 
+    /**
+     * @return The dashboard&#39;s part position.
+     * 
+     */
     public Output<DashboardPartsPositionArgs> position() {
         return this.position;
     }
@@ -67,20 +75,44 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DashboardPartsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<MarkdownPartMetadataArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(MarkdownPartMetadataArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param position The dashboard&#39;s part position.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Output<DashboardPartsPositionArgs> position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param position The dashboard&#39;s part position.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(DashboardPartsPositionArgs position) {
             return position(Output.of(position));
         }

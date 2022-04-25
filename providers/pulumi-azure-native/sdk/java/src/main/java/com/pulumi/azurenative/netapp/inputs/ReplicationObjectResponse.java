@@ -25,6 +25,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
     @Import(name="endpointType")
     private @Nullable String endpointType;
 
+    /**
+     * @return Indicates whether the local volume is the source or destination for the Volume Replication
+     * 
+     */
     public Optional<String> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
@@ -36,6 +40,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
     @Import(name="remoteVolumeRegion")
     private @Nullable String remoteVolumeRegion;
 
+    /**
+     * @return The remote region for the other end of the Volume Replication.
+     * 
+     */
     public Optional<String> remoteVolumeRegion() {
         return Optional.ofNullable(this.remoteVolumeRegion);
     }
@@ -47,6 +55,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
     @Import(name="remoteVolumeResourceId", required=true)
     private String remoteVolumeResourceId;
 
+    /**
+     * @return The resource ID of the remote volume.
+     * 
+     */
     public String remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
@@ -58,6 +70,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
     @Import(name="replicationId")
     private @Nullable String replicationId;
 
+    /**
+     * @return Id
+     * 
+     */
     public Optional<String> replicationId() {
         return Optional.ofNullable(this.replicationId);
     }
@@ -69,6 +85,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
     @Import(name="replicationSchedule", required=true)
     private String replicationSchedule;
 
+    /**
+     * @return Schedule
+     * 
+     */
     public String replicationSchedule() {
         return this.replicationSchedule;
     }
@@ -101,26 +121,56 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
             $ = new ReplicationObjectResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointType Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(@Nullable String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param remoteVolumeRegion The remote region for the other end of the Volume Replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
             $.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
 
+        /**
+         * @param remoteVolumeResourceId The resource ID of the remote volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             $.remoteVolumeResourceId = remoteVolumeResourceId;
             return this;
         }
 
+        /**
+         * @param replicationId Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationId(@Nullable String replicationId) {
             $.replicationId = replicationId;
             return this;
         }
 
+        /**
+         * @param replicationSchedule Schedule
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationSchedule(String replicationSchedule) {
             $.replicationSchedule = replicationSchedule;
             return this;

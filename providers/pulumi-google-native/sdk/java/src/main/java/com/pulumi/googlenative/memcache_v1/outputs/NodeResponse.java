@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class NodeResponse {
     /**
-     * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+     * @return Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
      * 
      */
     private final String host;
     /**
-     * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+     * @return Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
      * 
      */
     private final String nodeId;
     /**
-     * User defined parameters currently applied to the node.
+     * @return User defined parameters currently applied to the node.
      * 
      */
     private final MemcacheParametersResponse parameters;
     /**
-     * The port number of the Memcached server on this node.
+     * @return The port number of the Memcached server on this node.
      * 
      */
     private final Integer port;
     /**
-     * Current state of the Memcached node.
+     * @return Current state of the Memcached node.
      * 
      */
     private final String state;
     /**
-     * Location (GCP Zone) for the Memcached node.
+     * @return Location (GCP Zone) for the Memcached node.
      * 
      */
     private final String zone;
@@ -59,44 +59,44 @@ public final class NodeResponse {
     }
 
     /**
-     * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
+     * @return Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
+     * @return Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
      * 
-    */
+     */
     public String nodeId() {
         return this.nodeId;
     }
     /**
-     * User defined parameters currently applied to the node.
+     * @return User defined parameters currently applied to the node.
      * 
-    */
+     */
     public MemcacheParametersResponse parameters() {
         return this.parameters;
     }
     /**
-     * The port number of the Memcached server on this node.
+     * @return The port number of the Memcached server on this node.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Current state of the Memcached node.
+     * @return Current state of the Memcached node.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Location (GCP Zone) for the Memcached node.
+     * @return Location (GCP Zone) for the Memcached node.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

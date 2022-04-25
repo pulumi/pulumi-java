@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogMetricTriggerResponse {
     /**
-     * Evaluation of metric on a particular column
+     * @return Evaluation of metric on a particular column
      * 
      */
     private final @Nullable String metricColumn;
     /**
-     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
+     * @return Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
      */
     private final @Nullable String metricTriggerType;
     /**
-     * The threshold of the metric trigger.
+     * @return The threshold of the metric trigger.
      * 
      */
     private final @Nullable Double threshold;
     /**
-     * Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
+     * @return Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
      * 
      */
     private final @Nullable String thresholdOperator;
@@ -46,30 +46,30 @@ public final class LogMetricTriggerResponse {
     }
 
     /**
-     * Evaluation of metric on a particular column
+     * @return Evaluation of metric on a particular column
      * 
-    */
+     */
     public Optional<String> metricColumn() {
         return Optional.ofNullable(this.metricColumn);
     }
     /**
-     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
+     * @return Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
-    */
+     */
     public Optional<String> metricTriggerType() {
         return Optional.ofNullable(this.metricTriggerType);
     }
     /**
-     * The threshold of the metric trigger.
+     * @return The threshold of the metric trigger.
      * 
-    */
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
-     * Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
+     * @return Evaluation operation for Metric -&#39;GreaterThan&#39; or &#39;LessThan&#39; or &#39;Equal&#39;.
      * 
-    */
+     */
     public Optional<String> thresholdOperator() {
         return Optional.ofNullable(this.thresholdOperator);
     }

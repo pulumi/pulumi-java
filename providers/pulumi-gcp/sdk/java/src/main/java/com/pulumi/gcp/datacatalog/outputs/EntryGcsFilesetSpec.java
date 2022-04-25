@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EntryGcsFilesetSpec {
     /**
-     * Patterns to identify a set of files in Google Cloud Storage.
+     * @return Patterns to identify a set of files in Google Cloud Storage.
      * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
      * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
      * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
@@ -28,7 +28,7 @@ public final class EntryGcsFilesetSpec {
      */
     private final List<String> filePatterns;
     /**
-     * - 
+     * @return -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 
@@ -44,7 +44,7 @@ public final class EntryGcsFilesetSpec {
     }
 
     /**
-     * Patterns to identify a set of files in Google Cloud Storage.
+     * @return Patterns to identify a set of files in Google Cloud Storage.
      * See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames)
      * for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:
      * * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory.
@@ -56,16 +56,16 @@ public final class EntryGcsFilesetSpec {
      * * gs://bucket_name/a/*{@literal /}b: matches all files in bucket_name that match a/*{@literal /}b pattern, such as a/c/b, a/d/b
      * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
      * 
-    */
+     */
     public List<String> filePatterns() {
         return this.filePatterns;
     }
     /**
-     * - 
+     * @return -
      * Sample files contained in this fileset, not all files contained in this fileset are represented here.
      * Structure is documented below.
      * 
-    */
+     */
     public List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs == null ? List.of() : this.sampleGcsFileSpecs;
     }

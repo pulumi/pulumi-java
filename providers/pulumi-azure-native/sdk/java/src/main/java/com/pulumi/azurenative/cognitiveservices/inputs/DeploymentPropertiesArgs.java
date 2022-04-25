@@ -27,6 +27,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="model")
     private @Nullable Output<DeploymentModelArgs> model;
 
+    /**
+     * @return Properties of Cognitive Services account deployment model.
+     * 
+     */
     public Optional<Output<DeploymentModelArgs>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -38,6 +42,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="scaleSettings")
     private @Nullable Output<DeploymentScaleSettingsArgs> scaleSettings;
 
+    /**
+     * @return Properties of Cognitive Services account deployment model.
+     * 
+     */
     public Optional<Output<DeploymentScaleSettingsArgs>> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -67,20 +75,44 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new DeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param model Properties of Cognitive Services account deployment model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<DeploymentModelArgs> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model Properties of Cognitive Services account deployment model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(DeploymentModelArgs model) {
             return model(Output.of(model));
         }
 
+        /**
+         * @param scaleSettings Properties of Cognitive Services account deployment model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(@Nullable Output<DeploymentScaleSettingsArgs> scaleSettings) {
             $.scaleSettings = scaleSettings;
             return this;
         }
 
+        /**
+         * @param scaleSettings Properties of Cognitive Services account deployment model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(DeploymentScaleSettingsArgs scaleSettings) {
             return scaleSettings(Output.of(scaleSettings));
         }

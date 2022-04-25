@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudMlV1_Measurement_MetricResponse {
     /**
-     * Metric name.
+     * @return Metric name.
      * 
      */
     private final String metric;
     /**
-     * The value for this metric.
+     * @return The value for this metric.
      * 
      */
     private final Double value;
@@ -30,16 +30,16 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
     }
 
     /**
-     * Metric name.
+     * @return Metric name.
      * 
-    */
+     */
     public String metric() {
         return this.metric;
     }
     /**
-     * The value for this metric.
+     * @return The value for this metric.
      * 
-    */
+     */
     public Double value() {
         return this.value;
     }

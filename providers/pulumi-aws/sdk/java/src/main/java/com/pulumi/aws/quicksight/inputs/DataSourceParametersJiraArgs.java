@@ -20,6 +20,10 @@ public final class DataSourceParametersJiraArgs extends com.pulumi.resources.Res
     @Import(name="siteBaseUrl", required=true)
     private Output<String> siteBaseUrl;
 
+    /**
+     * @return The base URL of the Jira instance&#39;s site to which to connect.
+     * 
+     */
     public Output<String> siteBaseUrl() {
         return this.siteBaseUrl;
     }
@@ -48,11 +52,23 @@ public final class DataSourceParametersJiraArgs extends com.pulumi.resources.Res
             $ = new DataSourceParametersJiraArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param siteBaseUrl The base URL of the Jira instance&#39;s site to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteBaseUrl(Output<String> siteBaseUrl) {
             $.siteBaseUrl = siteBaseUrl;
             return this;
         }
 
+        /**
+         * @param siteBaseUrl The base URL of the Jira instance&#39;s site to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteBaseUrl(String siteBaseUrl) {
             return siteBaseUrl(Output.of(siteBaseUrl));
         }

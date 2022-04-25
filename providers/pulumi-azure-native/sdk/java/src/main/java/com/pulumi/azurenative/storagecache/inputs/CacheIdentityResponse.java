@@ -25,6 +25,10 @@ public final class CacheIdentityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of the cache.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -36,6 +40,10 @@ public final class CacheIdentityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id associated with the cache.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -47,6 +55,10 @@ public final class CacheIdentityResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of identity used for the cache
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class CacheIdentityResponse extends com.pulumi.resources.InvokeArgs
             $ = new CacheIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id associated with the cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the cache
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

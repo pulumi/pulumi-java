@@ -23,6 +23,10 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the Maps Account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creatorName")
     private @Nullable Output<String> creatorName;
 
+    /**
+     * @return The name of the Maps Creator instance.
+     * 
+     */
     public Optional<Output<String>> creatorName() {
         return Optional.ofNullable(this.creatorName);
     }
@@ -45,6 +53,10 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -56,6 +68,10 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class CreatorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CreatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Maps Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Maps Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param creatorName The name of the Maps Creator instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creatorName(@Nullable Output<String> creatorName) {
             $.creatorName = creatorName;
             return this;
         }
 
+        /**
+         * @param creatorName The name of the Maps Creator instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creatorName(String creatorName) {
             return creatorName(Output.of(creatorName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

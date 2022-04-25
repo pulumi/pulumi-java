@@ -25,6 +25,10 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends com.pulum
     @Import(name="logs")
     private @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
+    /**
+     * @return Logs data type.
+     * 
+     */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> logs() {
         return Optional.ofNullable(this.logs);
     }
@@ -53,6 +57,12 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends com.pulum
             $ = new AwsCloudTrailDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logs Logs data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
             $.logs = logs;
             return this;

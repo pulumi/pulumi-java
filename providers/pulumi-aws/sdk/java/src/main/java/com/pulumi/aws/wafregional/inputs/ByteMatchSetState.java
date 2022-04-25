@@ -24,6 +24,10 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="byteMatchTuples")
     private @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
 
+    /**
+     * @return Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
+     * 
+     */
     public Optional<Output<List<ByteMatchSetByteMatchTupleGetArgs>>> byteMatchTuples() {
         return Optional.ofNullable(this.byteMatchTuples);
     }
@@ -35,6 +39,10 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name or description of the ByteMatchSet.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -64,24 +72,54 @@ public final class ByteMatchSetState extends com.pulumi.resources.ResourceArgs {
             $ = new ByteMatchSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param byteMatchTuples Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteMatchTuples(@Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples) {
             $.byteMatchTuples = byteMatchTuples;
             return this;
         }
 
+        /**
+         * @param byteMatchTuples Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteMatchTuples(List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
             return byteMatchTuples(Output.of(byteMatchTuples));
         }
 
+        /**
+         * @param byteMatchTuples Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder byteMatchTuples(ByteMatchSetByteMatchTupleGetArgs... byteMatchTuples) {
             return byteMatchTuples(List.of(byteMatchTuples));
         }
 
+        /**
+         * @param name The name or description of the ByteMatchSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name or description of the ByteMatchSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

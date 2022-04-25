@@ -19,6 +19,10 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the deployment slot. By default, this API returns the production slot.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -47,6 +51,12 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebAppSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param slot Name of the deployment slot. By default, this API returns the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

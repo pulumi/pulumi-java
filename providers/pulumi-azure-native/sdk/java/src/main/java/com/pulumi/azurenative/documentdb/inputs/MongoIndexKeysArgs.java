@@ -27,6 +27,10 @@ public final class MongoIndexKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keys")
     private @Nullable Output<List<String>> keys;
 
+    /**
+     * @return List of keys for each MongoDB collection in the Azure Cosmos DB service
+     * 
+     */
     public Optional<Output<List<String>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -55,15 +59,33 @@ public final class MongoIndexKeysArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MongoIndexKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keys List of keys for each MongoDB collection in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<String>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys List of keys for each MongoDB collection in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<String> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys List of keys for each MongoDB collection in the Azure Cosmos DB service
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(String... keys) {
             return keys(List.of(keys));
         }

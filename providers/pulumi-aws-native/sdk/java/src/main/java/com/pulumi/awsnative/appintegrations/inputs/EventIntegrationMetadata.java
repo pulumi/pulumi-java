@@ -19,6 +19,10 @@ public final class EventIntegrationMetadata extends com.pulumi.resources.InvokeA
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A key to identify the metadata.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class EventIntegrationMetadata extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Corresponding metadata value for the key.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -59,11 +67,23 @@ public final class EventIntegrationMetadata extends com.pulumi.resources.InvokeA
             $ = new EventIntegrationMetadata(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A key to identify the metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Corresponding metadata value for the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

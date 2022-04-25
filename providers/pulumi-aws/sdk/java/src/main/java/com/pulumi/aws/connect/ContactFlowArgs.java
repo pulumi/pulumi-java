@@ -23,6 +23,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return Specifies the content of the Contact Flow, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -41,6 +45,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Specifies the description of the Contact Flow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
+    /**
+     * @return The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
+     * 
+     */
     public Optional<Output<String>> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -63,6 +75,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -74,6 +90,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the Contact Flow.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,6 +120,10 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -131,11 +159,23 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content Specifies the content of the Contact Flow, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Specifies the content of the Contact Flow, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
@@ -149,56 +189,128 @@ public final class ContactFlowArgs extends com.pulumi.resources.ResourceArgs {
             return contentHash(Output.of(contentHash));
         }
 
+        /**
+         * @param description Specifies the description of the Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Specifies the description of the Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param filename The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(@Nullable Output<String> filename) {
             $.filename = filename;
             return this;
         }
 
+        /**
+         * @param filename The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filename(String filename) {
             return filename(Output.of(filename));
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name Specifies the name of the Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the Contact Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class DistributionResponse {
     /**
-     * The CPU architecture for which packages in this distribution channel were built
+     * @return The CPU architecture for which packages in this distribution channel were built
      * 
      */
     private final String architecture;
     /**
-     * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * @return The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
      */
     private final String cpeUri;
     /**
-     * The distribution channel-specific description of this package.
+     * @return The distribution channel-specific description of this package.
      * 
      */
     private final String description;
     /**
-     * The latest available version of this package in this distribution channel.
+     * @return The latest available version of this package in this distribution channel.
      * 
      */
     private final VersionResponse latestVersion;
     /**
-     * A freeform string denoting the maintainer of this package.
+     * @return A freeform string denoting the maintainer of this package.
      * 
      */
     private final String maintainer;
     /**
-     * The distribution channel-specific homepage for this package.
+     * @return The distribution channel-specific homepage for this package.
      * 
      */
     private final String url;
@@ -58,44 +58,44 @@ public final class DistributionResponse {
     }
 
     /**
-     * The CPU architecture for which packages in this distribution channel were built
+     * @return The CPU architecture for which packages in this distribution channel were built
      * 
-    */
+     */
     public String architecture() {
         return this.architecture;
     }
     /**
-     * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
+     * @return The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
-    */
+     */
     public String cpeUri() {
         return this.cpeUri;
     }
     /**
-     * The distribution channel-specific description of this package.
+     * @return The distribution channel-specific description of this package.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The latest available version of this package in this distribution channel.
+     * @return The latest available version of this package in this distribution channel.
      * 
-    */
+     */
     public VersionResponse latestVersion() {
         return this.latestVersion;
     }
     /**
-     * A freeform string denoting the maintainer of this package.
+     * @return A freeform string denoting the maintainer of this package.
      * 
-    */
+     */
     public String maintainer() {
         return this.maintainer;
     }
     /**
-     * The distribution channel-specific homepage for this package.
+     * @return The distribution channel-specific homepage for this package.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

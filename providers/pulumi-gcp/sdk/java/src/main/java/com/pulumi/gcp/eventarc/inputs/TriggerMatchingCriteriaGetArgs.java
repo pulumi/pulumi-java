@@ -20,6 +20,10 @@ public final class TriggerMatchingCriteriaGetArgs extends com.pulumi.resources.R
     @Import(name="attribute", required=true)
     private Output<String> attribute;
 
+    /**
+     * @return Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+     * 
+     */
     public Output<String> attribute() {
         return this.attribute;
     }
@@ -31,6 +35,10 @@ public final class TriggerMatchingCriteriaGetArgs extends com.pulumi.resources.R
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Required. The value for the attribute.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class TriggerMatchingCriteriaGetArgs extends com.pulumi.resources.R
             $ = new TriggerMatchingCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attribute Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(Output<String> attribute) {
             $.attribute = attribute;
             return this;
         }
 
+        /**
+         * @param attribute Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the &#39;type&#39; attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attribute(String attribute) {
             return attribute(Output.of(attribute));
         }
 
+        /**
+         * @param value Required. The value for the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Required. The value for the attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

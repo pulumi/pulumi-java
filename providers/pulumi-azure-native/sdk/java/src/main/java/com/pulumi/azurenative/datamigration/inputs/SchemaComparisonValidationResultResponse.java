@@ -29,6 +29,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
     @Import(name="schemaDifferences", required=true)
     private SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
+    /**
+     * @return List of schema differences between the source and target databases
+     * 
+     */
     public SchemaComparisonValidationResultTypeResponse schemaDifferences() {
         return this.schemaDifferences;
     }
@@ -40,6 +44,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
     @Import(name="sourceDatabaseObjectCount")
     private @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
+    /**
+     * @return Count of source database objects
+     * 
+     */
     public Optional<Map<String,Double>> sourceDatabaseObjectCount() {
         return Optional.ofNullable(this.sourceDatabaseObjectCount);
     }
@@ -51,6 +59,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
     @Import(name="targetDatabaseObjectCount")
     private @Nullable Map<String,Double> targetDatabaseObjectCount;
 
+    /**
+     * @return Count of target database objects
+     * 
+     */
     public Optional<Map<String,Double>> targetDatabaseObjectCount() {
         return Optional.ofNullable(this.targetDatabaseObjectCount);
     }
@@ -62,6 +74,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
     @Import(name="validationErrors", required=true)
     private ValidationErrorResponse validationErrors;
 
+    /**
+     * @return List of errors that happened while performing schema compare validation
+     * 
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
@@ -93,21 +109,45 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
             $ = new SchemaComparisonValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schemaDifferences List of schema differences between the source and target databases
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
             $.schemaDifferences = schemaDifferences;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseObjectCount Count of source database objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
             $.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
             return this;
         }
 
+        /**
+         * @param targetDatabaseObjectCount Count of target database objects
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
             $.targetDatabaseObjectCount = targetDatabaseObjectCount;
             return this;
         }
 
+        /**
+         * @param validationErrors List of errors that happened while performing schema compare validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
             $.validationErrors = validationErrors;
             return this;

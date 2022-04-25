@@ -28,6 +28,10 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
     @Import(name="specification", required=true)
     private Output<String> specification;
 
+    /**
+     * @return A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+     * 
+     */
     public Output<String> specification() {
         return this.specification;
     }
@@ -39,6 +43,10 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
     @Import(name="validationType")
     private @Nullable Output<Either<String,ValidationType>> validationType;
 
+    /**
+     * @return The type of validation to run against a matching request.
+     * 
+     */
     public Optional<Output<Either<String,ValidationType>>> validationType() {
         return Optional.ofNullable(this.validationType);
     }
@@ -68,28 +76,64 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
             $ = new CustomRPValidationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param specification A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specification(Output<String> specification) {
             $.specification = specification;
             return this;
         }
 
+        /**
+         * @param specification A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder specification(String specification) {
             return specification(Output.of(specification));
         }
 
+        /**
+         * @param validationType The type of validation to run against a matching request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationType(@Nullable Output<Either<String,ValidationType>> validationType) {
             $.validationType = validationType;
             return this;
         }
 
+        /**
+         * @param validationType The type of validation to run against a matching request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationType(Either<String,ValidationType> validationType) {
             return validationType(Output.of(validationType));
         }
 
+        /**
+         * @param validationType The type of validation to run against a matching request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationType(String validationType) {
             return validationType(Either.ofLeft(validationType));
         }
 
+        /**
+         * @param validationType The type of validation to run against a matching request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationType(ValidationType validationType) {
             return validationType(Either.ofRight(validationType));
         }

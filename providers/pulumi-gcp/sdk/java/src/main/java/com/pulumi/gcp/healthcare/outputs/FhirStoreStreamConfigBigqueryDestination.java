@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class FhirStoreStreamConfigBigqueryDestination {
     /**
-     * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+     * @return BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
      * 
      */
     private final String datasetUri;
     /**
-     * The configuration for the exported BigQuery schema.
+     * @return The configuration for the exported BigQuery schema.
      * Structure is documented below.
      * 
      */
@@ -31,17 +31,17 @@ public final class FhirStoreStreamConfigBigqueryDestination {
     }
 
     /**
-     * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
+     * @return BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
      * 
-    */
+     */
     public String datasetUri() {
         return this.datasetUri;
     }
     /**
-     * The configuration for the exported BigQuery schema.
+     * @return The configuration for the exported BigQuery schema.
      * Structure is documented below.
      * 
-    */
+     */
     public FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig() {
         return this.schemaConfig;
     }

@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The name of the parameter.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="entityTypeDisplayName")
     private @Nullable Output<String> entityTypeDisplayName;
 
+    /**
+     * @return Optional. The name of the entity type, prefixed with `@`, that describes values of the parameter. If the parameter is required, this must be provided.
+     * 
+     */
     public Optional<Output<String>> entityTypeDisplayName() {
         return Optional.ofNullable(this.entityTypeDisplayName);
     }
@@ -61,6 +73,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="isList")
     private @Nullable Output<Boolean> isList;
 
+    /**
+     * @return Optional. Indicates whether the parameter represents a list of values.
+     * 
+     */
     public Optional<Output<Boolean>> isList() {
         return Optional.ofNullable(this.isList);
     }
@@ -72,6 +88,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="mandatory")
     private @Nullable Output<Boolean> mandatory;
 
+    /**
+     * @return Optional. Indicates whether the parameter is required. That is, whether the intent cannot be completed without collecting the parameter value.
+     * 
+     */
     public Optional<Output<Boolean>> mandatory() {
         return Optional.ofNullable(this.mandatory);
     }
@@ -83,6 +103,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of this parameter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -94,6 +118,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="prompts")
     private @Nullable Output<List<String>> prompts;
 
+    /**
+     * @return Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
+     * 
+     */
     public Optional<Output<List<String>>> prompts() {
         return Optional.ofNullable(this.prompts);
     }
@@ -105,6 +133,10 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Optional. The definition of the parameter value. It can be: - a constant string, - a parameter value defined as `$parameter_name`, - an original parameter value defined as `$parameter_name.original`, - a parameter value from some context defined as `#context_name.parameter_name`.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -140,78 +172,180 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterArgs extends com.p
             $ = new GoogleCloudDialogflowV2beta1IntentParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param displayName The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entityTypeDisplayName Optional. The name of the entity type, prefixed with `@`, that describes values of the parameter. If the parameter is required, this must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeDisplayName(@Nullable Output<String> entityTypeDisplayName) {
             $.entityTypeDisplayName = entityTypeDisplayName;
             return this;
         }
 
+        /**
+         * @param entityTypeDisplayName Optional. The name of the entity type, prefixed with `@`, that describes values of the parameter. If the parameter is required, this must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeDisplayName(String entityTypeDisplayName) {
             return entityTypeDisplayName(Output.of(entityTypeDisplayName));
         }
 
+        /**
+         * @param isList Optional. Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(@Nullable Output<Boolean> isList) {
             $.isList = isList;
             return this;
         }
 
+        /**
+         * @param isList Optional. Indicates whether the parameter represents a list of values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isList(Boolean isList) {
             return isList(Output.of(isList));
         }
 
+        /**
+         * @param mandatory Optional. Indicates whether the parameter is required. That is, whether the intent cannot be completed without collecting the parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatory(@Nullable Output<Boolean> mandatory) {
             $.mandatory = mandatory;
             return this;
         }
 
+        /**
+         * @param mandatory Optional. Indicates whether the parameter is required. That is, whether the intent cannot be completed without collecting the parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatory(Boolean mandatory) {
             return mandatory(Output.of(mandatory));
         }
 
+        /**
+         * @param name The unique identifier of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of this parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param prompts Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prompts(@Nullable Output<List<String>> prompts) {
             $.prompts = prompts;
             return this;
         }
 
+        /**
+         * @param prompts Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prompts(List<String> prompts) {
             return prompts(Output.of(prompts));
         }
 
+        /**
+         * @param prompts Optional. The collection of prompts that the agent can present to the user in order to collect a value for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prompts(String... prompts) {
             return prompts(List.of(prompts));
         }
 
+        /**
+         * @param value Optional. The definition of the parameter value. It can be: - a constant string, - a parameter value defined as `$parameter_name`, - an original parameter value defined as `$parameter_name.original`, - a parameter value from some context defined as `#context_name.parameter_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Optional. The definition of the parameter value. It can be: - a constant string, - a parameter value defined as `$parameter_name`, - an original parameter value defined as `$parameter_name.original`, - a parameter value from some context defined as `#context_name.parameter_name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

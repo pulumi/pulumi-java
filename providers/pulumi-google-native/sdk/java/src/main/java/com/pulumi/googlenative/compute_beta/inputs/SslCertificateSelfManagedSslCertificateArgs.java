@@ -26,6 +26,10 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends com.pulum
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
+    /**
+     * @return A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
+     * 
+     */
     public Optional<Output<String>> certificate() {
         return Optional.ofNullable(this.certificate);
     }
@@ -37,6 +41,10 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends com.pulum
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return A write-only private key in PEM format. Only insert requests will include this field.
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -66,20 +74,44 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends com.pulum
             $ = new SslCertificateSelfManagedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificate A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(@Nullable Output<String> certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param certificate A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             return certificate(Output.of(certificate));
         }
 
+        /**
+         * @param privateKey A write-only private key in PEM format. Only insert requests will include this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey A write-only private key in PEM format. Only insert requests will include this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }

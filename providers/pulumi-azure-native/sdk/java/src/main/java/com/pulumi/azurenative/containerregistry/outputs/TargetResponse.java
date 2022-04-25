@@ -13,47 +13,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TargetResponse {
     /**
-     * The digest of the content, as defined by the Registry V2 HTTP API Specification.
+     * @return The digest of the content, as defined by the Registry V2 HTTP API Specification.
      * 
      */
     private final @Nullable String digest;
     /**
-     * The number of bytes of the content. Same as Size field.
+     * @return The number of bytes of the content. Same as Size field.
      * 
      */
     private final @Nullable Double length;
     /**
-     * The MIME type of the referenced object.
+     * @return The MIME type of the referenced object.
      * 
      */
     private final @Nullable String mediaType;
     /**
-     * The name of the artifact.
+     * @return The name of the artifact.
      * 
      */
     private final @Nullable String name;
     /**
-     * The repository name.
+     * @return The repository name.
      * 
      */
     private final @Nullable String repository;
     /**
-     * The number of bytes of the content. Same as Length field.
+     * @return The number of bytes of the content. Same as Length field.
      * 
      */
     private final @Nullable Double size;
     /**
-     * The tag name.
+     * @return The tag name.
      * 
      */
     private final @Nullable String tag;
     /**
-     * The direct URL to the content.
+     * @return The direct URL to the content.
      * 
      */
     private final @Nullable String url;
     /**
-     * The version of the artifact.
+     * @return The version of the artifact.
      * 
      */
     private final @Nullable String version;
@@ -81,65 +81,65 @@ public final class TargetResponse {
     }
 
     /**
-     * The digest of the content, as defined by the Registry V2 HTTP API Specification.
+     * @return The digest of the content, as defined by the Registry V2 HTTP API Specification.
      * 
-    */
+     */
     public Optional<String> digest() {
         return Optional.ofNullable(this.digest);
     }
     /**
-     * The number of bytes of the content. Same as Size field.
+     * @return The number of bytes of the content. Same as Size field.
      * 
-    */
+     */
     public Optional<Double> length() {
         return Optional.ofNullable(this.length);
     }
     /**
-     * The MIME type of the referenced object.
+     * @return The MIME type of the referenced object.
      * 
-    */
+     */
     public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
-     * The name of the artifact.
+     * @return The name of the artifact.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The repository name.
+     * @return The repository name.
      * 
-    */
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
     /**
-     * The number of bytes of the content. Same as Length field.
+     * @return The number of bytes of the content. Same as Length field.
      * 
-    */
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The tag name.
+     * @return The tag name.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * The direct URL to the content.
+     * @return The direct URL to the content.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
-     * The version of the artifact.
+     * @return The version of the artifact.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -14,62 +14,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DriveStatusResponse {
     /**
-     * The BitLocker key used to encrypt the drive.
+     * @return The BitLocker key used to encrypt the drive.
      * 
      */
     private final @Nullable String bitLockerKey;
     /**
-     * Bytes successfully transferred for the drive.
+     * @return Bytes successfully transferred for the drive.
      * 
      */
     private final @Nullable Double bytesSucceeded;
     /**
-     * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+     * @return Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
      * 
      */
     private final @Nullable String copyStatus;
     /**
-     * The drive header hash value.
+     * @return The drive header hash value.
      * 
      */
     private final @Nullable String driveHeaderHash;
     /**
-     * The drive&#39;s hardware serial number, without spaces.
+     * @return The drive&#39;s hardware serial number, without spaces.
      * 
      */
     private final @Nullable String driveId;
     /**
-     * A URI that points to the blob containing the error log for the data transfer operation.
+     * @return A URI that points to the blob containing the error log for the data transfer operation.
      * 
      */
     private final @Nullable String errorLogUri;
     /**
-     * The relative path of the manifest file on the drive.
+     * @return The relative path of the manifest file on the drive.
      * 
      */
     private final @Nullable String manifestFile;
     /**
-     * The Base16-encoded MD5 hash of the manifest file on the drive.
+     * @return The Base16-encoded MD5 hash of the manifest file on the drive.
      * 
      */
     private final @Nullable String manifestHash;
     /**
-     * A URI that points to the blob containing the drive manifest file.
+     * @return A URI that points to the blob containing the drive manifest file.
      * 
      */
     private final @Nullable String manifestUri;
     /**
-     * Percentage completed for the drive.
+     * @return Percentage completed for the drive.
      * 
      */
     private final @Nullable Integer percentComplete;
     /**
-     * The drive&#39;s current state.
+     * @return The drive&#39;s current state.
      * 
      */
     private final @Nullable String state;
     /**
-     * A URI that points to the blob containing the verbose log for the data transfer operation.
+     * @return A URI that points to the blob containing the verbose log for the data transfer operation.
      * 
      */
     private final @Nullable String verboseLogUri;
@@ -103,86 +103,86 @@ public final class DriveStatusResponse {
     }
 
     /**
-     * The BitLocker key used to encrypt the drive.
+     * @return The BitLocker key used to encrypt the drive.
      * 
-    */
+     */
     public Optional<String> bitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
     /**
-     * Bytes successfully transferred for the drive.
+     * @return Bytes successfully transferred for the drive.
      * 
-    */
+     */
     public Optional<Double> bytesSucceeded() {
         return Optional.ofNullable(this.bytesSucceeded);
     }
     /**
-     * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
+     * @return Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
      * 
-    */
+     */
     public Optional<String> copyStatus() {
         return Optional.ofNullable(this.copyStatus);
     }
     /**
-     * The drive header hash value.
+     * @return The drive header hash value.
      * 
-    */
+     */
     public Optional<String> driveHeaderHash() {
         return Optional.ofNullable(this.driveHeaderHash);
     }
     /**
-     * The drive&#39;s hardware serial number, without spaces.
+     * @return The drive&#39;s hardware serial number, without spaces.
      * 
-    */
+     */
     public Optional<String> driveId() {
         return Optional.ofNullable(this.driveId);
     }
     /**
-     * A URI that points to the blob containing the error log for the data transfer operation.
+     * @return A URI that points to the blob containing the error log for the data transfer operation.
      * 
-    */
+     */
     public Optional<String> errorLogUri() {
         return Optional.ofNullable(this.errorLogUri);
     }
     /**
-     * The relative path of the manifest file on the drive.
+     * @return The relative path of the manifest file on the drive.
      * 
-    */
+     */
     public Optional<String> manifestFile() {
         return Optional.ofNullable(this.manifestFile);
     }
     /**
-     * The Base16-encoded MD5 hash of the manifest file on the drive.
+     * @return The Base16-encoded MD5 hash of the manifest file on the drive.
      * 
-    */
+     */
     public Optional<String> manifestHash() {
         return Optional.ofNullable(this.manifestHash);
     }
     /**
-     * A URI that points to the blob containing the drive manifest file.
+     * @return A URI that points to the blob containing the drive manifest file.
      * 
-    */
+     */
     public Optional<String> manifestUri() {
         return Optional.ofNullable(this.manifestUri);
     }
     /**
-     * Percentage completed for the drive.
+     * @return Percentage completed for the drive.
      * 
-    */
+     */
     public Optional<Integer> percentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
     /**
-     * The drive&#39;s current state.
+     * @return The drive&#39;s current state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * A URI that points to the blob containing the verbose log for the data transfer operation.
+     * @return A URI that points to the blob containing the verbose log for the data transfer operation.
      * 
-    */
+     */
     public Optional<String> verboseLogUri() {
         return Optional.ofNullable(this.verboseLogUri);
     }

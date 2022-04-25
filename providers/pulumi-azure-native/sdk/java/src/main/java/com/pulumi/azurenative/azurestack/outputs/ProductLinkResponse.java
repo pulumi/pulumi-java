@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProductLinkResponse {
     /**
-     * The description of the link.
+     * @return The description of the link.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The URI corresponding to the link.
+     * @return The URI corresponding to the link.
      * 
      */
     private final @Nullable String uri;
@@ -31,16 +31,16 @@ public final class ProductLinkResponse {
     }
 
     /**
-     * The description of the link.
+     * @return The description of the link.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The URI corresponding to the link.
+     * @return The URI corresponding to the link.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

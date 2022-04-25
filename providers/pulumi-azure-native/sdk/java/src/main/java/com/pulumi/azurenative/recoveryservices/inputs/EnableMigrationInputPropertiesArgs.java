@@ -25,6 +25,10 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
     @Import(name="policyId", required=true)
     private Output<String> policyId;
 
+    /**
+     * @return The policy Id.
+     * 
+     */
     public Output<String> policyId() {
         return this.policyId;
     }
@@ -36,6 +40,10 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
     @Import(name="providerSpecificDetails", required=true)
     private Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
+    /**
+     * @return The provider specific details.
+     * 
+     */
     public Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
@@ -65,20 +73,44 @@ public final class EnableMigrationInputPropertiesArgs extends com.pulumi.resourc
             $ = new EnableMigrationInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyId The policy Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The policy Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param providerSpecificDetails The provider specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The provider specific details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(VMwareCbtEnableMigrationInputArgs providerSpecificDetails) {
             return providerSpecificDetails(Output.of(providerSpecificDetails));
         }

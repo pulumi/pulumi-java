@@ -25,6 +25,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="annotatedDatasetDescription", required=true)
     private String annotatedDatasetDescription;
 
+    /**
+     * @return Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
+     * 
+     */
     public String annotatedDatasetDescription() {
         return this.annotatedDatasetDescription;
     }
@@ -36,6 +40,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="annotatedDatasetDisplayName", required=true)
     private String annotatedDatasetDisplayName;
 
+    /**
+     * @return A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
+     * 
+     */
     public String annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
     }
@@ -47,6 +55,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="contributorEmails", required=true)
     private List<String> contributorEmails;
 
+    /**
+     * @return Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
+     * 
+     */
     public List<String> contributorEmails() {
         return this.contributorEmails;
     }
@@ -58,6 +70,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="instruction", required=true)
     private String instruction;
 
+    /**
+     * @return Instruction resource name.
+     * 
+     */
     public String instruction() {
         return this.instruction;
     }
@@ -69,6 +85,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="labelGroup", required=true)
     private String labelGroup;
 
+    /**
+     * @return Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+     * 
+     */
     public String labelGroup() {
         return this.labelGroup;
     }
@@ -80,6 +100,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="languageCode", required=true)
     private String languageCode;
 
+    /**
+     * @return Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
+     * 
+     */
     public String languageCode() {
         return this.languageCode;
     }
@@ -91,6 +115,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="questionDuration", required=true)
     private String questionDuration;
 
+    /**
+     * @return Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
+     * 
+     */
     public String questionDuration() {
         return this.questionDuration;
     }
@@ -102,6 +130,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="replicaCount", required=true)
     private Integer replicaCount;
 
+    /**
+     * @return Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+     * 
+     */
     public Integer replicaCount() {
         return this.replicaCount;
     }
@@ -113,6 +145,10 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
     @Import(name="userEmailAddress", required=true)
     private String userEmailAddress;
 
+    /**
+     * @return Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
+     * 
+     */
     public String userEmailAddress() {
         return this.userEmailAddress;
     }
@@ -149,50 +185,110 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
             $ = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotatedDatasetDescription Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotatedDatasetDescription(String annotatedDatasetDescription) {
             $.annotatedDatasetDescription = annotatedDatasetDescription;
             return this;
         }
 
+        /**
+         * @param annotatedDatasetDisplayName A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
             $.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
             return this;
         }
 
+        /**
+         * @param contributorEmails Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder contributorEmails(List<String> contributorEmails) {
             $.contributorEmails = contributorEmails;
             return this;
         }
 
+        /**
+         * @param contributorEmails Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder contributorEmails(String... contributorEmails) {
             return contributorEmails(List.of(contributorEmails));
         }
 
+        /**
+         * @param instruction Instruction resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instruction(String instruction) {
             $.instruction = instruction;
             return this;
         }
 
+        /**
+         * @param labelGroup Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelGroup(String labelGroup) {
             $.labelGroup = labelGroup;
             return this;
         }
 
+        /**
+         * @param languageCode Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param questionDuration Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder questionDuration(String questionDuration) {
             $.questionDuration = questionDuration;
             return this;
         }
 
+        /**
+         * @param replicaCount Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(Integer replicaCount) {
             $.replicaCount = replicaCount;
             return this;
         }
 
+        /**
+         * @param userEmailAddress Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmailAddress(String userEmailAddress) {
             $.userEmailAddress = userEmailAddress;
             return this;

@@ -27,6 +27,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalHeaders")
     private @Nullable Object additionalHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
@@ -38,6 +42,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -49,6 +57,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpCompressionType")
     private @Nullable Object httpCompressionType;
 
+    /**
+     * @return Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+     * 
+     */
     public Optional<Object> httpCompressionType() {
         return Optional.ofNullable(this.httpCompressionType);
     }
@@ -60,6 +72,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpRequestTimeout")
     private @Nullable Object httpRequestTimeout;
 
+    /**
+     * @return The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> httpRequestTimeout() {
         return Optional.ofNullable(this.httpRequestTimeout);
     }
@@ -71,6 +87,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -82,6 +102,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestInterval")
     private @Nullable Object requestInterval;
 
+    /**
+     * @return The time to await before sending next request, in milliseconds
+     * 
+     */
     public Optional<Object> requestInterval() {
         return Optional.ofNullable(this.requestInterval);
     }
@@ -93,6 +117,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requestMethod")
     private @Nullable Object requestMethod;
 
+    /**
+     * @return The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
@@ -104,6 +132,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
     private @Nullable Object sinkRetryCount;
 
+    /**
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
@@ -115,6 +147,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
     private @Nullable Object sinkRetryWait;
 
+    /**
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -127,6 +163,11 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy sink type.
+     * Expected value is &#39;RestSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -138,6 +179,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
     private @Nullable Object writeBatchSize;
 
+    /**
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
@@ -149,6 +194,10 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
     private @Nullable Object writeBatchTimeout;
 
+    /**
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
@@ -188,61 +237,134 @@ public final class RestSinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RestSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalHeaders The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             $.additionalHeaders = additionalHeaders;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param httpCompressionType Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpCompressionType(@Nullable Object httpCompressionType) {
             $.httpCompressionType = httpCompressionType;
             return this;
         }
 
+        /**
+         * @param httpRequestTimeout The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             $.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param requestInterval The time to await before sending next request, in milliseconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestInterval(@Nullable Object requestInterval) {
             $.requestInterval = requestInterval;
             return this;
         }
 
+        /**
+         * @param requestMethod The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMethod(@Nullable Object requestMethod) {
             $.requestMethod = requestMethod;
             return this;
         }
 
+        /**
+         * @param sinkRetryCount Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             $.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
+        /**
+         * @param sinkRetryWait Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             $.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy sink type.
+         * Expected value is &#39;RestSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param writeBatchSize Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             $.writeBatchSize = writeBatchSize;
             return this;
         }
 
+        /**
+         * @param writeBatchTimeout Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             $.writeBatchTimeout = writeBatchTimeout;
             return this;

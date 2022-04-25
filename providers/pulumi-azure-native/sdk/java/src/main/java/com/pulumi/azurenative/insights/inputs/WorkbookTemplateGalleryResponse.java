@@ -26,6 +26,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
     @Import(name="category")
     private @Nullable String category;
 
+    /**
+     * @return Category for the gallery.
+     * 
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
@@ -37,6 +41,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the workbook template in the gallery.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
     @Import(name="order")
     private @Nullable Integer order;
 
+    /**
+     * @return Order of the template within the gallery.
+     * 
+     */
     public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
@@ -59,6 +71,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return Azure resource type supported by the gallery.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -70,6 +86,10 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of workbook supported by the workbook template.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -102,26 +122,56 @@ public final class WorkbookTemplateGalleryResponse extends com.pulumi.resources.
             $ = new WorkbookTemplateGalleryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Category for the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param name Name of the workbook template in the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param order Order of the template within the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Integer order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param resourceType Azure resource type supported by the gallery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param type Type of workbook supported by the workbook template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

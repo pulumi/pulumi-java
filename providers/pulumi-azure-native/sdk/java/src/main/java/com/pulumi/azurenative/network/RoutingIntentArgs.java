@@ -24,6 +24,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -35,6 +39,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the RoutingIntent.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingIntentName")
     private @Nullable Output<String> routingIntentName;
 
+    /**
+     * @return The name of the per VirtualHub singleton Routing Intent resource.
+     * 
+     */
     public Optional<Output<String>> routingIntentName() {
         return Optional.ofNullable(this.routingIntentName);
     }
@@ -68,6 +84,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingPolicies")
     private @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
 
+    /**
+     * @return List of routing policies.
+     * 
+     */
     public Optional<Output<List<RoutingPolicyArgs>>> routingPolicies() {
         return Optional.ofNullable(this.routingPolicies);
     }
@@ -79,6 +99,10 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualHubName", required=true)
     private Output<String> virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
@@ -112,60 +136,138 @@ public final class RoutingIntentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoutingIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the RoutingIntent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the RoutingIntent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routingIntentName The name of the per VirtualHub singleton Routing Intent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingIntentName(@Nullable Output<String> routingIntentName) {
             $.routingIntentName = routingIntentName;
             return this;
         }
 
+        /**
+         * @param routingIntentName The name of the per VirtualHub singleton Routing Intent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingIntentName(String routingIntentName) {
             return routingIntentName(Output.of(routingIntentName));
         }
 
+        /**
+         * @param routingPolicies List of routing policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPolicies(@Nullable Output<List<RoutingPolicyArgs>> routingPolicies) {
             $.routingPolicies = routingPolicies;
             return this;
         }
 
+        /**
+         * @param routingPolicies List of routing policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPolicies(List<RoutingPolicyArgs> routingPolicies) {
             return routingPolicies(Output.of(routingPolicies));
         }
 
+        /**
+         * @param routingPolicies List of routing policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingPolicies(RoutingPolicyArgs... routingPolicies) {
             return routingPolicies(List.of(routingPolicies));
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(Output<String> virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             return virtualHubName(Output.of(virtualHubName));
         }

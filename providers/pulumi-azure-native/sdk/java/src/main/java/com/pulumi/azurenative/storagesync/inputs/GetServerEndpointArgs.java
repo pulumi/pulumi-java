@@ -19,6 +19,10 @@ public final class GetServerEndpointArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetServerEndpointArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="serverEndpointName", required=true)
     private String serverEndpointName;
 
+    /**
+     * @return Name of Server Endpoint object.
+     * 
+     */
     public String serverEndpointName() {
         return this.serverEndpointName;
     }
@@ -41,6 +49,10 @@ public final class GetServerEndpointArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="storageSyncServiceName", required=true)
     private String storageSyncServiceName;
 
+    /**
+     * @return Name of Storage Sync Service resource.
+     * 
+     */
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
@@ -52,6 +64,10 @@ public final class GetServerEndpointArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="syncGroupName", required=true)
     private String syncGroupName;
 
+    /**
+     * @return Name of Sync Group resource.
+     * 
+     */
     public String syncGroupName() {
         return this.syncGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetServerEndpointArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetServerEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverEndpointName Name of Server Endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverEndpointName(String serverEndpointName) {
             $.serverEndpointName = serverEndpointName;
             return this;
         }
 
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
             $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncGroupName(String syncGroupName) {
             $.syncGroupName = syncGroupName;
             return this;

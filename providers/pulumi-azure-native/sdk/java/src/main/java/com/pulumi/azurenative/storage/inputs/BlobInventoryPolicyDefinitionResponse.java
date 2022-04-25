@@ -23,6 +23,10 @@ public final class BlobInventoryPolicyDefinitionResponse extends com.pulumi.reso
     @Import(name="filters", required=true)
     private BlobInventoryPolicyFilterResponse filters;
 
+    /**
+     * @return An object that defines the filter set.
+     * 
+     */
     public BlobInventoryPolicyFilterResponse filters() {
         return this.filters;
     }
@@ -51,6 +55,12 @@ public final class BlobInventoryPolicyDefinitionResponse extends com.pulumi.reso
             $ = new BlobInventoryPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(BlobInventoryPolicyFilterResponse filters) {
             $.filters = filters;
             return this;

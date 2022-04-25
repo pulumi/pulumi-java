@@ -18,57 +18,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSnapshotPolicyResult {
     /**
-     * Schedule for daily snapshots
+     * @return Schedule for daily snapshots
      * 
      */
     private final @Nullable DailyScheduleResponse dailySchedule;
     /**
-     * The property to decide policy is enabled or not
+     * @return The property to decide policy is enabled or not
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Schedule for hourly snapshots
+     * @return Schedule for hourly snapshots
      * 
      */
     private final @Nullable HourlyScheduleResponse hourlySchedule;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Schedule for monthly snapshots
+     * @return Schedule for monthly snapshots
      * 
      */
     private final @Nullable MonthlyScheduleResponse monthlySchedule;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * Schedule for weekly snapshots
+     * @return Schedule for weekly snapshots
      * 
      */
     private final @Nullable WeeklyScheduleResponse weeklySchedule;
@@ -100,79 +100,79 @@ public final class GetSnapshotPolicyResult {
     }
 
     /**
-     * Schedule for daily snapshots
+     * @return Schedule for daily snapshots
      * 
-    */
+     */
     public Optional<DailyScheduleResponse> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
-     * The property to decide policy is enabled or not
+     * @return The property to decide policy is enabled or not
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Schedule for hourly snapshots
+     * @return Schedule for hourly snapshots
      * 
-    */
+     */
     public Optional<HourlyScheduleResponse> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Schedule for monthly snapshots
+     * @return Schedule for monthly snapshots
      * 
-    */
+     */
     public Optional<MonthlyScheduleResponse> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Schedule for weekly snapshots
+     * @return Schedule for weekly snapshots
      * 
-    */
+     */
     public Optional<WeeklyScheduleResponse> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }

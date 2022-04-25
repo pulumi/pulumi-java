@@ -31,6 +31,10 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commands", required=true)
     private Output<List<CommandArgs>> commands;
 
+    /**
+     * @return The commands used in the test.
+     * 
+     */
     public Output<List<CommandArgs>> commands() {
         return this.commands;
     }
@@ -42,6 +46,10 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isActive")
     private @Nullable Output<Boolean> isActive;
 
+    /**
+     * @return Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+     * 
+     */
     public Optional<Output<Boolean>> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -53,6 +61,10 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="testType", required=true)
     private Output<Either<String,TestType>> testType;
 
+    /**
+     * @return The type of the test.
+     * 
+     */
     public Output<Either<String,TestType>> testType() {
         return this.testType;
     }
@@ -83,41 +95,95 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commands The commands used in the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(Output<List<CommandArgs>> commands) {
             $.commands = commands;
             return this;
         }
 
+        /**
+         * @param commands The commands used in the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(List<CommandArgs> commands) {
             return commands(Output.of(commands));
         }
 
+        /**
+         * @param commands The commands used in the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commands(CommandArgs... commands) {
             return commands(List.of(commands));
         }
 
+        /**
+         * @param isActive Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(@Nullable Output<Boolean> isActive) {
             $.isActive = isActive;
             return this;
         }
 
+        /**
+         * @param isActive Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActive(Boolean isActive) {
             return isActive(Output.of(isActive));
         }
 
+        /**
+         * @param testType The type of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testType(Output<Either<String,TestType>> testType) {
             $.testType = testType;
             return this;
         }
 
+        /**
+         * @param testType The type of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testType(Either<String,TestType> testType) {
             return testType(Output.of(testType));
         }
 
+        /**
+         * @param testType The type of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testType(String testType) {
             return testType(Either.ofLeft(testType));
         }
 
+        /**
+         * @param testType The type of the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testType(TestType testType) {
             return testType(Either.ofRight(testType));
         }

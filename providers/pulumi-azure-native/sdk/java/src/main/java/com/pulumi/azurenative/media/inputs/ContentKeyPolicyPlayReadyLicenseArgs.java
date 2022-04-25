@@ -33,6 +33,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="allowTestDevices", required=true)
     private Output<Boolean> allowTestDevices;
 
+    /**
+     * @return A flag indicating whether test devices can use the license.
+     * 
+     */
     public Output<Boolean> allowTestDevices() {
         return this.allowTestDevices;
     }
@@ -44,6 +48,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="beginDate")
     private @Nullable Output<String> beginDate;
 
+    /**
+     * @return The begin date of license
+     * 
+     */
     public Optional<Output<String>> beginDate() {
         return Optional.ofNullable(this.beginDate);
     }
@@ -55,6 +63,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="contentKeyLocation", required=true)
     private Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
 
+    /**
+     * @return The content key location.
+     * 
+     */
     public Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation() {
         return this.contentKeyLocation;
     }
@@ -66,6 +78,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="contentType", required=true)
     private Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
 
+    /**
+     * @return The PlayReady content type.
+     * 
+     */
     public Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType() {
         return this.contentType;
     }
@@ -77,6 +93,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="expirationDate")
     private @Nullable Output<String> expirationDate;
 
+    /**
+     * @return The expiration date of license.
+     * 
+     */
     public Optional<Output<String>> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -88,6 +108,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="gracePeriod")
     private @Nullable Output<String> gracePeriod;
 
+    /**
+     * @return The grace period of license.
+     * 
+     */
     public Optional<Output<String>> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
@@ -99,6 +123,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="licenseType", required=true)
     private Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
 
+    /**
+     * @return The license type.
+     * 
+     */
     public Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType() {
         return this.licenseType;
     }
@@ -110,6 +138,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="playRight")
     private @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
 
+    /**
+     * @return The license PlayRight
+     * 
+     */
     public Optional<Output<ContentKeyPolicyPlayReadyPlayRightArgs>> playRight() {
         return Optional.ofNullable(this.playRight);
     }
@@ -121,6 +153,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="relativeBeginDate")
     private @Nullable Output<String> relativeBeginDate;
 
+    /**
+     * @return The relative begin date of license.
+     * 
+     */
     public Optional<Output<String>> relativeBeginDate() {
         return Optional.ofNullable(this.relativeBeginDate);
     }
@@ -132,6 +168,10 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
     @Import(name="relativeExpirationDate")
     private @Nullable Output<String> relativeExpirationDate;
 
+    /**
+     * @return The relative expiration date of license.
+     * 
+     */
     public Optional<Output<String>> relativeExpirationDate() {
         return Optional.ofNullable(this.relativeExpirationDate);
     }
@@ -169,116 +209,272 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
             $ = new ContentKeyPolicyPlayReadyLicenseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowTestDevices A flag indicating whether test devices can use the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTestDevices(Output<Boolean> allowTestDevices) {
             $.allowTestDevices = allowTestDevices;
             return this;
         }
 
+        /**
+         * @param allowTestDevices A flag indicating whether test devices can use the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTestDevices(Boolean allowTestDevices) {
             return allowTestDevices(Output.of(allowTestDevices));
         }
 
+        /**
+         * @param beginDate The begin date of license
+         * 
+         * @return builder
+         * 
+         */
         public Builder beginDate(@Nullable Output<String> beginDate) {
             $.beginDate = beginDate;
             return this;
         }
 
+        /**
+         * @param beginDate The begin date of license
+         * 
+         * @return builder
+         * 
+         */
         public Builder beginDate(String beginDate) {
             return beginDate(Output.of(beginDate));
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation) {
             $.contentKeyLocation = contentKeyLocation;
             return this;
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs> contentKeyLocation) {
             return contentKeyLocation(Output.of(contentKeyLocation));
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs contentKeyLocation) {
             return contentKeyLocation(Either.ofLeft(contentKeyLocation));
         }
 
+        /**
+         * @param contentKeyLocation The content key location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs contentKeyLocation) {
             return contentKeyLocation(Either.ofRight(contentKeyLocation));
         }
 
+        /**
+         * @param contentType The PlayReady content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The PlayReady content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Either<String,ContentKeyPolicyPlayReadyContentType> contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param contentType The PlayReady content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Either.ofLeft(contentType));
         }
 
+        /**
+         * @param contentType The PlayReady content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(ContentKeyPolicyPlayReadyContentType contentType) {
             return contentType(Either.ofRight(contentType));
         }
 
+        /**
+         * @param expirationDate The expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationDate The expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             return expirationDate(Output.of(expirationDate));
         }
 
+        /**
+         * @param gracePeriod The grace period of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
             $.gracePeriod = gracePeriod;
             return this;
         }
 
+        /**
+         * @param gracePeriod The grace period of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracePeriod(String gracePeriod) {
             return gracePeriod(Output.of(gracePeriod));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(Either<String,ContentKeyPolicyPlayReadyLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             return licenseType(Either.ofLeft(licenseType));
         }
 
+        /**
+         * @param licenseType The license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(ContentKeyPolicyPlayReadyLicenseType licenseType) {
             return licenseType(Either.ofRight(licenseType));
         }
 
+        /**
+         * @param playRight The license PlayRight
+         * 
+         * @return builder
+         * 
+         */
         public Builder playRight(@Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight) {
             $.playRight = playRight;
             return this;
         }
 
+        /**
+         * @param playRight The license PlayRight
+         * 
+         * @return builder
+         * 
+         */
         public Builder playRight(ContentKeyPolicyPlayReadyPlayRightArgs playRight) {
             return playRight(Output.of(playRight));
         }
 
+        /**
+         * @param relativeBeginDate The relative begin date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeBeginDate(@Nullable Output<String> relativeBeginDate) {
             $.relativeBeginDate = relativeBeginDate;
             return this;
         }
 
+        /**
+         * @param relativeBeginDate The relative begin date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeBeginDate(String relativeBeginDate) {
             return relativeBeginDate(Output.of(relativeBeginDate));
         }
 
+        /**
+         * @param relativeExpirationDate The relative expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeExpirationDate(@Nullable Output<String> relativeExpirationDate) {
             $.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
 
+        /**
+         * @param relativeExpirationDate The relative expiration date of license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeExpirationDate(String relativeExpirationDate) {
             return relativeExpirationDate(Output.of(relativeExpirationDate));
         }

@@ -23,6 +23,10 @@ public final class FileReferenceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gcsPath", required=true)
     private String gcsPath;
 
+    /**
+     * @return A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+     * 
+     */
     public String gcsPath() {
         return this.gcsPath;
     }
@@ -51,6 +55,12 @@ public final class FileReferenceResponse extends com.pulumi.resources.InvokeArgs
             $ = new FileReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gcsPath A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcsPath(String gcsPath) {
             $.gcsPath = gcsPath;
             return this;

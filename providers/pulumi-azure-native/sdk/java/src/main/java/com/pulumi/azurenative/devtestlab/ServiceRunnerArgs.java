@@ -24,6 +24,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityPropertiesArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -35,6 +39,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -46,6 +54,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the service runner.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class ServiceRunnerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceRunnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the service runner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the service runner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

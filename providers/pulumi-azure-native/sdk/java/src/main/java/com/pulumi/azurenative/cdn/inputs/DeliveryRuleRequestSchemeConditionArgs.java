@@ -27,6 +27,11 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the condition for the delivery rule.
+     * Expected value is &#39;RequestScheme&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends com.pulumi.res
     @Import(name="parameters", required=true)
     private Output<RequestSchemeMatchConditionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the condition.
+     * 
+     */
     public Output<RequestSchemeMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class DeliveryRuleRequestSchemeConditionArgs extends com.pulumi.res
             $ = new DeliveryRuleRequestSchemeConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;RequestScheme&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;RequestScheme&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<RequestSchemeMatchConditionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(RequestSchemeMatchConditionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

@@ -19,6 +19,10 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="listenerArn", required=true)
     private String listenerArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the listener.
+     * 
+     */
     public String listenerArn() {
         return this.listenerArn;
     }
@@ -47,6 +51,12 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetListenerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param listenerArn The Amazon Resource Name (ARN) of the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder listenerArn(String listenerArn) {
             $.listenerArn = listenerArn;
             return this;

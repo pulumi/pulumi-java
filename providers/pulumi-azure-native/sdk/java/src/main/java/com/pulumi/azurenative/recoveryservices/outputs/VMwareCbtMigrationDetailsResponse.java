@@ -15,88 +15,88 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VMwareCbtMigrationDetailsResponse {
     /**
-     * The data mover RunAs account Id.
+     * @return The data mover RunAs account Id.
      * 
      */
     private final String dataMoverRunAsAccountId;
     /**
-     * Gets the instance type.
+     * @return Gets the instance type.
      * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     private final String instanceType;
     /**
-     * The last recovery point received time.
+     * @return The last recovery point received time.
      * 
      */
     private final String lastRecoveryPointReceived;
     /**
-     * License Type of the VM to be used.
+     * @return License Type of the VM to be used.
      * 
      */
     private final @Nullable String licenseType;
     /**
-     * The recovery point Id to which the VM was migrated.
+     * @return The recovery point Id to which the VM was migrated.
      * 
      */
     private final String migrationRecoveryPointId;
     /**
-     * The type of the OS on the VM.
+     * @return The type of the OS on the VM.
      * 
      */
     private final String osType;
     /**
-     * The list of protected disks.
+     * @return The list of protected disks.
      * 
      */
     private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
     /**
-     * The snapshot RunAs account Id.
+     * @return The snapshot RunAs account Id.
      * 
      */
     private final String snapshotRunAsAccountId;
     /**
-     * The target availability set Id.
+     * @return The target availability set Id.
      * 
      */
     private final @Nullable String targetAvailabilitySetId;
     /**
-     * The target boot diagnostics storage account ARM Id.
+     * @return The target boot diagnostics storage account ARM Id.
      * 
      */
     private final @Nullable String targetBootDiagnosticsStorageAccountId;
     /**
-     * The target location.
+     * @return The target location.
      * 
      */
     private final String targetLocation;
     /**
-     * The target network Id.
+     * @return The target network Id.
      * 
      */
     private final @Nullable String targetNetworkId;
     /**
-     * The target resource group Id.
+     * @return The target resource group Id.
      * 
      */
     private final @Nullable String targetResourceGroupId;
     /**
-     * Target VM name.
+     * @return Target VM name.
      * 
      */
     private final @Nullable String targetVmName;
     /**
-     * The target VM size.
+     * @return The target VM size.
      * 
      */
     private final @Nullable String targetVmSize;
     /**
-     * The network details.
+     * @return The network details.
      * 
      */
     private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
     /**
-     * The ARM Id of the VM discovered in VMware.
+     * @return The ARM Id of the VM discovered in VMware.
      * 
      */
     private final String vmwareMachineId;
@@ -140,122 +140,122 @@ public final class VMwareCbtMigrationDetailsResponse {
     }
 
     /**
-     * The data mover RunAs account Id.
+     * @return The data mover RunAs account Id.
      * 
-    */
+     */
     public String dataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
     }
     /**
-     * Gets the instance type.
+     * @return Gets the instance type.
      * Expected value is &#39;VMwareCbt&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The last recovery point received time.
+     * @return The last recovery point received time.
      * 
-    */
+     */
     public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
     /**
-     * License Type of the VM to be used.
+     * @return License Type of the VM to be used.
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * The recovery point Id to which the VM was migrated.
+     * @return The recovery point Id to which the VM was migrated.
      * 
-    */
+     */
     public String migrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
     }
     /**
-     * The type of the OS on the VM.
+     * @return The type of the OS on the VM.
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * The list of protected disks.
+     * @return The list of protected disks.
      * 
-    */
+     */
     public List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
-     * The snapshot RunAs account Id.
+     * @return The snapshot RunAs account Id.
      * 
-    */
+     */
     public String snapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
     }
     /**
-     * The target availability set Id.
+     * @return The target availability set Id.
      * 
-    */
+     */
     public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
-     * The target boot diagnostics storage account ARM Id.
+     * @return The target boot diagnostics storage account ARM Id.
      * 
-    */
+     */
     public Optional<String> targetBootDiagnosticsStorageAccountId() {
         return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
     /**
-     * The target location.
+     * @return The target location.
      * 
-    */
+     */
     public String targetLocation() {
         return this.targetLocation;
     }
     /**
-     * The target network Id.
+     * @return The target network Id.
      * 
-    */
+     */
     public Optional<String> targetNetworkId() {
         return Optional.ofNullable(this.targetNetworkId);
     }
     /**
-     * The target resource group Id.
+     * @return The target resource group Id.
      * 
-    */
+     */
     public Optional<String> targetResourceGroupId() {
         return Optional.ofNullable(this.targetResourceGroupId);
     }
     /**
-     * Target VM name.
+     * @return Target VM name.
      * 
-    */
+     */
     public Optional<String> targetVmName() {
         return Optional.ofNullable(this.targetVmName);
     }
     /**
-     * The target VM size.
+     * @return The target VM size.
      * 
-    */
+     */
     public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
     /**
-     * The network details.
+     * @return The network details.
      * 
-    */
+     */
     public List<VMwareCbtNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
-     * The ARM Id of the VM discovered in VMware.
+     * @return The ARM Id of the VM discovered in VMware.
      * 
-    */
+     */
     public String vmwareMachineId() {
         return this.vmwareMachineId;
     }

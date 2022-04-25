@@ -29,6 +29,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="args")
     private @Nullable Output<List<String>> args;
 
+    /**
+     * @return Container start command arguments.
+     * 
+     */
     public Optional<Output<List<String>>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -40,6 +44,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
     private @Nullable Output<List<String>> command;
 
+    /**
+     * @return Container start command.
+     * 
+     */
     public Optional<Output<List<String>>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -51,6 +59,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="env")
     private @Nullable Output<List<EnvironmentVarArgs>> env;
 
+    /**
+     * @return Container environment variables.
+     * 
+     */
     public Optional<Output<List<EnvironmentVarArgs>>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -62,6 +74,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return Container image tag.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -73,6 +89,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Custom container name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources")
     private @Nullable Output<ContainerResourcesArgs> resources;
 
+    /**
+     * @return Container resource requirements.
+     * 
+     */
     public Optional<Output<ContainerResourcesArgs>> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -117,68 +141,158 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Container start command arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable Output<List<String>> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Container start command arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(List<String> args) {
             return args(Output.of(args));
         }
 
+        /**
+         * @param args Container start command arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param command Container start command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable Output<List<String>> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Container start command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(List<String> command) {
             return command(Output.of(command));
         }
 
+        /**
+         * @param command Container start command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param env Container environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable Output<List<EnvironmentVarArgs>> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Container environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(List<EnvironmentVarArgs> env) {
             return env(Output.of(env));
         }
 
+        /**
+         * @param env Container environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(EnvironmentVarArgs... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param image Container image tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Container image tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param name Custom container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Custom container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resources Container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable Output<ContainerResourcesArgs> resources) {
             $.resources = resources;
             return this;
         }
 
+        /**
+         * @param resources Container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(ContainerResourcesArgs resources) {
             return resources(Output.of(resources));
         }

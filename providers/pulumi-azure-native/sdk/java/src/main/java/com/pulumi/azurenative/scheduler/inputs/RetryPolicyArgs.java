@@ -24,6 +24,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryCount")
     private @Nullable Output<Integer> retryCount;
 
+    /**
+     * @return Gets or sets the number of times a retry should be attempted.
+     * 
+     */
     public Optional<Output<Integer>> retryCount() {
         return Optional.ofNullable(this.retryCount);
     }
@@ -35,6 +39,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryInterval")
     private @Nullable Output<String> retryInterval;
 
+    /**
+     * @return Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+     * 
+     */
     public Optional<Output<String>> retryInterval() {
         return Optional.ofNullable(this.retryInterval);
     }
@@ -46,6 +54,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryType")
     private @Nullable Output<RetryType> retryType;
 
+    /**
+     * @return Gets or sets the retry strategy to be used.
+     * 
+     */
     public Optional<Output<RetryType>> retryType() {
         return Optional.ofNullable(this.retryType);
     }
@@ -76,29 +88,65 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retryCount Gets or sets the number of times a retry should be attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryCount(@Nullable Output<Integer> retryCount) {
             $.retryCount = retryCount;
             return this;
         }
 
+        /**
+         * @param retryCount Gets or sets the number of times a retry should be attempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryCount(Integer retryCount) {
             return retryCount(Output.of(retryCount));
         }
 
+        /**
+         * @param retryInterval Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryInterval(@Nullable Output<String> retryInterval) {
             $.retryInterval = retryInterval;
             return this;
         }
 
+        /**
+         * @param retryInterval Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryInterval(String retryInterval) {
             return retryInterval(Output.of(retryInterval));
         }
 
+        /**
+         * @param retryType Gets or sets the retry strategy to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryType(@Nullable Output<RetryType> retryType) {
             $.retryType = retryType;
             return this;
         }
 
+        /**
+         * @param retryType Gets or sets the retry strategy to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryType(RetryType retryType) {
             return retryType(Output.of(retryType));
         }

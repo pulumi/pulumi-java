@@ -26,6 +26,10 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return An enum that represents the format of the local timestamp property that needs to be set.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -37,6 +41,10 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeZoneOffset")
     private @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
+    /**
+     * @return An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+     * 
+     */
     public Optional<LocalTimestampResponseTimeZoneOffset> timeZoneOffset() {
         return Optional.ofNullable(this.timeZoneOffset);
     }
@@ -66,11 +74,23 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
             $ = new LocalTimestampResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format An enum that represents the format of the local timestamp property that needs to be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param timeZoneOffset An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZoneOffset(@Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
             $.timeZoneOffset = timeZoneOffset;
             return this;

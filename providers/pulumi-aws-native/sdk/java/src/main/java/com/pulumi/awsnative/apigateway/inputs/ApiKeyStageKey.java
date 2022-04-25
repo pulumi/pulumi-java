@@ -21,6 +21,10 @@ public final class ApiKeyStageKey extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId")
     private @Nullable String restApiId;
 
+    /**
+     * @return The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+     * 
+     */
     public Optional<String> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
@@ -32,6 +36,10 @@ public final class ApiKeyStageKey extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName")
     private @Nullable String stageName;
 
+    /**
+     * @return The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+     * 
+     */
     public Optional<String> stageName() {
         return Optional.ofNullable(this.stageName);
     }
@@ -61,11 +69,23 @@ public final class ApiKeyStageKey extends com.pulumi.resources.InvokeArgs {
             $ = new ApiKeyStageKey(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param restApiId The ID of a RestApi resource that includes the stage with which you want to associate the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(@Nullable String restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param stageName The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(@Nullable String stageName) {
             $.stageName = stageName;
             return this;

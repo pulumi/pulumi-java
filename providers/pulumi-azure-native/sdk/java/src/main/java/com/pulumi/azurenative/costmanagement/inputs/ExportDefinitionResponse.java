@@ -27,6 +27,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataSet")
     private @Nullable ExportDatasetResponse dataSet;
 
+    /**
+     * @return The definition for data in the export.
+     * 
+     */
     public Optional<ExportDatasetResponse> dataSet() {
         return Optional.ofNullable(this.dataSet);
     }
@@ -38,6 +42,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timePeriod")
     private @Nullable ExportTimePeriodResponse timePeriod;
 
+    /**
+     * @return Has time period for pulling data for the export.
+     * 
+     */
     public Optional<ExportTimePeriodResponse> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
@@ -49,6 +57,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timeframe", required=true)
     private String timeframe;
 
+    /**
+     * @return The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+     * 
+     */
     public String timeframe() {
         return this.timeframe;
     }
@@ -60,6 +72,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
             $ = new ExportDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSet The definition for data in the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSet(@Nullable ExportDatasetResponse dataSet) {
             $.dataSet = dataSet;
             return this;
         }
 
+        /**
+         * @param timePeriod Has time period for pulling data for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
             $.timePeriod = timePeriod;
             return this;
         }
 
+        /**
+         * @param timeframe The time frame for pulling data for the export. If custom, then a specific time period must be provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeframe(String timeframe) {
             $.timeframe = timeframe;
             return this;
         }
 
+        /**
+         * @param type The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

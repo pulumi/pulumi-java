@@ -29,6 +29,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="applicationGroupName")
     private @Nullable Output<String> applicationGroupName;
 
+    /**
+     * @return The name of the application group
+     * 
+     */
     public Optional<Output<String>> applicationGroupName() {
         return Optional.ofNullable(this.applicationGroupName);
     }
@@ -40,6 +44,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="applicationGroupType", required=true)
     private Output<Either<String,ApplicationGroupType>> applicationGroupType;
 
+    /**
+     * @return Resource Type of ApplicationGroup.
+     * 
+     */
     public Output<Either<String,ApplicationGroupType>> applicationGroupType() {
         return this.applicationGroupType;
     }
@@ -51,6 +59,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of ApplicationGroup.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of ApplicationGroup.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -73,6 +89,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostPoolArmPath", required=true)
     private Output<String> hostPoolArmPath;
 
+    /**
+     * @return HostPool arm path of ApplicationGroup.
+     * 
+     */
     public Output<String> hostPoolArmPath() {
         return this.hostPoolArmPath;
     }
@@ -91,6 +111,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -102,6 +126,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -113,6 +141,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="managedBy")
     private @Nullable Output<String> managedBy;
 
+    /**
+     * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * 
+     */
     public Optional<Output<String>> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
@@ -124,6 +156,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="migrationRequest")
     private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
+    /**
+     * @return The registration info of HostPool.
+     * 
+     */
     public Optional<Output<MigrationRequestPropertiesArgs>> migrationRequest() {
         return Optional.ofNullable(this.migrationRequest);
     }
@@ -142,6 +178,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -160,6 +200,10 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -201,55 +245,127 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
             $ = new ApplicationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(@Nullable Output<String> applicationGroupName) {
             $.applicationGroupName = applicationGroupName;
             return this;
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(String applicationGroupName) {
             return applicationGroupName(Output.of(applicationGroupName));
         }
 
+        /**
+         * @param applicationGroupType Resource Type of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupType(Output<Either<String,ApplicationGroupType>> applicationGroupType) {
             $.applicationGroupType = applicationGroupType;
             return this;
         }
 
+        /**
+         * @param applicationGroupType Resource Type of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupType(Either<String,ApplicationGroupType> applicationGroupType) {
             return applicationGroupType(Output.of(applicationGroupType));
         }
 
+        /**
+         * @param applicationGroupType Resource Type of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupType(String applicationGroupType) {
             return applicationGroupType(Either.ofLeft(applicationGroupType));
         }
 
+        /**
+         * @param applicationGroupType Resource Type of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupType(ApplicationGroupType applicationGroupType) {
             return applicationGroupType(Either.ofRight(applicationGroupType));
         }
 
+        /**
+         * @param description Description of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param friendlyName Friendly name of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param hostPoolArmPath HostPool arm path of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolArmPath(Output<String> hostPoolArmPath) {
             $.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
 
+        /**
+         * @param hostPoolArmPath HostPool arm path of ApplicationGroup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolArmPath(String hostPoolArmPath) {
             return hostPoolArmPath(Output.of(hostPoolArmPath));
         }
@@ -263,38 +379,86 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedBy The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(@Nullable Output<String> managedBy) {
             $.managedBy = managedBy;
             return this;
         }
 
+        /**
+         * @param managedBy The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(String managedBy) {
             return managedBy(Output.of(managedBy));
         }
 
+        /**
+         * @param migrationRequest The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
             $.migrationRequest = migrationRequest;
             return this;
         }
 
+        /**
+         * @param migrationRequest The registration info of HostPool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationRequest(MigrationRequestPropertiesArgs migrationRequest) {
             return migrationRequest(Output.of(migrationRequest));
         }
@@ -308,11 +472,23 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
@@ -326,11 +502,23 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -24,6 +24,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="endAddress")
     private @Nullable Output<String> endAddress;
 
+    /**
+     * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     * 
+     */
     public Optional<Output<String>> endAddress() {
         return Optional.ofNullable(this.endAddress);
     }
@@ -35,6 +39,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -46,6 +54,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the App Service plan.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -57,6 +69,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="routeName")
     private @Nullable Output<String> routeName;
 
+    /**
+     * @return Name of the Virtual Network route.
+     * 
+     */
     public Optional<Output<String>> routeName() {
         return Optional.ofNullable(this.routeName);
     }
@@ -84,6 +104,15 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="routeType")
     private @Nullable Output<Either<String,RouteType>> routeType;
 
+    /**
+     * @return The type of route this is:
+     * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+     * INHERITED - Routes inherited from the real Virtual Network routes
+     * STATIC - Static route set on the app only
+     * 
+     * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+     * 
+     */
     public Optional<Output<Either<String,RouteType>>> routeType() {
         return Optional.ofNullable(this.routeType);
     }
@@ -95,6 +124,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="startAddress")
     private @Nullable Output<String> startAddress;
 
+    /**
+     * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     * 
+     */
     public Optional<Output<String>> startAddress() {
         return Optional.ofNullable(this.startAddress);
     }
@@ -106,6 +139,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
     @Import(name="vnetName", required=true)
     private Output<String> vnetName;
 
+    /**
+     * @return Name of the Virtual Network.
+     * 
+     */
     public Output<String> vnetName() {
         return this.vnetName;
     }
@@ -141,82 +178,210 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
             $ = new AppServicePlanRouteForVnetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endAddress The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endAddress(@Nullable Output<String> endAddress) {
             $.endAddress = endAddress;
             return this;
         }
 
+        /**
+         * @param endAddress The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endAddress(String endAddress) {
             return endAddress(Output.of(endAddress));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the App Service plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeName Name of the Virtual Network route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(@Nullable Output<String> routeName) {
             $.routeName = routeName;
             return this;
         }
 
+        /**
+         * @param routeName Name of the Virtual Network route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             return routeName(Output.of(routeName));
         }
 
+        /**
+         * @param routeType The type of route this is:
+         * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+         * INHERITED - Routes inherited from the real Virtual Network routes
+         * STATIC - Static route set on the app only
+         * 
+         * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeType(@Nullable Output<Either<String,RouteType>> routeType) {
             $.routeType = routeType;
             return this;
         }
 
+        /**
+         * @param routeType The type of route this is:
+         * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+         * INHERITED - Routes inherited from the real Virtual Network routes
+         * STATIC - Static route set on the app only
+         * 
+         * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeType(Either<String,RouteType> routeType) {
             return routeType(Output.of(routeType));
         }
 
+        /**
+         * @param routeType The type of route this is:
+         * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+         * INHERITED - Routes inherited from the real Virtual Network routes
+         * STATIC - Static route set on the app only
+         * 
+         * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeType(String routeType) {
             return routeType(Either.ofLeft(routeType));
         }
 
+        /**
+         * @param routeType The type of route this is:
+         * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+         * INHERITED - Routes inherited from the real Virtual Network routes
+         * STATIC - Static route set on the app only
+         * 
+         * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeType(RouteType routeType) {
             return routeType(Either.ofRight(routeType));
         }
 
+        /**
+         * @param startAddress The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAddress(@Nullable Output<String> startAddress) {
             $.startAddress = startAddress;
             return this;
         }
 
+        /**
+         * @param startAddress The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAddress(String startAddress) {
             return startAddress(Output.of(startAddress));
         }
 
+        /**
+         * @param vnetName Name of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(Output<String> vnetName) {
             $.vnetName = vnetName;
             return this;
         }
 
+        /**
+         * @param vnetName Name of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetName(String vnetName) {
             return vnetName(Output.of(vnetName));
         }

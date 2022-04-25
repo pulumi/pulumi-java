@@ -25,6 +25,10 @@ public final class ConfigurationParameterResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the configuration parameter.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ConfigurationParameterResponse extends com.pulumi.resources.I
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the configuration parameter.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ConfigurationParameterResponse extends com.pulumi.resources.I
             $ = new ConfigurationParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the configuration parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value Value of the configuration parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

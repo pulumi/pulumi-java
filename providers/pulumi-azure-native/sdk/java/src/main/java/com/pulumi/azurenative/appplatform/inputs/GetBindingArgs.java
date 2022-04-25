@@ -19,6 +19,10 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="appName", required=true)
     private String appName;
 
+    /**
+     * @return The name of the App resource.
+     * 
+     */
     public String appName() {
         return this.appName;
     }
@@ -30,6 +34,10 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="bindingName", required=true)
     private String bindingName;
 
+    /**
+     * @return The name of the Binding resource.
+     * 
+     */
     public String bindingName() {
         return this.bindingName;
     }
@@ -41,6 +49,10 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appName(String appName) {
             $.appName = appName;
             return this;
         }
 
+        /**
+         * @param bindingName The name of the Binding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingName(String bindingName) {
             $.bindingName = bindingName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

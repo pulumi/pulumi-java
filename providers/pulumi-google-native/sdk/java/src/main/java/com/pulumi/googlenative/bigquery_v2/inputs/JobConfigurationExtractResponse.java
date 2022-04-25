@@ -23,6 +23,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="compression", required=true)
     private String compression;
 
+    /**
+     * @return [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
+     * 
+     */
     public String compression() {
         return this.compression;
     }
@@ -34,6 +38,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="destinationFormat", required=true)
     private String destinationFormat;
 
+    /**
+     * @return [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
+     * 
+     */
     public String destinationFormat() {
         return this.destinationFormat;
     }
@@ -45,6 +53,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="destinationUri", required=true)
     private String destinationUri;
 
+    /**
+     * @return [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
+     * 
+     */
     public String destinationUri() {
         return this.destinationUri;
     }
@@ -56,6 +68,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="destinationUris", required=true)
     private List<String> destinationUris;
 
+    /**
+     * @return [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+     * 
+     */
     public List<String> destinationUris() {
         return this.destinationUris;
     }
@@ -67,6 +83,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="fieldDelimiter", required=true)
     private String fieldDelimiter;
 
+    /**
+     * @return [Optional] Delimiter to use between fields in the exported data. Default is &#39;,&#39;. Not applicable when extracting models.
+     * 
+     */
     public String fieldDelimiter() {
         return this.fieldDelimiter;
     }
@@ -78,6 +98,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="printHeader", required=true)
     private Boolean printHeader;
 
+    /**
+     * @return [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
+     * 
+     */
     public Boolean printHeader() {
         return this.printHeader;
     }
@@ -89,6 +113,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="sourceModel", required=true)
     private ModelReferenceResponse sourceModel;
 
+    /**
+     * @return A reference to the model being exported.
+     * 
+     */
     public ModelReferenceResponse sourceModel() {
         return this.sourceModel;
     }
@@ -100,6 +128,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="sourceTable", required=true)
     private TableReferenceResponse sourceTable;
 
+    /**
+     * @return A reference to the table being exported.
+     * 
+     */
     public TableReferenceResponse sourceTable() {
         return this.sourceTable;
     }
@@ -111,6 +143,10 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
     @Import(name="useAvroLogicalTypes", required=true)
     private Boolean useAvroLogicalTypes;
 
+    /**
+     * @return [Optional] If destinationFormat is set to &#34;AVRO&#34;, this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
+     * 
+     */
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
@@ -147,50 +183,110 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
             $ = new JobConfigurationExtractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compression [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(String compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param destinationFormat [Optional] The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON, PARQUET or AVRO for tables and ML_TF_SAVED_MODEL or ML_XGBOOST_BOOSTER for models. The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV. The default value for models is ML_TF_SAVED_MODEL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFormat(String destinationFormat) {
             $.destinationFormat = destinationFormat;
             return this;
         }
 
+        /**
+         * @param destinationUri [Pick one] DEPRECATED: Use destinationUris instead, passing only one URI as necessary. The fully-qualified Google Cloud Storage URI where the extracted table should be written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationUri(String destinationUri) {
             $.destinationUri = destinationUri;
             return this;
         }
 
+        /**
+         * @param destinationUris [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationUris(List<String> destinationUris) {
             $.destinationUris = destinationUris;
             return this;
         }
 
+        /**
+         * @param destinationUris [Pick one] A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationUris(String... destinationUris) {
             return destinationUris(List.of(destinationUris));
         }
 
+        /**
+         * @param fieldDelimiter [Optional] Delimiter to use between fields in the exported data. Default is &#39;,&#39;. Not applicable when extracting models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDelimiter(String fieldDelimiter) {
             $.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
+        /**
+         * @param printHeader [Optional] Whether to print out a header row in the results. Default is true. Not applicable when extracting models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder printHeader(Boolean printHeader) {
             $.printHeader = printHeader;
             return this;
         }
 
+        /**
+         * @param sourceModel A reference to the model being exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceModel(ModelReferenceResponse sourceModel) {
             $.sourceModel = sourceModel;
             return this;
         }
 
+        /**
+         * @param sourceTable A reference to the table being exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTable(TableReferenceResponse sourceTable) {
             $.sourceTable = sourceTable;
             return this;
         }
 
+        /**
+         * @param useAvroLogicalTypes [Optional] If destinationFormat is set to &#34;AVRO&#34;, this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;

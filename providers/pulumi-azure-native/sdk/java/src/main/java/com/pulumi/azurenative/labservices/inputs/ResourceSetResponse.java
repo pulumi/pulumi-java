@@ -25,6 +25,10 @@ public final class ResourceSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceSettingId")
     private @Nullable String resourceSettingId;
 
+    /**
+     * @return resourceSettingId for the environment
+     * 
+     */
     public Optional<String> resourceSettingId() {
         return Optional.ofNullable(this.resourceSettingId);
     }
@@ -36,6 +40,10 @@ public final class ResourceSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId")
     private @Nullable String vmResourceId;
 
+    /**
+     * @return VM resource Id for the environment
+     * 
+     */
     public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
@@ -65,11 +73,23 @@ public final class ResourceSetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResourceSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceSettingId resourceSettingId for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettingId(@Nullable String resourceSettingId) {
             $.resourceSettingId = resourceSettingId;
             return this;
         }
 
+        /**
+         * @param vmResourceId VM resource Id for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(@Nullable String vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;

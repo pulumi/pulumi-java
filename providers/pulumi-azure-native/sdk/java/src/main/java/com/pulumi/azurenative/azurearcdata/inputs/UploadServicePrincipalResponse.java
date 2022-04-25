@@ -25,6 +25,10 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="authority")
     private @Nullable String authority;
 
+    /**
+     * @return Authority for the service principal. Example: https://login.microsoftonline.com/
+     * 
+     */
     public Optional<String> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -36,6 +40,10 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Client ID of the service principal for uploading data.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -47,6 +55,10 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Tenant ID of the service principal.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -77,16 +89,34 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
             $ = new UploadServicePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authority Authority for the service principal. Example: https://login.microsoftonline.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable String authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param clientId Client ID of the service principal for uploading data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

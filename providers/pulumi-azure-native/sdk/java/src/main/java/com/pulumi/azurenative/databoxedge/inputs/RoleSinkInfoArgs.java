@@ -24,6 +24,10 @@ public final class RoleSinkInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleId", required=true)
     private Output<String> roleId;
 
+    /**
+     * @return Compute role ID.
+     * 
+     */
     public Output<String> roleId() {
         return this.roleId;
     }
@@ -52,11 +56,23 @@ public final class RoleSinkInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleSinkInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleId Compute role ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(Output<String> roleId) {
             $.roleId = roleId;
             return this;
         }
 
+        /**
+         * @param roleId Compute role ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(String roleId) {
             return roleId(Output.of(roleId));
         }

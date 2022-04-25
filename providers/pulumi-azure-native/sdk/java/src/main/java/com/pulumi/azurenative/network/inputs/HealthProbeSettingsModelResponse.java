@@ -27,6 +27,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -38,6 +42,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="healthProbeMethod")
     private @Nullable String healthProbeMethod;
 
+    /**
+     * @return Configures which HTTP method to use to probe the backends defined under backendPools.
+     * 
+     */
     public Optional<String> healthProbeMethod() {
         return Optional.ofNullable(this.healthProbeMethod);
     }
@@ -49,6 +57,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="intervalInSeconds")
     private @Nullable Integer intervalInSeconds;
 
+    /**
+     * @return The number of seconds between health probes.
+     * 
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -71,6 +87,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path to use for the health probe. Default is /
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -93,6 +117,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return Protocol scheme to use for this probe
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -104,6 +132,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -115,6 +147,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -151,46 +187,100 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
             $ = new HealthProbeSettingsModelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabledState Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param healthProbeMethod Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeMethod(@Nullable String healthProbeMethod) {
             $.healthProbeMethod = healthProbeMethod;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds The number of seconds between health probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param path The path to use for the health probe. Default is /
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param protocol Protocol scheme to use for this probe
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param resourceState Resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

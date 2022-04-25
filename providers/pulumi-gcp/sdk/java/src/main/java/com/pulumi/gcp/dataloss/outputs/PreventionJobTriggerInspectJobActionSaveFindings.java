@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PreventionJobTriggerInspectJobActionSaveFindings {
     /**
-     * Information on where to store output
+     * @return Information on where to store output
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
     }
 
     /**
-     * Information on where to store output
+     * @return Information on where to store output
      * Structure is documented below.
      * 
-    */
+     */
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig() {
         return this.outputConfig;
     }

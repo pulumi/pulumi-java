@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class WebChatSiteResponse {
     /**
-     * Whether this site is enabled for DirectLine channel
+     * @return Whether this site is enabled for DirectLine channel
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Whether this site is enabled for preview versions of Webchat
+     * @return Whether this site is enabled for preview versions of Webchat
      * 
      */
     private final Boolean isWebchatPreviewEnabled;
     /**
-     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String key;
     /**
-     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String key2;
     /**
-     * Site Id
+     * @return Site Id
      * 
      */
     private final String siteId;
     /**
-     * Site name
+     * @return Site name
      * 
      */
     private final String siteName;
@@ -58,44 +58,44 @@ public final class WebChatSiteResponse {
     }
 
     /**
-     * Whether this site is enabled for DirectLine channel
+     * @return Whether this site is enabled for DirectLine channel
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this site is enabled for preview versions of Webchat
+     * @return Whether this site is enabled for preview versions of Webchat
      * 
-    */
+     */
     public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
-     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String key2() {
         return this.key2;
     }
     /**
-     * Site Id
+     * @return Site Id
      * 
-    */
+     */
     public String siteId() {
         return this.siteId;
     }
     /**
-     * Site name
+     * @return Site name
      * 
-    */
+     */
     public String siteName() {
         return this.siteName;
     }

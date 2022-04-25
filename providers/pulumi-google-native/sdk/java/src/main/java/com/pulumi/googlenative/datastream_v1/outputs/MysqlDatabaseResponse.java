@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class MysqlDatabaseResponse {
     /**
-     * Database name.
+     * @return Database name.
      * 
      */
     private final String database;
     /**
-     * Tables in the database.
+     * @return Tables in the database.
      * 
      */
     private final List<MysqlTableResponse> mysqlTables;
@@ -31,16 +31,16 @@ public final class MysqlDatabaseResponse {
     }
 
     /**
-     * Database name.
+     * @return Database name.
      * 
-    */
+     */
     public String database() {
         return this.database;
     }
     /**
-     * Tables in the database.
+     * @return Tables in the database.
      * 
-    */
+     */
     public List<MysqlTableResponse> mysqlTables() {
         return this.mysqlTables;
     }

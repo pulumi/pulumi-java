@@ -26,6 +26,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The scale up/out capacity, representing server&#39;s compute units.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The family of hardware.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -48,6 +56,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The size code, to be interpreted by resource as appropriate.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -70,6 +86,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier of the particular SKU, e.g. Basic.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -102,26 +122,56 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The scale up/out capacity, representing server&#39;s compute units.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family The family of hardware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size The size code, to be interpreted by resource as appropriate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier The tier of the particular SKU, e.g. Basic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

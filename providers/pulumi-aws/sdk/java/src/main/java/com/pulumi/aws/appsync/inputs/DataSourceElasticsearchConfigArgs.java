@@ -22,6 +22,10 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
     @Import(name="endpoint", required=true)
     private Output<String> endpoint;
 
+    /**
+     * @return HTTP URL.
+     * 
+     */
     public Output<String> endpoint() {
         return this.endpoint;
     }
@@ -33,6 +37,10 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return AWS Region for RDS HTTP endpoint. Defaults to current region.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -62,20 +70,44 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
             $ = new DataSourceElasticsearchConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint HTTP URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint HTTP URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param region AWS Region for RDS HTTP endpoint. Defaults to current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region AWS Region for RDS HTTP endpoint. Defaults to current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

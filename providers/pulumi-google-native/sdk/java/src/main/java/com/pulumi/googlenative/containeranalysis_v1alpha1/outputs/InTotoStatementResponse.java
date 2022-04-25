@@ -14,27 +14,27 @@ import java.util.Objects;
 @CustomType
 public final class InTotoStatementResponse {
     /**
-     * &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
      * 
      */
     private final String predicateType;
     /**
-     * provenance is a predicate of type intotoprovenance
+     * @return provenance is a predicate of type intotoprovenance
      * 
      */
     private final InTotoProvenanceResponse provenance;
     /**
-     * slsa_provenance is a predicate of type slsaProvenance
+     * @return slsa_provenance is a predicate of type slsaProvenance
      * 
      */
     private final SlsaProvenanceResponse slsaProvenance;
     /**
-     * subject is the subjects of the intoto statement
+     * @return subject is the subjects of the intoto statement
      * 
      */
     private final List<SubjectResponse> subject;
     /**
-     * Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class InTotoStatementResponse {
     }
 
     /**
-     * &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
      * 
-    */
+     */
     public String predicateType() {
         return this.predicateType;
     }
     /**
-     * provenance is a predicate of type intotoprovenance
+     * @return provenance is a predicate of type intotoprovenance
      * 
-    */
+     */
     public InTotoProvenanceResponse provenance() {
         return this.provenance;
     }
     /**
-     * slsa_provenance is a predicate of type slsaProvenance
+     * @return slsa_provenance is a predicate of type slsaProvenance
      * 
-    */
+     */
     public SlsaProvenanceResponse slsaProvenance() {
         return this.slsaProvenance;
     }
     /**
-     * subject is the subjects of the intoto statement
+     * @return subject is the subjects of the intoto statement
      * 
-    */
+     */
     public List<SubjectResponse> subject() {
         return this.subject;
     }
     /**
-     * Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

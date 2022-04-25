@@ -29,6 +29,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalIpas")
     private @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
+    /**
+     * @return iOS apps to install in addition to those being directly tested.
+     * 
+     */
     public Optional<Output<List<FileReferenceArgs>>> additionalIpas() {
         return Optional.ofNullable(this.additionalIpas);
     }
@@ -40,6 +44,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
     private @Nullable Output<String> networkProfile;
 
+    /**
+     * @return The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+     * 
+     */
     public Optional<Output<String>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -51,6 +59,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pullDirectories")
     private @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
+    /**
+     * @return List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+     * 
+     */
     public Optional<Output<List<IosDeviceFileArgs>>> pullDirectories() {
         return Optional.ofNullable(this.pullDirectories);
     }
@@ -62,6 +74,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pushFiles")
     private @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
+    /**
+     * @return List of files to push to the device before starting the test.
+     * 
+     */
     public Optional<Output<List<IosDeviceFileArgs>>> pushFiles() {
         return Optional.ofNullable(this.pushFiles);
     }
@@ -93,50 +109,116 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosTestSetupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalIpas iOS apps to install in addition to those being directly tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalIpas(@Nullable Output<List<FileReferenceArgs>> additionalIpas) {
             $.additionalIpas = additionalIpas;
             return this;
         }
 
+        /**
+         * @param additionalIpas iOS apps to install in addition to those being directly tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalIpas(List<FileReferenceArgs> additionalIpas) {
             return additionalIpas(Output.of(additionalIpas));
         }
 
+        /**
+         * @param additionalIpas iOS apps to install in addition to those being directly tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalIpas(FileReferenceArgs... additionalIpas) {
             return additionalIpas(List.of(additionalIpas));
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(String networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param pullDirectories List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDirectories(@Nullable Output<List<IosDeviceFileArgs>> pullDirectories) {
             $.pullDirectories = pullDirectories;
             return this;
         }
 
+        /**
+         * @param pullDirectories List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDirectories(List<IosDeviceFileArgs> pullDirectories) {
             return pullDirectories(Output.of(pullDirectories));
         }
 
+        /**
+         * @param pullDirectories List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app&#39;s filesystem (such as /Documents) by specifying the bundle ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDirectories(IosDeviceFileArgs... pullDirectories) {
             return pullDirectories(List.of(pullDirectories));
         }
 
+        /**
+         * @param pushFiles List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushFiles(@Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
             $.pushFiles = pushFiles;
             return this;
         }
 
+        /**
+         * @param pushFiles List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushFiles(List<IosDeviceFileArgs> pushFiles) {
             return pushFiles(Output.of(pushFiles));
         }
 
+        /**
+         * @param pushFiles List of files to push to the device before starting the test.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushFiles(IosDeviceFileArgs... pushFiles) {
             return pushFiles(List.of(pushFiles));
         }

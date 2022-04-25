@@ -28,6 +28,10 @@ public final class ManagedZoneForwardingConfigResponse extends com.pulumi.resour
     @Import(name="targetNameServers", required=true)
     private List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
+    /**
+     * @return List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+     * 
+     */
     public List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers() {
         return this.targetNameServers;
     }
@@ -62,11 +66,23 @@ public final class ManagedZoneForwardingConfigResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
             $.targetNameServers = targetNameServers;
             return this;
         }
 
+        /**
+         * @param targetNameServers List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNameServers(ManagedZoneForwardingConfigNameServerTargetResponse... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
         }

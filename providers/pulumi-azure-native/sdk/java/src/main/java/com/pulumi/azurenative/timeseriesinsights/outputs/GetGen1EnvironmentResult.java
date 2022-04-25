@@ -17,78 +17,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGen1EnvironmentResult {
     /**
-     * The time the resource was created.
+     * @return The time the resource was created.
      * 
      */
     private final String creationTime;
     /**
-     * The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
+     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     private final String dataAccessFqdn;
     /**
-     * An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
+     * @return An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
      */
     private final String dataAccessId;
     /**
-     * ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
+     * @return ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
      * 
      */
     private final String dataRetentionTime;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * The kind of the environment.
+     * @return The kind of the environment.
      * Expected value is &#39;Gen1&#39;.
      * 
      */
     private final String kind;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+     * @return The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
      */
     private final @Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties;
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
     private final SkuResponse sku;
     /**
-     * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
+     * @return An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
      */
     private final EnvironmentStatusResponse status;
     /**
-     * The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * @return The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
     private final @Nullable String storageLimitExceededBehavior;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -128,108 +128,108 @@ public final class GetGen1EnvironmentResult {
     }
 
     /**
-     * The time the resource was created.
+     * @return The time the resource was created.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
+     * @return The fully qualified domain name used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
-    */
+     */
     public String dataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
-     * An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
+     * @return An id used to access the environment data, e.g. to query the environment&#39;s events or upload reference data for the environment.
      * 
-    */
+     */
     public String dataAccessId() {
         return this.dataAccessId;
     }
     /**
-     * ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
+     * @return ISO8601 timespan specifying the minimum number of days the environment&#39;s events will be available for query.
      * 
-    */
+     */
     public String dataRetentionTime() {
         return this.dataRetentionTime;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the environment.
+     * @return The kind of the environment.
      * Expected value is &#39;Gen1&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
+     * @return The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
-    */
+     */
     public List<TimeSeriesIdPropertyResponse> partitionKeyProperties() {
         return this.partitionKeyProperties == null ? List.of() : this.partitionKeyProperties;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
+     * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
+     * @return An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
-    */
+     */
     public EnvironmentStatusResponse status() {
         return this.status;
     }
     /**
-     * The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
+     * @return The behavior the Time Series Insights service should take when the environment&#39;s capacity has been exceeded. If &#34;PauseIngress&#34; is specified, new events will not be read from the event source. If &#34;PurgeOldData&#34; is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
-    */
+     */
     public Optional<String> storageLimitExceededBehavior() {
         return Optional.ofNullable(this.storageLimitExceededBehavior);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

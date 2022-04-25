@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ListWorkflowAccessKeySecretKeysResult {
     /**
-     * Gets the primary secret key.
+     * @return Gets the primary secret key.
      * 
      */
     private final String primarySecretKey;
     /**
-     * Gets the secondary secret key.
+     * @return Gets the secondary secret key.
      * 
      */
     private final String secondarySecretKey;
@@ -29,16 +29,16 @@ public final class ListWorkflowAccessKeySecretKeysResult {
     }
 
     /**
-     * Gets the primary secret key.
+     * @return Gets the primary secret key.
      * 
-    */
+     */
     public String primarySecretKey() {
         return this.primarySecretKey;
     }
     /**
-     * Gets the secondary secret key.
+     * @return Gets the secondary secret key.
      * 
-    */
+     */
     public String secondarySecretKey() {
         return this.secondarySecretKey;
     }

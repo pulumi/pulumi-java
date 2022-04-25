@@ -26,6 +26,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationMethods")
     private @Nullable String authenticationMethods;
 
+    /**
+     * @return SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<String> authenticationMethods() {
         return Optional.ofNullable(this.authenticationMethods);
     }
@@ -37,6 +41,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelEncryption")
     private @Nullable String channelEncryption;
 
+    /**
+     * @return SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<String> channelEncryption() {
         return Optional.ofNullable(this.channelEncryption);
     }
@@ -48,6 +56,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kerberosTicketEncryption")
     private @Nullable String kerberosTicketEncryption;
 
+    /**
+     * @return Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
+     * 
+     */
     public Optional<String> kerberosTicketEncryption() {
         return Optional.ofNullable(this.kerberosTicketEncryption);
     }
@@ -59,6 +71,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="multichannel")
     private @Nullable MultichannelResponse multichannel;
 
+    /**
+     * @return Multichannel setting. Applies to Premium FileStorage only.
+     * 
+     */
     public Optional<MultichannelResponse> multichannel() {
         return Optional.ofNullable(this.multichannel);
     }
@@ -70,6 +86,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versions")
     private @Nullable String versions;
 
+    /**
+     * @return SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
+     * 
+     */
     public Optional<String> versions() {
         return Optional.ofNullable(this.versions);
     }
@@ -102,26 +122,56 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SmbSettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationMethods SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethods(@Nullable String authenticationMethods) {
             $.authenticationMethods = authenticationMethods;
             return this;
         }
 
+        /**
+         * @param channelEncryption SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelEncryption(@Nullable String channelEncryption) {
             $.channelEncryption = channelEncryption;
             return this;
         }
 
+        /**
+         * @param kerberosTicketEncryption Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             $.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
 
+        /**
+         * @param multichannel Multichannel setting. Applies to Premium FileStorage only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multichannel(@Nullable MultichannelResponse multichannel) {
             $.multichannel = multichannel;
             return this;
         }
 
+        /**
+         * @param versions SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versions(@Nullable String versions) {
             $.versions = versions;
             return this;

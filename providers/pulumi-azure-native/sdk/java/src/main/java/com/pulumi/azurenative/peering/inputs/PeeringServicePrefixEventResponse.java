@@ -23,6 +23,10 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
     @Import(name="eventDescription", required=true)
     private String eventDescription;
 
+    /**
+     * @return The description of the event associated with a prefix.
+     * 
+     */
     public String eventDescription() {
         return this.eventDescription;
     }
@@ -34,6 +38,10 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
     @Import(name="eventLevel", required=true)
     private String eventLevel;
 
+    /**
+     * @return The level of the event associated with a prefix.
+     * 
+     */
     public String eventLevel() {
         return this.eventLevel;
     }
@@ -45,6 +53,10 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
     @Import(name="eventSummary", required=true)
     private String eventSummary;
 
+    /**
+     * @return The summary of the event associated with a prefix.
+     * 
+     */
     public String eventSummary() {
         return this.eventSummary;
     }
@@ -56,6 +68,10 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
     @Import(name="eventTimestamp", required=true)
     private String eventTimestamp;
 
+    /**
+     * @return The timestamp of the event associated with a prefix.
+     * 
+     */
     public String eventTimestamp() {
         return this.eventTimestamp;
     }
@@ -67,6 +83,10 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
     @Import(name="eventType", required=true)
     private String eventType;
 
+    /**
+     * @return The type of the event associated with a prefix.
+     * 
+     */
     public String eventType() {
         return this.eventType;
     }
@@ -99,26 +119,56 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
             $ = new PeeringServicePrefixEventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventDescription The description of the event associated with a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventDescription(String eventDescription) {
             $.eventDescription = eventDescription;
             return this;
         }
 
+        /**
+         * @param eventLevel The level of the event associated with a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventLevel(String eventLevel) {
             $.eventLevel = eventLevel;
             return this;
         }
 
+        /**
+         * @param eventSummary The summary of the event associated with a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventSummary(String eventSummary) {
             $.eventSummary = eventSummary;
             return this;
         }
 
+        /**
+         * @param eventTimestamp The timestamp of the event associated with a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventTimestamp(String eventTimestamp) {
             $.eventTimestamp = eventTimestamp;
             return this;
         }
 
+        /**
+         * @param eventType The type of the event associated with a prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventType(String eventType) {
             $.eventType = eventType;
             return this;

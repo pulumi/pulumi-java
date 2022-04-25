@@ -27,6 +27,10 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configMapKeyRef")
     private @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
+    /**
+     * @return (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+     * 
+     */
     public Optional<Output<ConfigMapKeySelectorArgs>> configMapKeyRef() {
         return Optional.ofNullable(this.configMapKeyRef);
     }
@@ -38,6 +42,10 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretKeyRef")
     private @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
+    /**
+     * @return (Optional) Selects a key (version) of a secret in Secret Manager.
+     * 
+     */
     public Optional<Output<SecretKeySelectorArgs>> secretKeyRef() {
         return Optional.ofNullable(this.secretKeyRef);
     }
@@ -67,20 +75,44 @@ public final class EnvVarSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvVarSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configMapKeyRef (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapKeyRef(@Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef) {
             $.configMapKeyRef = configMapKeyRef;
             return this;
         }
 
+        /**
+         * @param configMapKeyRef (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configMapKeyRef(ConfigMapKeySelectorArgs configMapKeyRef) {
             return configMapKeyRef(Output.of(configMapKeyRef));
         }
 
+        /**
+         * @param secretKeyRef (Optional) Selects a key (version) of a secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(@Nullable Output<SecretKeySelectorArgs> secretKeyRef) {
             $.secretKeyRef = secretKeyRef;
             return this;
         }
 
+        /**
+         * @param secretKeyRef (Optional) Selects a key (version) of a secret in Secret Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKeyRef(SecretKeySelectorArgs secretKeyRef) {
             return secretKeyRef(Output.of(secretKeyRef));
         }

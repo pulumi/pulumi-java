@@ -24,6 +24,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The entity type description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the entity type.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<EntityTypeTagArgs>> tags;
 
+    /**
+     * @return Tags associated with this entity type.
+     * 
+     */
     public Optional<Output<List<EntityTypeTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The entity type description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The entity type description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Tags associated with this entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<EntityTypeTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<EntityTypeTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags associated with this entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(EntityTypeTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -26,6 +26,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network")
     private @Nullable Output<String> network;
 
+    /**
+     * @return Network on which the workers are created. &#34;default&#34; network is used if empty.
+     * 
+     */
     public Optional<Output<String>> network() {
         return Optional.ofNullable(this.network);
     }
@@ -37,6 +41,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -48,6 +56,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
     private @Nullable Output<String> subnetwork;
 
+    /**
+     * @return Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+     * 
+     */
     public Optional<Output<String>> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -78,29 +90,65 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param network Network on which the workers are created. &#34;default&#34; network is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(@Nullable Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Network on which the workers are created. &#34;default&#34; network is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param project Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param subnetwork Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
         }
 
+        /**
+         * @param subnetwork Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetwork(String subnetwork) {
             return subnetwork(Output.of(subnetwork));
         }

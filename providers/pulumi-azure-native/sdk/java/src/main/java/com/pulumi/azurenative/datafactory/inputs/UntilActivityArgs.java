@@ -69,6 +69,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activities", required=true)
     private Output<List<Object>> activities;
 
+    /**
+     * @return List of activities to execute.
+     * 
+     */
     public Output<List<Object>> activities() {
         return this.activities;
     }
@@ -80,6 +84,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -91,6 +99,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -102,6 +114,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
     private Output<ExpressionArgs> expression;
 
+    /**
+     * @return An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
+     * 
+     */
     public Output<ExpressionArgs> expression() {
         return this.expression;
     }
@@ -113,6 +129,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -124,6 +144,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<Object> timeout;
 
+    /**
+     * @return Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -136,6 +160,11 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Until&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -147,6 +176,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -182,86 +215,202 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UntilActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Output<List<Object>> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(List<Object> activities) {
             return activities(Output.of(activities));
         }
 
+        /**
+         * @param activities List of activities to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param expression An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<ExpressionArgs> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(ExpressionArgs expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param timeout Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Object> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Object timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Until&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Until&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ScaleCapacityResponse {
     /**
-     * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
+     * @return the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
      */
     private final String default_;
     /**
-     * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
+     * @return the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
      * 
      */
     private final String maximum;
     /**
-     * the minimum number of instances for the resource.
+     * @return the minimum number of instances for the resource.
      * 
      */
     private final String minimum;
@@ -36,23 +36,23 @@ public final class ScaleCapacityResponse {
     }
 
     /**
-     * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
+     * @return the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
-    */
+     */
     public String default_() {
         return this.default_;
     }
     /**
-     * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
+     * @return the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
      * 
-    */
+     */
     public String maximum() {
         return this.maximum;
     }
     /**
-     * the minimum number of instances for the resource.
+     * @return the minimum number of instances for the resource.
      * 
-    */
+     */
     public String minimum() {
         return this.minimum;
     }

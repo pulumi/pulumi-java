@@ -27,6 +27,10 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return Action name. Required for START_ACTIVITY.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -38,6 +42,10 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
+    /**
+     * @return Intent categories to set on the intent.
+     * 
+     */
     public Optional<Output<List<String>>> categories() {
         return Optional.ofNullable(this.categories);
     }
@@ -49,6 +57,10 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return URI for the action.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -79,33 +91,75 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
             $ = new StartActivityIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action name. Required for START_ACTIVITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Action name. Required for START_ACTIVITY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param categories Intent categories to set on the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(@Nullable Output<List<String>> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Intent categories to set on the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             return categories(Output.of(categories));
         }
 
+        /**
+         * @param categories Intent categories to set on the intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param uri URI for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri URI for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

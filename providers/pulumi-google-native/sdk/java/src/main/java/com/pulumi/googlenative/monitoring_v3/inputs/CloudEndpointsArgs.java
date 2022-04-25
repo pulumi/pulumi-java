@@ -26,6 +26,10 @@ public final class CloudEndpointsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -54,11 +58,23 @@ public final class CloudEndpointsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CloudEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param service The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

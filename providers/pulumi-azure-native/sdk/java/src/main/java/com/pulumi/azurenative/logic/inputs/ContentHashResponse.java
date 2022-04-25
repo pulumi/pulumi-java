@@ -25,6 +25,10 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="algorithm")
     private @Nullable String algorithm;
 
+    /**
+     * @return The algorithm of the content hash.
+     * 
+     */
     public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -36,6 +40,10 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the content hash.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ContentHashResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContentHashResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm of the content hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(@Nullable String algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param value The value of the content hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

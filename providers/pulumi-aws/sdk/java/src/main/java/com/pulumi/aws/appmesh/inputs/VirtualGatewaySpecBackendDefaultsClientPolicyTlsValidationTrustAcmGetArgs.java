@@ -21,6 +21,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     @Import(name="certificateAuthorityArns", required=true)
     private Output<List<String>> certificateAuthorityArns;
 
+    /**
+     * @return One or more ACM Amazon Resource Name (ARN)s.
+     * 
+     */
     public Output<List<String>> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }
@@ -49,15 +53,33 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(Output<List<String>> certificateAuthorityArns) {
             $.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             return certificateAuthorityArns(Output.of(certificateAuthorityArns));
         }
 
+        /**
+         * @param certificateAuthorityArns One or more ACM Amazon Resource Name (ARN)s.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
             return certificateAuthorityArns(List.of(certificateAuthorityArns));
         }

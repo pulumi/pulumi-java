@@ -27,6 +27,10 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
     @Import(name="defaultTtlAsIso8601")
     private @Nullable String defaultTtlAsIso8601;
 
+    /**
+     * @return The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<String> defaultTtlAsIso8601() {
         return Optional.ofNullable(this.defaultTtlAsIso8601);
     }
@@ -38,6 +42,10 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
     @Import(name="feedback")
     private @Nullable FeedbackPropertiesResponse feedback;
 
+    /**
+     * @return The properties of the feedback queue for cloud-to-device messages.
+     * 
+     */
     public Optional<FeedbackPropertiesResponse> feedback() {
         return Optional.ofNullable(this.feedback);
     }
@@ -49,6 +57,10 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
     @Import(name="maxDeliveryCount")
     private @Nullable Integer maxDeliveryCount;
 
+    /**
+     * @return The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Integer> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
@@ -79,16 +91,34 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
             $ = new CloudToDevicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultTtlAsIso8601 The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
             $.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
 
+        /**
+         * @param feedback The properties of the feedback queue for cloud-to-device messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder feedback(@Nullable FeedbackPropertiesResponse feedback) {
             $.feedback = feedback;
             return this;
         }
 
+        /**
+         * @param maxDeliveryCount The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             $.maxDeliveryCount = maxDeliveryCount;
             return this;

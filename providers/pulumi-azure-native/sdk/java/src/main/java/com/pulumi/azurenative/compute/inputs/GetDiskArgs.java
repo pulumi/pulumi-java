@@ -19,6 +19,10 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskName", required=true)
     private String diskName;
 
+    /**
+     * @return The name of the managed disk that is being created. The name can&#39;t be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * 
+     */
     public String diskName() {
         return this.diskName;
     }
@@ -30,6 +34,10 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskName The name of the managed disk that is being created. The name can&#39;t be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

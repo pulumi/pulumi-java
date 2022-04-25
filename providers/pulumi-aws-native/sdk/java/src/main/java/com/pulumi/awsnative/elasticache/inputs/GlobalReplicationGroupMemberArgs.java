@@ -23,6 +23,10 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="replicationGroupId")
     private @Nullable Output<String> replicationGroupId;
 
+    /**
+     * @return Regionally unique identifier for the member i.e. ReplicationGroupId.
+     * 
+     */
     public Optional<Output<String>> replicationGroupId() {
         return Optional.ofNullable(this.replicationGroupId);
     }
@@ -34,6 +38,10 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="replicationGroupRegion")
     private @Nullable Output<String> replicationGroupRegion;
 
+    /**
+     * @return The AWS region of the Global Datastore member.
+     * 
+     */
     public Optional<Output<String>> replicationGroupRegion() {
         return Optional.ofNullable(this.replicationGroupRegion);
     }
@@ -45,6 +53,10 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
     @Import(name="role")
     private @Nullable Output<GlobalReplicationGroupMemberRole> role;
 
+    /**
+     * @return Indicates the role of the member, primary or secondary.
+     * 
+     */
     public Optional<Output<GlobalReplicationGroupMemberRole>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -75,29 +87,65 @@ public final class GlobalReplicationGroupMemberArgs extends com.pulumi.resources
             $ = new GlobalReplicationGroupMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replicationGroupId Regionally unique identifier for the member i.e. ReplicationGroupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             $.replicationGroupId = replicationGroupId;
             return this;
         }
 
+        /**
+         * @param replicationGroupId Regionally unique identifier for the member i.e. ReplicationGroupId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupId(String replicationGroupId) {
             return replicationGroupId(Output.of(replicationGroupId));
         }
 
+        /**
+         * @param replicationGroupRegion The AWS region of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
             $.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
+        /**
+         * @param replicationGroupRegion The AWS region of the Global Datastore member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationGroupRegion(String replicationGroupRegion) {
             return replicationGroupRegion(Output.of(replicationGroupRegion));
         }
 
+        /**
+         * @param role Indicates the role of the member, primary or secondary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<GlobalReplicationGroupMemberRole> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Indicates the role of the member, primary or secondary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(GlobalReplicationGroupMemberRole role) {
             return role(Output.of(role));
         }

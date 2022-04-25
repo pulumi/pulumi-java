@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends com.pu
     @Import(name="kMapEstimationHistogram", required=true)
     private List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
 
+    /**
+     * @return The intervals [min_anonymity, max_anonymity] do not overlap. If a value doesn&#39;t correspond to any such interval, the associated frequency is zero. For example, the following records: {min_anonymity: 1, max_anonymity: 1, frequency: 17} {min_anonymity: 2, max_anonymity: 3, frequency: 42} {min_anonymity: 5, max_anonymity: 10, frequency: 99} mean that there are no record with an estimated anonymity of 4, 5, or larger than 10.
+     * 
+     */
     public List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram() {
         return this.kMapEstimationHistogram;
     }
@@ -52,11 +56,23 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends com.pu
             $ = new GooglePrivacyDlpV2KMapEstimationResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kMapEstimationHistogram The intervals [min_anonymity, max_anonymity] do not overlap. If a value doesn&#39;t correspond to any such interval, the associated frequency is zero. For example, the following records: {min_anonymity: 1, max_anonymity: 1, frequency: 17} {min_anonymity: 2, max_anonymity: 3, frequency: 42} {min_anonymity: 5, max_anonymity: 10, frequency: 99} mean that there are no record with an estimated anonymity of 4, 5, or larger than 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMapEstimationHistogram(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
             $.kMapEstimationHistogram = kMapEstimationHistogram;
             return this;
         }
 
+        /**
+         * @param kMapEstimationHistogram The intervals [min_anonymity, max_anonymity] do not overlap. If a value doesn&#39;t correspond to any such interval, the associated frequency is zero. For example, the following records: {min_anonymity: 1, max_anonymity: 1, frequency: 17} {min_anonymity: 2, max_anonymity: 3, frequency: 42} {min_anonymity: 5, max_anonymity: 10, frequency: 99} mean that there are no record with an estimated anonymity of 4, 5, or larger than 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMapEstimationHistogram(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse... kMapEstimationHistogram) {
             return kMapEstimationHistogram(List.of(kMapEstimationHistogram));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DestinationResponse {
     /**
-     * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+     * @return Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
      * 
      */
     private final CloudRunServiceResponse cloudRunService;
@@ -21,9 +21,9 @@ public final class DestinationResponse {
     }
 
     /**
-     * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+     * @return Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
      * 
-    */
+     */
     public CloudRunServiceResponse cloudRunService() {
         return this.cloudRunService;
     }

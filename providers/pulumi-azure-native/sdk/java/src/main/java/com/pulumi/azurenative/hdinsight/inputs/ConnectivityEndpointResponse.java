@@ -26,6 +26,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location of the endpoint.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -37,6 +41,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the endpoint.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The port to connect to.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -59,6 +71,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return The private ip address of the endpoint.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -70,6 +86,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol of the endpoint.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -102,26 +122,56 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
             $ = new ConnectivityEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param port The port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The private ip address of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param protocol The protocol of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;

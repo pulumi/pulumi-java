@@ -21,6 +21,10 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -32,6 +36,10 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
     @Import(name="expression", required=true)
     private String expression;
 
+    /**
+     * @return Textual representation of an expression in Common Expression Language syntax.
+     * 
+     */
     public String expression() {
         return this.expression;
     }
@@ -43,6 +51,10 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return A title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -73,16 +85,34 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
             $ = new GetIAMPolicyBindingCondition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param expression Textual representation of an expression in Common Expression Language syntax.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param title A title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

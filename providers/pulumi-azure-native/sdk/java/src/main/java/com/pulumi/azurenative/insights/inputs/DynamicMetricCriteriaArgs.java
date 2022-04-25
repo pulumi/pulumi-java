@@ -35,6 +35,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="alertSensitivity", required=true)
     private Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
+    /**
+     * @return The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+     * 
+     */
     public Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity() {
         return this.alertSensitivity;
     }
@@ -47,6 +51,11 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="criterionType", required=true)
     private Output<String> criterionType;
 
+    /**
+     * @return Specifies the type of threshold criteria
+     * Expected value is &#39;DynamicThresholdCriterion&#39;.
+     * 
+     */
     public Output<String> criterionType() {
         return this.criterionType;
     }
@@ -58,6 +67,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="dimensions")
     private @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
+    /**
+     * @return List of dimension conditions.
+     * 
+     */
     public Optional<Output<List<MetricDimensionArgs>>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -69,6 +82,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="failingPeriods", required=true)
     private Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
+    /**
+     * @return The minimum number of violations required within the selected lookback time window required to raise an alert.
+     * 
+     */
     public Output<DynamicThresholdFailingPeriodsArgs> failingPeriods() {
         return this.failingPeriods;
     }
@@ -80,6 +97,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="ignoreDataBefore")
     private @Nullable Output<String> ignoreDataBefore;
 
+    /**
+     * @return Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+     * 
+     */
     public Optional<Output<String>> ignoreDataBefore() {
         return Optional.ofNullable(this.ignoreDataBefore);
     }
@@ -91,6 +112,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return Name of the metric.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -102,6 +127,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="metricNamespace")
     private @Nullable Output<String> metricNamespace;
 
+    /**
+     * @return Namespace of the metric.
+     * 
+     */
     public Optional<Output<String>> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -113,6 +142,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the criteria.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -124,6 +157,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="operator", required=true)
     private Output<Either<String,DynamicThresholdOperator>> operator;
 
+    /**
+     * @return The operator used to compare the metric value against the threshold.
+     * 
+     */
     public Output<Either<String,DynamicThresholdOperator>> operator() {
         return this.operator;
     }
@@ -135,6 +172,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="skipMetricValidation")
     private @Nullable Output<Boolean> skipMetricValidation;
 
+    /**
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * 
+     */
     public Optional<Output<Boolean>> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
@@ -146,6 +187,10 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
     @Import(name="timeAggregation", required=true)
     private Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
+    /**
+     * @return the criteria time aggregation types.
+     * 
+     */
     public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
@@ -184,129 +229,305 @@ public final class DynamicMetricCriteriaArgs extends com.pulumi.resources.Resour
             $ = new DynamicMetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertSensitivity The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivity(Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
             $.alertSensitivity = alertSensitivity;
             return this;
         }
 
+        /**
+         * @param alertSensitivity The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
             return alertSensitivity(Output.of(alertSensitivity));
         }
 
+        /**
+         * @param alertSensitivity The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivity(String alertSensitivity) {
             return alertSensitivity(Either.ofLeft(alertSensitivity));
         }
 
+        /**
+         * @param alertSensitivity The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivity(DynamicThresholdSensitivity alertSensitivity) {
             return alertSensitivity(Either.ofRight(alertSensitivity));
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;DynamicThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(Output<String> criterionType) {
             $.criterionType = criterionType;
             return this;
         }
 
+        /**
+         * @param criterionType Specifies the type of threshold criteria
+         * Expected value is &#39;DynamicThresholdCriterion&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder criterionType(String criterionType) {
             return criterionType(Output.of(criterionType));
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<List<MetricDimensionArgs>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<MetricDimensionArgs> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions List of dimension conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(MetricDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
 
+        /**
+         * @param failingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failingPeriods(Output<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
             $.failingPeriods = failingPeriods;
             return this;
         }
 
+        /**
+         * @param failingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
             return failingPeriods(Output.of(failingPeriods));
         }
 
+        /**
+         * @param ignoreDataBefore Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreDataBefore(@Nullable Output<String> ignoreDataBefore) {
             $.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
 
+        /**
+         * @param ignoreDataBefore Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreDataBefore(String ignoreDataBefore) {
             return ignoreDataBefore(Output.of(ignoreDataBefore));
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName Name of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param metricNamespace Namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(String metricNamespace) {
             return metricNamespace(Output.of(metricNamespace));
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operator The operator used to compare the metric value against the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,DynamicThresholdOperator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator The operator used to compare the metric value against the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,DynamicThresholdOperator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator The operator used to compare the metric value against the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator The operator used to compare the metric value against the threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(DynamicThresholdOperator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
+        /**
+         * @param skipMetricValidation Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetricValidation(Boolean skipMetricValidation) {
             return skipMetricValidation(Output.of(skipMetricValidation));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(Output<Either<String,AggregationTypeEnum>> timeAggregation) {
             $.timeAggregation = timeAggregation;
             return this;
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             return timeAggregation(Output.of(timeAggregation));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(String timeAggregation) {
             return timeAggregation(Either.ofLeft(timeAggregation));
         }
 
+        /**
+         * @param timeAggregation the criteria time aggregation types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeAggregation(AggregationTypeEnum timeAggregation) {
             return timeAggregation(Either.ofRight(timeAggregation));
         }

@@ -27,6 +27,11 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="actionType", required=true)
     private String actionType;
 
+    /**
+     * @return The type of the action that will be triggered by the Automation
+     * Expected value is &#39;EventHub&#39;.
+     * 
+     */
     public String actionType() {
         return this.actionType;
     }
@@ -38,6 +43,10 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return The target Event Hub connection string (it will not be included in any response).
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -49,6 +58,10 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="eventHubResourceId")
     private @Nullable String eventHubResourceId;
 
+    /**
+     * @return The target Event Hub Azure Resource ID.
+     * 
+     */
     public Optional<String> eventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
@@ -60,6 +73,10 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="sasPolicyName", required=true)
     private String sasPolicyName;
 
+    /**
+     * @return The target Event Hub SAS policy name.
+     * 
+     */
     public String sasPolicyName() {
         return this.sasPolicyName;
     }
@@ -91,21 +108,46 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
             $ = new AutomationActionEventHubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param connectionString The target Event Hub connection string (it will not be included in any response).
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param eventHubResourceId The target Event Hub Azure Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
             $.eventHubResourceId = eventHubResourceId;
             return this;
         }
 
+        /**
+         * @param sasPolicyName The target Event Hub SAS policy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasPolicyName(String sasPolicyName) {
             $.sasPolicyName = sasPolicyName;
             return this;

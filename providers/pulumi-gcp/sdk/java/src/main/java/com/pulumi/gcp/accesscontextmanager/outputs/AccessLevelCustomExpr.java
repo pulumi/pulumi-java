@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessLevelCustomExpr {
     /**
-     * Description of the expression
+     * @return Description of the expression
      * 
      */
     private final @Nullable String description;
     /**
-     * Textual representation of an expression in Common Expression Language syntax.
+     * @return Textual representation of an expression in Common Expression Language syntax.
      * 
      */
     private final String expression;
     /**
-     * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+     * @return String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
      * 
      */
     private final @Nullable String location;
     /**
-     * Title for the expression, i.e. a short string describing its purpose.
+     * @return Title for the expression, i.e. a short string describing its purpose.
      * 
      */
     private final @Nullable String title;
@@ -45,30 +45,30 @@ public final class AccessLevelCustomExpr {
     }
 
     /**
-     * Description of the expression
+     * @return Description of the expression
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Textual representation of an expression in Common Expression Language syntax.
+     * @return Textual representation of an expression in Common Expression Language syntax.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }
     /**
-     * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
+     * @return String indicating the location of the expression for error reporting, e.g. a file name and a position in the file
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Title for the expression, i.e. a short string describing its purpose.
+     * @return Title for the expression, i.e. a short string describing its purpose.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

@@ -23,6 +23,10 @@ public final class GcfsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether to use GCFS.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -51,6 +55,12 @@ public final class GcfsConfigResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GcfsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether to use GCFS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;

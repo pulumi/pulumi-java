@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class Int64RangeMatchResponse {
     /**
-     * The end of the range (exclusive) in signed long integer format.
+     * @return The end of the range (exclusive) in signed long integer format.
      * 
      */
     private final String rangeEnd;
     /**
-     * The start of the range (inclusive) in signed long integer format.
+     * @return The start of the range (inclusive) in signed long integer format.
      * 
      */
     private final String rangeStart;
@@ -29,16 +29,16 @@ public final class Int64RangeMatchResponse {
     }
 
     /**
-     * The end of the range (exclusive) in signed long integer format.
+     * @return The end of the range (exclusive) in signed long integer format.
      * 
-    */
+     */
     public String rangeEnd() {
         return this.rangeEnd;
     }
     /**
-     * The start of the range (inclusive) in signed long integer format.
+     * @return The start of the range (inclusive) in signed long integer format.
      * 
-    */
+     */
     public String rangeStart() {
         return this.rangeStart;
     }

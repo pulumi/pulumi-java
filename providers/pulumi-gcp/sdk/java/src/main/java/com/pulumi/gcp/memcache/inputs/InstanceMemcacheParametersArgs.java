@@ -24,6 +24,11 @@ public final class InstanceMemcacheParametersArgs extends com.pulumi.resources.R
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return -
+     * This is a unique ID associated with this set of parameters.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -35,6 +40,10 @@ public final class InstanceMemcacheParametersArgs extends com.pulumi.resources.R
     @Import(name="params")
     private @Nullable Output<Map<String,String>> params;
 
+    /**
+     * @return User-defined set of parameters to use in the memcache process.
+     * 
+     */
     public Optional<Output<Map<String,String>>> params() {
         return Optional.ofNullable(this.params);
     }
@@ -64,20 +73,46 @@ public final class InstanceMemcacheParametersArgs extends com.pulumi.resources.R
             $ = new InstanceMemcacheParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id -
+         * This is a unique ID associated with this set of parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id -
+         * This is a unique ID associated with this set of parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param params User-defined set of parameters to use in the memcache process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(@Nullable Output<Map<String,String>> params) {
             $.params = params;
             return this;
         }
 
+        /**
+         * @param params User-defined set of parameters to use in the memcache process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder params(Map<String,String> params) {
             return params(Output.of(params));
         }

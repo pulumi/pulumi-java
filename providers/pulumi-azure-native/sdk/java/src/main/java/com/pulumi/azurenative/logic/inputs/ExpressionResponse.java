@@ -28,6 +28,10 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="error")
     private @Nullable AzureResourceErrorInfoResponse error;
 
+    /**
+     * @return The azure resource error info.
+     * 
+     */
     public Optional<AzureResourceErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -39,6 +43,10 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subexpressions")
     private @Nullable List<ExpressionResponse> subexpressions;
 
+    /**
+     * @return The sub expressions.
+     * 
+     */
     public Optional<List<ExpressionResponse>> subexpressions() {
         return Optional.ofNullable(this.subexpressions);
     }
@@ -50,6 +58,10 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="text")
     private @Nullable String text;
 
+    /**
+     * @return The text.
+     * 
+     */
     public Optional<String> text() {
         return Optional.ofNullable(this.text);
     }
@@ -88,20 +100,44 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ExpressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The azure resource error info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable AzureResourceErrorInfoResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param subexpressions The sub expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subexpressions(@Nullable List<ExpressionResponse> subexpressions) {
             $.subexpressions = subexpressions;
             return this;
         }
 
+        /**
+         * @param subexpressions The sub expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subexpressions(ExpressionResponse... subexpressions) {
             return subexpressions(List.of(subexpressions));
         }
 
+        /**
+         * @param text The text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(@Nullable String text) {
             $.text = text;
             return this;

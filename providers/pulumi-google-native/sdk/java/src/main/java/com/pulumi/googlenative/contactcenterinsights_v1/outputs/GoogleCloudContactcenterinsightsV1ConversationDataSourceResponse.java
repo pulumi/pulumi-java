@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse {
     /**
-     * The source when the conversation comes from Dialogflow.
+     * @return The source when the conversation comes from Dialogflow.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
     /**
-     * A Cloud Storage location specification for the audio and transcript.
+     * @return A Cloud Storage location specification for the audio and transcript.
      * 
      */
     private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
@@ -30,16 +30,16 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     }
 
     /**
-     * The source when the conversation comes from Dialogflow.
+     * @return The source when the conversation comes from Dialogflow.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource() {
         return this.dialogflowSource;
     }
     /**
-     * A Cloud Storage location specification for the audio and transcript.
+     * @return A Cloud Storage location specification for the audio and transcript.
      * 
-    */
+     */
     public GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }

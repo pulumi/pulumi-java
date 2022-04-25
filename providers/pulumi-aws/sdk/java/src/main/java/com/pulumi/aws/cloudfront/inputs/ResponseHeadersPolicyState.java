@@ -25,6 +25,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -36,6 +40,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="corsConfig")
     private @Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
 
+    /**
+     * @return A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicyCorsConfigGetArgs>> corsConfig() {
         return Optional.ofNullable(this.corsConfig);
     }
@@ -47,6 +55,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="customHeadersConfig")
     private @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
 
+    /**
+     * @return Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs>> customHeadersConfig() {
         return Optional.ofNullable(this.customHeadersConfig);
     }
@@ -58,6 +70,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The current version of the response headers policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -69,6 +85,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name to identify the response headers policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
     @Import(name="securityHeadersConfig")
     private @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
 
+    /**
+     * @return A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
+     * 
+     */
     public Optional<Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs>> securityHeadersConfig() {
         return Optional.ofNullable(this.securityHeadersConfig);
     }
@@ -113,56 +137,128 @@ public final class ResponseHeadersPolicyState extends com.pulumi.resources.Resou
             $ = new ResponseHeadersPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param corsConfig A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfig(@Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig) {
             $.corsConfig = corsConfig;
             return this;
         }
 
+        /**
+         * @param corsConfig A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfig(ResponseHeadersPolicyCorsConfigGetArgs corsConfig) {
             return corsConfig(Output.of(corsConfig));
         }
 
+        /**
+         * @param customHeadersConfig Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeadersConfig(@Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig) {
             $.customHeadersConfig = customHeadersConfig;
             return this;
         }
 
+        /**
+         * @param customHeadersConfig Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeadersConfig(ResponseHeadersPolicyCustomHeadersConfigGetArgs customHeadersConfig) {
             return customHeadersConfig(Output.of(customHeadersConfig));
         }
 
+        /**
+         * @param etag The current version of the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The current version of the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param name A unique name to identify the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name to identify the response headers policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param securityHeadersConfig A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityHeadersConfig(@Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig) {
             $.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
 
+        /**
+         * @param securityHeadersConfig A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityHeadersConfig(ResponseHeadersPolicySecurityHeadersConfigGetArgs securityHeadersConfig) {
             return securityHeadersConfig(Output.of(securityHeadersConfig));
         }

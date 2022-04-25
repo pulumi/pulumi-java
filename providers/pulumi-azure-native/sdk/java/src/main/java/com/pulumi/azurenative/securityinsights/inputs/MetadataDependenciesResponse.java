@@ -26,6 +26,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="contentId")
     private @Nullable String contentId;
 
+    /**
+     * @return Id of the content item we depend on
+     * 
+     */
     public Optional<String> contentId() {
         return Optional.ofNullable(this.contentId);
     }
@@ -37,6 +41,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="criteria")
     private @Nullable List<MetadataDependenciesResponse> criteria;
 
+    /**
+     * @return This is the list of dependencies we must fulfill, according to the AND/OR operator
+     * 
+     */
     public Optional<List<MetadataDependenciesResponse>> criteria() {
         return Optional.ofNullable(this.criteria);
     }
@@ -48,6 +56,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Type of the content item we depend on
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -59,6 +71,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the content item
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="operator")
     private @Nullable String operator;
 
+    /**
+     * @return Operator used for list of dependencies in criteria array.
+     * 
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -81,6 +101,10 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -114,35 +138,77 @@ public final class MetadataDependenciesResponse extends com.pulumi.resources.Inv
             $ = new MetadataDependenciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentId Id of the content item we depend on
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentId(@Nullable String contentId) {
             $.contentId = contentId;
             return this;
         }
 
+        /**
+         * @param criteria This is the list of dependencies we must fulfill, according to the AND/OR operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(@Nullable List<MetadataDependenciesResponse> criteria) {
             $.criteria = criteria;
             return this;
         }
 
+        /**
+         * @param criteria This is the list of dependencies we must fulfill, according to the AND/OR operator
+         * 
+         * @return builder
+         * 
+         */
         public Builder criteria(MetadataDependenciesResponse... criteria) {
             return criteria(List.of(criteria));
         }
 
+        /**
+         * @param kind Type of the content item we depend on
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator Operator used for list of dependencies in criteria array.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param version Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

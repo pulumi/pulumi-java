@@ -25,6 +25,10 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The id of the plan, equivalent to name of the plan
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
     @Import(name="offer")
     private @Nullable String offer;
 
+    /**
+     * @return The offer for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -47,6 +55,10 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The publisher for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -77,16 +89,34 @@ public final class CustomImagePropertiesFromPlanResponse extends com.pulumi.reso
             $ = new CustomImagePropertiesFromPlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the plan, equivalent to name of the plan
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param offer The offer for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param publisher The publisher for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;

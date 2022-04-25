@@ -34,6 +34,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocateLoadBalancerNodePorts")
     private @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
+    /**
+     * @return allocateLoadBalancerNodePorts defines if NodePorts will be automatically allocated for services with type LoadBalancer.  Default is &#34;true&#34;. It may be set to &#34;false&#34; if the cluster load-balancer does not rely on NodePorts.  If the caller requests specific NodePorts (by specifying a value), those requests will be respected, regardless of this field. This field may only be set for services with type LoadBalancer and will be cleared if the type is changed to any other type. This field is beta-level and is only honored by servers that enable the ServiceLBNodePortControl feature.
+     * 
+     */
     public Optional<Output<Boolean>> allocateLoadBalancerNodePorts() {
         return Optional.ofNullable(this.allocateLoadBalancerNodePorts);
     }
@@ -45,6 +49,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIP")
     private @Nullable Output<String> clusterIP;
 
+    /**
+     * @return clusterIP is the IP address of the service and is usually assigned randomly. If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be blank) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address. Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+     * 
+     */
     public Optional<Output<String>> clusterIP() {
         return Optional.ofNullable(this.clusterIP);
     }
@@ -58,6 +66,12 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterIPs")
     private @Nullable Output<List<String>> clusterIPs;
 
+    /**
+     * @return ClusterIPs is a list of IP addresses assigned to this service, and are usually assigned randomly.  If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be empty) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address.  Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName.  If this field is not specified, it will be initialized from the clusterIP field.  If this field is specified, clients must ensure that clusterIPs[0] and clusterIP have the same value.
+     * 
+     * This field may hold a maximum of two entries (dual-stack IPs, in either order). These IPs must correspond to the values of the ipFamilies field. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+     * 
+     */
     public Optional<Output<List<String>>> clusterIPs() {
         return Optional.ofNullable(this.clusterIPs);
     }
@@ -69,6 +83,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalIPs")
     private @Nullable Output<List<String>> externalIPs;
 
+    /**
+     * @return externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.  These IPs are not managed by Kubernetes.  The user is responsible for ensuring that traffic arrives at a node with this IP.  A common example is external load-balancers that are not part of the Kubernetes system.
+     * 
+     */
     public Optional<Output<List<String>>> externalIPs() {
         return Optional.ofNullable(this.externalIPs);
     }
@@ -80,6 +98,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalName")
     private @Nullable Output<String> externalName;
 
+    /**
+     * @return externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be &#34;ExternalName&#34;.
+     * 
+     */
     public Optional<Output<String>> externalName() {
         return Optional.ofNullable(this.externalName);
     }
@@ -95,6 +117,14 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalTrafficPolicy")
     private @Nullable Output<String> externalTrafficPolicy;
 
+    /**
+     * @return externalTrafficPolicy denotes if this Service desires to route external traffic to node-local or cluster-wide endpoints. &#34;Local&#34; preserves the client source IP and avoids a second hop for LoadBalancer and Nodeport type services, but risks potentially imbalanced traffic spreading. &#34;Cluster&#34; obscures the client source IP and may cause a second hop to another node, but should have good overall load-spreading.
+     * 
+     * Possible enum values:
+     *  - `&#34;Cluster&#34;` specifies node-global (legacy) behavior.
+     *  - `&#34;Local&#34;` specifies node-local endpoints behavior.
+     * 
+     */
     public Optional<Output<String>> externalTrafficPolicy() {
         return Optional.ofNullable(this.externalTrafficPolicy);
     }
@@ -106,6 +136,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckNodePort")
     private @Nullable Output<Integer> healthCheckNodePort;
 
+    /**
+     * @return healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).
+     * 
+     */
     public Optional<Output<Integer>> healthCheckNodePort() {
         return Optional.ofNullable(this.healthCheckNodePort);
     }
@@ -117,6 +151,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="internalTrafficPolicy")
     private @Nullable Output<String> internalTrafficPolicy;
 
+    /**
+     * @return InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. &#34;Cluster&#34; routes internal traffic to a Service to all endpoints. &#34;Local&#34; routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is &#34;Cluster&#34;.
+     * 
+     */
     public Optional<Output<String>> internalTrafficPolicy() {
         return Optional.ofNullable(this.internalTrafficPolicy);
     }
@@ -130,6 +168,12 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipFamilies")
     private @Nullable Output<List<String>> ipFamilies;
 
+    /**
+     * @return IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this service. This field is usually assigned automatically based on cluster configuration and the ipFamilyPolicy field. If this field is specified manually, the requested family is available in the cluster, and ipFamilyPolicy allows it, it will be used; otherwise creation of the service will fail. This field is conditionally mutable: it allows for adding or removing a secondary IP family, but it does not allow changing the primary IP family of the Service. Valid values are &#34;IPv4&#34; and &#34;IPv6&#34;.  This field only applies to Services of types ClusterIP, NodePort, and LoadBalancer, and does apply to &#34;headless&#34; services. This field will be wiped when updating a Service to type ExternalName.
+     * 
+     * This field may hold a maximum of two entries (dual-stack families, in either order).  These families must correspond to the values of the clusterIPs field, if specified. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field.
+     * 
+     */
     public Optional<Output<List<String>>> ipFamilies() {
         return Optional.ofNullable(this.ipFamilies);
     }
@@ -141,6 +185,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipFamily")
     private @Nullable Output<String> ipFamily;
 
+    /**
+     * @return ipFamily specifies whether this Service has a preference for a particular IP family (e.g. IPv4 vs. IPv6).  If a specific IP family is requested, the clusterIP field will be allocated from that family, if it is available in the cluster.  If no IP family is requested, the cluster&#39;s primary IP family will be used. Other IP fields (loadBalancerIP, loadBalancerSourceRanges, externalIPs) and controllers which allocate external load-balancers should use the same IP family.  Endpoints for this Service will be of this family.  This field is immutable after creation. Assigning a ServiceIPFamily not available in the cluster (e.g. IPv6 in IPv4 only cluster) is an error condition and will fail during clusterIP assignment.
+     * 
+     */
     public Optional<Output<String>> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }
@@ -152,6 +200,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipFamilyPolicy")
     private @Nullable Output<String> ipFamilyPolicy;
 
+    /**
+     * @return IPFamilyPolicy represents the dual-stack-ness requested or required by this Service. If there is no value provided, then this field will be set to SingleStack. Services can be &#34;SingleStack&#34; (a single IP family), &#34;PreferDualStack&#34; (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or &#34;RequireDualStack&#34; (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field. This field will be wiped when updating a service to type ExternalName.
+     * 
+     */
     public Optional<Output<String>> ipFamilyPolicy() {
         return Optional.ofNullable(this.ipFamilyPolicy);
     }
@@ -163,6 +215,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerClass")
     private @Nullable Output<String> loadBalancerClass;
 
+    /**
+     * @return loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. &#34;internal-vip&#34; or &#34;example.com/internal-vip&#34;. Unprefixed names are reserved for end-users. This field can only be set when the Service type is &#39;LoadBalancer&#39;. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type &#39;LoadBalancer&#39;. Once set, it can not be changed. This field will be wiped when a service is updated to a non &#39;LoadBalancer&#39; type.
+     * 
+     */
     public Optional<Output<String>> loadBalancerClass() {
         return Optional.ofNullable(this.loadBalancerClass);
     }
@@ -174,6 +230,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerIP")
     private @Nullable Output<String> loadBalancerIP;
 
+    /**
+     * @return Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP specified in this field. This feature depends on whether the underlying cloud-provider supports specifying the loadBalancerIP when a load balancer is created. This field will be ignored if the cloud-provider does not support the feature.
+     * 
+     */
     public Optional<Output<String>> loadBalancerIP() {
         return Optional.ofNullable(this.loadBalancerIP);
     }
@@ -185,6 +245,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerSourceRanges")
     private @Nullable Output<List<String>> loadBalancerSourceRanges;
 
+    /**
+     * @return If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature.&#34; More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+     * 
+     */
     public Optional<Output<List<String>>> loadBalancerSourceRanges() {
         return Optional.ofNullable(this.loadBalancerSourceRanges);
     }
@@ -196,6 +260,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports")
     private @Nullable Output<List<ServicePortArgs>> ports;
 
+    /**
+     * @return The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+     * 
+     */
     public Optional<Output<List<ServicePortArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -207,6 +275,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishNotReadyAddresses")
     private @Nullable Output<Boolean> publishNotReadyAddresses;
 
+    /**
+     * @return publishNotReadyAddresses indicates that any agent which deals with endpoints for this Service should disregard any indications of ready/not-ready. The primary use case for setting this field is for a StatefulSet&#39;s Headless Service to propagate SRV DNS records for its Pods for the purpose of peer discovery. The Kubernetes controllers that generate Endpoints and EndpointSlice resources for Services interpret this to mean that all endpoints are considered &#34;ready&#34; even if the Pods themselves are not. Agents which consume only Kubernetes generated endpoints through the Endpoints or EndpointSlice resources can safely assume this behavior.
+     * 
+     */
     public Optional<Output<Boolean>> publishNotReadyAddresses() {
         return Optional.ofNullable(this.publishNotReadyAddresses);
     }
@@ -218,6 +290,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="selector")
     private @Nullable Output<Map<String,String>> selector;
 
+    /**
+     * @return Route service traffic to pods with label keys and values matching this selector. If empty or not present, the service is assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/
+     * 
+     */
     public Optional<Output<Map<String,String>>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -233,6 +309,14 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
     private @Nullable Output<String> sessionAffinity;
 
+    /**
+     * @return Supports &#34;ClientIP&#34; and &#34;None&#34;. Used to maintain session affinity. Enable client IP based session affinity. Must be ClientIP or None. Defaults to None. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+     * 
+     * Possible enum values:
+     *  - `&#34;ClientIP&#34;` is the Client IP based.
+     *  - `&#34;None&#34;` - no session affinity.
+     * 
+     */
     public Optional<Output<String>> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
@@ -244,6 +328,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinityConfig")
     private @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
+    /**
+     * @return sessionAffinityConfig contains the configurations of session affinity.
+     * 
+     */
     public Optional<Output<SessionAffinityConfigArgs>> sessionAffinityConfig() {
         return Optional.ofNullable(this.sessionAffinityConfig);
     }
@@ -255,6 +343,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologyKeys")
     private @Nullable Output<List<String>> topologyKeys;
 
+    /**
+     * @return topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value &#34;*&#34; may be used to mean &#34;any topology&#34;. This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied.
+     * 
+     */
     public Optional<Output<List<String>>> topologyKeys() {
         return Optional.ofNullable(this.topologyKeys);
     }
@@ -272,6 +364,16 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,ServiceSpecType>> type;
 
+    /**
+     * @return type determines how the Service is exposed. Defaults to ClusterIP. Valid options are ExternalName, ClusterIP, NodePort, and LoadBalancer. &#34;ClusterIP&#34; allocates a cluster-internal IP address for load-balancing to endpoints. Endpoints are determined by the selector or if that is not specified, by manual construction of an Endpoints object or EndpointSlice objects. If clusterIP is &#34;None&#34;, no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a virtual IP. &#34;NodePort&#34; builds on ClusterIP and allocates a port on every node which routes to the same endpoints as the clusterIP. &#34;LoadBalancer&#34; builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the same endpoints as the clusterIP. &#34;ExternalName&#34; aliases this service to the specified externalName. Several other fields do not apply to ExternalName services. More info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+     * 
+     * Possible enum values:
+     *  - `&#34;ClusterIP&#34;` means a service will only be accessible inside the cluster, via the cluster IP.
+     *  - `&#34;ExternalName&#34;` means a service consists of only a reference to an external name that kubedns or equivalent will return as a CNAME record, with no exposing or proxying of any pods involved.
+     *  - `&#34;LoadBalancer&#34;` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to &#39;NodePort&#39; type.
+     *  - `&#34;NodePort&#34;` means a service will be exposed on one port of every node, in addition to &#39;ClusterIP&#39; type.
+     * 
+     */
     public Optional<Output<Either<String,ServiceSpecType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -320,223 +422,575 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocateLoadBalancerNodePorts allocateLoadBalancerNodePorts defines if NodePorts will be automatically allocated for services with type LoadBalancer.  Default is &#34;true&#34;. It may be set to &#34;false&#34; if the cluster load-balancer does not rely on NodePorts.  If the caller requests specific NodePorts (by specifying a value), those requests will be respected, regardless of this field. This field may only be set for services with type LoadBalancer and will be cleared if the type is changed to any other type. This field is beta-level and is only honored by servers that enable the ServiceLBNodePortControl feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocateLoadBalancerNodePorts(@Nullable Output<Boolean> allocateLoadBalancerNodePorts) {
             $.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
             return this;
         }
 
+        /**
+         * @param allocateLoadBalancerNodePorts allocateLoadBalancerNodePorts defines if NodePorts will be automatically allocated for services with type LoadBalancer.  Default is &#34;true&#34;. It may be set to &#34;false&#34; if the cluster load-balancer does not rely on NodePorts.  If the caller requests specific NodePorts (by specifying a value), those requests will be respected, regardless of this field. This field may only be set for services with type LoadBalancer and will be cleared if the type is changed to any other type. This field is beta-level and is only honored by servers that enable the ServiceLBNodePortControl feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocateLoadBalancerNodePorts(Boolean allocateLoadBalancerNodePorts) {
             return allocateLoadBalancerNodePorts(Output.of(allocateLoadBalancerNodePorts));
         }
 
+        /**
+         * @param clusterIP clusterIP is the IP address of the service and is usually assigned randomly. If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be blank) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address. Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIP(@Nullable Output<String> clusterIP) {
             $.clusterIP = clusterIP;
             return this;
         }
 
+        /**
+         * @param clusterIP clusterIP is the IP address of the service and is usually assigned randomly. If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be blank) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address. Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIP(String clusterIP) {
             return clusterIP(Output.of(clusterIP));
         }
 
+        /**
+         * @param clusterIPs ClusterIPs is a list of IP addresses assigned to this service, and are usually assigned randomly.  If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be empty) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address.  Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName.  If this field is not specified, it will be initialized from the clusterIP field.  If this field is specified, clients must ensure that clusterIPs[0] and clusterIP have the same value.
+         * 
+         * This field may hold a maximum of two entries (dual-stack IPs, in either order). These IPs must correspond to the values of the ipFamilies field. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIPs(@Nullable Output<List<String>> clusterIPs) {
             $.clusterIPs = clusterIPs;
             return this;
         }
 
+        /**
+         * @param clusterIPs ClusterIPs is a list of IP addresses assigned to this service, and are usually assigned randomly.  If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be empty) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address.  Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName.  If this field is not specified, it will be initialized from the clusterIP field.  If this field is specified, clients must ensure that clusterIPs[0] and clusterIP have the same value.
+         * 
+         * This field may hold a maximum of two entries (dual-stack IPs, in either order). These IPs must correspond to the values of the ipFamilies field. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIPs(List<String> clusterIPs) {
             return clusterIPs(Output.of(clusterIPs));
         }
 
+        /**
+         * @param clusterIPs ClusterIPs is a list of IP addresses assigned to this service, and are usually assigned randomly.  If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be empty) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are &#34;None&#34;, empty string (&#34;&#34;), or a valid IP address.  Setting this to &#34;None&#34; makes a &#34;headless service&#34; (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName.  If this field is not specified, it will be initialized from the clusterIP field.  If this field is specified, clients must ensure that clusterIPs[0] and clusterIP have the same value.
+         * 
+         * This field may hold a maximum of two entries (dual-stack IPs, in either order). These IPs must correspond to the values of the ipFamilies field. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterIPs(String... clusterIPs) {
             return clusterIPs(List.of(clusterIPs));
         }
 
+        /**
+         * @param externalIPs externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.  These IPs are not managed by Kubernetes.  The user is responsible for ensuring that traffic arrives at a node with this IP.  A common example is external load-balancers that are not part of the Kubernetes system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(@Nullable Output<List<String>> externalIPs) {
             $.externalIPs = externalIPs;
             return this;
         }
 
+        /**
+         * @param externalIPs externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.  These IPs are not managed by Kubernetes.  The user is responsible for ensuring that traffic arrives at a node with this IP.  A common example is external load-balancers that are not part of the Kubernetes system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(List<String> externalIPs) {
             return externalIPs(Output.of(externalIPs));
         }
 
+        /**
+         * @param externalIPs externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.  These IPs are not managed by Kubernetes.  The user is responsible for ensuring that traffic arrives at a node with this IP.  A common example is external load-balancers that are not part of the Kubernetes system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalIPs(String... externalIPs) {
             return externalIPs(List.of(externalIPs));
         }
 
+        /**
+         * @param externalName externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be &#34;ExternalName&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalName(@Nullable Output<String> externalName) {
             $.externalName = externalName;
             return this;
         }
 
+        /**
+         * @param externalName externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be &#34;ExternalName&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalName(String externalName) {
             return externalName(Output.of(externalName));
         }
 
+        /**
+         * @param externalTrafficPolicy externalTrafficPolicy denotes if this Service desires to route external traffic to node-local or cluster-wide endpoints. &#34;Local&#34; preserves the client source IP and avoids a second hop for LoadBalancer and Nodeport type services, but risks potentially imbalanced traffic spreading. &#34;Cluster&#34; obscures the client source IP and may cause a second hop to another node, but should have good overall load-spreading.
+         * 
+         * Possible enum values:
+         *  - `&#34;Cluster&#34;` specifies node-global (legacy) behavior.
+         *  - `&#34;Local&#34;` specifies node-local endpoints behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTrafficPolicy(@Nullable Output<String> externalTrafficPolicy) {
             $.externalTrafficPolicy = externalTrafficPolicy;
             return this;
         }
 
+        /**
+         * @param externalTrafficPolicy externalTrafficPolicy denotes if this Service desires to route external traffic to node-local or cluster-wide endpoints. &#34;Local&#34; preserves the client source IP and avoids a second hop for LoadBalancer and Nodeport type services, but risks potentially imbalanced traffic spreading. &#34;Cluster&#34; obscures the client source IP and may cause a second hop to another node, but should have good overall load-spreading.
+         * 
+         * Possible enum values:
+         *  - `&#34;Cluster&#34;` specifies node-global (legacy) behavior.
+         *  - `&#34;Local&#34;` specifies node-local endpoints behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTrafficPolicy(String externalTrafficPolicy) {
             return externalTrafficPolicy(Output.of(externalTrafficPolicy));
         }
 
+        /**
+         * @param healthCheckNodePort healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckNodePort(@Nullable Output<Integer> healthCheckNodePort) {
             $.healthCheckNodePort = healthCheckNodePort;
             return this;
         }
 
+        /**
+         * @param healthCheckNodePort healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckNodePort(Integer healthCheckNodePort) {
             return healthCheckNodePort(Output.of(healthCheckNodePort));
         }
 
+        /**
+         * @param internalTrafficPolicy InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. &#34;Cluster&#34; routes internal traffic to a Service to all endpoints. &#34;Local&#34; routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is &#34;Cluster&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalTrafficPolicy(@Nullable Output<String> internalTrafficPolicy) {
             $.internalTrafficPolicy = internalTrafficPolicy;
             return this;
         }
 
+        /**
+         * @param internalTrafficPolicy InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. &#34;Cluster&#34; routes internal traffic to a Service to all endpoints. &#34;Local&#34; routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is &#34;Cluster&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalTrafficPolicy(String internalTrafficPolicy) {
             return internalTrafficPolicy(Output.of(internalTrafficPolicy));
         }
 
+        /**
+         * @param ipFamilies IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this service. This field is usually assigned automatically based on cluster configuration and the ipFamilyPolicy field. If this field is specified manually, the requested family is available in the cluster, and ipFamilyPolicy allows it, it will be used; otherwise creation of the service will fail. This field is conditionally mutable: it allows for adding or removing a secondary IP family, but it does not allow changing the primary IP family of the Service. Valid values are &#34;IPv4&#34; and &#34;IPv6&#34;.  This field only applies to Services of types ClusterIP, NodePort, and LoadBalancer, and does apply to &#34;headless&#34; services. This field will be wiped when updating a Service to type ExternalName.
+         * 
+         * This field may hold a maximum of two entries (dual-stack families, in either order).  These families must correspond to the values of the clusterIPs field, if specified. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamilies(@Nullable Output<List<String>> ipFamilies) {
             $.ipFamilies = ipFamilies;
             return this;
         }
 
+        /**
+         * @param ipFamilies IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this service. This field is usually assigned automatically based on cluster configuration and the ipFamilyPolicy field. If this field is specified manually, the requested family is available in the cluster, and ipFamilyPolicy allows it, it will be used; otherwise creation of the service will fail. This field is conditionally mutable: it allows for adding or removing a secondary IP family, but it does not allow changing the primary IP family of the Service. Valid values are &#34;IPv4&#34; and &#34;IPv6&#34;.  This field only applies to Services of types ClusterIP, NodePort, and LoadBalancer, and does apply to &#34;headless&#34; services. This field will be wiped when updating a Service to type ExternalName.
+         * 
+         * This field may hold a maximum of two entries (dual-stack families, in either order).  These families must correspond to the values of the clusterIPs field, if specified. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamilies(List<String> ipFamilies) {
             return ipFamilies(Output.of(ipFamilies));
         }
 
+        /**
+         * @param ipFamilies IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this service. This field is usually assigned automatically based on cluster configuration and the ipFamilyPolicy field. If this field is specified manually, the requested family is available in the cluster, and ipFamilyPolicy allows it, it will be used; otherwise creation of the service will fail. This field is conditionally mutable: it allows for adding or removing a secondary IP family, but it does not allow changing the primary IP family of the Service. Valid values are &#34;IPv4&#34; and &#34;IPv6&#34;.  This field only applies to Services of types ClusterIP, NodePort, and LoadBalancer, and does apply to &#34;headless&#34; services. This field will be wiped when updating a Service to type ExternalName.
+         * 
+         * This field may hold a maximum of two entries (dual-stack families, in either order).  These families must correspond to the values of the clusterIPs field, if specified. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamilies(String... ipFamilies) {
             return ipFamilies(List.of(ipFamilies));
         }
 
+        /**
+         * @param ipFamily ipFamily specifies whether this Service has a preference for a particular IP family (e.g. IPv4 vs. IPv6).  If a specific IP family is requested, the clusterIP field will be allocated from that family, if it is available in the cluster.  If no IP family is requested, the cluster&#39;s primary IP family will be used. Other IP fields (loadBalancerIP, loadBalancerSourceRanges, externalIPs) and controllers which allocate external load-balancers should use the same IP family.  Endpoints for this Service will be of this family.  This field is immutable after creation. Assigning a ServiceIPFamily not available in the cluster (e.g. IPv6 in IPv4 only cluster) is an error condition and will fail during clusterIP assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
             $.ipFamily = ipFamily;
             return this;
         }
 
+        /**
+         * @param ipFamily ipFamily specifies whether this Service has a preference for a particular IP family (e.g. IPv4 vs. IPv6).  If a specific IP family is requested, the clusterIP field will be allocated from that family, if it is available in the cluster.  If no IP family is requested, the cluster&#39;s primary IP family will be used. Other IP fields (loadBalancerIP, loadBalancerSourceRanges, externalIPs) and controllers which allocate external load-balancers should use the same IP family.  Endpoints for this Service will be of this family.  This field is immutable after creation. Assigning a ServiceIPFamily not available in the cluster (e.g. IPv6 in IPv4 only cluster) is an error condition and will fail during clusterIP assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamily(String ipFamily) {
             return ipFamily(Output.of(ipFamily));
         }
 
+        /**
+         * @param ipFamilyPolicy IPFamilyPolicy represents the dual-stack-ness requested or required by this Service. If there is no value provided, then this field will be set to SingleStack. Services can be &#34;SingleStack&#34; (a single IP family), &#34;PreferDualStack&#34; (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or &#34;RequireDualStack&#34; (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field. This field will be wiped when updating a service to type ExternalName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamilyPolicy(@Nullable Output<String> ipFamilyPolicy) {
             $.ipFamilyPolicy = ipFamilyPolicy;
             return this;
         }
 
+        /**
+         * @param ipFamilyPolicy IPFamilyPolicy represents the dual-stack-ness requested or required by this Service. If there is no value provided, then this field will be set to SingleStack. Services can be &#34;SingleStack&#34; (a single IP family), &#34;PreferDualStack&#34; (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or &#34;RequireDualStack&#34; (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field. This field will be wiped when updating a service to type ExternalName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipFamilyPolicy(String ipFamilyPolicy) {
             return ipFamilyPolicy(Output.of(ipFamilyPolicy));
         }
 
+        /**
+         * @param loadBalancerClass loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. &#34;internal-vip&#34; or &#34;example.com/internal-vip&#34;. Unprefixed names are reserved for end-users. This field can only be set when the Service type is &#39;LoadBalancer&#39;. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type &#39;LoadBalancer&#39;. Once set, it can not be changed. This field will be wiped when a service is updated to a non &#39;LoadBalancer&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerClass(@Nullable Output<String> loadBalancerClass) {
             $.loadBalancerClass = loadBalancerClass;
             return this;
         }
 
+        /**
+         * @param loadBalancerClass loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. &#34;internal-vip&#34; or &#34;example.com/internal-vip&#34;. Unprefixed names are reserved for end-users. This field can only be set when the Service type is &#39;LoadBalancer&#39;. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type &#39;LoadBalancer&#39;. Once set, it can not be changed. This field will be wiped when a service is updated to a non &#39;LoadBalancer&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerClass(String loadBalancerClass) {
             return loadBalancerClass(Output.of(loadBalancerClass));
         }
 
+        /**
+         * @param loadBalancerIP Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP specified in this field. This feature depends on whether the underlying cloud-provider supports specifying the loadBalancerIP when a load balancer is created. This field will be ignored if the cloud-provider does not support the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerIP(@Nullable Output<String> loadBalancerIP) {
             $.loadBalancerIP = loadBalancerIP;
             return this;
         }
 
+        /**
+         * @param loadBalancerIP Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP specified in this field. This feature depends on whether the underlying cloud-provider supports specifying the loadBalancerIP when a load balancer is created. This field will be ignored if the cloud-provider does not support the feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerIP(String loadBalancerIP) {
             return loadBalancerIP(Output.of(loadBalancerIP));
         }
 
+        /**
+         * @param loadBalancerSourceRanges If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature.&#34; More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSourceRanges(@Nullable Output<List<String>> loadBalancerSourceRanges) {
             $.loadBalancerSourceRanges = loadBalancerSourceRanges;
             return this;
         }
 
+        /**
+         * @param loadBalancerSourceRanges If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature.&#34; More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSourceRanges(List<String> loadBalancerSourceRanges) {
             return loadBalancerSourceRanges(Output.of(loadBalancerSourceRanges));
         }
 
+        /**
+         * @param loadBalancerSourceRanges If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature.&#34; More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSourceRanges(String... loadBalancerSourceRanges) {
             return loadBalancerSourceRanges(List.of(loadBalancerSourceRanges));
         }
 
+        /**
+         * @param ports The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<ServicePortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<ServicePortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(ServicePortArgs... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param publishNotReadyAddresses publishNotReadyAddresses indicates that any agent which deals with endpoints for this Service should disregard any indications of ready/not-ready. The primary use case for setting this field is for a StatefulSet&#39;s Headless Service to propagate SRV DNS records for its Pods for the purpose of peer discovery. The Kubernetes controllers that generate Endpoints and EndpointSlice resources for Services interpret this to mean that all endpoints are considered &#34;ready&#34; even if the Pods themselves are not. Agents which consume only Kubernetes generated endpoints through the Endpoints or EndpointSlice resources can safely assume this behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishNotReadyAddresses(@Nullable Output<Boolean> publishNotReadyAddresses) {
             $.publishNotReadyAddresses = publishNotReadyAddresses;
             return this;
         }
 
+        /**
+         * @param publishNotReadyAddresses publishNotReadyAddresses indicates that any agent which deals with endpoints for this Service should disregard any indications of ready/not-ready. The primary use case for setting this field is for a StatefulSet&#39;s Headless Service to propagate SRV DNS records for its Pods for the purpose of peer discovery. The Kubernetes controllers that generate Endpoints and EndpointSlice resources for Services interpret this to mean that all endpoints are considered &#34;ready&#34; even if the Pods themselves are not. Agents which consume only Kubernetes generated endpoints through the Endpoints or EndpointSlice resources can safely assume this behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishNotReadyAddresses(Boolean publishNotReadyAddresses) {
             return publishNotReadyAddresses(Output.of(publishNotReadyAddresses));
         }
 
+        /**
+         * @param selector Route service traffic to pods with label keys and values matching this selector. If empty or not present, the service is assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Route service traffic to pods with label keys and values matching this selector. If empty or not present, the service is assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(Map<String,String> selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param sessionAffinity Supports &#34;ClientIP&#34; and &#34;None&#34;. Used to maintain session affinity. Enable client IP based session affinity. Must be ClientIP or None. Defaults to None. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * Possible enum values:
+         *  - `&#34;ClientIP&#34;` is the Client IP based.
+         *  - `&#34;None&#34;` - no session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             $.sessionAffinity = sessionAffinity;
             return this;
         }
 
+        /**
+         * @param sessionAffinity Supports &#34;ClientIP&#34; and &#34;None&#34;. Used to maintain session affinity. Enable client IP based session affinity. Must be ClientIP or None. Defaults to None. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+         * 
+         * Possible enum values:
+         *  - `&#34;ClientIP&#34;` is the Client IP based.
+         *  - `&#34;None&#34;` - no session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinity(String sessionAffinity) {
             return sessionAffinity(Output.of(sessionAffinity));
         }
 
+        /**
+         * @param sessionAffinityConfig sessionAffinityConfig contains the configurations of session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityConfig(@Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig) {
             $.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
 
+        /**
+         * @param sessionAffinityConfig sessionAffinityConfig contains the configurations of session affinity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityConfig(SessionAffinityConfigArgs sessionAffinityConfig) {
             return sessionAffinityConfig(Output.of(sessionAffinityConfig));
         }
 
+        /**
+         * @param topologyKeys topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value &#34;*&#34; may be used to mean &#34;any topology&#34;. This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
             $.topologyKeys = topologyKeys;
             return this;
         }
 
+        /**
+         * @param topologyKeys topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value &#34;*&#34; may be used to mean &#34;any topology&#34;. This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(List<String> topologyKeys) {
             return topologyKeys(Output.of(topologyKeys));
         }
 
+        /**
+         * @param topologyKeys topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value &#34;*&#34; may be used to mean &#34;any topology&#34;. This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyKeys(String... topologyKeys) {
             return topologyKeys(List.of(topologyKeys));
         }
 
+        /**
+         * @param type type determines how the Service is exposed. Defaults to ClusterIP. Valid options are ExternalName, ClusterIP, NodePort, and LoadBalancer. &#34;ClusterIP&#34; allocates a cluster-internal IP address for load-balancing to endpoints. Endpoints are determined by the selector or if that is not specified, by manual construction of an Endpoints object or EndpointSlice objects. If clusterIP is &#34;None&#34;, no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a virtual IP. &#34;NodePort&#34; builds on ClusterIP and allocates a port on every node which routes to the same endpoints as the clusterIP. &#34;LoadBalancer&#34; builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the same endpoints as the clusterIP. &#34;ExternalName&#34; aliases this service to the specified externalName. Several other fields do not apply to ExternalName services. More info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterIP&#34;` means a service will only be accessible inside the cluster, via the cluster IP.
+         *  - `&#34;ExternalName&#34;` means a service consists of only a reference to an external name that kubedns or equivalent will return as a CNAME record, with no exposing or proxying of any pods involved.
+         *  - `&#34;LoadBalancer&#34;` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to &#39;NodePort&#39; type.
+         *  - `&#34;NodePort&#34;` means a service will be exposed on one port of every node, in addition to &#39;ClusterIP&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ServiceSpecType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type determines how the Service is exposed. Defaults to ClusterIP. Valid options are ExternalName, ClusterIP, NodePort, and LoadBalancer. &#34;ClusterIP&#34; allocates a cluster-internal IP address for load-balancing to endpoints. Endpoints are determined by the selector or if that is not specified, by manual construction of an Endpoints object or EndpointSlice objects. If clusterIP is &#34;None&#34;, no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a virtual IP. &#34;NodePort&#34; builds on ClusterIP and allocates a port on every node which routes to the same endpoints as the clusterIP. &#34;LoadBalancer&#34; builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the same endpoints as the clusterIP. &#34;ExternalName&#34; aliases this service to the specified externalName. Several other fields do not apply to ExternalName services. More info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterIP&#34;` means a service will only be accessible inside the cluster, via the cluster IP.
+         *  - `&#34;ExternalName&#34;` means a service consists of only a reference to an external name that kubedns or equivalent will return as a CNAME record, with no exposing or proxying of any pods involved.
+         *  - `&#34;LoadBalancer&#34;` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to &#39;NodePort&#39; type.
+         *  - `&#34;NodePort&#34;` means a service will be exposed on one port of every node, in addition to &#39;ClusterIP&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ServiceSpecType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type type determines how the Service is exposed. Defaults to ClusterIP. Valid options are ExternalName, ClusterIP, NodePort, and LoadBalancer. &#34;ClusterIP&#34; allocates a cluster-internal IP address for load-balancing to endpoints. Endpoints are determined by the selector or if that is not specified, by manual construction of an Endpoints object or EndpointSlice objects. If clusterIP is &#34;None&#34;, no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a virtual IP. &#34;NodePort&#34; builds on ClusterIP and allocates a port on every node which routes to the same endpoints as the clusterIP. &#34;LoadBalancer&#34; builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the same endpoints as the clusterIP. &#34;ExternalName&#34; aliases this service to the specified externalName. Several other fields do not apply to ExternalName services. More info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterIP&#34;` means a service will only be accessible inside the cluster, via the cluster IP.
+         *  - `&#34;ExternalName&#34;` means a service consists of only a reference to an external name that kubedns or equivalent will return as a CNAME record, with no exposing or proxying of any pods involved.
+         *  - `&#34;LoadBalancer&#34;` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to &#39;NodePort&#39; type.
+         *  - `&#34;NodePort&#34;` means a service will be exposed on one port of every node, in addition to &#39;ClusterIP&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type type determines how the Service is exposed. Defaults to ClusterIP. Valid options are ExternalName, ClusterIP, NodePort, and LoadBalancer. &#34;ClusterIP&#34; allocates a cluster-internal IP address for load-balancing to endpoints. Endpoints are determined by the selector or if that is not specified, by manual construction of an Endpoints object or EndpointSlice objects. If clusterIP is &#34;None&#34;, no virtual IP is allocated and the endpoints are published as a set of endpoints rather than a virtual IP. &#34;NodePort&#34; builds on ClusterIP and allocates a port on every node which routes to the same endpoints as the clusterIP. &#34;LoadBalancer&#34; builds on NodePort and creates an external load-balancer (if supported in the current cloud) which routes to the same endpoints as the clusterIP. &#34;ExternalName&#34; aliases this service to the specified externalName. Several other fields do not apply to ExternalName services. More info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+         * 
+         * Possible enum values:
+         *  - `&#34;ClusterIP&#34;` means a service will only be accessible inside the cluster, via the cluster IP.
+         *  - `&#34;ExternalName&#34;` means a service consists of only a reference to an external name that kubedns or equivalent will return as a CNAME record, with no exposing or proxying of any pods involved.
+         *  - `&#34;LoadBalancer&#34;` means a service will be exposed via an external load balancer (if the cloud provider supports it), in addition to &#39;NodePort&#39; type.
+         *  - `&#34;NodePort&#34;` means a service will be exposed on one port of every node, in addition to &#39;ClusterIP&#39; type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ServiceSpecType type) {
             return type(Either.ofRight(type));
         }

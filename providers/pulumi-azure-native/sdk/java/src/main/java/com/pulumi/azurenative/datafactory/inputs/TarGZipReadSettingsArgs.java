@@ -28,6 +28,10 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="preserveCompressionFileNameAsFolder")
     private @Nullable Output<Object> preserveCompressionFileNameAsFolder;
 
+    /**
+     * @return Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> preserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
@@ -40,6 +44,11 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The Compression setting type.
+     * Expected value is &#39;TarGZipReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -69,20 +78,46 @@ public final class TarGZipReadSettingsArgs extends com.pulumi.resources.Resource
             $ = new TarGZipReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preserveCompressionFileNameAsFolder Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveCompressionFileNameAsFolder(@Nullable Output<Object> preserveCompressionFileNameAsFolder) {
             $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
 
+        /**
+         * @param preserveCompressionFileNameAsFolder Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveCompressionFileNameAsFolder(Object preserveCompressionFileNameAsFolder) {
             return preserveCompressionFileNameAsFolder(Output.of(preserveCompressionFileNameAsFolder));
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;TarGZipReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;TarGZipReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

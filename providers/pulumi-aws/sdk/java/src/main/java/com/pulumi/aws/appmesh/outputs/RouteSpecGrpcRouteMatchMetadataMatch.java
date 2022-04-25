@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RouteSpecGrpcRouteMatchMetadataMatch {
     /**
-     * The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
      * 
      */
     private final @Nullable String exact;
     /**
-     * The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
      */
     private final @Nullable String prefix;
     /**
-     * The object that specifies the range of numbers that the value sent by the client must be included in.
+     * @return The object that specifies the range of numbers that the value sent by the client must be included in.
      * 
      */
     private final @Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range;
     /**
-     * The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
      * 
      */
     private final @Nullable String regex;
     /**
-     * The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
      * 
      */
     private final @Nullable String suffix;
@@ -54,38 +54,38 @@ public final class RouteSpecGrpcRouteMatchMetadataMatch {
     }
 
     /**
-     * The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public Optional<String> exact() {
         return Optional.ofNullable(this.exact);
     }
     /**
-     * The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The object that specifies the range of numbers that the value sent by the client must be included in.
+     * @return The object that specifies the range of numbers that the value sent by the client must be included in.
      * 
-    */
+     */
     public Optional<RouteSpecGrpcRouteMatchMetadataMatchRange> range() {
         return Optional.ofNullable(this.range);
     }
     /**
-     * The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public Optional<String> regex() {
         return Optional.ofNullable(this.regex);
     }
     /**
-     * The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+     * @return The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public Optional<String> suffix() {
         return Optional.ofNullable(this.suffix);
     }

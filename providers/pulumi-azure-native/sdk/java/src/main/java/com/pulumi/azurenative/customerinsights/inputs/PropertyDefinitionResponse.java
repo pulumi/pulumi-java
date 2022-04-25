@@ -30,6 +30,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="arrayValueSeparator")
     private @Nullable String arrayValueSeparator;
 
+    /**
+     * @return Array value separator for properties with isArray set.
+     * 
+     */
     public Optional<String> arrayValueSeparator() {
         return Optional.ofNullable(this.arrayValueSeparator);
     }
@@ -41,6 +45,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="dataSourcePrecedenceRules", required=true)
     private List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
 
+    /**
+     * @return This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+     * 
+     */
     public List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
     }
@@ -52,6 +60,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="enumValidValues")
     private @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
 
+    /**
+     * @return Describes valid values for an enum property.
+     * 
+     */
     public Optional<List<ProfileEnumValidValuesFormatResponse>> enumValidValues() {
         return Optional.ofNullable(this.enumValidValues);
     }
@@ -63,6 +75,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="fieldName", required=true)
     private String fieldName;
 
+    /**
+     * @return Name of the property.
+     * 
+     */
     public String fieldName() {
         return this.fieldName;
     }
@@ -74,6 +90,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="fieldType", required=true)
     private String fieldType;
 
+    /**
+     * @return Type of the property.
+     * 
+     */
     public String fieldType() {
         return this.fieldType;
     }
@@ -85,6 +105,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isArray")
     private @Nullable Boolean isArray;
 
+    /**
+     * @return Indicates if the property is actually an array of the fieldType above on the data api.
+     * 
+     */
     public Optional<Boolean> isArray() {
         return Optional.ofNullable(this.isArray);
     }
@@ -96,6 +120,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isAvailableInGraph")
     private @Nullable Boolean isAvailableInGraph;
 
+    /**
+     * @return Whether property is available in graph or not.
+     * 
+     */
     public Optional<Boolean> isAvailableInGraph() {
         return Optional.ofNullable(this.isAvailableInGraph);
     }
@@ -107,6 +135,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isEnum")
     private @Nullable Boolean isEnum;
 
+    /**
+     * @return Indicates if the property is an enum.
+     * 
+     */
     public Optional<Boolean> isEnum() {
         return Optional.ofNullable(this.isEnum);
     }
@@ -118,6 +150,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isFlagEnum")
     private @Nullable Boolean isFlagEnum;
 
+    /**
+     * @return Indicates if the property is an flag enum.
+     * 
+     */
     public Optional<Boolean> isFlagEnum() {
         return Optional.ofNullable(this.isFlagEnum);
     }
@@ -129,6 +165,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isImage")
     private @Nullable Boolean isImage;
 
+    /**
+     * @return Whether the property is an Image.
+     * 
+     */
     public Optional<Boolean> isImage() {
         return Optional.ofNullable(this.isImage);
     }
@@ -140,6 +180,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isLocalizedString")
     private @Nullable Boolean isLocalizedString;
 
+    /**
+     * @return Whether the property is a localized string.
+     * 
+     */
     public Optional<Boolean> isLocalizedString() {
         return Optional.ofNullable(this.isLocalizedString);
     }
@@ -151,6 +195,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isName")
     private @Nullable Boolean isName;
 
+    /**
+     * @return Whether the property is a name or a part of name.
+     * 
+     */
     public Optional<Boolean> isName() {
         return Optional.ofNullable(this.isName);
     }
@@ -162,6 +210,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="isRequired")
     private @Nullable Boolean isRequired;
 
+    /**
+     * @return Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+     * 
+     */
     public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
@@ -173,6 +225,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="maxLength")
     private @Nullable Integer maxLength;
 
+    /**
+     * @return Max length of string. Used only if type is string.
+     * 
+     */
     public Optional<Integer> maxLength() {
         return Optional.ofNullable(this.maxLength);
     }
@@ -184,6 +240,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="propertyId")
     private @Nullable String propertyId;
 
+    /**
+     * @return The ID associated with the property.
+     * 
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -195,6 +255,10 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
     @Import(name="schemaItemPropLink")
     private @Nullable String schemaItemPropLink;
 
+    /**
+     * @return URL encoded schema.org item prop link for the property.
+     * 
+     */
     public Optional<String> schemaItemPropLink() {
         return Optional.ofNullable(this.schemaItemPropLink);
     }
@@ -238,89 +302,197 @@ public final class PropertyDefinitionResponse extends com.pulumi.resources.Invok
             $ = new PropertyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayValueSeparator Array value separator for properties with isArray set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
             $.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
 
+        /**
+         * @param dataSourcePrecedenceRules This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
             $.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
             return this;
         }
 
+        /**
+         * @param dataSourcePrecedenceRules This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourcePrecedenceRules(DataSourcePrecedenceResponse... dataSourcePrecedenceRules) {
             return dataSourcePrecedenceRules(List.of(dataSourcePrecedenceRules));
         }
 
+        /**
+         * @param enumValidValues Describes valid values for an enum property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
             $.enumValidValues = enumValidValues;
             return this;
         }
 
+        /**
+         * @param enumValidValues Describes valid values for an enum property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enumValidValues(ProfileEnumValidValuesFormatResponse... enumValidValues) {
             return enumValidValues(List.of(enumValidValues));
         }
 
+        /**
+         * @param fieldName Name of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldName(String fieldName) {
             $.fieldName = fieldName;
             return this;
         }
 
+        /**
+         * @param fieldType Type of the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldType(String fieldType) {
             $.fieldType = fieldType;
             return this;
         }
 
+        /**
+         * @param isArray Indicates if the property is actually an array of the fieldType above on the data api.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArray(@Nullable Boolean isArray) {
             $.isArray = isArray;
             return this;
         }
 
+        /**
+         * @param isAvailableInGraph Whether property is available in graph or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             $.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
 
+        /**
+         * @param isEnum Indicates if the property is an enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnum(@Nullable Boolean isEnum) {
             $.isEnum = isEnum;
             return this;
         }
 
+        /**
+         * @param isFlagEnum Indicates if the property is an flag enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             $.isFlagEnum = isFlagEnum;
             return this;
         }
 
+        /**
+         * @param isImage Whether the property is an Image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isImage(@Nullable Boolean isImage) {
             $.isImage = isImage;
             return this;
         }
 
+        /**
+         * @param isLocalizedString Whether the property is a localized string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             $.isLocalizedString = isLocalizedString;
             return this;
         }
 
+        /**
+         * @param isName Whether the property is a name or a part of name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isName(@Nullable Boolean isName) {
             $.isName = isName;
             return this;
         }
 
+        /**
+         * @param isRequired Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRequired(@Nullable Boolean isRequired) {
             $.isRequired = isRequired;
             return this;
         }
 
+        /**
+         * @param maxLength Max length of string. Used only if type is string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxLength(@Nullable Integer maxLength) {
             $.maxLength = maxLength;
             return this;
         }
 
+        /**
+         * @param propertyId The ID associated with the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyId(@Nullable String propertyId) {
             $.propertyId = propertyId;
             return this;
         }
 
+        /**
+         * @param schemaItemPropLink URL encoded schema.org item prop link for the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             $.schemaItemPropLink = schemaItemPropLink;
             return this;

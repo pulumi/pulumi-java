@@ -18,47 +18,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOnlineDeploymentResult {
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Service identity associated with a resource.
+     * @return Service identity associated with a resource.
      * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
      */
     private final @Nullable String kind;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Additional attributes of the entity.
+     * @return Additional attributes of the entity.
      * 
      */
     private final Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties;
     /**
-     * System data associated with resource provider
+     * @return System data associated with resource provider
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -86,65 +86,65 @@ public final class GetOnlineDeploymentResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Service identity associated with a resource.
+     * @return Service identity associated with a resource.
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * @return Additional attributes of the entity.
      * 
-    */
+     */
     public Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties() {
         return this.properties;
     }
     /**
-     * System data associated with resource provider
+     * @return System data associated with resource provider
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

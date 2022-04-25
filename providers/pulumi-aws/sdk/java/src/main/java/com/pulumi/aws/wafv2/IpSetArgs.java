@@ -24,6 +24,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addresses")
     private @Nullable Output<List<String>> addresses;
 
+    /**
+     * @return Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
+     * 
+     */
     public Optional<Output<List<String>>> addresses() {
         return Optional.ofNullable(this.addresses);
     }
@@ -35,6 +39,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A friendly description of the IP set.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressVersion", required=true)
     private Output<String> ipAddressVersion;
 
+    /**
+     * @return Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
+     * 
+     */
     public Output<String> ipAddressVersion() {
         return this.ipAddressVersion;
     }
@@ -57,6 +69,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name of the IP set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -79,6 +99,10 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,60 +136,138 @@ public final class IpSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IpSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addresses Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(@Nullable Output<List<String>> addresses) {
             $.addresses = addresses;
             return this;
         }
 
+        /**
+         * @param addresses Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(List<String> addresses) {
             return addresses(Output.of(addresses));
         }
 
+        /**
+         * @param addresses Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
         }
 
+        /**
+         * @param description A friendly description of the IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A friendly description of the IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param ipAddressVersion Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressVersion(Output<String> ipAddressVersion) {
             $.ipAddressVersion = ipAddressVersion;
             return this;
         }
 
+        /**
+         * @param ipAddressVersion Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressVersion(String ipAddressVersion) {
             return ipAddressVersion(Output.of(ipAddressVersion));
         }
 
+        /**
+         * @param name A friendly name of the IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name of the IP set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param tags An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

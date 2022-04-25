@@ -27,6 +27,10 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appProtocol")
     private @Nullable Output<String> appProtocol;
 
+    /**
+     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+     * 
+     */
     public Optional<Output<String>> appProtocol() {
         return Optional.ofNullable(this.appProtocol);
     }
@@ -38,6 +42,10 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of this port.  This must match the &#39;name&#39; field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port number of the endpoint.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -65,6 +77,15 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
+     * 
+     * Possible enum values:
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -96,38 +117,96 @@ public final class EndpointPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appProtocol(@Nullable Output<String> appProtocol) {
             $.appProtocol = appProtocol;
             return this;
         }
 
+        /**
+         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appProtocol(String appProtocol) {
             return appProtocol(Output.of(appProtocol));
         }
 
+        /**
+         * @param name The name of this port.  This must match the &#39;name&#39; field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of this port.  This must match the &#39;name&#39; field in the corresponding ServicePort. Must be a DNS_LABEL. Optional only if one port is defined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port The port number of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

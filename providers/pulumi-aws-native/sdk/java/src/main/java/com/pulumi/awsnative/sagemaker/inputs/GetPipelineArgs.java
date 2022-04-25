@@ -19,6 +19,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pipelineName", required=true)
     private String pipelineName;
 
+    /**
+     * @return The name of the Pipeline.
+     * 
+     */
     public String pipelineName() {
         return this.pipelineName;
     }
@@ -47,6 +51,12 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineName The name of the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(String pipelineName) {
             $.pipelineName = pipelineName;
             return this;

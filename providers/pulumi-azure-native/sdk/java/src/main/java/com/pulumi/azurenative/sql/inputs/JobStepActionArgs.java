@@ -30,6 +30,10 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<Either<String,JobStepActionSource>> source;
 
+    /**
+     * @return The source of the action to execute.
+     * 
+     */
     public Optional<Output<Either<String,JobStepActionSource>>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -41,6 +45,10 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,JobStepActionType>> type;
 
+    /**
+     * @return Type of action being executed by the job step.
+     * 
+     */
     public Optional<Output<Either<String,JobStepActionType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -52,6 +60,10 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The action value, for example the text of the T-SQL script to execute.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -82,45 +94,105 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobStepActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The source of the action to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<Either<String,JobStepActionSource>> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source of the action to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Either<String,JobStepActionSource> source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param source The source of the action to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Either.ofLeft(source));
         }
 
+        /**
+         * @param source The source of the action to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(JobStepActionSource source) {
             return source(Either.ofRight(source));
         }
 
+        /**
+         * @param type Type of action being executed by the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,JobStepActionType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of action being executed by the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,JobStepActionType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of action being executed by the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of action being executed by the job step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobStepActionType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value The action value, for example the text of the T-SQL script to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The action value, for example the text of the T-SQL script to execute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

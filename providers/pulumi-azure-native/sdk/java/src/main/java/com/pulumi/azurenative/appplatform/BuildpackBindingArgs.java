@@ -23,6 +23,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildServiceName", required=true)
     private Output<String> buildServiceName;
 
+    /**
+     * @return The name of the build service resource.
+     * 
+     */
     public Output<String> buildServiceName() {
         return this.buildServiceName;
     }
@@ -34,6 +38,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="builderName", required=true)
     private Output<String> builderName;
 
+    /**
+     * @return The name of the builder resource.
+     * 
+     */
     public Output<String> builderName() {
         return this.builderName;
     }
@@ -45,6 +53,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildpackBindingName")
     private @Nullable Output<String> buildpackBindingName;
 
+    /**
+     * @return The name of the Buildpack Binding Name
+     * 
+     */
     public Optional<Output<String>> buildpackBindingName() {
         return Optional.ofNullable(this.buildpackBindingName);
     }
@@ -56,6 +68,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
     private @Nullable Output<BuildpackBindingPropertiesArgs> properties;
 
+    /**
+     * @return Properties of a buildpack binding
+     * 
+     */
     public Optional<Output<BuildpackBindingPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,6 +83,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -111,56 +135,128 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
             $ = new BuildpackBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildServiceName The name of the build service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildServiceName(Output<String> buildServiceName) {
             $.buildServiceName = buildServiceName;
             return this;
         }
 
+        /**
+         * @param buildServiceName The name of the build service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildServiceName(String buildServiceName) {
             return buildServiceName(Output.of(buildServiceName));
         }
 
+        /**
+         * @param builderName The name of the builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderName(Output<String> builderName) {
             $.builderName = builderName;
             return this;
         }
 
+        /**
+         * @param builderName The name of the builder resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder builderName(String builderName) {
             return builderName(Output.of(builderName));
         }
 
+        /**
+         * @param buildpackBindingName The name of the Buildpack Binding Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackBindingName(@Nullable Output<String> buildpackBindingName) {
             $.buildpackBindingName = buildpackBindingName;
             return this;
         }
 
+        /**
+         * @param buildpackBindingName The name of the Buildpack Binding Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackBindingName(String buildpackBindingName) {
             return buildpackBindingName(Output.of(buildpackBindingName));
         }
 
+        /**
+         * @param properties Properties of a buildpack binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<BuildpackBindingPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of a buildpack binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(BuildpackBindingPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

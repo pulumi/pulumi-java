@@ -24,6 +24,10 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
     @Import(name="bucketName", required=true)
     private String bucketName;
 
+    /**
+     * @return The name of a Cloud Storage bucket. Required.
+     * 
+     */
     public String bucketName() {
         return this.bucketName;
     }
@@ -35,6 +39,10 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
     @Import(name="excludeRegex", required=true)
     private List<String> excludeRegex;
 
+    /**
+     * @return A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+     * 
+     */
     public List<String> excludeRegex() {
         return this.excludeRegex;
     }
@@ -46,6 +54,10 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
     @Import(name="includeRegex", required=true)
     private List<String> includeRegex;
 
+    /**
+     * @return A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+     * 
+     */
     public List<String> includeRegex() {
         return this.includeRegex;
     }
@@ -76,25 +88,55 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
             $ = new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName The name of a Cloud Storage bucket. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param excludeRegex A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeRegex(List<String> excludeRegex) {
             $.excludeRegex = excludeRegex;
             return this;
         }
 
+        /**
+         * @param excludeRegex A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeRegex(String... excludeRegex) {
             return excludeRegex(List.of(excludeRegex));
         }
 
+        /**
+         * @param includeRegex A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeRegex(List<String> includeRegex) {
             $.includeRegex = includeRegex;
             return this;
         }
 
+        /**
+         * @param includeRegex A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeRegex(String... includeRegex) {
             return includeRegex(List.of(includeRegex));
         }

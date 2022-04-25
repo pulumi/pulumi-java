@@ -23,6 +23,10 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="canStream", required=true)
     private Boolean canStream;
 
+    /**
+     * @return Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
+     * 
+     */
     public Boolean canStream() {
         return this.canStream;
     }
@@ -34,6 +38,10 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hasData", required=true)
     private Boolean hasData;
 
+    /**
+     * @return Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
+     * 
+     */
     public Boolean hasData() {
         return this.hasData;
     }
@@ -45,6 +53,10 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isRecording", required=true)
     private Boolean isRecording;
 
+    /**
+     * @return Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+     * 
+     */
     public Boolean isRecording() {
         return this.isRecording;
     }
@@ -75,16 +87,34 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoFlagsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canStream Value indicating whether or not the video can be streamed. Only &#34;archive&#34; type videos can be streamed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canStream(Boolean canStream) {
             $.canStream = canStream;
             return this;
         }
 
+        /**
+         * @param hasData Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasData(Boolean hasData) {
             $.hasData = hasData;
             return this;
         }
 
+        /**
+         * @param isRecording Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn&#39;t necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRecording(Boolean isRecording) {
             $.isRecording = isRecording;
             return this;

@@ -25,6 +25,10 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="fileSystemId", required=true)
     private String fileSystemId;
 
+    /**
+     * @return UUID v4 used to identify the MountTarget
+     * 
+     */
     public String fileSystemId() {
         return this.fileSystemId;
     }
@@ -36,6 +40,10 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="ipAddress", required=true)
     private String ipAddress;
 
+    /**
+     * @return The mount target&#39;s IPv4 address
+     * 
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
@@ -47,6 +55,10 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="mountTargetId", required=true)
     private String mountTargetId;
 
+    /**
+     * @return UUID v4 used to identify the MountTarget
+     * 
+     */
     public String mountTargetId() {
         return this.mountTargetId;
     }
@@ -58,6 +70,10 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="smbServerFqdn")
     private @Nullable String smbServerFqdn;
 
+    /**
+     * @return The SMB server&#39;s Fully Qualified Domain Name, FQDN
+     * 
+     */
     public Optional<String> smbServerFqdn() {
         return Optional.ofNullable(this.smbServerFqdn);
     }
@@ -89,21 +105,45 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
             $ = new MountTargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileSystemId UUID v4 used to identify the MountTarget
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param ipAddress The mount target&#39;s IPv4 address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param mountTargetId UUID v4 used to identify the MountTarget
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountTargetId(String mountTargetId) {
             $.mountTargetId = mountTargetId;
             return this;
         }
 
+        /**
+         * @param smbServerFqdn The SMB server&#39;s Fully Qualified Domain Name, FQDN
+         * 
+         * @return builder
+         * 
+         */
         public Builder smbServerFqdn(@Nullable String smbServerFqdn) {
             $.smbServerFqdn = smbServerFqdn;
             return this;

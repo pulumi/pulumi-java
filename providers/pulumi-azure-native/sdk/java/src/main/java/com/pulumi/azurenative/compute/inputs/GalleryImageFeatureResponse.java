@@ -25,6 +25,10 @@ public final class GalleryImageFeatureResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the gallery image feature.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class GalleryImageFeatureResponse extends com.pulumi.resources.Invo
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the gallery image feature.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class GalleryImageFeatureResponse extends com.pulumi.resources.Invo
             $ = new GalleryImageFeatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the gallery image feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the gallery image feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -27,6 +27,10 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="maxVideoBitsPerSecond")
     private @Nullable Output<Integer> maxVideoBitsPerSecond;
 
+    /**
+     * @return The maximum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Output<Integer>> maxVideoBitsPerSecond() {
         return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
@@ -38,6 +42,10 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="minVideoBitsPerSecond")
     private @Nullable Output<Integer> minVideoBitsPerSecond;
 
+    /**
+     * @return The minimum video bitrate (bps) to include in output.
+     * 
+     */
     public Optional<Output<Integer>> minVideoBitsPerSecond() {
         return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
@@ -49,6 +57,10 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
     @Import(name="streamOrder")
     private @Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder;
 
+    /**
+     * @return A directive that determines the order of streams in the output.
+     * 
+     */
     public Optional<Output<PackagingConfigurationStreamSelectionStreamOrder>> streamOrder() {
         return Optional.ofNullable(this.streamOrder);
     }
@@ -79,29 +91,65 @@ public final class PackagingConfigurationStreamSelectionArgs extends com.pulumi.
             $ = new PackagingConfigurationStreamSelectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxVideoBitsPerSecond The maximum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVideoBitsPerSecond(@Nullable Output<Integer> maxVideoBitsPerSecond) {
             $.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
+        /**
+         * @param maxVideoBitsPerSecond The maximum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxVideoBitsPerSecond(Integer maxVideoBitsPerSecond) {
             return maxVideoBitsPerSecond(Output.of(maxVideoBitsPerSecond));
         }
 
+        /**
+         * @param minVideoBitsPerSecond The minimum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVideoBitsPerSecond(@Nullable Output<Integer> minVideoBitsPerSecond) {
             $.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
+        /**
+         * @param minVideoBitsPerSecond The minimum video bitrate (bps) to include in output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVideoBitsPerSecond(Integer minVideoBitsPerSecond) {
             return minVideoBitsPerSecond(Output.of(minVideoBitsPerSecond));
         }
 
+        /**
+         * @param streamOrder A directive that determines the order of streams in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOrder(@Nullable Output<PackagingConfigurationStreamSelectionStreamOrder> streamOrder) {
             $.streamOrder = streamOrder;
             return this;
         }
 
+        /**
+         * @param streamOrder A directive that determines the order of streams in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOrder(PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
             return streamOrder(Output.of(streamOrder));
         }

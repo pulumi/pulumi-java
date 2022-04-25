@@ -26,6 +26,10 @@ public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
     private @Nullable Output<String> accessToken;
 
+    /**
+     * @return Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -37,6 +41,10 @@ public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Page id
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -66,20 +74,44 @@ public final class FacebookPageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FacebookPageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable Output<String> accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param accessToken Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             return accessToken(Output.of(accessToken));
         }
 
+        /**
+         * @param id Page id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Page id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

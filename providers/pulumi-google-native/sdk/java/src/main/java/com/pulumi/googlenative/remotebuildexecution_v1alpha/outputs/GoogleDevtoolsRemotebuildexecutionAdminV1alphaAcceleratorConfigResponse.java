@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse {
     /**
-     * The number of guest accelerator cards exposed to each VM.
+     * @return The number of guest accelerator cards exposed to each VM.
      * 
      */
     private final String acceleratorCount;
     /**
-     * The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+     * @return The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
      * 
      */
     private final String acceleratorType;
@@ -29,16 +29,16 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     }
 
     /**
-     * The number of guest accelerator cards exposed to each VM.
+     * @return The number of guest accelerator cards exposed to each VM.
      * 
-    */
+     */
     public String acceleratorCount() {
         return this.acceleratorCount;
     }
     /**
-     * The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
+     * @return The type of accelerator to attach to each VM, e.g. &#34;nvidia-tesla-k80&#34; for nVidia Tesla K80.
      * 
-    */
+     */
     public String acceleratorType() {
         return this.acceleratorType;
     }

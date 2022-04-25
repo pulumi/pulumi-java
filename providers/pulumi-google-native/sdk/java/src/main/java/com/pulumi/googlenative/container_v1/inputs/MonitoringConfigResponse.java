@@ -23,6 +23,10 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
     @Import(name="componentConfig", required=true)
     private MonitoringComponentConfigResponse componentConfig;
 
+    /**
+     * @return Monitoring components configuration
+     * 
+     */
     public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
@@ -51,6 +55,12 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
             $ = new MonitoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentConfig Monitoring components configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             $.componentConfig = componentConfig;
             return this;

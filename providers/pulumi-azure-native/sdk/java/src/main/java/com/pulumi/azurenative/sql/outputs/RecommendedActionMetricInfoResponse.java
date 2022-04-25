@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class RecommendedActionMetricInfoResponse {
     /**
-     * Gets the name of the metric. e.g., CPU, Number of Queries.
+     * @return Gets the name of the metric. e.g., CPU, Number of Queries.
      * 
      */
     private final String metricName;
     /**
-     * Gets the start time of time interval given by this MetricInfo.
+     * @return Gets the start time of time interval given by this MetricInfo.
      * 
      */
     private final String startTime;
     /**
-     * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+     * @return Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
      * 
      */
     private final String timeGrain;
     /**
-     * Gets the unit in which metric is measured. e.g., DTU, Frequency
+     * @return Gets the unit in which metric is measured. e.g., DTU, Frequency
      * 
      */
     private final String unit;
     /**
-     * Gets the value of the metric in the time interval given by this MetricInfo.
+     * @return Gets the value of the metric in the time interval given by this MetricInfo.
      * 
      */
     private final Double value;
@@ -51,37 +51,37 @@ public final class RecommendedActionMetricInfoResponse {
     }
 
     /**
-     * Gets the name of the metric. e.g., CPU, Number of Queries.
+     * @return Gets the name of the metric. e.g., CPU, Number of Queries.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * Gets the start time of time interval given by this MetricInfo.
+     * @return Gets the start time of time interval given by this MetricInfo.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
+     * @return Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
      * 
-    */
+     */
     public String timeGrain() {
         return this.timeGrain;
     }
     /**
-     * Gets the unit in which metric is measured. e.g., DTU, Frequency
+     * @return Gets the unit in which metric is measured. e.g., DTU, Frequency
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }
     /**
-     * Gets the value of the metric in the time interval given by this MetricInfo.
+     * @return Gets the value of the metric in the time interval given by this MetricInfo.
      * 
-    */
+     */
     public Double value() {
         return this.value;
     }

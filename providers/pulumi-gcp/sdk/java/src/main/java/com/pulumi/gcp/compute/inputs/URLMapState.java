@@ -30,6 +30,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -46,6 +50,15 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteAction")
     private @Nullable Output<URLMapDefaultRouteActionGetArgs> defaultRouteAction;
 
+    /**
+     * @return defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+     * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+     * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+     * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+     * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultRouteActionGetArgs>> defaultRouteAction() {
         return Optional.ofNullable(this.defaultRouteAction);
     }
@@ -57,6 +70,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultService")
     private @Nullable Output<String> defaultService;
 
+    /**
+     * @return The backend service or backend bucket to use when none of the given paths match.
+     * 
+     */
     public Optional<Output<String>> defaultService() {
         return Optional.ofNullable(this.defaultService);
     }
@@ -71,6 +88,13 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultUrlRedirect")
     private @Nullable Output<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
+    /**
+     * @return When none of the specified hostRules match, the request is redirected to a URL specified
+     * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+     * defaultRouteAction must not be set.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapDefaultUrlRedirectGetArgs>> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
@@ -82,6 +106,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of this test case.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -93,6 +121,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
+    /**
+     * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+     * 
+     */
     public Optional<Output<String>> fingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
@@ -108,6 +140,14 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="headerAction")
     private @Nullable Output<URLMapHeaderActionGetArgs> headerAction;
 
+    /**
+     * @return Specifies changes to request and response headers that need to take effect for
+     * the selected backendService.
+     * headerAction specified here take effect before headerAction in the enclosing
+     * HttpRouteRule, PathMatcher and UrlMap.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<URLMapHeaderActionGetArgs>> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -120,6 +160,11 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostRules")
     private @Nullable Output<List<URLMapHostRuleGetArgs>> hostRules;
 
+    /**
+     * @return The list of HostRules to use against the URL.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<URLMapHostRuleGetArgs>>> hostRules() {
         return Optional.ofNullable(this.hostRules);
     }
@@ -131,6 +176,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mapId")
     private @Nullable Output<Integer> mapId;
 
+    /**
+     * @return The unique identifier for the resource.
+     * 
+     */
     public Optional<Output<Integer>> mapId() {
         return Optional.ofNullable(this.mapId);
     }
@@ -143,6 +192,11 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the query parameter to match. The query parameter must exist in the
+     * request, in the absence of which the request match fails.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -155,6 +209,11 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathMatchers")
     private @Nullable Output<List<URLMapPathMatcherGetArgs>> pathMatchers;
 
+    /**
+     * @return The name of the PathMatcher to use to match the path portion of the URL if the
+     * hostRule matches the URL&#39;s host portion.
+     * 
+     */
     public Optional<Output<List<URLMapPathMatcherGetArgs>>> pathMatchers() {
         return Optional.ofNullable(this.pathMatchers);
     }
@@ -167,6 +226,11 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -178,6 +242,10 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -192,6 +260,13 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tests")
     private @Nullable Output<List<URLMapTestGetArgs>> tests;
 
+    /**
+     * @return The list of expected URL mapping tests. Request to update this UrlMap will
+     * succeed only if all of the test cases pass. You can specify a maximum of 100
+     * tests per UrlMap.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<URLMapTestGetArgs>>> tests() {
         return Optional.ofNullable(this.tests);
     }
@@ -233,140 +308,369 @@ public final class URLMapState extends com.pulumi.resources.ResourceArgs {
             $ = new URLMapState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param defaultRouteAction defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+         * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+         * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+         * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+         * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteAction(@Nullable Output<URLMapDefaultRouteActionGetArgs> defaultRouteAction) {
             $.defaultRouteAction = defaultRouteAction;
             return this;
         }
 
+        /**
+         * @param defaultRouteAction defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
+         * advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
+         * to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
+         * Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
+         * Only one of defaultRouteAction or defaultUrlRedirect must be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultRouteAction(URLMapDefaultRouteActionGetArgs defaultRouteAction) {
             return defaultRouteAction(Output.of(defaultRouteAction));
         }
 
+        /**
+         * @param defaultService The backend service or backend bucket to use when none of the given paths match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultService(@Nullable Output<String> defaultService) {
             $.defaultService = defaultService;
             return this;
         }
 
+        /**
+         * @param defaultService The backend service or backend bucket to use when none of the given paths match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultService(String defaultService) {
             return defaultService(Output.of(defaultService));
         }
 
+        /**
+         * @param defaultUrlRedirect When none of the specified hostRules match, the request is redirected to a URL specified
+         * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+         * defaultRouteAction must not be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUrlRedirect(@Nullable Output<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
             $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
+        /**
+         * @param defaultUrlRedirect When none of the specified hostRules match, the request is redirected to a URL specified
+         * by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
+         * defaultRouteAction must not be set.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultUrlRedirect(URLMapDefaultUrlRedirectGetArgs defaultUrlRedirect) {
             return defaultUrlRedirect(Output.of(defaultUrlRedirect));
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of this test case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
             $.fingerprint = fingerprint;
             return this;
         }
 
+        /**
+         * @param fingerprint Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fingerprint(String fingerprint) {
             return fingerprint(Output.of(fingerprint));
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(@Nullable Output<URLMapHeaderActionGetArgs> headerAction) {
             $.headerAction = headerAction;
             return this;
         }
 
+        /**
+         * @param headerAction Specifies changes to request and response headers that need to take effect for
+         * the selected backendService.
+         * headerAction specified here take effect before headerAction in the enclosing
+         * HttpRouteRule, PathMatcher and UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerAction(URLMapHeaderActionGetArgs headerAction) {
             return headerAction(Output.of(headerAction));
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(@Nullable Output<List<URLMapHostRuleGetArgs>> hostRules) {
             $.hostRules = hostRules;
             return this;
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(List<URLMapHostRuleGetArgs> hostRules) {
             return hostRules(Output.of(hostRules));
         }
 
+        /**
+         * @param hostRules The list of HostRules to use against the URL.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostRules(URLMapHostRuleGetArgs... hostRules) {
             return hostRules(List.of(hostRules));
         }
 
+        /**
+         * @param mapId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapId(@Nullable Output<Integer> mapId) {
             $.mapId = mapId;
             return this;
         }
 
+        /**
+         * @param mapId The unique identifier for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapId(Integer mapId) {
             return mapId(Output.of(mapId));
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the
+         * request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query parameter to match. The query parameter must exist in the
+         * request, in the absence of which the request match fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of the URL if the
+         * hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(@Nullable Output<List<URLMapPathMatcherGetArgs>> pathMatchers) {
             $.pathMatchers = pathMatchers;
             return this;
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of the URL if the
+         * hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(List<URLMapPathMatcherGetArgs> pathMatchers) {
             return pathMatchers(Output.of(pathMatchers));
         }
 
+        /**
+         * @param pathMatchers The name of the PathMatcher to use to match the path portion of the URL if the
+         * hostRule matches the URL&#39;s host portion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMatchers(URLMapPathMatcherGetArgs... pathMatchers) {
             return pathMatchers(List.of(pathMatchers));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param tests The list of expected URL mapping tests. Request to update this UrlMap will
+         * succeed only if all of the test cases pass. You can specify a maximum of 100
+         * tests per UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(@Nullable Output<List<URLMapTestGetArgs>> tests) {
             $.tests = tests;
             return this;
         }
 
+        /**
+         * @param tests The list of expected URL mapping tests. Request to update this UrlMap will
+         * succeed only if all of the test cases pass. You can specify a maximum of 100
+         * tests per UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(List<URLMapTestGetArgs> tests) {
             return tests(Output.of(tests));
         }
 
+        /**
+         * @param tests The list of expected URL mapping tests. Request to update this UrlMap will
+         * succeed only if all of the test cases pass. You can specify a maximum of 100
+         * tests per UrlMap.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tests(URLMapTestGetArgs... tests) {
             return tests(List.of(tests));
         }

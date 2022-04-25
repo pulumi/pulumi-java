@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiskAutoSnapshotAddOn {
     /**
-     * The daily time when an automatic snapshot will be created.
+     * @return The daily time when an automatic snapshot will be created.
      * 
      */
     private final @Nullable String snapshotTimeOfDay;
@@ -23,9 +23,9 @@ public final class DiskAutoSnapshotAddOn {
     }
 
     /**
-     * The daily time when an automatic snapshot will be created.
+     * @return The daily time when an automatic snapshot will be created.
      * 
-    */
+     */
     public Optional<String> snapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }

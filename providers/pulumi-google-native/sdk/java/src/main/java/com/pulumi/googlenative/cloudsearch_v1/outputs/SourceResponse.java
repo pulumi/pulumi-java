@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class SourceResponse {
     /**
-     * Source name for content indexed by the Indexing API.
+     * @return Source name for content indexed by the Indexing API.
      * 
      */
     private final String name;
     /**
-     * Predefined content source for Google Apps.
+     * @return Predefined content source for Google Apps.
      * 
      */
     private final String predefinedSource;
@@ -29,16 +29,16 @@ public final class SourceResponse {
     }
 
     /**
-     * Source name for content indexed by the Indexing API.
+     * @return Source name for content indexed by the Indexing API.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Predefined content source for Google Apps.
+     * @return Predefined content source for Google Apps.
      * 
-    */
+     */
     public String predefinedSource() {
         return this.predefinedSource;
     }

@@ -28,6 +28,10 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actionsRequired")
     private @Nullable Output<String> actionsRequired;
 
+    /**
+     * @return Actions required (if any).
+     * 
+     */
     public Optional<Output<String>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -39,6 +43,10 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the connection state.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
     private @Nullable Output<Either<String,PersistedConnectionStatus>> status;
 
+    /**
+     * @return Status of the connection.
+     * 
+     */
     public Optional<Output<Either<String,PersistedConnectionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -80,37 +92,85 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
             $ = new ConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired Actions required (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired Actions required (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param description Description of the connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status Status of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PersistedConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PersistedConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Status of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Status of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PersistedConnectionStatus status) {
             return status(Either.ofRight(status));
         }

@@ -25,6 +25,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the storage account.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +73,23 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type The type of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

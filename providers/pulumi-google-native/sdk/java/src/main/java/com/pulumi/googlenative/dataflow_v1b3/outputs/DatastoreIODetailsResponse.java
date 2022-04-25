@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DatastoreIODetailsResponse {
     /**
-     * Namespace used in the connection.
+     * @return Namespace used in the connection.
      * 
      */
     private final String namespace;
     /**
-     * ProjectId accessed in the connection.
+     * @return ProjectId accessed in the connection.
      * 
      */
     private final String project;
@@ -29,16 +29,16 @@ public final class DatastoreIODetailsResponse {
     }
 
     /**
-     * Namespace used in the connection.
+     * @return Namespace used in the connection.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * ProjectId accessed in the connection.
+     * @return ProjectId accessed in the connection.
      * 
-    */
+     */
     public String project() {
         return this.project;
     }

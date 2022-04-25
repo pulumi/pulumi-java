@@ -29,6 +29,10 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="bearerTokenSendingMethods")
     private @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
+    /**
+     * @return How to send token to the server.
+     * 
+     */
     public Optional<Output<List<Either<String,BearerTokenSendingMethods>>>> bearerTokenSendingMethods() {
         return Optional.ofNullable(this.bearerTokenSendingMethods);
     }
@@ -40,6 +44,10 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="openidProviderId")
     private @Nullable Output<String> openidProviderId;
 
+    /**
+     * @return OAuth authorization server identifier.
+     * 
+     */
     public Optional<Output<String>> openidProviderId() {
         return Optional.ofNullable(this.openidProviderId);
     }
@@ -69,24 +77,54 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
             $ = new OpenIdAuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bearerTokenSendingMethods How to send token to the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods) {
             $.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
+        /**
+         * @param bearerTokenSendingMethods How to send token to the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(Output.of(bearerTokenSendingMethods));
         }
 
+        /**
+         * @param bearerTokenSendingMethods How to send token to the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethods>... bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
         }
 
+        /**
+         * @param openidProviderId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidProviderId(@Nullable Output<String> openidProviderId) {
             $.openidProviderId = openidProviderId;
             return this;
         }
 
+        /**
+         * @param openidProviderId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidProviderId(String openidProviderId) {
             return openidProviderId(Output.of(openidProviderId));
         }

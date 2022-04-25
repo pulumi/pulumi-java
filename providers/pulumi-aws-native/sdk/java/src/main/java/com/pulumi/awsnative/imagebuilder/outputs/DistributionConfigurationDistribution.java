@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionConfigurationDistribution {
     /**
-     * The specific AMI settings (for example, launch permissions, AMI tags).
+     * @return The specific AMI settings (for example, launch permissions, AMI tags).
      * 
      */
     private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
     /**
-     * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
      * 
      */
     private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
     /**
-     * A group of launchTemplateConfiguration settings that apply to image distribution.
+     * @return A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
      */
     private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
     /**
-     * The License Manager Configuration to associate with the AMI in the specified Region.
+     * @return The License Manager Configuration to associate with the AMI in the specified Region.
      * 
      */
     private final @Nullable List<String> licenseConfigurationArns;
     /**
-     * region
+     * @return region
      * 
      */
     private final String region;
@@ -56,37 +56,37 @@ public final class DistributionConfigurationDistribution {
     }
 
     /**
-     * The specific AMI settings (for example, launch permissions, AMI tags).
+     * @return The specific AMI settings (for example, launch permissions, AMI tags).
      * 
-    */
+     */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
     /**
-     * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
      * 
-    */
+     */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
-     * A group of launchTemplateConfiguration settings that apply to image distribution.
+     * @return A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
-    */
+     */
     public List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
     }
     /**
-     * The License Manager Configuration to associate with the AMI in the specified Region.
+     * @return The License Manager Configuration to associate with the AMI in the specified Region.
      * 
-    */
+     */
     public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
     /**
-     * region
+     * @return region
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

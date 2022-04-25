@@ -24,6 +24,10 @@ public final class AS2AgreementContentArgs extends com.pulumi.resources.Resource
     @Import(name="receiveAgreement", required=true)
     private Output<AS2OneWayAgreementArgs> receiveAgreement;
 
+    /**
+     * @return The AS2 one-way receive agreement.
+     * 
+     */
     public Output<AS2OneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
@@ -35,6 +39,10 @@ public final class AS2AgreementContentArgs extends com.pulumi.resources.Resource
     @Import(name="sendAgreement", required=true)
     private Output<AS2OneWayAgreementArgs> sendAgreement;
 
+    /**
+     * @return The AS2 one-way send agreement.
+     * 
+     */
     public Output<AS2OneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
@@ -64,20 +72,44 @@ public final class AS2AgreementContentArgs extends com.pulumi.resources.Resource
             $ = new AS2AgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param receiveAgreement The AS2 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(Output<AS2OneWayAgreementArgs> receiveAgreement) {
             $.receiveAgreement = receiveAgreement;
             return this;
         }
 
+        /**
+         * @param receiveAgreement The AS2 one-way receive agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiveAgreement(AS2OneWayAgreementArgs receiveAgreement) {
             return receiveAgreement(Output.of(receiveAgreement));
         }
 
+        /**
+         * @param sendAgreement The AS2 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(Output<AS2OneWayAgreementArgs> sendAgreement) {
             $.sendAgreement = sendAgreement;
             return this;
         }
 
+        /**
+         * @param sendAgreement The AS2 one-way send agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendAgreement(AS2OneWayAgreementArgs sendAgreement) {
             return sendAgreement(Output.of(sendAgreement));
         }

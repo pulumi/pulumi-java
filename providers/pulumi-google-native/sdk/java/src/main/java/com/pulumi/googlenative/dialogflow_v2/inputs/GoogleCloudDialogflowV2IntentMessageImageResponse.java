@@ -23,6 +23,10 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends com
     @Import(name="accessibilityText", required=true)
     private String accessibilityText;
 
+    /**
+     * @return Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+     * 
+     */
     public String accessibilityText() {
         return this.accessibilityText;
     }
@@ -34,6 +38,10 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends com
     @Import(name="imageUri", required=true)
     private String imageUri;
 
+    /**
+     * @return Optional. The public URI to an image file.
+     * 
+     */
     public String imageUri() {
         return this.imageUri;
     }
@@ -63,11 +71,23 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends com
             $ = new GoogleCloudDialogflowV2IntentMessageImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessibilityText Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessibilityText(String accessibilityText) {
             $.accessibilityText = accessibilityText;
             return this;
         }
 
+        /**
+         * @param imageUri Optional. The public URI to an image file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageUri(String imageUri) {
             $.imageUri = imageUri;
             return this;

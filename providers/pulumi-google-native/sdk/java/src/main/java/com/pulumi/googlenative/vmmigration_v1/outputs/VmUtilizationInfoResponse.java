@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class VmUtilizationInfoResponse {
     /**
-     * Utilization metrics for this VM.
+     * @return Utilization metrics for this VM.
      * 
      */
     private final VmUtilizationMetricsResponse utilization;
     /**
-     * The VM&#39;s ID in the source.
+     * @return The VM&#39;s ID in the source.
      * 
      */
     private final String vmId;
     /**
-     * The description of the VM in a Source of type Vmware.
+     * @return The description of the VM in a Source of type Vmware.
      * 
      */
     private final VmwareVmDetailsResponse vmwareVmDetails;
@@ -38,23 +38,23 @@ public final class VmUtilizationInfoResponse {
     }
 
     /**
-     * Utilization metrics for this VM.
+     * @return Utilization metrics for this VM.
      * 
-    */
+     */
     public VmUtilizationMetricsResponse utilization() {
         return this.utilization;
     }
     /**
-     * The VM&#39;s ID in the source.
+     * @return The VM&#39;s ID in the source.
      * 
-    */
+     */
     public String vmId() {
         return this.vmId;
     }
     /**
-     * The description of the VM in a Source of type Vmware.
+     * @return The description of the VM in a Source of type Vmware.
      * 
-    */
+     */
     public VmwareVmDetailsResponse vmwareVmDetails() {
         return this.vmwareVmDetails;
     }

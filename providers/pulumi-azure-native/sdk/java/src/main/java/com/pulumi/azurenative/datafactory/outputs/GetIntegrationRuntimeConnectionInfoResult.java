@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetIntegrationRuntimeConnectionInfoResult {
     /**
-     * The on-premises integration runtime host URL.
+     * @return The on-premises integration runtime host URL.
      * 
      */
     private final String hostServiceUri;
     /**
-     * The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
+     * @return The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
      * 
      */
     private final String identityCertThumbprint;
     /**
-     * Whether the identity certificate is expired.
+     * @return Whether the identity certificate is expired.
      * 
      */
     private final Boolean isIdentityCertExprired;
     /**
-     * The public key for encrypting a credential when transferring the credential to the integration runtime.
+     * @return The public key for encrypting a credential when transferring the credential to the integration runtime.
      * 
      */
     private final String publicKey;
     /**
-     * The token generated in service. Callers use this token to authenticate to integration runtime.
+     * @return The token generated in service. Callers use this token to authenticate to integration runtime.
      * 
      */
     private final String serviceToken;
     /**
-     * The integration runtime version.
+     * @return The integration runtime version.
      * 
      */
     private final String version;
@@ -58,44 +58,44 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
     }
 
     /**
-     * The on-premises integration runtime host URL.
+     * @return The on-premises integration runtime host URL.
      * 
-    */
+     */
     public String hostServiceUri() {
         return this.hostServiceUri;
     }
     /**
-     * The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
+     * @return The integration runtime SSL certificate thumbprint. Click-Once application uses it to do server validation.
      * 
-    */
+     */
     public String identityCertThumbprint() {
         return this.identityCertThumbprint;
     }
     /**
-     * Whether the identity certificate is expired.
+     * @return Whether the identity certificate is expired.
      * 
-    */
+     */
     public Boolean isIdentityCertExprired() {
         return this.isIdentityCertExprired;
     }
     /**
-     * The public key for encrypting a credential when transferring the credential to the integration runtime.
+     * @return The public key for encrypting a credential when transferring the credential to the integration runtime.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }
     /**
-     * The token generated in service. Callers use this token to authenticate to integration runtime.
+     * @return The token generated in service. Callers use this token to authenticate to integration runtime.
      * 
-    */
+     */
     public String serviceToken() {
         return this.serviceToken;
     }
     /**
-     * The integration runtime version.
+     * @return The integration runtime version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

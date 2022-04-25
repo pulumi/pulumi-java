@@ -13,42 +13,42 @@ import java.util.Objects;
 @CustomType
 public final class GetBandwidthScheduleResult {
     /**
-     * The days of the week when this schedule is applicable.
+     * @return The days of the week when this schedule is applicable.
      * 
      */
     private final List<String> days;
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * The object name.
+     * @return The object name.
      * 
      */
     private final String name;
     /**
-     * The bandwidth rate in Mbps.
+     * @return The bandwidth rate in Mbps.
      * 
      */
     private final Integer rateInMbps;
     /**
-     * The start time of the schedule in UTC.
+     * @return The start time of the schedule in UTC.
      * 
      */
     private final String start;
     /**
-     * The stop time of the schedule in UTC.
+     * @return The stop time of the schedule in UTC.
      * 
      */
     private final String stop;
     /**
-     * Bandwidth object related to ASE resource
+     * @return Bandwidth object related to ASE resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class GetBandwidthScheduleResult {
     }
 
     /**
-     * The days of the week when this schedule is applicable.
+     * @return The days of the week when this schedule is applicable.
      * 
-    */
+     */
     public List<String> days() {
         return this.days;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The bandwidth rate in Mbps.
+     * @return The bandwidth rate in Mbps.
      * 
-    */
+     */
     public Integer rateInMbps() {
         return this.rateInMbps;
     }
     /**
-     * The start time of the schedule in UTC.
+     * @return The start time of the schedule in UTC.
      * 
-    */
+     */
     public String start() {
         return this.start;
     }
     /**
-     * The stop time of the schedule in UTC.
+     * @return The stop time of the schedule in UTC.
      * 
-    */
+     */
     public String stop() {
         return this.stop;
     }
     /**
-     * Bandwidth object related to ASE resource
+     * @return Bandwidth object related to ASE resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -16,13 +16,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGroupResult {
     /**
-     * The Resource Group ARN.
+     * @return The Resource Group ARN.
      * 
      */
     private final @Nullable String arn;
     private final @Nullable List<GroupConfigurationItem> configuration;
     /**
-     * The description of the resource group
+     * @return The description of the resource group
      * 
      */
     private final @Nullable String description;
@@ -47,9 +47,9 @@ public final class GetGroupResult {
     }
 
     /**
-     * The Resource Group ARN.
+     * @return The Resource Group ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -57,9 +57,9 @@ public final class GetGroupResult {
         return this.configuration == null ? List.of() : this.configuration;
     }
     /**
-     * The description of the resource group
+     * @return The description of the resource group
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

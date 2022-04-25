@@ -25,6 +25,10 @@ public final class ServicePrincipalProfileResponse extends com.pulumi.resources.
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The client ID used for the cluster (immutable).
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -36,6 +40,10 @@ public final class ServicePrincipalProfileResponse extends com.pulumi.resources.
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return The client secret used for the cluster (immutable).
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -65,11 +73,23 @@ public final class ServicePrincipalProfileResponse extends com.pulumi.resources.
             $ = new ServicePrincipalProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client ID used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret used for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;

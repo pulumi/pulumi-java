@@ -22,6 +22,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyArgs extends 
     @Import(name="tls")
     private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs> tls;
 
+    /**
+     * @return The Transport Layer Security (TLS) client policy.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -50,11 +54,23 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyArgs extends 
             $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) client policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) client policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs tls) {
             return tls(Output.of(tls));
         }

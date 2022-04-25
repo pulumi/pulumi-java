@@ -24,6 +24,10 @@ public final class ServiceMeshFeatureStateResponse extends com.pulumi.resources.
     @Import(name="analysisMessages", required=true)
     private List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
+    /**
+     * @return Results of running Service Mesh analyzers.
+     * 
+     */
     public List<ServiceMeshAnalysisMessageResponse> analysisMessages() {
         return this.analysisMessages;
     }
@@ -52,11 +56,23 @@ public final class ServiceMeshFeatureStateResponse extends com.pulumi.resources.
             $ = new ServiceMeshFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisMessages Results of running Service Mesh analyzers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
             $.analysisMessages = analysisMessages;
             return this;
         }
 
+        /**
+         * @param analysisMessages Results of running Service Mesh analyzers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisMessages(ServiceMeshAnalysisMessageResponse... analysisMessages) {
             return analysisMessages(List.of(analysisMessages));
         }

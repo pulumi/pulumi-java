@@ -23,6 +23,10 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
     @Import(name="authFailAction", required=true)
     private String authFailAction;
 
+    /**
+     * @return Action to take when users access resources that require authentication. Defaults to redirect.
+     * 
+     */
     public String authFailAction() {
         return this.authFailAction;
     }
@@ -34,6 +38,10 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
     @Import(name="login", required=true)
     private String login;
 
+    /**
+     * @return Level of login required to access this resource. Defaults to optional.
+     * 
+     */
     public String login() {
         return this.login;
     }
@@ -45,6 +53,10 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
     @Import(name="script", required=true)
     private String script;
 
+    /**
+     * @return Path to the script from the application root directory.
+     * 
+     */
     public String script() {
         return this.script;
     }
@@ -56,6 +68,10 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
     @Import(name="securityLevel", required=true)
     private String securityLevel;
 
+    /**
+     * @return Security (HTTPS) enforcement for this URL.
+     * 
+     */
     public String securityLevel() {
         return this.securityLevel;
     }
@@ -67,6 +83,10 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL to serve the endpoint at.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -99,26 +119,56 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
             $ = new ApiConfigHandlerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authFailAction Action to take when users access resources that require authentication. Defaults to redirect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authFailAction(String authFailAction) {
             $.authFailAction = authFailAction;
             return this;
         }
 
+        /**
+         * @param login Level of login required to access this resource. Defaults to optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param script Path to the script from the application root directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param securityLevel Security (HTTPS) enforcement for this URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityLevel(String securityLevel) {
             $.securityLevel = securityLevel;
             return this;
         }
 
+        /**
+         * @param url URL to serve the endpoint at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

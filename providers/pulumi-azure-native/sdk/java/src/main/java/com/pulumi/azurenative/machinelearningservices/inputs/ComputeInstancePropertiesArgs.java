@@ -34,6 +34,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="applicationSharingPolicy")
     private @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
+    /**
+     * @return Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationSharingPolicy>>> applicationSharingPolicy() {
         return Optional.ofNullable(this.applicationSharingPolicy);
     }
@@ -45,6 +49,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="computeInstanceAuthorizationType")
     private @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
+    /**
+     * @return The Compute Instance Authorization type. Available values are personal (default).
+     * 
+     */
     public Optional<Output<Either<String,ComputeInstanceAuthorizationType>>> computeInstanceAuthorizationType() {
         return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
@@ -56,6 +64,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="personalComputeInstanceSettings")
     private @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
+    /**
+     * @return Settings for a personal compute instance.
+     * 
+     */
     public Optional<Output<PersonalComputeInstanceSettingsArgs>> personalComputeInstanceSettings() {
         return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
@@ -67,6 +79,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="setupScripts")
     private @Nullable Output<SetupScriptsArgs> setupScripts;
 
+    /**
+     * @return Details of customized scripts to execute for setting up the cluster.
+     * 
+     */
     public Optional<Output<SetupScriptsArgs>> setupScripts() {
         return Optional.ofNullable(this.setupScripts);
     }
@@ -78,6 +94,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="sshSettings")
     private @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
 
+    /**
+     * @return Specifies policy and settings for SSH access.
+     * 
+     */
     public Optional<Output<ComputeInstanceSshSettingsArgs>> sshSettings() {
         return Optional.ofNullable(this.sshSettings);
     }
@@ -89,6 +109,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="subnet")
     private @Nullable Output<ResourceIdArgs> subnet;
 
+    /**
+     * @return Virtual network subnet resource ID the compute nodes belong to.
+     * 
+     */
     public Optional<Output<ResourceIdArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -100,6 +124,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="vmSize")
     private @Nullable Output<String> vmSize;
 
+    /**
+     * @return Virtual Machine Size
+     * 
+     */
     public Optional<Output<String>> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -134,81 +162,189 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
             $ = new ComputeInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationSharingPolicy Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSharingPolicy(@Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
             $.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
 
+        /**
+         * @param applicationSharingPolicy Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSharingPolicy(Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
             return applicationSharingPolicy(Output.of(applicationSharingPolicy));
         }
 
+        /**
+         * @param applicationSharingPolicy Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSharingPolicy(String applicationSharingPolicy) {
             return applicationSharingPolicy(Either.ofLeft(applicationSharingPolicy));
         }
 
+        /**
+         * @param applicationSharingPolicy Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSharingPolicy(ApplicationSharingPolicy applicationSharingPolicy) {
             return applicationSharingPolicy(Either.ofRight(applicationSharingPolicy));
         }
 
+        /**
+         * @param computeInstanceAuthorizationType The Compute Instance Authorization type. Available values are personal (default).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
             $.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
 
+        /**
+         * @param computeInstanceAuthorizationType The Compute Instance Authorization type. Available values are personal (default).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeInstanceAuthorizationType(Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
             return computeInstanceAuthorizationType(Output.of(computeInstanceAuthorizationType));
         }
 
+        /**
+         * @param computeInstanceAuthorizationType The Compute Instance Authorization type. Available values are personal (default).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeInstanceAuthorizationType(String computeInstanceAuthorizationType) {
             return computeInstanceAuthorizationType(Either.ofLeft(computeInstanceAuthorizationType));
         }
 
+        /**
+         * @param computeInstanceAuthorizationType The Compute Instance Authorization type. Available values are personal (default).
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeInstanceAuthorizationType(ComputeInstanceAuthorizationType computeInstanceAuthorizationType) {
             return computeInstanceAuthorizationType(Either.ofRight(computeInstanceAuthorizationType));
         }
 
+        /**
+         * @param personalComputeInstanceSettings Settings for a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
             $.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
 
+        /**
+         * @param personalComputeInstanceSettings Settings for a personal compute instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder personalComputeInstanceSettings(PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
             return personalComputeInstanceSettings(Output.of(personalComputeInstanceSettings));
         }
 
+        /**
+         * @param setupScripts Details of customized scripts to execute for setting up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupScripts(@Nullable Output<SetupScriptsArgs> setupScripts) {
             $.setupScripts = setupScripts;
             return this;
         }
 
+        /**
+         * @param setupScripts Details of customized scripts to execute for setting up the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setupScripts(SetupScriptsArgs setupScripts) {
             return setupScripts(Output.of(setupScripts));
         }
 
+        /**
+         * @param sshSettings Specifies policy and settings for SSH access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshSettings(@Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings) {
             $.sshSettings = sshSettings;
             return this;
         }
 
+        /**
+         * @param sshSettings Specifies policy and settings for SSH access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshSettings(ComputeInstanceSshSettingsArgs sshSettings) {
             return sshSettings(Output.of(sshSettings));
         }
 
+        /**
+         * @param subnet Virtual network subnet resource ID the compute nodes belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Virtual network subnet resource ID the compute nodes belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(ResourceIdArgs subnet) {
             return subnet(Output.of(subnet));
         }
 
+        /**
+         * @param vmSize Virtual Machine Size
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable Output<String> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize Virtual Machine Size
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Output.of(vmSize));
         }

@@ -25,6 +25,10 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -53,6 +57,12 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
             $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

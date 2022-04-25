@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayTrustedRootCertificateResponse {
     /**
-     * Certificate public data.
+     * @return Certificate public data.
      * 
      */
     private final @Nullable String data;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
      */
     private final @Nullable String keyVaultSecretId;
     /**
-     * Name of the trusted root certificate that is unique within an Application Gateway.
+     * @return Name of the trusted root certificate that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the trusted root certificate resource.
+     * @return The provisioning state of the trusted root certificate resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -66,51 +66,51 @@ public final class ApplicationGatewayTrustedRootCertificateResponse {
     }
 
     /**
-     * Certificate public data.
+     * @return Certificate public data.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
-    */
+     */
     public Optional<String> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
     /**
-     * Name of the trusted root certificate that is unique within an Application Gateway.
+     * @return Name of the trusted root certificate that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the trusted root certificate resource.
+     * @return The provisioning state of the trusted root certificate resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

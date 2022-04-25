@@ -26,6 +26,11 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends com.pulumi.
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -54,11 +59,25 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends com.pulumi.
             $ = new ContentKeyPolicyClearKeyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

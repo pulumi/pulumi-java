@@ -19,6 +19,10 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -30,6 +34,10 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainTopicName", required=true)
     private String domainTopicName;
 
+    /**
+     * @return Name of the topic.
+     * 
+     */
     public String domainTopicName() {
         return this.domainTopicName;
     }
@@ -41,6 +49,10 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainTopicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainTopicName Name of the topic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainTopicName(String domainTopicName) {
             $.domainTopicName = domainTopicName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

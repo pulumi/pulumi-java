@@ -25,6 +25,10 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
     @Import(name="imports", required=true)
     private List<ImportFileResponse> imports;
 
+    /**
+     * @return Import files referenced by the main template.
+     * 
+     */
     public List<ImportFileResponse> imports() {
         return this.imports;
     }
@@ -36,6 +40,10 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
     @Import(name="interpreter", required=true)
     private String interpreter;
 
+    /**
+     * @return Which interpreter (python or jinja) should be used during expansion.
+     * 
+     */
     public String interpreter() {
         return this.interpreter;
     }
@@ -47,6 +55,10 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
     @Import(name="mainTemplate", required=true)
     private String mainTemplate;
 
+    /**
+     * @return The filename of the mainTemplate
+     * 
+     */
     public String mainTemplate() {
         return this.mainTemplate;
     }
@@ -58,6 +70,10 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
     @Import(name="schema", required=true)
     private String schema;
 
+    /**
+     * @return The contents of the template schema.
+     * 
+     */
     public String schema() {
         return this.schema;
     }
@@ -69,6 +85,10 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
     @Import(name="template", required=true)
     private String template;
 
+    /**
+     * @return The contents of the main template file.
+     * 
+     */
     public String template() {
         return this.template;
     }
@@ -101,30 +121,66 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
             $ = new TemplateContentsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imports Import files referenced by the main template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(List<ImportFileResponse> imports) {
             $.imports = imports;
             return this;
         }
 
+        /**
+         * @param imports Import files referenced by the main template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imports(ImportFileResponse... imports) {
             return imports(List.of(imports));
         }
 
+        /**
+         * @param interpreter Which interpreter (python or jinja) should be used during expansion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interpreter(String interpreter) {
             $.interpreter = interpreter;
             return this;
         }
 
+        /**
+         * @param mainTemplate The filename of the mainTemplate
+         * 
+         * @return builder
+         * 
+         */
         public Builder mainTemplate(String mainTemplate) {
             $.mainTemplate = mainTemplate;
             return this;
         }
 
+        /**
+         * @param schema The contents of the template schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param template The contents of the main template file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(String template) {
             $.template = template;
             return this;

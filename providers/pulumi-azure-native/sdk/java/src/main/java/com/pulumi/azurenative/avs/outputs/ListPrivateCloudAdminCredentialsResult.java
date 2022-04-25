@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class ListPrivateCloudAdminCredentialsResult {
     /**
-     * NSX-T Manager password
+     * @return NSX-T Manager password
      * 
      */
     private final String nsxtPassword;
     /**
-     * NSX-T Manager username
+     * @return NSX-T Manager username
      * 
      */
     private final String nsxtUsername;
     /**
-     * vCenter admin password
+     * @return vCenter admin password
      * 
      */
     private final String vcenterPassword;
     /**
-     * vCenter admin username
+     * @return vCenter admin username
      * 
      */
     private final String vcenterUsername;
@@ -43,30 +43,30 @@ public final class ListPrivateCloudAdminCredentialsResult {
     }
 
     /**
-     * NSX-T Manager password
+     * @return NSX-T Manager password
      * 
-    */
+     */
     public String nsxtPassword() {
         return this.nsxtPassword;
     }
     /**
-     * NSX-T Manager username
+     * @return NSX-T Manager username
      * 
-    */
+     */
     public String nsxtUsername() {
         return this.nsxtUsername;
     }
     /**
-     * vCenter admin password
+     * @return vCenter admin password
      * 
-    */
+     */
     public String vcenterPassword() {
         return this.vcenterPassword;
     }
     /**
-     * vCenter admin username
+     * @return vCenter admin username
      * 
-    */
+     */
     public String vcenterUsername() {
         return this.vcenterUsername;
     }

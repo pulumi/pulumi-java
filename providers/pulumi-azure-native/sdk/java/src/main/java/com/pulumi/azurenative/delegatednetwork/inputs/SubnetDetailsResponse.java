@@ -25,6 +25,10 @@ public final class SubnetDetailsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return subnet arm resource id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class SubnetDetailsResponse extends com.pulumi.resources.InvokeArgs
             $ = new SubnetDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id subnet arm resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

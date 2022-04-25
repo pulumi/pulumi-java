@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class GetLBIPRangesResult {
     /**
-     * The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
+     * @return The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
      * 
      */
     private final List<String> httpSslTcpInternals;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The IP ranges used for health checks when **Network load balancing** is used
+     * @return The IP ranges used for health checks when **Network load balancing** is used
      * 
      */
     private final List<String> networks;
@@ -37,23 +37,23 @@ public final class GetLBIPRangesResult {
     }
 
     /**
-     * The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
+     * @return The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
      * 
-    */
+     */
     public List<String> httpSslTcpInternals() {
         return this.httpSslTcpInternals;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The IP ranges used for health checks when **Network load balancing** is used
+     * @return The IP ranges used for health checks when **Network load balancing** is used
      * 
-    */
+     */
     public List<String> networks() {
         return this.networks;
     }

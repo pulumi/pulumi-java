@@ -26,6 +26,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The unique name of the domain.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -44,6 +48,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeName")
     private @Nullable Output<String> objectTypeName;
 
+    /**
+     * @return The name of the ObjectType defined for the 3rd party data in Profile Service
+     * 
+     */
     public Optional<Output<String>> objectTypeName() {
         return Optional.ofNullable(this.objectTypeName);
     }
@@ -55,6 +63,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectTypeNames")
     private @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
+    /**
+     * @return The mapping between 3rd party event types and ObjectType names
+     * 
+     */
     public Optional<Output<List<IntegrationObjectTypeMappingArgs>>> objectTypeNames() {
         return Optional.ofNullable(this.objectTypeNames);
     }
@@ -66,6 +78,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<IntegrationTagArgs>> tags;
 
+    /**
+     * @return The tags (keys and values) associated with the integration
+     * 
+     */
     public Optional<Output<List<IntegrationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,6 +93,10 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The URI of the S3 bucket or any other type of data source.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -110,11 +130,23 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
@@ -128,46 +160,106 @@ public final class IntegrationArgs extends com.pulumi.resources.ResourceArgs {
             return flowDefinition(Output.of(flowDefinition));
         }
 
+        /**
+         * @param objectTypeName The name of the ObjectType defined for the 3rd party data in Profile Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeName(@Nullable Output<String> objectTypeName) {
             $.objectTypeName = objectTypeName;
             return this;
         }
 
+        /**
+         * @param objectTypeName The name of the ObjectType defined for the 3rd party data in Profile Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeName(String objectTypeName) {
             return objectTypeName(Output.of(objectTypeName));
         }
 
+        /**
+         * @param objectTypeNames The mapping between 3rd party event types and ObjectType names
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeNames(@Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
             $.objectTypeNames = objectTypeNames;
             return this;
         }
 
+        /**
+         * @param objectTypeNames The mapping between 3rd party event types and ObjectType names
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeNames(List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
             return objectTypeNames(Output.of(objectTypeNames));
         }
 
+        /**
+         * @param objectTypeNames The mapping between 3rd party event types and ObjectType names
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectTypeNames(IntegrationObjectTypeMappingArgs... objectTypeNames) {
             return objectTypeNames(List.of(objectTypeNames));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<IntegrationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<IntegrationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags (keys and values) associated with the integration
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(IntegrationTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param uri The URI of the S3 bucket or any other type of data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI of the S3 bucket or any other type of data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

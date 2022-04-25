@@ -27,6 +27,10 @@ public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resource
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -38,6 +42,10 @@ public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resource
     @Import(name="spec", required=true)
     private Output<PersistentVolumeClaimSpecArgs> spec;
 
+    /**
+     * @return The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+     * 
+     */
     public Output<PersistentVolumeClaimSpecArgs> spec() {
         return this.spec;
     }
@@ -67,20 +75,44 @@ public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resource
             $ = new PersistentVolumeClaimTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadata May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<PersistentVolumeClaimSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(PersistentVolumeClaimSpecArgs spec) {
             return spec(Output.of(spec));
         }

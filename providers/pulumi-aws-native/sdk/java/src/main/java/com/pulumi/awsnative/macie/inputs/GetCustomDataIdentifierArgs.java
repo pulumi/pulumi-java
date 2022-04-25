@@ -19,6 +19,10 @@ public final class GetCustomDataIdentifierArgs extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Custom data identifier ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetCustomDataIdentifierArgs extends com.pulumi.resources.Invo
             $ = new GetCustomDataIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Custom data identifier ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

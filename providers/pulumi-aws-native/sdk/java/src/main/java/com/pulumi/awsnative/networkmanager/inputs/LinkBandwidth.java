@@ -25,6 +25,10 @@ public final class LinkBandwidth extends com.pulumi.resources.InvokeArgs {
     @Import(name="downloadSpeed")
     private @Nullable Integer downloadSpeed;
 
+    /**
+     * @return Download speed in Mbps.
+     * 
+     */
     public Optional<Integer> downloadSpeed() {
         return Optional.ofNullable(this.downloadSpeed);
     }
@@ -36,6 +40,10 @@ public final class LinkBandwidth extends com.pulumi.resources.InvokeArgs {
     @Import(name="uploadSpeed")
     private @Nullable Integer uploadSpeed;
 
+    /**
+     * @return Upload speed in Mbps.
+     * 
+     */
     public Optional<Integer> uploadSpeed() {
         return Optional.ofNullable(this.uploadSpeed);
     }
@@ -65,11 +73,23 @@ public final class LinkBandwidth extends com.pulumi.resources.InvokeArgs {
             $ = new LinkBandwidth(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param downloadSpeed Download speed in Mbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadSpeed(@Nullable Integer downloadSpeed) {
             $.downloadSpeed = downloadSpeed;
             return this;
         }
 
+        /**
+         * @param uploadSpeed Upload speed in Mbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
             $.uploadSpeed = uploadSpeed;
             return this;

@@ -20,6 +20,10 @@ public final class DNSSECArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId", required=true)
     private Output<String> hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
@@ -48,11 +52,23 @@ public final class DNSSECArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DNSSECArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             return hostedZoneId(Output.of(hostedZoneId));
         }

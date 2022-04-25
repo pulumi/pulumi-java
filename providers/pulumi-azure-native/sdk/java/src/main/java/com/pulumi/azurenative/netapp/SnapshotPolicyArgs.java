@@ -28,6 +28,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the NetApp account
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -39,6 +43,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dailySchedule")
     private @Nullable Output<DailyScheduleArgs> dailySchedule;
 
+    /**
+     * @return Schedule for daily snapshots
+     * 
+     */
     public Optional<Output<DailyScheduleArgs>> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
@@ -50,6 +58,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return The property to decide policy is enabled or not
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -61,6 +73,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hourlySchedule")
     private @Nullable Output<HourlyScheduleArgs> hourlySchedule;
 
+    /**
+     * @return Schedule for hourly snapshots
+     * 
+     */
     public Optional<Output<HourlyScheduleArgs>> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
@@ -72,6 +88,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -83,6 +103,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="monthlySchedule")
     private @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
 
+    /**
+     * @return Schedule for monthly snapshots
+     * 
+     */
     public Optional<Output<MonthlyScheduleArgs>> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
@@ -94,6 +118,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -105,6 +133,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snapshotPolicyName")
     private @Nullable Output<String> snapshotPolicyName;
 
+    /**
+     * @return The name of the snapshot policy
+     * 
+     */
     public Optional<Output<String>> snapshotPolicyName() {
         return Optional.ofNullable(this.snapshotPolicyName);
     }
@@ -116,6 +148,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,6 +163,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="weeklySchedule")
     private @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
+    /**
+     * @return Schedule for weekly snapshots
+     * 
+     */
     public Optional<Output<WeeklyScheduleArgs>> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
@@ -164,92 +204,212 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SnapshotPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dailySchedule Schedule for daily snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(@Nullable Output<DailyScheduleArgs> dailySchedule) {
             $.dailySchedule = dailySchedule;
             return this;
         }
 
+        /**
+         * @param dailySchedule Schedule for daily snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(DailyScheduleArgs dailySchedule) {
             return dailySchedule(Output.of(dailySchedule));
         }
 
+        /**
+         * @param enabled The property to decide policy is enabled or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled The property to decide policy is enabled or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param hourlySchedule Schedule for hourly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlySchedule(@Nullable Output<HourlyScheduleArgs> hourlySchedule) {
             $.hourlySchedule = hourlySchedule;
             return this;
         }
 
+        /**
+         * @param hourlySchedule Schedule for hourly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourlySchedule(HourlyScheduleArgs hourlySchedule) {
             return hourlySchedule(Output.of(hourlySchedule));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param monthlySchedule Schedule for monthly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlySchedule(@Nullable Output<MonthlyScheduleArgs> monthlySchedule) {
             $.monthlySchedule = monthlySchedule;
             return this;
         }
 
+        /**
+         * @param monthlySchedule Schedule for monthly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlySchedule(MonthlyScheduleArgs monthlySchedule) {
             return monthlySchedule(Output.of(monthlySchedule));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param snapshotPolicyName The name of the snapshot policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotPolicyName(@Nullable Output<String> snapshotPolicyName) {
             $.snapshotPolicyName = snapshotPolicyName;
             return this;
         }
 
+        /**
+         * @param snapshotPolicyName The name of the snapshot policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotPolicyName(String snapshotPolicyName) {
             return snapshotPolicyName(Output.of(snapshotPolicyName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param weeklySchedule Schedule for weekly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(@Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
             $.weeklySchedule = weeklySchedule;
             return this;
         }
 
+        /**
+         * @param weeklySchedule Schedule for weekly snapshots
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(WeeklyScheduleArgs weeklySchedule) {
             return weeklySchedule(Output.of(weeklySchedule));
         }

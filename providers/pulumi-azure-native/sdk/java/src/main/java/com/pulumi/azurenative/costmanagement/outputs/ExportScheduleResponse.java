@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExportScheduleResponse {
     /**
-     * The schedule recurrence.
+     * @return The schedule recurrence.
      * 
      */
     private final @Nullable String recurrence;
     /**
-     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
      */
     private final @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
     /**
-     * The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+     * @return The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
      * 
      */
     private final @Nullable String status;
@@ -39,23 +39,23 @@ public final class ExportScheduleResponse {
     }
 
     /**
-     * The schedule recurrence.
+     * @return The schedule recurrence.
      * 
-    */
+     */
     public Optional<String> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
-     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
-    */
+     */
     public Optional<ExportRecurrencePeriodResponse> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
-     * The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+     * @return The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

@@ -27,6 +27,10 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreedAt")
     private @Nullable Output<String> agreedAt;
 
+    /**
+     * @return Timestamp when the agreements were accepted.
+     * 
+     */
     public Optional<Output<String>> agreedAt() {
         return Optional.ofNullable(this.agreedAt);
     }
@@ -38,6 +42,10 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreedBy")
     private @Nullable Output<String> agreedBy;
 
+    /**
+     * @return Client IP address.
+     * 
+     */
     public Optional<Output<String>> agreedBy() {
         return Optional.ofNullable(this.agreedBy);
     }
@@ -49,6 +57,10 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreementKeys")
     private @Nullable Output<List<String>> agreementKeys;
 
+    /**
+     * @return List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under &lt;code&gt;TopLevelDomain&lt;/code&gt; resource.
+     * 
+     */
     public Optional<Output<List<String>>> agreementKeys() {
         return Optional.ofNullable(this.agreementKeys);
     }
@@ -79,33 +91,75 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
             $ = new DomainPurchaseConsentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agreedAt Timestamp when the agreements were accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreedAt(@Nullable Output<String> agreedAt) {
             $.agreedAt = agreedAt;
             return this;
         }
 
+        /**
+         * @param agreedAt Timestamp when the agreements were accepted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreedAt(String agreedAt) {
             return agreedAt(Output.of(agreedAt));
         }
 
+        /**
+         * @param agreedBy Client IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreedBy(@Nullable Output<String> agreedBy) {
             $.agreedBy = agreedBy;
             return this;
         }
 
+        /**
+         * @param agreedBy Client IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreedBy(String agreedBy) {
             return agreedBy(Output.of(agreedBy));
         }
 
+        /**
+         * @param agreementKeys List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under &lt;code&gt;TopLevelDomain&lt;/code&gt; resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementKeys(@Nullable Output<List<String>> agreementKeys) {
             $.agreementKeys = agreementKeys;
             return this;
         }
 
+        /**
+         * @param agreementKeys List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under &lt;code&gt;TopLevelDomain&lt;/code&gt; resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementKeys(List<String> agreementKeys) {
             return agreementKeys(Output.of(agreementKeys));
         }
 
+        /**
+         * @param agreementKeys List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under &lt;code&gt;TopLevelDomain&lt;/code&gt; resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agreementKeys(String... agreementKeys) {
             return agreementKeys(List.of(agreementKeys));
         }

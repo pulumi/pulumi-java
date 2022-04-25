@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainLogPublishingOption {
     /**
-     * ARN of the Cloudwatch log group to which log needs to be published.
+     * @return ARN of the Cloudwatch log group to which log needs to be published.
      * 
      */
     private final String cloudwatchLogGroupArn;
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
+     * @return Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
      * 
      */
     private final String logType;
@@ -39,23 +39,23 @@ public final class DomainLogPublishingOption {
     }
 
     /**
-     * ARN of the Cloudwatch log group to which log needs to be published.
+     * @return ARN of the Cloudwatch log group to which log needs to be published.
      * 
-    */
+     */
     public String cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
+     * @return Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
      * 
-    */
+     */
     public String logType() {
         return this.logType;
     }

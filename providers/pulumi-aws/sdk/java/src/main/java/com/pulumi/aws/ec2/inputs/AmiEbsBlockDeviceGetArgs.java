@@ -25,6 +25,11 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="deleteOnTermination")
     private @Nullable Output<Boolean> deleteOnTermination;
 
+    /**
+     * @return Boolean controlling whether the EBS volumes created to
+     * support each created instance will be deleted once that instance is terminated.
+     * 
+     */
     public Optional<Output<Boolean>> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
@@ -36,6 +41,10 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The path at which the device is exposed to created instances.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -47,6 +56,10 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="encrypted")
     private @Nullable Output<Boolean> encrypted;
 
+    /**
+     * @return Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+     * 
+     */
     public Optional<Output<Boolean>> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -59,6 +72,11 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="iops")
     private @Nullable Output<Integer> iops;
 
+    /**
+     * @return Number of I/O operations per second the
+     * created volumes will support.
+     * 
+     */
     public Optional<Output<Integer>> iops() {
         return Optional.ofNullable(this.iops);
     }
@@ -72,6 +90,12 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="snapshotId")
     private @Nullable Output<String> snapshotId;
 
+    /**
+     * @return The id of an EBS snapshot that will be used to initialize the created
+     * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
+     * snapshot.
+     * 
+     */
     public Optional<Output<String>> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
@@ -83,6 +107,10 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="throughput")
     private @Nullable Output<Integer> throughput;
 
+    /**
+     * @return The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+     * 
+     */
     public Optional<Output<Integer>> throughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -96,6 +124,12 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="volumeSize")
     private @Nullable Output<Integer> volumeSize;
 
+    /**
+     * @return The size of created volumes in GiB.
+     * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
+     * as the selected snapshot.
+     * 
+     */
     public Optional<Output<Integer>> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
@@ -107,6 +141,10 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
     @Import(name="volumeType")
     private @Nullable Output<String> volumeType;
 
+    /**
+     * @return The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
+     * 
+     */
     public Optional<Output<String>> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -142,74 +180,182 @@ public final class AmiEbsBlockDeviceGetArgs extends com.pulumi.resources.Resourc
             $ = new AmiEbsBlockDeviceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOnTermination Boolean controlling whether the EBS volumes created to
+         * support each created instance will be deleted once that instance is terminated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
             $.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
+        /**
+         * @param deleteOnTermination Boolean controlling whether the EBS volumes created to
+         * support each created instance will be deleted once that instance is terminated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
             return deleteOnTermination(Output.of(deleteOnTermination));
         }
 
+        /**
+         * @param deviceName The path at which the device is exposed to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The path at which the device is exposed to created instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param encrypted Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             $.encrypted = encrypted;
             return this;
         }
 
+        /**
+         * @param encrypted Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encrypted(Boolean encrypted) {
             return encrypted(Output.of(encrypted));
         }
 
+        /**
+         * @param iops Number of I/O operations per second the
+         * created volumes will support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param iops Number of I/O operations per second the
+         * created volumes will support.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
         }
 
+        /**
+         * @param snapshotId The id of an EBS snapshot that will be used to initialize the created
+         * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
+         * snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
         }
 
+        /**
+         * @param snapshotId The id of an EBS snapshot that will be used to initialize the created
+         * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
+         * snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotId(String snapshotId) {
             return snapshotId(Output.of(snapshotId));
         }
 
+        /**
+         * @param throughput The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(@Nullable Output<Integer> throughput) {
             $.throughput = throughput;
             return this;
         }
 
+        /**
+         * @param throughput The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughput(Integer throughput) {
             return throughput(Output.of(throughput));
         }
 
+        /**
+         * @param volumeSize The size of created volumes in GiB.
+         * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
+         * as the selected snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeSize The size of created volumes in GiB.
+         * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
+         * as the selected snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             return volumeSize(Output.of(volumeSize));
         }
 
+        /**
+         * @param volumeType The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(@Nullable Output<String> volumeType) {
             $.volumeType = volumeType;
             return this;
         }
 
+        /**
+         * @param volumeType The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             return volumeType(Output.of(volumeType));
         }

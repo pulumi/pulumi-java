@@ -24,6 +24,10 @@ public final class AS2ErrorSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resendIfMDNNotReceived", required=true)
     private Output<Boolean> resendIfMDNNotReceived;
 
+    /**
+     * @return The value indicating whether to resend message If MDN is not received.
+     * 
+     */
     public Output<Boolean> resendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
     }
@@ -35,6 +39,10 @@ public final class AS2ErrorSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="suspendDuplicateMessage", required=true)
     private Output<Boolean> suspendDuplicateMessage;
 
+    /**
+     * @return The value indicating whether to suspend duplicate message.
+     * 
+     */
     public Output<Boolean> suspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
     }
@@ -64,20 +72,44 @@ public final class AS2ErrorSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new AS2ErrorSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resendIfMDNNotReceived The value indicating whether to resend message If MDN is not received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resendIfMDNNotReceived(Output<Boolean> resendIfMDNNotReceived) {
             $.resendIfMDNNotReceived = resendIfMDNNotReceived;
             return this;
         }
 
+        /**
+         * @param resendIfMDNNotReceived The value indicating whether to resend message If MDN is not received.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
             return resendIfMDNNotReceived(Output.of(resendIfMDNNotReceived));
         }
 
+        /**
+         * @param suspendDuplicateMessage The value indicating whether to suspend duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendDuplicateMessage(Output<Boolean> suspendDuplicateMessage) {
             $.suspendDuplicateMessage = suspendDuplicateMessage;
             return this;
         }
 
+        /**
+         * @param suspendDuplicateMessage The value indicating whether to suspend duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
             return suspendDuplicateMessage(Output.of(suspendDuplicateMessage));
         }

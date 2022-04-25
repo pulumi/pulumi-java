@@ -20,82 +20,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrderItemDetailsResponse {
     /**
-     * Cancellation reason.
+     * @return Cancellation reason.
      * 
      */
     private final String cancellationReason;
     /**
-     * Describes whether the order item is cancellable or not.
+     * @return Describes whether the order item is cancellable or not.
      * 
      */
     private final String cancellationStatus;
     /**
-     * Current Order item Status
+     * @return Current Order item Status
      * 
      */
     private final StageDetailsResponse currentStage;
     /**
-     * Describes whether the order item is deletable or not.
+     * @return Describes whether the order item is deletable or not.
      * 
      */
     private final String deletionStatus;
     /**
-     * Top level error for the job.
+     * @return Top level error for the job.
      * 
      */
     private final ErrorDetailResponse error;
     /**
-     * Forward Package Shipping details
+     * @return Forward Package Shipping details
      * 
      */
     private final ForwardShippingDetailsResponse forwardShippingDetails;
     /**
-     * Parent RP details - this returns only the first or default parent RP from the entire list
+     * @return Parent RP details - this returns only the first or default parent RP from the entire list
      * 
      */
     private final ResourceProviderDetailsResponse managementRpDetails;
     /**
-     * List of parent RP details supported for configuration.
+     * @return List of parent RP details supported for configuration.
      * 
      */
     private final List<ResourceProviderDetailsResponse> managementRpDetailsList;
     /**
-     * Additional notification email list
+     * @return Additional notification email list
      * 
      */
     private final @Nullable List<String> notificationEmailList;
     /**
-     * Order item status history
+     * @return Order item status history
      * 
      */
     private final List<StageDetailsResponse> orderItemStageHistory;
     /**
-     * Order item type.
+     * @return Order item type.
      * 
      */
     private final String orderItemType;
     /**
-     * Customer notification Preferences
+     * @return Customer notification Preferences
      * 
      */
     private final @Nullable PreferencesResponse preferences;
     /**
-     * Unique identifier for configuration.
+     * @return Unique identifier for configuration.
      * 
      */
     private final ProductDetailsResponse productDetails;
     /**
-     * Return reason.
+     * @return Return reason.
      * 
      */
     private final String returnReason;
     /**
-     * Describes whether the order item is returnable or not.
+     * @return Describes whether the order item is returnable or not.
      * 
      */
     private final String returnStatus;
     /**
-     * Reverse Package Shipping details
+     * @return Reverse Package Shipping details
      * 
      */
     private final ReverseShippingDetailsResponse reverseShippingDetails;
@@ -137,114 +137,114 @@ public final class OrderItemDetailsResponse {
     }
 
     /**
-     * Cancellation reason.
+     * @return Cancellation reason.
      * 
-    */
+     */
     public String cancellationReason() {
         return this.cancellationReason;
     }
     /**
-     * Describes whether the order item is cancellable or not.
+     * @return Describes whether the order item is cancellable or not.
      * 
-    */
+     */
     public String cancellationStatus() {
         return this.cancellationStatus;
     }
     /**
-     * Current Order item Status
+     * @return Current Order item Status
      * 
-    */
+     */
     public StageDetailsResponse currentStage() {
         return this.currentStage;
     }
     /**
-     * Describes whether the order item is deletable or not.
+     * @return Describes whether the order item is deletable or not.
      * 
-    */
+     */
     public String deletionStatus() {
         return this.deletionStatus;
     }
     /**
-     * Top level error for the job.
+     * @return Top level error for the job.
      * 
-    */
+     */
     public ErrorDetailResponse error() {
         return this.error;
     }
     /**
-     * Forward Package Shipping details
+     * @return Forward Package Shipping details
      * 
-    */
+     */
     public ForwardShippingDetailsResponse forwardShippingDetails() {
         return this.forwardShippingDetails;
     }
     /**
-     * Parent RP details - this returns only the first or default parent RP from the entire list
+     * @return Parent RP details - this returns only the first or default parent RP from the entire list
      * 
-    */
+     */
     public ResourceProviderDetailsResponse managementRpDetails() {
         return this.managementRpDetails;
     }
     /**
-     * List of parent RP details supported for configuration.
+     * @return List of parent RP details supported for configuration.
      * 
-    */
+     */
     public List<ResourceProviderDetailsResponse> managementRpDetailsList() {
         return this.managementRpDetailsList;
     }
     /**
-     * Additional notification email list
+     * @return Additional notification email list
      * 
-    */
+     */
     public List<String> notificationEmailList() {
         return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
     }
     /**
-     * Order item status history
+     * @return Order item status history
      * 
-    */
+     */
     public List<StageDetailsResponse> orderItemStageHistory() {
         return this.orderItemStageHistory;
     }
     /**
-     * Order item type.
+     * @return Order item type.
      * 
-    */
+     */
     public String orderItemType() {
         return this.orderItemType;
     }
     /**
-     * Customer notification Preferences
+     * @return Customer notification Preferences
      * 
-    */
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
-     * Unique identifier for configuration.
+     * @return Unique identifier for configuration.
      * 
-    */
+     */
     public ProductDetailsResponse productDetails() {
         return this.productDetails;
     }
     /**
-     * Return reason.
+     * @return Return reason.
      * 
-    */
+     */
     public String returnReason() {
         return this.returnReason;
     }
     /**
-     * Describes whether the order item is returnable or not.
+     * @return Describes whether the order item is returnable or not.
      * 
-    */
+     */
     public String returnStatus() {
         return this.returnStatus;
     }
     /**
-     * Reverse Package Shipping details
+     * @return Reverse Package Shipping details
      * 
-    */
+     */
     public ReverseShippingDetailsResponse reverseShippingDetails() {
         return this.reverseShippingDetails;
     }

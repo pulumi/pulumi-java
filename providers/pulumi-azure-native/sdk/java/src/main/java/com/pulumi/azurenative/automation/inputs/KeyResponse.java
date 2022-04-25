@@ -23,6 +23,10 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Automation key name.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -34,6 +38,10 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
     private String permissions;
 
+    /**
+     * @return Automation key permissions.
+     * 
+     */
     public String permissions() {
         return this.permissions;
     }
@@ -45,6 +53,10 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the Automation Key used for registration.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -75,16 +87,34 @@ public final class KeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new KeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Automation key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param permissions Automation key permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param value Value of the Automation Key used for registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -24,6 +24,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationIp", required=true)
     private String destinationIp;
 
+    /**
+     * @return Destination IP address.
+     * 
+     */
     public String destinationIp() {
         return this.destinationIp;
     }
@@ -35,6 +39,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationNetworkUri", required=true)
     private String destinationNetworkUri;
 
+    /**
+     * @return URI of the network where this packet is sent to.
+     * 
+     */
     public String destinationNetworkUri() {
         return this.destinationNetworkUri;
     }
@@ -46,6 +54,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="destinationPort", required=true)
     private Integer destinationPort;
 
+    /**
+     * @return Destination port. Only valid when protocol is TCP or UDP.
+     * 
+     */
     public Integer destinationPort() {
         return this.destinationPort;
     }
@@ -57,6 +69,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -68,6 +84,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceIp", required=true)
     private String sourceIp;
 
+    /**
+     * @return Source IP address.
+     * 
+     */
     public String sourceIp() {
         return this.sourceIp;
     }
@@ -79,6 +99,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceNetworkUri", required=true)
     private String sourceNetworkUri;
 
+    /**
+     * @return URI of the network where this packet originates from.
+     * 
+     */
     public String sourceNetworkUri() {
         return this.sourceNetworkUri;
     }
@@ -90,6 +114,10 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourcePort", required=true)
     private Integer sourcePort;
 
+    /**
+     * @return Source port. Only valid when protocol is TCP or UDP.
+     * 
+     */
     public Integer sourcePort() {
         return this.sourcePort;
     }
@@ -124,36 +152,78 @@ public final class EndpointInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new EndpointInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationIp Destination IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationIp(String destinationIp) {
             $.destinationIp = destinationIp;
             return this;
         }
 
+        /**
+         * @param destinationNetworkUri URI of the network where this packet is sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationNetworkUri(String destinationNetworkUri) {
             $.destinationNetworkUri = destinationNetworkUri;
             return this;
         }
 
+        /**
+         * @param destinationPort Destination port. Only valid when protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Integer destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param protocol IP protocol in string format, for example: &#34;TCP&#34;, &#34;UDP&#34;, &#34;ICMP&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param sourceIp Source IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIp(String sourceIp) {
             $.sourceIp = sourceIp;
             return this;
         }
 
+        /**
+         * @param sourceNetworkUri URI of the network where this packet originates from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNetworkUri(String sourceNetworkUri) {
             $.sourceNetworkUri = sourceNetworkUri;
             return this;
         }
 
+        /**
+         * @param sourcePort Source port. Only valid when protocol is TCP or UDP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePort(Integer sourcePort) {
             $.sourcePort = sourcePort;
             return this;

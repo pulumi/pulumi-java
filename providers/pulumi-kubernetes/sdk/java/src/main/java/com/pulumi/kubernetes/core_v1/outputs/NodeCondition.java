@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeCondition {
     /**
-     * Last time we got an update on a given condition.
+     * @return Last time we got an update on a given condition.
      * 
      */
     private final @Nullable String lastHeartbeatTime;
     /**
-     * Last time the condition transit from one status to another.
+     * @return Last time the condition transit from one status to another.
      * 
      */
     private final @Nullable String lastTransitionTime;
     /**
-     * Human readable message indicating details about last transition.
+     * @return Human readable message indicating details about last transition.
      * 
      */
     private final @Nullable String message;
     /**
-     * (brief) reason for the condition&#39;s last transition.
+     * @return (brief) reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
      */
     private final String status;
     /**
-     * Type of node condition.
+     * @return Type of node condition.
      * 
      * Possible enum values:
      *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
@@ -66,42 +66,42 @@ public final class NodeCondition {
     }
 
     /**
-     * Last time we got an update on a given condition.
+     * @return Last time we got an update on a given condition.
      * 
-    */
+     */
     public Optional<String> lastHeartbeatTime() {
         return Optional.ofNullable(this.lastHeartbeatTime);
     }
     /**
-     * Last time the condition transit from one status to another.
+     * @return Last time the condition transit from one status to another.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * Human readable message indicating details about last transition.
+     * @return Human readable message indicating details about last transition.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason for the condition&#39;s last transition.
+     * @return (brief) reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type of node condition.
+     * @return Type of node condition.
      * 
      * Possible enum values:
      *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
@@ -110,7 +110,7 @@ public final class NodeCondition {
      *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
      *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

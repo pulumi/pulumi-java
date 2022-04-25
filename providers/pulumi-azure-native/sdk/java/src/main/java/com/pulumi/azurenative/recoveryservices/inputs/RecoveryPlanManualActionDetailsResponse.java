@@ -26,6 +26,10 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The manual action description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,11 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * Expected value is &#39;ManualActionDetails&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -67,11 +76,24 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
             $ = new RecoveryPlanManualActionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The manual action description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+         * Expected value is &#39;ManualActionDetails&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;

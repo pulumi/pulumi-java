@@ -25,6 +25,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
     @Import(name="authorizationQualifier", required=true)
     private String authorizationQualifier;
 
+    /**
+     * @return The authorization qualifier.
+     * 
+     */
     public String authorizationQualifier() {
         return this.authorizationQualifier;
     }
@@ -36,6 +40,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
     @Import(name="authorizationValue")
     private @Nullable String authorizationValue;
 
+    /**
+     * @return The authorization value.
+     * 
+     */
     public Optional<String> authorizationValue() {
         return Optional.ofNullable(this.authorizationValue);
     }
@@ -47,6 +55,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
     @Import(name="passwordValue")
     private @Nullable String passwordValue;
 
+    /**
+     * @return The password value.
+     * 
+     */
     public Optional<String> passwordValue() {
         return Optional.ofNullable(this.passwordValue);
     }
@@ -58,6 +70,10 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
     @Import(name="securityQualifier", required=true)
     private String securityQualifier;
 
+    /**
+     * @return The security qualifier.
+     * 
+     */
     public String securityQualifier() {
         return this.securityQualifier;
     }
@@ -89,21 +105,45 @@ public final class X12SecuritySettingsResponse extends com.pulumi.resources.Invo
             $ = new X12SecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationQualifier The authorization qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationQualifier(String authorizationQualifier) {
             $.authorizationQualifier = authorizationQualifier;
             return this;
         }
 
+        /**
+         * @param authorizationValue The authorization value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationValue(@Nullable String authorizationValue) {
             $.authorizationValue = authorizationValue;
             return this;
         }
 
+        /**
+         * @param passwordValue The password value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordValue(@Nullable String passwordValue) {
             $.passwordValue = passwordValue;
             return this;
         }
 
+        /**
+         * @param securityQualifier The security qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityQualifier(String securityQualifier) {
             $.securityQualifier = securityQualifier;
             return this;

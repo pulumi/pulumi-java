@@ -25,6 +25,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeleteOnIdle")
     private @Nullable Output<String> autoDeleteOnIdle;
 
+    /**
+     * @return ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+     * 
+     */
     public Optional<Output<String>> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
@@ -36,6 +40,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetteringOnFilterEvaluationExceptions")
     private @Nullable Output<Boolean> deadLetteringOnFilterEvaluationExceptions;
 
+    /**
+     * @return Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
+     * 
+     */
     public Optional<Output<Boolean>> deadLetteringOnFilterEvaluationExceptions() {
         return Optional.ofNullable(this.deadLetteringOnFilterEvaluationExceptions);
     }
@@ -47,6 +55,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetteringOnMessageExpiration")
     private @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
+    /**
+     * @return Value that indicates whether a subscription has dead letter support when a message expires.
+     * 
+     */
     public Optional<Output<Boolean>> deadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
@@ -58,6 +70,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMessageTimeToLive")
     private @Nullable Output<String> defaultMessageTimeToLive;
 
+    /**
+     * @return ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+     * 
+     */
     public Optional<Output<String>> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
@@ -69,6 +85,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="duplicateDetectionHistoryTimeWindow")
     private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
+    /**
+     * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+     * 
+     */
     public Optional<Output<String>> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
@@ -80,6 +100,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBatchedOperations")
     private @Nullable Output<Boolean> enableBatchedOperations;
 
+    /**
+     * @return Value that indicates whether server-side batched operations are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
@@ -91,6 +115,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardDeadLetteredMessagesTo")
     private @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
+    /**
+     * @return Queue/Topic name to forward the Dead Letter message
+     * 
+     */
     public Optional<Output<String>> forwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
@@ -102,6 +130,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardTo")
     private @Nullable Output<String> forwardTo;
 
+    /**
+     * @return Queue/Topic name to forward the messages
+     * 
+     */
     public Optional<Output<String>> forwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
@@ -113,6 +145,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lockDuration")
     private @Nullable Output<String> lockDuration;
 
+    /**
+     * @return ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
+     * 
+     */
     public Optional<Output<String>> lockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
@@ -124,6 +160,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDeliveryCount")
     private @Nullable Output<Integer> maxDeliveryCount;
 
+    /**
+     * @return Number of maximum deliveries.
+     * 
+     */
     public Optional<Output<Integer>> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
@@ -135,6 +175,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -146,6 +190,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresSession")
     private @Nullable Output<Boolean> requiresSession;
 
+    /**
+     * @return Value indicating if a subscription supports the concept of sessions.
+     * 
+     */
     public Optional<Output<Boolean>> requiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
@@ -157,6 +205,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -168,6 +220,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<EntityStatus> status;
 
+    /**
+     * @return Enumerates the possible values for the status of a messaging entity.
+     * 
+     */
     public Optional<Output<EntityStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -179,6 +235,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionName")
     private @Nullable Output<String> subscriptionName;
 
+    /**
+     * @return The subscription name.
+     * 
+     */
     public Optional<Output<String>> subscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }
@@ -190,6 +250,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
     private Output<String> topicName;
 
+    /**
+     * @return The topic name.
+     * 
+     */
     public Output<String> topicName() {
         return this.topicName;
     }
@@ -233,146 +297,338 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDeleteOnIdle ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteOnIdle(@Nullable Output<String> autoDeleteOnIdle) {
             $.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
+        /**
+         * @param autoDeleteOnIdle ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeleteOnIdle(String autoDeleteOnIdle) {
             return autoDeleteOnIdle(Output.of(autoDeleteOnIdle));
         }
 
+        /**
+         * @param deadLetteringOnFilterEvaluationExceptions Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Output<Boolean> deadLetteringOnFilterEvaluationExceptions) {
             $.deadLetteringOnFilterEvaluationExceptions = deadLetteringOnFilterEvaluationExceptions;
             return this;
         }
 
+        /**
+         * @param deadLetteringOnFilterEvaluationExceptions Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetteringOnFilterEvaluationExceptions(Boolean deadLetteringOnFilterEvaluationExceptions) {
             return deadLetteringOnFilterEvaluationExceptions(Output.of(deadLetteringOnFilterEvaluationExceptions));
         }
 
+        /**
+         * @param deadLetteringOnMessageExpiration Value that indicates whether a subscription has dead letter support when a message expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetteringOnMessageExpiration(@Nullable Output<Boolean> deadLetteringOnMessageExpiration) {
             $.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
 
+        /**
+         * @param deadLetteringOnMessageExpiration Value that indicates whether a subscription has dead letter support when a message expires.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetteringOnMessageExpiration(Boolean deadLetteringOnMessageExpiration) {
             return deadLetteringOnMessageExpiration(Output.of(deadLetteringOnMessageExpiration));
         }
 
+        /**
+         * @param defaultMessageTimeToLive ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
             $.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
+        /**
+         * @param defaultMessageTimeToLive ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMessageTimeToLive(String defaultMessageTimeToLive) {
             return defaultMessageTimeToLive(Output.of(defaultMessageTimeToLive));
         }
 
+        /**
+         * @param duplicateDetectionHistoryTimeWindow ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
             $.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
+        /**
+         * @param duplicateDetectionHistoryTimeWindow ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duplicateDetectionHistoryTimeWindow(String duplicateDetectionHistoryTimeWindow) {
             return duplicateDetectionHistoryTimeWindow(Output.of(duplicateDetectionHistoryTimeWindow));
         }
 
+        /**
+         * @param enableBatchedOperations Value that indicates whether server-side batched operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
             $.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
+        /**
+         * @param enableBatchedOperations Value that indicates whether server-side batched operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBatchedOperations(Boolean enableBatchedOperations) {
             return enableBatchedOperations(Output.of(enableBatchedOperations));
         }
 
+        /**
+         * @param forwardDeadLetteredMessagesTo Queue/Topic name to forward the Dead Letter message
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardDeadLetteredMessagesTo(@Nullable Output<String> forwardDeadLetteredMessagesTo) {
             $.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
 
+        /**
+         * @param forwardDeadLetteredMessagesTo Queue/Topic name to forward the Dead Letter message
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardDeadLetteredMessagesTo(String forwardDeadLetteredMessagesTo) {
             return forwardDeadLetteredMessagesTo(Output.of(forwardDeadLetteredMessagesTo));
         }
 
+        /**
+         * @param forwardTo Queue/Topic name to forward the messages
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardTo(@Nullable Output<String> forwardTo) {
             $.forwardTo = forwardTo;
             return this;
         }
 
+        /**
+         * @param forwardTo Queue/Topic name to forward the messages
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardTo(String forwardTo) {
             return forwardTo(Output.of(forwardTo));
         }
 
+        /**
+         * @param lockDuration ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockDuration(@Nullable Output<String> lockDuration) {
             $.lockDuration = lockDuration;
             return this;
         }
 
+        /**
+         * @param lockDuration ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockDuration(String lockDuration) {
             return lockDuration(Output.of(lockDuration));
         }
 
+        /**
+         * @param maxDeliveryCount Number of maximum deliveries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
+        /**
+         * @param maxDeliveryCount Number of maximum deliveries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(Integer maxDeliveryCount) {
             return maxDeliveryCount(Output.of(maxDeliveryCount));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param requiresSession Value indicating if a subscription supports the concept of sessions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresSession(@Nullable Output<Boolean> requiresSession) {
             $.requiresSession = requiresSession;
             return this;
         }
 
+        /**
+         * @param requiresSession Value indicating if a subscription supports the concept of sessions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresSession(Boolean requiresSession) {
             return requiresSession(Output.of(requiresSession));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of a messaging entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<EntityStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Enumerates the possible values for the status of a messaging entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(EntityStatus status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;
         }
 
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(String subscriptionName) {
             return subscriptionName(Output.of(subscriptionName));
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }

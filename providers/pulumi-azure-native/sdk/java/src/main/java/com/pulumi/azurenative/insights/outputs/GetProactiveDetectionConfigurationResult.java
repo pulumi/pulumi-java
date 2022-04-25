@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProactiveDetectionConfigurationResult {
     /**
-     * Custom email addresses for this rule notifications
+     * @return Custom email addresses for this rule notifications
      * 
      */
     private final @Nullable List<String> customEmails;
     /**
-     * A flag that indicates whether this rule is enabled by the user
+     * @return A flag that indicates whether this rule is enabled by the user
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The last time this rule was updated
+     * @return The last time this rule was updated
      * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
-     * The rule name
+     * @return The rule name
      * 
      */
     private final @Nullable String name;
     /**
-     * Static definitions of the ProactiveDetection configuration rule (same values for all components).
+     * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
      */
     private final @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions;
     /**
-     * A flag that indicated whether notifications on this rule should be sent to subscription owners
+     * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
      */
     private final @Nullable Boolean sendEmailsToSubscriptionOwners;
@@ -62,44 +62,44 @@ public final class GetProactiveDetectionConfigurationResult {
     }
 
     /**
-     * Custom email addresses for this rule notifications
+     * @return Custom email addresses for this rule notifications
      * 
-    */
+     */
     public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
-     * A flag that indicates whether this rule is enabled by the user
+     * @return A flag that indicates whether this rule is enabled by the user
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The last time this rule was updated
+     * @return The last time this rule was updated
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * The rule name
+     * @return The rule name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Static definitions of the ProactiveDetection configuration rule (same values for all components).
+     * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
-    */
+     */
     public Optional<ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions() {
         return Optional.ofNullable(this.ruleDefinitions);
     }
     /**
-     * A flag that indicated whether notifications on this rule should be sent to subscription owners
+     * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
-    */
+     */
     public Optional<Boolean> sendEmailsToSubscriptionOwners() {
         return Optional.ofNullable(this.sendEmailsToSubscriptionOwners);
     }

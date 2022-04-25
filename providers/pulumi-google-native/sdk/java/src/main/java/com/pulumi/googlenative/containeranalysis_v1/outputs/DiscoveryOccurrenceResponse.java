@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class DiscoveryOccurrenceResponse {
     /**
-     * The status of discovery for the resource.
+     * @return The status of discovery for the resource.
      * 
      */
     private final String analysisStatus;
     /**
-     * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+     * @return When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
      * 
      */
     private final StatusResponse analysisStatusError;
     /**
-     * Whether the resource is continuously analyzed.
+     * @return Whether the resource is continuously analyzed.
      * 
      */
     private final String continuousAnalysis;
     /**
-     * The CPE of the resource being scanned.
+     * @return The CPE of the resource being scanned.
      * 
      */
     private final String cpe;
     /**
-     * The last time this resource was scanned.
+     * @return The last time this resource was scanned.
      * 
      */
     private final String lastScanTime;
@@ -51,37 +51,37 @@ public final class DiscoveryOccurrenceResponse {
     }
 
     /**
-     * The status of discovery for the resource.
+     * @return The status of discovery for the resource.
      * 
-    */
+     */
     public String analysisStatus() {
         return this.analysisStatus;
     }
     /**
-     * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+     * @return When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
      * 
-    */
+     */
     public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
     }
     /**
-     * Whether the resource is continuously analyzed.
+     * @return Whether the resource is continuously analyzed.
      * 
-    */
+     */
     public String continuousAnalysis() {
         return this.continuousAnalysis;
     }
     /**
-     * The CPE of the resource being scanned.
+     * @return The CPE of the resource being scanned.
      * 
-    */
+     */
     public String cpe() {
         return this.cpe;
     }
     /**
-     * The last time this resource was scanned.
+     * @return The last time this resource was scanned.
      * 
-    */
+     */
     public String lastScanTime() {
         return this.lastScanTime;
     }

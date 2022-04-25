@@ -34,6 +34,17 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="assignment")
     private @Nullable Output<GuestPoliciesAssignmentGetArgs> assignment;
 
+    /**
+     * @return Specifies the VM instances that are assigned to this policy. This allows you to target sets
+     * or groups of VM instances by different parameters such as labels, names, OS, or zones.
+     * If left empty, all VM instances underneath this policy are targeted.
+     * At the same level in the resource hierarchy (that is within a project), the service prevents
+     * the creation of multiple policies that conflict with each other.
+     * For more information, see how the service
+     * [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<GuestPoliciesAssignmentGetArgs>> assignment() {
         return Optional.ofNullable(this.assignment);
     }
@@ -46,6 +57,11 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -57,6 +73,10 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the guest policy. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +88,10 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -84,6 +108,15 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="guestPolicyId")
     private @Nullable Output<String> guestPolicyId;
 
+    /**
+     * @return The logical name of the guest policy in the project with the following restrictions:
+     * * Must contain only lowercase letters, numbers, and hyphens.
+     * * Must start with a letter.
+     * * Must be between 1-63 characters.
+     * * Must end with a number or a letter.
+     * * Must be unique within the project.
+     * 
+     */
     public Optional<Output<String>> guestPolicyId() {
         return Optional.ofNullable(this.guestPolicyId);
     }
@@ -98,6 +131,13 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+     * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+     * This means that requests to create multiple recipes with the same name and version are rejected since they
+     * could potentially have conflicting assignments.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -112,6 +152,13 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="packageRepositories")
     private @Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
 
+    /**
+     * @return A list of package repositories to configure on the VM instance.
+     * This is done before any other configs are applied so they can use these repos.
+     * Package repositories are only configured if the corresponding package manager(s) are available.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GuestPoliciesPackageRepositoryGetArgs>>> packageRepositories() {
         return Optional.ofNullable(this.packageRepositories);
     }
@@ -124,6 +171,11 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="packages")
     private @Nullable Output<List<GuestPoliciesPackageGetArgs>> packages;
 
+    /**
+     * @return The software packages to be managed by this policy.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GuestPoliciesPackageGetArgs>>> packages() {
         return Optional.ofNullable(this.packages);
     }
@@ -136,6 +188,11 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -148,6 +205,11 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="recipes")
     private @Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes;
 
+    /**
+     * @return A list of Recipes to install on the VM instance.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<GuestPoliciesRecipeGetArgs>>> recipes() {
         return Optional.ofNullable(this.recipes);
     }
@@ -160,6 +222,11 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -198,113 +265,314 @@ public final class GuestPoliciesState extends com.pulumi.resources.ResourceArgs 
             $ = new GuestPoliciesState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignment Specifies the VM instances that are assigned to this policy. This allows you to target sets
+         * or groups of VM instances by different parameters such as labels, names, OS, or zones.
+         * If left empty, all VM instances underneath this policy are targeted.
+         * At the same level in the resource hierarchy (that is within a project), the service prevents
+         * the creation of multiple policies that conflict with each other.
+         * For more information, see how the service
+         * [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignment(@Nullable Output<GuestPoliciesAssignmentGetArgs> assignment) {
             $.assignment = assignment;
             return this;
         }
 
+        /**
+         * @param assignment Specifies the VM instances that are assigned to this policy. This allows you to target sets
+         * or groups of VM instances by different parameters such as labels, names, OS, or zones.
+         * If left empty, all VM instances underneath this policy are targeted.
+         * At the same level in the resource hierarchy (that is within a project), the service prevents
+         * the creation of multiple policies that conflict with each other.
+         * For more information, see how the service
+         * [handles assignment conflicts](https://cloud.google.com/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignment(GuestPoliciesAssignmentGetArgs assignment) {
             return assignment(Output.of(assignment));
         }
 
+        /**
+         * @param createTime Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+         * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+         * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description Description of the guest policy. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the guest policy. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param etag The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param guestPolicyId The logical name of the guest policy in the project with the following restrictions:
+         * * Must contain only lowercase letters, numbers, and hyphens.
+         * * Must start with a letter.
+         * * Must be between 1-63 characters.
+         * * Must end with a number or a letter.
+         * * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestPolicyId(@Nullable Output<String> guestPolicyId) {
             $.guestPolicyId = guestPolicyId;
             return this;
         }
 
+        /**
+         * @param guestPolicyId The logical name of the guest policy in the project with the following restrictions:
+         * * Must contain only lowercase letters, numbers, and hyphens.
+         * * Must start with a letter.
+         * * Must be between 1-63 characters.
+         * * Must end with a number or a letter.
+         * * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestPolicyId(String guestPolicyId) {
             return guestPolicyId(Output.of(guestPolicyId));
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+         * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+         * This means that requests to create multiple recipes with the same name and version are rejected since they
+         * could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
+         * Names are also used to identify resources which helps to determine whether guest policies have conflicts.
+         * This means that requests to create multiple recipes with the same name and version are rejected since they
+         * could potentially have conflicting assignments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance.
+         * This is done before any other configs are applied so they can use these repos.
+         * Package repositories are only configured if the corresponding package manager(s) are available.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(@Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories) {
             $.packageRepositories = packageRepositories;
             return this;
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance.
+         * This is done before any other configs are applied so they can use these repos.
+         * Package repositories are only configured if the corresponding package manager(s) are available.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(List<GuestPoliciesPackageRepositoryGetArgs> packageRepositories) {
             return packageRepositories(Output.of(packageRepositories));
         }
 
+        /**
+         * @param packageRepositories A list of package repositories to configure on the VM instance.
+         * This is done before any other configs are applied so they can use these repos.
+         * Package repositories are only configured if the corresponding package manager(s) are available.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageRepositories(GuestPoliciesPackageRepositoryGetArgs... packageRepositories) {
             return packageRepositories(List.of(packageRepositories));
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(@Nullable Output<List<GuestPoliciesPackageGetArgs>> packages) {
             $.packages = packages;
             return this;
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(List<GuestPoliciesPackageGetArgs> packages) {
             return packages(Output.of(packages));
         }
 
+        /**
+         * @param packages The software packages to be managed by this policy.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packages(GuestPoliciesPackageGetArgs... packages) {
             return packages(List.of(packages));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(@Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes) {
             $.recipes = recipes;
             return this;
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(List<GuestPoliciesRecipeGetArgs> recipes) {
             return recipes(Output.of(recipes));
         }
 
+        /**
+         * @param recipes A list of Recipes to install on the VM instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipes(GuestPoliciesRecipeGetArgs... recipes) {
             return recipes(List.of(recipes));
         }
 
+        /**
+         * @param updateTime Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+         * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+         * &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

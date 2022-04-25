@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CloudServiceExtensionPropertiesResponse {
     /**
-     * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
+     * @return Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
      * 
      */
     private final @Nullable Boolean autoUpgradeMinorVersion;
     /**
-     * Tag to force apply the provided public and protected settings.
+     * @return Tag to force apply the provided public and protected settings.
      * Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
      * If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
      * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
@@ -29,38 +29,38 @@ public final class CloudServiceExtensionPropertiesResponse {
      */
     private final @Nullable String forceUpdateTag;
     /**
-     * Protected settings for the extension which are encrypted before sent to the role instance.
+     * @return Protected settings for the extension which are encrypted before sent to the role instance.
      * 
      */
     private final @Nullable String protectedSettings;
     private final @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
      */
     private final @Nullable String publisher;
     /**
-     * Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
+     * @return Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
      * 
      */
     private final @Nullable List<String> rolesAppliedTo;
     /**
-     * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
+     * @return Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
      * 
      */
     private final @Nullable String settings;
     /**
-     * Specifies the type of the extension.
+     * @return Specifies the type of the extension.
      * 
      */
     private final @Nullable String type;
     /**
-     * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
+     * @return Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
      * 
      */
     private final @Nullable String typeHandlerVersion;
@@ -90,27 +90,27 @@ public final class CloudServiceExtensionPropertiesResponse {
     }
 
     /**
-     * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
+     * @return Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
      * 
-    */
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
-     * Tag to force apply the provided public and protected settings.
+     * @return Tag to force apply the provided public and protected settings.
      * Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
      * If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
      * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
      * it is up to handler implementation whether to re-run it or not
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * Protected settings for the extension which are encrypted before sent to the role instance.
+     * @return Protected settings for the extension which are encrypted before sent to the role instance.
      * 
-    */
+     */
     public Optional<String> protectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
@@ -118,44 +118,44 @@ public final class CloudServiceExtensionPropertiesResponse {
         return Optional.ofNullable(this.protectedSettingsFromKeyVault);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The name of the extension handler publisher.
+     * @return The name of the extension handler publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
+     * @return Optional list of roles to apply this extension. If property is not specified or &#39;*&#39; is specified, extension is applied to all roles in the cloud service.
      * 
-    */
+     */
     public List<String> rolesAppliedTo() {
         return this.rolesAppliedTo == null ? List.of() : this.rolesAppliedTo;
     }
     /**
-     * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
+     * @return Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
      * 
-    */
+     */
     public Optional<String> settings() {
         return Optional.ofNullable(this.settings);
     }
     /**
-     * Specifies the type of the extension.
+     * @return Specifies the type of the extension.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
+     * @return Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
      * 
-    */
+     */
     public Optional<String> typeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

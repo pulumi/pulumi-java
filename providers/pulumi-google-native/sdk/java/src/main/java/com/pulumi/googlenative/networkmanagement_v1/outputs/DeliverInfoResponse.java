@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DeliverInfoResponse {
     /**
-     * URI of the resource that the packet is delivered to.
+     * @return URI of the resource that the packet is delivered to.
      * 
      */
     private final String resourceUri;
     /**
-     * Target type where the packet is delivered to.
+     * @return Target type where the packet is delivered to.
      * 
      */
     private final String target;
@@ -29,16 +29,16 @@ public final class DeliverInfoResponse {
     }
 
     /**
-     * URI of the resource that the packet is delivered to.
+     * @return URI of the resource that the packet is delivered to.
      * 
-    */
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
     /**
-     * Target type where the packet is delivered to.
+     * @return Target type where the packet is delivered to.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

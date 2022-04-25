@@ -24,6 +24,11 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends com.pulumi.reso
     @Import(name="cpuCfsQuota")
     private @Nullable Output<Boolean> cpuCfsQuota;
 
+    /**
+     * @return If true, enables CPU CFS quota enforcement for
+     * containers that specify CPU limits.
+     * 
+     */
     public Optional<Output<Boolean>> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
@@ -38,6 +43,13 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends com.pulumi.reso
     @Import(name="cpuCfsQuotaPeriod")
     private @Nullable Output<String> cpuCfsQuotaPeriod;
 
+    /**
+     * @return The CPU CFS quota period value. Specified
+     * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+     * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
+     * &#34;h&#34;. The value must be a positive duration.
+     * 
+     */
     public Optional<Output<String>> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
@@ -51,6 +63,12 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends com.pulumi.reso
     @Import(name="cpuManagerPolicy", required=true)
     private Output<String> cpuManagerPolicy;
 
+    /**
+     * @return The CPU management policy on the node. See
+     * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+     * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
+     * 
+     */
     public Output<String> cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
@@ -81,29 +99,77 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends com.pulumi.reso
             $ = new ClusterNodeConfigKubeletConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpuCfsQuota If true, enables CPU CFS quota enforcement for
+         * containers that specify CPU limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
             $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuota If true, enables CPU CFS quota enforcement for
+         * containers that specify CPU limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
             return cpuCfsQuota(Output.of(cpuCfsQuota));
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod The CPU CFS quota period value. Specified
+         * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+         * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
+         * &#34;h&#34;. The value must be a positive duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
             $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
+        /**
+         * @param cpuCfsQuotaPeriod The CPU CFS quota period value. Specified
+         * as a sequence of decimal numbers, each with optional fraction and a unit suffix,
+         * such as `&#34;300ms&#34;`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;,
+         * &#34;h&#34;. The value must be a positive duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
             return cpuCfsQuotaPeriod(Output.of(cpuCfsQuotaPeriod));
         }
 
+        /**
+         * @param cpuManagerPolicy The CPU management policy on the node. See
+         * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+         * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(Output<String> cpuManagerPolicy) {
             $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
+        /**
+         * @param cpuManagerPolicy The CPU management policy on the node. See
+         * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
+         * One of `&#34;none&#34;` or `&#34;static&#34;`. Defaults to `none` when `kubelet_config` is unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             return cpuManagerPolicy(Output.of(cpuManagerPolicy));
         }

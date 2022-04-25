@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
     /**
-     * The BandwidthInMbps.
+     * @return The BandwidthInMbps.
      * 
      */
     private final @Nullable Integer bandwidthInMbps;
     /**
-     * The peering location.
+     * @return The peering location.
      * 
      */
     private final @Nullable String peeringLocation;
     /**
-     * The serviceProviderName.
+     * @return The serviceProviderName.
      * 
      */
     private final @Nullable String serviceProviderName;
@@ -39,23 +39,23 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
     }
 
     /**
-     * The BandwidthInMbps.
+     * @return The BandwidthInMbps.
      * 
-    */
+     */
     public Optional<Integer> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
     /**
-     * The peering location.
+     * @return The peering location.
      * 
-    */
+     */
     public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
-     * The serviceProviderName.
+     * @return The serviceProviderName.
      * 
-    */
+     */
     public Optional<String> serviceProviderName() {
         return Optional.ofNullable(this.serviceProviderName);
     }

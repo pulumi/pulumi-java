@@ -26,6 +26,10 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return Name of the IoT edge agent image.
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -37,6 +41,10 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageRepository")
     private @Nullable ImageRepositoryCredentialResponse imageRepository;
 
+    /**
+     * @return Image repository details.
+     * 
+     */
     public Optional<ImageRepositoryCredentialResponse> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
@@ -48,6 +56,10 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="tag", required=true)
     private String tag;
 
+    /**
+     * @return Image Tag.
+     * 
+     */
     public String tag() {
         return this.tag;
     }
@@ -78,16 +90,34 @@ public final class IoTEdgeAgentInfoResponse extends com.pulumi.resources.InvokeA
             $ = new IoTEdgeAgentInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageName Name of the IoT edge agent image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageRepository Image repository details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
             $.imageRepository = imageRepository;
             return this;
         }
 
+        /**
+         * @param tag Image Tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             $.tag = tag;
             return this;

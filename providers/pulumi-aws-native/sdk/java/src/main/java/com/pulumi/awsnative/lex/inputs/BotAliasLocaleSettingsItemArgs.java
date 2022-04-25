@@ -32,6 +32,10 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
     @Import(name="localeId", required=true)
     private Output<String> localeId;
 
+    /**
+     * @return A string used to identify the locale
+     * 
+     */
     public Output<String> localeId() {
         return this.localeId;
     }
@@ -70,11 +74,23 @@ public final class BotAliasLocaleSettingsItemArgs extends com.pulumi.resources.R
             return botAliasLocaleSetting(Output.of(botAliasLocaleSetting));
         }
 
+        /**
+         * @param localeId A string used to identify the locale
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeId(Output<String> localeId) {
             $.localeId = localeId;
             return this;
         }
 
+        /**
+         * @param localeId A string used to identify the locale
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeId(String localeId) {
             return localeId(Output.of(localeId));
         }

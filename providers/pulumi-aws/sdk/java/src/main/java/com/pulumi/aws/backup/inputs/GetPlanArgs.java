@@ -22,6 +22,10 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="planId", required=true)
     private String planId;
 
+    /**
+     * @return The backup plan ID.
+     * 
+     */
     public String planId() {
         return this.planId;
     }
@@ -33,6 +37,10 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Metadata that you can assign to help organize the plans you create.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetPlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planId The backup plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the plans you create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

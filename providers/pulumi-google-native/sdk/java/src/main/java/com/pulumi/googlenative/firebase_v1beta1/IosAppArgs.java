@@ -22,6 +22,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -33,6 +37,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appStoreId")
     private @Nullable Output<String> appStoreId;
 
+    /**
+     * @return The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
+     * 
+     */
     public Optional<Output<String>> appStoreId() {
         return Optional.ofNullable(this.appStoreId);
     }
@@ -44,6 +52,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
     private @Nullable Output<String> bundleId;
 
+    /**
+     * @return Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
+     * 
+     */
     public Optional<Output<String>> bundleId() {
         return Optional.ofNullable(this.bundleId);
     }
@@ -55,6 +67,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The user-assigned display name for the `IosApp`.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -66,6 +82,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,6 +97,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -88,6 +112,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="teamId")
     private @Nullable Output<String> teamId;
 
+    /**
+     * @return The Apple Developer Team ID associated with the App in the App Store.
+     * 
+     */
     public Optional<Output<String>> teamId() {
         return Optional.ofNullable(this.teamId);
     }
@@ -122,65 +150,149 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IosAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param appStoreId The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appStoreId(@Nullable Output<String> appStoreId) {
             $.appStoreId = appStoreId;
             return this;
         }
 
+        /**
+         * @param appStoreId The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appStoreId(String appStoreId) {
             return appStoreId(Output.of(appStoreId));
         }
 
+        /**
+         * @param bundleId Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
 
+        /**
+         * @param bundleId Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
+        /**
+         * @param displayName The user-assigned display name for the `IosApp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-assigned display name for the `IosApp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project&#39;s [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google&#39;s [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param teamId The Apple Developer Team ID associated with the App in the App Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teamId(@Nullable Output<String> teamId) {
             $.teamId = teamId;
             return this;
         }
 
+        /**
+         * @param teamId The Apple Developer Team ID associated with the App in the App Store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teamId(String teamId) {
             return teamId(Output.of(teamId));
         }

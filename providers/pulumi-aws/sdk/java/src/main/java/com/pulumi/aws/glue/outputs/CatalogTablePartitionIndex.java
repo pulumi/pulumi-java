@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CatalogTablePartitionIndex {
     /**
-     * Name of the partition index.
+     * @return Name of the partition index.
      * 
      */
     private final String indexName;
     private final @Nullable String indexStatus;
     /**
-     * Keys for the partition index.
+     * @return Keys for the partition index.
      * 
      */
     private final List<String> keys;
@@ -35,9 +35,9 @@ public final class CatalogTablePartitionIndex {
     }
 
     /**
-     * Name of the partition index.
+     * @return Name of the partition index.
      * 
-    */
+     */
     public String indexName() {
         return this.indexName;
     }
@@ -45,9 +45,9 @@ public final class CatalogTablePartitionIndex {
         return Optional.ofNullable(this.indexStatus);
     }
     /**
-     * Keys for the partition index.
+     * @return Keys for the partition index.
      * 
-    */
+     */
     public List<String> keys() {
         return this.keys;
     }

@@ -24,6 +24,10 @@ public final class ClusterMetricsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="hdfsMetrics", required=true)
     private Map<String,String> hdfsMetrics;
 
+    /**
+     * @return The HDFS metrics.
+     * 
+     */
     public Map<String,String> hdfsMetrics() {
         return this.hdfsMetrics;
     }
@@ -35,6 +39,10 @@ public final class ClusterMetricsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="yarnMetrics", required=true)
     private Map<String,String> yarnMetrics;
 
+    /**
+     * @return The YARN metrics.
+     * 
+     */
     public Map<String,String> yarnMetrics() {
         return this.yarnMetrics;
     }
@@ -64,11 +72,23 @@ public final class ClusterMetricsResponse extends com.pulumi.resources.InvokeArg
             $ = new ClusterMetricsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hdfsMetrics The HDFS metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hdfsMetrics(Map<String,String> hdfsMetrics) {
             $.hdfsMetrics = hdfsMetrics;
             return this;
         }
 
+        /**
+         * @param yarnMetrics The YARN metrics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnMetrics(Map<String,String> yarnMetrics) {
             $.yarnMetrics = yarnMetrics;
             return this;

@@ -29,6 +29,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
     @Import(name="maxDegreeOfParallelismPerJob")
     private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
+    /**
+     * @return The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+     * 
+     */
     public Optional<Output<Integer>> maxDegreeOfParallelismPerJob() {
         return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
@@ -40,6 +44,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
     @Import(name="minPriorityPerJob")
     private @Nullable Output<Integer> minPriorityPerJob;
 
+    /**
+     * @return The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
+     * 
+     */
     public Optional<Output<Integer>> minPriorityPerJob() {
         return Optional.ofNullable(this.minPriorityPerJob);
     }
@@ -51,6 +59,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name of the compute policy to create.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -62,6 +74,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return The AAD object identifier for the entity to create a policy for.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -73,6 +89,10 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
     @Import(name="objectType", required=true)
     private Output<Either<String,AADObjectType>> objectType;
 
+    /**
+     * @return The type of AAD object the object identifier refers to.
+     * 
+     */
     public Output<Either<String,AADObjectType>> objectType() {
         return this.objectType;
     }
@@ -105,55 +125,127 @@ public final class CreateComputePolicyWithAccountParametersArgs extends com.pulu
             $ = new CreateComputePolicyWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxDegreeOfParallelismPerJob The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
             $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
+        /**
+         * @param maxDegreeOfParallelismPerJob The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
             return maxDegreeOfParallelismPerJob(Output.of(maxDegreeOfParallelismPerJob));
         }
 
+        /**
+         * @param minPriorityPerJob The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
             $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
+        /**
+         * @param minPriorityPerJob The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             return minPriorityPerJob(Output.of(minPriorityPerJob));
         }
 
+        /**
+         * @param name The unique name of the compute policy to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name of the compute policy to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param objectId The AAD object identifier for the entity to create a policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The AAD object identifier for the entity to create a policy for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param objectType The type of AAD object the object identifier refers to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType The type of AAD object the object identifier refers to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Either<String,AADObjectType> objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param objectType The type of AAD object the object identifier refers to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Either.ofLeft(objectType));
         }
 
+        /**
+         * @param objectType The type of AAD object the object identifier refers to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(AADObjectType objectType) {
             return objectType(Either.ofRight(objectType));
         }

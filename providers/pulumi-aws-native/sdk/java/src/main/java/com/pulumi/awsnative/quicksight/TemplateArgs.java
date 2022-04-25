@@ -33,6 +33,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A display name for the template.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +48,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<TemplateResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -62,6 +70,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<TemplateTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<TemplateTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -83,6 +95,13 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionDescription")
     private @Nullable Output<String> versionDescription;
 
+    /**
+     * @return &lt;p&gt;A description of the current template version being created. This API operation creates the
+     * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
+     * 			version is created. Each version of the template maintains a description of the version
+     * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> versionDescription() {
         return Optional.ofNullable(this.versionDescription);
     }
@@ -126,24 +145,54 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             return awsAccountId(Output.of(awsAccountId));
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the template.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the template.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<TemplateResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<TemplateResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(TemplateResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
@@ -157,15 +206,33 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             return sourceEntity(Output.of(sourceEntity));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<TemplateTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<TemplateTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(TemplateTagArgs... tags) {
             return tags(List.of(tags));
         }
@@ -179,11 +246,29 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             return templateId(Output.of(templateId));
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description of the current template version being created. This API operation creates the
+         * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
+         * 			version is created. Each version of the template maintains a description of the version
+         * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
             $.versionDescription = versionDescription;
             return this;
         }
 
+        /**
+         * @param versionDescription &lt;p&gt;A description of the current template version being created. This API operation creates the
+         * 			first version of the template. Every time &lt;code&gt;UpdateTemplate&lt;/code&gt; is called, a new
+         * 			version is created. Each version of the template maintains a description of the version
+         * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionDescription(String versionDescription) {
             return versionDescription(Output.of(versionDescription));
         }

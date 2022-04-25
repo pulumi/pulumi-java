@@ -22,6 +22,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cert")
     private @Nullable Output<String> cert;
 
+    /**
+     * @return The actual certificate data for this client certificate.
+     * 
+     */
     public Optional<Output<String>> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -33,6 +37,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certSerialNumber")
     private @Nullable Output<String> certSerialNumber;
 
+    /**
+     * @return The serial number extracted from the certificate data.
+     * 
+     */
     public Optional<Output<String>> certSerialNumber() {
         return Optional.ofNullable(this.certSerialNumber);
     }
@@ -45,6 +53,11 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
     private @Nullable Output<String> commonName;
 
+    /**
+     * @return The common name to be used in the certificate to identify the
+     * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -57,6 +70,11 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return The time when the certificate was created in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -69,6 +87,11 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return The time when the certificate expires in RFC 3339 format,
+     * for example 2012-11-15T16:19:00.094Z.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -81,6 +104,11 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. Changing this
+     * forces a new resource to be created.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -92,6 +120,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
+    /**
+     * @return The private key associated with the client certificate.
+     * 
+     */
     public Optional<Output<String>> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
@@ -104,6 +136,11 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -115,6 +152,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverCaCert")
     private @Nullable Output<String> serverCaCert;
 
+    /**
+     * @return The CA cert of the server this client cert was generated from.
+     * 
+     */
     public Optional<Output<String>> serverCaCert() {
         return Optional.ofNullable(this.serverCaCert);
     }
@@ -126,6 +167,10 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sha1Fingerprint")
     private @Nullable Output<String> sha1Fingerprint;
 
+    /**
+     * @return The SHA1 Fingerprint of the certificate.
+     * 
+     */
     public Optional<Output<String>> sha1Fingerprint() {
         return Optional.ofNullable(this.sha1Fingerprint);
     }
@@ -163,92 +208,222 @@ public final class SslCertState extends com.pulumi.resources.ResourceArgs {
             $ = new SslCertState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert The actual certificate data for this client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable Output<String> cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cert The actual certificate data for this client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             return cert(Output.of(cert));
         }
 
+        /**
+         * @param certSerialNumber The serial number extracted from the certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
             $.certSerialNumber = certSerialNumber;
             return this;
         }
 
+        /**
+         * @param certSerialNumber The serial number extracted from the certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certSerialNumber(String certSerialNumber) {
             return certSerialNumber(Output.of(certSerialNumber));
         }
 
+        /**
+         * @param commonName The common name to be used in the certificate to identify the
+         * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable Output<String> commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param commonName The common name to be used in the certificate to identify the
+         * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             return commonName(Output.of(commonName));
         }
 
+        /**
+         * @param createTime The time when the certificate was created in RFC 3339 format,
+         * for example 2012-11-15T16:19:00.094Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime The time when the certificate was created in RFC 3339 format,
+         * for example 2012-11-15T16:19:00.094Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param expirationTime The time when the certificate expires in RFC 3339 format,
+         * for example 2012-11-15T16:19:00.094Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime The time when the certificate expires in RFC 3339 format,
+         * for example 2012-11-15T16:19:00.094Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. Changing this
+         * forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The name of the Cloud SQL instance. Changing this
+         * forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
 
+        /**
+         * @param privateKey The private key associated with the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(@Nullable Output<String> privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKey The private key associated with the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             return privateKey(Output.of(privateKey));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serverCaCert The CA cert of the server this client cert was generated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCaCert(@Nullable Output<String> serverCaCert) {
             $.serverCaCert = serverCaCert;
             return this;
         }
 
+        /**
+         * @param serverCaCert The CA cert of the server this client cert was generated from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCaCert(String serverCaCert) {
             return serverCaCert(Output.of(serverCaCert));
         }
 
+        /**
+         * @param sha1Fingerprint The SHA1 Fingerprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
+        /**
+         * @param sha1Fingerprint The SHA1 Fingerprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sha1Fingerprint(String sha1Fingerprint) {
             return sha1Fingerprint(Output.of(sha1Fingerprint));
         }

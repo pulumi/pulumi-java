@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class TagTemplateFieldTypeEnumTypeAllowedValue {
     /**
-     * The display name for this template.
+     * @return The display name for this template.
      * 
      */
     private final String displayName;
@@ -21,9 +21,9 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
     }
 
     /**
-     * The display name for this template.
+     * @return The display name for this template.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }

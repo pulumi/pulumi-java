@@ -26,6 +26,11 @@ public final class AzureResourceDetailsArgs extends com.pulumi.resources.Resourc
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The platform where the assessed resource resides
+     * Expected value is &#39;Azure&#39;.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -54,11 +59,25 @@ public final class AzureResourceDetailsArgs extends com.pulumi.resources.Resourc
             $ = new AzureResourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The platform where the assessed resource resides
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The platform where the assessed resource resides
+         * Expected value is &#39;Azure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

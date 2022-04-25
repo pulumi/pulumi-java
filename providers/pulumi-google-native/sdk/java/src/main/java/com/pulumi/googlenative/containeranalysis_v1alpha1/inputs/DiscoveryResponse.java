@@ -23,6 +23,10 @@ public final class DiscoveryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="analysisKind", required=true)
     private String analysisKind;
 
+    /**
+     * @return The kind of analysis that is handled by this discovery.
+     * 
+     */
     public String analysisKind() {
         return this.analysisKind;
     }
@@ -51,6 +55,12 @@ public final class DiscoveryResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiscoveryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analysisKind The kind of analysis that is handled by this discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analysisKind(String analysisKind) {
             $.analysisKind = analysisKind;
             return this;

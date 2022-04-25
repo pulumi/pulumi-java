@@ -28,6 +28,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
+    /**
+     * @return List of destination endpoint names.
+     * 
+     */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
@@ -39,6 +43,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
     @Import(name="disable")
     private @Nullable Output<Boolean> disable;
 
+    /**
+     * @return Value indicating whether test group is disabled.
+     * 
+     */
     public Optional<Output<Boolean>> disable() {
         return Optional.ofNullable(this.disable);
     }
@@ -50,6 +58,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the connection monitor test group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -61,6 +73,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
     @Import(name="sources", required=true)
     private Output<List<String>> sources;
 
+    /**
+     * @return List of source endpoint names.
+     * 
+     */
     public Output<List<String>> sources() {
         return this.sources;
     }
@@ -72,6 +88,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
     @Import(name="testConfigurations", required=true)
     private Output<List<String>> testConfigurations;
 
+    /**
+     * @return List of test configuration names.
+     * 
+     */
     public Output<List<String>> testConfigurations() {
         return this.testConfigurations;
     }
@@ -104,59 +124,137 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
             $ = new ConnectionMonitorTestGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of destination endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of destination endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations List of destination endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param disable Value indicating whether test group is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disable(@Nullable Output<Boolean> disable) {
             $.disable = disable;
             return this;
         }
 
+        /**
+         * @param disable Value indicating whether test group is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disable(Boolean disable) {
             return disable(Output.of(disable));
         }
 
+        /**
+         * @param name The name of the connection monitor test group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the connection monitor test group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sources List of source endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(Output<List<String>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources List of source endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<String> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources List of source endpoint names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(String... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param testConfigurations List of test configuration names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(Output<List<String>> testConfigurations) {
             $.testConfigurations = testConfigurations;
             return this;
         }
 
+        /**
+         * @param testConfigurations List of test configuration names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(List<String> testConfigurations) {
             return testConfigurations(Output.of(testConfigurations));
         }
 
+        /**
+         * @param testConfigurations List of test configuration names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testConfigurations(String... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
         }

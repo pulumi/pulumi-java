@@ -21,6 +21,11 @@ public final class PatchDeploymentOneTimeScheduleGetArgs extends com.pulumi.reso
     @Import(name="executeTime", required=true)
     private Output<String> executeTime;
 
+    /**
+     * @return The desired patch job execution time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Output<String> executeTime() {
         return this.executeTime;
     }
@@ -49,11 +54,25 @@ public final class PatchDeploymentOneTimeScheduleGetArgs extends com.pulumi.reso
             $ = new PatchDeploymentOneTimeScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executeTime The desired patch job execution time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeTime(Output<String> executeTime) {
             $.executeTime = executeTime;
             return this;
         }
 
+        /**
+         * @param executeTime The desired patch job execution time. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executeTime(String executeTime) {
             return executeTime(Output.of(executeTime));
         }

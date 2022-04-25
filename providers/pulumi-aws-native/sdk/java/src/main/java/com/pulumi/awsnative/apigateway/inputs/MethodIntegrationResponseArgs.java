@@ -24,6 +24,10 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
     @Import(name="contentHandling")
     private @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
 
+    /**
+     * @return Specifies how to handle request payload content type conversions.
+     * 
+     */
     public Optional<Output<MethodIntegrationResponseContentHandling>> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
@@ -35,6 +39,10 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
     @Import(name="responseParameters")
     private @Nullable Output<Object> responseParameters;
 
+    /**
+     * @return The response parameters from the backend response that API Gateway sends to the method response.
+     * 
+     */
     public Optional<Output<Object>> responseParameters() {
         return Optional.ofNullable(this.responseParameters);
     }
@@ -46,6 +54,10 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
     @Import(name="responseTemplates")
     private @Nullable Output<Object> responseTemplates;
 
+    /**
+     * @return The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+     * 
+     */
     public Optional<Output<Object>> responseTemplates() {
         return Optional.ofNullable(this.responseTemplates);
     }
@@ -57,6 +69,10 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
     @Import(name="selectionPattern")
     private @Nullable Output<String> selectionPattern;
 
+    /**
+     * @return A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+     * 
+     */
     public Optional<Output<String>> selectionPattern() {
         return Optional.ofNullable(this.selectionPattern);
     }
@@ -68,6 +84,10 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
     @Import(name="statusCode", required=true)
     private Output<String> statusCode;
 
+    /**
+     * @return The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+     * 
+     */
     public Output<String> statusCode() {
         return this.statusCode;
     }
@@ -100,47 +120,107 @@ public final class MethodIntegrationResponseArgs extends com.pulumi.resources.Re
             $ = new MethodIntegrationResponseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHandling Specifies how to handle request payload content type conversions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHandling(@Nullable Output<MethodIntegrationResponseContentHandling> contentHandling) {
             $.contentHandling = contentHandling;
             return this;
         }
 
+        /**
+         * @param contentHandling Specifies how to handle request payload content type conversions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHandling(MethodIntegrationResponseContentHandling contentHandling) {
             return contentHandling(Output.of(contentHandling));
         }
 
+        /**
+         * @param responseParameters The response parameters from the backend response that API Gateway sends to the method response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
             $.responseParameters = responseParameters;
             return this;
         }
 
+        /**
+         * @param responseParameters The response parameters from the backend response that API Gateway sends to the method response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseParameters(Object responseParameters) {
             return responseParameters(Output.of(responseParameters));
         }
 
+        /**
+         * @param responseTemplates The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplates(@Nullable Output<Object> responseTemplates) {
             $.responseTemplates = responseTemplates;
             return this;
         }
 
+        /**
+         * @param responseTemplates The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplates(Object responseTemplates) {
             return responseTemplates(Output.of(responseTemplates));
         }
 
+        /**
+         * @param selectionPattern A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
             $.selectionPattern = selectionPattern;
             return this;
         }
 
+        /**
+         * @param selectionPattern A regular expression that specifies which error strings or status codes from the backend map to the integration response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionPattern(String selectionPattern) {
             return selectionPattern(Output.of(selectionPattern));
         }
 
+        /**
+         * @param statusCode The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode The status code that API Gateway uses to map the integration response to a MethodResponse status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

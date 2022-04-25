@@ -25,6 +25,10 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return Email of author contact
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -36,6 +40,10 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="link")
     private @Nullable String link;
 
+    /**
+     * @return Link for author/vendor page
+     * 
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
@@ -47,6 +55,10 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the author. Company or person.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,16 +89,34 @@ public final class MetadataAuthorResponse extends com.pulumi.resources.InvokeArg
             $ = new MetadataAuthorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email of author contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param link Link for author/vendor page
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable String link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param name Name of the author. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

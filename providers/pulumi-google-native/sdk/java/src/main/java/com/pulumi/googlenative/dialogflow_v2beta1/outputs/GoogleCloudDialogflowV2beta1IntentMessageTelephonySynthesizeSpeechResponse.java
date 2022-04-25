@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse {
     /**
-     * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * @return The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
      * 
      */
     private final String ssml;
     /**
-     * The raw text to be synthesized.
+     * @return The raw text to be synthesized.
      * 
      */
     private final String text;
@@ -29,16 +29,16 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     }
 
     /**
-     * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
+     * @return The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
      * 
-    */
+     */
     public String ssml() {
         return this.ssml;
     }
     /**
-     * The raw text to be synthesized.
+     * @return The raw text to be synthesized.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }

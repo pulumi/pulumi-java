@@ -27,6 +27,10 @@ public final class VolumePropertiesExportPolicyArgs extends com.pulumi.resources
     @Import(name="rules")
     private @Nullable Output<List<ExportPolicyRuleArgs>> rules;
 
+    /**
+     * @return Export policy rule
+     * 
+     */
     public Optional<Output<List<ExportPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -55,15 +59,33 @@ public final class VolumePropertiesExportPolicyArgs extends com.pulumi.resources
             $ = new VolumePropertiesExportPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param rules Export policy rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<ExportPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Export policy rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ExportPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Export policy rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ExportPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }

@@ -27,6 +27,10 @@ public final class ConnectionMonitorEndpointFilterResponse extends com.pulumi.re
     @Import(name="items")
     private @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
 
+    /**
+     * @return List of items in the filter.
+     * 
+     */
     public Optional<List<ConnectionMonitorEndpointFilterItemResponse>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorEndpointFilterResponse extends com.pulumi.re
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -67,15 +75,33 @@ public final class ConnectionMonitorEndpointFilterResponse extends com.pulumi.re
             $ = new ConnectionMonitorEndpointFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items List of items in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items List of items in the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(ConnectionMonitorEndpointFilterItemResponse... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param type The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

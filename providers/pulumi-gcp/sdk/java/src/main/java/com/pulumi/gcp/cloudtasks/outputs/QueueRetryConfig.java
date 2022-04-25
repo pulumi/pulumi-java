@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QueueRetryConfig {
     /**
-     * Number of attempts per task.
+     * @return Number of attempts per task.
      * Cloud Tasks will attempt the task maxAttempts times (that is, if
      * the first attempt fails, then there will be maxAttempts - 1
      * retries). Must be &gt;= -1.
@@ -24,14 +24,14 @@ public final class QueueRetryConfig {
      */
     private final @Nullable Integer maxAttempts;
     /**
-     * A task will be scheduled for retry between minBackoff and
+     * @return A task will be scheduled for retry between minBackoff and
      * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
      */
     private final @Nullable String maxBackoff;
     /**
-     * The time between retries will double maxDoublings times.
+     * @return The time between retries will double maxDoublings times.
      * A task&#39;s retry interval starts at minBackoff, then doubles maxDoublings times,
      * then increases linearly, and finally retries retries at intervals of maxBackoff
      * up to maxAttempts times.
@@ -39,7 +39,7 @@ public final class QueueRetryConfig {
      */
     private final @Nullable Integer maxDoublings;
     /**
-     * If positive, maxRetryDuration specifies the time limit for
+     * @return If positive, maxRetryDuration specifies the time limit for
      * retrying a failed task, measured from when the task was first
      * attempted. Once maxRetryDuration time has passed and the task has
      * been attempted maxAttempts times, no further attempts will be
@@ -49,7 +49,7 @@ public final class QueueRetryConfig {
      */
     private final @Nullable String maxRetryDuration;
     /**
-     * A task will be scheduled for retry between minBackoff and
+     * @return A task will be scheduled for retry between minBackoff and
      * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
@@ -71,7 +71,7 @@ public final class QueueRetryConfig {
     }
 
     /**
-     * Number of attempts per task.
+     * @return Number of attempts per task.
      * Cloud Tasks will attempt the task maxAttempts times (that is, if
      * the first attempt fails, then there will be maxAttempts - 1
      * retries). Must be &gt;= -1.
@@ -79,47 +79,47 @@ public final class QueueRetryConfig {
      * the default.
      * -1 indicates unlimited attempts.
      * 
-    */
+     */
     public Optional<Integer> maxAttempts() {
         return Optional.ofNullable(this.maxAttempts);
     }
     /**
-     * A task will be scheduled for retry between minBackoff and
+     * @return A task will be scheduled for retry between minBackoff and
      * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
-    */
+     */
     public Optional<String> maxBackoff() {
         return Optional.ofNullable(this.maxBackoff);
     }
     /**
-     * The time between retries will double maxDoublings times.
+     * @return The time between retries will double maxDoublings times.
      * A task&#39;s retry interval starts at minBackoff, then doubles maxDoublings times,
      * then increases linearly, and finally retries retries at intervals of maxBackoff
      * up to maxAttempts times.
      * 
-    */
+     */
     public Optional<Integer> maxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
     /**
-     * If positive, maxRetryDuration specifies the time limit for
+     * @return If positive, maxRetryDuration specifies the time limit for
      * retrying a failed task, measured from when the task was first
      * attempted. Once maxRetryDuration time has passed and the task has
      * been attempted maxAttempts times, no further attempts will be
      * made and the task will be deleted.
      * If zero, then the task age is unlimited.
      * 
-    */
+     */
     public Optional<String> maxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
     /**
-     * A task will be scheduled for retry between minBackoff and
+     * @return A task will be scheduled for retry between minBackoff and
      * maxBackoff duration after it fails, if the queue&#39;s RetryConfig
      * specifies that the task should be retried.
      * 
-    */
+     */
     public Optional<String> minBackoff() {
         return Optional.ofNullable(this.minBackoff);
     }

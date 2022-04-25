@@ -31,6 +31,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateBytesInKB")
     private @Nullable Output<Integer> privateBytesInKB;
 
+    /**
+     * @return A rule based on private bytes.
+     * 
+     */
     public Optional<Output<Integer>> privateBytesInKB() {
         return Optional.ofNullable(this.privateBytesInKB);
     }
@@ -42,6 +46,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requests")
     private @Nullable Output<RequestsBasedTriggerArgs> requests;
 
+    /**
+     * @return A rule based on total requests.
+     * 
+     */
     public Optional<Output<RequestsBasedTriggerArgs>> requests() {
         return Optional.ofNullable(this.requests);
     }
@@ -53,6 +61,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="slowRequests")
     private @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
 
+    /**
+     * @return A rule based on request execution time.
+     * 
+     */
     public Optional<Output<SlowRequestsBasedTriggerArgs>> slowRequests() {
         return Optional.ofNullable(this.slowRequests);
     }
@@ -64,6 +76,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="slowRequestsWithPath")
     private @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
+    /**
+     * @return A rule based on multiple Slow Requests Rule with path
+     * 
+     */
     public Optional<Output<List<SlowRequestsBasedTriggerArgs>>> slowRequestsWithPath() {
         return Optional.ofNullable(this.slowRequestsWithPath);
     }
@@ -75,6 +91,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="statusCodes")
     private @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
+    /**
+     * @return A rule based on status codes.
+     * 
+     */
     public Optional<Output<List<StatusCodesBasedTriggerArgs>>> statusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
@@ -86,6 +106,10 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="statusCodesRange")
     private @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
+    /**
+     * @return A rule based on status codes ranges.
+     * 
+     */
     public Optional<Output<List<StatusCodesRangeBasedTriggerArgs>>> statusCodesRange() {
         return Optional.ofNullable(this.statusCodesRange);
     }
@@ -119,68 +143,158 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
             $ = new AutoHealTriggersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateBytesInKB A rule based on private bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateBytesInKB(@Nullable Output<Integer> privateBytesInKB) {
             $.privateBytesInKB = privateBytesInKB;
             return this;
         }
 
+        /**
+         * @param privateBytesInKB A rule based on private bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateBytesInKB(Integer privateBytesInKB) {
             return privateBytesInKB(Output.of(privateBytesInKB));
         }
 
+        /**
+         * @param requests A rule based on total requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(@Nullable Output<RequestsBasedTriggerArgs> requests) {
             $.requests = requests;
             return this;
         }
 
+        /**
+         * @param requests A rule based on total requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(RequestsBasedTriggerArgs requests) {
             return requests(Output.of(requests));
         }
 
+        /**
+         * @param slowRequests A rule based on request execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slowRequests(@Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests) {
             $.slowRequests = slowRequests;
             return this;
         }
 
+        /**
+         * @param slowRequests A rule based on request execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slowRequests(SlowRequestsBasedTriggerArgs slowRequests) {
             return slowRequests(Output.of(slowRequests));
         }
 
+        /**
+         * @param slowRequestsWithPath A rule based on multiple Slow Requests Rule with path
+         * 
+         * @return builder
+         * 
+         */
         public Builder slowRequestsWithPath(@Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
             $.slowRequestsWithPath = slowRequestsWithPath;
             return this;
         }
 
+        /**
+         * @param slowRequestsWithPath A rule based on multiple Slow Requests Rule with path
+         * 
+         * @return builder
+         * 
+         */
         public Builder slowRequestsWithPath(List<SlowRequestsBasedTriggerArgs> slowRequestsWithPath) {
             return slowRequestsWithPath(Output.of(slowRequestsWithPath));
         }
 
+        /**
+         * @param slowRequestsWithPath A rule based on multiple Slow Requests Rule with path
+         * 
+         * @return builder
+         * 
+         */
         public Builder slowRequestsWithPath(SlowRequestsBasedTriggerArgs... slowRequestsWithPath) {
             return slowRequestsWithPath(List.of(slowRequestsWithPath));
         }
 
+        /**
+         * @param statusCodes A rule based on status codes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(@Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes) {
             $.statusCodes = statusCodes;
             return this;
         }
 
+        /**
+         * @param statusCodes A rule based on status codes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(List<StatusCodesBasedTriggerArgs> statusCodes) {
             return statusCodes(Output.of(statusCodes));
         }
 
+        /**
+         * @param statusCodes A rule based on status codes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodes(StatusCodesBasedTriggerArgs... statusCodes) {
             return statusCodes(List.of(statusCodes));
         }
 
+        /**
+         * @param statusCodesRange A rule based on status codes ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodesRange(@Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
             $.statusCodesRange = statusCodesRange;
             return this;
         }
 
+        /**
+         * @param statusCodesRange A rule based on status codes ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodesRange(List<StatusCodesRangeBasedTriggerArgs> statusCodesRange) {
             return statusCodesRange(Output.of(statusCodesRange));
         }
 
+        /**
+         * @param statusCodesRange A rule based on status codes ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCodesRange(StatusCodesRangeBasedTriggerArgs... statusCodesRange) {
             return statusCodesRange(List.of(statusCodesRange));
         }

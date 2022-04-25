@@ -27,6 +27,10 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
     @Import(name="algorithm", required=true)
     private Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
 
+    /**
+     * @return Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+     * 
+     */
     public Output<CryptoKeyVersionTemplateAlgorithm> algorithm() {
         return this.algorithm;
     }
@@ -38,6 +42,10 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
     @Import(name="protectionLevel")
     private @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
+    /**
+     * @return ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+     * 
+     */
     public Optional<Output<CryptoKeyVersionTemplateProtectionLevel>> protectionLevel() {
         return Optional.ofNullable(this.protectionLevel);
     }
@@ -67,20 +75,44 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
             $ = new CryptoKeyVersionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<CryptoKeyVersionTemplateAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(CryptoKeyVersionTemplateAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param protectionLevel ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(@Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
             $.protectionLevel = protectionLevel;
             return this;
         }
 
+        /**
+         * @param protectionLevel ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
             return protectionLevel(Output.of(protectionLevel));
         }

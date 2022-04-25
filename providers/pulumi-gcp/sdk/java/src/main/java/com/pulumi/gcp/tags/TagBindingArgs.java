@@ -20,6 +20,10 @@ public final class TagBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -31,6 +35,10 @@ public final class TagBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagValue", required=true)
     private Output<String> tagValue;
 
+    /**
+     * @return The TagValue of the TagBinding. Must be of the form tagValues/456.
+     * 
+     */
     public Output<String> tagValue() {
         return this.tagValue;
     }
@@ -60,20 +68,44 @@ public final class TagBindingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parent The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param tagValue The TagValue of the TagBinding. Must be of the form tagValues/456.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(Output<String> tagValue) {
             $.tagValue = tagValue;
             return this;
         }
 
+        /**
+         * @param tagValue The TagValue of the TagBinding. Must be of the form tagValues/456.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagValue(String tagValue) {
             return tagValue(Output.of(tagValue));
         }

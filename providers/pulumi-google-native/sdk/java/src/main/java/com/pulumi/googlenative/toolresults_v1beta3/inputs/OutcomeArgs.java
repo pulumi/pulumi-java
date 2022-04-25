@@ -30,6 +30,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureDetail")
     private @Nullable Output<FailureDetailArgs> failureDetail;
 
+    /**
+     * @return More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+     * 
+     */
     public Optional<Output<FailureDetailArgs>> failureDetail() {
         return Optional.ofNullable(this.failureDetail);
     }
@@ -41,6 +45,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inconclusiveDetail")
     private @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
 
+    /**
+     * @return More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+     * 
+     */
     public Optional<Output<InconclusiveDetailArgs>> inconclusiveDetail() {
         return Optional.ofNullable(this.inconclusiveDetail);
     }
@@ -52,6 +60,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skippedDetail")
     private @Nullable Output<SkippedDetailArgs> skippedDetail;
 
+    /**
+     * @return More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+     * 
+     */
     public Optional<Output<SkippedDetailArgs>> skippedDetail() {
         return Optional.ofNullable(this.skippedDetail);
     }
@@ -63,6 +75,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successDetail")
     private @Nullable Output<SuccessDetailArgs> successDetail;
 
+    /**
+     * @return More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+     * 
+     */
     public Optional<Output<SuccessDetailArgs>> successDetail() {
         return Optional.ofNullable(this.successDetail);
     }
@@ -74,6 +90,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="summary")
     private @Nullable Output<OutcomeSummary> summary;
 
+    /**
+     * @return The simplest way to interpret a result. Required
+     * 
+     */
     public Optional<Output<OutcomeSummary>> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -106,47 +126,107 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutcomeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureDetail More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureDetail(@Nullable Output<FailureDetailArgs> failureDetail) {
             $.failureDetail = failureDetail;
             return this;
         }
 
+        /**
+         * @param failureDetail More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureDetail(FailureDetailArgs failureDetail) {
             return failureDetail(Output.of(failureDetail));
         }
 
+        /**
+         * @param inconclusiveDetail More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder inconclusiveDetail(@Nullable Output<InconclusiveDetailArgs> inconclusiveDetail) {
             $.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
 
+        /**
+         * @param inconclusiveDetail More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder inconclusiveDetail(InconclusiveDetailArgs inconclusiveDetail) {
             return inconclusiveDetail(Output.of(inconclusiveDetail));
         }
 
+        /**
+         * @param skippedDetail More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder skippedDetail(@Nullable Output<SkippedDetailArgs> skippedDetail) {
             $.skippedDetail = skippedDetail;
             return this;
         }
 
+        /**
+         * @param skippedDetail More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder skippedDetail(SkippedDetailArgs skippedDetail) {
             return skippedDetail(Output.of(skippedDetail));
         }
 
+        /**
+         * @param successDetail More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder successDetail(@Nullable Output<SuccessDetailArgs> successDetail) {
             $.successDetail = successDetail;
             return this;
         }
 
+        /**
+         * @param successDetail More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder successDetail(SuccessDetailArgs successDetail) {
             return successDetail(Output.of(successDetail));
         }
 
+        /**
+         * @param summary The simplest way to interpret a result. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(@Nullable Output<OutcomeSummary> summary) {
             $.summary = summary;
             return this;
         }
 
+        /**
+         * @param summary The simplest way to interpret a result. Required
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(OutcomeSummary summary) {
             return summary(Output.of(summary));
         }

@@ -11,23 +11,23 @@ import java.util.Objects;
 @CustomType
 public final class GetLocationResult {
     /**
-     * The available port speeds for the location.
+     * @return The available port speeds for the location.
      * 
      */
     private final List<String> availablePortSpeeds;
     /**
-     * The names of the service providers for the location.
+     * @return The names of the service providers for the location.
      * 
      */
     private final List<String> availableProviders;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String locationCode;
     /**
-     * The name of the location. This includes the name of the colocation partner and the physical site of the building.
+     * @return The name of the location. This includes the name of the colocation partner and the physical site of the building.
      * 
      */
     private final String locationName;
@@ -47,23 +47,23 @@ public final class GetLocationResult {
     }
 
     /**
-     * The available port speeds for the location.
+     * @return The available port speeds for the location.
      * 
-    */
+     */
     public List<String> availablePortSpeeds() {
         return this.availablePortSpeeds;
     }
     /**
-     * The names of the service providers for the location.
+     * @return The names of the service providers for the location.
      * 
-    */
+     */
     public List<String> availableProviders() {
         return this.availableProviders;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -71,9 +71,9 @@ public final class GetLocationResult {
         return this.locationCode;
     }
     /**
-     * The name of the location. This includes the name of the colocation partner and the physical site of the building.
+     * @return The name of the location. This includes the name of the colocation partner and the physical site of the building.
      * 
-    */
+     */
     public String locationName() {
         return this.locationName;
     }

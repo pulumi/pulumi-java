@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AzureFirewallIpGroupsResponse {
     /**
-     * The iteration number.
+     * @return The iteration number.
      * 
      */
     private final String changeNumber;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
@@ -29,16 +29,16 @@ public final class AzureFirewallIpGroupsResponse {
     }
 
     /**
-     * The iteration number.
+     * @return The iteration number.
      * 
-    */
+     */
     public String changeNumber() {
         return this.changeNumber;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

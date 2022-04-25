@@ -23,6 +23,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="keyType")
     private @Nullable Either<String,KeyType> keyType;
 
+    /**
+     * @return The key type.
+     * 
+     */
     public Optional<Either<String,KeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -34,6 +38,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="notAfter")
     private @Nullable String notAfter;
 
+    /**
+     * @return The expiry time.
+     * 
+     */
     public Optional<String> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -45,6 +53,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
     @Import(name="workflowName", required=true)
     private String workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public String workflowName() {
         return this.workflowName;
     }
@@ -87,29 +103,65 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
             $ = new ListWorkflowCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Either.ofLeft(keyType));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             return keyType(Either.ofRight(keyType));
         }
 
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             $.workflowName = workflowName;
             return this;

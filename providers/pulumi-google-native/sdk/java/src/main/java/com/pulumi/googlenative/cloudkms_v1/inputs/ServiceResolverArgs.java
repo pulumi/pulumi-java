@@ -28,6 +28,10 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="endpointFilter")
     private @Nullable Output<String> endpointFilter;
 
+    /**
+     * @return Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+     * 
+     */
     public Optional<Output<String>> endpointFilter() {
         return Optional.ofNullable(this.endpointFilter);
     }
@@ -39,6 +43,10 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="hostname", required=true)
     private Output<String> hostname;
 
+    /**
+     * @return The hostname of the EKM replica used at TLS and HTTP layers.
+     * 
+     */
     public Output<String> hostname() {
         return this.hostname;
     }
@@ -50,6 +58,10 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverCertificates", required=true)
     private Output<List<CertificateArgs>> serverCertificates;
 
+    /**
+     * @return A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     * 
+     */
     public Output<List<CertificateArgs>> serverCertificates() {
         return this.serverCertificates;
     }
@@ -61,6 +73,10 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceDirectoryService", required=true)
     private Output<String> serviceDirectoryService;
 
+    /**
+     * @return The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+     * 
+     */
     public Output<String> serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
@@ -92,42 +108,96 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
             $ = new ServiceResolverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointFilter Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
             $.endpointFilter = endpointFilter;
             return this;
         }
 
+        /**
+         * @param endpointFilter Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointFilter(String endpointFilter) {
             return endpointFilter(Output.of(endpointFilter));
         }
 
+        /**
+         * @param hostname The hostname of the EKM replica used at TLS and HTTP layers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname The hostname of the EKM replica used at TLS and HTTP layers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificates(Output<List<CertificateArgs>> serverCertificates) {
             $.serverCertificates = serverCertificates;
             return this;
         }
 
+        /**
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificates(List<CertificateArgs> serverCertificates) {
             return serverCertificates(Output.of(serverCertificates));
         }
 
+        /**
+         * @param serverCertificates A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificates(CertificateArgs... serverCertificates) {
             return serverCertificates(List.of(serverCertificates));
         }
 
+        /**
+         * @param serviceDirectoryService The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryService(Output<String> serviceDirectoryService) {
             $.serviceDirectoryService = serviceDirectoryService;
             return this;
         }
 
+        /**
+         * @param serviceDirectoryService The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDirectoryService(String serviceDirectoryService) {
             return serviceDirectoryService(Output.of(serviceDirectoryService));
         }

@@ -33,6 +33,11 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliases")
     private @Nullable Output<List<RecordAliasArgs>> aliases;
 
+    /**
+     * @return An alias block. Conflicts with `ttl` &amp; `records`.
+     * Alias record documented below.
+     * 
+     */
     public Optional<Output<List<RecordAliasArgs>>> aliases() {
         return Optional.ofNullable(this.aliases);
     }
@@ -44,6 +49,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowOverwrite")
     private @Nullable Output<Boolean> allowOverwrite;
 
+    /**
+     * @return Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+     * 
+     */
     public Optional<Output<Boolean>> allowOverwrite() {
         return Optional.ofNullable(this.allowOverwrite);
     }
@@ -55,6 +64,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failoverRoutingPolicies")
     private @Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
 
+    /**
+     * @return A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
+     * 
+     */
     public Optional<Output<List<RecordFailoverRoutingPolicyArgs>>> failoverRoutingPolicies() {
         return Optional.ofNullable(this.failoverRoutingPolicies);
     }
@@ -66,6 +79,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="geolocationRoutingPolicies")
     private @Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
 
+    /**
+     * @return A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
+     * 
+     */
     public Optional<Output<List<RecordGeolocationRoutingPolicyArgs>>> geolocationRoutingPolicies() {
         return Optional.ofNullable(this.geolocationRoutingPolicies);
     }
@@ -77,6 +94,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckId")
     private @Nullable Output<String> healthCheckId;
 
+    /**
+     * @return The health check the record should be associated with.
+     * 
+     */
     public Optional<Output<String>> healthCheckId() {
         return Optional.ofNullable(this.healthCheckId);
     }
@@ -88,6 +109,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="latencyRoutingPolicies")
     private @Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
 
+    /**
+     * @return A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
+     * 
+     */
     public Optional<Output<List<RecordLatencyRoutingPolicyArgs>>> latencyRoutingPolicies() {
         return Optional.ofNullable(this.latencyRoutingPolicies);
     }
@@ -99,6 +124,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multivalueAnswerRoutingPolicy")
     private @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
 
+    /**
+     * @return Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
+     * 
+     */
     public Optional<Output<Boolean>> multivalueAnswerRoutingPolicy() {
         return Optional.ofNullable(this.multivalueAnswerRoutingPolicy);
     }
@@ -110,6 +139,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -121,6 +154,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="records")
     private @Nullable Output<List<String>> records;
 
+    /**
+     * @return A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
+     * 
+     */
     public Optional<Output<List<String>>> records() {
         return Optional.ofNullable(this.records);
     }
@@ -132,6 +169,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="setIdentifier")
     private @Nullable Output<String> setIdentifier;
 
+    /**
+     * @return Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+     * 
+     */
     public Optional<Output<String>> setIdentifier() {
         return Optional.ofNullable(this.setIdentifier);
     }
@@ -143,6 +184,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<Integer> ttl;
 
+    /**
+     * @return The TTL of the record.
+     * 
+     */
     public Optional<Output<Integer>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -154,6 +199,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,RecordType>> type;
 
+    /**
+     * @return `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+     * 
+     */
     public Output<Either<String,RecordType>> type() {
         return this.type;
     }
@@ -165,6 +214,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="weightedRoutingPolicies")
     private @Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
 
+    /**
+     * @return A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
+     * 
+     */
     public Optional<Output<List<RecordWeightedRoutingPolicyArgs>>> weightedRoutingPolicies() {
         return Optional.ofNullable(this.weightedRoutingPolicies);
     }
@@ -176,6 +229,10 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
     private Output<String> zoneId;
 
+    /**
+     * @return Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
+     * 
+     */
     public Output<String> zoneId() {
         return this.zoneId;
     }
@@ -217,160 +274,379 @@ public final class RecordArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliases An alias block. Conflicts with `ttl` &amp; `records`.
+         * Alias record documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(@Nullable Output<List<RecordAliasArgs>> aliases) {
             $.aliases = aliases;
             return this;
         }
 
+        /**
+         * @param aliases An alias block. Conflicts with `ttl` &amp; `records`.
+         * Alias record documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(List<RecordAliasArgs> aliases) {
             return aliases(Output.of(aliases));
         }
 
+        /**
+         * @param aliases An alias block. Conflicts with `ttl` &amp; `records`.
+         * Alias record documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(RecordAliasArgs... aliases) {
             return aliases(List.of(aliases));
         }
 
+        /**
+         * @param allowOverwrite Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOverwrite(@Nullable Output<Boolean> allowOverwrite) {
             $.allowOverwrite = allowOverwrite;
             return this;
         }
 
+        /**
+         * @param allowOverwrite Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowOverwrite(Boolean allowOverwrite) {
             return allowOverwrite(Output.of(allowOverwrite));
         }
 
+        /**
+         * @param failoverRoutingPolicies A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRoutingPolicies(@Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies) {
             $.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
 
+        /**
+         * @param failoverRoutingPolicies A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRoutingPolicies(List<RecordFailoverRoutingPolicyArgs> failoverRoutingPolicies) {
             return failoverRoutingPolicies(Output.of(failoverRoutingPolicies));
         }
 
+        /**
+         * @param failoverRoutingPolicies A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRoutingPolicies(RecordFailoverRoutingPolicyArgs... failoverRoutingPolicies) {
             return failoverRoutingPolicies(List.of(failoverRoutingPolicies));
         }
 
+        /**
+         * @param geolocationRoutingPolicies A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geolocationRoutingPolicies(@Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies) {
             $.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
 
+        /**
+         * @param geolocationRoutingPolicies A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geolocationRoutingPolicies(List<RecordGeolocationRoutingPolicyArgs> geolocationRoutingPolicies) {
             return geolocationRoutingPolicies(Output.of(geolocationRoutingPolicies));
         }
 
+        /**
+         * @param geolocationRoutingPolicies A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geolocationRoutingPolicies(RecordGeolocationRoutingPolicyArgs... geolocationRoutingPolicies) {
             return geolocationRoutingPolicies(List.of(geolocationRoutingPolicies));
         }
 
+        /**
+         * @param healthCheckId The health check the record should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckId(@Nullable Output<String> healthCheckId) {
             $.healthCheckId = healthCheckId;
             return this;
         }
 
+        /**
+         * @param healthCheckId The health check the record should be associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckId(String healthCheckId) {
             return healthCheckId(Output.of(healthCheckId));
         }
 
+        /**
+         * @param latencyRoutingPolicies A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyRoutingPolicies(@Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies) {
             $.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
 
+        /**
+         * @param latencyRoutingPolicies A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyRoutingPolicies(List<RecordLatencyRoutingPolicyArgs> latencyRoutingPolicies) {
             return latencyRoutingPolicies(Output.of(latencyRoutingPolicies));
         }
 
+        /**
+         * @param latencyRoutingPolicies A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latencyRoutingPolicies(RecordLatencyRoutingPolicyArgs... latencyRoutingPolicies) {
             return latencyRoutingPolicies(List.of(latencyRoutingPolicies));
         }
 
+        /**
+         * @param multivalueAnswerRoutingPolicy Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multivalueAnswerRoutingPolicy(@Nullable Output<Boolean> multivalueAnswerRoutingPolicy) {
             $.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
             return this;
         }
 
+        /**
+         * @param multivalueAnswerRoutingPolicy Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multivalueAnswerRoutingPolicy(Boolean multivalueAnswerRoutingPolicy) {
             return multivalueAnswerRoutingPolicy(Output.of(multivalueAnswerRoutingPolicy));
         }
 
+        /**
+         * @param name DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder records(@Nullable Output<List<String>> records) {
             $.records = records;
             return this;
         }
 
+        /**
+         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder records(List<String> records) {
             return records(Output.of(records));
         }
 
+        /**
+         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder records(String... records) {
             return records(List.of(records));
         }
 
+        /**
+         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setIdentifier(@Nullable Output<String> setIdentifier) {
             $.setIdentifier = setIdentifier;
             return this;
         }
 
+        /**
+         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder setIdentifier(String setIdentifier) {
             return setIdentifier(Output.of(setIdentifier));
         }
 
+        /**
+         * @param ttl The TTL of the record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The TTL of the record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,RecordType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,RecordType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RecordType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param weightedRoutingPolicies A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedRoutingPolicies(@Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies) {
             $.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
 
+        /**
+         * @param weightedRoutingPolicies A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedRoutingPolicies(List<RecordWeightedRoutingPolicyArgs> weightedRoutingPolicies) {
             return weightedRoutingPolicies(Output.of(weightedRoutingPolicies));
         }
 
+        /**
+         * @param weightedRoutingPolicies A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedRoutingPolicies(RecordWeightedRoutingPolicyArgs... weightedRoutingPolicies) {
             return weightedRoutingPolicies(List.of(weightedRoutingPolicies));
         }
 
+        /**
+         * @param zoneId Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneId(Output<String> zoneId) {
             $.zoneId = zoneId;
             return this;
         }
 
+        /**
+         * @param zoneId Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneId(String zoneId) {
             return zoneId(Output.of(zoneId));
         }

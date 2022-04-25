@@ -26,6 +26,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return The action of virtual network rule.
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="virtualNetworkResourceId", required=true)
     private String virtualNetworkResourceId;
 
+    /**
+     * @return Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+     * 
+     */
     public String virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
@@ -66,11 +74,23 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
             $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action of virtual network rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param virtualNetworkResourceId Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
             $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;

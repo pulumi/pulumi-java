@@ -27,6 +27,10 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="fileNamePrefix")
     private @Nullable Object fileNamePrefix;
 
+    /**
+     * @return Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
@@ -38,6 +42,10 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="maxRowsPerFile")
     private @Nullable Object maxRowsPerFile;
 
+    /**
+     * @return Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
@@ -50,6 +58,11 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;ParquetWriteSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,16 +93,35 @@ public final class ParquetWriteSettingsResponse extends com.pulumi.resources.Inv
             $ = new ParquetWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileNamePrefix Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             $.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
+        /**
+         * @param maxRowsPerFile Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;ParquetWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

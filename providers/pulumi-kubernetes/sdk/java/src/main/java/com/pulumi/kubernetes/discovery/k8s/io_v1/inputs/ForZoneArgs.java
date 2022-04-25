@@ -24,6 +24,10 @@ public final class ForZoneArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name represents the name of the zone.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class ForZoneArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ForZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name represents the name of the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name represents the name of the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

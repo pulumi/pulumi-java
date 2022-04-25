@@ -26,6 +26,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Error code string.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -37,6 +41,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="details")
     private @Nullable List<CloudErrorBodyResponse> details;
 
+    /**
+     * @return More detailed error information.
+     * 
+     */
     public Optional<List<CloudErrorBodyResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -48,6 +56,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Descriptive error information.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -59,6 +71,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Error target
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -90,25 +106,55 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
             $ = new CloudErrorBodyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Error code string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details More detailed error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<CloudErrorBodyResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details More detailed error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CloudErrorBodyResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message Descriptive error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target Error target
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

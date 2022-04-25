@@ -29,6 +29,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="applicationGatewayBackendAddressPools")
     private @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
+    /**
+     * @return Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+     * 
+     */
     public Optional<List<SubResourceResponse>> applicationGatewayBackendAddressPools() {
         return Optional.ofNullable(this.applicationGatewayBackendAddressPools);
     }
@@ -40,6 +44,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="applicationSecurityGroups")
     private @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
+    /**
+     * @return Specifies an array of references to application security group.
+     * 
+     */
     public Optional<List<SubResourceResponse>> applicationSecurityGroups() {
         return Optional.ofNullable(this.applicationSecurityGroups);
     }
@@ -51,6 +59,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="loadBalancerBackendAddressPools")
     private @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
+    /**
+     * @return Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+     * 
+     */
     public Optional<List<SubResourceResponse>> loadBalancerBackendAddressPools() {
         return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
@@ -62,6 +74,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The IP configuration name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -73,6 +89,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="primary")
     private @Nullable Boolean primary;
 
+    /**
+     * @return Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     * 
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -84,6 +104,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="privateIPAddressVersion")
     private @Nullable String privateIPAddressVersion;
 
+    /**
+     * @return Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+     * 
+     */
     public Optional<String> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
@@ -95,6 +119,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="publicIPAddressConfiguration")
     private @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
+    /**
+     * @return The publicIPAddressConfiguration.
+     * 
+     */
     public Optional<VirtualMachinePublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
         return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
@@ -106,6 +134,10 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Specifies the identifier of the subnet.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -141,53 +173,119 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
             $ = new VirtualMachineNetworkInterfaceIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGatewayBackendAddressPools Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
             $.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
+        /**
+         * @param applicationGatewayBackendAddressPools Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGatewayBackendAddressPools(SubResourceResponse... applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
         }
 
+        /**
+         * @param applicationSecurityGroups Specifies an array of references to application security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
             $.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
+        /**
+         * @param applicationSecurityGroups Specifies an array of references to application security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationSecurityGroups(SubResourceResponse... applicationSecurityGroups) {
             return applicationSecurityGroups(List.of(applicationSecurityGroups));
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
             $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
+        /**
+         * @param loadBalancerBackendAddressPools Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddressPools(SubResourceResponse... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
 
+        /**
+         * @param name The IP configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param primary Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Boolean primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param privateIPAddressVersion Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param publicIPAddressConfiguration The publicIPAddressConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
+        /**
+         * @param subnet Specifies the identifier of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;

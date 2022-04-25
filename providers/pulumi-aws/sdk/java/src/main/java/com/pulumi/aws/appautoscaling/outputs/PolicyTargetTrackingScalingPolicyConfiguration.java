@@ -16,32 +16,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PolicyTargetTrackingScalingPolicyConfiguration {
     /**
-     * A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
+     * @return A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
      * 
      */
     private final @Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification customizedMetricSpecification;
     /**
-     * Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won&#39;t remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
+     * @return Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won&#39;t remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
      * 
      */
     private final @Nullable Boolean disableScaleIn;
     /**
-     * A predefined metric. See supported fields below.
+     * @return A predefined metric. See supported fields below.
      * 
      */
     private final @Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification;
     /**
-     * The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
+     * @return The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
      * 
      */
     private final @Nullable Integer scaleInCooldown;
     /**
-     * The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
+     * @return The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
      * 
      */
     private final @Nullable Integer scaleOutCooldown;
     /**
-     * The target value for the metric.
+     * @return The target value for the metric.
      * 
      */
     private final Double targetValue;
@@ -63,44 +63,44 @@ public final class PolicyTargetTrackingScalingPolicyConfiguration {
     }
 
     /**
-     * A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
+     * @return A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
      * 
-    */
+     */
     public Optional<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification> customizedMetricSpecification() {
         return Optional.ofNullable(this.customizedMetricSpecification);
     }
     /**
-     * Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won&#39;t remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
+     * @return Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won&#39;t remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
      * 
-    */
+     */
     public Optional<Boolean> disableScaleIn() {
         return Optional.ofNullable(this.disableScaleIn);
     }
     /**
-     * A predefined metric. See supported fields below.
+     * @return A predefined metric. See supported fields below.
      * 
-    */
+     */
     public Optional<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification> predefinedMetricSpecification() {
         return Optional.ofNullable(this.predefinedMetricSpecification);
     }
     /**
-     * The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
+     * @return The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
      * 
-    */
+     */
     public Optional<Integer> scaleInCooldown() {
         return Optional.ofNullable(this.scaleInCooldown);
     }
     /**
-     * The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
+     * @return The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
      * 
-    */
+     */
     public Optional<Integer> scaleOutCooldown() {
         return Optional.ofNullable(this.scaleOutCooldown);
     }
     /**
-     * The target value for the metric.
+     * @return The target value for the metric.
      * 
-    */
+     */
     public Double targetValue() {
         return this.targetValue;
     }

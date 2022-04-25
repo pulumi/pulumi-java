@@ -24,6 +24,10 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="authorizedAccountId", required=true)
     private Output<String> authorizedAccountId;
 
+    /**
+     * @return The 12-digit account ID of the account authorized to aggregate data.
+     * 
+     */
     public Output<String> authorizedAccountId() {
         return this.authorizedAccountId;
     }
@@ -35,6 +39,10 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="authorizedAwsRegion", required=true)
     private Output<String> authorizedAwsRegion;
 
+    /**
+     * @return The region authorized to collect aggregated data.
+     * 
+     */
     public Output<String> authorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
@@ -46,6 +54,10 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
+    /**
+     * @return The tags for the AggregationAuthorization.
+     * 
+     */
     public Optional<Output<List<AggregationAuthorizationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class AggregationAuthorizationArgs extends com.pulumi.resources.Res
             $ = new AggregationAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizedAccountId The 12-digit account ID of the account authorized to aggregate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAccountId(Output<String> authorizedAccountId) {
             $.authorizedAccountId = authorizedAccountId;
             return this;
         }
 
+        /**
+         * @param authorizedAccountId The 12-digit account ID of the account authorized to aggregate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAccountId(String authorizedAccountId) {
             return authorizedAccountId(Output.of(authorizedAccountId));
         }
 
+        /**
+         * @param authorizedAwsRegion The region authorized to collect aggregated data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAwsRegion(Output<String> authorizedAwsRegion) {
             $.authorizedAwsRegion = authorizedAwsRegion;
             return this;
         }
 
+        /**
+         * @param authorizedAwsRegion The region authorized to collect aggregated data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAwsRegion(String authorizedAwsRegion) {
             return authorizedAwsRegion(Output.of(authorizedAwsRegion));
         }
 
+        /**
+         * @param tags The tags for the AggregationAuthorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the AggregationAuthorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AggregationAuthorizationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the AggregationAuthorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AggregationAuthorizationTagArgs... tags) {
             return tags(List.of(tags));
         }

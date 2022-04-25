@@ -21,6 +21,10 @@ public final class OpenZfsVolumeUserAndGroupQuotaGetArgs extends com.pulumi.reso
     @Import(name="id", required=true)
     private Output<Integer> id;
 
+    /**
+     * @return - The ID of the user or group. Valid values between `0` and `2147483647`
+     * 
+     */
     public Output<Integer> id() {
         return this.id;
     }
@@ -32,6 +36,10 @@ public final class OpenZfsVolumeUserAndGroupQuotaGetArgs extends com.pulumi.reso
     @Import(name="storageCapacityQuotaGib", required=true)
     private Output<Integer> storageCapacityQuotaGib;
 
+    /**
+     * @return - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
+     * 
+     */
     public Output<Integer> storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
@@ -69,20 +77,44 @@ public final class OpenZfsVolumeUserAndGroupQuotaGetArgs extends com.pulumi.reso
             $ = new OpenZfsVolumeUserAndGroupQuotaGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id - The ID of the user or group. Valid values between `0` and `2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<Integer> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id - The ID of the user or group. Valid values between `0` and `2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Integer id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param storageCapacityQuotaGib - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageCapacityQuotaGib(Output<Integer> storageCapacityQuotaGib) {
             $.storageCapacityQuotaGib = storageCapacityQuotaGib;
             return this;
         }
 
+        /**
+         * @param storageCapacityQuotaGib - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             return storageCapacityQuotaGib(Output.of(storageCapacityQuotaGib));
         }

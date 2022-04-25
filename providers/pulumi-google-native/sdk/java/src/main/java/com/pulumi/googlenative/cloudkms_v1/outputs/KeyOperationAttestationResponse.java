@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class KeyOperationAttestationResponse {
     /**
-     * The certificate chains needed to validate the attestation
+     * @return The certificate chains needed to validate the attestation
      * 
      */
     private final CertificateChainsResponse certChains;
     /**
-     * The attestation data provided by the HSM when the key operation was performed.
+     * @return The attestation data provided by the HSM when the key operation was performed.
      * 
      */
     private final String content;
     /**
-     * The format of the attestation data.
+     * @return The format of the attestation data.
      * 
      */
     private final String format;
@@ -37,23 +37,23 @@ public final class KeyOperationAttestationResponse {
     }
 
     /**
-     * The certificate chains needed to validate the attestation
+     * @return The certificate chains needed to validate the attestation
      * 
-    */
+     */
     public CertificateChainsResponse certChains() {
         return this.certChains;
     }
     /**
-     * The attestation data provided by the HSM when the key operation was performed.
+     * @return The attestation data provided by the HSM when the key operation was performed.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The format of the attestation data.
+     * @return The format of the attestation data.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }

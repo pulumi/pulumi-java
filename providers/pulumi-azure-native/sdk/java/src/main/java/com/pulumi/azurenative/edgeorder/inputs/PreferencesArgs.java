@@ -30,6 +30,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionPreferences")
     private @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
+    /**
+     * @return Preferences related to the Encryption.
+     * 
+     */
     public Optional<Output<EncryptionPreferencesArgs>> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
@@ -41,6 +45,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementResourcePreferences")
     private @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
+    /**
+     * @return Preferences related to the Management resource.
+     * 
+     */
     public Optional<Output<ManagementResourcePreferencesArgs>> managementResourcePreferences() {
         return Optional.ofNullable(this.managementResourcePreferences);
     }
@@ -52,6 +60,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationPreferences")
     private @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
 
+    /**
+     * @return Notification preferences.
+     * 
+     */
     public Optional<Output<List<NotificationPreferenceArgs>>> notificationPreferences() {
         return Optional.ofNullable(this.notificationPreferences);
     }
@@ -63,6 +75,10 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transportPreferences")
     private @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
+    /**
+     * @return Preferences related to the shipment logistics of the order.
+     * 
+     */
     public Optional<Output<TransportPreferencesArgs>> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }
@@ -94,42 +110,96 @@ public final class PreferencesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(@Nullable Output<EncryptionPreferencesArgs> encryptionPreferences) {
             $.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
+        /**
+         * @param encryptionPreferences Preferences related to the Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionPreferences(EncryptionPreferencesArgs encryptionPreferences) {
             return encryptionPreferences(Output.of(encryptionPreferences));
         }
 
+        /**
+         * @param managementResourcePreferences Preferences related to the Management resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementResourcePreferences(@Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences) {
             $.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
 
+        /**
+         * @param managementResourcePreferences Preferences related to the Management resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementResourcePreferences(ManagementResourcePreferencesArgs managementResourcePreferences) {
             return managementResourcePreferences(Output.of(managementResourcePreferences));
         }
 
+        /**
+         * @param notificationPreferences Notification preferences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreferences(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences) {
             $.notificationPreferences = notificationPreferences;
             return this;
         }
 
+        /**
+         * @param notificationPreferences Notification preferences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreferences(List<NotificationPreferenceArgs> notificationPreferences) {
             return notificationPreferences(Output.of(notificationPreferences));
         }
 
+        /**
+         * @param notificationPreferences Notification preferences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationPreferences(NotificationPreferenceArgs... notificationPreferences) {
             return notificationPreferences(List.of(notificationPreferences));
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(@Nullable Output<TransportPreferencesArgs> transportPreferences) {
             $.transportPreferences = transportPreferences;
             return this;
         }
 
+        /**
+         * @param transportPreferences Preferences related to the shipment logistics of the order.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportPreferences(TransportPreferencesArgs transportPreferences) {
             return transportPreferences(Output.of(transportPreferences));
         }

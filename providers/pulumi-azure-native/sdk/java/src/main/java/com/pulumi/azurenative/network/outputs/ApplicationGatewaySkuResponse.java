@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewaySkuResponse {
     /**
-     * Capacity (instance count) of an application gateway.
+     * @return Capacity (instance count) of an application gateway.
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * Name of an application gateway SKU.
+     * @return Name of an application gateway SKU.
      * 
      */
     private final @Nullable String name;
     /**
-     * Tier of an application gateway.
+     * @return Tier of an application gateway.
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class ApplicationGatewaySkuResponse {
     }
 
     /**
-     * Capacity (instance count) of an application gateway.
+     * @return Capacity (instance count) of an application gateway.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Name of an application gateway SKU.
+     * @return Name of an application gateway SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tier of an application gateway.
+     * @return Tier of an application gateway.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

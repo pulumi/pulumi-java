@@ -14,27 +14,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BanditPolicyResponse {
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
      */
     private final @Nullable Integer delayEvaluation;
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
      */
     private final @Nullable Integer evaluationInterval;
     /**
+     * @return
      * Expected value is &#39;Bandit&#39;.
      * 
      */
     private final String policyType;
     /**
-     * Absolute distance allowed from the best performing run.
+     * @return Absolute distance allowed from the best performing run.
      * 
      */
     private final @Nullable Double slackAmount;
     /**
-     * Ratio of the allowed distance from the best performing run.
+     * @return Ratio of the allowed distance from the best performing run.
      * 
      */
     private final @Nullable Double slackFactor;
@@ -54,37 +55,38 @@ public final class BanditPolicyResponse {
     }
 
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
-    */
+     */
     public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
-    */
+     */
     public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
+     * @return
      * Expected value is &#39;Bandit&#39;.
      * 
-    */
+     */
     public String policyType() {
         return this.policyType;
     }
     /**
-     * Absolute distance allowed from the best performing run.
+     * @return Absolute distance allowed from the best performing run.
      * 
-    */
+     */
     public Optional<Double> slackAmount() {
         return Optional.ofNullable(this.slackAmount);
     }
     /**
-     * Ratio of the allowed distance from the best performing run.
+     * @return Ratio of the allowed distance from the best performing run.
      * 
-    */
+     */
     public Optional<Double> slackFactor() {
         return Optional.ofNullable(this.slackFactor);
     }

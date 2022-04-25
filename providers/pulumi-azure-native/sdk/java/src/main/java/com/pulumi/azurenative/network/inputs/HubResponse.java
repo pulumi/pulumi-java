@@ -25,6 +25,10 @@ public final class HubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -36,6 +40,10 @@ public final class HubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return Resource Type.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -65,11 +73,23 @@ public final class HubResponse extends com.pulumi.resources.InvokeArgs {
             $ = new HubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceType Resource Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;

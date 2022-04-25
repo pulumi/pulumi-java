@@ -19,6 +19,10 @@ public final class GetProviderRegistrationArgs extends com.pulumi.resources.Invo
     @Import(name="providerNamespace", required=true)
     private String providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public String providerNamespace() {
         return this.providerNamespace;
     }
@@ -47,6 +51,12 @@ public final class GetProviderRegistrationArgs extends com.pulumi.resources.Invo
             $ = new GetProviderRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;

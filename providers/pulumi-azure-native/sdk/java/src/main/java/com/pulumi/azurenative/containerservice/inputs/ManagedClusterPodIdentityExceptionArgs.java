@@ -21,6 +21,10 @@ public final class ManagedClusterPodIdentityExceptionArgs extends com.pulumi.res
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the pod identity exception.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class ManagedClusterPodIdentityExceptionArgs extends com.pulumi.res
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return Namespace of the pod identity exception.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -43,6 +51,10 @@ public final class ManagedClusterPodIdentityExceptionArgs extends com.pulumi.res
     @Import(name="podLabels", required=true)
     private Output<Map<String,String>> podLabels;
 
+    /**
+     * @return Pod labels to match.
+     * 
+     */
     public Output<Map<String,String>> podLabels() {
         return this.podLabels;
     }
@@ -73,29 +85,65 @@ public final class ManagedClusterPodIdentityExceptionArgs extends com.pulumi.res
             $ = new ManagedClusterPodIdentityExceptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param podLabels Pod labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podLabels(Output<Map<String,String>> podLabels) {
             $.podLabels = podLabels;
             return this;
         }
 
+        /**
+         * @param podLabels Pod labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podLabels(Map<String,String> podLabels) {
             return podLabels(Output.of(podLabels));
         }

@@ -26,6 +26,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="contactName", required=true)
     private String contactName;
 
+    /**
+     * @return Contact name of the person.
+     * 
+     */
     public String contactName() {
         return this.contactName;
     }
@@ -37,6 +41,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="emailList", required=true)
     private List<String> emailList;
 
+    /**
+     * @return List of Email-ids to be notified about job progress.
+     * 
+     */
     public List<String> emailList() {
         return this.emailList;
     }
@@ -48,6 +56,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mobile")
     private @Nullable String mobile;
 
+    /**
+     * @return Mobile number of the contact person.
+     * 
+     */
     public Optional<String> mobile() {
         return Optional.ofNullable(this.mobile);
     }
@@ -59,6 +71,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="phone", required=true)
     private String phone;
 
+    /**
+     * @return Phone number of the contact person.
+     * 
+     */
     public String phone() {
         return this.phone;
     }
@@ -70,6 +86,10 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="phoneExtension")
     private @Nullable String phoneExtension;
 
+    /**
+     * @return Phone extension number of the contact person.
+     * 
+     */
     public Optional<String> phoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }
@@ -102,30 +122,66 @@ public final class ContactDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new ContactDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactName Contact name of the person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactName(String contactName) {
             $.contactName = contactName;
             return this;
         }
 
+        /**
+         * @param emailList List of Email-ids to be notified about job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(List<String> emailList) {
             $.emailList = emailList;
             return this;
         }
 
+        /**
+         * @param emailList List of Email-ids to be notified about job progress.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailList(String... emailList) {
             return emailList(List.of(emailList));
         }
 
+        /**
+         * @param mobile Mobile number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobile(@Nullable String mobile) {
             $.mobile = mobile;
             return this;
         }
 
+        /**
+         * @param phone Phone number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phoneExtension Phone extension number of the contact person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneExtension(@Nullable String phoneExtension) {
             $.phoneExtension = phoneExtension;
             return this;

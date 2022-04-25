@@ -27,6 +27,10 @@ public final class MavenRepositoryConfigArgs extends com.pulumi.resources.Resour
     @Import(name="allowSnapshotOverwrites")
     private @Nullable Output<Boolean> allowSnapshotOverwrites;
 
+    /**
+     * @return The repository with this flag will allow publishing the same snapshot versions.
+     * 
+     */
     public Optional<Output<Boolean>> allowSnapshotOverwrites() {
         return Optional.ofNullable(this.allowSnapshotOverwrites);
     }
@@ -38,6 +42,10 @@ public final class MavenRepositoryConfigArgs extends com.pulumi.resources.Resour
     @Import(name="versionPolicy")
     private @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
+    /**
+     * @return Version policy defines the versions that the registry will accept.
+     * 
+     */
     public Optional<Output<MavenRepositoryConfigVersionPolicy>> versionPolicy() {
         return Optional.ofNullable(this.versionPolicy);
     }
@@ -67,20 +75,44 @@ public final class MavenRepositoryConfigArgs extends com.pulumi.resources.Resour
             $ = new MavenRepositoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowSnapshotOverwrites The repository with this flag will allow publishing the same snapshot versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSnapshotOverwrites(@Nullable Output<Boolean> allowSnapshotOverwrites) {
             $.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
 
+        /**
+         * @param allowSnapshotOverwrites The repository with this flag will allow publishing the same snapshot versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
             return allowSnapshotOverwrites(Output.of(allowSnapshotOverwrites));
         }
 
+        /**
+         * @param versionPolicy Version policy defines the versions that the registry will accept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPolicy(@Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
             $.versionPolicy = versionPolicy;
             return this;
         }
 
+        /**
+         * @param versionPolicy Version policy defines the versions that the registry will accept.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionPolicy(MavenRepositoryConfigVersionPolicy versionPolicy) {
             return versionPolicy(Output.of(versionPolicy));
         }

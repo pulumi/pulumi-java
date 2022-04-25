@@ -27,6 +27,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.
     @Import(name="breakglassJustification")
     private @Nullable Output<String> breakglassJustification;
 
+    /**
+     * @return If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+     * 
+     */
     public Optional<Output<String>> breakglassJustification() {
         return Optional.ofNullable(this.breakglassJustification);
     }
@@ -38,6 +42,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.
     @Import(name="useDefault")
     private @Nullable Output<Boolean> useDefault;
 
+    /**
+     * @return If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
+     * 
+     */
     public Optional<Output<Boolean>> useDefault() {
         return Optional.ofNullable(this.useDefault);
     }
@@ -67,20 +75,44 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.
             $ = new GoogleCloudRunOpV2BinaryAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param breakglassJustification If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+         * 
+         * @return builder
+         * 
+         */
         public Builder breakglassJustification(@Nullable Output<String> breakglassJustification) {
             $.breakglassJustification = breakglassJustification;
             return this;
         }
 
+        /**
+         * @param breakglassJustification If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+         * 
+         * @return builder
+         * 
+         */
         public Builder breakglassJustification(String breakglassJustification) {
             return breakglassJustification(Output.of(breakglassJustification));
         }
 
+        /**
+         * @param useDefault If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDefault(@Nullable Output<Boolean> useDefault) {
             $.useDefault = useDefault;
             return this;
         }
 
+        /**
+         * @param useDefault If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDefault(Boolean useDefault) {
             return useDefault(Output.of(useDefault));
         }

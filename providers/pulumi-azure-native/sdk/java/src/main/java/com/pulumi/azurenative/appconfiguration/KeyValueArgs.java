@@ -23,6 +23,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configStoreName", required=true)
     private Output<String> configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public Output<String> configStoreName() {
         return this.configStoreName;
     }
@@ -35,6 +39,11 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The content type of the key-value&#39;s value.
+     * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -46,6 +55,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyValueName")
     private @Nullable Output<String> keyValueName;
 
+    /**
+     * @return Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+     * 
+     */
     public Optional<Output<String>> keyValueName() {
         return Optional.ofNullable(this.keyValueName);
     }
@@ -57,6 +70,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +85,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A dictionary of tags that can help identify what a key-value may be applicable for.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +100,10 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the key-value.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -112,56 +137,130 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(Output<String> configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             return configStoreName(Output.of(configStoreName));
         }
 
+        /**
+         * @param contentType The content type of the key-value&#39;s value.
+         * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content type of the key-value&#39;s value.
+         * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param keyValueName Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValueName(@Nullable Output<String> keyValueName) {
             $.keyValueName = keyValueName;
             return this;
         }
 
+        /**
+         * @param keyValueName Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValueName(String keyValueName) {
             return keyValueName(Output.of(keyValueName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags A dictionary of tags that can help identify what a key-value may be applicable for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A dictionary of tags that can help identify what a key-value may be applicable for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param value The value of the key-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the key-value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

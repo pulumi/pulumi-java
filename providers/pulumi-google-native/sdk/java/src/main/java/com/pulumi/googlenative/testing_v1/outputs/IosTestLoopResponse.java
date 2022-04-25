@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class IosTestLoopResponse {
     /**
-     * The bundle id for the application under test.
+     * @return The bundle id for the application under test.
      * 
      */
     private final String appBundleId;
     /**
-     * The .ipa of the application to test.
+     * @return The .ipa of the application to test.
      * 
      */
     private final FileReferenceResponse appIpa;
     /**
-     * The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+     * @return The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
      * 
      */
     private final List<Integer> scenarios;
@@ -39,23 +39,23 @@ public final class IosTestLoopResponse {
     }
 
     /**
-     * The bundle id for the application under test.
+     * @return The bundle id for the application under test.
      * 
-    */
+     */
     public String appBundleId() {
         return this.appBundleId;
     }
     /**
-     * The .ipa of the application to test.
+     * @return The .ipa of the application to test.
      * 
-    */
+     */
     public FileReferenceResponse appIpa() {
         return this.appIpa;
     }
     /**
-     * The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
+     * @return The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
      * 
-    */
+     */
     public List<Integer> scenarios() {
         return this.scenarios;
     }

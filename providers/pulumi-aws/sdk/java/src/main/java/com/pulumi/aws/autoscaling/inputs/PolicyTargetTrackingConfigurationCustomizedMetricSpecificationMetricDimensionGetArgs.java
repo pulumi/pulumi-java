@@ -20,6 +20,10 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the dimension.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value of the dimension.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -60,20 +68,44 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
             $ = new PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value The value of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

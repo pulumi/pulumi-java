@@ -23,6 +23,11 @@ public final class FeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiclusteringress")
     private @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 
+    /**
+     * @return Multicluster Ingress-specific spec.
+     * The `multiclusteringress` block supports:
+     * 
+     */
     public Optional<Output<FeatureSpecMulticlusteringressArgs>> multiclusteringress() {
         return Optional.ofNullable(this.multiclusteringress);
     }
@@ -51,11 +56,25 @@ public final class FeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param multiclusteringress Multicluster Ingress-specific spec.
+         * The `multiclusteringress` block supports:
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiclusteringress(@Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress) {
             $.multiclusteringress = multiclusteringress;
             return this;
         }
 
+        /**
+         * @param multiclusteringress Multicluster Ingress-specific spec.
+         * The `multiclusteringress` block supports:
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiclusteringress(FeatureSpecMulticlusteringressArgs multiclusteringress) {
             return multiclusteringress(Output.of(multiclusteringress));
         }

@@ -29,6 +29,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasourceTypes", required=true)
     private Output<List<String>> datasourceTypes;
 
+    /**
+     * @return Type of datasource for the backup management
+     * 
+     */
     public Output<List<String>> datasourceTypes() {
         return this.datasourceTypes;
     }
@@ -40,6 +44,11 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectType", required=true)
     private Output<String> objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;BackupPolicy&#39;.
+     * 
+     */
     public Output<String> objectType() {
         return this.objectType;
     }
@@ -51,6 +60,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyRules", required=true)
     private Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
+    /**
+     * @return Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+     * 
+     */
     public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules() {
         return this.policyRules;
     }
@@ -81,37 +94,87 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasourceTypes Type of datasource for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceTypes(Output<List<String>> datasourceTypes) {
             $.datasourceTypes = datasourceTypes;
             return this;
         }
 
+        /**
+         * @param datasourceTypes Type of datasource for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceTypes(List<String> datasourceTypes) {
             return datasourceTypes(Output.of(datasourceTypes));
         }
 
+        /**
+         * @param datasourceTypes Type of datasource for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceTypes(String... datasourceTypes) {
             return datasourceTypes(List.of(datasourceTypes));
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;BackupPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;BackupPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             return objectType(Output.of(objectType));
         }
 
+        /**
+         * @param policyRules Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyRules(Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
             $.policyRules = policyRules;
             return this;
         }
 
+        /**
+         * @param policyRules Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyRules(List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>> policyRules) {
             return policyRules(Output.of(policyRules));
         }
 
+        /**
+         * @param policyRules Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyRules(Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>... policyRules) {
             return policyRules(List.of(policyRules));
         }

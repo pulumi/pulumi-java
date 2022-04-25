@@ -24,6 +24,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the cookie.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Path to set for the cookie.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -46,6 +54,10 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     @Import(name="ttl", required=true)
     private DurationResponse ttl;
 
+    /**
+     * @return Lifetime of the cookie.
+     * 
+     */
     public DurationResponse ttl() {
         return this.ttl;
     }
@@ -76,16 +88,34 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
             $ = new ConsistentHashLoadBalancerSettingsHttpCookieResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param path Path to set for the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param ttl Lifetime of the cookie.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(DurationResponse ttl) {
             $.ttl = ttl;
             return this;

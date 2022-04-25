@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RulesEngineResponse {
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * A list of rules that define a particular Rules Engine Configuration.
+     * @return A list of rules that define a particular Rules Engine Configuration.
      * 
      */
     private final @Nullable List<RulesEngineRuleResponse> rules;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class RulesEngineResponse {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * A list of rules that define a particular Rules Engine Configuration.
+     * @return A list of rules that define a particular Rules Engine Configuration.
      * 
-    */
+     */
     public List<RulesEngineRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

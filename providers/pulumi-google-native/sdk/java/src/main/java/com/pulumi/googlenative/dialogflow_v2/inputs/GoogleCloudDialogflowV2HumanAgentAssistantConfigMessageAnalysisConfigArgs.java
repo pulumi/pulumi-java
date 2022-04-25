@@ -26,6 +26,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableEntityExtraction")
     private @Nullable Output<Boolean> enableEntityExtraction;
 
+    /**
+     * @return Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.
+     * 
+     */
     public Optional<Output<Boolean>> enableEntityExtraction() {
         return Optional.ofNullable(this.enableEntityExtraction);
     }
@@ -37,6 +41,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableSentimentAnalysis")
     private @Nullable Output<Boolean> enableSentimentAnalysis;
 
+    /**
+     * @return Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user&#39;s attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
+     * 
+     */
     public Optional<Output<Boolean>> enableSentimentAnalysis() {
         return Optional.ofNullable(this.enableSentimentAnalysis);
     }
@@ -66,20 +74,44 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
             $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableEntityExtraction Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEntityExtraction(@Nullable Output<Boolean> enableEntityExtraction) {
             $.enableEntityExtraction = enableEntityExtraction;
             return this;
         }
 
+        /**
+         * @param enableEntityExtraction Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEntityExtraction(Boolean enableEntityExtraction) {
             return enableEntityExtraction(Output.of(enableEntityExtraction));
         }
 
+        /**
+         * @param enableSentimentAnalysis Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user&#39;s attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
             $.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
 
+        /**
+         * @param enableSentimentAnalysis Enable sentiment analysis in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Sentiment analysis inspects user input and identifies the prevailing subjective opinion, especially to determine a user&#39;s attitude as positive, negative, or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For Participants.StreamingAnalyzeContent method, result will be in StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For Participants.AnalyzeContent method, result will be in AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method, result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             return enableSentimentAnalysis(Output.of(enableSentimentAnalysis));
         }

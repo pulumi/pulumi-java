@@ -25,6 +25,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventName")
     private @Nullable String eventName;
 
+    /**
+     * @return The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+     * 
+     */
     public Optional<String> eventName() {
         return Optional.ofNullable(this.eventName);
     }
@@ -53,6 +57,12 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventName The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(@Nullable String eventName) {
             $.eventName = eventName;
             return this;

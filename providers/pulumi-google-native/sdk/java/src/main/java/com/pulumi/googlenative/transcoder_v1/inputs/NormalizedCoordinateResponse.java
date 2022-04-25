@@ -23,6 +23,10 @@ public final class NormalizedCoordinateResponse extends com.pulumi.resources.Inv
     @Import(name="x", required=true)
     private Double x;
 
+    /**
+     * @return Normalized x coordinate.
+     * 
+     */
     public Double x() {
         return this.x;
     }
@@ -34,6 +38,10 @@ public final class NormalizedCoordinateResponse extends com.pulumi.resources.Inv
     @Import(name="y", required=true)
     private Double y;
 
+    /**
+     * @return Normalized y coordinate.
+     * 
+     */
     public Double y() {
         return this.y;
     }
@@ -63,11 +71,23 @@ public final class NormalizedCoordinateResponse extends com.pulumi.resources.Inv
             $ = new NormalizedCoordinateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param x Normalized x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Double x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param y Normalized y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Double y) {
             $.y = y;
             return this;

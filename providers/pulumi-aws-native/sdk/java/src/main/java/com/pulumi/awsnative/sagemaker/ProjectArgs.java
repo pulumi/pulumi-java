@@ -39,6 +39,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceCatalogProvisioningDetails", required=true)
     private Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
+    /**
+     * @return Input ServiceCatalog Provisioning Details
+     * 
+     */
     public Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
@@ -50,6 +54,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ProjectTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<ProjectTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,24 +107,54 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param serviceCatalogProvisioningDetails Input ServiceCatalog Provisioning Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCatalogProvisioningDetails(Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails) {
             $.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
 
+        /**
+         * @param serviceCatalogProvisioningDetails Input ServiceCatalog Provisioning Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCatalogProvisioningDetails(ServiceCatalogProvisioningDetailsPropertiesArgs serviceCatalogProvisioningDetails) {
             return serviceCatalogProvisioningDetails(Output.of(serviceCatalogProvisioningDetails));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ProjectTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
         }

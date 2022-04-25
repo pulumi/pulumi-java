@@ -27,6 +27,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return Optional. The Cloud KMS key to use for encryption.
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -38,6 +42,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkTags")
     private @Nullable Output<List<String>> networkTags;
 
+    /**
+     * @return Optional. Tags used for network traffic control.
+     * 
+     */
     public Optional<Output<List<String>>> networkTags() {
         return Optional.ofNullable(this.networkTags);
     }
@@ -49,6 +57,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkUri")
     private @Nullable Output<String> networkUri;
 
+    /**
+     * @return Optional. Network URI to connect workload to.
+     * 
+     */
     public Optional<Output<String>> networkUri() {
         return Optional.ofNullable(this.networkUri);
     }
@@ -60,6 +72,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
+    /**
+     * @return Optional. Service account that used to execute workload.
+     * 
+     */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -71,6 +87,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="subnetworkUri")
     private @Nullable Output<String> subnetworkUri;
 
+    /**
+     * @return Optional. Subnetwork URI to connect workload to.
+     * 
+     */
     public Optional<Output<String>> subnetworkUri() {
         return Optional.ofNullable(this.subnetworkUri);
     }
@@ -103,51 +123,117 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new ExecutionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey Optional. The Cloud KMS key to use for encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey Optional. The Cloud KMS key to use for encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }
 
+        /**
+         * @param networkTags Optional. Tags used for network traffic control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(@Nullable Output<List<String>> networkTags) {
             $.networkTags = networkTags;
             return this;
         }
 
+        /**
+         * @param networkTags Optional. Tags used for network traffic control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(List<String> networkTags) {
             return networkTags(Output.of(networkTags));
         }
 
+        /**
+         * @param networkTags Optional. Tags used for network traffic control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
 
+        /**
+         * @param networkUri Optional. Network URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(@Nullable Output<String> networkUri) {
             $.networkUri = networkUri;
             return this;
         }
 
+        /**
+         * @param networkUri Optional. Network URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkUri(String networkUri) {
             return networkUri(Output.of(networkUri));
         }
 
+        /**
+         * @param serviceAccount Optional. Service account that used to execute workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount Optional. Service account that used to execute workload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param subnetworkUri Optional. Subnetwork URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
             $.subnetworkUri = subnetworkUri;
             return this;
         }
 
+        /**
+         * @param subnetworkUri Optional. Subnetwork URI to connect workload to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkUri(String subnetworkUri) {
             return subnetworkUri(Output.of(subnetworkUri));
         }

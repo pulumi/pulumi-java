@@ -35,6 +35,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationData", required=true)
     private Output<CreationDataArgs> creationData;
 
+    /**
+     * @return Disk source information. CreationData information cannot be changed after the disk has been created.
+     * 
+     */
     public Output<CreationDataArgs> creationData() {
         return this.creationData;
     }
@@ -46,6 +50,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskAccessId")
     private @Nullable Output<String> diskAccessId;
 
+    /**
+     * @return ARM id of the DiskAccess resource for using private endpoints on disks.
+     * 
+     */
     public Optional<Output<String>> diskAccessId() {
         return Optional.ofNullable(this.diskAccessId);
     }
@@ -57,6 +65,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -68,6 +80,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
     private @Nullable Output<EncryptionArgs> encryption;
 
+    /**
+     * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+     * 
+     */
     public Optional<Output<EncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -79,6 +95,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSettingsCollection")
     private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
+    /**
+     * @return Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+     * 
+     */
     public Optional<Output<EncryptionSettingsCollectionArgs>> encryptionSettingsCollection() {
         return Optional.ofNullable(this.encryptionSettingsCollection);
     }
@@ -90,6 +110,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location where the snapshot will be created. Extended location cannot be changed.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -101,6 +125,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hyperVGeneration")
     private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
+    /**
+     * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * 
+     */
     public Optional<Output<Either<String,HyperVGeneration>>> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
@@ -112,6 +140,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incremental")
     private @Nullable Output<Boolean> incremental;
 
+    /**
+     * @return Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
+     * 
+     */
     public Optional<Output<Boolean>> incremental() {
         return Optional.ofNullable(this.incremental);
     }
@@ -123,6 +155,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -134,6 +170,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkAccessPolicy")
     private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
+    /**
+     * @return Policy for accessing the disk via network.
+     * 
+     */
     public Optional<Output<Either<String,NetworkAccessPolicy>>> networkAccessPolicy() {
         return Optional.ofNullable(this.networkAccessPolicy);
     }
@@ -145,6 +185,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
     private @Nullable Output<OperatingSystemTypes> osType;
 
+    /**
+     * @return The Operating System type.
+     * 
+     */
     public Optional<Output<OperatingSystemTypes>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -156,6 +200,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="purchasePlan")
     private @Nullable Output<PurchasePlanArgs> purchasePlan;
 
+    /**
+     * @return Purchase plan information for the image from which the source disk for the snapshot was originally created.
+     * 
+     */
     public Optional<Output<PurchasePlanArgs>> purchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
@@ -167,6 +215,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -178,6 +230,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SnapshotSkuArgs> sku;
 
+    /**
+     * @return The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+     * 
+     */
     public Optional<Output<SnapshotSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -189,6 +245,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotName")
     private @Nullable Output<String> snapshotName;
 
+    /**
+     * @return The name of the snapshot that is being created. The name can&#39;t be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+     * 
+     */
     public Optional<Output<String>> snapshotName() {
         return Optional.ofNullable(this.snapshotName);
     }
@@ -200,6 +260,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportsHibernation")
     private @Nullable Output<Boolean> supportsHibernation;
 
+    /**
+     * @return Indicates the OS on a snapshot supports hibernation.
+     * 
+     */
     public Optional<Output<Boolean>> supportsHibernation() {
         return Optional.ofNullable(this.supportsHibernation);
     }
@@ -211,6 +275,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -255,171 +323,399 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationData Disk source information. CreationData information cannot be changed after the disk has been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationData(Output<CreationDataArgs> creationData) {
             $.creationData = creationData;
             return this;
         }
 
+        /**
+         * @param creationData Disk source information. CreationData information cannot be changed after the disk has been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationData(CreationDataArgs creationData) {
             return creationData(Output.of(creationData));
         }
 
+        /**
+         * @param diskAccessId ARM id of the DiskAccess resource for using private endpoints on disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
             $.diskAccessId = diskAccessId;
             return this;
         }
 
+        /**
+         * @param diskAccessId ARM id of the DiskAccess resource for using private endpoints on disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskAccessId(String diskAccessId) {
             return diskAccessId(Output.of(diskAccessId));
         }
 
+        /**
+         * @param diskSizeGB If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param encryption Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(EncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param encryptionSettingsCollection Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
             $.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
 
+        /**
+         * @param encryptionSettingsCollection Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettingsCollection(EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
             return encryptionSettingsCollection(Output.of(encryptionSettingsCollection));
         }
 
+        /**
+         * @param extendedLocation The extended location where the snapshot will be created. Extended location cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location where the snapshot will be created. Extended location cannot be changed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param hyperVGeneration The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
             $.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
+        /**
+         * @param hyperVGeneration The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperVGeneration(Either<String,HyperVGeneration> hyperVGeneration) {
             return hyperVGeneration(Output.of(hyperVGeneration));
         }
 
+        /**
+         * @param hyperVGeneration The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperVGeneration(String hyperVGeneration) {
             return hyperVGeneration(Either.ofLeft(hyperVGeneration));
         }
 
+        /**
+         * @param hyperVGeneration The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hyperVGeneration(HyperVGeneration hyperVGeneration) {
             return hyperVGeneration(Either.ofRight(hyperVGeneration));
         }
 
+        /**
+         * @param incremental Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incremental(@Nullable Output<Boolean> incremental) {
             $.incremental = incremental;
             return this;
         }
 
+        /**
+         * @param incremental Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incremental(Boolean incremental) {
             return incremental(Output.of(incremental));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkAccessPolicy Policy for accessing the disk via network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
             $.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
 
+        /**
+         * @param networkAccessPolicy Policy for accessing the disk via network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAccessPolicy(Either<String,NetworkAccessPolicy> networkAccessPolicy) {
             return networkAccessPolicy(Output.of(networkAccessPolicy));
         }
 
+        /**
+         * @param networkAccessPolicy Policy for accessing the disk via network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAccessPolicy(String networkAccessPolicy) {
             return networkAccessPolicy(Either.ofLeft(networkAccessPolicy));
         }
 
+        /**
+         * @param networkAccessPolicy Policy for accessing the disk via network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAccessPolicy(NetworkAccessPolicy networkAccessPolicy) {
             return networkAccessPolicy(Either.ofRight(networkAccessPolicy));
         }
 
+        /**
+         * @param osType The Operating System type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The Operating System type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OperatingSystemTypes osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param purchasePlan Purchase plan information for the image from which the source disk for the snapshot was originally created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
             $.purchasePlan = purchasePlan;
             return this;
         }
 
+        /**
+         * @param purchasePlan Purchase plan information for the image from which the source disk for the snapshot was originally created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purchasePlan(PurchasePlanArgs purchasePlan) {
             return purchasePlan(Output.of(purchasePlan));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SnapshotSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SnapshotSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param snapshotName The name of the snapshot that is being created. The name can&#39;t be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
             $.snapshotName = snapshotName;
             return this;
         }
 
+        /**
+         * @param snapshotName The name of the snapshot that is being created. The name can&#39;t be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotName(String snapshotName) {
             return snapshotName(Output.of(snapshotName));
         }
 
+        /**
+         * @param supportsHibernation Indicates the OS on a snapshot supports hibernation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
             $.supportsHibernation = supportsHibernation;
             return this;
         }
 
+        /**
+         * @param supportsHibernation Indicates the OS on a snapshot supports hibernation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsHibernation(Boolean supportsHibernation) {
             return supportsHibernation(Output.of(supportsHibernation));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

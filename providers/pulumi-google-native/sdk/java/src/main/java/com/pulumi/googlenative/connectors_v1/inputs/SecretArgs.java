@@ -26,6 +26,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secretVersion")
     private @Nullable Output<String> secretVersion;
 
+    /**
+     * @return The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+     * 
+     */
     public Optional<Output<String>> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -54,11 +58,23 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretVersion The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param secretVersion The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(String secretVersion) {
             return secretVersion(Output.of(secretVersion));
         }

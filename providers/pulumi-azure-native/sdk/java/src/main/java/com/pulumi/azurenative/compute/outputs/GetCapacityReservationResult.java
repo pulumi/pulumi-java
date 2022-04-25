@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCapacityReservationResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * The Capacity reservation instance view.
+     * @return The Capacity reservation instance view.
      * 
      */
     private final CapacityReservationInstanceViewResponse instanceView;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * The date time when the capacity reservation was last updated.
+     * @return The date time when the capacity reservation was last updated.
      * 
      */
     private final String provisioningTime;
     /**
-     * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
+     * @return A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
      * 
      */
     private final String reservationId;
     /**
-     * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+     * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
      */
     private final SkuResponse sku;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
     /**
-     * A list of all virtual machine resource ids that are associated with the capacity reservation.
+     * @return A list of all virtual machine resource ids that are associated with the capacity reservation.
      * 
      */
     private final List<SubResourceReadOnlyResponse> virtualMachinesAssociated;
     /**
-     * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+     * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
      */
     private final @Nullable List<String> zones;
@@ -105,86 +105,86 @@ public final class GetCapacityReservationResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Capacity reservation instance view.
+     * @return The Capacity reservation instance view.
      * 
-    */
+     */
     public CapacityReservationInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The date time when the capacity reservation was last updated.
+     * @return The date time when the capacity reservation was last updated.
      * 
-    */
+     */
     public String provisioningTime() {
         return this.provisioningTime;
     }
     /**
-     * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
+     * @return A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
      * 
-    */
+     */
     public String reservationId() {
         return this.reservationId;
     }
     /**
-     * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
+     * @return SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called &#39;CapacityReservationSupported&#39; set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of all virtual machine resource ids that are associated with the capacity reservation.
+     * @return A list of all virtual machine resource ids that are associated with the capacity reservation.
      * 
-    */
+     */
     public List<SubResourceReadOnlyResponse> virtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
-     * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
+     * @return Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

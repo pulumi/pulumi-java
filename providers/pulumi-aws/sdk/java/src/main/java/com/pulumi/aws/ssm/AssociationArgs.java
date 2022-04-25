@@ -27,6 +27,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applyOnlyAtCronInterval")
     private @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
+    /**
+     * @return By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: `false`.
+     * 
+     */
     public Optional<Output<Boolean>> applyOnlyAtCronInterval() {
         return Optional.ofNullable(this.applyOnlyAtCronInterval);
     }
@@ -38,6 +42,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associationName")
     private @Nullable Output<String> associationName;
 
+    /**
+     * @return The descriptive name for the association.
+     * 
+     */
     public Optional<Output<String>> associationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -49,6 +57,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationTargetParameterName")
     private @Nullable Output<String> automationTargetParameterName;
 
+    /**
+     * @return Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
+     * 
+     */
     public Optional<Output<String>> automationTargetParameterName() {
         return Optional.ofNullable(this.automationTargetParameterName);
     }
@@ -60,6 +72,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="complianceSeverity")
     private @Nullable Output<String> complianceSeverity;
 
+    /**
+     * @return The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
+     * 
+     */
     public Optional<Output<String>> complianceSeverity() {
         return Optional.ofNullable(this.complianceSeverity);
     }
@@ -71,6 +87,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentVersion")
     private @Nullable Output<String> documentVersion;
 
+    /**
+     * @return The document version you want to associate with the target(s). Can be a specific version or the default version.
+     * 
+     */
     public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -82,6 +102,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -93,6 +117,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrency")
     private @Nullable Output<String> maxConcurrency;
 
+    /**
+     * @return The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+     * 
+     */
     public Optional<Output<String>> maxConcurrency() {
         return Optional.ofNullable(this.maxConcurrency);
     }
@@ -104,6 +132,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxErrors")
     private @Nullable Output<String> maxErrors;
 
+    /**
+     * @return The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+     * 
+     */
     public Optional<Output<String>> maxErrors() {
         return Optional.ofNullable(this.maxErrors);
     }
@@ -115,6 +147,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the SSM document to apply.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -126,6 +162,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputLocation")
     private @Nullable Output<AssociationOutputLocationArgs> outputLocation;
 
+    /**
+     * @return An output location block. Output Location is documented below.
+     * 
+     */
     public Optional<Output<AssociationOutputLocationArgs>> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -137,6 +177,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return A block of arbitrary string parameters to pass to the SSM document.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -148,6 +192,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleExpression")
     private @Nullable Output<String> scheduleExpression;
 
+    /**
+     * @return A cron expression when the association will be applied to the target(s).
+     * 
+     */
     public Optional<Output<String>> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -159,6 +207,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targets")
     private @Nullable Output<List<AssociationTargetArgs>> targets;
 
+    /**
+     * @return A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
+     * 
+     */
     public Optional<Output<List<AssociationTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -199,123 +251,285 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyOnlyAtCronInterval By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyOnlyAtCronInterval(@Nullable Output<Boolean> applyOnlyAtCronInterval) {
             $.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
 
+        /**
+         * @param applyOnlyAtCronInterval By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
             return applyOnlyAtCronInterval(Output.of(applyOnlyAtCronInterval));
         }
 
+        /**
+         * @param associationName The descriptive name for the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(@Nullable Output<String> associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param associationName The descriptive name for the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             return associationName(Output.of(associationName));
         }
 
+        /**
+         * @param automationTargetParameterName Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
             $.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
 
+        /**
+         * @param automationTargetParameterName Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationTargetParameterName(String automationTargetParameterName) {
             return automationTargetParameterName(Output.of(automationTargetParameterName));
         }
 
+        /**
+         * @param complianceSeverity The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceSeverity(@Nullable Output<String> complianceSeverity) {
             $.complianceSeverity = complianceSeverity;
             return this;
         }
 
+        /**
+         * @param complianceSeverity The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceSeverity(String complianceSeverity) {
             return complianceSeverity(Output.of(complianceSeverity));
         }
 
+        /**
+         * @param documentVersion The document version you want to associate with the target(s). Can be a specific version or the default version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param documentVersion The document version you want to associate with the target(s). Can be a specific version or the default version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 
+        /**
+         * @param instanceId The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param maxConcurrency The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
 
+        /**
+         * @param maxConcurrency The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrency(String maxConcurrency) {
             return maxConcurrency(Output.of(maxConcurrency));
         }
 
+        /**
+         * @param maxErrors The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
             $.maxErrors = maxErrors;
             return this;
         }
 
+        /**
+         * @param maxErrors The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxErrors(String maxErrors) {
             return maxErrors(Output.of(maxErrors));
         }
 
+        /**
+         * @param name The name of the SSM document to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SSM document to apply.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param outputLocation An output location block. Output Location is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(@Nullable Output<AssociationOutputLocationArgs> outputLocation) {
             $.outputLocation = outputLocation;
             return this;
         }
 
+        /**
+         * @param outputLocation An output location block. Output Location is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(AssociationOutputLocationArgs outputLocation) {
             return outputLocation(Output.of(outputLocation));
         }
 
+        /**
+         * @param parameters A block of arbitrary string parameters to pass to the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters A block of arbitrary string parameters to pass to the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param scheduleExpression A cron expression when the association will be applied to the target(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;
         }
 
+        /**
+         * @param scheduleExpression A cron expression when the association will be applied to the target(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
         }
 
+        /**
+         * @param targets A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<AssociationTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(AssociationTargetArgs... targets) {
             return targets(List.of(targets));
         }

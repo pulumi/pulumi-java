@@ -27,6 +27,14 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="connectMode")
     private @Nullable Output<String> connectMode;
 
+    /**
+     * @return The network connect mode of the Filestore instance.
+     * If not provided, the connect mode defaults to
+     * DIRECT_PEERING.
+     * Default value is `DIRECT_PEERING`.
+     * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+     * 
+     */
     public Optional<Output<String>> connectMode() {
         return Optional.ofNullable(this.connectMode);
     }
@@ -39,6 +47,11 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return -
+     * A list of IPv4 or IPv6 addresses.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -52,6 +65,12 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="modes", required=true)
     private Output<List<String>> modes;
 
+    /**
+     * @return IP versions for which the instance has
+     * IP addresses assigned.
+     * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+     * 
+     */
     public Output<List<String>> modes() {
         return this.modes;
     }
@@ -64,6 +83,11 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="network", required=true)
     private Output<String> network;
 
+    /**
+     * @return The name of the GCE VPC network to which the
+     * instance is connected.
+     * 
+     */
     public Output<String> network() {
         return this.network;
     }
@@ -76,6 +100,11 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="reservedIpRange")
     private @Nullable Output<String> reservedIpRange;
 
+    /**
+     * @return A /29 CIDR block that identifies the range of IP
+     * addresses reserved for this instance.
+     * 
+     */
     public Optional<Output<String>> reservedIpRange() {
         return Optional.ofNullable(this.reservedIpRange);
     }
@@ -108,55 +137,148 @@ public final class InstanceNetworkGetArgs extends com.pulumi.resources.ResourceA
             $ = new InstanceNetworkGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectMode The network connect mode of the Filestore instance.
+         * If not provided, the connect mode defaults to
+         * DIRECT_PEERING.
+         * Default value is `DIRECT_PEERING`.
+         * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectMode(@Nullable Output<String> connectMode) {
             $.connectMode = connectMode;
             return this;
         }
 
+        /**
+         * @param connectMode The network connect mode of the Filestore instance.
+         * If not provided, the connect mode defaults to
+         * DIRECT_PEERING.
+         * Default value is `DIRECT_PEERING`.
+         * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectMode(String connectMode) {
             return connectMode(Output.of(connectMode));
         }
 
+        /**
+         * @param ipAddresses -
+         * A list of IPv4 or IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses -
+         * A list of IPv4 or IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses -
+         * A list of IPv4 or IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param modes IP versions for which the instance has
+         * IP addresses assigned.
+         * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modes(Output<List<String>> modes) {
             $.modes = modes;
             return this;
         }
 
+        /**
+         * @param modes IP versions for which the instance has
+         * IP addresses assigned.
+         * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modes(List<String> modes) {
             return modes(Output.of(modes));
         }
 
+        /**
+         * @param modes IP versions for which the instance has
+         * IP addresses assigned.
+         * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modes(String... modes) {
             return modes(List.of(modes));
         }
 
+        /**
+         * @param network The name of the GCE VPC network to which the
+         * instance is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<String> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network The name of the GCE VPC network to which the
+         * instance is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param reservedIpRange A /29 CIDR block that identifies the range of IP
+         * addresses reserved for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             $.reservedIpRange = reservedIpRange;
             return this;
         }
 
+        /**
+         * @param reservedIpRange A /29 CIDR block that identifies the range of IP
+         * addresses reserved for this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedIpRange(String reservedIpRange) {
             return reservedIpRange(Output.of(reservedIpRange));
         }

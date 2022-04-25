@@ -23,6 +23,10 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="dash", required=true)
     private Boolean dash;
 
+    /**
+     * @return Enable DASH protocol or not
+     * 
+     */
     public Boolean dash() {
         return this.dash;
     }
@@ -34,6 +38,10 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="download", required=true)
     private Boolean download;
 
+    /**
+     * @return Enable Download protocol or not
+     * 
+     */
     public Boolean download() {
         return this.download;
     }
@@ -45,6 +53,10 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="hls", required=true)
     private Boolean hls;
 
+    /**
+     * @return Enable HLS protocol or not
+     * 
+     */
     public Boolean hls() {
         return this.hls;
     }
@@ -56,6 +68,10 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
     @Import(name="smoothStreaming", required=true)
     private Boolean smoothStreaming;
 
+    /**
+     * @return Enable SmoothStreaming protocol or not
+     * 
+     */
     public Boolean smoothStreaming() {
         return this.smoothStreaming;
     }
@@ -87,21 +103,45 @@ public final class EnabledProtocolsResponse extends com.pulumi.resources.InvokeA
             $ = new EnabledProtocolsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dash Enable DASH protocol or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder dash(Boolean dash) {
             $.dash = dash;
             return this;
         }
 
+        /**
+         * @param download Enable Download protocol or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder download(Boolean download) {
             $.download = download;
             return this;
         }
 
+        /**
+         * @param hls Enable HLS protocol or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder hls(Boolean hls) {
             $.hls = hls;
             return this;
         }
 
+        /**
+         * @param smoothStreaming Enable SmoothStreaming protocol or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder smoothStreaming(Boolean smoothStreaming) {
             $.smoothStreaming = smoothStreaming;
             return this;

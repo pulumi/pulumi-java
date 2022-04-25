@@ -26,6 +26,10 @@ public final class CreateParentGroupInfoArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class CreateParentGroupInfoArgs extends com.pulumi.resources.Resour
             $ = new CreateParentGroupInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

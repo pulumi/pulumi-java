@@ -28,6 +28,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheDataEncrypted")
     private @Nullable Boolean cacheDataEncrypted;
 
+    /**
+     * @return Indicates whether the cached responses are encrypted.
+     * 
+     */
     public Optional<Boolean> cacheDataEncrypted() {
         return Optional.ofNullable(this.cacheDataEncrypted);
     }
@@ -39,6 +43,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="cacheTtlInSeconds")
     private @Nullable Integer cacheTtlInSeconds;
 
+    /**
+     * @return The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+     * 
+     */
     public Optional<Integer> cacheTtlInSeconds() {
         return Optional.ofNullable(this.cacheTtlInSeconds);
     }
@@ -50,6 +58,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="cachingEnabled")
     private @Nullable Boolean cachingEnabled;
 
+    /**
+     * @return Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+     * 
+     */
     public Optional<Boolean> cachingEnabled() {
         return Optional.ofNullable(this.cachingEnabled);
     }
@@ -61,6 +73,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataTraceEnabled")
     private @Nullable Boolean dataTraceEnabled;
 
+    /**
+     * @return Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+     * 
+     */
     public Optional<Boolean> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
@@ -72,6 +88,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="httpMethod")
     private @Nullable String httpMethod;
 
+    /**
+     * @return The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+     * 
+     */
     public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -83,6 +103,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="loggingLevel")
     private @Nullable String loggingLevel;
 
+    /**
+     * @return The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.
+     * 
+     */
     public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
@@ -94,6 +118,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="metricsEnabled")
     private @Nullable Boolean metricsEnabled;
 
+    /**
+     * @return Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+     * 
+     */
     public Optional<Boolean> metricsEnabled() {
         return Optional.ofNullable(this.metricsEnabled);
     }
@@ -105,6 +133,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourcePath")
     private @Nullable String resourcePath;
 
+    /**
+     * @return The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+     * 
+     */
     public Optional<String> resourcePath() {
         return Optional.ofNullable(this.resourcePath);
     }
@@ -116,6 +148,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="throttlingBurstLimit")
     private @Nullable Integer throttlingBurstLimit;
 
+    /**
+     * @return The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Integer> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
@@ -127,6 +163,10 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
     @Import(name="throttlingRateLimit")
     private @Nullable Double throttlingRateLimit;
 
+    /**
+     * @return The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+     * 
+     */
     public Optional<Double> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
@@ -164,51 +204,111 @@ public final class StageMethodSetting extends com.pulumi.resources.InvokeArgs {
             $ = new StageMethodSetting(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheDataEncrypted Indicates whether the cached responses are encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             $.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
+        /**
+         * @param cacheTtlInSeconds The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             $.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param cachingEnabled Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             $.cachingEnabled = cachingEnabled;
             return this;
         }
 
+        /**
+         * @param dataTraceEnabled Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
+        /**
+         * @param httpMethod The HTTP method. You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable String httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param loggingLevel The logging level for this method. For valid values, see the loggingLevel property of the Stage (https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the Amazon API Gateway API Reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(@Nullable String loggingLevel) {
             $.loggingLevel = loggingLevel;
             return this;
         }
 
+        /**
+         * @param metricsEnabled Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             $.metricsEnabled = metricsEnabled;
             return this;
         }
 
+        /**
+         * @param resourcePath The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. For example, the path value /resource/subresource must be encoded as /~1resource~1subresource. To specify the root path, use only a slash (/). You can use an asterisk (*) as a wildcard to apply method settings to multiple methods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourcePath(@Nullable String resourcePath) {
             $.resourcePath = resourcePath;
             return this;
         }
 
+        /**
+         * @param throttlingBurstLimit The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
+        /**
+         * @param throttlingRateLimit The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             $.throttlingRateLimit = throttlingRateLimit;
             return this;

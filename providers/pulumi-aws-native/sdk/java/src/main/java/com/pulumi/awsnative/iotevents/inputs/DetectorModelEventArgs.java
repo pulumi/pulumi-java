@@ -28,6 +28,10 @@ public final class DetectorModelEventArgs extends com.pulumi.resources.ResourceA
     @Import(name="actions")
     private @Nullable Output<List<DetectorModelActionArgs>> actions;
 
+    /**
+     * @return The actions to be performed.
+     * 
+     */
     public Optional<Output<List<DetectorModelActionArgs>>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -39,6 +43,10 @@ public final class DetectorModelEventArgs extends com.pulumi.resources.ResourceA
     @Import(name="condition")
     private @Nullable Output<String> condition;
 
+    /**
+     * @return The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+     * 
+     */
     public Optional<Output<String>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -50,6 +58,10 @@ public final class DetectorModelEventArgs extends com.pulumi.resources.ResourceA
     @Import(name="eventName", required=true)
     private Output<String> eventName;
 
+    /**
+     * @return The name of the event.
+     * 
+     */
     public Output<String> eventName() {
         return this.eventName;
     }
@@ -80,33 +92,75 @@ public final class DetectorModelEventArgs extends com.pulumi.resources.ResourceA
             $ = new DetectorModelEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<List<DetectorModelActionArgs>> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(List<DetectorModelActionArgs> actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(DetectorModelActionArgs... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param condition The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<String> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(String condition) {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param eventName The name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(Output<String> eventName) {
             $.eventName = eventName;
             return this;
         }
 
+        /**
+         * @param eventName The name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             return eventName(Output.of(eventName));
         }

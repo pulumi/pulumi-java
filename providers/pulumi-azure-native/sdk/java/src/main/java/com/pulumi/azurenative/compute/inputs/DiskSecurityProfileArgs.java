@@ -28,6 +28,10 @@ public final class DiskSecurityProfileArgs extends com.pulumi.resources.Resource
     @Import(name="securityType")
     private @Nullable Output<Either<String,DiskSecurityTypes>> securityType;
 
+    /**
+     * @return Specifies the SecurityType of the VM. Applicable for OS disks only.
+     * 
+     */
     public Optional<Output<Either<String,DiskSecurityTypes>>> securityType() {
         return Optional.ofNullable(this.securityType);
     }
@@ -56,19 +60,43 @@ public final class DiskSecurityProfileArgs extends com.pulumi.resources.Resource
             $ = new DiskSecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityType Specifies the SecurityType of the VM. Applicable for OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityType(@Nullable Output<Either<String,DiskSecurityTypes>> securityType) {
             $.securityType = securityType;
             return this;
         }
 
+        /**
+         * @param securityType Specifies the SecurityType of the VM. Applicable for OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityType(Either<String,DiskSecurityTypes> securityType) {
             return securityType(Output.of(securityType));
         }
 
+        /**
+         * @param securityType Specifies the SecurityType of the VM. Applicable for OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityType(String securityType) {
             return securityType(Either.ofLeft(securityType));
         }
 
+        /**
+         * @param securityType Specifies the SecurityType of the VM. Applicable for OS disks only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityType(DiskSecurityTypes securityType) {
             return securityType(Either.ofRight(securityType));
         }

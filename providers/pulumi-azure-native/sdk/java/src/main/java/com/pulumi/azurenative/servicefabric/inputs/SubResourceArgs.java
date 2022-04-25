@@ -26,6 +26,10 @@ public final class SubResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Azure resource identifier.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class SubResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Azure resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Azure resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

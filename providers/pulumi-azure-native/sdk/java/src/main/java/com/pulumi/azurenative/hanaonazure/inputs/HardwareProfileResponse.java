@@ -23,6 +23,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hanaInstanceSize", required=true)
     private String hanaInstanceSize;
 
+    /**
+     * @return Specifies the HANA instance SKU.
+     * 
+     */
     public String hanaInstanceSize() {
         return this.hanaInstanceSize;
     }
@@ -34,6 +38,10 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="hardwareType", required=true)
     private String hardwareType;
 
+    /**
+     * @return Name of the hardware type (vendor and/or their product name)
+     * 
+     */
     public String hardwareType() {
         return this.hardwareType;
     }
@@ -63,11 +71,23 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
             $ = new HardwareProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hanaInstanceSize Specifies the HANA instance SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hanaInstanceSize(String hanaInstanceSize) {
             $.hanaInstanceSize = hanaInstanceSize;
             return this;
         }
 
+        /**
+         * @param hardwareType Name of the hardware type (vendor and/or their product name)
+         * 
+         * @return builder
+         * 
+         */
         public Builder hardwareType(String hardwareType) {
             $.hardwareType = hardwareType;
             return this;

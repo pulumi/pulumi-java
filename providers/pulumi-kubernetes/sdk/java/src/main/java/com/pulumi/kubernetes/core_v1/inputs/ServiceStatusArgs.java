@@ -28,6 +28,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
     private @Nullable Output<List<ConditionArgs>> conditions;
 
+    /**
+     * @return Current service state
+     * 
+     */
     public Optional<Output<List<ConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -39,6 +43,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancer")
     private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
+    /**
+     * @return LoadBalancer contains the current status of the load-balancer, if one is present.
+     * 
+     */
     public Optional<Output<LoadBalancerStatusArgs>> loadBalancer() {
         return Optional.ofNullable(this.loadBalancer);
     }
@@ -68,24 +76,54 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions Current service state
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Current service state
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<ConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions Current service state
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param loadBalancer LoadBalancer contains the current status of the load-balancer, if one is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
             $.loadBalancer = loadBalancer;
             return this;
         }
 
+        /**
+         * @param loadBalancer LoadBalancer contains the current status of the load-balancer, if one is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancer(LoadBalancerStatusArgs loadBalancer) {
             return loadBalancer(Output.of(loadBalancer));
         }

@@ -27,6 +27,10 @@ public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="capacity")
     private @Nullable Output<CapacityArgs> capacity;
 
+    /**
+     * @return The capacity configuration.
+     * 
+     */
     public Optional<Output<CapacityArgs>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -38,6 +42,10 @@ public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="count")
     private @Nullable Output<String> count;
 
+    /**
+     * @return The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
+     * 
+     */
     public Optional<Output<String>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -67,20 +75,44 @@ public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs
             $ = new PartitionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<CapacityArgs> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The capacity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(CapacityArgs capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param count The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<String> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(String count) {
             return count(Output.of(count));
         }

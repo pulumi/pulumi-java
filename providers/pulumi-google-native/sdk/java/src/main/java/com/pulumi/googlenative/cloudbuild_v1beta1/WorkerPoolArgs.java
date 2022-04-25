@@ -25,6 +25,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
+    /**
+     * @return User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     * 
+     */
     public Optional<Output<Map<String,String>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -36,6 +40,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -54,6 +62,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configuration for the `WorkerPool`.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -72,6 +84,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
     private @Nullable Output<WorkerConfigArgs> workerConfig;
 
+    /**
+     * @return Worker configuration for the `WorkerPool`.
+     * 
+     */
     public Optional<Output<WorkerConfigArgs>> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
@@ -113,20 +129,44 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Map<String,String> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param displayName A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
@@ -140,11 +180,23 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkConfig Network configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
@@ -158,11 +210,23 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param workerConfig Worker configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
             $.workerConfig = workerConfig;
             return this;
         }
 
+        /**
+         * @param workerConfig Worker configuration for the `WorkerPool`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerConfig(WorkerConfigArgs workerConfig) {
             return workerConfig(Output.of(workerConfig));
         }

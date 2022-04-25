@@ -21,6 +21,10 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
     @Import(name="scheduleOccurrence")
     private @Nullable String scheduleOccurrence;
 
+    /**
+     * @return The occurrence that triggered the run.
+     * 
+     */
     public Optional<String> scheduleOccurrence() {
         return Optional.ofNullable(this.scheduleOccurrence);
     }
@@ -32,6 +36,10 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
     @Import(name="timerTriggerName")
     private @Nullable String timerTriggerName;
 
+    /**
+     * @return The timer trigger name that caused the run.
+     * 
+     */
     public Optional<String> timerTriggerName() {
         return Optional.ofNullable(this.timerTriggerName);
     }
@@ -61,11 +69,23 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
             $ = new TimerTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleOccurrence The occurrence that triggered the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleOccurrence(@Nullable String scheduleOccurrence) {
             $.scheduleOccurrence = scheduleOccurrence;
             return this;
         }
 
+        /**
+         * @param timerTriggerName The timer trigger name that caused the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerTriggerName(@Nullable String timerTriggerName) {
             $.timerTriggerName = timerTriggerName;
             return this;

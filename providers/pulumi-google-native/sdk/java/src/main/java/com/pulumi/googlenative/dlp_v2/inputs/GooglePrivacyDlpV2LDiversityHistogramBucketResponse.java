@@ -25,6 +25,10 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
     @Import(name="bucketSize", required=true)
     private String bucketSize;
 
+    /**
+     * @return Total number of equivalence classes in this bucket.
+     * 
+     */
     public String bucketSize() {
         return this.bucketSize;
     }
@@ -36,6 +40,10 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
     @Import(name="bucketValueCount", required=true)
     private String bucketValueCount;
 
+    /**
+     * @return Total number of distinct equivalence classes in this bucket.
+     * 
+     */
     public String bucketValueCount() {
         return this.bucketValueCount;
     }
@@ -47,6 +55,10 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
     @Import(name="bucketValues", required=true)
     private List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
 
+    /**
+     * @return Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+     * 
+     */
     public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
     }
@@ -58,6 +70,10 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
     @Import(name="sensitiveValueFrequencyLowerBound", required=true)
     private String sensitiveValueFrequencyLowerBound;
 
+    /**
+     * @return Lower bound on the sensitive value frequencies of the equivalence classes in this bucket.
+     * 
+     */
     public String sensitiveValueFrequencyLowerBound() {
         return this.sensitiveValueFrequencyLowerBound;
     }
@@ -69,6 +85,10 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
     @Import(name="sensitiveValueFrequencyUpperBound", required=true)
     private String sensitiveValueFrequencyUpperBound;
 
+    /**
+     * @return Upper bound on the sensitive value frequencies of the equivalence classes in this bucket.
+     * 
+     */
     public String sensitiveValueFrequencyUpperBound() {
         return this.sensitiveValueFrequencyUpperBound;
     }
@@ -101,30 +121,66 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
             $ = new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketSize Total number of equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketSize(String bucketSize) {
             $.bucketSize = bucketSize;
             return this;
         }
 
+        /**
+         * @param bucketValueCount Total number of distinct equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValueCount(String bucketValueCount) {
             $.bucketValueCount = bucketValueCount;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
             $.bucketValues = bucketValues;
             return this;
         }
 
+        /**
+         * @param bucketValues Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketValues(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
 
+        /**
+         * @param sensitiveValueFrequencyLowerBound Lower bound on the sensitive value frequencies of the equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
             $.sensitiveValueFrequencyLowerBound = sensitiveValueFrequencyLowerBound;
             return this;
         }
 
+        /**
+         * @param sensitiveValueFrequencyUpperBound Upper bound on the sensitive value frequencies of the equivalence classes in this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
             $.sensitiveValueFrequencyUpperBound = sensitiveValueFrequencyUpperBound;
             return this;

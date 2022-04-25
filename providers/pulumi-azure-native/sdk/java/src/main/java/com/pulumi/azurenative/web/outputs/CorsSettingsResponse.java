@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CorsSettingsResponse {
     /**
-     * Gets or sets the list of origins that should be allowed to make cross-origin
+     * @return Gets or sets the list of origins that should be allowed to make cross-origin
      * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
      * 
      */
     private final @Nullable List<String> allowedOrigins;
     /**
-     * Gets or sets whether CORS requests with credentials are allowed. See
+     * @return Gets or sets whether CORS requests with credentials are allowed. See
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
      * for more details.
      * 
@@ -36,19 +36,19 @@ public final class CorsSettingsResponse {
     }
 
     /**
-     * Gets or sets the list of origins that should be allowed to make cross-origin
+     * @return Gets or sets the list of origins that should be allowed to make cross-origin
      * calls (for example: http://example.com:12345). Use &#34;*&#34; to allow all.
      * 
-    */
+     */
     public List<String> allowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
     /**
-     * Gets or sets whether CORS requests with credentials are allowed. See
+     * @return Gets or sets whether CORS requests with credentials are allowed. See
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
      * for more details.
      * 
-    */
+     */
     public Optional<Boolean> supportCredentials() {
         return Optional.ofNullable(this.supportCredentials);
     }

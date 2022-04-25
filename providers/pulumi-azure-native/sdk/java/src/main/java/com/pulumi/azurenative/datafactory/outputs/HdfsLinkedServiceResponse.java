@@ -20,53 +20,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HdfsLinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+     * @return Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object authenticationType;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Password for Windows authentication.
+     * @return Password for Windows authentication.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Hdfs&#39;.
      * 
      */
     private final String type;
     /**
-     * The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+     * @return The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
     /**
-     * User name for Windows authentication. Type: string (or Expression with resultType string).
+     * @return User name for Windows authentication. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object userName;
@@ -96,73 +96,73 @@ public final class HdfsLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
+     * @return Type of authentication used to connect to the HDFS. Possible values are: Anonymous and Windows. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password for Windows authentication.
+     * @return Password for Windows authentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Hdfs&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
+     * @return The URL of the HDFS service endpoint, e.g. http://myhostname:50070/webhdfs/v1 . Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }
     /**
-     * User name for Windows authentication. Type: string (or Expression with resultType string).
+     * @return User name for Windows authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

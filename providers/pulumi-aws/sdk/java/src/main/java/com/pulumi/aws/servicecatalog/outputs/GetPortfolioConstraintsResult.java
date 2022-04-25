@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 public final class GetPortfolioConstraintsResult {
     private final @Nullable String acceptLanguage;
     /**
-     * List of information about the constraints. See details below.
+     * @return List of information about the constraints. See details below.
      * 
      */
     private final List<GetPortfolioConstraintsDetail> details;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * Identifier of the portfolio the product resides in. The constraint applies only to the instance of the product that lives within this portfolio.
+     * @return Identifier of the portfolio the product resides in. The constraint applies only to the instance of the product that lives within this portfolio.
      * 
      */
     private final String portfolioId;
     /**
-     * Identifier of the product the constraint applies to. A constraint applies to a specific instance of a product within a certain portfolio.
+     * @return Identifier of the product the constraint applies to. A constraint applies to a specific instance of a product within a certain portfolio.
      * 
      */
     private final @Nullable String productId;
@@ -53,30 +53,30 @@ public final class GetPortfolioConstraintsResult {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * List of information about the constraints. See details below.
+     * @return List of information about the constraints. See details below.
      * 
-    */
+     */
     public List<GetPortfolioConstraintsDetail> details() {
         return this.details;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identifier of the portfolio the product resides in. The constraint applies only to the instance of the product that lives within this portfolio.
+     * @return Identifier of the portfolio the product resides in. The constraint applies only to the instance of the product that lives within this portfolio.
      * 
-    */
+     */
     public String portfolioId() {
         return this.portfolioId;
     }
     /**
-     * Identifier of the product the constraint applies to. A constraint applies to a specific instance of a product within a certain portfolio.
+     * @return Identifier of the product the constraint applies to. A constraint applies to a specific instance of a product within a certain portfolio.
      * 
-    */
+     */
     public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }

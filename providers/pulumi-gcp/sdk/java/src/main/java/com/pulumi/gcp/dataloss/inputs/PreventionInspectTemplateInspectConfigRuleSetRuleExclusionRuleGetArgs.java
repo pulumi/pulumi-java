@@ -26,6 +26,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="dictionary")
     private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary;
 
+    /**
+     * @return Dictionary which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs>> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
@@ -38,6 +43,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="excludeInfoTypes")
     private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes;
 
+    /**
+     * @return Set of infoTypes for which findings would affect this rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs>> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
@@ -50,6 +60,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="matchingType", required=true)
     private Output<String> matchingType;
 
+    /**
+     * @return How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+     * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
+     * 
+     */
     public Output<String> matchingType() {
         return this.matchingType;
     }
@@ -62,6 +77,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="regex")
     private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex;
 
+    /**
+     * @return Regular expression which defines the rule.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs>> regex() {
         return Optional.ofNullable(this.regex);
     }
@@ -93,38 +113,94 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             $ = new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary) {
             $.dictionary = dictionary;
             return this;
         }
 
+        /**
+         * @param dictionary Dictionary which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dictionary(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs dictionary) {
             return dictionary(Output.of(dictionary));
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes) {
             $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
+        /**
+         * @param excludeInfoTypes Set of infoTypes for which findings would affect this rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeInfoTypes(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs excludeInfoTypes) {
             return excludeInfoTypes(Output.of(excludeInfoTypes));
         }
 
+        /**
+         * @param matchingType How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+         * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingType(Output<String> matchingType) {
             $.matchingType = matchingType;
             return this;
         }
 
+        /**
+         * @param matchingType How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+         * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchingType(String matchingType) {
             return matchingType(Output.of(matchingType));
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex) {
             $.regex = regex;
             return this;
         }
 
+        /**
+         * @param regex Regular expression which defines the rule.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regex(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs regex) {
             return regex(Output.of(regex));
         }

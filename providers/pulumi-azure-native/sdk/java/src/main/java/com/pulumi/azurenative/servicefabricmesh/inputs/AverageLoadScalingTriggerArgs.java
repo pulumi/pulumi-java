@@ -29,6 +29,11 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Enumerates the triggers for auto scaling.
+     * Expected value is &#39;AverageLoad&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -40,6 +45,10 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="lowerLoadThreshold", required=true)
     private Output<Double> lowerLoadThreshold;
 
+    /**
+     * @return Lower load threshold (if average load is below this threshold, service will scale down).
+     * 
+     */
     public Output<Double> lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
@@ -51,6 +60,10 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="metric", required=true)
     private Output<AutoScalingResourceMetricArgs> metric;
 
+    /**
+     * @return Description of the metric that is used for scaling.
+     * 
+     */
     public Output<AutoScalingResourceMetricArgs> metric() {
         return this.metric;
     }
@@ -62,6 +75,10 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="scaleIntervalInSeconds", required=true)
     private Output<Integer> scaleIntervalInSeconds;
 
+    /**
+     * @return Scale interval that indicates how often will this trigger be checked.
+     * 
+     */
     public Output<Integer> scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
@@ -73,6 +90,10 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
     @Import(name="upperLoadThreshold", required=true)
     private Output<Double> upperLoadThreshold;
 
+    /**
+     * @return Upper load threshold (if average load is above this threshold, service will scale up).
+     * 
+     */
     public Output<Double> upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
@@ -105,47 +126,109 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
             $ = new AverageLoadScalingTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Enumerates the triggers for auto scaling.
+         * Expected value is &#39;AverageLoad&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Enumerates the triggers for auto scaling.
+         * Expected value is &#39;AverageLoad&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param lowerLoadThreshold Lower load threshold (if average load is below this threshold, service will scale down).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerLoadThreshold(Output<Double> lowerLoadThreshold) {
             $.lowerLoadThreshold = lowerLoadThreshold;
             return this;
         }
 
+        /**
+         * @param lowerLoadThreshold Lower load threshold (if average load is below this threshold, service will scale down).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
             return lowerLoadThreshold(Output.of(lowerLoadThreshold));
         }
 
+        /**
+         * @param metric Description of the metric that is used for scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(Output<AutoScalingResourceMetricArgs> metric) {
             $.metric = metric;
             return this;
         }
 
+        /**
+         * @param metric Description of the metric that is used for scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(AutoScalingResourceMetricArgs metric) {
             return metric(Output.of(metric));
         }
 
+        /**
+         * @param scaleIntervalInSeconds Scale interval that indicates how often will this trigger be checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIntervalInSeconds(Output<Integer> scaleIntervalInSeconds) {
             $.scaleIntervalInSeconds = scaleIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param scaleIntervalInSeconds Scale interval that indicates how often will this trigger be checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
             return scaleIntervalInSeconds(Output.of(scaleIntervalInSeconds));
         }
 
+        /**
+         * @param upperLoadThreshold Upper load threshold (if average load is above this threshold, service will scale up).
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperLoadThreshold(Output<Double> upperLoadThreshold) {
             $.upperLoadThreshold = upperLoadThreshold;
             return this;
         }
 
+        /**
+         * @param upperLoadThreshold Upper load threshold (if average load is above this threshold, service will scale up).
+         * 
+         * @return builder
+         * 
+         */
         public Builder upperLoadThreshold(Double upperLoadThreshold) {
             return upperLoadThreshold(Output.of(upperLoadThreshold));
         }

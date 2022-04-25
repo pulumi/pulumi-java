@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiErrorResponse {
     /**
-     * The error code.
+     * @return The error code.
      * 
      */
     private final @Nullable String code;
     /**
-     * The Api error details
+     * @return The Api error details
      * 
      */
     private final @Nullable List<ApiErrorBaseResponse> details;
     /**
-     * The Api inner error
+     * @return The Api inner error
      * 
      */
     private final @Nullable InnerErrorResponse innererror;
     /**
-     * The error message.
+     * @return The error message.
      * 
      */
     private final @Nullable String message;
     /**
-     * The target of the particular error.
+     * @return The target of the particular error.
      * 
      */
     private final @Nullable String target;
@@ -55,37 +55,37 @@ public final class ApiErrorResponse {
     }
 
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * The Api error details
+     * @return The Api error details
      * 
-    */
+     */
     public List<ApiErrorBaseResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * The Api inner error
+     * @return The Api inner error
      * 
-    */
+     */
     public Optional<InnerErrorResponse> innererror() {
         return Optional.ofNullable(this.innererror);
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The target of the particular error.
+     * @return The target of the particular error.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

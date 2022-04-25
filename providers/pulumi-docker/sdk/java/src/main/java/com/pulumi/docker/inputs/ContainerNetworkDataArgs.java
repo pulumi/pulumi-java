@@ -25,6 +25,11 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
     @Import(name="gateway")
     private @Nullable Output<String> gateway;
 
+    /**
+     * @deprecated
+     * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
+     * 
+     */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     public Optional<Output<String>> gateway() {
         return Optional.ofNullable(this.gateway);
@@ -53,6 +58,11 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @deprecated
+     * Use `network_data` instead. The IP address of the container&#39;s first network it.
+     * 
+     */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
@@ -67,6 +77,11 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
     @Import(name="ipPrefixLength")
     private @Nullable Output<Integer> ipPrefixLength;
 
+    /**
+     * @deprecated
+     * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
+     * 
+     */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     public Optional<Output<Integer>> ipPrefixLength() {
         return Optional.ofNullable(this.ipPrefixLength);
@@ -116,11 +131,27 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
             $ = new ContainerNetworkDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
         public Builder gateway(@Nullable Output<String> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
         public Builder gateway(String gateway) {
             return gateway(Output.of(gateway));
         }
@@ -143,20 +174,52 @@ public final class ContainerNetworkDataArgs extends com.pulumi.resources.Resourc
             return globalIpv6PrefixLength(Output.of(globalIpv6PrefixLength));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The IP address of the container&#39;s first network it.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The IP address of the container&#39;s first network it.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
             $.ipPrefixLength = ipPrefixLength;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
+         * 
+         */
+        @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
         public Builder ipPrefixLength(Integer ipPrefixLength) {
             return ipPrefixLength(Output.of(ipPrefixLength));
         }

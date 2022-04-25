@@ -29,6 +29,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorType", required=true)
     private Output<String> acceleratorType;
 
+    /**
+     * @return The type of hardware accelerators associated with this node.
+     * 
+     */
     public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
@@ -40,6 +44,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock")
     private @Nullable Output<String> cidrBlock;
 
+    /**
+     * @return The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
+     * 
+     */
     public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -51,6 +59,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDisks")
     private @Nullable Output<List<AttachedDiskArgs>> dataDisks;
 
+    /**
+     * @return The additional data disks for the Node.
+     * 
+     */
     public Optional<Output<List<AttachedDiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -62,6 +74,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The user-supplied description of the TPU. Maximum of 512 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +89,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="health")
     private @Nullable Output<NodeHealth> health;
 
+    /**
+     * @return The health status of the TPU node.
+     * 
+     */
     public Optional<Output<NodeHealth>> health() {
         return Optional.ofNullable(this.health);
     }
@@ -84,6 +104,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user-provided metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -102,6 +126,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -113,6 +141,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
     private @Nullable Output<NetworkConfigArgs> networkConfig;
 
+    /**
+     * @return Network configurations for the TPU node.
+     * 
+     */
     public Optional<Output<NetworkConfigArgs>> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
@@ -138,6 +170,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
     private Output<String> runtimeVersion;
 
+    /**
+     * @return The runtime version running in the Node.
+     * 
+     */
     public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
@@ -149,6 +185,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedulingConfig")
     private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
+    /**
+     * @return The scheduling options for this node.
+     * 
+     */
     public Optional<Output<SchedulingConfigArgs>> schedulingConfig() {
         return Optional.ofNullable(this.schedulingConfig);
     }
@@ -160,6 +200,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
     private @Nullable Output<ServiceAccountArgs> serviceAccount;
 
+    /**
+     * @return The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
+     * 
+     */
     public Optional<Output<ServiceAccountArgs>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
@@ -171,6 +215,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
+    /**
+     * @return Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+     * 
+     */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -213,60 +261,138 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType The type of hardware accelerators associated with this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The type of hardware accelerators associated with this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }
 
+        /**
+         * @param cidrBlock The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user&#39;s provided network, or the provided network is peered with another network that is using that CIDR block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param dataDisks The additional data disks for the Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<AttachedDiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks The additional data disks for the Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<AttachedDiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks The additional data disks for the Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(AttachedDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param description The user-supplied description of the TPU. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The user-supplied description of the TPU. Maximum of 512 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param health The health status of the TPU node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(@Nullable Output<NodeHealth> health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param health The health status of the TPU node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(NodeHealth health) {
             return health(Output.of(health));
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Resource labels to represent user-provided metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
@@ -280,20 +406,44 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param metadata Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param networkConfig Network configurations for the TPU node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             $.networkConfig = networkConfig;
             return this;
         }
 
+        /**
+         * @param networkConfig Network configurations for the TPU node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfig(NetworkConfigArgs networkConfig) {
             return networkConfig(Output.of(networkConfig));
         }
@@ -316,42 +466,96 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param runtimeVersion The runtime version running in the Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion The runtime version running in the Node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }
 
+        /**
+         * @param schedulingConfig The scheduling options for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
             $.schedulingConfig = schedulingConfig;
             return this;
         }
 
+        /**
+         * @param schedulingConfig The scheduling options for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulingConfig(SchedulingConfigArgs schedulingConfig) {
             return schedulingConfig(Output.of(schedulingConfig));
         }
 
+        /**
+         * @param serviceAccount The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
             $.serviceAccount = serviceAccount;
             return this;
         }
 
+        /**
+         * @param serviceAccount The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccount(ServiceAccountArgs serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
         }
 
+        /**
+         * @param tags Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }

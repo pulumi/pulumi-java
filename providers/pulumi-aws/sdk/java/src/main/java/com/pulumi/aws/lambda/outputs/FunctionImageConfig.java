@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FunctionImageConfig {
     /**
-     * Parameters that you want to pass in with `entry_point`.
+     * @return Parameters that you want to pass in with `entry_point`.
      * 
      */
     private final @Nullable List<String> commands;
     /**
-     * Entry point to your application, which is typically the location of the runtime executable.
+     * @return Entry point to your application, which is typically the location of the runtime executable.
      * 
      */
     private final @Nullable List<String> entryPoints;
     /**
-     * Working directory.
+     * @return Working directory.
      * 
      */
     private final @Nullable String workingDirectory;
@@ -39,23 +39,23 @@ public final class FunctionImageConfig {
     }
 
     /**
-     * Parameters that you want to pass in with `entry_point`.
+     * @return Parameters that you want to pass in with `entry_point`.
      * 
-    */
+     */
     public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
-     * Entry point to your application, which is typically the location of the runtime executable.
+     * @return Entry point to your application, which is typically the location of the runtime executable.
      * 
-    */
+     */
     public List<String> entryPoints() {
         return this.entryPoints == null ? List.of() : this.entryPoints;
     }
     /**
-     * Working directory.
+     * @return Working directory.
      * 
-    */
+     */
     public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }

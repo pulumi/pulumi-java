@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PredictionResponseGrades {
     /**
-     * Name of the grade.
+     * @return Name of the grade.
      * 
      */
     private final @Nullable String gradeName;
     /**
-     * Maximum score threshold.
+     * @return Maximum score threshold.
      * 
      */
     private final @Nullable Integer maxScoreThreshold;
     /**
-     * Minimum score threshold.
+     * @return Minimum score threshold.
      * 
      */
     private final @Nullable Integer minScoreThreshold;
@@ -39,23 +39,23 @@ public final class PredictionResponseGrades {
     }
 
     /**
-     * Name of the grade.
+     * @return Name of the grade.
      * 
-    */
+     */
     public Optional<String> gradeName() {
         return Optional.ofNullable(this.gradeName);
     }
     /**
-     * Maximum score threshold.
+     * @return Maximum score threshold.
      * 
-    */
+     */
     public Optional<Integer> maxScoreThreshold() {
         return Optional.ofNullable(this.maxScoreThreshold);
     }
     /**
-     * Minimum score threshold.
+     * @return Minimum score threshold.
      * 
-    */
+     */
     public Optional<Integer> minScoreThreshold() {
         return Optional.ofNullable(this.minScoreThreshold);
     }

@@ -26,6 +26,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="details")
     private @Nullable List<CloudErrorBodyResponse> details;
 
+    /**
+     * @return A list of additional details about the error.
+     * 
+     */
     public Optional<List<CloudErrorBodyResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -48,6 +56,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -59,6 +71,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The target of the particular error. For example, the name of the property in error.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -90,25 +106,55 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
             $ = new CloudErrorBodyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<CloudErrorBodyResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details A list of additional details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CloudErrorBodyResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A message describing the error, intended to be suitable for display in a user interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The target of the particular error. For example, the name of the property in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

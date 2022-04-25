@@ -26,6 +26,10 @@ public final class NoEncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledProtocols")
     private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
+    /**
+     * @return Representing supported protocols
+     * 
+     */
     public Optional<Output<EnabledProtocolsArgs>> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
@@ -54,11 +58,23 @@ public final class NoEncryptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NoEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             $.enabledProtocols = enabledProtocols;
             return this;
         }
 
+        /**
+         * @param enabledProtocols Representing supported protocols
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledProtocols(EnabledProtocolsArgs enabledProtocols) {
             return enabledProtocols(Output.of(enabledProtocols));
         }

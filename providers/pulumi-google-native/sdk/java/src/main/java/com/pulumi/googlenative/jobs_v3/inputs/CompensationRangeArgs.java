@@ -26,6 +26,10 @@ public final class CompensationRangeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxCompensation")
     private @Nullable Output<MoneyArgs> maxCompensation;
 
+    /**
+     * @return Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+     * 
+     */
     public Optional<Output<MoneyArgs>> maxCompensation() {
         return Optional.ofNullable(this.maxCompensation);
     }
@@ -37,6 +41,10 @@ public final class CompensationRangeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="minCompensation")
     private @Nullable Output<MoneyArgs> minCompensation;
 
+    /**
+     * @return Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+     * 
+     */
     public Optional<Output<MoneyArgs>> minCompensation() {
         return Optional.ofNullable(this.minCompensation);
     }
@@ -66,20 +74,44 @@ public final class CompensationRangeArgs extends com.pulumi.resources.ResourceAr
             $ = new CompensationRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCompensation Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCompensation(@Nullable Output<MoneyArgs> maxCompensation) {
             $.maxCompensation = maxCompensation;
             return this;
         }
 
+        /**
+         * @param maxCompensation Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCompensation(MoneyArgs maxCompensation) {
             return maxCompensation(Output.of(maxCompensation));
         }
 
+        /**
+         * @param minCompensation Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCompensation(@Nullable Output<MoneyArgs> minCompensation) {
             $.minCompensation = minCompensation;
             return this;
         }
 
+        /**
+         * @param minCompensation Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCompensation(MoneyArgs minCompensation) {
             return minCompensation(Output.of(minCompensation));
         }

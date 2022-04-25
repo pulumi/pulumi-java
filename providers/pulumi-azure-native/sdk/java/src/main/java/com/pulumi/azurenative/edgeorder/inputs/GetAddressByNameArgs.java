@@ -19,6 +19,10 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="addressName", required=true)
     private String addressName;
 
+    /**
+     * @return The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public String addressName() {
         return this.addressName;
     }
@@ -30,6 +34,10 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetAddressByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressName The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressName(String addressName) {
             $.addressName = addressName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

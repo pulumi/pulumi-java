@@ -27,6 +27,10 @@ public final class OriginEndpointDashEncryptionArgs extends com.pulumi.resources
     @Import(name="keyRotationIntervalSeconds")
     private @Nullable Output<Integer> keyRotationIntervalSeconds;
 
+    /**
+     * @return Time (in seconds) between each encryption key rotation.
+     * 
+     */
     public Optional<Output<Integer>> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
@@ -63,11 +67,23 @@ public final class OriginEndpointDashEncryptionArgs extends com.pulumi.resources
             $ = new OriginEndpointDashEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Time (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
             $.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param keyRotationIntervalSeconds Time (in seconds) between each encryption key rotation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRotationIntervalSeconds(Integer keyRotationIntervalSeconds) {
             return keyRotationIntervalSeconds(Output.of(keyRotationIntervalSeconds));
         }

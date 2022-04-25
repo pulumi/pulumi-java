@@ -22,6 +22,10 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="format", required=true)
     private Output<String> format;
 
+    /**
+     * @return Date/time format of a date parameter
+     * 
+     */
     public Output<String> format() {
         return this.format;
     }
@@ -33,6 +37,10 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="localeCode")
     private @Nullable Output<String> localeCode;
 
+    /**
+     * @return Locale code for a date parameter
+     * 
+     */
     public Optional<Output<String>> localeCode() {
         return Optional.ofNullable(this.localeCode);
     }
@@ -44,6 +52,10 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
     @Import(name="timezoneOffset")
     private @Nullable Output<String> timezoneOffset;
 
+    /**
+     * @return Timezone offset
+     * 
+     */
     public Optional<Output<String>> timezoneOffset() {
         return Optional.ofNullable(this.timezoneOffset);
     }
@@ -74,29 +86,65 @@ public final class DatasetDatetimeOptionsArgs extends com.pulumi.resources.Resou
             $ = new DatasetDatetimeOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Date/time format of a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Date/time format of a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param localeCode Locale code for a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeCode(@Nullable Output<String> localeCode) {
             $.localeCode = localeCode;
             return this;
         }
 
+        /**
+         * @param localeCode Locale code for a date parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder localeCode(String localeCode) {
             return localeCode(Output.of(localeCode));
         }
 
+        /**
+         * @param timezoneOffset Timezone offset
+         * 
+         * @return builder
+         * 
+         */
         public Builder timezoneOffset(@Nullable Output<String> timezoneOffset) {
             $.timezoneOffset = timezoneOffset;
             return this;
         }
 
+        /**
+         * @param timezoneOffset Timezone offset
+         * 
+         * @return builder
+         * 
+         */
         public Builder timezoneOffset(String timezoneOffset) {
             return timezoneOffset(Output.of(timezoneOffset));
         }

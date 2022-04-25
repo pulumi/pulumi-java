@@ -19,6 +19,10 @@ public final class GetFrameworkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="frameworkArn", required=true)
     private String frameworkArn;
 
+    /**
+     * @return An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
+     * 
+     */
     public String frameworkArn() {
         return this.frameworkArn;
     }
@@ -47,6 +51,12 @@ public final class GetFrameworkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFrameworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frameworkArn An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder frameworkArn(String frameworkArn) {
             $.frameworkArn = frameworkArn;
             return this;

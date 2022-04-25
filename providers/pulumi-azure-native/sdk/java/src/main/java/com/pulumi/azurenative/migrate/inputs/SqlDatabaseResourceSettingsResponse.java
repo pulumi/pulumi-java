@@ -27,6 +27,11 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -38,6 +43,10 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -49,6 +58,10 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
     @Import(name="zoneRedundant")
     private @Nullable String zoneRedundant;
 
+    /**
+     * @return Defines the zone redundant resource setting.
+     * 
+     */
     public Optional<String> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
@@ -79,16 +92,35 @@ public final class SqlDatabaseResourceSettingsResponse extends com.pulumi.resour
             $ = new SqlDatabaseResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Sql/servers/databases&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param zoneRedundant Defines the zone redundant resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(@Nullable String zoneRedundant) {
             $.zoneRedundant = zoneRedundant;
             return this;

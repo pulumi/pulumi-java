@@ -27,6 +27,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="currentAverageValue")
     private @Nullable Output<String> currentAverageValue;
 
+    /**
+     * @return currentAverageValue is the current value of metric averaged over autoscaled pods.
+     * 
+     */
     public Optional<Output<String>> currentAverageValue() {
         return Optional.ofNullable(this.currentAverageValue);
     }
@@ -38,6 +42,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="currentValue", required=true)
     private Output<String> currentValue;
 
+    /**
+     * @return currentValue is the current value of the metric (as a quantity)
+     * 
+     */
     public Output<String> currentValue() {
         return this.currentValue;
     }
@@ -49,6 +57,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="metricName", required=true)
     private Output<String> metricName;
 
+    /**
+     * @return metricName is the name of a metric used for autoscaling in metric system.
+     * 
+     */
     public Output<String> metricName() {
         return this.metricName;
     }
@@ -60,6 +72,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="metricSelector")
     private @Nullable Output<LabelSelectorArgs> metricSelector;
 
+    /**
+     * @return metricSelector is used to identify a specific time series within a given metric.
+     * 
+     */
     public Optional<Output<LabelSelectorArgs>> metricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }
@@ -91,38 +107,86 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
             $ = new ExternalMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of metric averaged over autoscaled pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(@Nullable Output<String> currentAverageValue) {
             $.currentAverageValue = currentAverageValue;
             return this;
         }
 
+        /**
+         * @param currentAverageValue currentAverageValue is the current value of metric averaged over autoscaled pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentAverageValue(String currentAverageValue) {
             return currentAverageValue(Output.of(currentAverageValue));
         }
 
+        /**
+         * @param currentValue currentValue is the current value of the metric (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentValue(Output<String> currentValue) {
             $.currentValue = currentValue;
             return this;
         }
 
+        /**
+         * @param currentValue currentValue is the current value of the metric (as a quantity)
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentValue(String currentValue) {
             return currentValue(Output.of(currentValue));
         }
 
+        /**
+         * @param metricName metricName is the name of a metric used for autoscaling in metric system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricName metricName is the name of a metric used for autoscaling in metric system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(String metricName) {
             return metricName(Output.of(metricName));
         }
 
+        /**
+         * @param metricSelector metricSelector is used to identify a specific time series within a given metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
             $.metricSelector = metricSelector;
             return this;
         }
 
+        /**
+         * @param metricSelector metricSelector is used to identify a specific time series within a given metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricSelector(LabelSelectorArgs metricSelector) {
             return metricSelector(Output.of(metricSelector));
         }

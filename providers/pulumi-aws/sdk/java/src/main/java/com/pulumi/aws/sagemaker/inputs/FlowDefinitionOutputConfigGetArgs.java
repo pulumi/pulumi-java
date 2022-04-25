@@ -22,6 +22,10 @@ public final class FlowDefinitionOutputConfigGetArgs extends com.pulumi.resource
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
+    /**
+     * @return The Amazon Key Management Service (KMS) key ARN for server-side encryption.
+     * 
+     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -33,6 +37,10 @@ public final class FlowDefinitionOutputConfigGetArgs extends com.pulumi.resource
     @Import(name="s3OutputPath", required=true)
     private Output<String> s3OutputPath;
 
+    /**
+     * @return The Amazon S3 path where the object containing human output will be made available.
+     * 
+     */
     public Output<String> s3OutputPath() {
         return this.s3OutputPath;
     }
@@ -62,20 +70,44 @@ public final class FlowDefinitionOutputConfigGetArgs extends com.pulumi.resource
             $ = new FlowDefinitionOutputConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyId The Amazon Key Management Service (KMS) key ARN for server-side encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The Amazon Key Management Service (KMS) key ARN for server-side encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
+        /**
+         * @param s3OutputPath The Amazon S3 path where the object containing human output will be made available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputPath(Output<String> s3OutputPath) {
             $.s3OutputPath = s3OutputPath;
             return this;
         }
 
+        /**
+         * @param s3OutputPath The Amazon S3 path where the object containing human output will be made available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3OutputPath(String s3OutputPath) {
             return s3OutputPath(Output.of(s3OutputPath));
         }

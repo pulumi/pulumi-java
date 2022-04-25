@@ -25,6 +25,10 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="host", required=true)
     private String host;
 
+    /**
+     * @return (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+     * 
+     */
     public String host() {
         return this.host;
     }
@@ -36,6 +40,10 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="httpHeaders", required=true)
     private List<HTTPHeaderResponse> httpHeaders;
 
+    /**
+     * @return (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+     * 
+     */
     public List<HTTPHeaderResponse> httpHeaders() {
         return this.httpHeaders;
     }
@@ -47,6 +55,10 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return (Optional) Path to access on the HTTP server.
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -58,6 +70,10 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="scheme", required=true)
     private String scheme;
 
+    /**
+     * @return (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+     * 
+     */
     public String scheme() {
         return this.scheme;
     }
@@ -89,25 +105,55 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
             $ = new HTTPGetActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host (Optional) Host name to connect to, defaults to the pod IP. You probably want to set &#34;Host&#34; in httpHeaders instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param httpHeaders (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(List<HTTPHeaderResponse> httpHeaders) {
             $.httpHeaders = httpHeaders;
             return this;
         }
 
+        /**
+         * @param httpHeaders (Optional) Custom headers to set in the request. HTTP allows repeated headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(HTTPHeaderResponse... httpHeaders) {
             return httpHeaders(List.of(httpHeaders));
         }
 
+        /**
+         * @param path (Optional) Path to access on the HTTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param scheme (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             $.scheme = scheme;
             return this;

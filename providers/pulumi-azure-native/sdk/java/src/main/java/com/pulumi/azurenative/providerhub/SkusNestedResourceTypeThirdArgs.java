@@ -23,6 +23,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="nestedResourceTypeFirst", required=true)
     private Output<String> nestedResourceTypeFirst;
 
+    /**
+     * @return The first child resource type.
+     * 
+     */
     public Output<String> nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
@@ -34,6 +38,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="nestedResourceTypeSecond", required=true)
     private Output<String> nestedResourceTypeSecond;
 
+    /**
+     * @return The second child resource type.
+     * 
+     */
     public Output<String> nestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
     }
@@ -45,6 +53,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="nestedResourceTypeThird", required=true)
     private Output<String> nestedResourceTypeThird;
 
+    /**
+     * @return The third child resource type.
+     * 
+     */
     public Output<String> nestedResourceTypeThird() {
         return this.nestedResourceTypeThird;
     }
@@ -63,6 +75,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The name of the resource provider hosted within ProviderHub.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -74,6 +90,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -85,6 +105,10 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return The SKU.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -119,29 +143,65 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
             $ = new SkusNestedResourceTypeThirdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeFirst(Output<String> nestedResourceTypeFirst) {
             $.nestedResourceTypeFirst = nestedResourceTypeFirst;
             return this;
         }
 
+        /**
+         * @param nestedResourceTypeFirst The first child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
             return nestedResourceTypeFirst(Output.of(nestedResourceTypeFirst));
         }
 
+        /**
+         * @param nestedResourceTypeSecond The second child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeSecond(Output<String> nestedResourceTypeSecond) {
             $.nestedResourceTypeSecond = nestedResourceTypeSecond;
             return this;
         }
 
+        /**
+         * @param nestedResourceTypeSecond The second child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
             return nestedResourceTypeSecond(Output.of(nestedResourceTypeSecond));
         }
 
+        /**
+         * @param nestedResourceTypeThird The third child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeThird(Output<String> nestedResourceTypeThird) {
             $.nestedResourceTypeThird = nestedResourceTypeThird;
             return this;
         }
 
+        /**
+         * @param nestedResourceTypeThird The third child resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceTypeThird(String nestedResourceTypeThird) {
             return nestedResourceTypeThird(Output.of(nestedResourceTypeThird));
         }
@@ -155,29 +215,65 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The name of the resource provider hosted within ProviderHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }

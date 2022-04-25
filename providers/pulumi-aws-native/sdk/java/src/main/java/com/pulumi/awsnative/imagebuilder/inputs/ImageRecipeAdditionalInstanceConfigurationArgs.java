@@ -27,6 +27,10 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
     @Import(name="systemsManagerAgent")
     private @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
+    /**
+     * @return Contains settings for the SSM agent on your build instance.
+     * 
+     */
     public Optional<Output<ImageRecipeSystemsManagerAgentArgs>> systemsManagerAgent() {
         return Optional.ofNullable(this.systemsManagerAgent);
     }
@@ -38,6 +42,10 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
     @Import(name="userDataOverride")
     private @Nullable Output<String> userDataOverride;
 
+    /**
+     * @return Use this property to provide commands or a command script to run when you launch your build instance.
+     * 
+     */
     public Optional<Output<String>> userDataOverride() {
         return Optional.ofNullable(this.userDataOverride);
     }
@@ -67,20 +75,44 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
             $ = new ImageRecipeAdditionalInstanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param systemsManagerAgent Contains settings for the SSM agent on your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemsManagerAgent(@Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
             $.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
+        /**
+         * @param systemsManagerAgent Contains settings for the SSM agent on your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemsManagerAgent(ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
             return systemsManagerAgent(Output.of(systemsManagerAgent));
         }
 
+        /**
+         * @param userDataOverride Use this property to provide commands or a command script to run when you launch your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataOverride(@Nullable Output<String> userDataOverride) {
             $.userDataOverride = userDataOverride;
             return this;
         }
 
+        /**
+         * @param userDataOverride Use this property to provide commands or a command script to run when you launch your build instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataOverride(String userDataOverride) {
             return userDataOverride(Output.of(userDataOverride));
         }

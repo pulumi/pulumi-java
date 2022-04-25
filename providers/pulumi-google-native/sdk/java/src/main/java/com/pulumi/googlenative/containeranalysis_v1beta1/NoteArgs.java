@@ -36,6 +36,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attestationAuthority")
     private @Nullable Output<AuthorityArgs> attestationAuthority;
 
+    /**
+     * @return A note describing an attestation role.
+     * 
+     */
     public Optional<Output<AuthorityArgs>> attestationAuthority() {
         return Optional.ofNullable(this.attestationAuthority);
     }
@@ -47,6 +51,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="baseImage")
     private @Nullable Output<BasisArgs> baseImage;
 
+    /**
+     * @return A note describing a base image.
+     * 
+     */
     public Optional<Output<BasisArgs>> baseImage() {
         return Optional.ofNullable(this.baseImage);
     }
@@ -58,6 +66,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
     private @Nullable Output<BuildArgs> build;
 
+    /**
+     * @return A note describing build provenance for a verifiable build.
+     * 
+     */
     public Optional<Output<BuildArgs>> build() {
         return Optional.ofNullable(this.build);
     }
@@ -69,6 +81,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deployable")
     private @Nullable Output<DeployableArgs> deployable;
 
+    /**
+     * @return A note describing something that can be deployed.
+     * 
+     */
     public Optional<Output<DeployableArgs>> deployable() {
         return Optional.ofNullable(this.deployable);
     }
@@ -80,6 +96,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="discovery")
     private @Nullable Output<DiscoveryArgs> discovery;
 
+    /**
+     * @return A note describing the initial analysis of a resource.
+     * 
+     */
     public Optional<Output<DiscoveryArgs>> discovery() {
         return Optional.ofNullable(this.discovery);
     }
@@ -91,6 +111,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return Time of expiration for this note. Empty if note does not expire.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -102,6 +126,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="intoto")
     private @Nullable Output<InTotoArgs> intoto;
 
+    /**
+     * @return A note describing an in-toto link.
+     * 
+     */
     public Optional<Output<InTotoArgs>> intoto() {
         return Optional.ofNullable(this.intoto);
     }
@@ -113,6 +141,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="longDescription")
     private @Nullable Output<String> longDescription;
 
+    /**
+     * @return A detailed description of this note.
+     * 
+     */
     public Optional<Output<String>> longDescription() {
         return Optional.ofNullable(this.longDescription);
     }
@@ -131,6 +163,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="package")
     private @Nullable Output<PackageArgs> package_;
 
+    /**
+     * @return A note describing a package hosted by various package managers.
+     * 
+     */
     public Optional<Output<PackageArgs>> package_() {
         return Optional.ofNullable(this.package_);
     }
@@ -149,6 +185,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedNoteNames")
     private @Nullable Output<List<String>> relatedNoteNames;
 
+    /**
+     * @return Other notes related to this note.
+     * 
+     */
     public Optional<Output<List<String>>> relatedNoteNames() {
         return Optional.ofNullable(this.relatedNoteNames);
     }
@@ -160,6 +200,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relatedUrl")
     private @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
+    /**
+     * @return URLs associated with this note.
+     * 
+     */
     public Optional<Output<List<RelatedUrlArgs>>> relatedUrl() {
         return Optional.ofNullable(this.relatedUrl);
     }
@@ -171,6 +215,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sbom")
     private @Nullable Output<DocumentNoteArgs> sbom;
 
+    /**
+     * @return A note describing a software bill of materials.
+     * 
+     */
     public Optional<Output<DocumentNoteArgs>> sbom() {
         return Optional.ofNullable(this.sbom);
     }
@@ -182,6 +230,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortDescription")
     private @Nullable Output<String> shortDescription;
 
+    /**
+     * @return A one sentence description of this note.
+     * 
+     */
     public Optional<Output<String>> shortDescription() {
         return Optional.ofNullable(this.shortDescription);
     }
@@ -193,6 +245,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spdxFile")
     private @Nullable Output<FileNoteArgs> spdxFile;
 
+    /**
+     * @return A note describing an SPDX File.
+     * 
+     */
     public Optional<Output<FileNoteArgs>> spdxFile() {
         return Optional.ofNullable(this.spdxFile);
     }
@@ -204,6 +260,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spdxPackage")
     private @Nullable Output<PackageInfoNoteArgs> spdxPackage;
 
+    /**
+     * @return A note describing an SPDX Package.
+     * 
+     */
     public Optional<Output<PackageInfoNoteArgs>> spdxPackage() {
         return Optional.ofNullable(this.spdxPackage);
     }
@@ -215,6 +275,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="spdxRelationship")
     private @Nullable Output<RelationshipNoteArgs> spdxRelationship;
 
+    /**
+     * @return A note describing an SPDX File.
+     * 
+     */
     public Optional<Output<RelationshipNoteArgs>> spdxRelationship() {
         return Optional.ofNullable(this.spdxRelationship);
     }
@@ -226,6 +290,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vulnerability")
     private @Nullable Output<VulnerabilityArgs> vulnerability;
 
+    /**
+     * @return A note describing a package vulnerability.
+     * 
+     */
     public Optional<Output<VulnerabilityArgs>> vulnerability() {
         return Optional.ofNullable(this.vulnerability);
     }
@@ -272,74 +340,170 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NoteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationAuthority A note describing an attestation role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthority(@Nullable Output<AuthorityArgs> attestationAuthority) {
             $.attestationAuthority = attestationAuthority;
             return this;
         }
 
+        /**
+         * @param attestationAuthority A note describing an attestation role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationAuthority(AuthorityArgs attestationAuthority) {
             return attestationAuthority(Output.of(attestationAuthority));
         }
 
+        /**
+         * @param baseImage A note describing a base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(@Nullable Output<BasisArgs> baseImage) {
             $.baseImage = baseImage;
             return this;
         }
 
+        /**
+         * @param baseImage A note describing a base image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImage(BasisArgs baseImage) {
             return baseImage(Output.of(baseImage));
         }
 
+        /**
+         * @param build A note describing build provenance for a verifiable build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(@Nullable Output<BuildArgs> build) {
             $.build = build;
             return this;
         }
 
+        /**
+         * @param build A note describing build provenance for a verifiable build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder build(BuildArgs build) {
             return build(Output.of(build));
         }
 
+        /**
+         * @param deployable A note describing something that can be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployable(@Nullable Output<DeployableArgs> deployable) {
             $.deployable = deployable;
             return this;
         }
 
+        /**
+         * @param deployable A note describing something that can be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deployable(DeployableArgs deployable) {
             return deployable(Output.of(deployable));
         }
 
+        /**
+         * @param discovery A note describing the initial analysis of a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovery(@Nullable Output<DiscoveryArgs> discovery) {
             $.discovery = discovery;
             return this;
         }
 
+        /**
+         * @param discovery A note describing the initial analysis of a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discovery(DiscoveryArgs discovery) {
             return discovery(Output.of(discovery));
         }
 
+        /**
+         * @param expirationTime Time of expiration for this note. Empty if note does not expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime Time of expiration for this note. Empty if note does not expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param intoto A note describing an in-toto link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intoto(@Nullable Output<InTotoArgs> intoto) {
             $.intoto = intoto;
             return this;
         }
 
+        /**
+         * @param intoto A note describing an in-toto link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intoto(InTotoArgs intoto) {
             return intoto(Output.of(intoto));
         }
 
+        /**
+         * @param longDescription A detailed description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longDescription(@Nullable Output<String> longDescription) {
             $.longDescription = longDescription;
             return this;
         }
 
+        /**
+         * @param longDescription A detailed description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longDescription(String longDescription) {
             return longDescription(Output.of(longDescription));
         }
@@ -353,11 +517,23 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
             return noteId(Output.of(noteId));
         }
 
+        /**
+         * @param package_ A note describing a package hosted by various package managers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(@Nullable Output<PackageArgs> package_) {
             $.package_ = package_;
             return this;
         }
 
+        /**
+         * @param package_ A note describing a package hosted by various package managers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder package_(PackageArgs package_) {
             return package_(Output.of(package_));
         }
@@ -371,82 +547,190 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param relatedNoteNames Other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(@Nullable Output<List<String>> relatedNoteNames) {
             $.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
+        /**
+         * @param relatedNoteNames Other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(List<String> relatedNoteNames) {
             return relatedNoteNames(Output.of(relatedNoteNames));
         }
 
+        /**
+         * @param relatedNoteNames Other notes related to this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedNoteNames(String... relatedNoteNames) {
             return relatedNoteNames(List.of(relatedNoteNames));
         }
 
+        /**
+         * @param relatedUrl URLs associated with this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
             $.relatedUrl = relatedUrl;
             return this;
         }
 
+        /**
+         * @param relatedUrl URLs associated with this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrl(List<RelatedUrlArgs> relatedUrl) {
             return relatedUrl(Output.of(relatedUrl));
         }
 
+        /**
+         * @param relatedUrl URLs associated with this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
             return relatedUrl(List.of(relatedUrl));
         }
 
+        /**
+         * @param sbom A note describing a software bill of materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sbom(@Nullable Output<DocumentNoteArgs> sbom) {
             $.sbom = sbom;
             return this;
         }
 
+        /**
+         * @param sbom A note describing a software bill of materials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sbom(DocumentNoteArgs sbom) {
             return sbom(Output.of(sbom));
         }
 
+        /**
+         * @param shortDescription A one sentence description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
             $.shortDescription = shortDescription;
             return this;
         }
 
+        /**
+         * @param shortDescription A one sentence description of this note.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortDescription(String shortDescription) {
             return shortDescription(Output.of(shortDescription));
         }
 
+        /**
+         * @param spdxFile A note describing an SPDX File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxFile(@Nullable Output<FileNoteArgs> spdxFile) {
             $.spdxFile = spdxFile;
             return this;
         }
 
+        /**
+         * @param spdxFile A note describing an SPDX File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxFile(FileNoteArgs spdxFile) {
             return spdxFile(Output.of(spdxFile));
         }
 
+        /**
+         * @param spdxPackage A note describing an SPDX Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxPackage(@Nullable Output<PackageInfoNoteArgs> spdxPackage) {
             $.spdxPackage = spdxPackage;
             return this;
         }
 
+        /**
+         * @param spdxPackage A note describing an SPDX Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxPackage(PackageInfoNoteArgs spdxPackage) {
             return spdxPackage(Output.of(spdxPackage));
         }
 
+        /**
+         * @param spdxRelationship A note describing an SPDX File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxRelationship(@Nullable Output<RelationshipNoteArgs> spdxRelationship) {
             $.spdxRelationship = spdxRelationship;
             return this;
         }
 
+        /**
+         * @param spdxRelationship A note describing an SPDX File.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spdxRelationship(RelationshipNoteArgs spdxRelationship) {
             return spdxRelationship(Output.of(spdxRelationship));
         }
 
+        /**
+         * @param vulnerability A note describing a package vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vulnerability(@Nullable Output<VulnerabilityArgs> vulnerability) {
             $.vulnerability = vulnerability;
             return this;
         }
 
+        /**
+         * @param vulnerability A note describing a package vulnerability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vulnerability(VulnerabilityArgs vulnerability) {
             return vulnerability(Output.of(vulnerability));
         }

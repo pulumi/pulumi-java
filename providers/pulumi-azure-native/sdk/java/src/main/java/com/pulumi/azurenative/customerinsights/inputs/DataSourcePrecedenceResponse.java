@@ -26,6 +26,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="dataSourceReferenceId", required=true)
     private String dataSourceReferenceId;
 
+    /**
+     * @return The data source reference id.
+     * 
+     */
     public String dataSourceReferenceId() {
         return this.dataSourceReferenceId;
     }
@@ -37,6 +41,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="dataSourceType", required=true)
     private String dataSourceType;
 
+    /**
+     * @return The data source type.
+     * 
+     */
     public String dataSourceType() {
         return this.dataSourceType;
     }
@@ -48,6 +56,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private Integer id;
 
+    /**
+     * @return The data source ID.
+     * 
+     */
     public Integer id() {
         return this.id;
     }
@@ -59,6 +71,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The data source name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -70,6 +86,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="precedence")
     private @Nullable Integer precedence;
 
+    /**
+     * @return the precedence value.
+     * 
+     */
     public Optional<Integer> precedence() {
         return Optional.ofNullable(this.precedence);
     }
@@ -81,6 +101,10 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The data source status.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -114,31 +138,67 @@ public final class DataSourcePrecedenceResponse extends com.pulumi.resources.Inv
             $ = new DataSourcePrecedenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceReferenceId The data source reference id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceReferenceId(String dataSourceReferenceId) {
             $.dataSourceReferenceId = dataSourceReferenceId;
             return this;
         }
 
+        /**
+         * @param dataSourceType The data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceType(String dataSourceType) {
             $.dataSourceType = dataSourceType;
             return this;
         }
 
+        /**
+         * @param id The data source ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Integer id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The data source name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param precedence the precedence value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precedence(@Nullable Integer precedence) {
             $.precedence = precedence;
             return this;
         }
 
+        /**
+         * @param status The data source status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

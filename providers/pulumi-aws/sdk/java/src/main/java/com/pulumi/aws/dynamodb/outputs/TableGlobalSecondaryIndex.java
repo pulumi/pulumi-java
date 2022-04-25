@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TableGlobalSecondaryIndex {
     /**
-     * The name of the hash key in the index; must be
+     * @return The name of the hash key in the index; must be
      * defined as an attribute in the resource.
      * 
      */
     private final String hashKey;
     /**
-     * The name of the index
+     * @return The name of the index
      * 
      */
     private final String name;
     /**
-     * Only required with `INCLUDE` as a
+     * @return Only required with `INCLUDE` as a
      * projection type; a list of attributes to project into the index. These
      * do not need to be defined as attributes on the table.
      * 
      */
     private final @Nullable List<String> nonKeyAttributes;
     /**
-     * One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+     * @return One of `ALL`, `INCLUDE` or `KEYS_ONLY`
      * where `ALL` projects every attribute into the index, `KEYS_ONLY`
      * projects just the hash and range key into the index, and `INCLUDE`
      * projects only the keys specified in the _non_key_attributes_
@@ -41,17 +41,17 @@ public final class TableGlobalSecondaryIndex {
      */
     private final String projectionType;
     /**
-     * The name of the range key; must be defined
+     * @return The name of the range key; must be defined
      * 
      */
     private final @Nullable String rangeKey;
     /**
-     * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * @return The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
     private final @Nullable Integer readCapacity;
     /**
-     * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * @return The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
     private final @Nullable Integer writeCapacity;
@@ -75,58 +75,58 @@ public final class TableGlobalSecondaryIndex {
     }
 
     /**
-     * The name of the hash key in the index; must be
+     * @return The name of the hash key in the index; must be
      * defined as an attribute in the resource.
      * 
-    */
+     */
     public String hashKey() {
         return this.hashKey;
     }
     /**
-     * The name of the index
+     * @return The name of the index
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Only required with `INCLUDE` as a
+     * @return Only required with `INCLUDE` as a
      * projection type; a list of attributes to project into the index. These
      * do not need to be defined as attributes on the table.
      * 
-    */
+     */
     public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
     /**
-     * One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+     * @return One of `ALL`, `INCLUDE` or `KEYS_ONLY`
      * where `ALL` projects every attribute into the index, `KEYS_ONLY`
      * projects just the hash and range key into the index, and `INCLUDE`
      * projects only the keys specified in the _non_key_attributes_
      * parameter.
      * 
-    */
+     */
     public String projectionType() {
         return this.projectionType;
     }
     /**
-     * The name of the range key; must be defined
+     * @return The name of the range key; must be defined
      * 
-    */
+     */
     public Optional<String> rangeKey() {
         return Optional.ofNullable(this.rangeKey);
     }
     /**
-     * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * @return The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
-    */
+     */
     public Optional<Integer> readCapacity() {
         return Optional.ofNullable(this.readCapacity);
     }
     /**
-     * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * @return The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
-    */
+     */
     public Optional<Integer> writeCapacity() {
         return Optional.ofNullable(this.writeCapacity);
     }

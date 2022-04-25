@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RecommendedMachineConfigurationResponse {
     /**
-     * Describes the resource range.
+     * @return Describes the resource range.
      * 
      */
     private final @Nullable ResourceRangeResponse memory;
     /**
-     * Describes the resource range.
+     * @return Describes the resource range.
      * 
      */
     private final @Nullable ResourceRangeResponse vCPUs;
@@ -31,16 +31,16 @@ public final class RecommendedMachineConfigurationResponse {
     }
 
     /**
-     * Describes the resource range.
+     * @return Describes the resource range.
      * 
-    */
+     */
     public Optional<ResourceRangeResponse> memory() {
         return Optional.ofNullable(this.memory);
     }
     /**
-     * Describes the resource range.
+     * @return Describes the resource range.
      * 
-    */
+     */
     public Optional<ResourceRangeResponse> vCPUs() {
         return Optional.ofNullable(this.vCPUs);
     }

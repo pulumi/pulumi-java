@@ -27,6 +27,10 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return Connection string value.
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -38,6 +42,10 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of connection string.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
     private @Nullable Output<ConnectionStringType> type;
 
+    /**
+     * @return Type of database.
+     * 
+     */
     public Optional<Output<ConnectionStringType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -79,29 +91,65 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ConnStringInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Connection string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Connection string value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param name Name of connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ConnectionStringType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ConnectionStringType type) {
             return type(Output.of(type));
         }

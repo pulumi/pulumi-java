@@ -30,6 +30,10 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<Either<String,PolicyStatus>> status;
 
+    /**
+     * @return The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<Output<Either<String,PolicyStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -41,6 +45,10 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,TrustPolicyType>> type;
 
+    /**
+     * @return The type of trust policy.
+     * 
+     */
     public Optional<Output<Either<String,TrustPolicyType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -70,36 +78,84 @@ public final class TrustPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TrustPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PolicyStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PolicyStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param type The type of trust policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of trust policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,TrustPolicyType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of trust policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of trust policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(TrustPolicyType type) {
             return type(Either.ofRight(type));
         }

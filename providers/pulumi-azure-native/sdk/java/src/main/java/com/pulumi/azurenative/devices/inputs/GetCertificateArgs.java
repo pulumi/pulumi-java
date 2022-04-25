@@ -19,6 +19,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return The name of the certificate
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -30,6 +34,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT hub.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the IoT hub.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName The name of the certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

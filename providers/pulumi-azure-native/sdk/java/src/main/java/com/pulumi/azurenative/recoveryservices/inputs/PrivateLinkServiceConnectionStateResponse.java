@@ -25,6 +25,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="actionRequired")
     private @Nullable String actionRequired;
 
+    /**
+     * @return Gets or sets actions required
+     * 
+     */
     public Optional<String> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
@@ -36,6 +40,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Gets or sets description
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Gets or sets the status
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -77,16 +89,34 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
             $ = new PrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionRequired Gets or sets actions required
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRequired(@Nullable String actionRequired) {
             $.actionRequired = actionRequired;
             return this;
         }
 
+        /**
+         * @param description Gets or sets description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Gets or sets the status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

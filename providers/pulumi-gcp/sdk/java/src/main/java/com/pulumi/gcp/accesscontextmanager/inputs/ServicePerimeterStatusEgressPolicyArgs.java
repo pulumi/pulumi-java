@@ -24,6 +24,11 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends com.pulumi.res
     @Import(name="egressFrom")
     private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
+    /**
+     * @return Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimeterStatusEgressPolicyEgressFromArgs>> egressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
@@ -37,6 +42,12 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends com.pulumi.res
     @Import(name="egressTo")
     private @Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
+    /**
+     * @return Defines the conditions on the `ApiOperation` and destination resources that
+     * cause this `EgressPolicy` to apply.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ServicePerimeterStatusEgressPolicyEgressToArgs>> egressTo() {
         return Optional.ofNullable(this.egressTo);
     }
@@ -66,20 +77,50 @@ public final class ServicePerimeterStatusEgressPolicyArgs extends com.pulumi.res
             $ = new ServicePerimeterStatusEgressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(@Nullable Output<ServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom) {
             $.egressFrom = egressFrom;
             return this;
         }
 
+        /**
+         * @param egressFrom Defines conditions on the source of a request causing this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFrom(ServicePerimeterStatusEgressPolicyEgressFromArgs egressFrom) {
             return egressFrom(Output.of(egressFrom));
         }
 
+        /**
+         * @param egressTo Defines the conditions on the `ApiOperation` and destination resources that
+         * cause this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(@Nullable Output<ServicePerimeterStatusEgressPolicyEgressToArgs> egressTo) {
             $.egressTo = egressTo;
             return this;
         }
 
+        /**
+         * @param egressTo Defines the conditions on the `ApiOperation` and destination resources that
+         * cause this `EgressPolicy` to apply.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressTo(ServicePerimeterStatusEgressPolicyEgressToArgs egressTo) {
             return egressTo(Output.of(egressTo));
         }

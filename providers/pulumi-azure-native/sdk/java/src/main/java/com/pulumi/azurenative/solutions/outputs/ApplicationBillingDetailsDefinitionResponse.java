@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationBillingDetailsDefinitionResponse {
     /**
-     * The managed application resource usage Id.
+     * @return The managed application resource usage Id.
      * 
      */
     private final @Nullable String resourceUsageId;
@@ -23,9 +23,9 @@ public final class ApplicationBillingDetailsDefinitionResponse {
     }
 
     /**
-     * The managed application resource usage Id.
+     * @return The managed application resource usage Id.
      * 
-    */
+     */
     public Optional<String> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }

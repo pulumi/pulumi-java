@@ -30,6 +30,10 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="amiDistributionConfiguration")
     private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
+    /**
+     * @return The specific AMI settings (for example, launch permissions, AMI tags).
+     * 
+     */
     public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs>> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
@@ -41,6 +45,10 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="containerDistributionConfiguration")
     private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
+    /**
+     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
+     * 
+     */
     public Optional<Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs>> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
@@ -52,6 +60,10 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="launchTemplateConfigurations")
     private @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
+    /**
+     * @return A group of launchTemplateConfiguration settings that apply to image distribution.
+     * 
+     */
     public Optional<Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>>> launchTemplateConfigurations() {
         return Optional.ofNullable(this.launchTemplateConfigurations);
     }
@@ -63,6 +75,10 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="licenseConfigurationArns")
     private @Nullable Output<List<String>> licenseConfigurationArns;
 
+    /**
+     * @return The License Manager Configuration to associate with the AMI in the specified Region.
+     * 
+     */
     public Optional<Output<List<String>>> licenseConfigurationArns() {
         return Optional.ofNullable(this.licenseConfigurationArns);
     }
@@ -74,6 +90,10 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return region
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -106,55 +126,127 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
             $ = new DistributionConfigurationDistributionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiDistributionConfiguration The specific AMI settings (for example, launch permissions, AMI tags).
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration) {
             $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param amiDistributionConfiguration The specific AMI settings (for example, launch permissions, AMI tags).
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfiguration(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs amiDistributionConfiguration) {
             return amiDistributionConfiguration(Output.of(amiDistributionConfiguration));
         }
 
+        /**
+         * @param containerDistributionConfiguration Container distribution settings for encryption, licensing, and sharing in a specific Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
             $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param containerDistributionConfiguration Container distribution settings for encryption, licensing, and sharing in a specific Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDistributionConfiguration(DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs containerDistributionConfiguration) {
             return containerDistributionConfiguration(Output.of(containerDistributionConfiguration));
         }
 
+        /**
+         * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply to image distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateConfigurations(@Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
             $.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
 
+        /**
+         * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply to image distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateConfigurations(List<DistributionConfigurationLaunchTemplateConfigurationArgs> launchTemplateConfigurations) {
             return launchTemplateConfigurations(Output.of(launchTemplateConfigurations));
         }
 
+        /**
+         * @param launchTemplateConfigurations A group of launchTemplateConfiguration settings that apply to image distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfigurationArgs... launchTemplateConfigurations) {
             return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
         }
 
+        /**
+         * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in the specified Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
             $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in the specified Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             return licenseConfigurationArns(Output.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param licenseConfigurationArns The License Manager Configuration to associate with the AMI in the specified Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param region region
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region region
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

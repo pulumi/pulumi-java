@@ -23,6 +23,10 @@ public final class ClassItemResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The class item&#39;s value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -51,6 +55,12 @@ public final class ClassItemResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClassItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The class item&#39;s value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -23,6 +23,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="interval", required=true)
     private Output<Integer> interval;
 
+    /**
+     * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+     * 
+     */
     public Output<Integer> interval() {
         return this.interval;
     }
@@ -34,6 +38,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="intervalUnit")
     private @Nullable Output<String> intervalUnit;
 
+    /**
+     * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+     * 
+     */
     public Optional<Output<String>> intervalUnit() {
         return Optional.ofNullable(this.intervalUnit);
     }
@@ -45,6 +53,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
     @Import(name="times")
     private @Nullable Output<String> times;
 
+    /**
+     * @return A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
+     * 
+     */
     public Optional<Output<String>> times() {
         return Optional.ofNullable(this.times);
     }
@@ -75,29 +87,65 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs extends co
             $ = new LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interval The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param intervalUnit The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalUnit(@Nullable Output<String> intervalUnit) {
             $.intervalUnit = intervalUnit;
             return this;
         }
 
+        /**
+         * @param intervalUnit The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalUnit(String intervalUnit) {
             return intervalUnit(Output.of(intervalUnit));
         }
 
+        /**
+         * @param times A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder times(@Nullable Output<String> times) {
             $.times = times;
             return this;
         }
 
+        /**
+         * @param times A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder times(String times) {
             return times(Output.of(times));
         }

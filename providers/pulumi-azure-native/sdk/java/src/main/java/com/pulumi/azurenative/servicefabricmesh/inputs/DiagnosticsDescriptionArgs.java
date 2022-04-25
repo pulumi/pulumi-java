@@ -29,6 +29,10 @@ public final class DiagnosticsDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="defaultSinkRefs")
     private @Nullable Output<List<String>> defaultSinkRefs;
 
+    /**
+     * @return The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+     * 
+     */
     public Optional<Output<List<String>>> defaultSinkRefs() {
         return Optional.ofNullable(this.defaultSinkRefs);
     }
@@ -40,6 +44,10 @@ public final class DiagnosticsDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Status of whether or not sinks are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -51,6 +59,10 @@ public final class DiagnosticsDescriptionArgs extends com.pulumi.resources.Resou
     @Import(name="sinks")
     private @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
+    /**
+     * @return List of supported sinks that can be referenced.
+     * 
+     */
     public Optional<Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>>> sinks() {
         return Optional.ofNullable(this.sinks);
     }
@@ -81,37 +93,85 @@ public final class DiagnosticsDescriptionArgs extends com.pulumi.resources.Resou
             $ = new DiagnosticsDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultSinkRefs The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSinkRefs(@Nullable Output<List<String>> defaultSinkRefs) {
             $.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
 
+        /**
+         * @param defaultSinkRefs The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSinkRefs(List<String> defaultSinkRefs) {
             return defaultSinkRefs(Output.of(defaultSinkRefs));
         }
 
+        /**
+         * @param defaultSinkRefs The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultSinkRefs(String... defaultSinkRefs) {
             return defaultSinkRefs(List.of(defaultSinkRefs));
         }
 
+        /**
+         * @param enabled Status of whether or not sinks are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Status of whether or not sinks are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param sinks List of supported sinks that can be referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(@Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks) {
             $.sinks = sinks;
             return this;
         }
 
+        /**
+         * @param sinks List of supported sinks that can be referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(List<AzureInternalMonitoringPipelineSinkDescriptionArgs> sinks) {
             return sinks(Output.of(sinks));
         }
 
+        /**
+         * @param sinks List of supported sinks that can be referenced.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinks(AzureInternalMonitoringPipelineSinkDescriptionArgs... sinks) {
             return sinks(List.of(sinks));
         }

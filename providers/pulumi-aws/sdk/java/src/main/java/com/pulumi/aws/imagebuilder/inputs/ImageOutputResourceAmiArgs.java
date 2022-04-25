@@ -22,6 +22,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return Account identifier of the AMI.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -33,6 +37,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the AMI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
     @Import(name="image")
     private @Nullable Output<String> image;
 
+    /**
+     * @return Identifier of the AMI.
+     * 
+     */
     public Optional<Output<String>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -55,6 +67,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the AMI.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +82,10 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region of the AMI.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -98,47 +118,107 @@ public final class ImageOutputResourceAmiArgs extends com.pulumi.resources.Resou
             $ = new ImageOutputResourceAmiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId Account identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId Account identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param description Description of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param image Identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<String> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image Identifier of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(String image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param name Name of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param region Region of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region of the AMI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

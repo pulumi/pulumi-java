@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class UpgradeOccurrenceResponse {
     /**
-     * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     * @return Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
      */
     private final UpgradeDistributionResponse distribution;
     /**
-     * Required for non-Windows OS. The package this Upgrade is for.
+     * @return Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
     private final String package_;
     /**
-     * Required for non-Windows OS. The version of the package in a machine + human readable form.
+     * @return Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
      */
     private final VersionResponse parsedVersion;
     /**
-     * Required for Windows OS. Represents the metadata about the Windows update.
+     * @return Required for Windows OS. Represents the metadata about the Windows update.
      * 
      */
     private final WindowsUpdateResponse windowsUpdate;
@@ -46,30 +46,30 @@ public final class UpgradeOccurrenceResponse {
     }
 
     /**
-     * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     * @return Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
-    */
+     */
     public UpgradeDistributionResponse distribution() {
         return this.distribution;
     }
     /**
-     * Required for non-Windows OS. The package this Upgrade is for.
+     * @return Required for non-Windows OS. The package this Upgrade is for.
      * 
-    */
+     */
     public String package_() {
         return this.package_;
     }
     /**
-     * Required for non-Windows OS. The version of the package in a machine + human readable form.
+     * @return Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
-    */
+     */
     public VersionResponse parsedVersion() {
         return this.parsedVersion;
     }
     /**
-     * Required for Windows OS. Represents the metadata about the Windows update.
+     * @return Required for Windows OS. Represents the metadata about the Windows update.
      * 
-    */
+     */
     public WindowsUpdateResponse windowsUpdate() {
         return this.windowsUpdate;
     }

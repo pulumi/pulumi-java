@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MetricStreamFilter {
     /**
-     * Only metrics with Namespace matching this value will be streamed.
+     * @return Only metrics with Namespace matching this value will be streamed.
      * 
      */
     private final String namespace;
@@ -21,9 +21,9 @@ public final class MetricStreamFilter {
     }
 
     /**
-     * Only metrics with Namespace matching this value will be streamed.
+     * @return Only metrics with Namespace matching this value will be streamed.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }

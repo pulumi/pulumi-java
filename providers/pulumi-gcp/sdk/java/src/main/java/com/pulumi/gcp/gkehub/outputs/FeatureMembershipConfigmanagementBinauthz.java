@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FeatureMembershipConfigmanagementBinauthz {
     /**
-     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * @return Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -23,9 +23,9 @@ public final class FeatureMembershipConfigmanagementBinauthz {
     }
 
     /**
-     * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
+     * @return Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

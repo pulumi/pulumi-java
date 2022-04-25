@@ -28,6 +28,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="cardContent", required=true)
     private Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent;
 
+    /**
+     * @return Card content.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent() {
         return this.cardContent;
     }
@@ -39,6 +43,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="cardOrientation", required=true)
     private Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation;
 
+    /**
+     * @return Orientation of the card.
+     * 
+     */
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation() {
         return this.cardOrientation;
     }
@@ -50,6 +58,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     @Import(name="thumbnailImageAlignment")
     private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;
 
+    /**
+     * @return Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
+     * 
+     */
     public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment>> thumbnailImageAlignment() {
         return Optional.ofNullable(this.thumbnailImageAlignment);
     }
@@ -80,29 +92,65 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
             $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cardContent Card content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContent(Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent) {
             $.cardContent = cardContent;
             return this;
         }
 
+        /**
+         * @param cardContent Card content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs cardContent) {
             return cardContent(Output.of(cardContent));
         }
 
+        /**
+         * @param cardOrientation Orientation of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardOrientation(Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation) {
             $.cardOrientation = cardOrientation;
             return this;
         }
 
+        /**
+         * @param cardOrientation Orientation of the card.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cardOrientation(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation cardOrientation) {
             return cardOrientation(Output.of(cardOrientation));
         }
 
+        /**
+         * @param thumbnailImageAlignment Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailImageAlignment(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment) {
             $.thumbnailImageAlignment = thumbnailImageAlignment;
             return this;
         }
 
+        /**
+         * @param thumbnailImageAlignment Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbnailImageAlignment(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment thumbnailImageAlignment) {
             return thumbnailImageAlignment(Output.of(thumbnailImageAlignment));
         }

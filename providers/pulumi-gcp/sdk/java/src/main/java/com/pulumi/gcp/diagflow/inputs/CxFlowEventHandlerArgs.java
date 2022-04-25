@@ -23,6 +23,10 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="event")
     private @Nullable Output<String> event;
 
+    /**
+     * @return The name of the event to handle.
+     * 
+     */
     public Optional<Output<String>> event() {
         return Optional.ofNullable(this.event);
     }
@@ -35,6 +39,11 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return -
+     * The unique identifier of this event handler.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +56,11 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetFlow")
     private @Nullable Output<String> targetFlow;
 
+    /**
+     * @return The target flow to transition to.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+     * 
+     */
     public Optional<Output<String>> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
@@ -59,6 +73,11 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetPage")
     private @Nullable Output<String> targetPage;
 
+    /**
+     * @return The target page to transition to.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+     * 
+     */
     public Optional<Output<String>> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
@@ -71,6 +90,11 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
     @Import(name="triggerFulfillment")
     private @Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment;
 
+    /**
+     * @return The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CxFlowEventHandlerTriggerFulfillmentArgs>> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
@@ -103,47 +127,115 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
             $ = new CxFlowEventHandlerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param event The name of the event to handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(@Nullable Output<String> event) {
             $.event = event;
             return this;
         }
 
+        /**
+         * @param event The name of the event to handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder event(String event) {
             return event(Output.of(event));
         }
 
+        /**
+         * @param name -
+         * The unique identifier of this event handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name -
+         * The unique identifier of this event handler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param targetFlow The target flow to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
             $.targetFlow = targetFlow;
             return this;
         }
 
+        /**
+         * @param targetFlow The target flow to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetFlow(String targetFlow) {
             return targetFlow(Output.of(targetFlow));
         }
 
+        /**
+         * @param targetPage The target page to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(@Nullable Output<String> targetPage) {
             $.targetPage = targetPage;
             return this;
         }
 
+        /**
+         * @param targetPage The target page to transition to.
+         * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/pages/&lt;Page ID&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPage(String targetPage) {
             return targetPage(Output.of(targetPage));
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(@Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment) {
             $.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
+        /**
+         * @param triggerFulfillment The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerFulfillment(CxFlowEventHandlerTriggerFulfillmentArgs triggerFulfillment) {
             return triggerFulfillment(Output.of(triggerFulfillment));
         }

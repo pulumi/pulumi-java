@@ -22,6 +22,10 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="mountOptions")
     private @Nullable Output<String> mountOptions;
 
+    /**
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * 
+     */
     public Optional<Output<String>> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
@@ -40,6 +44,10 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="relativeMountPath", required=true)
     private Output<String> relativeMountPath;
 
+    /**
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * 
+     */
     public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
@@ -86,11 +94,23 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
             $ = new CIFSMountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
             $.mountOptions = mountOptions;
             return this;
         }
 
+        /**
+         * @param mountOptions These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountOptions(String mountOptions) {
             return mountOptions(Output.of(mountOptions));
         }
@@ -104,11 +124,23 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
             return password(Output.of(password));
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(Output<String> relativeMountPath) {
             $.relativeMountPath = relativeMountPath;
             return this;
         }
 
+        /**
+         * @param relativeMountPath All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeMountPath(String relativeMountPath) {
             return relativeMountPath(Output.of(relativeMountPath));
         }

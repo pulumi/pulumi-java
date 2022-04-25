@@ -25,6 +25,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the entity.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the RegexPatternSet.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,6 +62,10 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
     private Output<RegexPatternSetScope> scope;
 
+    /**
+     * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+     * 
+     */
     public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
@@ -93,20 +105,44 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
             $ = new RegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Name of the RegexPatternSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the RegexPatternSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -124,11 +160,23 @@ public final class RegexPatternSetArgs extends com.pulumi.resources.ResourceArgs
             return regularExpressionList(List.of(regularExpressionList));
         }
 
+        /**
+         * @param scope Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<RegexPatternSetScope> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(RegexPatternSetScope scope) {
             return scope(Output.of(scope));
         }

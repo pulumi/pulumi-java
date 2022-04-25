@@ -23,6 +23,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The ADLS account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="dataSetName")
     private @Nullable Output<String> dataSetName;
 
+    /**
+     * @return The name of the dataSet.
+     * 
+     */
     public Optional<Output<String>> dataSetName() {
         return Optional.ofNullable(this.dataSetName);
     }
@@ -45,6 +53,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="folderPath", required=true)
     private Output<String> folderPath;
 
+    /**
+     * @return The folder path within the ADLS account.
+     * 
+     */
     public Output<String> folderPath() {
         return this.folderPath;
     }
@@ -57,6 +69,11 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set.
+     * Expected value is &#39;AdlsGen1Folder&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -68,6 +85,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Resource group of ADLS account.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -79,6 +100,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +115,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the data set to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -101,6 +130,10 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription id of ADLS account.
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -136,74 +169,172 @@ public final class ADLSGen1FolderDataSetArgs extends com.pulumi.resources.Resour
             $ = new ADLSGen1FolderDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The ADLS account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The ADLS account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             $.dataSetName = dataSetName;
             return this;
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(String dataSetName) {
             return dataSetName(Output.of(dataSetName));
         }
 
+        /**
+         * @param folderPath The folder path within the ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Output<String> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath The folder path within the ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(String folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;AdlsGen1Folder&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;AdlsGen1Folder&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroup Resource group of ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource group of ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param subscriptionId Subscription id of ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription id of ADLS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

@@ -30,6 +30,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="alertRuleTemplateName")
     private @Nullable Output<String> alertRuleTemplateName;
 
+    /**
+     * @return The Name of the alert rule template used to create this rule.
+     * 
+     */
     public Optional<Output<String>> alertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
@@ -41,6 +45,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the alert rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The display name for alerts created by this alert rule.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -63,6 +75,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether this alert rule is enabled or disabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -75,6 +91,11 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the alert rule
+     * Expected value is &#39;Scheduled&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -86,6 +107,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return The query that creates alerts for this rule.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -97,6 +122,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryFrequency", required=true)
     private Output<String> queryFrequency;
 
+    /**
+     * @return The frequency (in ISO 8601 duration format) for this alert rule to run.
+     * 
+     */
     public Output<String> queryFrequency() {
         return this.queryFrequency;
     }
@@ -108,6 +137,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryPeriod", required=true)
     private Output<String> queryPeriod;
 
+    /**
+     * @return The period (in ISO 8601 duration format) that this alert rule looks at.
+     * 
+     */
     public Output<String> queryPeriod() {
         return this.queryPeriod;
     }
@@ -119,6 +152,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -130,6 +167,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -141,6 +182,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="severity", required=true)
     private Output<Either<String,AlertSeverity>> severity;
 
+    /**
+     * @return The severity for alerts created by this alert rule.
+     * 
+     */
     public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
     }
@@ -152,6 +197,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="suppressionDuration", required=true)
     private Output<String> suppressionDuration;
 
+    /**
+     * @return The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+     * 
+     */
     public Output<String> suppressionDuration() {
         return this.suppressionDuration;
     }
@@ -163,6 +212,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="suppressionEnabled", required=true)
     private Output<Boolean> suppressionEnabled;
 
+    /**
+     * @return Determines whether the suppression for this alert rule is enabled or disabled.
+     * 
+     */
     public Output<Boolean> suppressionEnabled() {
         return this.suppressionEnabled;
     }
@@ -174,6 +227,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tactics")
     private @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
+    /**
+     * @return The tactics of the alert rule
+     * 
+     */
     public Optional<Output<List<Either<String,AttackTactic>>>> tactics() {
         return Optional.ofNullable(this.tactics);
     }
@@ -185,6 +242,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="triggerOperator", required=true)
     private Output<TriggerOperator> triggerOperator;
 
+    /**
+     * @return The operation against the threshold that triggers alert rule.
+     * 
+     */
     public Output<TriggerOperator> triggerOperator() {
         return this.triggerOperator;
     }
@@ -196,6 +257,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="triggerThreshold", required=true)
     private Output<Integer> triggerThreshold;
 
+    /**
+     * @return The threshold triggers this alert rule.
+     * 
+     */
     public Output<Integer> triggerThreshold() {
         return this.triggerThreshold;
     }
@@ -207,6 +272,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -251,167 +320,391 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
             $ = new ScheduledAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
             $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
+        /**
+         * @param alertRuleTemplateName The Name of the alert rule template used to create this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
 
+        /**
+         * @param description The description of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;Scheduled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the alert rule
+         * Expected value is &#39;Scheduled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param query The query that creates alerts for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query The query that creates alerts for this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param queryFrequency The frequency (in ISO 8601 duration format) for this alert rule to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFrequency(Output<String> queryFrequency) {
             $.queryFrequency = queryFrequency;
             return this;
         }
 
+        /**
+         * @param queryFrequency The frequency (in ISO 8601 duration format) for this alert rule to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryFrequency(String queryFrequency) {
             return queryFrequency(Output.of(queryFrequency));
         }
 
+        /**
+         * @param queryPeriod The period (in ISO 8601 duration format) that this alert rule looks at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPeriod(Output<String> queryPeriod) {
             $.queryPeriod = queryPeriod;
             return this;
         }
 
+        /**
+         * @param queryPeriod The period (in ISO 8601 duration format) that this alert rule looks at.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPeriod(String queryPeriod) {
             return queryPeriod(Output.of(queryPeriod));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param severity The severity for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,AlertSeverity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The severity for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The severity for alerts created by this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(AlertSeverity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param suppressionDuration The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionDuration(Output<String> suppressionDuration) {
             $.suppressionDuration = suppressionDuration;
             return this;
         }
 
+        /**
+         * @param suppressionDuration The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionDuration(String suppressionDuration) {
             return suppressionDuration(Output.of(suppressionDuration));
         }
 
+        /**
+         * @param suppressionEnabled Determines whether the suppression for this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionEnabled(Output<Boolean> suppressionEnabled) {
             $.suppressionEnabled = suppressionEnabled;
             return this;
         }
 
+        /**
+         * @param suppressionEnabled Determines whether the suppression for this alert rule is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionEnabled(Boolean suppressionEnabled) {
             return suppressionEnabled(Output.of(suppressionEnabled));
         }
 
+        /**
+         * @param tactics The tactics of the alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder tactics(@Nullable Output<List<Either<String,AttackTactic>>> tactics) {
             $.tactics = tactics;
             return this;
         }
 
+        /**
+         * @param tactics The tactics of the alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder tactics(List<Either<String,AttackTactic>> tactics) {
             return tactics(Output.of(tactics));
         }
 
+        /**
+         * @param tactics The tactics of the alert rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder tactics(Either<String,AttackTactic>... tactics) {
             return tactics(List.of(tactics));
         }
 
+        /**
+         * @param triggerOperator The operation against the threshold that triggers alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerOperator(Output<TriggerOperator> triggerOperator) {
             $.triggerOperator = triggerOperator;
             return this;
         }
 
+        /**
+         * @param triggerOperator The operation against the threshold that triggers alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerOperator(TriggerOperator triggerOperator) {
             return triggerOperator(Output.of(triggerOperator));
         }
 
+        /**
+         * @param triggerThreshold The threshold triggers this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerThreshold(Output<Integer> triggerThreshold) {
             $.triggerThreshold = triggerThreshold;
             return this;
         }
 
+        /**
+         * @param triggerThreshold The threshold triggers this alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerThreshold(Integer triggerThreshold) {
             return triggerThreshold(Output.of(triggerThreshold));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

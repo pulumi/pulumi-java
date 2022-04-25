@@ -24,6 +24,10 @@ public final class TimeSeriesTableResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dataSets", required=true)
     private List<TableDataSetResponse> dataSets;
 
+    /**
+     * @return The data displayed in this table.
+     * 
+     */
     public List<TableDataSetResponse> dataSets() {
         return this.dataSets;
     }
@@ -52,11 +56,23 @@ public final class TimeSeriesTableResponse extends com.pulumi.resources.InvokeAr
             $ = new TimeSeriesTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSets The data displayed in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(List<TableDataSetResponse> dataSets) {
             $.dataSets = dataSets;
             return this;
         }
 
+        /**
+         * @param dataSets The data displayed in this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSets(TableDataSetResponse... dataSets) {
             return dataSets(List.of(dataSets));
         }

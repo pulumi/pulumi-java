@@ -23,6 +23,10 @@ public final class BucketLifecycleRuleItemArgs extends com.pulumi.resources.Reso
     @Import(name="action")
     private @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
 
+    /**
+     * @return The action to take.
+     * 
+     */
     public Optional<Output<BucketLifecycleRuleItemActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -34,6 +38,10 @@ public final class BucketLifecycleRuleItemArgs extends com.pulumi.resources.Reso
     @Import(name="condition")
     private @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
+    /**
+     * @return The condition(s) under which the action will be taken.
+     * 
+     */
     public Optional<Output<BucketLifecycleRuleItemConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -63,20 +71,44 @@ public final class BucketLifecycleRuleItemArgs extends com.pulumi.resources.Reso
             $ = new BucketLifecycleRuleItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<BucketLifecycleRuleItemActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(BucketLifecycleRuleItemActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param condition The condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition The condition(s) under which the action will be taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(BucketLifecycleRuleItemConditionArgs condition) {
             return condition(Output.of(condition));
         }
